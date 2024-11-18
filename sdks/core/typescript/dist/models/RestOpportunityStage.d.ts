@@ -1,0 +1,28 @@
+import { CheckListItem } from '../models/CheckListItem';
+export declare class RestOpportunityStage {
+    'checkListItems'?: Array<CheckListItem>;
+    'createdTime'?: string;
+    'id'?: string;
+    'name'?: string;
+    'order'?: number;
+    'probability'?: number;
+    'targetNumberDays'?: number;
+    'updatedTime'?: string;
+    static readonly discriminator: string | undefined;
+    static readonly mapping: {
+        [index: string]: string;
+    } | undefined;
+    static readonly attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+        format: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+        format: string;
+    }[];
+    constructor();
+}

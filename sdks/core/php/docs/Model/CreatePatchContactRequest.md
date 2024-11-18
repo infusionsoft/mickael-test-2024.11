@@ -1,0 +1,35 @@
+# # CreatePatchContactRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**addresses** | [**\Com\Keap\Sdk\Core\Model\Address[]**](Address.md) | If an empty array is specified, all existing values will be removed. | [optional]
+**anniversary_date** | **string** |  | [optional]
+**birth_date** | **string** |  | [optional]
+**company** | [**\Com\Keap\Sdk\Core\Model\BasicCompany**](BasicCompany.md) |  | [optional]
+**contact_type** | **string** |  | [optional]
+**custom_fields** | [**\Com\Keap\Sdk\Core\Model\CustomFieldValue[]**](CustomFieldValue.md) | If an empty array is specified, all existing values will be removed. | [optional]
+**email_addresses** | [**\Com\Keap\Sdk\Core\Model\EmailAddressRequest[]**](EmailAddressRequest.md) | If an empty array is specified, all existing values will be removed. | [optional]
+**family_name** | **string** |  | [optional]
+**fax_numbers** | [**\Com\Keap\Sdk\Core\Model\FaxNumber[]**](FaxNumber.md) | If an empty array is specified, all existing values will be removed. | [optional]
+**given_name** | **string** |  | [optional]
+**job_title** | **string** |  | [optional]
+**leadsource_id** | **string** |  | [optional]
+**middle_name** | **string** |  | [optional]
+**origin** | [**\Com\Keap\Sdk\Core\Model\OriginRequest**](OriginRequest.md) |  | [optional]
+**owner_id** | **string** |  | [optional]
+**phone_numbers** | [**\Com\Keap\Sdk\Core\Model\PhoneNumber[]**](PhoneNumber.md) | If an empty array is specified, all existing values will be removed. | [optional]
+**preferred_locale** | **string** |  | [optional]
+**preferred_name** | **string** |  | [optional]
+**prefix** | **string** |  | [optional]
+**referral_code** | **string** |  | [optional]
+**social_accounts** | [**\Com\Keap\Sdk\Core\Model\SocialAccount[]**](SocialAccount.md) | If an empty array is specified, all existing values will be removed. | [optional]
+**source_type** | **string** |  | [optional]
+**spouse_name** | **string** |  | [optional]
+**suffix** | **string** |  | [optional]
+**time_zone** | **string** |  | [optional]
+**utm_parameters** | [**\Com\Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest**](CreateContactUtmPropertiesRequest.md) |  | [optional]
+**website** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

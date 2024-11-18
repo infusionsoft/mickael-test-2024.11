@@ -1,0 +1,13 @@
+# KeapRestApi.ListAffiliateCommissionResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**affiliateCommissions** | [**[AffiliateCommission]**](AffiliateCommission.md) |  | [optional] 
+**nextPageToken** | **String** |  | [optional] 
+**totalAffCommEarned** | **Number** |  | [optional] 
+**totalClawBack** | **Number** |  | [optional] 
+**totalCommEarned** | **Number** |  | [optional] 
+
+

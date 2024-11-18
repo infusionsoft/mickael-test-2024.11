@@ -1,0 +1,262 @@
+# .SubscriptionsApi
+
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**cancelSubscriptionUsingPOST_0**](SubscriptionsApi.md#cancelSubscriptionUsingPOST_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
+[**createSubscriptionCustomFieldUsingPOST_0**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription\&#39;s Custom Field
+[**retrieveSubscriptionCustomFieldModelUsingGET_0**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0) | **GET** /v2/subscriptions/model | Retrieve Subscription\&#39;s Custom Field Model
+[**updateSubscriptionCustomFieldUsingPATCH_0**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription\&#39;s Custom Field
+
+
+# **cancelSubscriptionUsingPOST_0**
+> void cancelSubscriptionUsingPOST_0(cancelSubscriptionsRequest)
+
+Cancels the specified subscription
+
+### Example
+
+
+```typescript
+import { createConfiguration, SubscriptionsApi } from '';
+import type { SubscriptionsApiCancelSubscriptionUsingPOST0Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new SubscriptionsApi(configuration);
+
+const request: SubscriptionsApiCancelSubscriptionUsingPOST0Request = {
+    // subscription_id
+  subscriptionId: "subscription_id_example",
+    // cancelSubscriptionsRequest
+  cancelSubscriptionsRequest: {
+    reason: "reason_example",
+  },
+};
+
+const data = await apiInstance.cancelSubscriptionUsingPOST_0(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cancelSubscriptionsRequest** | **CancelSubscriptionsRequest**| cancelSubscriptionsRequest |
+ **subscriptionId** | [**string**] | subscription_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **createSubscriptionCustomFieldUsingPOST_0**
+> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST_0(customField)
+
+Adds a custom field of the specified type and options to the Subscription object.
+
+### Example
+
+
+```typescript
+import { createConfiguration, SubscriptionsApi } from '';
+import type { SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new SubscriptionsApi(configuration);
+
+const request: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request = {
+    // customField
+  customField: {
+    fieldType: "CURRENCY",
+    groupId: "groupId_example",
+    label: "label_example",
+    options: [
+      {
+        label: "label_example",
+        options: [],
+      },
+    ],
+    userGroupId: "userGroupId_example",
+  },
+};
+
+const data = await apiInstance.createSubscriptionCustomFieldUsingPOST_0(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customField** | **CreateCustomFieldRequest**| customField |
+
+
+### Return type
+
+**CustomFieldMetaData**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **retrieveSubscriptionCustomFieldModelUsingGET_0**
+> ObjectModel retrieveSubscriptionCustomFieldModelUsingGET_0()
+
+Gets the custom field\'s model for the Subscription object
+
+### Example
+
+
+```typescript
+import { createConfiguration, SubscriptionsApi } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new SubscriptionsApi(configuration);
+
+const request = {};
+
+const data = await apiInstance.retrieveSubscriptionCustomFieldModelUsingGET_0(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**ObjectModel**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateSubscriptionCustomFieldUsingPATCH_0**
+> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH_0(request)
+
+Updates a custom field of the specified type and options to the Subscription object.
+
+### Example
+
+
+```typescript
+import { createConfiguration, SubscriptionsApi } from '';
+import type { SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new SubscriptionsApi(configuration);
+
+const request: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request = {
+    // custom_field_id
+  customFieldId: "custom_field_id_example",
+    // request
+  request: {
+    groupId: "groupId_example",
+    label: "label_example",
+    options: [
+      {
+        id: "id_example",
+        label: "label_example",
+        options: [],
+      },
+    ],
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "group_id",
+  ],
+};
+
+const data = await apiInstance.updateSubscriptionCustomFieldUsingPATCH_0(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **customFieldId** | [**string**] | custom_field_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**CustomFieldMetaData**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+

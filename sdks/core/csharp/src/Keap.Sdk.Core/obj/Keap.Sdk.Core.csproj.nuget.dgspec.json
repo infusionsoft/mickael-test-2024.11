@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/Keap.Sdk.Core.csproj": {}
+  },
+  "projects": {
+    "/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/Keap.Sdk.Core.csproj": {
+      "version": "0.0.1",
+      "restore": {
+        "projectUniqueName": "/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/Keap.Sdk.Core.csproj",
+        "projectName": "Keap.Sdk.Core",
+        "projectPath": "/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/Keap.Sdk.Core.csproj",
+        "packagesPath": "/Users/mickael.savafi/.nuget/packages/",
+        "outputPath": "/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mickael.savafi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "JsonSubTypes": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/8.0.10/libexec/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

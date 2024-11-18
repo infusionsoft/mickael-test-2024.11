@@ -1,0 +1,12 @@
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/bin/Release/net8.0/Keap.Sdk.Core.xml
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/bin/Release/net8.0/Keap.Sdk.Core.deps.json
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/bin/Release/net8.0/Keap.Sdk.Core.dll
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/bin/Release/net8.0/Keap.Sdk.Core.pdb
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/Keap.Sdk.Core.csproj.AssemblyReference.cache
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/Keap.Sdk.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/Keap.Sdk.Core.csproj.CoreCompileInputs.cache
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/Keap.Sdk.Core.sourcelink.json
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/Keap.Sdk.Core.dll
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/refint/Keap.Sdk.Core.dll
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/Keap.Sdk.Core.pdb
+/Users/mickael.savafi/projects/public-sdk/sdks/core/csharp/src/Keap.Sdk.Core/obj/Release/net8.0/ref/Keap.Sdk.Core.dll

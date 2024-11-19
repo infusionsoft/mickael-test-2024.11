@@ -1,11 +1,11 @@
 {
   "name": "keap-core -service-core-sdk",
-  "version": "1.2.3",
+  "version": "dev-2024.1119.0014-90c64a05a9",
   "description": "SDK for Keap REST API",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/infusionsoft/public-sdks.git"
+    "url": "https://github.com/infusionsoft/keap-sdk.git"
   },
   "keywords": [
     "fetch",

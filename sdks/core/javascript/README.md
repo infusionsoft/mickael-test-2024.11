@@ -57,11 +57,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/infusionsoft/public-sdks
+If the library is hosted at a git repository, e.g.https://github.com/infusionsoft/keap-sdk
 then install it via:
 
 ```shell
-    npm install infusionsoft/public-sdks --save
+    npm install infusionsoft/keap-sdk --save
 ```
 
 ### For browser

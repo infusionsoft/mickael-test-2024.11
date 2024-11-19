@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "keap-sdk-core-sdk"
-VERSION = "1.2.3"
+VERSION = "dev-2024.1119.0014-90c64a05a9"
 PYTHON_REQUIRES = ">= 3.8"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 3.0.0",

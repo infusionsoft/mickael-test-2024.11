@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.keap.sdk'
-version = '1.2.3'
+version = 'dev-2024.1119.0014-90c64a05a9'
 
 repositories {
     mavenCentral()

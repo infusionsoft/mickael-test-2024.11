@@ -55,7 +55,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'core -service-core-javascript/1.2.3'
+            'User-Agent': 'core -service-core-javascript/dev-2024.1119.0014-90c64a05a9'
         };
 
         /**

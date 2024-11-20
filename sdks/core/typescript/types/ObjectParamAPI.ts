@@ -208,6 +208,7 @@ import { RestSubscriptionV2 } from '../models/RestSubscriptionV2';
 import { RestV2Opportunity } from '../models/RestV2Opportunity';
 import { RestV2Order } from '../models/RestV2Order';
 import { RestV2OrderItem } from '../models/RestV2OrderItem';
+import { RestV2PatchOrderRequest } from '../models/RestV2PatchOrderRequest';
 import { RestV2Subscription } from '../models/RestV2Subscription';
 import { RestV2User } from '../models/RestV2User';
 import { SaveAutomationCategoryRequest } from '../models/SaveAutomationCategoryRequest';
@@ -1874,6 +1875,74 @@ export class ObjectCampaignApi {
 
 }
 
+import { ObservableCategoryDiscountApi } from "./ObservableAPI";
+import { CategoryDiscountApiRequestFactory, CategoryDiscountApiResponseProcessor} from "../apis/CategoryDiscountApi";
+
+export interface CategoryDiscountApiDeleteDiscountUsingDELETE0Request {
+    /**
+     * discount_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof CategoryDiscountApideleteDiscountUsingDELETE
+     */
+    discountId: string
+}
+
+export interface CategoryDiscountApiGetDiscountUsingGET0Request {
+    /**
+     * discount_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof CategoryDiscountApigetDiscountUsingGET
+     */
+    discountId: string
+}
+
+export class ObjectCategoryDiscountApi {
+    private api: ObservableCategoryDiscountApi
+
+    public constructor(configuration: Configuration, requestFactory?: CategoryDiscountApiRequestFactory, responseProcessor?: CategoryDiscountApiResponseProcessor) {
+        this.api = new ObservableCategoryDiscountApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETEWithHttpInfo(param: CategoryDiscountApiDeleteDiscountUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteDiscountUsingDELETEWithHttpInfo(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETE(param: CategoryDiscountApiDeleteDiscountUsingDELETE0Request, options?: Configuration): Promise<void> {
+        return this.api.deleteDiscountUsingDELETE(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param param the request object
+     */
+    public getDiscountUsingGETWithHttpInfo(param: CategoryDiscountApiGetDiscountUsingGET0Request, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+        return this.api.getDiscountUsingGETWithHttpInfo(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param param the request object
+     */
+    public getDiscountUsingGET(param: CategoryDiscountApiGetDiscountUsingGET0Request, options?: Configuration): Promise<CategoryDiscount> {
+        return this.api.getDiscountUsingGET(param.discountId,  options).toPromise();
+    }
+
+}
+
 import { ObservableCompanyApi } from "./ObservableAPI";
 import { CompanyApiRequestFactory, CompanyApiResponseProcessor} from "../apis/CompanyApi";
 
@@ -2511,46 +2580,6 @@ export class ObjectContactApi {
 
 }
 
-import { ObservableDiscountApi } from "./ObservableAPI";
-import { DiscountApiRequestFactory, DiscountApiResponseProcessor} from "../apis/DiscountApi";
-
-export interface DiscountApiGetCategoryDiscountUsingGET0Request {
-    /**
-     * discount_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof DiscountApigetCategoryDiscountUsingGET
-     */
-    discountId: string
-}
-
-export class ObjectDiscountApi {
-    private api: ObservableDiscountApi
-
-    public constructor(configuration: Configuration, requestFactory?: DiscountApiRequestFactory, responseProcessor?: DiscountApiResponseProcessor) {
-        this.api = new ObservableDiscountApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param param the request object
-     */
-    public getCategoryDiscountUsingGETWithHttpInfo(param: DiscountApiGetCategoryDiscountUsingGET0Request, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        return this.api.getCategoryDiscountUsingGETWithHttpInfo(param.discountId,  options).toPromise();
-    }
-
-    /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param param the request object
-     */
-    public getCategoryDiscountUsingGET(param: DiscountApiGetCategoryDiscountUsingGET0Request, options?: Configuration): Promise<CategoryDiscount> {
-        return this.api.getCategoryDiscountUsingGET(param.discountId,  options).toPromise();
-    }
-
-}
-
 import { ObservableEmailApi } from "./ObservableAPI";
 import { EmailApiRequestFactory, EmailApiResponseProcessor} from "../apis/EmailApi";
 
@@ -2797,6 +2826,46 @@ export class ObjectEmailAddressApi {
      */
     public updateEmailAddressOptStatusUsingPUT(param: EmailAddressApiUpdateEmailAddressOptStatusUsingPUTRequest, options?: Configuration): Promise<RestEmailAddress> {
         return this.api.updateEmailAddressOptStatusUsingPUT(param.email, param.updateEmailAddress,  options).toPromise();
+    }
+
+}
+
+import { ObservableFreeTrialDiscountApi } from "./ObservableAPI";
+import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor} from "../apis/FreeTrialDiscountApi";
+
+export interface FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request {
+    /**
+     * discount_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof FreeTrialDiscountApideleteDiscountUsingDELETE1
+     */
+    discountId: string
+}
+
+export class ObjectFreeTrialDiscountApi {
+    private api: ObservableFreeTrialDiscountApi
+
+    public constructor(configuration: Configuration, requestFactory?: FreeTrialDiscountApiRequestFactory, responseProcessor?: FreeTrialDiscountApiResponseProcessor) {
+        this.api = new ObservableFreeTrialDiscountApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETE1WithHttpInfo(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteDiscountUsingDELETE1WithHttpInfo(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETE1(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request, options?: Configuration): Promise<void> {
+        return this.api.deleteDiscountUsingDELETE1(param.discountId,  options).toPromise();
     }
 
 }
@@ -3978,6 +4047,29 @@ export interface OrdersApiListOrdersUsingGET10Request {
     pageToken?: string
 }
 
+export interface OrdersApiPatchOrderUsingPATCH0Request {
+    /**
+     * order_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof OrdersApipatchOrderUsingPATCH
+     */
+    orderId: string
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof OrdersApipatchOrderUsingPATCH
+     */
+    updateMask?: Array<string>
+    /**
+     * order
+     * @type RestV2PatchOrderRequest
+     * @memberof OrdersApipatchOrderUsingPATCH
+     */
+    order?: RestV2PatchOrderRequest
+}
+
 export interface OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request {
 }
 
@@ -4135,6 +4227,24 @@ export class ObjectOrdersApi {
      */
     public listOrdersUsingGET1(param: OrdersApiListOrdersUsingGET10Request = {}, options?: Configuration): Promise<ListOrders> {
         return this.api.listOrdersUsingGET1(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param param the request object
+     */
+    public patchOrderUsingPATCHWithHttpInfo(param: OrdersApiPatchOrderUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+        return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.order,  options).toPromise();
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param param the request object
+     */
+    public patchOrderUsingPATCH(param: OrdersApiPatchOrderUsingPATCH0Request, options?: Configuration): Promise<RestV2Order> {
+        return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.order,  options).toPromise();
     }
 
     /**
@@ -4486,6 +4596,26 @@ export interface PreReleaseApiDeleteAffiliateUsingDELETERequest {
     id: string
 }
 
+export interface PreReleaseApiDeleteDiscountUsingDELETERequest {
+    /**
+     * discount_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApideleteDiscountUsingDELETE
+     */
+    discountId: string
+}
+
+export interface PreReleaseApiDeleteDiscountUsingDELETE1Request {
+    /**
+     * discount_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApideleteDiscountUsingDELETE1
+     */
+    discountId: string
+}
+
 export interface PreReleaseApiDeleteFunnelIntegrationUsingPOSTRequest {
     /**
      * deleteFunnelIntegrationRequest
@@ -4608,16 +4738,6 @@ export interface PreReleaseApiGetAffiliateCommissionsUsingGETRequest {
 export interface PreReleaseApiGetAffiliateCustomFieldsUsingGETRequest {
 }
 
-export interface PreReleaseApiGetCategoryDiscountUsingGETRequest {
-    /**
-     * discount_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof PreReleaseApigetCategoryDiscountUsingGET
-     */
-    discountId: string
-}
-
 export interface PreReleaseApiGetCommissionProgramUsingGETRequest {
     /**
      * commission_program_id
@@ -4636,6 +4756,16 @@ export interface PreReleaseApiGetContactsBySearchTermUsingGETRequest {
      * @memberof PreReleaseApigetContactsBySearchTermUsingGET
      */
     searchParam: string
+}
+
+export interface PreReleaseApiGetDiscountUsingGETRequest {
+    /**
+     * discount_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApigetDiscountUsingGET
+     */
+    discountId: string
 }
 
 export interface PreReleaseApiGetOpportunityStageUsingGETRequest {
@@ -5182,6 +5312,29 @@ export interface PreReleaseApiPatchDefaultCommissionProgramUsingPATCHRequest {
      * @memberof PreReleaseApipatchDefaultCommissionProgramUsingPATCH
      */
     patchDefaultCommissionProgramRequest?: PatchDefaultCommissionProgramRequest
+}
+
+export interface PreReleaseApiPatchOrderUsingPATCHRequest {
+    /**
+     * order_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApipatchOrderUsingPATCH
+     */
+    orderId: string
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof PreReleaseApipatchOrderUsingPATCH
+     */
+    updateMask?: Array<string>
+    /**
+     * order
+     * @type RestV2PatchOrderRequest
+     * @memberof PreReleaseApipatchOrderUsingPATCH
+     */
+    order?: RestV2PatchOrderRequest
 }
 
 export interface PreReleaseApiPatchProductCommissionProgramUsingPATCHRequest {
@@ -5953,6 +6106,42 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETEWithHttpInfo(param: PreReleaseApiDeleteDiscountUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteDiscountUsingDELETEWithHttpInfo(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETE(param: PreReleaseApiDeleteDiscountUsingDELETERequest, options?: Configuration): Promise<void> {
+        return this.api.deleteDiscountUsingDELETE(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETE1WithHttpInfo(param: PreReleaseApiDeleteDiscountUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteDiscountUsingDELETE1WithHttpInfo(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param param the request object
+     */
+    public deleteDiscountUsingDELETE1(param: PreReleaseApiDeleteDiscountUsingDELETE1Request, options?: Configuration): Promise<void> {
+        return this.api.deleteDiscountUsingDELETE1(param.discountId,  options).toPromise();
+    }
+
+    /**
      * Deletes all triggers / goals, and actions / sequence items for the given funnel integration
      * Deletes Funnel Integrations from the app.
      * @param param the request object
@@ -6133,24 +6322,6 @@ export class ObjectPreReleaseApi {
     }
 
     /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param param the request object
-     */
-    public getCategoryDiscountUsingGETWithHttpInfo(param: PreReleaseApiGetCategoryDiscountUsingGETRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        return this.api.getCategoryDiscountUsingGETWithHttpInfo(param.discountId,  options).toPromise();
-    }
-
-    /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param param the request object
-     */
-    public getCategoryDiscountUsingGET(param: PreReleaseApiGetCategoryDiscountUsingGETRequest, options?: Configuration): Promise<CategoryDiscount> {
-        return this.api.getCategoryDiscountUsingGET(param.discountId,  options).toPromise();
-    }
-
-    /**
      * Retrieves a single Commission Program
      * Retrieve a Commission Program
      * @param param the request object
@@ -6184,6 +6355,24 @@ export class ObjectPreReleaseApi {
      */
     public getContactsBySearchTermUsingGET(param: PreReleaseApiGetContactsBySearchTermUsingGETRequest, options?: Configuration): Promise<ListBasicContactResponse> {
         return this.api.getContactsBySearchTermUsingGET(param.searchParam,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param param the request object
+     */
+    public getDiscountUsingGETWithHttpInfo(param: PreReleaseApiGetDiscountUsingGETRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+        return this.api.getDiscountUsingGETWithHttpInfo(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param param the request object
+     */
+    public getDiscountUsingGET(param: PreReleaseApiGetDiscountUsingGETRequest, options?: Configuration): Promise<CategoryDiscount> {
+        return this.api.getDiscountUsingGET(param.discountId,  options).toPromise();
     }
 
     /**
@@ -6630,6 +6819,24 @@ export class ObjectPreReleaseApi {
      */
     public patchDefaultCommissionProgramUsingPATCH(param: PreReleaseApiPatchDefaultCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<SetDefaultCommissionProgramResponse> {
         return this.api.patchDefaultCommissionProgramUsingPATCH(param.commissionProgramId, param.updateMask, param.patchDefaultCommissionProgramRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param param the request object
+     */
+    public patchOrderUsingPATCHWithHttpInfo(param: PreReleaseApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+        return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.order,  options).toPromise();
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param param the request object
+     */
+    public patchOrderUsingPATCH(param: PreReleaseApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<RestV2Order> {
+        return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.order,  options).toPromise();
     }
 
     /**
@@ -7288,15 +7495,6 @@ export class ObjectShippingApi {
 import { ObservableSubscriptionPlansApi } from "./ObservableAPI";
 import { SubscriptionPlansApiRequestFactory, SubscriptionPlansApiResponseProcessor} from "../apis/SubscriptionPlansApi";
 
-export interface SubscriptionPlansApiCreateSubscriptionV2UsingPOSTRequest {
-    /**
-     * createSubscriptionV2
-     * @type CreateSubscriptionV2
-     * @memberof SubscriptionPlansApicreateSubscriptionV2UsingPOST
-     */
-    createSubscriptionV2: CreateSubscriptionV2
-}
-
 export interface SubscriptionPlansApiListSubscriptionPlansUsingGET0Request {
     /**
      * Filter to apply, allowed fields are:   - (String) name   
@@ -7335,24 +7533,6 @@ export class ObjectSubscriptionPlansApi {
 
     public constructor(configuration: Configuration, requestFactory?: SubscriptionPlansApiRequestFactory, responseProcessor?: SubscriptionPlansApiResponseProcessor) {
         this.api = new ObservableSubscriptionPlansApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * Creates a subscription with the specified product and product subscription id.
-     * Create Subscription
-     * @param param the request object
-     */
-    public createSubscriptionV2UsingPOSTWithHttpInfo(param: SubscriptionPlansApiCreateSubscriptionV2UsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestSubscriptionV2>> {
-        return this.api.createSubscriptionV2UsingPOSTWithHttpInfo(param.createSubscriptionV2,  options).toPromise();
-    }
-
-    /**
-     * Creates a subscription with the specified product and product subscription id.
-     * Create Subscription
-     * @param param the request object
-     */
-    public createSubscriptionV2UsingPOST(param: SubscriptionPlansApiCreateSubscriptionV2UsingPOSTRequest, options?: Configuration): Promise<RestSubscriptionV2> {
-        return this.api.createSubscriptionV2UsingPOST(param.createSubscriptionV2,  options).toPromise();
     }
 
     /**
@@ -7401,6 +7581,15 @@ export interface SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request 
      * @memberof SubscriptionsApicreateSubscriptionCustomFieldUsingPOST
      */
     customField: CreateCustomFieldRequest
+}
+
+export interface SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest {
+    /**
+     * createSubscriptionV2
+     * @type CreateSubscriptionV2
+     * @memberof SubscriptionsApicreateSubscriptionV2UsingPOST
+     */
+    createSubscriptionV2: CreateSubscriptionV2
 }
 
 export interface SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request {
@@ -7470,6 +7659,24 @@ export class ObjectSubscriptionsApi {
      */
     public createSubscriptionCustomFieldUsingPOST(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.createSubscriptionCustomFieldUsingPOST(param.customField,  options).toPromise();
+    }
+
+    /**
+     * Creates a subscription with the specified product and product subscription id.
+     * Create Subscription
+     * @param param the request object
+     */
+    public createSubscriptionV2UsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestSubscriptionV2>> {
+        return this.api.createSubscriptionV2UsingPOSTWithHttpInfo(param.createSubscriptionV2,  options).toPromise();
+    }
+
+    /**
+     * Creates a subscription with the specified product and product subscription id.
+     * Create Subscription
+     * @param param the request object
+     */
+    public createSubscriptionV2UsingPOST(param: SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest, options?: Configuration): Promise<RestSubscriptionV2> {
+        return this.api.createSubscriptionV2UsingPOST(param.createSubscriptionV2,  options).toPromise();
     }
 
     /**

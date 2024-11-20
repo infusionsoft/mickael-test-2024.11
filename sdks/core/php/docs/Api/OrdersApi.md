@@ -11,6 +11,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**deleteOrderUsingDELETE1_0()**](OrdersApi.md#deleteOrderUsingDELETE1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order |
 | [**getOrderUsingGET1_0()**](OrdersApi.md#getOrderUsingGET1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order |
 | [**listOrdersUsingGET1_0()**](OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders |
+| [**patchOrderUsingPATCH_0()**](OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order |
 | [**retrieveOrderCustomFieldModelUsingGET_0()**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
 | [**updateOrderCustomFieldUsingPATCH_0()**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
 
@@ -403,6 +404,65 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `patchOrderUsingPATCH_0()`
+
+```php
+patchOrderUsingPATCH_0($order_id, $update_mask, $order): \Com\Keap\Sdk\Core\Model\RestV2Order
+```
+
+Update an Order
+
+Updates an Order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$order_id = 'order_id_example'; // string | order_id
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+$order = new \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest | order
+
+try {
+    $result = $apiInstance->patchOrderUsingPATCH_0($order_id, $update_mask, $order);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->patchOrderUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_id** | **string**| order_id | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+| **order** | [**\Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest**](../Model/RestV2PatchOrderRequest.md)| order | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestV2Order**](../Model/RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

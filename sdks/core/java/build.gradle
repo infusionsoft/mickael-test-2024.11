@@ -5,8 +5,7 @@ plugins {
     id 'idea'
 }
 
-group = 'com.keap.sdk'
-version = 'dev-2024.1119.0014-90c64a05a9'
+group = 'com.keap'
 
 repositories {
     mavenCentral()

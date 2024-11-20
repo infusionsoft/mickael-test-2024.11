@@ -25,11 +25,11 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.FunnelIntegrationApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -91,12 +91,12 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.FunnelIntegrationApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -159,11 +159,11 @@ Achieve Funnel Integration Trigger Goal
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.FunnelIntegrationApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -224,12 +224,12 @@ Achieve Funnel Integration Trigger Goal
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.FunnelIntegrationApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -295,11 +295,11 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.FunnelIntegrationApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -361,12 +361,12 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.FunnelIntegrationApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {

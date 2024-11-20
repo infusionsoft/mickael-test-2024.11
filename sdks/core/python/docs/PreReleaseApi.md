@@ -29,6 +29,8 @@ Method | HTTP request | Description
 [**create_user_using_post1**](PreReleaseApi.md#create_user_using_post1) | **POST** /v2/users | Create a User
 [**delete_affiliate_commission_program_using_delete**](PreReleaseApi.md#delete_affiliate_commission_program_using_delete) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
 [**delete_affiliate_using_delete**](PreReleaseApi.md#delete_affiliate_using_delete) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+[**delete_discount_using_delete**](PreReleaseApi.md#delete_discount_using_delete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+[**delete_discount_using_delete1**](PreReleaseApi.md#delete_discount_using_delete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 [**delete_funnel_integration_using_post**](PreReleaseApi.md#delete_funnel_integration_using_post) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 [**delete_opportunity_stage_using_delete**](PreReleaseApi.md#delete_opportunity_stage_using_delete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**delete_opportunity_using_delete**](PreReleaseApi.md#delete_opportunity_using_delete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
@@ -39,9 +41,9 @@ Method | HTTP request | Description
 [**get_affiliate_commission_total_using_get**](PreReleaseApi.md#get_affiliate_commission_total_using_get) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
 [**get_affiliate_commissions_using_get**](PreReleaseApi.md#get_affiliate_commissions_using_get) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
 [**get_affiliate_custom_fields_using_get**](PreReleaseApi.md#get_affiliate_custom_fields_using_get) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-[**get_category_discount_using_get**](PreReleaseApi.md#get_category_discount_using_get) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 [**get_commission_program_using_get**](PreReleaseApi.md#get_commission_program_using_get) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 [**get_contacts_by_search_term_using_get**](PreReleaseApi.md#get_contacts_by_search_term_using_get) | **GET** /v2/contacts:search | Search for Contacts
+[**get_discount_using_get**](PreReleaseApi.md#get_discount_using_get) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 [**get_opportunity_stage_using_get**](PreReleaseApi.md#get_opportunity_stage_using_get) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**get_opportunity_using_get1**](PreReleaseApi.md#get_opportunity_using_get1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 [**get_order_using_get1**](PreReleaseApi.md#get_order_using_get1) | **GET** /v2/orders/{order_id} | Retrieve an Order
@@ -67,6 +69,7 @@ Method | HTTP request | Description
 [**list_tasks_using_get1**](PreReleaseApi.md#list_tasks_using_get1) | **GET** /v2/tasks | List Tasks
 [**list_users_using_get1**](PreReleaseApi.md#list_users_using_get1) | **GET** /v2/users | List Users
 [**patch_default_commission_program_using_patch**](PreReleaseApi.md#patch_default_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+[**patch_order_using_patch**](PreReleaseApi.md#patch_order_using_patch) | **PATCH** /v2/orders/{order_id} | Update an Order
 [**patch_product_commission_program_using_patch**](PreReleaseApi.md#patch_product_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
 [**patch_subscription_commission_program_using_patch**](PreReleaseApi.md#patch_subscription_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
 [**patch_task_using_patch**](PreReleaseApi.md#patch_task_using_patch) | **PATCH** /v2/tasks/{task_id} | Update a Task
@@ -1807,6 +1810,138 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_discount_using_delete**
+> delete_discount_using_delete(discount_id)
+
+Delete a Category Discount
+
+Deletes a specified Category Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Delete a Category Discount
+        api_instance.delete_discount_using_delete(discount_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_discount_using_delete: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_discount_using_delete1**
+> delete_discount_using_delete1(discount_id)
+
+Delete a Free Trial Discount
+
+Deletes a specified Free Trial Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Delete a Free Trial Discount
+        api_instance.delete_discount_using_delete1(discount_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_discount_using_delete1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_funnel_integration_using_post**
 > delete_funnel_integration_using_post(delete_funnel_integration_request)
 
@@ -2480,75 +2615,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_category_discount_using_get**
-> CategoryDiscount get_category_discount_using_get(discount_id)
-
-Retrieve Category Discount
-
-Retrieves a single Category Discount
-
-### Example
-
-
-```python
-import keap_sdk_core_client
-from keap_sdk_core_client.models.category_discount import CategoryDiscount
-from keap_sdk_core_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
-# See configuration.py for a list of all supported configuration parameters.
-configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
-)
-
-# Enter a context with an instance of the API client
-with keap_sdk_core_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    discount_id = 'discount_id_example' # str | discount_id
-
-    try:
-        # Retrieve Category Discount
-        api_response = api_instance.get_category_discount_using_get(discount_id)
-        print("The response of PreReleaseApi->get_category_discount_using_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling PreReleaseApi->get_category_discount_using_get: %s\n" % e)
-```
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **discount_id** | **str**| discount_id | 
-
-### Return type
-
-[**CategoryDiscount**](CategoryDiscount.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_commission_program_using_get**
 > AffiliateProgramV2 get_commission_program_using_get(commission_program_id)
 
@@ -2666,6 +2732,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListBasicContactResponse**](ListBasicContactResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_discount_using_get**
+> CategoryDiscount get_discount_using_get(discount_id)
+
+Retrieve a Category Discount
+
+Retrieves a single Category Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.category_discount import CategoryDiscount
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Retrieve a Category Discount
+        api_response = api_instance.get_discount_using_get(discount_id)
+        print("The response of PreReleaseApi->get_discount_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_discount_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
 
 ### Authorization
 
@@ -4459,6 +4594,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_order_using_patch**
+> RestV2Order patch_order_using_patch(order_id, update_mask=update_mask, order=order)
+
+Update an Order
+
+Updates an Order
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.rest_v2_order import RestV2Order
+from keap_sdk_core_client.models.rest_v2_patch_order_request import RestV2PatchOrderRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    order_id = 'order_id_example' # str | order_id
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    order = keap_sdk_core_client.RestV2PatchOrderRequest() # RestV2PatchOrderRequest | order (optional)
+
+    try:
+        # Update an Order
+        api_response = api_instance.patch_order_using_patch(order_id, update_mask=update_mask, order=order)
+        print("The response of PreReleaseApi->patch_order_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->patch_order_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **str**| order_id | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
+
+### Return type
+
+[**RestV2Order**](RestV2Order.md)
 
 ### Authorization
 

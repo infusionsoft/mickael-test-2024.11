@@ -1721,7 +1721,7 @@ const request: AffiliateApiUpdateAffiliateUsingPATCHRequest = {
     code: "M123",
     contactId: "1",
     name: "Affiliate Name",
-    status: "active",
+    status: "ACTIVE",
   },
 };
 

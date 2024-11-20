@@ -21,11 +21,11 @@ List Countries
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.LocaleApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -83,12 +83,12 @@ List Countries
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.LocaleApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -149,11 +149,11 @@ List a Country&#39;s Provinces
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.LocaleApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -215,12 +215,12 @@ List a Country&#39;s Provinces
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.LocaleApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {

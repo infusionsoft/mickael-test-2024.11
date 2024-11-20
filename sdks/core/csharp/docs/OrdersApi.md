@@ -11,6 +11,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**DeleteOrderUsingDELETE1_0**](OrdersApi.md#deleteorderusingdelete1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order |
 | [**GetOrderUsingGET1_0**](OrdersApi.md#getorderusingget1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order |
 | [**ListOrdersUsingGET1_0**](OrdersApi.md#listordersusingget1_0) | **GET** /v2/orders | List orders |
+| [**PatchOrderUsingPATCH_0**](OrdersApi.md#patchorderusingpatch_0) | **PATCH** /v2/orders/{order_id} | Update an Order |
 | [**RetrieveOrderCustomFieldModelUsingGET_0**](OrdersApi.md#retrieveordercustomfieldmodelusingget_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
 | [**UpdateOrderCustomFieldUsingPATCH_0**](OrdersApi.md#updateordercustomfieldusingpatch_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
 
@@ -661,6 +662,104 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="patchorderusingpatch_0"></a>
+# **PatchOrderUsingPATCH_0**
+> RestV2Order PatchOrderUsingPATCH_0 (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? order = null)
+
+Update an Order
+
+Updates an Order
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class PatchOrderUsingPATCH_0Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new OrdersApi(config);
+            var orderId = "orderId_example";  // string | order_id
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var order = new RestV2PatchOrderRequest?(); // RestV2PatchOrderRequest? | order (optional) 
+
+            try
+            {
+                // Update an Order
+                RestV2Order result = apiInstance.PatchOrderUsingPATCH_0(orderId, updateMask, order);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrdersApi.PatchOrderUsingPATCH_0: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the PatchOrderUsingPATCH_0WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update an Order
+    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCH_0WithHttpInfo(orderId, updateMask, order);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrdersApi.PatchOrderUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **orderId** | **string** | order_id |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **order** | [**RestV2PatchOrderRequest?**](RestV2PatchOrderRequest?.md) | order | [optional]  |
+
+### Return type
+
+[**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

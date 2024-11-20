@@ -31,11 +31,11 @@ Creates a new user record. NB: Users will be invited to the application and rema
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -98,12 +98,12 @@ Creates a new user record. NB: Users will be invited to the application and rema
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -169,11 +169,11 @@ Retrieves a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -237,12 +237,12 @@ Retrieves a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -309,11 +309,11 @@ Retrieves information for the current authenticated end-user, as outlined by the
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -373,12 +373,12 @@ Retrieves information for the current authenticated end-user, as outlined by the
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -441,11 +441,11 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -509,12 +509,12 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -581,11 +581,11 @@ Retrieves a list of users
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -651,12 +651,12 @@ Retrieves a list of users
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -725,11 +725,11 @@ Updates information on a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -797,12 +797,12 @@ Updates information on a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.UsersApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.UsersApi;
 
 public class Example {
     public static void main(String[] args) {

@@ -8,6 +8,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**cancelSubscriptionUsingPOST_0WithHttpInfo**](SubscriptionsApi.md#cancelSubscriptionUsingPOST_0WithHttpInfo) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
 | [**createSubscriptionCustomFieldUsingPOST_0**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**createSubscriptionCustomFieldUsingPOST_0WithHttpInfo**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0WithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
+| [**createSubscriptionV2UsingPOST**](SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription |
+| [**createSubscriptionV2UsingPOSTWithHttpInfo**](SubscriptionsApi.md#createSubscriptionV2UsingPOSTWithHttpInfo) | **POST** /v2/subscriptions | Create Subscription |
 | [**retrieveSubscriptionCustomFieldModelUsingGET_0**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**updateSubscriptionCustomFieldUsingPATCH_0**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
@@ -27,11 +29,11 @@ Cancels the specified subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -95,12 +97,12 @@ Cancels the specified subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -167,11 +169,11 @@ Adds a custom field of the specified type and options to the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -234,12 +236,12 @@ Adds a custom field of the specified type and options to the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -293,6 +295,144 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
+## createSubscriptionV2UsingPOST
+
+> RestSubscriptionV2 createSubscriptionV2UsingPOST(createSubscriptionV2)
+
+Create Subscription
+
+Creates a subscription with the specified product and product subscription id.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
+        CreateSubscriptionV2 createSubscriptionV2 = new CreateSubscriptionV2(); // CreateSubscriptionV2 | createSubscriptionV2
+        try {
+            RestSubscriptionV2 result = apiInstance.createSubscriptionV2UsingPOST(createSubscriptionV2);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscriptionsApi#createSubscriptionV2UsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createSubscriptionV2** | [**CreateSubscriptionV2**](CreateSubscriptionV2.md)| createSubscriptionV2 | |
+
+### Return type
+
+[**RestSubscriptionV2**](RestSubscriptionV2.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createSubscriptionV2UsingPOSTWithHttpInfo
+
+> ApiResponse<RestSubscriptionV2> createSubscriptionV2UsingPOST createSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2)
+
+Create Subscription
+
+Creates a subscription with the specified product and product subscription id.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
+        CreateSubscriptionV2 createSubscriptionV2 = new CreateSubscriptionV2(); // CreateSubscriptionV2 | createSubscriptionV2
+        try {
+            ApiResponse<RestSubscriptionV2> response = apiInstance.createSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscriptionsApi#createSubscriptionV2UsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createSubscriptionV2** | [**CreateSubscriptionV2**](CreateSubscriptionV2.md)| createSubscriptionV2 | |
+
+### Return type
+
+ApiResponse<[**RestSubscriptionV2**](RestSubscriptionV2.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
 ## retrieveSubscriptionCustomFieldModelUsingGET_0
 
 > ObjectModel retrieveSubscriptionCustomFieldModelUsingGET_0()
@@ -305,11 +445,11 @@ Gets the custom field&#39;s model for the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -369,12 +509,12 @@ Gets the custom field&#39;s model for the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -437,11 +577,11 @@ Updates a custom field of the specified type and options to the Subscription obj
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -509,12 +649,12 @@ Updates a custom field of the specified type and options to the Subscription obj
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.SubscriptionsApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {

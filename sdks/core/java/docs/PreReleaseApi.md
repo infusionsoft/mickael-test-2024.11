@@ -54,6 +54,10 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program |
 | [**deleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate |
 | [**deleteAffiliateUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteAffiliateUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/{id} | Delete Affiliate |
+| [**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**deleteDiscountUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**deleteDiscountUsingDELETE1WithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 | [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
@@ -74,12 +78,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**getAffiliateCommissionsUsingGETWithHttpInfo**](PreReleaseApi.md#getAffiliateCommissionsUsingGETWithHttpInfo) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks |
 | [**getAffiliateCustomFieldsUsingGET**](PreReleaseApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model |
 | [**getAffiliateCustomFieldsUsingGETWithHttpInfo**](PreReleaseApi.md#getAffiliateCustomFieldsUsingGETWithHttpInfo) | **GET** /v2/affiliates/model | Retrieve Affiliate Model |
-| [**getCategoryDiscountUsingGET**](PreReleaseApi.md#getCategoryDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount |
-| [**getCategoryDiscountUsingGETWithHttpInfo**](PreReleaseApi.md#getCategoryDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount |
 | [**getCommissionProgramUsingGET**](PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program |
 | [**getCommissionProgramUsingGETWithHttpInfo**](PreReleaseApi.md#getCommissionProgramUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program |
 | [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts |
 | [**getContactsBySearchTermUsingGETWithHttpInfo**](PreReleaseApi.md#getContactsBySearchTermUsingGETWithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts |
+| [**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**getDiscountUsingGETWithHttpInfo**](PreReleaseApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 | [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityStageUsingGETWithHttpInfo**](PreReleaseApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
@@ -130,6 +134,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**listUsersUsingGET1WithHttpInfo**](PreReleaseApi.md#listUsersUsingGET1WithHttpInfo) | **GET** /v2/users | List Users |
 | [**patchDefaultCommissionProgramUsingPATCH**](PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program |
 | [**patchDefaultCommissionProgramUsingPATCHWithHttpInfo**](PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program |
+| [**patchOrderUsingPATCH**](PreReleaseApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order |
+| [**patchOrderUsingPATCHWithHttpInfo**](PreReleaseApi.md#patchOrderUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order |
 | [**patchProductCommissionProgramUsingPATCH**](PreReleaseApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program |
 | [**patchProductCommissionProgramUsingPATCHWithHttpInfo**](PreReleaseApi.md#patchProductCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program |
 | [**patchSubscriptionCommissionProgramUsingPATCH**](PreReleaseApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program |
@@ -181,11 +187,11 @@ Assigns an Affiliate to Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -249,12 +255,12 @@ Assigns an Affiliate to Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -321,11 +327,11 @@ Creates an Affiliate Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -388,12 +394,12 @@ Creates an Affiliate Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -459,11 +465,11 @@ Assigns a Product Commission Program to a Product
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -528,12 +534,12 @@ Assigns a Product Commission Program to a Product
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -601,11 +607,11 @@ Assigns a Subscription Commission Program to a Subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -670,12 +676,12 @@ Assigns a Subscription Commission Program to a Subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -743,11 +749,11 @@ Cancels the specified subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -811,12 +817,12 @@ Cancels the specified subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -883,11 +889,11 @@ Creates a single Affiliate Custom Field
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -950,12 +956,12 @@ Creates a single Affiliate Custom Field
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1021,11 +1027,11 @@ Creates a Default Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1090,12 +1096,12 @@ Creates a Default Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1163,11 +1169,11 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1229,12 +1235,12 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1297,11 +1303,11 @@ Achieve Funnel Integration Trigger Goal
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1362,12 +1368,12 @@ Achieve Funnel Integration Trigger Goal
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1433,11 +1439,11 @@ Creates a new Lead Source
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1500,12 +1506,12 @@ Creates a new Lead Source
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1571,11 +1577,11 @@ Adds a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1638,12 +1644,12 @@ Adds a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1709,11 +1715,11 @@ Adds a custom field of the specified type and options to the Opportunity object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1776,12 +1782,12 @@ Adds a custom field of the specified type and options to the Opportunity object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1847,11 +1853,11 @@ Creates a new Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1914,12 +1920,12 @@ Creates a new Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1985,11 +1991,11 @@ Creates a new opportunity as the authenticated user.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2052,12 +2058,12 @@ Creates a new opportunity as the authenticated user.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2123,11 +2129,11 @@ Adds a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2190,12 +2196,12 @@ Adds a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2261,11 +2267,11 @@ Creates an order item on an existing order.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2330,12 +2336,12 @@ Creates an order item on an existing order.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2403,11 +2409,11 @@ Create a one time Order with Order items.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2470,12 +2476,12 @@ Create a one time Order with Order items.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2541,11 +2547,11 @@ Creates a single Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2608,12 +2614,12 @@ Creates a single Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2679,11 +2685,11 @@ Creates a new referral partner referral on the provided contact
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2746,12 +2752,12 @@ Creates a new referral partner referral on the provided contact
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2817,11 +2823,11 @@ Adds a custom field of the specified type and options to the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2884,12 +2890,12 @@ Adds a custom field of the specified type and options to the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -2955,11 +2961,11 @@ Adds a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3022,12 +3028,12 @@ Adds a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3093,11 +3099,11 @@ Creates a new task as the authenticated user.   This endpoint does not currently
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3160,12 +3166,12 @@ Creates a new task as the authenticated user.   This endpoint does not currently
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3231,11 +3237,11 @@ Creates a new user record. NB: Users will be invited to the application and rema
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3298,12 +3304,12 @@ Creates a new user record. NB: Users will be invited to the application and rema
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3369,11 +3375,11 @@ Deletes a Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3436,12 +3442,12 @@ Deletes a Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3507,11 +3513,11 @@ Deletes the specified Affiliate
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3574,12 +3580,12 @@ Deletes the specified Affiliate
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3633,6 +3639,282 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## deleteDiscountUsingDELETE
+
+> void deleteDiscountUsingDELETE(discountId)
+
+Delete a Category Discount
+
+Deletes a specified Category Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            apiInstance.deleteDiscountUsingDELETE(discountId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteDiscountUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteDiscountUsingDELETEWithHttpInfo
+
+> ApiResponse<Void> deleteDiscountUsingDELETE deleteDiscountUsingDELETEWithHttpInfo(discountId)
+
+Delete a Category Discount
+
+Deletes a specified Category Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETEWithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteDiscountUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## deleteDiscountUsingDELETE1
+
+> void deleteDiscountUsingDELETE1(discountId)
+
+Delete a Free Trial Discount
+
+Deletes a specified Free Trial Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            apiInstance.deleteDiscountUsingDELETE1(discountId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteDiscountUsingDELETE1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteDiscountUsingDELETE1WithHttpInfo
+
+> ApiResponse<Void> deleteDiscountUsingDELETE1 deleteDiscountUsingDELETE1WithHttpInfo(discountId)
+
+Delete a Free Trial Discount
+
+Deletes a specified Free Trial Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETE1WithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteDiscountUsingDELETE1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## deleteFunnelIntegrationUsingPOST
 
 > void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
@@ -3645,11 +3927,11 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3711,12 +3993,12 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3781,11 +4063,11 @@ Deletes the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3848,12 +4130,12 @@ Deletes the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3919,11 +4201,11 @@ Deletes the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -3986,12 +4268,12 @@ Deletes the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4057,11 +4339,11 @@ Delete an Order
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4124,12 +4406,12 @@ Delete an Order
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4195,11 +4477,11 @@ Deletes an Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4262,12 +4544,12 @@ Deletes an Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4333,11 +4615,11 @@ Deletes a Custom Field from Task.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4400,12 +4682,12 @@ Deletes a Custom Field from Task.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4471,11 +4753,11 @@ Deletes a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4538,12 +4820,12 @@ Deletes a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4609,11 +4891,11 @@ Get the Affiliate Commission Earned and View LedgerURl for portal
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4677,12 +4959,12 @@ Get the Affiliate Commission Earned and View LedgerURl for portal
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4749,11 +5031,11 @@ Retrieve a list of Affiliate&#39;s Commissions and Clawbacks
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4825,12 +5107,12 @@ Retrieve a list of Affiliate&#39;s Commissions and Clawbacks
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4905,11 +5187,11 @@ Get the custom fields and optional properties for the Affiliate object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -4969,12 +5251,12 @@ Get the custom fields and optional properties for the Affiliate object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5025,146 +5307,6 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getCategoryDiscountUsingGET
-
-> CategoryDiscount getCategoryDiscountUsingGET(discountId)
-
-Retrieve Category Discount
-
-Retrieves a single Category Discount
-
-### Example
-
-```java
-// Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
-
-        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        String discountId = "discountId_example"; // String | discount_id
-        try {
-            CategoryDiscount result = apiInstance.getCategoryDiscountUsingGET(discountId);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling PreReleaseApi#getCategoryDiscountUsingGET");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **discountId** | **String**| discount_id | |
-
-### Return type
-
-[**CategoryDiscount**](CategoryDiscount.md)
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-## getCategoryDiscountUsingGETWithHttpInfo
-
-> ApiResponse<CategoryDiscount> getCategoryDiscountUsingGET getCategoryDiscountUsingGETWithHttpInfo(discountId)
-
-Retrieve Category Discount
-
-Retrieves a single Category Discount
-
-### Example
-
-```java
-// Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
-
-        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        String discountId = "discountId_example"; // String | discount_id
-        try {
-            ApiResponse<CategoryDiscount> response = apiInstance.getCategoryDiscountUsingGETWithHttpInfo(discountId);
-            System.out.println("Status code: " + response.getStatusCode());
-            System.out.println("Response headers: " + response.getHeaders());
-            System.out.println("Response body: " + response.getData());
-        } catch (ApiException e) {
-            System.err.println("Exception when calling PreReleaseApi#getCategoryDiscountUsingGET");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            System.err.println("Reason: " + e.getResponseBody());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **discountId** | **String**| discount_id | |
-
-### Return type
-
-ApiResponse<[**CategoryDiscount**](CategoryDiscount.md)>
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-
 ## getCommissionProgramUsingGET
 
 > AffiliateProgramV2 getCommissionProgramUsingGET(commissionProgramId)
@@ -5177,11 +5319,11 @@ Retrieves a single Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5245,12 +5387,12 @@ Retrieves a single Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5317,11 +5459,11 @@ Get a list of Contacts based search parameters.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5385,12 +5527,12 @@ Get a list of Contacts based search parameters.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5445,6 +5587,146 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## getDiscountUsingGET
+
+> CategoryDiscount getDiscountUsingGET(discountId)
+
+Retrieve a Category Discount
+
+Retrieves a single Category Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            CategoryDiscount result = apiInstance.getDiscountUsingGET(discountId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getDiscountUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getDiscountUsingGETWithHttpInfo
+
+> ApiResponse<CategoryDiscount> getDiscountUsingGET getDiscountUsingGETWithHttpInfo(discountId)
+
+Retrieve a Category Discount
+
+Retrieves a single Category Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<CategoryDiscount> response = apiInstance.getDiscountUsingGETWithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getDiscountUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+ApiResponse<[**CategoryDiscount**](CategoryDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## getOpportunityStageUsingGET
 
 > RestOpportunityStage getOpportunityStageUsingGET(stageId)
@@ -5457,11 +5739,11 @@ Retrieves the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5525,12 +5807,12 @@ Retrieves the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5597,11 +5879,11 @@ Retrieves the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5665,12 +5947,12 @@ Retrieves the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5737,11 +6019,11 @@ Retrieves a single Order for a given order id
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5805,12 +6087,12 @@ Retrieves a single Order for a given order id
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5877,11 +6159,11 @@ Retrieves information about a single Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -5945,12 +6227,12 @@ Retrieves information about a single Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6017,11 +6299,11 @@ Retrieves a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6085,12 +6367,12 @@ Retrieves a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6157,11 +6439,11 @@ Retrieves a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6225,12 +6507,12 @@ Retrieves a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6297,11 +6579,11 @@ Retrieves information for the current authenticated end-user, as outlined by the
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6361,12 +6643,12 @@ Retrieves information for the current authenticated end-user, as outlined by the
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6429,11 +6711,11 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6497,12 +6779,12 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6569,11 +6851,11 @@ Retrieves a list of Affiliate Commission Programs
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6643,12 +6925,12 @@ Retrieves a list of Affiliate Commission Programs
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6721,11 +7003,11 @@ Retrieves a list of Affiliate Links
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6795,12 +7077,12 @@ Retrieves a list of Affiliate Links
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6871,11 +7153,11 @@ List Countries
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -6933,12 +7215,12 @@ List Countries
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7001,11 +7283,11 @@ Retrieves a list of all landing pages
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7075,12 +7357,12 @@ Retrieves a list of all landing pages
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7153,11 +7435,11 @@ Retrieves a list of lead sources
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7227,12 +7509,12 @@ Retrieves a list of lead sources
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7305,11 +7587,11 @@ Retrieves a list of Merchant accounts
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7379,12 +7661,12 @@ Retrieves a list of Merchant accounts
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7457,11 +7739,11 @@ Retrieves a list of all Opportunities.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7533,12 +7815,12 @@ Retrieves a list of all Opportunities.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7613,11 +7895,11 @@ Retrieves a list of Opportunity Stages.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7687,12 +7969,12 @@ Retrieves a list of Opportunity Stages.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7765,11 +8047,11 @@ Retrieves a list of orders
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7839,12 +8121,12 @@ Retrieves a list of orders
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7917,11 +8199,11 @@ Retrieves a list of Products
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -7991,12 +8273,12 @@ Retrieves a list of Products
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8067,11 +8349,11 @@ List a Country&#39;s Provinces
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8133,12 +8415,12 @@ List a Country&#39;s Provinces
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8205,11 +8487,11 @@ Retrieves a list of Shipping methods
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8269,12 +8551,12 @@ Retrieves a list of Shipping methods
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8337,11 +8619,11 @@ Retrieves a list of Subscription Plans
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8411,12 +8693,12 @@ Retrieves a list of Subscription Plans
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8489,11 +8771,11 @@ Retrieve a list of Affiliate Summaries
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8563,12 +8845,12 @@ Retrieve a list of Affiliate Summaries
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8641,11 +8923,11 @@ Retrieve a list of tasks based on the provided filter. Tasks which are not assig
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8719,12 +9001,12 @@ Retrieve a list of tasks based on the provided filter. Tasks which are not assig
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8801,11 +9083,11 @@ Retrieves a list of users
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8871,12 +9153,12 @@ Retrieves a list of users
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -8945,11 +9227,11 @@ Updates a Default Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9017,12 +9299,12 @@ Updates a Default Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9081,6 +9363,154 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## patchOrderUsingPATCH
+
+> RestV2Order patchOrderUsingPATCH(orderId, updateMask, order)
+
+Update an Order
+
+Updates an Order
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String orderId = "orderId_example"; // String | order_id
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
+        try {
+            RestV2Order result = apiInstance.patchOrderUsingPATCH(orderId, updateMask, order);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#patchOrderUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orderId** | **String**| order_id | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
+| **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
+
+### Return type
+
+[**RestV2Order**](RestV2Order.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## patchOrderUsingPATCHWithHttpInfo
+
+> ApiResponse<RestV2Order> patchOrderUsingPATCH patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order)
+
+Update an Order
+
+Updates an Order
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String orderId = "orderId_example"; // String | order_id
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
+        try {
+            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#patchOrderUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orderId** | **String**| order_id | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
+| **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
+
+### Return type
+
+ApiResponse<[**RestV2Order**](RestV2Order.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## patchProductCommissionProgramUsingPATCH
 
 > ProductCommissionProgram patchProductCommissionProgramUsingPATCH(commissionProgramId, updateMask, patchProductCommissionProgramRequest)
@@ -9093,11 +9523,11 @@ Updates a Product Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9165,12 +9595,12 @@ Updates a Product Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9241,11 +9671,11 @@ Updates a Subscription Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9313,12 +9743,12 @@ Updates a Subscription Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9389,11 +9819,11 @@ Updates a task with only the values provided in the request.  This endpoint does
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9461,12 +9891,12 @@ Updates a task with only the values provided in the request.  This endpoint does
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9537,11 +9967,11 @@ Updates information on a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9609,12 +10039,12 @@ Updates information on a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9685,11 +10115,11 @@ Removes an Affiliate from a Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9753,12 +10183,12 @@ Removes an Affiliate from a Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9825,11 +10255,11 @@ Removes a Subscription from a Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9893,12 +10323,12 @@ Removes a Subscription from a Commission Program
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -9965,11 +10395,11 @@ Gets the custom fields for the Note object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10029,12 +10459,12 @@ Gets the custom fields for the Note object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10097,11 +10527,11 @@ Gets the custom field&#39;s model for the Order object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10161,12 +10591,12 @@ Gets the custom field&#39;s model for the Order object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10229,11 +10659,11 @@ Gets the custom field&#39;s model for the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10293,12 +10723,12 @@ Gets the custom field&#39;s model for the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10361,11 +10791,11 @@ Get the custom fields for the Task object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10425,12 +10855,12 @@ Get the custom fields for the Task object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10493,11 +10923,11 @@ Updates a custom field of the specified type and options to the Affiliate object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10565,12 +10995,12 @@ Updates a custom field of the specified type and options to the Affiliate object
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10641,11 +11071,11 @@ Updates a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10713,12 +11143,12 @@ Updates a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10789,11 +11219,11 @@ Updates a custom field of the specified type and options to the Opportunity obje
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10861,12 +11291,12 @@ Updates a custom field of the specified type and options to the Opportunity obje
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -10937,11 +11367,11 @@ Updates specified values of a given opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11009,12 +11439,12 @@ Updates specified values of a given opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11085,11 +11515,11 @@ Updates a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11157,12 +11587,12 @@ Updates a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11233,11 +11663,11 @@ Updates an Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11303,12 +11733,12 @@ Updates an Affiliate Link
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11377,11 +11807,11 @@ Updates a custom field of the specified type and options to the Subscription obj
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11449,12 +11879,12 @@ Updates a custom field of the specified type and options to the Subscription obj
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11525,11 +11955,11 @@ Updates a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -11597,12 +12027,12 @@ Updates a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.PreReleaseApi;
+import com.keap.sdk.core.ApiClient;
+import com.keap.sdk.core.ApiException;
+import com.keap.sdk.core.ApiResponse;
+import com.keap.sdk.core.Configuration;
+import com.keap.sdk.core.models.*;
+import com.keap.sdk.core.api.PreReleaseApi;
 
 public class Example {
     public static void main(String[] args) {

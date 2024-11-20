@@ -29,6 +29,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateUserUsingPOST1**](PreReleaseApi.md#createuserusingpost1) | **POST** /v2/users | Create a User |
 | [**DeleteAffiliateCommissionProgramUsingDELETE**](PreReleaseApi.md#deleteaffiliatecommissionprogramusingdelete) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program |
 | [**DeleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteaffiliateusingdelete) | **DELETE** /v2/affiliates/{id} | Delete Affiliate |
+| [**DeleteDiscountUsingDELETE**](PreReleaseApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**DeleteDiscountUsingDELETE1**](PreReleaseApi.md#deletediscountusingdelete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 | [**DeleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**DeleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteopportunitystageusingdelete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**DeleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteopportunityusingdelete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
@@ -39,9 +41,9 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**GetAffiliateCommissionTotalUsingGET**](PreReleaseApi.md#getaffiliatecommissiontotalusingget) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal |
 | [**GetAffiliateCommissionsUsingGET**](PreReleaseApi.md#getaffiliatecommissionsusingget) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks |
 | [**GetAffiliateCustomFieldsUsingGET**](PreReleaseApi.md#getaffiliatecustomfieldsusingget) | **GET** /v2/affiliates/model | Retrieve Affiliate Model |
-| [**GetCategoryDiscountUsingGET**](PreReleaseApi.md#getcategorydiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount |
 | [**GetCommissionProgramUsingGET**](PreReleaseApi.md#getcommissionprogramusingget) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program |
 | [**GetContactsBySearchTermUsingGET**](PreReleaseApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts |
+| [**GetDiscountUsingGET**](PreReleaseApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 | [**GetOpportunityStageUsingGET**](PreReleaseApi.md#getopportunitystageusingget) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**GetOpportunityUsingGET1**](PreReleaseApi.md#getopportunityusingget1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
 | [**GetOrderUsingGET1**](PreReleaseApi.md#getorderusingget1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
@@ -67,6 +69,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**ListTasksUsingGET1**](PreReleaseApi.md#listtasksusingget1) | **GET** /v2/tasks | List Tasks |
 | [**ListUsersUsingGET1**](PreReleaseApi.md#listusersusingget1) | **GET** /v2/users | List Users |
 | [**PatchDefaultCommissionProgramUsingPATCH**](PreReleaseApi.md#patchdefaultcommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program |
+| [**PatchOrderUsingPATCH**](PreReleaseApi.md#patchorderusingpatch) | **PATCH** /v2/orders/{order_id} | Update an Order |
 | [**PatchProductCommissionProgramUsingPATCH**](PreReleaseApi.md#patchproductcommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program |
 | [**PatchSubscriptionCommissionProgramUsingPATCH**](PreReleaseApi.md#patchsubscriptioncommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program |
 | [**PatchTaskUsingPATCH**](PreReleaseApi.md#patchtaskusingpatch) | **PATCH** /v2/tasks/{task_id} | Update a Task |
@@ -2403,6 +2406,186 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="deletediscountusingdelete"></a>
+# **DeleteDiscountUsingDELETE**
+> void DeleteDiscountUsingDELETE (string discountId)
+
+Delete a Category Discount
+
+Deletes a specified Category Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteDiscountUsingDELETEExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Delete a Category Discount
+                apiInstance.DeleteDiscountUsingDELETE(discountId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteDiscountUsingDELETE: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteDiscountUsingDELETEWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete a Category Discount
+    apiInstance.DeleteDiscountUsingDELETEWithHttpInfo(discountId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteDiscountUsingDELETEWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="deletediscountusingdelete1"></a>
+# **DeleteDiscountUsingDELETE1**
+> void DeleteDiscountUsingDELETE1 (string discountId)
+
+Delete a Free Trial Discount
+
+Deletes a specified Free Trial Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteDiscountUsingDELETE1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Delete a Free Trial Discount
+                apiInstance.DeleteDiscountUsingDELETE1(discountId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteDiscountUsingDELETE1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteDiscountUsingDELETE1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete a Free Trial Discount
+    apiInstance.DeleteDiscountUsingDELETE1WithHttpInfo(discountId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteDiscountUsingDELETE1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="deletefunnelintegrationusingpost"></a>
 # **DeleteFunnelIntegrationUsingPOST**
 > void DeleteFunnelIntegrationUsingPOST (DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest)
@@ -3317,100 +3500,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getcategorydiscountusingget"></a>
-# **GetCategoryDiscountUsingGET**
-> CategoryDiscount GetCategoryDiscountUsingGET (string discountId)
-
-Retrieve Category Discount
-
-Retrieves a single Category Discount
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Keap.Sdk.Core.Api;
-using Keap.Sdk.Core.Client;
-using Keap.Sdk.Core.Model;
-
-namespace Example
-{
-    public class GetCategoryDiscountUsingGETExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
-            var apiInstance = new PreReleaseApi(config);
-            var discountId = "discountId_example";  // string | discount_id
-
-            try
-            {
-                // Retrieve Category Discount
-                CategoryDiscount result = apiInstance.GetCategoryDiscountUsingGET(discountId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PreReleaseApi.GetCategoryDiscountUsingGET: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the GetCategoryDiscountUsingGETWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve Category Discount
-    ApiResponse<CategoryDiscount> response = apiInstance.GetCategoryDiscountUsingGETWithHttpInfo(discountId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PreReleaseApi.GetCategoryDiscountUsingGETWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **discountId** | **string** | discount_id |  |
-
-### Return type
-
-[**CategoryDiscount**](CategoryDiscount.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="getcommissionprogramusingget"></a>
 # **GetCommissionProgramUsingGET**
 > AffiliateProgramV2 GetCommissionProgramUsingGET (string commissionProgramId)
@@ -3578,6 +3667,100 @@ catch (ApiException e)
 ### Return type
 
 [**ListBasicContactResponse**](ListBasicContactResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getdiscountusingget"></a>
+# **GetDiscountUsingGET**
+> CategoryDiscount GetDiscountUsingGET (string discountId)
+
+Retrieve a Category Discount
+
+Retrieves a single Category Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetDiscountUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Retrieve a Category Discount
+                CategoryDiscount result = apiInstance.GetDiscountUsingGET(discountId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetDiscountUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetDiscountUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve a Category Discount
+    ApiResponse<CategoryDiscount> response = apiInstance.GetDiscountUsingGETWithHttpInfo(discountId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetDiscountUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
 
 ### Authorization
 
@@ -5993,6 +6176,104 @@ catch (ApiException e)
 ### Return type
 
 [**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="patchorderusingpatch"></a>
+# **PatchOrderUsingPATCH**
+> RestV2Order PatchOrderUsingPATCH (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? order = null)
+
+Update an Order
+
+Updates an Order
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class PatchOrderUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var orderId = "orderId_example";  // string | order_id
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var order = new RestV2PatchOrderRequest?(); // RestV2PatchOrderRequest? | order (optional) 
+
+            try
+            {
+                // Update an Order
+                RestV2Order result = apiInstance.PatchOrderUsingPATCH(orderId, updateMask, order);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.PatchOrderUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the PatchOrderUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update an Order
+    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.PatchOrderUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **orderId** | **string** | order_id |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **order** | [**RestV2PatchOrderRequest?**](RestV2PatchOrderRequest?.md) | order | [optional]  |
+
+### Return type
+
+[**RestV2Order**](RestV2Order.md)
 
 ### Authorization
 

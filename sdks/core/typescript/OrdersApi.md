@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**deleteOrderUsingDELETE1_0**](OrdersApi.md#deleteOrderUsingDELETE1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order
 [**getOrderUsingGET1_0**](OrdersApi.md#getOrderUsingGET1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order
 [**listOrdersUsingGET1_0**](OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders
+[**patchOrderUsingPATCH_0**](OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order
 [**retrieveOrderCustomFieldModelUsingGET_0**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order\&#39;s Custom Field Model
 [**updateOrderCustomFieldUsingPATCH_0**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order\&#39;s Custom Field
 
@@ -462,6 +463,95 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **patchOrderUsingPATCH_0**
+> RestV2Order patchOrderUsingPATCH_0()
+
+Updates an Order
+
+### Example
+
+
+```typescript
+import { createConfiguration, OrdersApi } from '';
+import type { OrdersApiPatchOrderUsingPATCH0Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new OrdersApi(configuration);
+
+const request: OrdersApiPatchOrderUsingPATCH0Request = {
+    // order_id
+  orderId: "order_id_example",
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "contact_id",
+  ],
+    // order (optional)
+  order: {
+    contactId: "contactId_example",
+    leadAffiliateId: "leadAffiliateId_example",
+    orderTime: "orderTime_example",
+    orderTitle: "orderTitle_example",
+    orderType: "OFFLINE",
+    promoCodes: [
+      "promoCodes_example",
+    ],
+    salesAffiliateId: "salesAffiliateId_example",
+    shippingAddress: {
+      company: "company_example",
+      countryCode: "countryCode_example",
+      firstName: "firstName_example",
+      isInvoiceToCompany: true,
+      lastName: "lastName_example",
+      line1: "line1_example",
+      line2: "line2_example",
+      locality: "locality_example",
+      middleName: "middleName_example",
+      phone: "phone_example",
+      region: "region_example",
+      zipCode: "zipCode_example",
+      zipFour: "zipFour_example",
+    },
+  },
+};
+
+const data = await apiInstance.patchOrderUsingPATCH_0(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order** | **RestV2PatchOrderRequest**| order |
+ **orderId** | [**string**] | order_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**RestV2Order**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

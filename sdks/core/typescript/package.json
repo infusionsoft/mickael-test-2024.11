@@ -1,16 +1,17 @@
 {
-  "name": "keap-core -service-core-sdk",
-  "version": "dev-2024.1119.0014-90c64a05a9",
-  "description": "SDK for Keap REST API",
-  "author": "",
+  "name": "keap-sdk-core",
+  "version": "0.0.2",
+  "description": "OpenAPI client for ",
+  "author": "OpenAPI-Generator Contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/infusionsoft/keap-sdk.git"
+    "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
   },
   "keywords": [
     "fetch",
     "typescript",
-    "Keap REST API"
+    "openapi-client",
+    "openapi-generator"
   ],
   "license": "Unlicense",
   "main": "./dist/index.js",

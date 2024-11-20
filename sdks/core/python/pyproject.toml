@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "keap_sdk_core_client"
-version = "dev-2024.1119.0014-90c64a05a9"
+version = "dev-2024.1120.2103-e6005674c7"
 description = "Keap REST API"
 authors = ["https://developer.keap.com/get-support/ <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
-repository = "https://github.com/infusionsoft/keap-sdk"
+repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Keap REST API"]
 include = ["keap_sdk_core_client/py.typed"]
 

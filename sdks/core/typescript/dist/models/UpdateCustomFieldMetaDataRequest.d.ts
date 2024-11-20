@@ -1,0 +1,23 @@
+import { CustomFieldOption } from '../models/CustomFieldOption';
+export declare class UpdateCustomFieldMetaDataRequest {
+    'groupId'?: string;
+    'label'?: string;
+    'options'?: Array<CustomFieldOption>;
+    static readonly discriminator: string | undefined;
+    static readonly mapping: {
+        [index: string]: string;
+    } | undefined;
+    static readonly attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+        format: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+        format: string;
+    }[];
+    constructor();
+}

@@ -19,11 +19,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/infusionsoft/keap-sdk.git"
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
     }
   ],
   "require": {
-    "infusionsoft/keap-sdk": "*@dev"
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
   }
 }
 ```
@@ -116,6 +116,8 @@ Class | Method | HTTP request | Description
 *CampaignApi* | [**getCampaignUsingGET1**](docs/Api/CampaignApi.md#getcampaignusingget1) | **GET** /v2/campaigns/{campaign_id} | Retrieve a Campaign
 *CampaignApi* | [**listCampaignsUsingGET1**](docs/Api/CampaignApi.md#listcampaignsusingget1) | **GET** /v2/campaigns | List Campaigns
 *CampaignApi* | [**removeContactsFromCampaignSequenceUsingPOST**](docs/Api/CampaignApi.md#removecontactsfromcampaignsequenceusingpost) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:removeContacts | Remove Contacts from Campaign Sequence
+*CategoryDiscountApi* | [**deleteDiscountUsingDELETE_0**](docs/Api/CategoryDiscountApi.md#deletediscountusingdelete_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+*CategoryDiscountApi* | [**getDiscountUsingGET_0**](docs/Api/CategoryDiscountApi.md#getdiscountusingget_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 *CompanyApi* | [**createCompanyUsingPOST1**](docs/Api/CompanyApi.md#createcompanyusingpost1) | **POST** /v2/companies | Create a Company
 *CompanyApi* | [**deleteCompanyUsingDELETE**](docs/Api/CompanyApi.md#deletecompanyusingdelete) | **DELETE** /v2/companies/{company_id} | Delete a Company
 *CompanyApi* | [**getCompanyUsingGET1**](docs/Api/CompanyApi.md#getcompanyusingget1) | **GET** /v2/companies/{company_id} | Retrieve a Company
@@ -134,7 +136,6 @@ Class | Method | HTTP request | Description
 *ContactApi* | [**patchContactUsingPATCH**](docs/Api/ContactApi.md#patchcontactusingpatch) | **PATCH** /v2/contacts/{contact_id} | Update a Contact
 *ContactApi* | [**retrieveContactModelUsingGET1**](docs/Api/ContactApi.md#retrievecontactmodelusingget1) | **GET** /v2/contacts/model | Retrieve Contact Model
 *ContactApi* | [**unlinkContactsUsingPOST**](docs/Api/ContactApi.md#unlinkcontactsusingpost) | **POST** /v2/contacts:unlink | Delete Link between two Contacts
-*DiscountApi* | [**getCategoryDiscountUsingGET_0**](docs/Api/DiscountApi.md#getcategorydiscountusingget_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 *EmailApi* | [**createEmailUsingPOST1**](docs/Api/EmailApi.md#createemailusingpost1) | **POST** /v2/emails | Create an Email Record
 *EmailApi* | [**createEmailsUsingPOST1**](docs/Api/EmailApi.md#createemailsusingpost1) | **POST** /v2/emails:batchAdd | Create a set of Email Records
 *EmailApi* | [**deleteEmailUsingDELETE1**](docs/Api/EmailApi.md#deleteemailusingdelete1) | **DELETE** /v2/emails/{id} | Delete an Email Record
@@ -143,6 +144,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**sendEmailUsingPOST1**](docs/Api/EmailApi.md#sendemailusingpost1) | **POST** /v2/emails:send | Send an Email
 *EmailAddressApi* | [**getEmailAddressStatusUsingGET**](docs/Api/EmailAddressApi.md#getemailaddressstatususingget) | **GET** /v2/emailAddresses/{email} | Retrieve an Email Address status
 *EmailAddressApi* | [**updateEmailAddressOptStatusUsingPUT**](docs/Api/EmailAddressApi.md#updateemailaddressoptstatususingput) | **PUT** /v2/emailAddresses/{email} | Update an Email Address opt-in status
+*FreeTrialDiscountApi* | [**deleteDiscountUsingDELETE1_0**](docs/Api/FreeTrialDiscountApi.md#deletediscountusingdelete1_0) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 *FunnelIntegrationApi* | [**createFunnelIntegrationUsingPOST_0**](docs/Api/FunnelIntegrationApi.md#createfunnelintegrationusingpost_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 *FunnelIntegrationApi* | [**createIntegrationTriggerEventUsingPOST_0**](docs/Api/FunnelIntegrationApi.md#createintegrationtriggereventusingpost_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
 *FunnelIntegrationApi* | [**deleteFunnelIntegrationUsingPOST_0**](docs/Api/FunnelIntegrationApi.md#deletefunnelintegrationusingpost_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
@@ -178,6 +180,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**deleteOrderUsingDELETE1_0**](docs/Api/OrdersApi.md#deleteorderusingdelete1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order
 *OrdersApi* | [**getOrderUsingGET1_0**](docs/Api/OrdersApi.md#getorderusingget1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order
 *OrdersApi* | [**listOrdersUsingGET1_0**](docs/Api/OrdersApi.md#listordersusingget1_0) | **GET** /v2/orders | List orders
+*OrdersApi* | [**patchOrderUsingPATCH_0**](docs/Api/OrdersApi.md#patchorderusingpatch_0) | **PATCH** /v2/orders/{order_id} | Update an Order
 *OrdersApi* | [**retrieveOrderCustomFieldModelUsingGET_0**](docs/Api/OrdersApi.md#retrieveordercustomfieldmodelusingget_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
 *OrdersApi* | [**updateOrderCustomFieldUsingPATCH_0**](docs/Api/OrdersApi.md#updateordercustomfieldusingpatch_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOST**](docs/Api/PaymentMethodConfigApi.md#createpaymentmethodconfigusingpost) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
@@ -206,6 +209,8 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**createUserUsingPOST1**](docs/Api/PreReleaseApi.md#createuserusingpost1) | **POST** /v2/users | Create a User
 *PreReleaseApi* | [**deleteAffiliateCommissionProgramUsingDELETE**](docs/Api/PreReleaseApi.md#deleteaffiliatecommissionprogramusingdelete) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
 *PreReleaseApi* | [**deleteAffiliateUsingDELETE**](docs/Api/PreReleaseApi.md#deleteaffiliateusingdelete) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+*PreReleaseApi* | [**deleteDiscountUsingDELETE**](docs/Api/PreReleaseApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+*PreReleaseApi* | [**deleteDiscountUsingDELETE1**](docs/Api/PreReleaseApi.md#deletediscountusingdelete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 *PreReleaseApi* | [**deleteFunnelIntegrationUsingPOST**](docs/Api/PreReleaseApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 *PreReleaseApi* | [**deleteOpportunityStageUsingDELETE**](docs/Api/PreReleaseApi.md#deleteopportunitystageusingdelete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 *PreReleaseApi* | [**deleteOpportunityUsingDELETE**](docs/Api/PreReleaseApi.md#deleteopportunityusingdelete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
@@ -216,9 +221,9 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**getAffiliateCommissionTotalUsingGET**](docs/Api/PreReleaseApi.md#getaffiliatecommissiontotalusingget) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
 *PreReleaseApi* | [**getAffiliateCommissionsUsingGET**](docs/Api/PreReleaseApi.md#getaffiliatecommissionsusingget) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
 *PreReleaseApi* | [**getAffiliateCustomFieldsUsingGET**](docs/Api/PreReleaseApi.md#getaffiliatecustomfieldsusingget) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-*PreReleaseApi* | [**getCategoryDiscountUsingGET**](docs/Api/PreReleaseApi.md#getcategorydiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 *PreReleaseApi* | [**getCommissionProgramUsingGET**](docs/Api/PreReleaseApi.md#getcommissionprogramusingget) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 *PreReleaseApi* | [**getContactsBySearchTermUsingGET**](docs/Api/PreReleaseApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts
+*PreReleaseApi* | [**getDiscountUsingGET**](docs/Api/PreReleaseApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 *PreReleaseApi* | [**getOpportunityStageUsingGET**](docs/Api/PreReleaseApi.md#getopportunitystageusingget) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 *PreReleaseApi* | [**getOpportunityUsingGET1**](docs/Api/PreReleaseApi.md#getopportunityusingget1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 *PreReleaseApi* | [**getOrderUsingGET1**](docs/Api/PreReleaseApi.md#getorderusingget1) | **GET** /v2/orders/{order_id} | Retrieve an Order
@@ -244,6 +249,7 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**listTasksUsingGET1**](docs/Api/PreReleaseApi.md#listtasksusingget1) | **GET** /v2/tasks | List Tasks
 *PreReleaseApi* | [**listUsersUsingGET1**](docs/Api/PreReleaseApi.md#listusersusingget1) | **GET** /v2/users | List Users
 *PreReleaseApi* | [**patchDefaultCommissionProgramUsingPATCH**](docs/Api/PreReleaseApi.md#patchdefaultcommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+*PreReleaseApi* | [**patchOrderUsingPATCH**](docs/Api/PreReleaseApi.md#patchorderusingpatch) | **PATCH** /v2/orders/{order_id} | Update an Order
 *PreReleaseApi* | [**patchProductCommissionProgramUsingPATCH**](docs/Api/PreReleaseApi.md#patchproductcommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
 *PreReleaseApi* | [**patchSubscriptionCommissionProgramUsingPATCH**](docs/Api/PreReleaseApi.md#patchsubscriptioncommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
 *PreReleaseApi* | [**patchTaskUsingPATCH**](docs/Api/PreReleaseApi.md#patchtaskusingpatch) | **PATCH** /v2/tasks/{task_id} | Update a Task
@@ -270,10 +276,10 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**getContactOptionTypesUsingGET1**](docs/Api/SettingsApi.md#getcontactoptiontypesusingget1) | **GET** /v2/settings/contactOptionTypes | Get Contact Option types
 *SettingsApi* | [**isApplicationEnabledUsingGET**](docs/Api/SettingsApi.md#isapplicationenabledusingget) | **GET** /v2/settings/applications:isEnabled | Get Application Status
 *ShippingApi* | [**listShippingMethodsUsingGET_0**](docs/Api/ShippingApi.md#listshippingmethodsusingget_0) | **GET** /v2/shipping | List Shipping methods
-*SubscriptionPlansApi* | [**createSubscriptionV2UsingPOST**](docs/Api/SubscriptionPlansApi.md#createsubscriptionv2usingpost) | **POST** /v2/subscriptions | Create Subscription
 *SubscriptionPlansApi* | [**listSubscriptionPlansUsingGET_0**](docs/Api/SubscriptionPlansApi.md#listsubscriptionplansusingget_0) | **GET** /v2/subscriptionPlans | List Subscription Plans
 *SubscriptionsApi* | [**cancelSubscriptionUsingPOST_0**](docs/Api/SubscriptionsApi.md#cancelsubscriptionusingpost_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 *SubscriptionsApi* | [**createSubscriptionCustomFieldUsingPOST_0**](docs/Api/SubscriptionsApi.md#createsubscriptioncustomfieldusingpost_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
+*SubscriptionsApi* | [**createSubscriptionV2UsingPOST**](docs/Api/SubscriptionsApi.md#createsubscriptionv2usingpost) | **POST** /v2/subscriptions | Create Subscription
 *SubscriptionsApi* | [**retrieveSubscriptionCustomFieldModelUsingGET_0**](docs/Api/SubscriptionsApi.md#retrievesubscriptioncustomfieldmodelusingget_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
 *SubscriptionsApi* | [**updateSubscriptionCustomFieldUsingPATCH_0**](docs/Api/SubscriptionsApi.md#updatesubscriptioncustomfieldusingpatch_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 *TagsApi* | [**applyTagsUsingPOST**](docs/Api/TagsApi.md#applytagsusingpost) | **POST** /v2/tags/{tag_id}/contacts:applyTags | Apply Tag
@@ -515,6 +521,7 @@ Class | Method | HTTP request | Description
 - [RestV2Opportunity](docs/Model/RestV2Opportunity.md)
 - [RestV2Order](docs/Model/RestV2Order.md)
 - [RestV2OrderItem](docs/Model/RestV2OrderItem.md)
+- [RestV2PatchOrderRequest](docs/Model/RestV2PatchOrderRequest.md)
 - [RestV2Subscription](docs/Model/RestV2Subscription.md)
 - [RestV2User](docs/Model/RestV2User.md)
 - [SaveAutomationCategoryRequest](docs/Model/SaveAutomationCategoryRequest.md)
@@ -569,7 +576,7 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.70.0.736468-hf-202411121210`
-    - Package version: `dev-2024.1119.0014-90c64a05a9`
+- API version: `2.70.0.739356-hf-202411181744`
+    - Package version: `dev-2024.1120.2103-e6005674c7`
     - Generator version: `7.9.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

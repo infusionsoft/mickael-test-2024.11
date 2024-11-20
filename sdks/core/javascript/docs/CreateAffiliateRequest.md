@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
-* `active` (value: `"active"`)
+* `ACTIVE` (value: `"ACTIVE"`)
 
-* `inactive` (value: `"inactive"`)
+* `INACTIVE` (value: `"INACTIVE"`)
 
 * `unknown_default_open_api` (value: `"unknown_default_open_api"`)
 

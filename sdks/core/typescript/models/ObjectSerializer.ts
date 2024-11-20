@@ -205,6 +205,7 @@ export * from '../models/RestSubscriptionV2';
 export * from '../models/RestV2Opportunity';
 export * from '../models/RestV2Order';
 export * from '../models/RestV2OrderItem';
+export * from '../models/RestV2PatchOrderRequest';
 export * from '../models/RestV2Subscription';
 export * from '../models/RestV2User';
 export * from '../models/SaveAutomationCategoryRequest';
@@ -425,7 +426,7 @@ import { RemoveContactsFromSequenceResponse } from '../models/RemoveContactsFrom
 import { ReportEntryRecord } from '../models/ReportEntryRecord';
 import { ReportEntryValue } from '../models/ReportEntryValue';
 import { ReportExecutionResult } from '../models/ReportExecutionResult';
-import { RestAffiliate } from '../models/RestAffiliate';
+import { RestAffiliate    , RestAffiliateStatusEnum    } from '../models/RestAffiliate';
 import { RestCreateOrderRequest     , RestCreateOrderRequestOrderTypeEnum      } from '../models/RestCreateOrderRequest';
 import { RestEmailAddress  , RestEmailAddressStatusEnum   } from '../models/RestEmailAddress';
 import { RestOpportunityStage } from '../models/RestOpportunityStage';
@@ -439,6 +440,7 @@ import { RestSubscriptionV2    , RestSubscriptionV2BillingCycleEnum             
 import { RestV2Opportunity } from '../models/RestV2Opportunity';
 import { RestV2Order                 , RestV2OrderSourceTypeEnum         } from '../models/RestV2Order';
 import { RestV2OrderItem  , RestV2OrderItemCycleEnum                  , RestV2OrderItemTypeEnum   } from '../models/RestV2OrderItem';
+import { RestV2PatchOrderRequest    , RestV2PatchOrderRequestOrderTypeEnum      } from '../models/RestV2PatchOrderRequest';
 import { RestV2Subscription } from '../models/RestV2Subscription';
 import { RestV2User } from '../models/RestV2User';
 import { SaveAutomationCategoryRequest } from '../models/SaveAutomationCategoryRequest';
@@ -506,6 +508,7 @@ let enumsMap: Set<string> = new Set<string>([
     "PatchAffiliateRequestStatusEnum",
     "PhoneNumberFieldEnum",
     "ReferralReferralTypeEnum",
+    "RestAffiliateStatusEnum",
     "RestCreateOrderRequestOrderTypeEnum",
     "RestEmailAddressStatusEnum",
     "RestProductOptionTypeEnum",
@@ -513,6 +516,7 @@ let enumsMap: Set<string> = new Set<string>([
     "RestV2OrderSourceTypeEnum",
     "RestV2OrderItemCycleEnum",
     "RestV2OrderItemTypeEnum",
+    "RestV2PatchOrderRequestOrderTypeEnum",
     "SocialAccountTypeEnum",
     "TaskPriorityEnum",
     "TaskTypeEnum",
@@ -729,6 +733,7 @@ let typeMap: {[index: string]: any} = {
     "RestV2Opportunity": RestV2Opportunity,
     "RestV2Order": RestV2Order,
     "RestV2OrderItem": RestV2OrderItem,
+    "RestV2PatchOrderRequest": RestV2PatchOrderRequest,
     "RestV2Subscription": RestV2Subscription,
     "RestV2User": RestV2User,
     "SaveAutomationCategoryRequest": SaveAutomationCategoryRequest,

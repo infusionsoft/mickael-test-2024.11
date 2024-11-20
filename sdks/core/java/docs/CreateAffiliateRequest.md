@@ -18,8 +18,8 @@
 
 | Name | Value |
 |---- | -----|
-| ACTIVE | &quot;active&quot; |
-| INACTIVE | &quot;inactive&quot; |
+| ACTIVE | &quot;ACTIVE&quot; |
+| INACTIVE | &quot;INACTIVE&quot; |
 | UNKNOWN_COULD_NOT_DESERIALIZE | &quot;unknown_default_open_api&quot; |
 
 

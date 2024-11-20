@@ -209,6 +209,7 @@ import { RestSubscriptionV2 } from '../models/RestSubscriptionV2';
 import { RestV2Opportunity } from '../models/RestV2Opportunity';
 import { RestV2Order } from '../models/RestV2Order';
 import { RestV2OrderItem } from '../models/RestV2OrderItem';
+import { RestV2PatchOrderRequest } from '../models/RestV2PatchOrderRequest';
 import { RestV2Subscription } from '../models/RestV2Subscription';
 import { RestV2User } from '../models/RestV2User';
 import { SaveAutomationCategoryRequest } from '../models/SaveAutomationCategoryRequest';
@@ -1905,6 +1906,90 @@ export class ObservableCampaignApi {
 
 }
 
+import { CategoryDiscountApiRequestFactory, CategoryDiscountApiResponseProcessor} from "../apis/CategoryDiscountApi";
+export class ObservableCategoryDiscountApi {
+    private requestFactory: CategoryDiscountApiRequestFactory;
+    private responseProcessor: CategoryDiscountApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: CategoryDiscountApiRequestFactory,
+        responseProcessor?: CategoryDiscountApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new CategoryDiscountApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new CategoryDiscountApiResponseProcessor();
+    }
+
+    /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETEWithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteDiscountUsingDELETE(discountId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteDiscountUsingDELETEWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETE(discountId: string, _options?: Configuration): Observable<void> {
+        return this.deleteDiscountUsingDELETEWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param discountId discount_id
+     */
+    public getDiscountUsingGETWithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
+        const requestContextPromise = this.requestFactory.getDiscountUsingGET(discountId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getDiscountUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param discountId discount_id
+     */
+    public getDiscountUsingGET(discountId: string, _options?: Configuration): Observable<CategoryDiscount> {
+        return this.getDiscountUsingGETWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
+    }
+
+}
+
 import { CompanyApiRequestFactory, CompanyApiResponseProcessor} from "../apis/CompanyApi";
 export class ObservableCompanyApi {
     private requestFactory: CompanyApiRequestFactory;
@@ -2567,57 +2652,6 @@ export class ObservableContactApi {
 
 }
 
-import { DiscountApiRequestFactory, DiscountApiResponseProcessor} from "../apis/DiscountApi";
-export class ObservableDiscountApi {
-    private requestFactory: DiscountApiRequestFactory;
-    private responseProcessor: DiscountApiResponseProcessor;
-    private configuration: Configuration;
-
-    public constructor(
-        configuration: Configuration,
-        requestFactory?: DiscountApiRequestFactory,
-        responseProcessor?: DiscountApiResponseProcessor
-    ) {
-        this.configuration = configuration;
-        this.requestFactory = requestFactory || new DiscountApiRequestFactory(configuration);
-        this.responseProcessor = responseProcessor || new DiscountApiResponseProcessor();
-    }
-
-    /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param discountId discount_id
-     */
-    public getCategoryDiscountUsingGETWithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
-        const requestContextPromise = this.requestFactory.getCategoryDiscountUsingGET(discountId, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (const middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (const middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getCategoryDiscountUsingGETWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param discountId discount_id
-     */
-    public getCategoryDiscountUsingGET(discountId: string, _options?: Configuration): Observable<CategoryDiscount> {
-        return this.getCategoryDiscountUsingGETWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
-    }
-
-}
-
 import { EmailApiRequestFactory, EmailApiResponseProcessor} from "../apis/EmailApi";
 export class ObservableEmailApi {
     private requestFactory: EmailApiRequestFactory;
@@ -2916,6 +2950,57 @@ export class ObservableEmailAddressApi {
      */
     public updateEmailAddressOptStatusUsingPUT(email: string, updateEmailAddress: UpdateEmailAddress, _options?: Configuration): Observable<RestEmailAddress> {
         return this.updateEmailAddressOptStatusUsingPUTWithHttpInfo(email, updateEmailAddress, _options).pipe(map((apiResponse: HttpInfo<RestEmailAddress>) => apiResponse.data));
+    }
+
+}
+
+import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor} from "../apis/FreeTrialDiscountApi";
+export class ObservableFreeTrialDiscountApi {
+    private requestFactory: FreeTrialDiscountApiRequestFactory;
+    private responseProcessor: FreeTrialDiscountApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: FreeTrialDiscountApiRequestFactory,
+        responseProcessor?: FreeTrialDiscountApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new FreeTrialDiscountApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new FreeTrialDiscountApiResponseProcessor();
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETE1WithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteDiscountUsingDELETE1(discountId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteDiscountUsingDELETE1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETE1(discountId: string, _options?: Configuration): Observable<void> {
+        return this.deleteDiscountUsingDELETE1WithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
     }
 
 }
@@ -4282,6 +4367,43 @@ export class ObservableOrdersApi {
     }
 
     /**
+     * Updates an Order
+     * Update an Order
+     * @param orderId order_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [order] order
+     */
+    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
+        const requestContextPromise = this.requestFactory.patchOrderUsingPATCH(orderId, updateMask, order, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.patchOrderUsingPATCHWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param orderId order_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [order] order
+     */
+    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<RestV2Order> {
+        return this.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
+    }
+
+    /**
      * Gets the custom field\'s model for the Order object
      * Retrieve an Order\'s Custom Field Model
      */
@@ -5254,6 +5376,72 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETEWithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteDiscountUsingDELETE(discountId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteDiscountUsingDELETEWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes a specified Category Discount
+     * Delete a Category Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETE(discountId: string, _options?: Configuration): Observable<void> {
+        return this.deleteDiscountUsingDELETEWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETE1WithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteDiscountUsingDELETE1(discountId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteDiscountUsingDELETE1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes a specified Free Trial Discount
+     * Delete a Free Trial Discount
+     * @param discountId discount_id
+     */
+    public deleteDiscountUsingDELETE1(discountId: string, _options?: Configuration): Observable<void> {
+        return this.deleteDiscountUsingDELETE1WithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
      * Deletes all triggers / goals, and actions / sequence items for the given funnel integration
      * Deletes Funnel Integrations from the app.
      * @param deleteFunnelIntegrationRequest deleteFunnelIntegrationRequest
@@ -5590,39 +5778,6 @@ export class ObservablePreReleaseApi {
     }
 
     /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param discountId discount_id
-     */
-    public getCategoryDiscountUsingGETWithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
-        const requestContextPromise = this.requestFactory.getCategoryDiscountUsingGET(discountId, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (const middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (const middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getCategoryDiscountUsingGETWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Retrieves a single Category Discount
-     * Retrieve Category Discount
-     * @param discountId discount_id
-     */
-    public getCategoryDiscountUsingGET(discountId: string, _options?: Configuration): Observable<CategoryDiscount> {
-        return this.getCategoryDiscountUsingGETWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
-    }
-
-    /**
      * Retrieves a single Commission Program
      * Retrieve a Commission Program
      * @param commissionProgramId commission_program_id
@@ -5686,6 +5841,39 @@ export class ObservablePreReleaseApi {
      */
     public getContactsBySearchTermUsingGET(searchParam: string, _options?: Configuration): Observable<ListBasicContactResponse> {
         return this.getContactsBySearchTermUsingGETWithHttpInfo(searchParam, _options).pipe(map((apiResponse: HttpInfo<ListBasicContactResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param discountId discount_id
+     */
+    public getDiscountUsingGETWithHttpInfo(discountId: string, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
+        const requestContextPromise = this.requestFactory.getDiscountUsingGET(discountId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getDiscountUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a single Category Discount
+     * Retrieve a Category Discount
+     * @param discountId discount_id
+     */
+    public getDiscountUsingGET(discountId: string, _options?: Configuration): Observable<CategoryDiscount> {
+        return this.getDiscountUsingGETWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
     }
 
     /**
@@ -6585,6 +6773,43 @@ export class ObservablePreReleaseApi {
      */
     public patchDefaultCommissionProgramUsingPATCH(commissionProgramId: string, updateMask?: Array<string>, patchDefaultCommissionProgramRequest?: PatchDefaultCommissionProgramRequest, _options?: Configuration): Observable<SetDefaultCommissionProgramResponse> {
         return this.patchDefaultCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, updateMask, patchDefaultCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<SetDefaultCommissionProgramResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param orderId order_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [order] order
+     */
+    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
+        const requestContextPromise = this.requestFactory.patchOrderUsingPATCH(orderId, updateMask, order, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.patchOrderUsingPATCHWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Updates an Order
+     * Update an Order
+     * @param orderId order_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [order] order
+     */
+    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<RestV2Order> {
+        return this.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
     }
 
     /**
@@ -7622,39 +7847,6 @@ export class ObservableSubscriptionPlansApi {
     }
 
     /**
-     * Creates a subscription with the specified product and product subscription id.
-     * Create Subscription
-     * @param createSubscriptionV2 createSubscriptionV2
-     */
-    public createSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2: CreateSubscriptionV2, _options?: Configuration): Observable<HttpInfo<RestSubscriptionV2>> {
-        const requestContextPromise = this.requestFactory.createSubscriptionV2UsingPOST(createSubscriptionV2, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (const middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (const middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSubscriptionV2UsingPOSTWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Creates a subscription with the specified product and product subscription id.
-     * Create Subscription
-     * @param createSubscriptionV2 createSubscriptionV2
-     */
-    public createSubscriptionV2UsingPOST(createSubscriptionV2: CreateSubscriptionV2, _options?: Configuration): Observable<RestSubscriptionV2> {
-        return this.createSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2, _options).pipe(map((apiResponse: HttpInfo<RestSubscriptionV2>) => apiResponse.data));
-    }
-
-    /**
      * Retrieves a list of Subscription Plans
      * List Subscription Plans
      * @param [filter] Filter to apply, allowed fields are:   - (String) name   
@@ -7777,6 +7969,39 @@ export class ObservableSubscriptionsApi {
      */
     public createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
         return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    }
+
+    /**
+     * Creates a subscription with the specified product and product subscription id.
+     * Create Subscription
+     * @param createSubscriptionV2 createSubscriptionV2
+     */
+    public createSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2: CreateSubscriptionV2, _options?: Configuration): Observable<HttpInfo<RestSubscriptionV2>> {
+        const requestContextPromise = this.requestFactory.createSubscriptionV2UsingPOST(createSubscriptionV2, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createSubscriptionV2UsingPOSTWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Creates a subscription with the specified product and product subscription id.
+     * Create Subscription
+     * @param createSubscriptionV2 createSubscriptionV2
+     */
+    public createSubscriptionV2UsingPOST(createSubscriptionV2: CreateSubscriptionV2, _options?: Configuration): Observable<RestSubscriptionV2> {
+        return this.createSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2, _options).pipe(map((apiResponse: HttpInfo<RestSubscriptionV2>) => apiResponse.data));
     }
 
     /**

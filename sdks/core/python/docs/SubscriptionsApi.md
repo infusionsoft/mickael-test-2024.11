@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel_subscription_using_post_0**](SubscriptionsApi.md#cancel_subscription_using_post_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 [**create_subscription_custom_field_using_post_0**](SubscriptionsApi.md#create_subscription_custom_field_using_post_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
+[**create_subscription_v2_using_post**](SubscriptionsApi.md#create_subscription_v2_using_post) | **POST** /v2/subscriptions | Create Subscription
 [**retrieve_subscription_custom_field_model_using_get_0**](SubscriptionsApi.md#retrieve_subscription_custom_field_model_using_get_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
 [**update_subscription_custom_field_using_patch_0**](SubscriptionsApi.md#update_subscription_custom_field_using_patch_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 
@@ -127,6 +128,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_subscription_v2_using_post**
+> RestSubscriptionV2 create_subscription_v2_using_post(create_subscription_v2)
+
+Create Subscription
+
+Creates a subscription with the specified product and product subscription id.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_subscription_v2 import CreateSubscriptionV2
+from keap_sdk_core_client.models.rest_subscription_v2 import RestSubscriptionV2
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.SubscriptionsApi(api_client)
+    create_subscription_v2 = keap_sdk_core_client.CreateSubscriptionV2() # CreateSubscriptionV2 | createSubscriptionV2
+
+    try:
+        # Create Subscription
+        api_response = api_instance.create_subscription_v2_using_post(create_subscription_v2)
+        print("The response of SubscriptionsApi->create_subscription_v2_using_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SubscriptionsApi->create_subscription_v2_using_post: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_subscription_v2** | [**CreateSubscriptionV2**](CreateSubscriptionV2.md)| createSubscriptionV2 | 
+
+### Return type
+
+[**RestSubscriptionV2**](RestSubscriptionV2.md)
 
 ### Authorization
 

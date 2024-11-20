@@ -6,6 +6,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 |--------|--------------|-------------|
 | [**CancelSubscriptionUsingPOST_0**](SubscriptionsApi.md#cancelsubscriptionusingpost_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
 | [**CreateSubscriptionCustomFieldUsingPOST_0**](SubscriptionsApi.md#createsubscriptioncustomfieldusingpost_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
+| [**CreateSubscriptionV2UsingPOST**](SubscriptionsApi.md#createsubscriptionv2usingpost) | **POST** /v2/subscriptions | Create Subscription |
 | [**RetrieveSubscriptionCustomFieldModelUsingGET_0**](SubscriptionsApi.md#retrievesubscriptioncustomfieldmodelusingget_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**UpdateSubscriptionCustomFieldUsingPATCH_0**](SubscriptionsApi.md#updatesubscriptioncustomfieldusingpatch_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 
@@ -173,6 +174,99 @@ catch (ApiException e)
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="createsubscriptionv2usingpost"></a>
+# **CreateSubscriptionV2UsingPOST**
+> RestSubscriptionV2 CreateSubscriptionV2UsingPOST (CreateSubscriptionV2 createSubscriptionV2)
+
+Create Subscription
+
+Creates a subscription with the specified product and product subscription id.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateSubscriptionV2UsingPOSTExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new SubscriptionsApi(config);
+            var createSubscriptionV2 = new CreateSubscriptionV2(); // CreateSubscriptionV2 | createSubscriptionV2
+
+            try
+            {
+                // Create Subscription
+                RestSubscriptionV2 result = apiInstance.CreateSubscriptionV2UsingPOST(createSubscriptionV2);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling SubscriptionsApi.CreateSubscriptionV2UsingPOST: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateSubscriptionV2UsingPOSTWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create Subscription
+    ApiResponse<RestSubscriptionV2> response = apiInstance.CreateSubscriptionV2UsingPOSTWithHttpInfo(createSubscriptionV2);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SubscriptionsApi.CreateSubscriptionV2UsingPOSTWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createSubscriptionV2** | [**CreateSubscriptionV2**](CreateSubscriptionV2.md) | createSubscriptionV2 |  |
+
+### Return type
+
+[**RestSubscriptionV2**](RestSubscriptionV2.md)
 
 ### Authorization
 

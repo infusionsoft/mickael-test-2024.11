@@ -29,6 +29,8 @@ Method | HTTP request | Description
 [**createUserUsingPOST1**](PreReleaseApi.md#createUserUsingPOST1) | **POST** /v2/users | Create a User
 [**deleteAffiliateCommissionProgramUsingDELETE**](PreReleaseApi.md#deleteAffiliateCommissionProgramUsingDELETE) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
 [**deleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+[**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+[**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
@@ -39,9 +41,9 @@ Method | HTTP request | Description
 [**getAffiliateCommissionTotalUsingGET**](PreReleaseApi.md#getAffiliateCommissionTotalUsingGET) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
 [**getAffiliateCommissionsUsingGET**](PreReleaseApi.md#getAffiliateCommissionsUsingGET) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
 [**getAffiliateCustomFieldsUsingGET**](PreReleaseApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-[**getCategoryDiscountUsingGET**](PreReleaseApi.md#getCategoryDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 [**getCommissionProgramUsingGET**](PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
+[**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 [**getOrderUsingGET1**](PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
@@ -67,6 +69,7 @@ Method | HTTP request | Description
 [**listTasksUsingGET1**](PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
 [**listUsersUsingGET1**](PreReleaseApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users
 [**patchDefaultCommissionProgramUsingPATCH**](PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+[**patchOrderUsingPATCH**](PreReleaseApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
 [**patchProductCommissionProgramUsingPATCH**](PreReleaseApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
 [**patchSubscriptionCommissionProgramUsingPATCH**](PreReleaseApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
 [**patchTaskUsingPATCH**](PreReleaseApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task
@@ -1216,6 +1219,94 @@ No authorization required
 - **Accept**: application/json
 
 
+## deleteDiscountUsingDELETE
+
+> deleteDiscountUsingDELETE(discountId)
+
+Delete a Category Discount
+
+Deletes a specified Category Discount
+
+### Example
+
+```javascript
+import KeapRestApi from 'keap_rest_api';
+
+let apiInstance = new KeapRestApi.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.deleteDiscountUsingDELETE(discountId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteDiscountUsingDELETE1
+
+> deleteDiscountUsingDELETE1(discountId)
+
+Delete a Free Trial Discount
+
+Deletes a specified Free Trial Discount
+
+### Example
+
+```javascript
+import KeapRestApi from 'keap_rest_api';
+
+let apiInstance = new KeapRestApi.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.deleteDiscountUsingDELETE1(discountId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## deleteFunnelIntegrationUsingPOST
 
 > deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
@@ -1662,50 +1753,6 @@ No authorization required
 - **Accept**: application/json
 
 
-## getCategoryDiscountUsingGET
-
-> CategoryDiscount getCategoryDiscountUsingGET(discountId)
-
-Retrieve Category Discount
-
-Retrieves a single Category Discount
-
-### Example
-
-```javascript
-import KeapRestApi from 'keap_rest_api';
-
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let discountId = "discountId_example"; // String | discount_id
-apiInstance.getCategoryDiscountUsingGET(discountId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **discountId** | **String**| discount_id | 
-
-### Return type
-
-[**CategoryDiscount**](CategoryDiscount.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
 ## getCommissionProgramUsingGET
 
 > AffiliateProgramV2 getCommissionProgramUsingGET(commissionProgramId)
@@ -1783,6 +1830,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListBasicContactResponse**](ListBasicContactResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getDiscountUsingGET
+
+> CategoryDiscount getDiscountUsingGET(discountId)
+
+Retrieve a Category Discount
+
+Retrieves a single Category Discount
+
+### Example
+
+```javascript
+import KeapRestApi from 'keap_rest_api';
+
+let apiInstance = new KeapRestApi.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.getDiscountUsingGET(discountId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
 
 ### Authorization
 
@@ -2979,6 +3070,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## patchOrderUsingPATCH
+
+> RestV2Order patchOrderUsingPATCH(orderId, opts)
+
+Update an Order
+
+Updates an Order
+
+### Example
+
+```javascript
+import KeapRestApi from 'keap_rest_api';
+
+let apiInstance = new KeapRestApi.PreReleaseApi();
+let orderId = "orderId_example"; // String | order_id
+let opts = {
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'order': new KeapRestApi.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
+};
+apiInstance.patchOrderUsingPATCH(orderId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **String**| order_id | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
+
+### Return type
+
+[**RestV2Order**](RestV2Order.md)
 
 ### Authorization
 

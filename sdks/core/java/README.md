@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.736468-hf-202411121210
+- API version: 2.70.0.739356-hf-202411181744
 
 - Generator version: 7.9.0
 
@@ -40,9 +40,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.keap.sdk</groupId>
+  <groupId>com.keap</groupId>
   <artifactId>core -service-core-java-sdk</artifactId>
-  <version>dev-2024.1119.0014-90c64a05a9</version>
+  <version>dev-2024.1120.2103-e6005674c7</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core -service-core-java-sdk:dev-2024.1119.0014-90c64a05a9"
+compile "com.keap:core -service-core-java-sdk:dev-2024.1120.2103-e6005674c7"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core -service-core-java-sdk-dev-2024.1119.0014-90c64a05a9.jar`
+- `target/core -service-core-java-sdk-dev-2024.1120.2103-e6005674c7.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -74,9 +74,9 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.keap.sdk.sdk.*;
-import com.keap.sdk.sdk.model.*;
-import com.keap.sdk.sdk.client.AffiliateApi;
+import com.keap.sdk.core.*;
+import com.keap.sdk.core.model.*;
+import com.keap.sdk.core.api.AffiliateApi;
 
 public class AffiliateApiExample {
 
@@ -197,6 +197,10 @@ Class | Method | HTTP request | Description
 *CampaignApi* | [**listCampaignsUsingGET1WithHttpInfo**](docs/CampaignApi.md#listCampaignsUsingGET1WithHttpInfo) | **GET** /v2/campaigns | List Campaigns
 *CampaignApi* | [**removeContactsFromCampaignSequenceUsingPOST**](docs/CampaignApi.md#removeContactsFromCampaignSequenceUsingPOST) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:removeContacts | Remove Contacts from Campaign Sequence
 *CampaignApi* | [**removeContactsFromCampaignSequenceUsingPOSTWithHttpInfo**](docs/CampaignApi.md#removeContactsFromCampaignSequenceUsingPOSTWithHttpInfo) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:removeContacts | Remove Contacts from Campaign Sequence
+*CategoryDiscountApi* | [**deleteDiscountUsingDELETE_0**](docs/CategoryDiscountApi.md#deleteDiscountUsingDELETE_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+*CategoryDiscountApi* | [**deleteDiscountUsingDELETE_0WithHttpInfo**](docs/CategoryDiscountApi.md#deleteDiscountUsingDELETE_0WithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+*CategoryDiscountApi* | [**getDiscountUsingGET_0**](docs/CategoryDiscountApi.md#getDiscountUsingGET_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+*CategoryDiscountApi* | [**getDiscountUsingGET_0WithHttpInfo**](docs/CategoryDiscountApi.md#getDiscountUsingGET_0WithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 *CompanyApi* | [**createCompanyUsingPOST1**](docs/CompanyApi.md#createCompanyUsingPOST1) | **POST** /v2/companies | Create a Company
 *CompanyApi* | [**createCompanyUsingPOST1WithHttpInfo**](docs/CompanyApi.md#createCompanyUsingPOST1WithHttpInfo) | **POST** /v2/companies | Create a Company
 *CompanyApi* | [**deleteCompanyUsingDELETE**](docs/CompanyApi.md#deleteCompanyUsingDELETE) | **DELETE** /v2/companies/{company_id} | Delete a Company
@@ -233,8 +237,6 @@ Class | Method | HTTP request | Description
 *ContactApi* | [**retrieveContactModelUsingGET1WithHttpInfo**](docs/ContactApi.md#retrieveContactModelUsingGET1WithHttpInfo) | **GET** /v2/contacts/model | Retrieve Contact Model
 *ContactApi* | [**unlinkContactsUsingPOST**](docs/ContactApi.md#unlinkContactsUsingPOST) | **POST** /v2/contacts:unlink | Delete Link between two Contacts
 *ContactApi* | [**unlinkContactsUsingPOSTWithHttpInfo**](docs/ContactApi.md#unlinkContactsUsingPOSTWithHttpInfo) | **POST** /v2/contacts:unlink | Delete Link between two Contacts
-*DiscountApi* | [**getCategoryDiscountUsingGET_0**](docs/DiscountApi.md#getCategoryDiscountUsingGET_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
-*DiscountApi* | [**getCategoryDiscountUsingGET_0WithHttpInfo**](docs/DiscountApi.md#getCategoryDiscountUsingGET_0WithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 *EmailApi* | [**createEmailUsingPOST1**](docs/EmailApi.md#createEmailUsingPOST1) | **POST** /v2/emails | Create an Email Record
 *EmailApi* | [**createEmailUsingPOST1WithHttpInfo**](docs/EmailApi.md#createEmailUsingPOST1WithHttpInfo) | **POST** /v2/emails | Create an Email Record
 *EmailApi* | [**createEmailsUsingPOST1**](docs/EmailApi.md#createEmailsUsingPOST1) | **POST** /v2/emails:batchAdd | Create a set of Email Records
@@ -251,6 +253,8 @@ Class | Method | HTTP request | Description
 *EmailAddressApi* | [**getEmailAddressStatusUsingGETWithHttpInfo**](docs/EmailAddressApi.md#getEmailAddressStatusUsingGETWithHttpInfo) | **GET** /v2/emailAddresses/{email} | Retrieve an Email Address status
 *EmailAddressApi* | [**updateEmailAddressOptStatusUsingPUT**](docs/EmailAddressApi.md#updateEmailAddressOptStatusUsingPUT) | **PUT** /v2/emailAddresses/{email} | Update an Email Address opt-in status
 *EmailAddressApi* | [**updateEmailAddressOptStatusUsingPUTWithHttpInfo**](docs/EmailAddressApi.md#updateEmailAddressOptStatusUsingPUTWithHttpInfo) | **PUT** /v2/emailAddresses/{email} | Update an Email Address opt-in status
+*FreeTrialDiscountApi* | [**deleteDiscountUsingDELETE1_0**](docs/FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1_0) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+*FreeTrialDiscountApi* | [**deleteDiscountUsingDELETE1_0WithHttpInfo**](docs/FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1_0WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 *FunnelIntegrationApi* | [**createFunnelIntegrationUsingPOST_0**](docs/FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 *FunnelIntegrationApi* | [**createFunnelIntegrationUsingPOST_0WithHttpInfo**](docs/FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0WithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 *FunnelIntegrationApi* | [**createIntegrationTriggerEventUsingPOST_0**](docs/FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
@@ -321,6 +325,8 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrderUsingGET1_0WithHttpInfo**](docs/OrdersApi.md#getOrderUsingGET1_0WithHttpInfo) | **GET** /v2/orders/{order_id} | Retrieve an Order
 *OrdersApi* | [**listOrdersUsingGET1_0**](docs/OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders
 *OrdersApi* | [**listOrdersUsingGET1_0WithHttpInfo**](docs/OrdersApi.md#listOrdersUsingGET1_0WithHttpInfo) | **GET** /v2/orders | List orders
+*OrdersApi* | [**patchOrderUsingPATCH_0**](docs/OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order
+*OrdersApi* | [**patchOrderUsingPATCH_0WithHttpInfo**](docs/OrdersApi.md#patchOrderUsingPATCH_0WithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order
 *OrdersApi* | [**retrieveOrderCustomFieldModelUsingGET_0**](docs/OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
 *OrdersApi* | [**retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo**](docs/OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
 *OrdersApi* | [**updateOrderCustomFieldUsingPATCH_0**](docs/OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
@@ -377,6 +383,10 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
 *PreReleaseApi* | [**deleteAffiliateUsingDELETE**](docs/PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
 *PreReleaseApi* | [**deleteAffiliateUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteAffiliateUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+*PreReleaseApi* | [**deleteDiscountUsingDELETE**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+*PreReleaseApi* | [**deleteDiscountUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+*PreReleaseApi* | [**deleteDiscountUsingDELETE1**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+*PreReleaseApi* | [**deleteDiscountUsingDELETE1WithHttpInfo**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 *PreReleaseApi* | [**deleteFunnelIntegrationUsingPOST**](docs/PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 *PreReleaseApi* | [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 *PreReleaseApi* | [**deleteOpportunityStageUsingDELETE**](docs/PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
@@ -397,12 +407,12 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**getAffiliateCommissionsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getAffiliateCommissionsUsingGETWithHttpInfo) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
 *PreReleaseApi* | [**getAffiliateCustomFieldsUsingGET**](docs/PreReleaseApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
 *PreReleaseApi* | [**getAffiliateCustomFieldsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getAffiliateCustomFieldsUsingGETWithHttpInfo) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-*PreReleaseApi* | [**getCategoryDiscountUsingGET**](docs/PreReleaseApi.md#getCategoryDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
-*PreReleaseApi* | [**getCategoryDiscountUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getCategoryDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 *PreReleaseApi* | [**getCommissionProgramUsingGET**](docs/PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 *PreReleaseApi* | [**getCommissionProgramUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getCommissionProgramUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 *PreReleaseApi* | [**getContactsBySearchTermUsingGET**](docs/PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 *PreReleaseApi* | [**getContactsBySearchTermUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getContactsBySearchTermUsingGETWithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts
+*PreReleaseApi* | [**getDiscountUsingGET**](docs/PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+*PreReleaseApi* | [**getDiscountUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 *PreReleaseApi* | [**getOpportunityStageUsingGET**](docs/PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 *PreReleaseApi* | [**getOpportunityStageUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 *PreReleaseApi* | [**getOpportunityUsingGET1**](docs/PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
@@ -453,6 +463,8 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**listUsersUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listUsersUsingGET1WithHttpInfo) | **GET** /v2/users | List Users
 *PreReleaseApi* | [**patchDefaultCommissionProgramUsingPATCH**](docs/PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
 *PreReleaseApi* | [**patchDefaultCommissionProgramUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+*PreReleaseApi* | [**patchOrderUsingPATCH**](docs/PreReleaseApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
+*PreReleaseApi* | [**patchOrderUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchOrderUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order
 *PreReleaseApi* | [**patchProductCommissionProgramUsingPATCH**](docs/PreReleaseApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
 *PreReleaseApi* | [**patchProductCommissionProgramUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchProductCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
 *PreReleaseApi* | [**patchSubscriptionCommissionProgramUsingPATCH**](docs/PreReleaseApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
@@ -505,14 +517,14 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**isApplicationEnabledUsingGETWithHttpInfo**](docs/SettingsApi.md#isApplicationEnabledUsingGETWithHttpInfo) | **GET** /v2/settings/applications:isEnabled | Get Application Status
 *ShippingApi* | [**listShippingMethodsUsingGET_0**](docs/ShippingApi.md#listShippingMethodsUsingGET_0) | **GET** /v2/shipping | List Shipping methods
 *ShippingApi* | [**listShippingMethodsUsingGET_0WithHttpInfo**](docs/ShippingApi.md#listShippingMethodsUsingGET_0WithHttpInfo) | **GET** /v2/shipping | List Shipping methods
-*SubscriptionPlansApi* | [**createSubscriptionV2UsingPOST**](docs/SubscriptionPlansApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription
-*SubscriptionPlansApi* | [**createSubscriptionV2UsingPOSTWithHttpInfo**](docs/SubscriptionPlansApi.md#createSubscriptionV2UsingPOSTWithHttpInfo) | **POST** /v2/subscriptions | Create Subscription
 *SubscriptionPlansApi* | [**listSubscriptionPlansUsingGET_0**](docs/SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0) | **GET** /v2/subscriptionPlans | List Subscription Plans
 *SubscriptionPlansApi* | [**listSubscriptionPlansUsingGET_0WithHttpInfo**](docs/SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0WithHttpInfo) | **GET** /v2/subscriptionPlans | List Subscription Plans
 *SubscriptionsApi* | [**cancelSubscriptionUsingPOST_0**](docs/SubscriptionsApi.md#cancelSubscriptionUsingPOST_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 *SubscriptionsApi* | [**cancelSubscriptionUsingPOST_0WithHttpInfo**](docs/SubscriptionsApi.md#cancelSubscriptionUsingPOST_0WithHttpInfo) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 *SubscriptionsApi* | [**createSubscriptionCustomFieldUsingPOST_0**](docs/SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
 *SubscriptionsApi* | [**createSubscriptionCustomFieldUsingPOST_0WithHttpInfo**](docs/SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0WithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
+*SubscriptionsApi* | [**createSubscriptionV2UsingPOST**](docs/SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription
+*SubscriptionsApi* | [**createSubscriptionV2UsingPOSTWithHttpInfo**](docs/SubscriptionsApi.md#createSubscriptionV2UsingPOSTWithHttpInfo) | **POST** /v2/subscriptions | Create Subscription
 *SubscriptionsApi* | [**retrieveSubscriptionCustomFieldModelUsingGET_0**](docs/SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
 *SubscriptionsApi* | [**retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo**](docs/SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
 *SubscriptionsApi* | [**updateSubscriptionCustomFieldUsingPATCH_0**](docs/SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
@@ -786,6 +798,7 @@ Class | Method | HTTP request | Description
  - [RestV2Opportunity](docs/RestV2Opportunity.md)
  - [RestV2Order](docs/RestV2Order.md)
  - [RestV2OrderItem](docs/RestV2OrderItem.md)
+ - [RestV2PatchOrderRequest](docs/RestV2PatchOrderRequest.md)
  - [RestV2Subscription](docs/RestV2Subscription.md)
  - [RestV2User](docs/RestV2User.md)
  - [SaveAutomationCategoryRequest](docs/SaveAutomationCategoryRequest.md)

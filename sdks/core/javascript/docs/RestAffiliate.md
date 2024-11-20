@@ -12,3 +12,16 @@ Name | Type | Description | Notes
 **uniqueSiteId** | **String** | The Affiliate PortalSite Id | [optional] 
 
 
+
+## Enum: StatusEnum
+
+
+* `ACTIVE` (value: `"ACTIVE"`)
+
+* `INACTIVE` (value: `"INACTIVE"`)
+
+* `unknown_default_open_api` (value: `"unknown_default_open_api"`)
+
+
+
+

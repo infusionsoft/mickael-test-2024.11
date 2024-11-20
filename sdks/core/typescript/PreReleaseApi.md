@@ -29,6 +29,8 @@ Method | HTTP request | Description
 [**createUserUsingPOST1**](PreReleaseApi.md#createUserUsingPOST1) | **POST** /v2/users | Create a User
 [**deleteAffiliateCommissionProgramUsingDELETE**](PreReleaseApi.md#deleteAffiliateCommissionProgramUsingDELETE) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
 [**deleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+[**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+[**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
@@ -39,9 +41,9 @@ Method | HTTP request | Description
 [**getAffiliateCommissionTotalUsingGET**](PreReleaseApi.md#getAffiliateCommissionTotalUsingGET) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
 [**getAffiliateCommissionsUsingGET**](PreReleaseApi.md#getAffiliateCommissionsUsingGET) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
 [**getAffiliateCustomFieldsUsingGET**](PreReleaseApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-[**getCategoryDiscountUsingGET**](PreReleaseApi.md#getCategoryDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve Category Discount
 [**getCommissionProgramUsingGET**](PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
+[**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 [**getOrderUsingGET1**](PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
@@ -67,6 +69,7 @@ Method | HTTP request | Description
 [**listTasksUsingGET1**](PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
 [**listUsersUsingGET1**](PreReleaseApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users
 [**patchDefaultCommissionProgramUsingPATCH**](PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+[**patchOrderUsingPATCH**](PreReleaseApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
 [**patchProductCommissionProgramUsingPATCH**](PreReleaseApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
 [**patchSubscriptionCommissionProgramUsingPATCH**](PreReleaseApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
 [**patchTaskUsingPATCH**](PreReleaseApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task
@@ -1732,6 +1735,118 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **deleteDiscountUsingDELETE**
+> void deleteDiscountUsingDELETE()
+
+Deletes a specified Category Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteDiscountUsingDELETERequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteDiscountUsingDELETERequest = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.deleteDiscountUsingDELETE(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **deleteDiscountUsingDELETE1**
+> void deleteDiscountUsingDELETE1()
+
+Deletes a specified Free Trial Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteDiscountUsingDELETE1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteDiscountUsingDELETE1Request = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.deleteDiscountUsingDELETE1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **deleteFunnelIntegrationUsingPOST**
 > void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
 
@@ -2306,62 +2421,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getCategoryDiscountUsingGET**
-> CategoryDiscount getCategoryDiscountUsingGET()
-
-Retrieves a single Category Discount
-
-### Example
-
-
-```typescript
-import { createConfiguration, PreReleaseApi } from '';
-import type { PreReleaseApiGetCategoryDiscountUsingGETRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new PreReleaseApi(configuration);
-
-const request: PreReleaseApiGetCategoryDiscountUsingGETRequest = {
-    // discount_id
-  discountId: "discount_id_example",
-};
-
-const data = await apiInstance.getCategoryDiscountUsingGET(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **discountId** | [**string**] | discount_id | defaults to undefined
-
-
-### Return type
-
-**CategoryDiscount**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
 # **getCommissionProgramUsingGET**
 > AffiliateProgramV2 getCommissionProgramUsingGET()
 
@@ -2453,6 +2512,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 **ListBasicContactResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getDiscountUsingGET**
+> CategoryDiscount getDiscountUsingGET()
+
+Retrieves a single Category Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetDiscountUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetDiscountUsingGETRequest = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.getDiscountUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**CategoryDiscount**
 
 ### Authorization
 
@@ -3963,6 +4078,95 @@ Name | Type | Description  | Notes
 ### Return type
 
 **SetDefaultCommissionProgramResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **patchOrderUsingPATCH**
+> RestV2Order patchOrderUsingPATCH()
+
+Updates an Order
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiPatchOrderUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiPatchOrderUsingPATCHRequest = {
+    // order_id
+  orderId: "order_id_example",
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "contact_id",
+  ],
+    // order (optional)
+  order: {
+    contactId: "contactId_example",
+    leadAffiliateId: "leadAffiliateId_example",
+    orderTime: "orderTime_example",
+    orderTitle: "orderTitle_example",
+    orderType: "OFFLINE",
+    promoCodes: [
+      "promoCodes_example",
+    ],
+    salesAffiliateId: "salesAffiliateId_example",
+    shippingAddress: {
+      company: "company_example",
+      countryCode: "countryCode_example",
+      firstName: "firstName_example",
+      isInvoiceToCompany: true,
+      lastName: "lastName_example",
+      line1: "line1_example",
+      line2: "line2_example",
+      locality: "locality_example",
+      middleName: "middleName_example",
+      phone: "phone_example",
+      region: "region_example",
+      zipCode: "zipCode_example",
+      zipFour: "zipFour_example",
+    },
+  },
+};
+
+const data = await apiInstance.patchOrderUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order** | **RestV2PatchOrderRequest**| order |
+ **orderId** | [**string**] | order_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**RestV2Order**
 
 ### Authorization
 

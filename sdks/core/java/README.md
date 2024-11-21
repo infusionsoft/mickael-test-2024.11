@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap</groupId>
   <artifactId>core -service-core-java-sdk</artifactId>
-  <version>dev-2024.1121.0031-9c208e641b</version>
+  <version>dev-2024.1121.0033-43baaebf1f</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap:core -service-core-java-sdk:dev-2024.1121.0031-9c208e641b"
+compile "com.keap:core -service-core-java-sdk:dev-2024.1121.0033-43baaebf1f"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core -service-core-java-sdk-dev-2024.1121.0031-9c208e641b.jar`
+- `target/core -service-core-java-sdk-dev-2024.1121.0033-43baaebf1f.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

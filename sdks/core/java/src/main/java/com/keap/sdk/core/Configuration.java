@@ -14,7 +14,7 @@
 package com.keap.sdk.core;
 
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0")public class Configuration {
-    public static final String VERSION = "dev-2024.1121.0031-9c208e641b";
+    public static final String VERSION = "dev-2024.1121.0033-43baaebf1f";
 
     private static ApiClient defaultApiClient = new ApiClient();
 

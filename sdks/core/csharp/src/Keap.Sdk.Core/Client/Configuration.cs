@@ -118,7 +118,7 @@ namespace Keap.Sdk.Core.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("core -service-core-csharp/dev-2024.1121.0031-9c208e641b");
+            UserAgent = WebUtility.UrlEncode("core -service-core-csharp/dev-2024.1121.0033-43baaebf1f");
             BasePath = "https://api.infusionsoft.com/crm/rest/app";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();

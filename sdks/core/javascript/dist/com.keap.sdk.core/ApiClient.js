@@ -67,7 +67,7 @@ var ApiClient = /*#__PURE__*/function () {
      * @default {}
      */
     this.defaultHeaders = {
-      'User-Agent': 'core -service-core-javascript/dev-2024.1124.0010-59a0f48192'
+      'User-Agent': 'core -service-core-javascript/dev-2024.1125.0009-a0bbb4902f'
     };
 
     /**

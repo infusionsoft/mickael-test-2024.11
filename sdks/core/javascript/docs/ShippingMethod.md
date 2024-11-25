@@ -1,4 +1,4 @@
-# KeapRestApi.ShippingMethod
+# KeapCoreServiceCoreSdk.ShippingMethod
 
 ## Properties
 

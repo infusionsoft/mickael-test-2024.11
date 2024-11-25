@@ -1,4 +1,4 @@
-# KeapRestApi.HistoricalCounts
+# KeapCoreServiceCoreSdk.HistoricalCounts
 
 ## Properties
 

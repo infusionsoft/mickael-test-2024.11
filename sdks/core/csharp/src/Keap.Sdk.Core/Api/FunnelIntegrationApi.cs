@@ -37,7 +37,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationRequest">createFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateFunnelIntegrationUsingPOST_0(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0);
+        void CreateFunnelIntegrationUsingPOST(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Funnel Integrations into the app.
@@ -49,7 +49,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationRequest">createFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateFunnelIntegrationUsingPOST_0WithHttpInfo(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0);
+        ApiResponse<Object> CreateFunnelIntegrationUsingPOSTWithHttpInfo(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0);
         /// <summary>
         /// Achieve Funnel Integration Trigger Goal
         /// </summary>
@@ -57,7 +57,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationTriggerEvents">createFunnelIntegrationTriggerEvents</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;FunnelIntegrationTriggerResultDTO&gt;</returns>
-        List<FunnelIntegrationTriggerResultDTO> CreateIntegrationTriggerEventUsingPOST_0(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0);
+        List<FunnelIntegrationTriggerResultDTO> CreateIntegrationTriggerEventUsingPOST(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0);
 
         /// <summary>
         /// Achieve Funnel Integration Trigger Goal
@@ -69,7 +69,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationTriggerEvents">createFunnelIntegrationTriggerEvents</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;FunnelIntegrationTriggerResultDTO&gt;</returns>
-        ApiResponse<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOST_0WithHttpInfo(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0);
+        ApiResponse<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOSTWithHttpInfo(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0);
         /// <summary>
         /// Deletes Funnel Integrations from the app.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteFunnelIntegrationRequest">deleteFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteFunnelIntegrationUsingPOST_0(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0);
+        void DeleteFunnelIntegrationUsingPOST(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0);
 
         /// <summary>
         /// Deletes Funnel Integrations from the app.
@@ -92,7 +92,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteFunnelIntegrationRequest">deleteFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteFunnelIntegrationUsingPOST_0WithHttpInfo(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0);
+        ApiResponse<Object> DeleteFunnelIntegrationUsingPOSTWithHttpInfo(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -113,7 +113,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateFunnelIntegrationUsingPOST_0Async(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateFunnelIntegrationUsingPOSTAsync(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Funnel Integrations into the app.
@@ -126,7 +126,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateFunnelIntegrationUsingPOST_0WithHttpInfoAsync(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateFunnelIntegrationUsingPOSTWithHttpInfoAsync(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Achieve Funnel Integration Trigger Goal
         /// </summary>
@@ -138,7 +138,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;FunnelIntegrationTriggerResultDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOST_0Async(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOSTAsync(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Achieve Funnel Integration Trigger Goal
@@ -151,7 +151,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;FunnelIntegrationTriggerResultDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<FunnelIntegrationTriggerResultDTO>>> CreateIntegrationTriggerEventUsingPOST_0WithHttpInfoAsync(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<FunnelIntegrationTriggerResultDTO>>> CreateIntegrationTriggerEventUsingPOSTWithHttpInfoAsync(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Deletes Funnel Integrations from the app.
         /// </summary>
@@ -163,7 +163,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteFunnelIntegrationUsingPOST_0Async(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteFunnelIntegrationUsingPOSTAsync(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Deletes Funnel Integrations from the app.
@@ -176,7 +176,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFunnelIntegrationUsingPOST_0WithHttpInfoAsync(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFunnelIntegrationUsingPOSTWithHttpInfoAsync(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -304,9 +304,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationRequest">createFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateFunnelIntegrationUsingPOST_0(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0)
+        public void CreateFunnelIntegrationUsingPOST(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0)
         {
-            CreateFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest);
+            CreateFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest);
         }
 
         /// <summary>
@@ -316,12 +316,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationRequest">createFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> CreateFunnelIntegrationUsingPOST_0WithHttpInfo(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> CreateFunnelIntegrationUsingPOSTWithHttpInfo(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0)
         {
             // verify the required parameter 'createFunnelIntegrationRequest' is set
             if (createFunnelIntegrationRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationRequest' when calling FunnelIntegrationApi->CreateFunnelIntegrationUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationRequest' when calling FunnelIntegrationApi->CreateFunnelIntegrationUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -349,7 +349,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = createFunnelIntegrationRequest;
 
-            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST_0";
+            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -357,7 +357,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Object>("/v2/funnelIntegration", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateFunnelIntegrationUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateFunnelIntegrationUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -375,9 +375,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateFunnelIntegrationUsingPOST_0Async(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateFunnelIntegrationUsingPOSTAsync(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await CreateFunnelIntegrationUsingPOST_0WithHttpInfoAsync(createFunnelIntegrationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            await CreateFunnelIntegrationUsingPOSTWithHttpInfoAsync(createFunnelIntegrationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -388,12 +388,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> CreateFunnelIntegrationUsingPOST_0WithHttpInfoAsync(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> CreateFunnelIntegrationUsingPOSTWithHttpInfoAsync(CreateFunnelIntegrationRequest createFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'createFunnelIntegrationRequest' is set
             if (createFunnelIntegrationRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationRequest' when calling FunnelIntegrationApi->CreateFunnelIntegrationUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationRequest' when calling FunnelIntegrationApi->CreateFunnelIntegrationUsingPOST");
             }
 
 
@@ -422,7 +422,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = createFunnelIntegrationRequest;
 
-            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST_0";
+            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -431,7 +431,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateFunnelIntegrationUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateFunnelIntegrationUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -448,9 +448,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationTriggerEvents">createFunnelIntegrationTriggerEvents</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;FunnelIntegrationTriggerResultDTO&gt;</returns>
-        public List<FunnelIntegrationTriggerResultDTO> CreateIntegrationTriggerEventUsingPOST_0(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0)
+        public List<FunnelIntegrationTriggerResultDTO> CreateIntegrationTriggerEventUsingPOST(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>> localVarResponse = CreateIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents);
+            Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>> localVarResponse = CreateIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents);
             return localVarResponse.Data;
         }
 
@@ -461,12 +461,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createFunnelIntegrationTriggerEvents">createFunnelIntegrationTriggerEvents</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;FunnelIntegrationTriggerResultDTO&gt;</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOST_0WithHttpInfo(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOSTWithHttpInfo(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0)
         {
             // verify the required parameter 'createFunnelIntegrationTriggerEvents' is set
             if (createFunnelIntegrationTriggerEvents == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationTriggerEvents' when calling FunnelIntegrationApi->CreateIntegrationTriggerEventUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationTriggerEvents' when calling FunnelIntegrationApi->CreateIntegrationTriggerEventUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -494,7 +494,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = createFunnelIntegrationTriggerEvents;
 
-            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST_0";
+            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -502,7 +502,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<List<FunnelIntegrationTriggerResultDTO>>("/v2/funnelIntegration/trigger", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateIntegrationTriggerEventUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateIntegrationTriggerEventUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -520,9 +520,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;FunnelIntegrationTriggerResultDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOST_0Async(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<FunnelIntegrationTriggerResultDTO>> CreateIntegrationTriggerEventUsingPOSTAsync(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>> localVarResponse = await CreateIntegrationTriggerEventUsingPOST_0WithHttpInfoAsync(createFunnelIntegrationTriggerEvents, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>> localVarResponse = await CreateIntegrationTriggerEventUsingPOSTWithHttpInfoAsync(createFunnelIntegrationTriggerEvents, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -534,12 +534,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;FunnelIntegrationTriggerResultDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>>> CreateIntegrationTriggerEventUsingPOST_0WithHttpInfoAsync(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<List<FunnelIntegrationTriggerResultDTO>>> CreateIntegrationTriggerEventUsingPOSTWithHttpInfoAsync(CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'createFunnelIntegrationTriggerEvents' is set
             if (createFunnelIntegrationTriggerEvents == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationTriggerEvents' when calling FunnelIntegrationApi->CreateIntegrationTriggerEventUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createFunnelIntegrationTriggerEvents' when calling FunnelIntegrationApi->CreateIntegrationTriggerEventUsingPOST");
             }
 
 
@@ -568,7 +568,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = createFunnelIntegrationTriggerEvents;
 
-            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST_0";
+            localVarRequestOptions.Operation = "FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -577,7 +577,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateIntegrationTriggerEventUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateIntegrationTriggerEventUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -594,9 +594,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteFunnelIntegrationRequest">deleteFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteFunnelIntegrationUsingPOST_0(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0)
+        public void DeleteFunnelIntegrationUsingPOST(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0)
         {
-            DeleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest);
+            DeleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest);
         }
 
         /// <summary>
@@ -606,12 +606,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteFunnelIntegrationRequest">deleteFunnelIntegrationRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteFunnelIntegrationUsingPOST_0WithHttpInfo(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteFunnelIntegrationUsingPOSTWithHttpInfo(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0)
         {
             // verify the required parameter 'deleteFunnelIntegrationRequest' is set
             if (deleteFunnelIntegrationRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteFunnelIntegrationRequest' when calling FunnelIntegrationApi->DeleteFunnelIntegrationUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteFunnelIntegrationRequest' when calling FunnelIntegrationApi->DeleteFunnelIntegrationUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -639,7 +639,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = deleteFunnelIntegrationRequest;
 
-            localVarRequestOptions.Operation = "FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST_0";
+            localVarRequestOptions.Operation = "FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -647,7 +647,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Object>("/v2/funnelIntegration/uninstall", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteFunnelIntegrationUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteFunnelIntegrationUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -665,9 +665,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteFunnelIntegrationUsingPOST_0Async(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteFunnelIntegrationUsingPOSTAsync(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteFunnelIntegrationUsingPOST_0WithHttpInfoAsync(deleteFunnelIntegrationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteFunnelIntegrationUsingPOSTWithHttpInfoAsync(deleteFunnelIntegrationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -678,12 +678,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteFunnelIntegrationUsingPOST_0WithHttpInfoAsync(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteFunnelIntegrationUsingPOSTWithHttpInfoAsync(DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'deleteFunnelIntegrationRequest' is set
             if (deleteFunnelIntegrationRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteFunnelIntegrationRequest' when calling FunnelIntegrationApi->DeleteFunnelIntegrationUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteFunnelIntegrationRequest' when calling FunnelIntegrationApi->DeleteFunnelIntegrationUsingPOST");
             }
 
 
@@ -712,7 +712,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = deleteFunnelIntegrationRequest;
 
-            localVarRequestOptions.Operation = "FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST_0";
+            localVarRequestOptions.Operation = "FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -721,7 +721,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteFunnelIntegrationUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteFunnelIntegrationUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -37,7 +37,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        User CreateUserUsingPOST1_0(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0);
+        User CreateUserUsingPOST1(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0);
 
         /// <summary>
         /// Create a User
@@ -49,7 +49,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> CreateUserUsingPOST1_0WithHttpInfo(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0);
+        ApiResponse<User> CreateUserUsingPOST1WithHttpInfo(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0);
         /// <summary>
         /// Get User
         /// </summary>
@@ -60,7 +60,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        User GetUserByIdUsingGET_0(string userId, int operationIndex = 0);
+        User GetUserByIdUsingGET(string userId, int operationIndex = 0);
 
         /// <summary>
         /// Get User
@@ -72,7 +72,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> GetUserByIdUsingGET_0WithHttpInfo(string userId, int operationIndex = 0);
+        ApiResponse<User> GetUserByIdUsingGETWithHttpInfo(string userId, int operationIndex = 0);
         /// <summary>
         /// Retrieve User Info
         /// </summary>
@@ -82,7 +82,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetUserInfoResponse</returns>
-        GetUserInfoResponse GetUserInfoUsingGET1_0(int operationIndex = 0);
+        GetUserInfoResponse GetUserInfoUsingGET1(int operationIndex = 0);
 
         /// <summary>
         /// Retrieve User Info
@@ -93,7 +93,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetUserInfoResponse</returns>
-        ApiResponse<GetUserInfoResponse> GetUserInfoUsingGET1_0WithHttpInfo(int operationIndex = 0);
+        ApiResponse<GetUserInfoResponse> GetUserInfoUsingGET1WithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Get User email signature
         /// </summary>
@@ -104,7 +104,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>string</returns>
-        string GetUserSignatureUsingGET1_0(string userId, int operationIndex = 0);
+        string GetUserSignatureUsingGET1(string userId, int operationIndex = 0);
 
         /// <summary>
         /// Get User email signature
@@ -116,7 +116,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> GetUserSignatureUsingGET1_0WithHttpInfo(string userId, int operationIndex = 0);
+        ApiResponse<string> GetUserSignatureUsingGET1WithHttpInfo(string userId, int operationIndex = 0);
         /// <summary>
         /// List Users
         /// </summary>
@@ -128,7 +128,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="orderBy">Attribute and direction to order items by. E.g. &#39;given_name desc&#39; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUserResponse</returns>
-        ListUserResponse ListUsersUsingGET1_0(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0);
+        ListUserResponse ListUsersUsingGET1(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Users
@@ -141,7 +141,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="orderBy">Attribute and direction to order items by. E.g. &#39;given_name desc&#39; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUserResponse</returns>
-        ApiResponse<ListUserResponse> ListUsersUsingGET1_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0);
+        ApiResponse<ListUserResponse> ListUsersUsingGET1WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0);
         /// <summary>
         /// Update User
         /// </summary>
@@ -154,7 +154,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        User PatchUserUsingPATCH_0(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0);
+        User PatchUserUsingPATCH(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0);
 
         /// <summary>
         /// Update User
@@ -168,7 +168,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> PatchUserUsingPATCH_0WithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0);
+        ApiResponse<User> PatchUserUsingPATCHWithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -189,7 +189,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> CreateUserUsingPOST1_0Async(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<User> CreateUserUsingPOST1Async(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a User
@@ -202,7 +202,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> CreateUserUsingPOST1_0WithHttpInfoAsync(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<User>> CreateUserUsingPOST1WithHttpInfoAsync(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get User
         /// </summary>
@@ -214,7 +214,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> GetUserByIdUsingGET_0Async(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<User> GetUserByIdUsingGETAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get User
@@ -227,7 +227,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> GetUserByIdUsingGET_0WithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<User>> GetUserByIdUsingGETWithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve User Info
         /// </summary>
@@ -238,7 +238,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUserInfoResponse</returns>
-        System.Threading.Tasks.Task<GetUserInfoResponse> GetUserInfoUsingGET1_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetUserInfoResponse> GetUserInfoUsingGET1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve User Info
@@ -250,7 +250,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUserInfoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUserInfoResponse>> GetUserInfoUsingGET1_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetUserInfoResponse>> GetUserInfoUsingGET1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get User email signature
         /// </summary>
@@ -262,7 +262,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> GetUserSignatureUsingGET1_0Async(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<string> GetUserSignatureUsingGET1Async(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get User email signature
@@ -275,7 +275,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> GetUserSignatureUsingGET1_0WithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<string>> GetUserSignatureUsingGET1WithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Users
         /// </summary>
@@ -288,7 +288,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUserResponse</returns>
-        System.Threading.Tasks.Task<ListUserResponse> ListUsersUsingGET1_0Async(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListUserResponse> ListUsersUsingGET1Async(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Users
@@ -302,7 +302,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListUserResponse>> ListUsersUsingGET1_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListUserResponse>> ListUsersUsingGET1WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update User
         /// </summary>
@@ -316,7 +316,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> PatchUserUsingPATCH_0Async(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<User> PatchUserUsingPATCHAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update User
@@ -331,7 +331,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserUsingPATCH_0WithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserUsingPATCHWithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -459,9 +459,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        public User CreateUserUsingPOST1_0(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0)
+        public User CreateUserUsingPOST1(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = CreateUserUsingPOST1_0WithHttpInfo(user);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = CreateUserUsingPOST1WithHttpInfo(user);
             return localVarResponse.Data;
         }
 
@@ -472,7 +472,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<User> CreateUserUsingPOST1_0WithHttpInfo(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<User> CreateUserUsingPOST1WithHttpInfo(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -499,7 +499,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = user;
 
-            localVarRequestOptions.Operation = "UsersApi.CreateUserUsingPOST1_0";
+            localVarRequestOptions.Operation = "UsersApi.CreateUserUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -507,7 +507,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<User>("/v2/users", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateUserUsingPOST1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateUserUsingPOST1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -525,9 +525,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> CreateUserUsingPOST1_0Async(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<User> CreateUserUsingPOST1Async(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await CreateUserUsingPOST1_0WithHttpInfoAsync(user, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await CreateUserUsingPOST1WithHttpInfoAsync(user, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -539,7 +539,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> CreateUserUsingPOST1_0WithHttpInfoAsync(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> CreateUserUsingPOST1WithHttpInfoAsync(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -567,7 +567,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = user;
 
-            localVarRequestOptions.Operation = "UsersApi.CreateUserUsingPOST1_0";
+            localVarRequestOptions.Operation = "UsersApi.CreateUserUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -576,7 +576,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateUserUsingPOST1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateUserUsingPOST1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -593,9 +593,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        public User GetUserByIdUsingGET_0(string userId, int operationIndex = 0)
+        public User GetUserByIdUsingGET(string userId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = GetUserByIdUsingGET_0WithHttpInfo(userId);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = GetUserByIdUsingGETWithHttpInfo(userId);
             return localVarResponse.Data;
         }
 
@@ -606,12 +606,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<User> GetUserByIdUsingGET_0WithHttpInfo(string userId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<User> GetUserByIdUsingGETWithHttpInfo(string userId, int operationIndex = 0)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserByIdUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserByIdUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -638,7 +638,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("user_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(userId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsersApi.GetUserByIdUsingGET_0";
+            localVarRequestOptions.Operation = "UsersApi.GetUserByIdUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -646,7 +646,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<User>("/v2/users/{user_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUserByIdUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetUserByIdUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -664,9 +664,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> GetUserByIdUsingGET_0Async(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<User> GetUserByIdUsingGETAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await GetUserByIdUsingGET_0WithHttpInfoAsync(userId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await GetUserByIdUsingGETWithHttpInfoAsync(userId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -678,12 +678,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> GetUserByIdUsingGET_0WithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> GetUserByIdUsingGETWithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserByIdUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserByIdUsingGET");
             }
 
 
@@ -711,7 +711,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("user_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(userId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsersApi.GetUserByIdUsingGET_0";
+            localVarRequestOptions.Operation = "UsersApi.GetUserByIdUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -720,7 +720,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUserByIdUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetUserByIdUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -736,9 +736,9 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetUserInfoResponse</returns>
-        public GetUserInfoResponse GetUserInfoUsingGET1_0(int operationIndex = 0)
+        public GetUserInfoResponse GetUserInfoUsingGET1(int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse> localVarResponse = GetUserInfoUsingGET1_0WithHttpInfo();
+            Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse> localVarResponse = GetUserInfoUsingGET1WithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -748,7 +748,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetUserInfoResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse> GetUserInfoUsingGET1_0WithHttpInfo(int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse> GetUserInfoUsingGET1WithHttpInfo(int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -773,7 +773,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "UsersApi.GetUserInfoUsingGET1_0";
+            localVarRequestOptions.Operation = "UsersApi.GetUserInfoUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -781,7 +781,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<GetUserInfoResponse>("/v2/oauth/connect/userinfo", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUserInfoUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetUserInfoUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -798,9 +798,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUserInfoResponse</returns>
-        public async System.Threading.Tasks.Task<GetUserInfoResponse> GetUserInfoUsingGET1_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetUserInfoResponse> GetUserInfoUsingGET1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse> localVarResponse = await GetUserInfoUsingGET1_0WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse> localVarResponse = await GetUserInfoUsingGET1WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -811,7 +811,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUserInfoResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse>> GetUserInfoUsingGET1_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<GetUserInfoResponse>> GetUserInfoUsingGET1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -837,7 +837,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "UsersApi.GetUserInfoUsingGET1_0";
+            localVarRequestOptions.Operation = "UsersApi.GetUserInfoUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -846,7 +846,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUserInfoUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetUserInfoUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -863,9 +863,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>string</returns>
-        public string GetUserSignatureUsingGET1_0(string userId, int operationIndex = 0)
+        public string GetUserSignatureUsingGET1(string userId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<string> localVarResponse = GetUserSignatureUsingGET1_0WithHttpInfo(userId);
+            Keap.Sdk.Core.Client.ApiResponse<string> localVarResponse = GetUserSignatureUsingGET1WithHttpInfo(userId);
             return localVarResponse.Data;
         }
 
@@ -876,12 +876,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="userId">user_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of string</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<string> GetUserSignatureUsingGET1_0WithHttpInfo(string userId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<string> GetUserSignatureUsingGET1WithHttpInfo(string userId, int operationIndex = 0)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSignatureUsingGET1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSignatureUsingGET1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -908,7 +908,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("user_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(userId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsersApi.GetUserSignatureUsingGET1_0";
+            localVarRequestOptions.Operation = "UsersApi.GetUserSignatureUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -916,7 +916,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<string>("/v2/users/{user_id}/signature", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUserSignatureUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetUserSignatureUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -934,9 +934,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> GetUserSignatureUsingGET1_0Async(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<string> GetUserSignatureUsingGET1Async(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<string> localVarResponse = await GetUserSignatureUsingGET1_0WithHttpInfoAsync(userId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<string> localVarResponse = await GetUserSignatureUsingGET1WithHttpInfoAsync(userId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -948,12 +948,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<string>> GetUserSignatureUsingGET1_0WithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<string>> GetUserSignatureUsingGET1WithHttpInfoAsync(string userId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSignatureUsingGET1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSignatureUsingGET1");
             }
 
 
@@ -981,7 +981,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("user_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(userId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsersApi.GetUserSignatureUsingGET1_0";
+            localVarRequestOptions.Operation = "UsersApi.GetUserSignatureUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -990,7 +990,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUserSignatureUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetUserSignatureUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1008,9 +1008,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="orderBy">Attribute and direction to order items by. E.g. &#39;given_name desc&#39; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUserResponse</returns>
-        public ListUserResponse ListUsersUsingGET1_0(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0)
+        public ListUserResponse ListUsersUsingGET1(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListUserResponse> localVarResponse = ListUsersUsingGET1_0WithHttpInfo(filter, orderBy);
+            Keap.Sdk.Core.Client.ApiResponse<ListUserResponse> localVarResponse = ListUsersUsingGET1WithHttpInfo(filter, orderBy);
             return localVarResponse.Data;
         }
 
@@ -1022,7 +1022,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="orderBy">Attribute and direction to order items by. E.g. &#39;given_name desc&#39; (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUserResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListUserResponse> ListUsersUsingGET1_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListUserResponse> ListUsersUsingGET1WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -1055,7 +1055,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "order_by", orderBy));
             }
 
-            localVarRequestOptions.Operation = "UsersApi.ListUsersUsingGET1_0";
+            localVarRequestOptions.Operation = "UsersApi.ListUsersUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1063,7 +1063,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListUserResponse>("/v2/users", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUsersUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListUsersUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1082,9 +1082,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUserResponse</returns>
-        public async System.Threading.Tasks.Task<ListUserResponse> ListUsersUsingGET1_0Async(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListUserResponse> ListUsersUsingGET1Async(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListUserResponse> localVarResponse = await ListUsersUsingGET1_0WithHttpInfoAsync(filter, orderBy, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListUserResponse> localVarResponse = await ListUsersUsingGET1WithHttpInfoAsync(filter, orderBy, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1097,7 +1097,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUserResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListUserResponse>> ListUsersUsingGET1_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListUserResponse>> ListUsersUsingGET1WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1131,7 +1131,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "order_by", orderBy));
             }
 
-            localVarRequestOptions.Operation = "UsersApi.ListUsersUsingGET1_0";
+            localVarRequestOptions.Operation = "UsersApi.ListUsersUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1140,7 +1140,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUsersUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListUsersUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1159,9 +1159,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        public User PatchUserUsingPATCH_0(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0)
+        public User PatchUserUsingPATCH(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = PatchUserUsingPATCH_0WithHttpInfo(userId, updateMask, user);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = PatchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
             return localVarResponse.Data;
         }
 
@@ -1174,12 +1174,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="user">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<User> PatchUserUsingPATCH_0WithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<User> PatchUserUsingPATCHWithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1212,7 +1212,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = user;
 
-            localVarRequestOptions.Operation = "UsersApi.PatchUserUsingPATCH_0";
+            localVarRequestOptions.Operation = "UsersApi.PatchUserUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1220,7 +1220,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<User>("/v2/users/{user_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchUserUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchUserUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1240,9 +1240,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> PatchUserUsingPATCH_0Async(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<User> PatchUserUsingPATCHAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await PatchUserUsingPATCH_0WithHttpInfoAsync(userId, updateMask, user, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await PatchUserUsingPATCHWithHttpInfoAsync(userId, updateMask, user, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1256,12 +1256,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> PatchUserUsingPATCH_0WithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> PatchUserUsingPATCHWithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserUsingPATCH");
             }
 
 
@@ -1295,7 +1295,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = user;
 
-            localVarRequestOptions.Operation = "UsersApi.PatchUserUsingPATCH_0";
+            localVarRequestOptions.Operation = "UsersApi.PatchUserUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1304,7 +1304,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchUserUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchUserUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

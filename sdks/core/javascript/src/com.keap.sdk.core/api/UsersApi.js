@@ -23,7 +23,7 @@ import User from '../model/User';
 /**
 * Users service.
 * @module com.keap.sdk.core/api/UsersApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class UsersApi {
 
@@ -47,7 +47,7 @@ export default class UsersApi {
      * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} [user] user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
-    createUserUsingPOST1_0WithHttpInfo(opts) {
+    createUserUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['user'];
 
@@ -78,8 +78,8 @@ export default class UsersApi {
      * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} opts.user user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
-    createUserUsingPOST1_0(opts) {
-      return this.createUserUsingPOST1_0WithHttpInfo(opts)
+    createUserUsingPOST1(opts) {
+      return this.createUserUsingPOST1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -92,11 +92,11 @@ export default class UsersApi {
      * @param {String} userId user_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
-    getUserByIdUsingGET_0WithHttpInfo(userId) {
+    getUserByIdUsingGETWithHttpInfo(userId) {
       let postBody = null;
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling getUserByIdUsingGET_0");
+        throw new Error("Missing the required parameter 'userId' when calling getUserByIdUsingGET");
       }
 
       let pathParams = {
@@ -126,8 +126,8 @@ export default class UsersApi {
      * @param {String} userId user_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
-    getUserByIdUsingGET_0(userId) {
-      return this.getUserByIdUsingGET_0WithHttpInfo(userId)
+    getUserByIdUsingGET(userId) {
+      return this.getUserByIdUsingGETWithHttpInfo(userId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -139,7 +139,7 @@ export default class UsersApi {
      * Retrieves information for the current authenticated end-user, as outlined by the [OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#UserInfo).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/GetUserInfoResponse} and HTTP response
      */
-    getUserInfoUsingGET1_0WithHttpInfo() {
+    getUserInfoUsingGET1WithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -167,8 +167,8 @@ export default class UsersApi {
      * Retrieves information for the current authenticated end-user, as outlined by the [OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#UserInfo).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/GetUserInfoResponse}
      */
-    getUserInfoUsingGET1_0() {
-      return this.getUserInfoUsingGET1_0WithHttpInfo()
+    getUserInfoUsingGET1() {
+      return this.getUserInfoUsingGET1WithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -181,11 +181,11 @@ export default class UsersApi {
      * @param {String} userId user_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link String} and HTTP response
      */
-    getUserSignatureUsingGET1_0WithHttpInfo(userId) {
+    getUserSignatureUsingGET1WithHttpInfo(userId) {
       let postBody = null;
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling getUserSignatureUsingGET1_0");
+        throw new Error("Missing the required parameter 'userId' when calling getUserSignatureUsingGET1");
       }
 
       let pathParams = {
@@ -215,8 +215,8 @@ export default class UsersApi {
      * @param {String} userId user_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link String}
      */
-    getUserSignatureUsingGET1_0(userId) {
-      return this.getUserSignatureUsingGET1_0WithHttpInfo(userId)
+    getUserSignatureUsingGET1(userId) {
+      return this.getUserSignatureUsingGET1WithHttpInfo(userId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -231,7 +231,7 @@ export default class UsersApi {
      * @param {String} [orderBy] Attribute and direction to order items by. E.g. 'given_name desc'
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListUserResponse} and HTTP response
      */
-    listUsersUsingGET1_0WithHttpInfo(opts) {
+    listUsersUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -265,8 +265,8 @@ export default class UsersApi {
      * @param {String} opts.orderBy Attribute and direction to order items by. E.g. 'given_name desc'
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListUserResponse}
      */
-    listUsersUsingGET1_0(opts) {
-      return this.listUsersUsingGET1_0WithHttpInfo(opts)
+    listUsersUsingGET1(opts) {
+      return this.listUsersUsingGET1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -282,12 +282,12 @@ export default class UsersApi {
      * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} [user] user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
-    patchUserUsingPATCH_0WithHttpInfo(userId, opts) {
+    patchUserUsingPATCHWithHttpInfo(userId, opts) {
       opts = opts || {};
       let postBody = opts['user'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling patchUserUsingPATCH_0");
+        throw new Error("Missing the required parameter 'userId' when calling patchUserUsingPATCH");
       }
 
       let pathParams = {
@@ -321,8 +321,8 @@ export default class UsersApi {
      * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} opts.user user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
-    patchUserUsingPATCH_0(userId, opts) {
-      return this.patchUserUsingPATCH_0WithHttpInfo(userId, opts)
+    patchUserUsingPATCH(userId, opts) {
+      return this.patchUserUsingPATCHWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

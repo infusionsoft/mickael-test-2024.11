@@ -13,7 +13,7 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-__version__ = "dev-2024.1125.0009-a0bbb4902f"
+__version__ = "0.0.18"
 
 # import apis into sdk package
 from keap_sdk_core_client.api.affiliate_api import AffiliateApi

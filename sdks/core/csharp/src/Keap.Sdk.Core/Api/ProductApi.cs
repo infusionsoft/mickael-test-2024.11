@@ -40,7 +40,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListProductsResponse</returns>
-        ListProductsResponse ListProductsUsingGET1_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListProductsResponse ListProductsUsingGET1(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Products
@@ -55,7 +55,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListProductsResponse</returns>
-        ApiResponse<ListProductsResponse> ListProductsUsingGET1_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListProductsResponse> ListProductsUsingGET1WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -79,7 +79,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListProductsResponse</returns>
-        System.Threading.Tasks.Task<ListProductsResponse> ListProductsUsingGET1_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListProductsResponse> ListProductsUsingGET1Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Products
@@ -95,7 +95,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListProductsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListProductsResponse>> ListProductsUsingGET1_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListProductsResponse>> ListProductsUsingGET1WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -226,9 +226,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListProductsResponse</returns>
-        public ListProductsResponse ListProductsUsingGET1_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListProductsResponse ListProductsUsingGET1(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse> localVarResponse = ListProductsUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse> localVarResponse = ListProductsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -242,7 +242,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListProductsResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse> ListProductsUsingGET1_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse> ListProductsUsingGET1WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -283,7 +283,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "ProductApi.ListProductsUsingGET1_0";
+            localVarRequestOptions.Operation = "ProductApi.ListProductsUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -291,7 +291,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListProductsResponse>("/v2/products", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListProductsUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListProductsUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -312,9 +312,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListProductsResponse</returns>
-        public async System.Threading.Tasks.Task<ListProductsResponse> ListProductsUsingGET1_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListProductsResponse> ListProductsUsingGET1Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse> localVarResponse = await ListProductsUsingGET1_0WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse> localVarResponse = await ListProductsUsingGET1WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -329,7 +329,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListProductsResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse>> ListProductsUsingGET1_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListProductsResponse>> ListProductsUsingGET1WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -371,7 +371,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "ProductApi.ListProductsUsingGET1_0";
+            localVarRequestOptions.Operation = "ProductApi.ListProductsUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -380,7 +380,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListProductsUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListProductsUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

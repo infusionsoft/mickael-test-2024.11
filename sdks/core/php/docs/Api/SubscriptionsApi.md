@@ -4,17 +4,17 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**cancelSubscriptionUsingPOST_0()**](SubscriptionsApi.md#cancelSubscriptionUsingPOST_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
-| [**createSubscriptionCustomFieldUsingPOST_0()**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
+| [**cancelSubscriptionUsingPOST()**](SubscriptionsApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
+| [**createSubscriptionCustomFieldUsingPOST()**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**createSubscriptionV2UsingPOST()**](SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription |
-| [**retrieveSubscriptionCustomFieldModelUsingGET_0()**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
-| [**updateSubscriptionCustomFieldUsingPATCH_0()**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
+| [**retrieveSubscriptionCustomFieldModelUsingGET()**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
+| [**updateSubscriptionCustomFieldUsingPATCH()**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 
 
-## `cancelSubscriptionUsingPOST_0()`
+## `cancelSubscriptionUsingPOST()`
 
 ```php
-cancelSubscriptionUsingPOST_0($subscription_id, $cancel_subscriptions_request)
+cancelSubscriptionUsingPOST($subscription_id, $cancel_subscriptions_request)
 ```
 
 Cancel Subscription
@@ -37,9 +37,9 @@ $subscription_id = 'subscription_id_example'; // string | subscription_id
 $cancel_subscriptions_request = new \Com\Keap\Sdk\Core\Model\CancelSubscriptionsRequest(); // \Com\Keap\Sdk\Core\Model\CancelSubscriptionsRequest | cancelSubscriptionsRequest
 
 try {
-    $apiInstance->cancelSubscriptionUsingPOST_0($subscription_id, $cancel_subscriptions_request);
+    $apiInstance->cancelSubscriptionUsingPOST($subscription_id, $cancel_subscriptions_request);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->cancelSubscriptionUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->cancelSubscriptionUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -67,10 +67,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createSubscriptionCustomFieldUsingPOST_0()`
+## `createSubscriptionCustomFieldUsingPOST()`
 
 ```php
-createSubscriptionCustomFieldUsingPOST_0($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createSubscriptionCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create a Subscription's Custom Field
@@ -92,10 +92,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\SubscriptionsApi(
 $custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createSubscriptionCustomFieldUsingPOST_0($custom_field);
+    $result = $apiInstance->createSubscriptionCustomFieldUsingPOST($custom_field);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->createSubscriptionCustomFieldUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->createSubscriptionCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -177,10 +177,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `retrieveSubscriptionCustomFieldModelUsingGET_0()`
+## `retrieveSubscriptionCustomFieldModelUsingGET()`
 
 ```php
-retrieveSubscriptionCustomFieldModelUsingGET_0(): \Com\Keap\Sdk\Core\Model\ObjectModel
+retrieveSubscriptionCustomFieldModelUsingGET(): \Com\Keap\Sdk\Core\Model\ObjectModel
 ```
 
 Retrieve Subscription's Custom Field Model
@@ -201,10 +201,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\SubscriptionsApi(
 );
 
 try {
-    $result = $apiInstance->retrieveSubscriptionCustomFieldModelUsingGET_0();
+    $result = $apiInstance->retrieveSubscriptionCustomFieldModelUsingGET();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->retrieveSubscriptionCustomFieldModelUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->retrieveSubscriptionCustomFieldModelUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -229,10 +229,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateSubscriptionCustomFieldUsingPATCH_0()`
+## `updateSubscriptionCustomFieldUsingPATCH()`
 
 ```php
-updateSubscriptionCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Subscription's Custom Field
@@ -256,10 +256,10 @@ $request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateSubscriptionCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->updateSubscriptionCustomFieldUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->updateSubscriptionCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

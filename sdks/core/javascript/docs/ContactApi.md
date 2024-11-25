@@ -1,4 +1,4 @@
-# KeapRestApi.ContactApi
+# KeapCoreServiceCoreSdk.ContactApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**createContactUsingPOST1**](ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact
 [**deleteContactUsingDELETE1**](ContactApi.md#deleteContactUsingDELETE1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 [**getContactUsingGET1**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-[**getContactsBySearchTermUsingGET_0**](ContactApi.md#getContactsBySearchTermUsingGET_0) | **GET** /v2/contacts:search | Search for Contacts
+[**getContactsBySearchTermUsingGET**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**linkContactsUsingPOST**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts
 [**listContactLinkTypesUsingGET**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types
 [**listContactLinksUsingGET**](ContactApi.md#listContactLinksUsingGET) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts
@@ -31,10 +31,10 @@ Creates a new type of Contact Link.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
-let request = new KeapRestApi.CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
+let request = new KeapCoreServiceCoreSdk.CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
 apiInstance.createContactLinkTypeUsingPOST(request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -75,11 +75,11 @@ Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;e
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let opts = {
-  'contact': new KeapRestApi.CreatePatchContactRequest() // CreatePatchContactRequest | contact
+  'contact': new KeapCoreServiceCoreSdk.CreatePatchContactRequest() // CreatePatchContactRequest | contact
 };
 apiInstance.createContactUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -121,9 +121,9 @@ Deletes the specified Contact.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let contactId = "contactId_example"; // String | contact_id
 apiInstance.deleteContactUsingDELETE1(contactId).then(() => {
   console.log('API called successfully.');
@@ -165,9 +165,9 @@ Retrieves a single Contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let contactId = "contactId_example"; // String | contact_id
 let opts = {
   'fields': ["null"] // [String] | Comma-delimited list of Contact properties to include in the response. (Available fields are: `score_value`, `addresses`, `anniversary`, `birthday`, `company`, `contact_type`, `custom_fields`, `create_time`, `email_addresses`, `fax_numbers`, `job_title`, `update_time`, `create_time`, `leadsource_id`,`middle_name`, `origin`, `owner_id`, `phone_numbers`, `preferred_locale`, `preferred_name`,`prefix`, `relationships`, `social_accounts`, `source_type`, `spouse_name`, `suffix`, `time_zone`,`website`, `tag_ids`, `utm_parameters`)
@@ -202,9 +202,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## getContactsBySearchTermUsingGET_0
+## getContactsBySearchTermUsingGET
 
-> ListBasicContactResponse getContactsBySearchTermUsingGET_0(searchParam)
+> ListBasicContactResponse getContactsBySearchTermUsingGET(searchParam)
 
 Search for Contacts
 
@@ -213,11 +213,11 @@ Get a list of Contacts based search parameters.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let searchParam = "searchParam_example"; // String | searchParam
-apiInstance.getContactsBySearchTermUsingGET_0(searchParam).then((data) => {
+apiInstance.getContactsBySearchTermUsingGET(searchParam).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -257,10 +257,10 @@ Links two Contacts together using the provided Link type
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
-let linkContactsRequest = new KeapRestApi.LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
+let linkContactsRequest = new KeapCoreServiceCoreSdk.LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
 apiInstance.linkContactsUsingPOST(linkContactsRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -301,9 +301,9 @@ Retrieves a list of Contact Link types.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results. Formatted as (unencoded) ?filter=name==expectedValue
   'orderBy': "orderBy_example", // String | 
@@ -353,9 +353,9 @@ Retrieves a list of Linked Contacts for a given Contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let contactId = "contactId_example"; // String | contact_id
 apiInstance.listContactLinksUsingGET(contactId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -397,9 +397,9 @@ Retrieves a list of Contacts
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let opts = {
   'fields': ["null"], // [String] | Comma-delimited list of Contact properties to include in the response. (Available fields are: `score_value`, `addresses`, `anniversary`, `birthday`, `company`, `contact_type`, `custom_fields`, `create_time`, `email_addresses`, `fax_numbers`, `job_title`, `update_time`, `create_time`, `leadsource_id`,`middle_name`, `origin`, `owner_id`, `phone_numbers`, `preferred_locale`, `preferred_name`,`prefix`, `relationships`, `social_accounts`, `source_type`, `spouse_name`, `suffix`, `time_zone`,`website`, `tag_ids`, `utm_parameters`)
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:   - `filter=given_name%3D%3DMary`  - `filter=company_id%3D%3D123`  - `filter=company_id%3D%3D123;family_name=Smith`  
@@ -451,9 +451,9 @@ List all Payment Methods for a Contact.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let contactId = 789; // Number | contact_id
 apiInstance.listPaymentMethodsUsingGET(contactId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -495,13 +495,13 @@ Updates a Contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let contactId = "contactId_example"; // String | contact_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'contact': new KeapRestApi.CreatePatchContactRequest() // CreatePatchContactRequest | contact
+  'contact': new KeapCoreServiceCoreSdk.CreatePatchContactRequest() // CreatePatchContactRequest | contact
 };
 apiInstance.patchContactUsingPATCH(contactId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -545,9 +545,9 @@ Get the custom fields and optional properties for the Contact object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 apiInstance.retrieveContactModelUsingGET1().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -585,10 +585,10 @@ Deletes Link between two Contacts
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ContactApi();
-let linkContactsRequest = new KeapRestApi.LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
+let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
+let linkContactsRequest = new KeapCoreServiceCoreSdk.LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
 apiInstance.unlinkContactsUsingPOST(linkContactsRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {

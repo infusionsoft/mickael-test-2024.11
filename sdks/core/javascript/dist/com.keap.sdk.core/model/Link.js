@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Link model module.
  * @module com.keap.sdk.core/model/Link
- * @version 2.70.0.739356-hf-202411181744
+ * @version 0.0.18
  */
 var Link = /*#__PURE__*/function () {
   /**

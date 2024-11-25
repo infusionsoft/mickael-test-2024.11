@@ -4,16 +4,16 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**deleteDiscountUsingDELETE_0**](CategoryDiscountApi.md#deleteDiscountUsingDELETE_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
-| [**deleteDiscountUsingDELETE_0WithHttpInfo**](CategoryDiscountApi.md#deleteDiscountUsingDELETE_0WithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
-| [**getDiscountUsingGET_0**](CategoryDiscountApi.md#getDiscountUsingGET_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
-| [**getDiscountUsingGET_0WithHttpInfo**](CategoryDiscountApi.md#getDiscountUsingGET_0WithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**deleteDiscountUsingDELETE**](CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**deleteDiscountUsingDELETEWithHttpInfo**](CategoryDiscountApi.md#deleteDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**getDiscountUsingGET**](CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**getDiscountUsingGETWithHttpInfo**](CategoryDiscountApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 
 
 
-## deleteDiscountUsingDELETE_0
+## deleteDiscountUsingDELETE
 
-> void deleteDiscountUsingDELETE_0(discountId)
+> void deleteDiscountUsingDELETE(discountId)
 
 Delete a Category Discount
 
@@ -23,11 +23,11 @@ Deletes a specified Category Discount
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.CategoryDiscountApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.CategoryDiscountApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -37,9 +37,9 @@ public class Example {
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
         try {
-            apiInstance.deleteDiscountUsingDELETE_0(discountId);
+            apiInstance.deleteDiscountUsingDELETE(discountId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CategoryDiscountApi#deleteDiscountUsingDELETE_0");
+            System.err.println("Exception when calling CategoryDiscountApi#deleteDiscountUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -78,9 +78,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteDiscountUsingDELETE_0WithHttpInfo
+## deleteDiscountUsingDELETEWithHttpInfo
 
-> ApiResponse<Void> deleteDiscountUsingDELETE_0 deleteDiscountUsingDELETE_0WithHttpInfo(discountId)
+> ApiResponse<Void> deleteDiscountUsingDELETE deleteDiscountUsingDELETEWithHttpInfo(discountId)
 
 Delete a Category Discount
 
@@ -90,12 +90,12 @@ Deletes a specified Category Discount
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.CategoryDiscountApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.CategoryDiscountApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -105,11 +105,11 @@ public class Example {
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETE_0WithHttpInfo(discountId);
+            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETEWithHttpInfo(discountId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling CategoryDiscountApi#deleteDiscountUsingDELETE_0");
+            System.err.println("Exception when calling CategoryDiscountApi#deleteDiscountUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -149,9 +149,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getDiscountUsingGET_0
+## getDiscountUsingGET
 
-> CategoryDiscount getDiscountUsingGET_0(discountId)
+> CategoryDiscount getDiscountUsingGET(discountId)
 
 Retrieve a Category Discount
 
@@ -161,11 +161,11 @@ Retrieves a single Category Discount
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.CategoryDiscountApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.CategoryDiscountApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -175,10 +175,10 @@ public class Example {
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
         try {
-            CategoryDiscount result = apiInstance.getDiscountUsingGET_0(discountId);
+            CategoryDiscount result = apiInstance.getDiscountUsingGET(discountId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CategoryDiscountApi#getDiscountUsingGET_0");
+            System.err.println("Exception when calling CategoryDiscountApi#getDiscountUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -217,9 +217,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getDiscountUsingGET_0WithHttpInfo
+## getDiscountUsingGETWithHttpInfo
 
-> ApiResponse<CategoryDiscount> getDiscountUsingGET_0 getDiscountUsingGET_0WithHttpInfo(discountId)
+> ApiResponse<CategoryDiscount> getDiscountUsingGET getDiscountUsingGETWithHttpInfo(discountId)
 
 Retrieve a Category Discount
 
@@ -229,12 +229,12 @@ Retrieves a single Category Discount
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.CategoryDiscountApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.CategoryDiscountApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -244,12 +244,12 @@ public class Example {
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
         try {
-            ApiResponse<CategoryDiscount> response = apiInstance.getDiscountUsingGET_0WithHttpInfo(discountId);
+            ApiResponse<CategoryDiscount> response = apiInstance.getDiscountUsingGETWithHttpInfo(discountId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling CategoryDiscountApi#getDiscountUsingGET_0");
+            System.err.println("Exception when calling CategoryDiscountApi#getDiscountUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

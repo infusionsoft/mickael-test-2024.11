@@ -1,4 +1,4 @@
-# KeapRestApi.CardInfo
+# KeapCoreServiceCoreSdk.CardInfo
 
 ## Properties
 

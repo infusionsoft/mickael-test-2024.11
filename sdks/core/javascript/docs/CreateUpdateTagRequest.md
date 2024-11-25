@@ -1,4 +1,4 @@
-# KeapRestApi.CreateUpdateTagRequest
+# KeapCoreServiceCoreSdk.CreateUpdateTagRequest
 
 ## Properties
 

@@ -4,12 +4,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_discount_using_delete_0**](CategoryDiscountApi.md#delete_discount_using_delete_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-[**get_discount_using_get_0**](CategoryDiscountApi.md#get_discount_using_get_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**delete_discount_using_delete**](CategoryDiscountApi.md#delete_discount_using_delete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+[**get_discount_using_get**](CategoryDiscountApi.md#get_discount_using_get) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 
 
-# **delete_discount_using_delete_0**
-> delete_discount_using_delete_0(discount_id)
+# **delete_discount_using_delete**
+> delete_discount_using_delete(discount_id)
 
 Delete a Category Discount
 
@@ -37,9 +37,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete a Category Discount
-        api_instance.delete_discount_using_delete_0(discount_id)
+        api_instance.delete_discount_using_delete(discount_id)
     except Exception as e:
-        print("Exception when calling CategoryDiscountApi->delete_discount_using_delete_0: %s\n" % e)
+        print("Exception when calling CategoryDiscountApi->delete_discount_using_delete: %s\n" % e)
 ```
 
 
@@ -74,8 +74,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_discount_using_get_0**
-> CategoryDiscount get_discount_using_get_0(discount_id)
+# **get_discount_using_get**
+> CategoryDiscount get_discount_using_get(discount_id)
 
 Retrieve a Category Discount
 
@@ -104,11 +104,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve a Category Discount
-        api_response = api_instance.get_discount_using_get_0(discount_id)
-        print("The response of CategoryDiscountApi->get_discount_using_get_0:\n")
+        api_response = api_instance.get_discount_using_get(discount_id)
+        print("The response of CategoryDiscountApi->get_discount_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CategoryDiscountApi->get_discount_using_get_0: %s\n" % e)
+        print("Exception when calling CategoryDiscountApi->get_discount_using_get: %s\n" % e)
 ```
 
 

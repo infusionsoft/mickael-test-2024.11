@@ -39,7 +39,7 @@ class ReferralApi:
 
 
     @validate_call
-    def create_referral_using_post_0(
+    def create_referral_using_post(
         self,
         request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
@@ -83,7 +83,7 @@ class ReferralApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_referral_using_post_0_serialize(
+        _param = self._create_referral_using_post_serialize(
             request=request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -107,7 +107,7 @@ class ReferralApi:
 
 
     @validate_call
-    def create_referral_using_post_0_with_http_info(
+    def create_referral_using_post_with_http_info(
         self,
         request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
@@ -151,7 +151,7 @@ class ReferralApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_referral_using_post_0_serialize(
+        _param = self._create_referral_using_post_serialize(
             request=request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -175,7 +175,7 @@ class ReferralApi:
 
 
     @validate_call
-    def create_referral_using_post_0_without_preload_content(
+    def create_referral_using_post_without_preload_content(
         self,
         request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
@@ -219,7 +219,7 @@ class ReferralApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_referral_using_post_0_serialize(
+        _param = self._create_referral_using_post_serialize(
             request=request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -238,7 +238,7 @@ class ReferralApi:
         return response_data.response
 
 
-    def _create_referral_using_post_0_serialize(
+    def _create_referral_using_post_serialize(
         self,
         request,
         _request_auth,

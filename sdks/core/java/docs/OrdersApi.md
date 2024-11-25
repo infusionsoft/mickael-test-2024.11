@@ -4,32 +4,32 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createOrderCustomFieldUsingPOST_0**](OrdersApi.md#createOrderCustomFieldUsingPOST_0) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
-| [**createOrderCustomFieldUsingPOST_0WithHttpInfo**](OrdersApi.md#createOrderCustomFieldUsingPOST_0WithHttpInfo) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
-| [**createOrderItemsOnOrderUsingPOST1_0**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1_0) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
-| [**createOrderItemsOnOrderUsingPOST1_0WithHttpInfo**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1_0WithHttpInfo) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
-| [**createOrderUsingPOST1_0**](OrdersApi.md#createOrderUsingPOST1_0) | **POST** /v2/orders | Create an Order |
-| [**createOrderUsingPOST1_0WithHttpInfo**](OrdersApi.md#createOrderUsingPOST1_0WithHttpInfo) | **POST** /v2/orders | Create an Order |
+| [**createOrderCustomFieldUsingPOST**](OrdersApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
+| [**createOrderCustomFieldUsingPOSTWithHttpInfo**](OrdersApi.md#createOrderCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
+| [**createOrderItemsOnOrderUsingPOST1**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**createOrderItemsOnOrderUsingPOST1WithHttpInfo**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**createOrderUsingPOST1**](OrdersApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order |
+| [**createOrderUsingPOST1WithHttpInfo**](OrdersApi.md#createOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders | Create an Order |
 | [**createPaymentOnOrderUsingPOST1**](OrdersApi.md#createPaymentOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/payments | Create a Payment |
 | [**createPaymentOnOrderUsingPOST1WithHttpInfo**](OrdersApi.md#createPaymentOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/payments | Create a Payment |
-| [**deleteOrderUsingDELETE1_0**](OrdersApi.md#deleteOrderUsingDELETE1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order |
-| [**deleteOrderUsingDELETE1_0WithHttpInfo**](OrdersApi.md#deleteOrderUsingDELETE1_0WithHttpInfo) | **DELETE** /v2/orders/{order_id} | Delete an Order |
-| [**getOrderUsingGET1_0**](OrdersApi.md#getOrderUsingGET1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order |
-| [**getOrderUsingGET1_0WithHttpInfo**](OrdersApi.md#getOrderUsingGET1_0WithHttpInfo) | **GET** /v2/orders/{order_id} | Retrieve an Order |
-| [**listOrdersUsingGET1_0**](OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders |
-| [**listOrdersUsingGET1_0WithHttpInfo**](OrdersApi.md#listOrdersUsingGET1_0WithHttpInfo) | **GET** /v2/orders | List orders |
-| [**patchOrderUsingPATCH_0**](OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order |
-| [**patchOrderUsingPATCH_0WithHttpInfo**](OrdersApi.md#patchOrderUsingPATCH_0WithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order |
-| [**retrieveOrderCustomFieldModelUsingGET_0**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
-| [**retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
-| [**updateOrderCustomFieldUsingPATCH_0**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
-| [**updateOrderCustomFieldUsingPATCH_0WithHttpInfo**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0WithHttpInfo) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**deleteOrderUsingDELETE1**](OrdersApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**deleteOrderUsingDELETE1WithHttpInfo**](OrdersApi.md#deleteOrderUsingDELETE1WithHttpInfo) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**getOrderUsingGET1**](OrdersApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**getOrderUsingGET1WithHttpInfo**](OrdersApi.md#getOrderUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**listOrdersUsingGET1**](OrdersApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders |
+| [**listOrdersUsingGET1WithHttpInfo**](OrdersApi.md#listOrdersUsingGET1WithHttpInfo) | **GET** /v2/orders | List orders |
+| [**patchOrderUsingPATCH**](OrdersApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order |
+| [**patchOrderUsingPATCHWithHttpInfo**](OrdersApi.md#patchOrderUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order |
+| [**retrieveOrderCustomFieldModelUsingGET**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
+| [**retrieveOrderCustomFieldModelUsingGETWithHttpInfo**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
+| [**updateOrderCustomFieldUsingPATCH**](OrdersApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**updateOrderCustomFieldUsingPATCHWithHttpInfo**](OrdersApi.md#updateOrderCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
 
 
 
-## createOrderCustomFieldUsingPOST_0
+## createOrderCustomFieldUsingPOST
 
-> CustomFieldMetaData createOrderCustomFieldUsingPOST_0(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
 
 Create an Order&#39;s Custom Field
 
@@ -39,11 +39,11 @@ Adds a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -53,10 +53,10 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createOrderCustomFieldUsingPOST_0(customField);
+            CustomFieldMetaData result = apiInstance.createOrderCustomFieldUsingPOST(customField);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#createOrderCustomFieldUsingPOST_0");
+            System.err.println("Exception when calling OrdersApi#createOrderCustomFieldUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -94,9 +94,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createOrderCustomFieldUsingPOST_0WithHttpInfo
+## createOrderCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOST_0 createOrderCustomFieldUsingPOST_0WithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOST createOrderCustomFieldUsingPOSTWithHttpInfo(customField)
 
 Create an Order&#39;s Custom Field
 
@@ -106,12 +106,12 @@ Adds a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -121,12 +121,12 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createOrderCustomFieldUsingPOST_0WithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createOrderCustomFieldUsingPOSTWithHttpInfo(customField);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#createOrderCustomFieldUsingPOST_0");
+            System.err.println("Exception when calling OrdersApi#createOrderCustomFieldUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -165,9 +165,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createOrderItemsOnOrderUsingPOST1_0
+## createOrderItemsOnOrderUsingPOST1
 
-> RestV2OrderItem createOrderItemsOnOrderUsingPOST1_0(orderId, createRestOrderItemRequest)
+> RestV2OrderItem createOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest)
 
 Create an Order Item
 
@@ -177,11 +177,11 @@ Creates an order item on an existing order.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -192,10 +192,10 @@ public class Example {
         String orderId = "orderId_example"; // String | order_id
         CreateRestOrderItemRequest createRestOrderItemRequest = new CreateRestOrderItemRequest(); // CreateRestOrderItemRequest | createRestOrderItemRequest
         try {
-            RestV2OrderItem result = apiInstance.createOrderItemsOnOrderUsingPOST1_0(orderId, createRestOrderItemRequest);
+            RestV2OrderItem result = apiInstance.createOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#createOrderItemsOnOrderUsingPOST1_0");
+            System.err.println("Exception when calling OrdersApi#createOrderItemsOnOrderUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -234,9 +234,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createOrderItemsOnOrderUsingPOST1_0WithHttpInfo
+## createOrderItemsOnOrderUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2OrderItem> createOrderItemsOnOrderUsingPOST1_0 createOrderItemsOnOrderUsingPOST1_0WithHttpInfo(orderId, createRestOrderItemRequest)
+> ApiResponse<RestV2OrderItem> createOrderItemsOnOrderUsingPOST1 createOrderItemsOnOrderUsingPOST1WithHttpInfo(orderId, createRestOrderItemRequest)
 
 Create an Order Item
 
@@ -246,12 +246,12 @@ Creates an order item on an existing order.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -262,12 +262,12 @@ public class Example {
         String orderId = "orderId_example"; // String | order_id
         CreateRestOrderItemRequest createRestOrderItemRequest = new CreateRestOrderItemRequest(); // CreateRestOrderItemRequest | createRestOrderItemRequest
         try {
-            ApiResponse<RestV2OrderItem> response = apiInstance.createOrderItemsOnOrderUsingPOST1_0WithHttpInfo(orderId, createRestOrderItemRequest);
+            ApiResponse<RestV2OrderItem> response = apiInstance.createOrderItemsOnOrderUsingPOST1WithHttpInfo(orderId, createRestOrderItemRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#createOrderItemsOnOrderUsingPOST1_0");
+            System.err.println("Exception when calling OrdersApi#createOrderItemsOnOrderUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -307,9 +307,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createOrderUsingPOST1_0
+## createOrderUsingPOST1
 
-> RestV2Order createOrderUsingPOST1_0(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(createOrderRequest)
 
 Create an Order
 
@@ -319,11 +319,11 @@ Create a one time Order with Order items.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -333,10 +333,10 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         RestCreateOrderRequest createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
         try {
-            RestV2Order result = apiInstance.createOrderUsingPOST1_0(createOrderRequest);
+            RestV2Order result = apiInstance.createOrderUsingPOST1(createOrderRequest);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#createOrderUsingPOST1_0");
+            System.err.println("Exception when calling OrdersApi#createOrderUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -374,9 +374,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createOrderUsingPOST1_0WithHttpInfo
+## createOrderUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2Order> createOrderUsingPOST1_0 createOrderUsingPOST1_0WithHttpInfo(createOrderRequest)
+> ApiResponse<RestV2Order> createOrderUsingPOST1 createOrderUsingPOST1WithHttpInfo(createOrderRequest)
 
 Create an Order
 
@@ -386,12 +386,12 @@ Create a one time Order with Order items.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -401,12 +401,12 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         RestCreateOrderRequest createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
         try {
-            ApiResponse<RestV2Order> response = apiInstance.createOrderUsingPOST1_0WithHttpInfo(createOrderRequest);
+            ApiResponse<RestV2Order> response = apiInstance.createOrderUsingPOST1WithHttpInfo(createOrderRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#createOrderUsingPOST1_0");
+            System.err.println("Exception when calling OrdersApi#createOrderUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -457,11 +457,11 @@ Creates a payment record that can charge a credit card. Alternatively, adds a re
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -526,12 +526,12 @@ Creates a payment record that can charge a credit card. Alternatively, adds a re
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -587,9 +587,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## deleteOrderUsingDELETE1_0
+## deleteOrderUsingDELETE1
 
-> void deleteOrderUsingDELETE1_0(orderId)
+> void deleteOrderUsingDELETE1(orderId)
 
 Delete an Order
 
@@ -599,11 +599,11 @@ Delete an Order
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -613,9 +613,9 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         try {
-            apiInstance.deleteOrderUsingDELETE1_0(orderId);
+            apiInstance.deleteOrderUsingDELETE1(orderId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#deleteOrderUsingDELETE1_0");
+            System.err.println("Exception when calling OrdersApi#deleteOrderUsingDELETE1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -654,9 +654,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteOrderUsingDELETE1_0WithHttpInfo
+## deleteOrderUsingDELETE1WithHttpInfo
 
-> ApiResponse<Void> deleteOrderUsingDELETE1_0 deleteOrderUsingDELETE1_0WithHttpInfo(orderId)
+> ApiResponse<Void> deleteOrderUsingDELETE1 deleteOrderUsingDELETE1WithHttpInfo(orderId)
 
 Delete an Order
 
@@ -666,12 +666,12 @@ Delete an Order
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -681,11 +681,11 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteOrderUsingDELETE1_0WithHttpInfo(orderId);
+            ApiResponse<Void> response = apiInstance.deleteOrderUsingDELETE1WithHttpInfo(orderId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#deleteOrderUsingDELETE1_0");
+            System.err.println("Exception when calling OrdersApi#deleteOrderUsingDELETE1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -725,9 +725,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getOrderUsingGET1_0
+## getOrderUsingGET1
 
-> RestV2Order getOrderUsingGET1_0(orderId)
+> RestV2Order getOrderUsingGET1(orderId)
 
 Retrieve an Order
 
@@ -737,11 +737,11 @@ Retrieves a single Order for a given order id
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -751,10 +751,10 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         try {
-            RestV2Order result = apiInstance.getOrderUsingGET1_0(orderId);
+            RestV2Order result = apiInstance.getOrderUsingGET1(orderId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#getOrderUsingGET1_0");
+            System.err.println("Exception when calling OrdersApi#getOrderUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -793,9 +793,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getOrderUsingGET1_0WithHttpInfo
+## getOrderUsingGET1WithHttpInfo
 
-> ApiResponse<RestV2Order> getOrderUsingGET1_0 getOrderUsingGET1_0WithHttpInfo(orderId)
+> ApiResponse<RestV2Order> getOrderUsingGET1 getOrderUsingGET1WithHttpInfo(orderId)
 
 Retrieve an Order
 
@@ -805,12 +805,12 @@ Retrieves a single Order for a given order id
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -820,12 +820,12 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         try {
-            ApiResponse<RestV2Order> response = apiInstance.getOrderUsingGET1_0WithHttpInfo(orderId);
+            ApiResponse<RestV2Order> response = apiInstance.getOrderUsingGET1WithHttpInfo(orderId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#getOrderUsingGET1_0");
+            System.err.println("Exception when calling OrdersApi#getOrderUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -865,9 +865,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## listOrdersUsingGET1_0
+## listOrdersUsingGET1
 
-> ListOrders listOrdersUsingGET1_0(filter, orderBy, pageSize, pageToken)
+> ListOrders listOrdersUsingGET1(filter, orderBy, pageSize, pageToken)
 
 List orders
 
@@ -877,11 +877,11 @@ Retrieves a list of orders
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -894,10 +894,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListOrders result = apiInstance.listOrdersUsingGET1_0(filter, orderBy, pageSize, pageToken);
+            ListOrders result = apiInstance.listOrdersUsingGET1(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#listOrdersUsingGET1_0");
+            System.err.println("Exception when calling OrdersApi#listOrdersUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -939,9 +939,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listOrdersUsingGET1_0WithHttpInfo
+## listOrdersUsingGET1WithHttpInfo
 
-> ApiResponse<ListOrders> listOrdersUsingGET1_0 listOrdersUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListOrders> listOrdersUsingGET1 listOrdersUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List orders
 
@@ -951,12 +951,12 @@ Retrieves a list of orders
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -969,12 +969,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListOrders> response = apiInstance.listOrdersUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListOrders> response = apiInstance.listOrdersUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#listOrdersUsingGET1_0");
+            System.err.println("Exception when calling OrdersApi#listOrdersUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1017,9 +1017,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## patchOrderUsingPATCH_0
+## patchOrderUsingPATCH
 
-> RestV2Order patchOrderUsingPATCH_0(orderId, updateMask, order)
+> RestV2Order patchOrderUsingPATCH(orderId, updateMask, order)
 
 Update an Order
 
@@ -1029,11 +1029,11 @@ Updates an Order
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1045,10 +1045,10 @@ public class Example {
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
         try {
-            RestV2Order result = apiInstance.patchOrderUsingPATCH_0(orderId, updateMask, order);
+            RestV2Order result = apiInstance.patchOrderUsingPATCH(orderId, updateMask, order);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#patchOrderUsingPATCH_0");
+            System.err.println("Exception when calling OrdersApi#patchOrderUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1089,9 +1089,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## patchOrderUsingPATCH_0WithHttpInfo
+## patchOrderUsingPATCHWithHttpInfo
 
-> ApiResponse<RestV2Order> patchOrderUsingPATCH_0 patchOrderUsingPATCH_0WithHttpInfo(orderId, updateMask, order)
+> ApiResponse<RestV2Order> patchOrderUsingPATCH patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order)
 
 Update an Order
 
@@ -1101,12 +1101,12 @@ Updates an Order
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1118,12 +1118,12 @@ public class Example {
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
         try {
-            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCH_0WithHttpInfo(orderId, updateMask, order);
+            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#patchOrderUsingPATCH_0");
+            System.err.println("Exception when calling OrdersApi#patchOrderUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1165,9 +1165,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## retrieveOrderCustomFieldModelUsingGET_0
+## retrieveOrderCustomFieldModelUsingGET
 
-> ObjectModel retrieveOrderCustomFieldModelUsingGET_0()
+> ObjectModel retrieveOrderCustomFieldModelUsingGET()
 
 Retrieve an Order&#39;s Custom Field Model
 
@@ -1177,11 +1177,11 @@ Gets the custom field&#39;s model for the Order object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1190,10 +1190,10 @@ public class Example {
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         try {
-            ObjectModel result = apiInstance.retrieveOrderCustomFieldModelUsingGET_0();
+            ObjectModel result = apiInstance.retrieveOrderCustomFieldModelUsingGET();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#retrieveOrderCustomFieldModelUsingGET_0");
+            System.err.println("Exception when calling OrdersApi#retrieveOrderCustomFieldModelUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1229,9 +1229,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo
+## retrieveOrderCustomFieldModelUsingGETWithHttpInfo
 
-> ApiResponse<ObjectModel> retrieveOrderCustomFieldModelUsingGET_0 retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo()
+> ApiResponse<ObjectModel> retrieveOrderCustomFieldModelUsingGET retrieveOrderCustomFieldModelUsingGETWithHttpInfo()
 
 Retrieve an Order&#39;s Custom Field Model
 
@@ -1241,12 +1241,12 @@ Gets the custom field&#39;s model for the Order object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1255,12 +1255,12 @@ public class Example {
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         try {
-            ApiResponse<ObjectModel> response = apiInstance.retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo();
+            ApiResponse<ObjectModel> response = apiInstance.retrieveOrderCustomFieldModelUsingGETWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#retrieveOrderCustomFieldModelUsingGET_0");
+            System.err.println("Exception when calling OrdersApi#retrieveOrderCustomFieldModelUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1297,9 +1297,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## updateOrderCustomFieldUsingPATCH_0
+## updateOrderCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH_0(customFieldId, request, updateMask)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask)
 
 Update an Order&#39;s Custom Field
 
@@ -1309,11 +1309,11 @@ Updates a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1325,10 +1325,10 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateOrderCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#updateOrderCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling OrdersApi#updateOrderCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1369,9 +1369,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## updateOrderCustomFieldUsingPATCH_0WithHttpInfo
+## updateOrderCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCH_0 updateOrderCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCH updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
 
 Update an Order&#39;s Custom Field
 
@@ -1381,12 +1381,12 @@ Updates a custom field of the specified type and options to the Order object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OrdersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OrdersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1398,12 +1398,12 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOrderCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OrdersApi#updateOrderCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling OrdersApi#updateOrderCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

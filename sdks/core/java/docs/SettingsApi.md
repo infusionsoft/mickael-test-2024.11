@@ -25,11 +25,11 @@ Get configuration values for the application instance.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SettingsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SettingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -93,12 +93,12 @@ Get configuration values for the application instance.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SettingsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SettingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -165,11 +165,11 @@ Gets a list of Contact Option types.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SettingsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SettingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -229,12 +229,12 @@ Gets a list of Contact Option types.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SettingsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SettingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -297,11 +297,11 @@ Check if the application is enabled or not
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SettingsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SettingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -361,12 +361,12 @@ Check if the application is enabled or not
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SettingsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SettingsApi;
 
 public class Example {
     public static void main(String[] args) {

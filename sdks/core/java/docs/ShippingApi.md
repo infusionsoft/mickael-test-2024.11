@@ -4,14 +4,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**listShippingMethodsUsingGET_0**](ShippingApi.md#listShippingMethodsUsingGET_0) | **GET** /v2/shipping | List Shipping methods |
-| [**listShippingMethodsUsingGET_0WithHttpInfo**](ShippingApi.md#listShippingMethodsUsingGET_0WithHttpInfo) | **GET** /v2/shipping | List Shipping methods |
+| [**listShippingMethodsUsingGET**](ShippingApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods |
+| [**listShippingMethodsUsingGETWithHttpInfo**](ShippingApi.md#listShippingMethodsUsingGETWithHttpInfo) | **GET** /v2/shipping | List Shipping methods |
 
 
 
-## listShippingMethodsUsingGET_0
+## listShippingMethodsUsingGET
 
-> ListRestShippingMethodsResponse listShippingMethodsUsingGET_0()
+> ListRestShippingMethodsResponse listShippingMethodsUsingGET()
 
 List Shipping methods
 
@@ -21,11 +21,11 @@ Retrieves a list of Shipping methods
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ShippingApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ShippingApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -34,10 +34,10 @@ public class Example {
 
         ShippingApi apiInstance = new ShippingApi(defaultClient);
         try {
-            ListRestShippingMethodsResponse result = apiInstance.listShippingMethodsUsingGET_0();
+            ListRestShippingMethodsResponse result = apiInstance.listShippingMethodsUsingGET();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ShippingApi#listShippingMethodsUsingGET_0");
+            System.err.println("Exception when calling ShippingApi#listShippingMethodsUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -73,9 +73,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listShippingMethodsUsingGET_0WithHttpInfo
+## listShippingMethodsUsingGETWithHttpInfo
 
-> ApiResponse<ListRestShippingMethodsResponse> listShippingMethodsUsingGET_0 listShippingMethodsUsingGET_0WithHttpInfo()
+> ApiResponse<ListRestShippingMethodsResponse> listShippingMethodsUsingGET listShippingMethodsUsingGETWithHttpInfo()
 
 List Shipping methods
 
@@ -85,12 +85,12 @@ Retrieves a list of Shipping methods
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ShippingApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ShippingApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -99,12 +99,12 @@ public class Example {
 
         ShippingApi apiInstance = new ShippingApi(defaultClient);
         try {
-            ApiResponse<ListRestShippingMethodsResponse> response = apiInstance.listShippingMethodsUsingGET_0WithHttpInfo();
+            ApiResponse<ListRestShippingMethodsResponse> response = apiInstance.listShippingMethodsUsingGETWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling ShippingApi#listShippingMethodsUsingGET_0");
+            System.err.println("Exception when calling ShippingApi#listShippingMethodsUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

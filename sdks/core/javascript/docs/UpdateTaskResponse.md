@@ -1,4 +1,4 @@
-# KeapRestApi.UpdateTaskResponse
+# KeapCoreServiceCoreSdk.UpdateTaskResponse
 
 ## Properties
 

@@ -22,7 +22,7 @@ import FunnelIntegrationTriggerResultDTO from '../model/FunnelIntegrationTrigger
 /**
 * FunnelIntegration service.
 * @module com.keap.sdk.core/api/FunnelIntegrationApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class FunnelIntegrationApi {
 
@@ -45,11 +45,11 @@ export default class FunnelIntegrationApi {
      * @param {module:com.keap.sdk.core/model/CreateFunnelIntegrationRequest} createFunnelIntegrationRequest createFunnelIntegrationRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    createFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest) {
+    createFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest) {
       let postBody = createFunnelIntegrationRequest;
       // verify the required parameter 'createFunnelIntegrationRequest' is set
       if (createFunnelIntegrationRequest === undefined || createFunnelIntegrationRequest === null) {
-        throw new Error("Missing the required parameter 'createFunnelIntegrationRequest' when calling createFunnelIntegrationUsingPOST_0");
+        throw new Error("Missing the required parameter 'createFunnelIntegrationRequest' when calling createFunnelIntegrationUsingPOST");
       }
 
       let pathParams = {
@@ -78,8 +78,8 @@ export default class FunnelIntegrationApi {
      * @param {module:com.keap.sdk.core/model/CreateFunnelIntegrationRequest} createFunnelIntegrationRequest createFunnelIntegrationRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest) {
-      return this.createFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest)
+    createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest) {
+      return this.createFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -91,11 +91,11 @@ export default class FunnelIntegrationApi {
      * @param {module:com.keap.sdk.core/model/CreateFunnelIntegrationTriggerEvents} createFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:com.keap.sdk.core/model/FunnelIntegrationTriggerResultDTO>} and HTTP response
      */
-    createIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents) {
+    createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents) {
       let postBody = createFunnelIntegrationTriggerEvents;
       // verify the required parameter 'createFunnelIntegrationTriggerEvents' is set
       if (createFunnelIntegrationTriggerEvents === undefined || createFunnelIntegrationTriggerEvents === null) {
-        throw new Error("Missing the required parameter 'createFunnelIntegrationTriggerEvents' when calling createIntegrationTriggerEventUsingPOST_0");
+        throw new Error("Missing the required parameter 'createFunnelIntegrationTriggerEvents' when calling createIntegrationTriggerEventUsingPOST");
       }
 
       let pathParams = {
@@ -123,8 +123,8 @@ export default class FunnelIntegrationApi {
      * @param {module:com.keap.sdk.core/model/CreateFunnelIntegrationTriggerEvents} createFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:com.keap.sdk.core/model/FunnelIntegrationTriggerResultDTO>}
      */
-    createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents) {
-      return this.createIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents)
+    createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents) {
+      return this.createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -137,11 +137,11 @@ export default class FunnelIntegrationApi {
      * @param {module:com.keap.sdk.core/model/DeleteFunnelIntegrationRequest} deleteFunnelIntegrationRequest deleteFunnelIntegrationRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest) {
+    deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest) {
       let postBody = deleteFunnelIntegrationRequest;
       // verify the required parameter 'deleteFunnelIntegrationRequest' is set
       if (deleteFunnelIntegrationRequest === undefined || deleteFunnelIntegrationRequest === null) {
-        throw new Error("Missing the required parameter 'deleteFunnelIntegrationRequest' when calling deleteFunnelIntegrationUsingPOST_0");
+        throw new Error("Missing the required parameter 'deleteFunnelIntegrationRequest' when calling deleteFunnelIntegrationUsingPOST");
       }
 
       let pathParams = {
@@ -170,8 +170,8 @@ export default class FunnelIntegrationApi {
      * @param {module:com.keap.sdk.core/model/DeleteFunnelIntegrationRequest} deleteFunnelIntegrationRequest deleteFunnelIntegrationRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest) {
-      return this.deleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest)
+    deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest) {
+      return this.deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

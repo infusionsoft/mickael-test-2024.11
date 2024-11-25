@@ -1,25 +1,25 @@
-# KeapRestApi.OrdersApi
+# KeapCoreServiceCoreSdk.OrdersApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createOrderCustomFieldUsingPOST_0**](OrdersApi.md#createOrderCustomFieldUsingPOST_0) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
-[**createOrderItemsOnOrderUsingPOST1_0**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1_0) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-[**createOrderUsingPOST1_0**](OrdersApi.md#createOrderUsingPOST1_0) | **POST** /v2/orders | Create an Order
+[**createOrderCustomFieldUsingPOST**](OrdersApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
+[**createOrderItemsOnOrderUsingPOST1**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
+[**createOrderUsingPOST1**](OrdersApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order
 [**createPaymentOnOrderUsingPOST1**](OrdersApi.md#createPaymentOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
-[**deleteOrderUsingDELETE1_0**](OrdersApi.md#deleteOrderUsingDELETE1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order
-[**getOrderUsingGET1_0**](OrdersApi.md#getOrderUsingGET1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order
-[**listOrdersUsingGET1_0**](OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders
-[**patchOrderUsingPATCH_0**](OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order
-[**retrieveOrderCustomFieldModelUsingGET_0**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
-[**updateOrderCustomFieldUsingPATCH_0**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
+[**deleteOrderUsingDELETE1**](OrdersApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order
+[**getOrderUsingGET1**](OrdersApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**listOrdersUsingGET1**](OrdersApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders
+[**patchOrderUsingPATCH**](OrdersApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
+[**retrieveOrderCustomFieldModelUsingGET**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
+[**updateOrderCustomFieldUsingPATCH**](OrdersApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
 
 
 
-## createOrderCustomFieldUsingPOST_0
+## createOrderCustomFieldUsingPOST
 
-> CustomFieldMetaData createOrderCustomFieldUsingPOST_0(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
 
 Create an Order&#39;s Custom Field
 
@@ -28,11 +28,11 @@ Adds a custom field of the specified type and options to the Order object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createOrderCustomFieldUsingPOST_0(customField).then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createOrderCustomFieldUsingPOST(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -61,9 +61,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## createOrderItemsOnOrderUsingPOST1_0
+## createOrderItemsOnOrderUsingPOST1
 
-> RestV2OrderItem createOrderItemsOnOrderUsingPOST1_0(orderId, createRestOrderItemRequest)
+> RestV2OrderItem createOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest)
 
 Create an Order Item
 
@@ -72,12 +72,12 @@ Creates an order item on an existing order.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let orderId = "orderId_example"; // String | order_id
-let createRestOrderItemRequest = new KeapRestApi.CreateRestOrderItemRequest(); // CreateRestOrderItemRequest | createRestOrderItemRequest
-apiInstance.createOrderItemsOnOrderUsingPOST1_0(orderId, createRestOrderItemRequest).then((data) => {
+let createRestOrderItemRequest = new KeapCoreServiceCoreSdk.CreateRestOrderItemRequest(); // CreateRestOrderItemRequest | createRestOrderItemRequest
+apiInstance.createOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -107,9 +107,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## createOrderUsingPOST1_0
+## createOrderUsingPOST1
 
-> RestV2Order createOrderUsingPOST1_0(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(createOrderRequest)
 
 Create an Order
 
@@ -118,11 +118,11 @@ Create a one time Order with Order items.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
-let createOrderRequest = new KeapRestApi.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
-apiInstance.createOrderUsingPOST1_0(createOrderRequest).then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
+let createOrderRequest = new KeapCoreServiceCoreSdk.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+apiInstance.createOrderUsingPOST1(createOrderRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -162,11 +162,11 @@ Creates a payment record that can charge a credit card. Alternatively, adds a re
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let orderId = "orderId_example"; // String | order_id
-let createPaymentRequest = new KeapRestApi.CreatePaymentRequest(); // CreatePaymentRequest | createPaymentRequest
+let createPaymentRequest = new KeapCoreServiceCoreSdk.CreatePaymentRequest(); // CreatePaymentRequest | createPaymentRequest
 apiInstance.createPaymentOnOrderUsingPOST1(orderId, createPaymentRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -197,9 +197,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## deleteOrderUsingDELETE1_0
+## deleteOrderUsingDELETE1
 
-> deleteOrderUsingDELETE1_0(orderId)
+> deleteOrderUsingDELETE1(orderId)
 
 Delete an Order
 
@@ -208,11 +208,11 @@ Delete an Order
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let orderId = "orderId_example"; // String | order_id
-apiInstance.deleteOrderUsingDELETE1_0(orderId).then(() => {
+apiInstance.deleteOrderUsingDELETE1(orderId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -241,9 +241,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## getOrderUsingGET1_0
+## getOrderUsingGET1
 
-> RestV2Order getOrderUsingGET1_0(orderId)
+> RestV2Order getOrderUsingGET1(orderId)
 
 Retrieve an Order
 
@@ -252,11 +252,11 @@ Retrieves a single Order for a given order id
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let orderId = "orderId_example"; // String | order_id
-apiInstance.getOrderUsingGET1_0(orderId).then((data) => {
+apiInstance.getOrderUsingGET1(orderId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -285,9 +285,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## listOrdersUsingGET1_0
+## listOrdersUsingGET1
 
-> ListOrders listOrdersUsingGET1_0(opts)
+> ListOrders listOrdersUsingGET1(opts)
 
 List orders
 
@@ -296,16 +296,16 @@ Retrieves a list of orders
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`
   'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
   'pageSize': 0, // Number | Total number of items to return per page
   'pageToken': "pageToken_example" // String | Page token
 };
-apiInstance.listOrdersUsingGET1_0(opts).then((data) => {
+apiInstance.listOrdersUsingGET1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -337,9 +337,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## patchOrderUsingPATCH_0
+## patchOrderUsingPATCH
 
-> RestV2Order patchOrderUsingPATCH_0(orderId, opts)
+> RestV2Order patchOrderUsingPATCH(orderId, opts)
 
 Update an Order
 
@@ -348,15 +348,15 @@ Updates an Order
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let orderId = "orderId_example"; // String | order_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'order': new KeapRestApi.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
+  'order': new KeapCoreServiceCoreSdk.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
 };
-apiInstance.patchOrderUsingPATCH_0(orderId, opts).then((data) => {
+apiInstance.patchOrderUsingPATCH(orderId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -387,9 +387,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## retrieveOrderCustomFieldModelUsingGET_0
+## retrieveOrderCustomFieldModelUsingGET
 
-> ObjectModel retrieveOrderCustomFieldModelUsingGET_0()
+> ObjectModel retrieveOrderCustomFieldModelUsingGET()
 
 Retrieve an Order&#39;s Custom Field Model
 
@@ -398,10 +398,10 @@ Gets the custom field&#39;s model for the Order object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
-apiInstance.retrieveOrderCustomFieldModelUsingGET_0().then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
+apiInstance.retrieveOrderCustomFieldModelUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -427,9 +427,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## updateOrderCustomFieldUsingPATCH_0
+## updateOrderCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH_0(customFieldId, request, opts)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, request, opts)
 
 Update an Order&#39;s Custom Field
 
@@ -438,15 +438,15 @@ Updates a custom field of the specified type and options to the Order object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.OrdersApi();
+let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOrderCustomFieldUsingPATCH_0(customFieldId, request, opts).then((data) => {
+apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

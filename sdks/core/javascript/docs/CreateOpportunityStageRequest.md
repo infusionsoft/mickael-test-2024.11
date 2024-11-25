@@ -1,4 +1,4 @@
-# KeapRestApi.CreateOpportunityStageRequest
+# KeapCoreServiceCoreSdk.CreateOpportunityStageRequest
 
 ## Properties
 

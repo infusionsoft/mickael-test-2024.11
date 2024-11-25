@@ -1,4 +1,4 @@
-# KeapRestApi.StackTraceElement
+# KeapCoreServiceCoreSdk.StackTraceElement
 
 ## Properties
 

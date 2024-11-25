@@ -4,20 +4,20 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createOrderCustomFieldUsingPOST_0**](OrdersApi.md#createOrderCustomFieldUsingPOST_0) | **POST** /v2/orders/model/customFields | Create an Order\&#39;s Custom Field
-[**createOrderItemsOnOrderUsingPOST1_0**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1_0) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-[**createOrderUsingPOST1_0**](OrdersApi.md#createOrderUsingPOST1_0) | **POST** /v2/orders | Create an Order
+[**createOrderCustomFieldUsingPOST**](OrdersApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order\&#39;s Custom Field
+[**createOrderItemsOnOrderUsingPOST1**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
+[**createOrderUsingPOST1**](OrdersApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order
 [**createPaymentOnOrderUsingPOST1**](OrdersApi.md#createPaymentOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
-[**deleteOrderUsingDELETE1_0**](OrdersApi.md#deleteOrderUsingDELETE1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order
-[**getOrderUsingGET1_0**](OrdersApi.md#getOrderUsingGET1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order
-[**listOrdersUsingGET1_0**](OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders
-[**patchOrderUsingPATCH_0**](OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order
-[**retrieveOrderCustomFieldModelUsingGET_0**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order\&#39;s Custom Field Model
-[**updateOrderCustomFieldUsingPATCH_0**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order\&#39;s Custom Field
+[**deleteOrderUsingDELETE1**](OrdersApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order
+[**getOrderUsingGET1**](OrdersApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**listOrdersUsingGET1**](OrdersApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders
+[**patchOrderUsingPATCH**](OrdersApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
+[**retrieveOrderCustomFieldModelUsingGET**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET) | **GET** /v2/orders/model | Retrieve an Order\&#39;s Custom Field Model
+[**updateOrderCustomFieldUsingPATCH**](OrdersApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order\&#39;s Custom Field
 
 
-# **createOrderCustomFieldUsingPOST_0**
-> CustomFieldMetaData createOrderCustomFieldUsingPOST_0(customField)
+# **createOrderCustomFieldUsingPOST**
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
 
 Adds a custom field of the specified type and options to the Order object.
 
@@ -26,12 +26,12 @@ Adds a custom field of the specified type and options to the Order object.
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiCreateOrderCustomFieldUsingPOST0Request } from '';
+import type { OrdersApiCreateOrderCustomFieldUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiCreateOrderCustomFieldUsingPOST0Request = {
+const request: OrdersApiCreateOrderCustomFieldUsingPOSTRequest = {
     // customField
   customField: {
     fieldType: "CURRENCY",
@@ -47,7 +47,7 @@ const request: OrdersApiCreateOrderCustomFieldUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createOrderCustomFieldUsingPOST_0(request);
+const data = await apiInstance.createOrderCustomFieldUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -82,8 +82,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createOrderItemsOnOrderUsingPOST1_0**
-> RestV2OrderItem createOrderItemsOnOrderUsingPOST1_0(createRestOrderItemRequest)
+# **createOrderItemsOnOrderUsingPOST1**
+> RestV2OrderItem createOrderItemsOnOrderUsingPOST1(createRestOrderItemRequest)
 
 Creates an order item on an existing order.
 
@@ -92,12 +92,12 @@ Creates an order item on an existing order.
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiCreateOrderItemsOnOrderUsingPOST10Request } from '';
+import type { OrdersApiCreateOrderItemsOnOrderUsingPOST1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiCreateOrderItemsOnOrderUsingPOST10Request = {
+const request: OrdersApiCreateOrderItemsOnOrderUsingPOST1Request = {
     // order_id
   orderId: "order_id_example",
     // createRestOrderItemRequest
@@ -110,7 +110,7 @@ const request: OrdersApiCreateOrderItemsOnOrderUsingPOST10Request = {
   },
 };
 
-const data = await apiInstance.createOrderItemsOnOrderUsingPOST1_0(request);
+const data = await apiInstance.createOrderItemsOnOrderUsingPOST1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -146,8 +146,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createOrderUsingPOST1_0**
-> RestV2Order createOrderUsingPOST1_0(createOrderRequest)
+# **createOrderUsingPOST1**
+> RestV2Order createOrderUsingPOST1(createOrderRequest)
 
 Create a one time Order with Order items.
 
@@ -156,12 +156,12 @@ Create a one time Order with Order items.
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiCreateOrderUsingPOST10Request } from '';
+import type { OrdersApiCreateOrderUsingPOST1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiCreateOrderUsingPOST10Request = {
+const request: OrdersApiCreateOrderUsingPOST1Request = {
     // createOrderRequest
   createOrderRequest: {
     contactId: "contactId_example",
@@ -200,7 +200,7 @@ const request: OrdersApiCreateOrderUsingPOST10Request = {
   },
 };
 
-const data = await apiInstance.createOrderUsingPOST1_0(request);
+const data = await apiInstance.createOrderUsingPOST1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -299,8 +299,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteOrderUsingDELETE1_0**
-> void deleteOrderUsingDELETE1_0()
+# **deleteOrderUsingDELETE1**
+> void deleteOrderUsingDELETE1()
 
   Deletes an Order<br/>   Note: The Order must not have any transactions recorded to be subject to deletion. 
 
@@ -309,17 +309,17 @@ No authorization required
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiDeleteOrderUsingDELETE10Request } from '';
+import type { OrdersApiDeleteOrderUsingDELETE1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiDeleteOrderUsingDELETE10Request = {
+const request: OrdersApiDeleteOrderUsingDELETE1Request = {
     // order_id
   orderId: "order_id_example",
 };
 
-const data = await apiInstance.deleteOrderUsingDELETE1_0(request);
+const data = await apiInstance.deleteOrderUsingDELETE1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -355,8 +355,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getOrderUsingGET1_0**
-> RestV2Order getOrderUsingGET1_0()
+# **getOrderUsingGET1**
+> RestV2Order getOrderUsingGET1()
 
 Retrieves a single Order for a given order id
 
@@ -365,17 +365,17 @@ Retrieves a single Order for a given order id
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiGetOrderUsingGET10Request } from '';
+import type { OrdersApiGetOrderUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiGetOrderUsingGET10Request = {
+const request: OrdersApiGetOrderUsingGET1Request = {
     // order_id
   orderId: "order_id_example",
 };
 
-const data = await apiInstance.getOrderUsingGET1_0(request);
+const data = await apiInstance.getOrderUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -411,8 +411,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listOrdersUsingGET1_0**
-> ListOrders listOrdersUsingGET1_0()
+# **listOrdersUsingGET1**
+> ListOrders listOrdersUsingGET1()
 
 Retrieves a list of orders
 
@@ -421,12 +421,12 @@ Retrieves a list of orders
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiListOrdersUsingGET10Request } from '';
+import type { OrdersApiListOrdersUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiListOrdersUsingGET10Request = {
+const request: OrdersApiListOrdersUsingGET1Request = {
     // Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567` (optional)
   filter: "filter_example",
     // Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc (optional)
@@ -437,7 +437,7 @@ const request: OrdersApiListOrdersUsingGET10Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listOrdersUsingGET1_0(request);
+const data = await apiInstance.listOrdersUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -476,8 +476,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchOrderUsingPATCH_0**
-> RestV2Order patchOrderUsingPATCH_0()
+# **patchOrderUsingPATCH**
+> RestV2Order patchOrderUsingPATCH()
 
 Updates an Order
 
@@ -486,12 +486,12 @@ Updates an Order
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiPatchOrderUsingPATCH0Request } from '';
+import type { OrdersApiPatchOrderUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiPatchOrderUsingPATCH0Request = {
+const request: OrdersApiPatchOrderUsingPATCHRequest = {
     // order_id
   orderId: "order_id_example",
     // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
@@ -527,7 +527,7 @@ const request: OrdersApiPatchOrderUsingPATCH0Request = {
   },
 };
 
-const data = await apiInstance.patchOrderUsingPATCH_0(request);
+const data = await apiInstance.patchOrderUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -565,8 +565,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **retrieveOrderCustomFieldModelUsingGET_0**
-> ObjectModel retrieveOrderCustomFieldModelUsingGET_0()
+# **retrieveOrderCustomFieldModelUsingGET**
+> ObjectModel retrieveOrderCustomFieldModelUsingGET()
 
 Gets the custom field\'s model for the Order object
 
@@ -581,7 +581,7 @@ const apiInstance = new OrdersApi(configuration);
 
 const request = {};
 
-const data = await apiInstance.retrieveOrderCustomFieldModelUsingGET_0(request);
+const data = await apiInstance.retrieveOrderCustomFieldModelUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -614,8 +614,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateOrderCustomFieldUsingPATCH_0**
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH_0(request)
+# **updateOrderCustomFieldUsingPATCH**
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(request)
 
 Updates a custom field of the specified type and options to the Order object.
 
@@ -624,12 +624,12 @@ Updates a custom field of the specified type and options to the Order object.
 
 ```typescript
 import { createConfiguration, OrdersApi } from '';
-import type { OrdersApiUpdateOrderCustomFieldUsingPATCH0Request } from '';
+import type { OrdersApiUpdateOrderCustomFieldUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OrdersApi(configuration);
 
-const request: OrdersApiUpdateOrderCustomFieldUsingPATCH0Request = {
+const request: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
@@ -650,7 +650,7 @@ const request: OrdersApiUpdateOrderCustomFieldUsingPATCH0Request = {
   ],
 };
 
-const data = await apiInstance.updateOrderCustomFieldUsingPATCH_0(request);
+const data = await apiInstance.updateOrderCustomFieldUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

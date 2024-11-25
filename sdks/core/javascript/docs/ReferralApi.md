@@ -1,16 +1,16 @@
-# KeapRestApi.ReferralApi
+# KeapCoreServiceCoreSdk.ReferralApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createReferralUsingPOST_0**](ReferralApi.md#createReferralUsingPOST_0) | **POST** /v2/referrals | Create a Referral
+[**createReferralUsingPOST**](ReferralApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral
 
 
 
-## createReferralUsingPOST_0
+## createReferralUsingPOST
 
-> Referral createReferralUsingPOST_0(request)
+> Referral createReferralUsingPOST(request)
 
 Create a Referral
 
@@ -19,11 +19,11 @@ Creates a new referral partner referral on the provided contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ReferralApi();
-let request = new KeapRestApi.CreateReferralRequest(); // CreateReferralRequest | request
-apiInstance.createReferralUsingPOST_0(request).then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.ReferralApi();
+let request = new KeapCoreServiceCoreSdk.CreateReferralRequest(); // CreateReferralRequest | request
+apiInstance.createReferralUsingPOST(request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

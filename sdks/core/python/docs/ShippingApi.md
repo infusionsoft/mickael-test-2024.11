@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_shipping_methods_using_get_0**](ShippingApi.md#list_shipping_methods_using_get_0) | **GET** /v2/shipping | List Shipping methods
+[**list_shipping_methods_using_get**](ShippingApi.md#list_shipping_methods_using_get) | **GET** /v2/shipping | List Shipping methods
 
 
-# **list_shipping_methods_using_get_0**
-> ListRestShippingMethodsResponse list_shipping_methods_using_get_0()
+# **list_shipping_methods_using_get**
+> ListRestShippingMethodsResponse list_shipping_methods_using_get()
 
 List Shipping methods
 
@@ -36,11 +36,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Shipping methods
-        api_response = api_instance.list_shipping_methods_using_get_0()
-        print("The response of ShippingApi->list_shipping_methods_using_get_0:\n")
+        api_response = api_instance.list_shipping_methods_using_get()
+        print("The response of ShippingApi->list_shipping_methods_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ShippingApi->list_shipping_methods_using_get_0: %s\n" % e)
+        print("Exception when calling ShippingApi->list_shipping_methods_using_get: %s\n" % e)
 ```
 
 

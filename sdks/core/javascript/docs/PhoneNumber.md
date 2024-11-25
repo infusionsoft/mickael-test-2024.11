@@ -1,4 +1,4 @@
-# KeapRestApi.PhoneNumber
+# KeapCoreServiceCoreSdk.PhoneNumber
 
 ## Properties
 

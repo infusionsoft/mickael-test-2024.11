@@ -1,4 +1,4 @@
-# KeapRestApi.ReportingApi
+# KeapCoreServiceCoreSdk.ReportingApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -19,9 +19,9 @@ Runs a report as defined in the application (identified as Saved Search)&lt;br/&
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.ReportingApi();
+let apiInstance = new KeapCoreServiceCoreSdk.ReportingApi();
 let reportId = "reportId_example"; // String | The unique identifier of the report (Saved Search) to execute
 let opts = {
   'fields': "fields_example", // String | Comma-separated list of fields to return (or do not supply a value to return all)

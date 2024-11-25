@@ -1,4 +1,4 @@
-# KeapRestApi.UpdateAutomationCategoryRequest
+# KeapCoreServiceCoreSdk.UpdateAutomationCategoryRequest
 
 ## Properties
 

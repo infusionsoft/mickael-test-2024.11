@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleAffiliate
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleAffiliate
 
 ## Properties
 

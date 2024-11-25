@@ -27,11 +27,11 @@ Creates a single automation category
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -94,12 +94,12 @@ Creates a single automation category
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -165,11 +165,11 @@ Deletes one or more automation categories based on the request parameters
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -232,12 +232,12 @@ Deletes one or more automation categories based on the request parameters
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -303,11 +303,11 @@ Lists all automation categories based on the request parameters
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -367,12 +367,12 @@ Lists all automation categories based on the request parameters
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -435,11 +435,11 @@ Creates or updates a single automation category
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -503,12 +503,12 @@ Creates or updates a single automation category
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.AutomationCategoryApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.AutomationCategoryApi;
 
 public class Example {
     public static void main(String[] args) {

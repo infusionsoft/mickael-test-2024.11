@@ -39,7 +39,7 @@ class LocaleApi:
 
 
     @validate_call
-    def list_countries_using_get2_0(
+    def list_countries_using_get2(
         self,
         _request_timeout: Union[
             None,
@@ -79,7 +79,7 @@ class LocaleApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_countries_using_get2_0_serialize(
+        _param = self._list_countries_using_get2_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -103,7 +103,7 @@ class LocaleApi:
 
 
     @validate_call
-    def list_countries_using_get2_0_with_http_info(
+    def list_countries_using_get2_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -143,7 +143,7 @@ class LocaleApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_countries_using_get2_0_serialize(
+        _param = self._list_countries_using_get2_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -167,7 +167,7 @@ class LocaleApi:
 
 
     @validate_call
-    def list_countries_using_get2_0_without_preload_content(
+    def list_countries_using_get2_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -207,7 +207,7 @@ class LocaleApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_countries_using_get2_0_serialize(
+        _param = self._list_countries_using_get2_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -226,7 +226,7 @@ class LocaleApi:
         return response_data.response
 
 
-    def _list_countries_using_get2_0_serialize(
+    def _list_countries_using_get2_serialize(
         self,
         _request_auth,
         _content_type,
@@ -287,7 +287,7 @@ class LocaleApi:
 
 
     @validate_call
-    def list_provinces_for_country_using_get_0(
+    def list_provinces_for_country_using_get(
         self,
         country_code: Annotated[StrictStr, Field(description="country_code")],
         _request_timeout: Union[
@@ -330,7 +330,7 @@ class LocaleApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_provinces_for_country_using_get_0_serialize(
+        _param = self._list_provinces_for_country_using_get_serialize(
             country_code=country_code,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -355,7 +355,7 @@ class LocaleApi:
 
 
     @validate_call
-    def list_provinces_for_country_using_get_0_with_http_info(
+    def list_provinces_for_country_using_get_with_http_info(
         self,
         country_code: Annotated[StrictStr, Field(description="country_code")],
         _request_timeout: Union[
@@ -398,7 +398,7 @@ class LocaleApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_provinces_for_country_using_get_0_serialize(
+        _param = self._list_provinces_for_country_using_get_serialize(
             country_code=country_code,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -423,7 +423,7 @@ class LocaleApi:
 
 
     @validate_call
-    def list_provinces_for_country_using_get_0_without_preload_content(
+    def list_provinces_for_country_using_get_without_preload_content(
         self,
         country_code: Annotated[StrictStr, Field(description="country_code")],
         _request_timeout: Union[
@@ -466,7 +466,7 @@ class LocaleApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_provinces_for_country_using_get_0_serialize(
+        _param = self._list_provinces_for_country_using_get_serialize(
             country_code=country_code,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -486,7 +486,7 @@ class LocaleApi:
         return response_data.response
 
 
-    def _list_provinces_for_country_using_get_0_serialize(
+    def _list_provinces_for_country_using_get_serialize(
         self,
         country_code,
         _request_auth,

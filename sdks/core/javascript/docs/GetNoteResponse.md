@@ -1,4 +1,4 @@
-# KeapRestApi.GetNoteResponse
+# KeapCoreServiceCoreSdk.GetNoteResponse
 
 ## Properties
 

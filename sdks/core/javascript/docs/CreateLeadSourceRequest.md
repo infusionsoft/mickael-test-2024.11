@@ -1,4 +1,4 @@
-# KeapRestApi.CreateLeadSourceRequest
+# KeapCoreServiceCoreSdk.CreateLeadSourceRequest
 
 ## Properties
 

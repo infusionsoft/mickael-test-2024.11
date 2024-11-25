@@ -1,4 +1,4 @@
-# KeapRestApi.ListTasksResponse
+# KeapCoreServiceCoreSdk.ListTasksResponse
 
 ## Properties
 

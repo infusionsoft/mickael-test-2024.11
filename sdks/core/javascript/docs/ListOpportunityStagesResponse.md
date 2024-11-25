@@ -1,4 +1,4 @@
-# KeapRestApi.ListOpportunityStagesResponse
+# KeapCoreServiceCoreSdk.ListOpportunityStagesResponse
 
 ## Properties
 

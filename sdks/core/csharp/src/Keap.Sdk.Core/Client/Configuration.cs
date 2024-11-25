@@ -34,7 +34,7 @@ namespace Keap.Sdk.Core.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.0.0";
+        public const string Version = "0.0.18";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -118,7 +118,7 @@ namespace Keap.Sdk.Core.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("core -service-core-csharp/dev-2024.1125.0009-a0bbb4902f");
+            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.18");
             BasePath = "https://api.infusionsoft.com/crm/rest/app";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -137,7 +137,7 @@ namespace Keap.Sdk.Core.Client
             };
 
             // Setting Timeout has side effects (forces ApiClient creation).
-            Timeout = 100000;
+            Timeout = TimeSpan.FromSeconds(100);
         }
 
         /// <summary>
@@ -221,9 +221,9 @@ namespace Keap.Sdk.Core.Client
         public virtual IDictionary<string, string> DefaultHeaders { get; set; }
 
         /// <summary>
-        /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
+        /// Gets or sets the HTTP timeout of ApiClient. Defaults to 100 seconds.
         /// </summary>
-        public virtual int Timeout { get; set; }
+        public virtual TimeSpan Timeout { get; set; }
 
         /// <summary>
         /// Gets or sets the proxy
@@ -571,7 +571,7 @@ namespace Keap.Sdk.Core.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.70.0.739356-hf-202411181744\n";
-            report += "    SDK Package Version: 1.0.0\n";
+            report += "    SDK Package Version: 0.0.18\n";
 
             return report;
         }

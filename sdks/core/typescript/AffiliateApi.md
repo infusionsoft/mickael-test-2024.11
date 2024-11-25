@@ -4,39 +4,39 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addAffiliateToProgramUsingPOST_0**](AffiliateApi.md#addAffiliateToProgramUsingPOST_0) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
+[**addAffiliateToProgramUsingPOST**](AffiliateApi.md#addAffiliateToProgramUsingPOST) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 [**addAffiliateUsingPOST**](AffiliateApi.md#addAffiliateUsingPOST) | **POST** /v2/affiliates | Create an Affiliate
-[**addCommissionProgramUsingPOST_0**](AffiliateApi.md#addCommissionProgramUsingPOST_0) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
-[**assignProductCommissionProgramUsingPOST_0**](AffiliateApi.md#assignProductCommissionProgramUsingPOST_0) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
-[**assignSubscriptionCommissionProgramUsingPOST_0**](AffiliateApi.md#assignSubscriptionCommissionProgramUsingPOST_0) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
-[**createAffiliateCustomFieldUsingPOST_0**](AffiliateApi.md#createAffiliateCustomFieldUsingPOST_0) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
-[**createDefaultCommissionProgramUsingPOST_0**](AffiliateApi.md#createDefaultCommissionProgramUsingPOST_0) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
-[**createRedirectLinkUsingPOST_0**](AffiliateApi.md#createRedirectLinkUsingPOST_0) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
-[**deleteAffiliateCommissionProgramUsingDELETE_0**](AffiliateApi.md#deleteAffiliateCommissionProgramUsingDELETE_0) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
-[**deleteAffiliateUsingDELETE_0**](AffiliateApi.md#deleteAffiliateUsingDELETE_0) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
-[**deleteRedirectLinkUsingDELETE_0**](AffiliateApi.md#deleteRedirectLinkUsingDELETE_0) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
-[**getAffiliateCommissionTotalUsingGET_0**](AffiliateApi.md#getAffiliateCommissionTotalUsingGET_0) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
-[**getAffiliateCommissionsUsingGET_0**](AffiliateApi.md#getAffiliateCommissionsUsingGET_0) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
-[**getAffiliateCustomFieldsUsingGET_0**](AffiliateApi.md#getAffiliateCustomFieldsUsingGET_0) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
+[**addCommissionProgramUsingPOST**](AffiliateApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
+[**assignProductCommissionProgramUsingPOST**](AffiliateApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
+[**assignSubscriptionCommissionProgramUsingPOST**](AffiliateApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
+[**createAffiliateCustomFieldUsingPOST**](AffiliateApi.md#createAffiliateCustomFieldUsingPOST) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
+[**createDefaultCommissionProgramUsingPOST**](AffiliateApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
+[**createRedirectLinkUsingPOST**](AffiliateApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
+[**deleteAffiliateCommissionProgramUsingDELETE**](AffiliateApi.md#deleteAffiliateCommissionProgramUsingDELETE) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
+[**deleteAffiliateUsingDELETE**](AffiliateApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+[**deleteRedirectLinkUsingDELETE**](AffiliateApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
+[**getAffiliateCommissionTotalUsingGET**](AffiliateApi.md#getAffiliateCommissionTotalUsingGET) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
+[**getAffiliateCommissionsUsingGET**](AffiliateApi.md#getAffiliateCommissionsUsingGET) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
+[**getAffiliateCustomFieldsUsingGET**](AffiliateApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
 [**getAffiliateUsingGET1**](AffiliateApi.md#getAffiliateUsingGET1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
-[**getCommissionProgramUsingGET_0**](AffiliateApi.md#getCommissionProgramUsingGET_0) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
-[**getRedirectLinkUsingGET_0**](AffiliateApi.md#getRedirectLinkUsingGET_0) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
-[**listAffiliateCommissionProgramsUsingGET_0**](AffiliateApi.md#listAffiliateCommissionProgramsUsingGET_0) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
-[**listAffiliateLinksUsingGET_0**](AffiliateApi.md#listAffiliateLinksUsingGET_0) | **GET** /v2/affiliates/redirects | List Affiliate Links
-[**listSummariesUsingGET1_0**](AffiliateApi.md#listSummariesUsingGET1_0) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
+[**getCommissionProgramUsingGET**](AffiliateApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
+[**getRedirectLinkUsingGET**](AffiliateApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
+[**listAffiliateCommissionProgramsUsingGET**](AffiliateApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
+[**listAffiliateLinksUsingGET**](AffiliateApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
+[**listSummariesUsingGET1**](AffiliateApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
 [**patchCommissionProgramUsingPATCH**](AffiliateApi.md#patchCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
-[**patchDefaultCommissionProgramUsingPATCH_0**](AffiliateApi.md#patchDefaultCommissionProgramUsingPATCH_0) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
-[**patchProductCommissionProgramUsingPATCH_0**](AffiliateApi.md#patchProductCommissionProgramUsingPATCH_0) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
-[**patchSubscriptionCommissionProgramUsingPATCH_0**](AffiliateApi.md#patchSubscriptionCommissionProgramUsingPATCH_0) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
-[**removeAffiliateFromProgramUsingPOST_0**](AffiliateApi.md#removeAffiliateFromProgramUsingPOST_0) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
-[**removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0**](AffiliateApi.md#removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
-[**updateAffiliateCustomFieldUsingPATCH_0**](AffiliateApi.md#updateAffiliateCustomFieldUsingPATCH_0) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
+[**patchDefaultCommissionProgramUsingPATCH**](AffiliateApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+[**patchProductCommissionProgramUsingPATCH**](AffiliateApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
+[**patchSubscriptionCommissionProgramUsingPATCH**](AffiliateApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
+[**removeAffiliateFromProgramUsingPOST**](AffiliateApi.md#removeAffiliateFromProgramUsingPOST) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
+[**removeSubscriptionPlanCommissionFromCommissionsUsingPOST**](AffiliateApi.md#removeSubscriptionPlanCommissionFromCommissionsUsingPOST) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
+[**updateAffiliateCustomFieldUsingPATCH**](AffiliateApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateAffiliateUsingPATCH**](AffiliateApi.md#updateAffiliateUsingPATCH) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
-[**updateRedirectLinkUsingPATCH_0**](AffiliateApi.md#updateRedirectLinkUsingPATCH_0) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
+[**updateRedirectLinkUsingPATCH**](AffiliateApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 
 
-# **addAffiliateToProgramUsingPOST_0**
-> void addAffiliateToProgramUsingPOST_0(affiliateAddToProgramRequest)
+# **addAffiliateToProgramUsingPOST**
+> void addAffiliateToProgramUsingPOST(affiliateAddToProgramRequest)
 
 Assigns an Affiliate to Commission Program
 
@@ -45,12 +45,12 @@ Assigns an Affiliate to Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiAddAffiliateToProgramUsingPOST0Request } from '';
+import type { AffiliateApiAddAffiliateToProgramUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiAddAffiliateToProgramUsingPOST0Request = {
+const request: AffiliateApiAddAffiliateToProgramUsingPOSTRequest = {
     // id
   id: "id_example",
     // affiliateAddToProgramRequest
@@ -59,7 +59,7 @@ const request: AffiliateApiAddAffiliateToProgramUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.addAffiliateToProgramUsingPOST_0(request);
+const data = await apiInstance.addAffiliateToProgramUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -155,8 +155,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **addCommissionProgramUsingPOST_0**
-> AffiliateCommissionProgramResponse addCommissionProgramUsingPOST_0()
+# **addCommissionProgramUsingPOST**
+> AffiliateCommissionProgramResponse addCommissionProgramUsingPOST()
 
 Creates an Affiliate Commission Program
 
@@ -165,12 +165,12 @@ Creates an Affiliate Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiAddCommissionProgramUsingPOST0Request } from '';
+import type { AffiliateApiAddCommissionProgramUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiAddCommissionProgramUsingPOST0Request = {
+const request: AffiliateApiAddCommissionProgramUsingPOSTRequest = {
     // Commission Program to insert (optional)
   insertCommissionProgram: {
     name: "Fitness program",
@@ -179,7 +179,7 @@ const request: AffiliateApiAddCommissionProgramUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.addCommissionProgramUsingPOST_0(request);
+const data = await apiInstance.addCommissionProgramUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -214,8 +214,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **assignProductCommissionProgramUsingPOST_0**
-> ProductCommissionProgram assignProductCommissionProgramUsingPOST_0()
+# **assignProductCommissionProgramUsingPOST**
+> ProductCommissionProgram assignProductCommissionProgramUsingPOST()
 
 Assigns a Product Commission Program to a Product
 
@@ -224,12 +224,12 @@ Assigns a Product Commission Program to a Product
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiAssignProductCommissionProgramUsingPOST0Request } from '';
+import type { AffiliateApiAssignProductCommissionProgramUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiAssignProductCommissionProgramUsingPOST0Request = {
+const request: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Product Commission Program (optional)
@@ -240,7 +240,7 @@ const request: AffiliateApiAssignProductCommissionProgramUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.assignProductCommissionProgramUsingPOST_0(request);
+const data = await apiInstance.assignProductCommissionProgramUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -276,8 +276,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **assignSubscriptionCommissionProgramUsingPOST_0**
-> SubscriptionCommissionProgram assignSubscriptionCommissionProgramUsingPOST_0()
+# **assignSubscriptionCommissionProgramUsingPOST**
+> SubscriptionCommissionProgram assignSubscriptionCommissionProgramUsingPOST()
 
 Assigns a Subscription Commission Program to a Subscription
 
@@ -286,12 +286,12 @@ Assigns a Subscription Commission Program to a Subscription
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request } from '';
+import type { AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request = {
+const request: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Subscription Commission Program (optional)
@@ -302,7 +302,7 @@ const request: AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request 
   },
 };
 
-const data = await apiInstance.assignSubscriptionCommissionProgramUsingPOST_0(request);
+const data = await apiInstance.assignSubscriptionCommissionProgramUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -338,8 +338,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createAffiliateCustomFieldUsingPOST_0**
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST_0(customField)
+# **createAffiliateCustomFieldUsingPOST**
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
 
 Creates a single Affiliate Custom Field
 
@@ -348,12 +348,12 @@ Creates a single Affiliate Custom Field
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request } from '';
+import type { AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request = {
+const request: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest = {
     // customField
   customField: {
     fieldType: "CURRENCY",
@@ -369,7 +369,7 @@ const request: AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createAffiliateCustomFieldUsingPOST_0(request);
+const data = await apiInstance.createAffiliateCustomFieldUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -404,8 +404,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createDefaultCommissionProgramUsingPOST_0**
-> SetDefaultCommissionProgramResponse createDefaultCommissionProgramUsingPOST_0()
+# **createDefaultCommissionProgramUsingPOST**
+> SetDefaultCommissionProgramResponse createDefaultCommissionProgramUsingPOST()
 
 Creates a Default Commission Program
 
@@ -414,12 +414,12 @@ Creates a Default Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request } from '';
+import type { AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request = {
+const request: AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Values of the Default Commission Program (optional)
@@ -429,7 +429,7 @@ const request: AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createDefaultCommissionProgramUsingPOST_0(request);
+const data = await apiInstance.createDefaultCommissionProgramUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -465,8 +465,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createRedirectLinkUsingPOST_0**
-> AffiliateLink createRedirectLinkUsingPOST_0(request)
+# **createRedirectLinkUsingPOST**
+> AffiliateLink createRedirectLinkUsingPOST(request)
 
 Creates a single Affiliate Link
 
@@ -475,12 +475,12 @@ Creates a single Affiliate Link
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiCreateRedirectLinkUsingPOST0Request } from '';
+import type { AffiliateApiCreateRedirectLinkUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiCreateRedirectLinkUsingPOST0Request = {
+const request: AffiliateApiCreateRedirectLinkUsingPOSTRequest = {
     // request
   request: {
     affiliateId: "1",
@@ -493,7 +493,7 @@ const request: AffiliateApiCreateRedirectLinkUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createRedirectLinkUsingPOST_0(request);
+const data = await apiInstance.createRedirectLinkUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -528,8 +528,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteAffiliateCommissionProgramUsingDELETE_0**
-> void deleteAffiliateCommissionProgramUsingDELETE_0()
+# **deleteAffiliateCommissionProgramUsingDELETE**
+> void deleteAffiliateCommissionProgramUsingDELETE()
 
 Deletes a Commission Program
 
@@ -538,17 +538,17 @@ Deletes a Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request } from '';
+import type { AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request = {
+const request: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
 };
 
-const data = await apiInstance.deleteAffiliateCommissionProgramUsingDELETE_0(request);
+const data = await apiInstance.deleteAffiliateCommissionProgramUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -584,8 +584,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteAffiliateUsingDELETE_0**
-> void deleteAffiliateUsingDELETE_0()
+# **deleteAffiliateUsingDELETE**
+> void deleteAffiliateUsingDELETE()
 
 Deletes the specified Affiliate
 
@@ -594,17 +594,17 @@ Deletes the specified Affiliate
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiDeleteAffiliateUsingDELETE0Request } from '';
+import type { AffiliateApiDeleteAffiliateUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiDeleteAffiliateUsingDELETE0Request = {
+const request: AffiliateApiDeleteAffiliateUsingDELETERequest = {
     // id
   id: "id_example",
 };
 
-const data = await apiInstance.deleteAffiliateUsingDELETE_0(request);
+const data = await apiInstance.deleteAffiliateUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -640,8 +640,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteRedirectLinkUsingDELETE_0**
-> void deleteRedirectLinkUsingDELETE_0()
+# **deleteRedirectLinkUsingDELETE**
+> void deleteRedirectLinkUsingDELETE()
 
 Deletes an Affiliate Link
 
@@ -650,17 +650,17 @@ Deletes an Affiliate Link
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiDeleteRedirectLinkUsingDELETE0Request } from '';
+import type { AffiliateApiDeleteRedirectLinkUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiDeleteRedirectLinkUsingDELETE0Request = {
+const request: AffiliateApiDeleteRedirectLinkUsingDELETERequest = {
     // redirect_id
   redirectId: "redirect_id_example",
 };
 
-const data = await apiInstance.deleteRedirectLinkUsingDELETE_0(request);
+const data = await apiInstance.deleteRedirectLinkUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -696,8 +696,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getAffiliateCommissionTotalUsingGET_0**
-> AffiliateCommissionEarned getAffiliateCommissionTotalUsingGET_0()
+# **getAffiliateCommissionTotalUsingGET**
+> AffiliateCommissionEarned getAffiliateCommissionTotalUsingGET()
 
 Get the Affiliate Commission Earned and View LedgerURl for portal
 
@@ -706,17 +706,17 @@ Get the Affiliate Commission Earned and View LedgerURl for portal
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiGetAffiliateCommissionTotalUsingGET0Request } from '';
+import type { AffiliateApiGetAffiliateCommissionTotalUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiGetAffiliateCommissionTotalUsingGET0Request = {
+const request: AffiliateApiGetAffiliateCommissionTotalUsingGETRequest = {
     // affiliate_id
   affiliateId: "affiliate_id_example",
 };
 
-const data = await apiInstance.getAffiliateCommissionTotalUsingGET_0(request);
+const data = await apiInstance.getAffiliateCommissionTotalUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -752,8 +752,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getAffiliateCommissionsUsingGET_0**
-> ListAffiliateCommissionResponse getAffiliateCommissionsUsingGET_0()
+# **getAffiliateCommissionsUsingGET**
+> ListAffiliateCommissionResponse getAffiliateCommissionsUsingGET()
 
 Retrieve a list of Affiliate\'s Commissions and Clawbacks
 
@@ -762,12 +762,12 @@ Retrieve a list of Affiliate\'s Commissions and Clawbacks
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiGetAffiliateCommissionsUsingGET0Request } from '';
+import type { AffiliateApiGetAffiliateCommissionsUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiGetAffiliateCommissionsUsingGET0Request = {
+const request: AffiliateApiGetAffiliateCommissionsUsingGETRequest = {
     // affiliate_id
   affiliateId: "affiliate_id_example",
     // Filter to apply, allowed fields are:   - (String) affiliateId  - (String) since  - (String) until   (optional)
@@ -780,7 +780,7 @@ const request: AffiliateApiGetAffiliateCommissionsUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.getAffiliateCommissionsUsingGET_0(request);
+const data = await apiInstance.getAffiliateCommissionsUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -820,8 +820,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getAffiliateCustomFieldsUsingGET_0**
-> ObjectModel getAffiliateCustomFieldsUsingGET_0()
+# **getAffiliateCustomFieldsUsingGET**
+> ObjectModel getAffiliateCustomFieldsUsingGET()
 
 Get the custom fields and optional properties for the Affiliate object
 
@@ -836,7 +836,7 @@ const apiInstance = new AffiliateApi(configuration);
 
 const request = {};
 
-const data = await apiInstance.getAffiliateCustomFieldsUsingGET_0(request);
+const data = await apiInstance.getAffiliateCustomFieldsUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -925,8 +925,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getCommissionProgramUsingGET_0**
-> AffiliateProgramV2 getCommissionProgramUsingGET_0()
+# **getCommissionProgramUsingGET**
+> AffiliateProgramV2 getCommissionProgramUsingGET()
 
 Retrieves a single Commission Program
 
@@ -935,17 +935,17 @@ Retrieves a single Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiGetCommissionProgramUsingGET0Request } from '';
+import type { AffiliateApiGetCommissionProgramUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiGetCommissionProgramUsingGET0Request = {
+const request: AffiliateApiGetCommissionProgramUsingGETRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
 };
 
-const data = await apiInstance.getCommissionProgramUsingGET_0(request);
+const data = await apiInstance.getCommissionProgramUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -981,8 +981,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getRedirectLinkUsingGET_0**
-> AffiliateLink getRedirectLinkUsingGET_0()
+# **getRedirectLinkUsingGET**
+> AffiliateLink getRedirectLinkUsingGET()
 
 Retrieves information about a single Affiliate Link
 
@@ -991,17 +991,17 @@ Retrieves information about a single Affiliate Link
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiGetRedirectLinkUsingGET0Request } from '';
+import type { AffiliateApiGetRedirectLinkUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiGetRedirectLinkUsingGET0Request = {
+const request: AffiliateApiGetRedirectLinkUsingGETRequest = {
     // redirect_id
   redirectId: "redirect_id_example",
 };
 
-const data = await apiInstance.getRedirectLinkUsingGET_0(request);
+const data = await apiInstance.getRedirectLinkUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1037,8 +1037,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listAffiliateCommissionProgramsUsingGET_0**
-> ListAffiliateCommissionProgramsResponse listAffiliateCommissionProgramsUsingGET_0()
+# **listAffiliateCommissionProgramsUsingGET**
+> ListAffiliateCommissionProgramsResponse listAffiliateCommissionProgramsUsingGET()
 
 Retrieves a list of Affiliate Commission Programs
 
@@ -1047,12 +1047,12 @@ Retrieves a list of Affiliate Commission Programs
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiListAffiliateCommissionProgramsUsingGET0Request } from '';
+import type { AffiliateApiListAffiliateCommissionProgramsUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiListAffiliateCommissionProgramsUsingGET0Request = {
+const request: AffiliateApiListAffiliateCommissionProgramsUsingGETRequest = {
     // Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id   (optional)
   filter: "filter_example",
     // Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc (optional)
@@ -1063,7 +1063,7 @@ const request: AffiliateApiListAffiliateCommissionProgramsUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listAffiliateCommissionProgramsUsingGET_0(request);
+const data = await apiInstance.listAffiliateCommissionProgramsUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1102,8 +1102,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listAffiliateLinksUsingGET_0**
-> ListAffiliateLinksResponse listAffiliateLinksUsingGET_0()
+# **listAffiliateLinksUsingGET**
+> ListAffiliateLinksResponse listAffiliateLinksUsingGET()
 
 Retrieves a list of Affiliate Links
 
@@ -1112,12 +1112,12 @@ Retrieves a list of Affiliate Links
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiListAffiliateLinksUsingGET0Request } from '';
+import type { AffiliateApiListAffiliateLinksUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiListAffiliateLinksUsingGET0Request = {
+const request: AffiliateApiListAffiliateLinksUsingGETRequest = {
     // Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id   (optional)
   filter: "filter_example",
     // Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc (optional)
@@ -1128,7 +1128,7 @@ const request: AffiliateApiListAffiliateLinksUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listAffiliateLinksUsingGET_0(request);
+const data = await apiInstance.listAffiliateLinksUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1167,8 +1167,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listSummariesUsingGET1_0**
-> ListAffiliateSummariesResponse listSummariesUsingGET1_0()
+# **listSummariesUsingGET1**
+> ListAffiliateSummariesResponse listSummariesUsingGET1()
 
 Retrieve a list of Affiliate Summaries
 
@@ -1177,12 +1177,12 @@ Retrieve a list of Affiliate Summaries
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiListSummariesUsingGET10Request } from '';
+import type { AffiliateApiListSummariesUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiListSummariesUsingGET10Request = {
+const request: AffiliateApiListSummariesUsingGET1Request = {
     // Filter to apply, allowed fields are: - (List[String]) affiliate_ids - (String) since_time - (String) until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:  - `filter=since_time%3D%3D2024-09-17T-15:50+00`  - `filter=until_time%3D%3D2024-09-17T-15:50+00`  - `filter=affiliate_ids%3D%3D123,456,789`  (optional)
   filter: "filter_example",
     // Attribute and direction to order items. One of the following fields: - affiliate_id - amount_earned - balance - clawbacks One of the following directions: - asc - desc (optional)
@@ -1193,7 +1193,7 @@ const request: AffiliateApiListSummariesUsingGET10Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listSummariesUsingGET1_0(request);
+const data = await apiInstance.listSummariesUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1300,8 +1300,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchDefaultCommissionProgramUsingPATCH_0**
-> SetDefaultCommissionProgramResponse patchDefaultCommissionProgramUsingPATCH_0()
+# **patchDefaultCommissionProgramUsingPATCH**
+> SetDefaultCommissionProgramResponse patchDefaultCommissionProgramUsingPATCH()
 
 Updates a Default Commission Program
 
@@ -1310,12 +1310,12 @@ Updates a Default Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request } from '';
+import type { AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request = {
+const request: AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // update_mask (optional)
@@ -1329,7 +1329,7 @@ const request: AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request = {
   },
 };
 
-const data = await apiInstance.patchDefaultCommissionProgramUsingPATCH_0(request);
+const data = await apiInstance.patchDefaultCommissionProgramUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1367,8 +1367,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchProductCommissionProgramUsingPATCH_0**
-> ProductCommissionProgram patchProductCommissionProgramUsingPATCH_0()
+# **patchProductCommissionProgramUsingPATCH**
+> ProductCommissionProgram patchProductCommissionProgramUsingPATCH()
 
 Updates a Product Commission Program
 
@@ -1377,12 +1377,12 @@ Updates a Product Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiPatchProductCommissionProgramUsingPATCH0Request } from '';
+import type { AffiliateApiPatchProductCommissionProgramUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiPatchProductCommissionProgramUsingPATCH0Request = {
+const request: AffiliateApiPatchProductCommissionProgramUsingPATCHRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // update_mask (optional)
@@ -1397,7 +1397,7 @@ const request: AffiliateApiPatchProductCommissionProgramUsingPATCH0Request = {
   },
 };
 
-const data = await apiInstance.patchProductCommissionProgramUsingPATCH_0(request);
+const data = await apiInstance.patchProductCommissionProgramUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1435,8 +1435,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchSubscriptionCommissionProgramUsingPATCH_0**
-> SubscriptionCommissionProgram patchSubscriptionCommissionProgramUsingPATCH_0()
+# **patchSubscriptionCommissionProgramUsingPATCH**
+> SubscriptionCommissionProgram patchSubscriptionCommissionProgramUsingPATCH()
 
 Updates a Subscription Commission Program
 
@@ -1445,12 +1445,12 @@ Updates a Subscription Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request } from '';
+import type { AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request = {
+const request: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // update_mask (optional)
@@ -1465,7 +1465,7 @@ const request: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request 
   },
 };
 
-const data = await apiInstance.patchSubscriptionCommissionProgramUsingPATCH_0(request);
+const data = await apiInstance.patchSubscriptionCommissionProgramUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1503,8 +1503,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **removeAffiliateFromProgramUsingPOST_0**
-> void removeAffiliateFromProgramUsingPOST_0(removeFromProgramRequest)
+# **removeAffiliateFromProgramUsingPOST**
+> void removeAffiliateFromProgramUsingPOST(removeFromProgramRequest)
 
 Removes an Affiliate from a Commission Program
 
@@ -1513,12 +1513,12 @@ Removes an Affiliate from a Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request } from '';
+import type { AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request = {
+const request: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest = {
     // id
   id: "id_example",
     // removeFromProgramRequest
@@ -1527,7 +1527,7 @@ const request: AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.removeAffiliateFromProgramUsingPOST_0(request);
+const data = await apiInstance.removeAffiliateFromProgramUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1563,8 +1563,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0**
-> void removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0(deleteSubscriptionPlanCommissionRequest)
+# **removeSubscriptionPlanCommissionFromCommissionsUsingPOST**
+> void removeSubscriptionPlanCommissionFromCommissionsUsingPOST(deleteSubscriptionPlanCommissionRequest)
 
 Removes a Subscription from a Commission Program
 
@@ -1573,12 +1573,12 @@ Removes a Subscription from a Commission Program
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request } from '';
+import type { AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request = {
+const request: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest = {
     // commission_id
   commissionId: "commission_id_example",
     // deleteSubscriptionPlanCommissionRequest
@@ -1588,7 +1588,7 @@ const request: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingP
   },
 };
 
-const data = await apiInstance.removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0(request);
+const data = await apiInstance.removeSubscriptionPlanCommissionFromCommissionsUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1624,8 +1624,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateAffiliateCustomFieldUsingPATCH_0**
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH_0(request)
+# **updateAffiliateCustomFieldUsingPATCH**
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(request)
 
 Updates a custom field of the specified type and options to the Affiliate object.
 
@@ -1634,12 +1634,12 @@ Updates a custom field of the specified type and options to the Affiliate object
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request } from '';
+import type { AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request = {
+const request: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
@@ -1660,7 +1660,7 @@ const request: AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request = {
   ],
 };
 
-const data = await apiInstance.updateAffiliateCustomFieldUsingPATCH_0(request);
+const data = await apiInstance.updateAffiliateCustomFieldUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -1762,8 +1762,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateRedirectLinkUsingPATCH_0**
-> AffiliateLink updateRedirectLinkUsingPATCH_0(request)
+# **updateRedirectLinkUsingPATCH**
+> AffiliateLink updateRedirectLinkUsingPATCH(request)
 
 Updates an Affiliate Link
 
@@ -1772,12 +1772,12 @@ Updates an Affiliate Link
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiUpdateRedirectLinkUsingPATCH0Request } from '';
+import type { AffiliateApiUpdateRedirectLinkUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiUpdateRedirectLinkUsingPATCH0Request = {
+const request: AffiliateApiUpdateRedirectLinkUsingPATCHRequest = {
     // redirect_id
   redirectId: "redirect_id_example",
     // request
@@ -1792,7 +1792,7 @@ const request: AffiliateApiUpdateRedirectLinkUsingPATCH0Request = {
   },
 };
 
-const data = await apiInstance.updateRedirectLinkUsingPATCH_0(request);
+const data = await apiInstance.updateRedirectLinkUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

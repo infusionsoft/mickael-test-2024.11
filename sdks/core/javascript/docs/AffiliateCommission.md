@@ -1,4 +1,4 @@
-# KeapRestApi.AffiliateCommission
+# KeapCoreServiceCoreSdk.AffiliateCommission
 
 ## Properties
 

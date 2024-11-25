@@ -17,7 +17,7 @@ import CategoryReference from './CategoryReference';
 /**
  * The UpdateTagResponse model module.
  * @module com.keap.sdk.core/model/UpdateTagResponse
- * @version 2.70.0.739356-hf-202411181744
+ * @version 0.0.18
  */
 class UpdateTagResponse {
     /**

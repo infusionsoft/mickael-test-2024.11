@@ -4,22 +4,22 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelSubscriptionUsingPOST_0**](SubscriptionsApi.md#cancelSubscriptionUsingPOST_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
-| [**cancelSubscriptionUsingPOST_0WithHttpInfo**](SubscriptionsApi.md#cancelSubscriptionUsingPOST_0WithHttpInfo) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
-| [**createSubscriptionCustomFieldUsingPOST_0**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
-| [**createSubscriptionCustomFieldUsingPOST_0WithHttpInfo**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST_0WithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
+| [**cancelSubscriptionUsingPOST**](SubscriptionsApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
+| [**cancelSubscriptionUsingPOSTWithHttpInfo**](SubscriptionsApi.md#cancelSubscriptionUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
+| [**createSubscriptionCustomFieldUsingPOST**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
+| [**createSubscriptionCustomFieldUsingPOSTWithHttpInfo**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**createSubscriptionV2UsingPOST**](SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription |
 | [**createSubscriptionV2UsingPOSTWithHttpInfo**](SubscriptionsApi.md#createSubscriptionV2UsingPOSTWithHttpInfo) | **POST** /v2/subscriptions | Create Subscription |
-| [**retrieveSubscriptionCustomFieldModelUsingGET_0**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
-| [**retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
-| [**updateSubscriptionCustomFieldUsingPATCH_0**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
-| [**updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
+| [**retrieveSubscriptionCustomFieldModelUsingGET**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
+| [**retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
+| [**updateSubscriptionCustomFieldUsingPATCH**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
+| [**updateSubscriptionCustomFieldUsingPATCHWithHttpInfo**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 
 
 
-## cancelSubscriptionUsingPOST_0
+## cancelSubscriptionUsingPOST
 
-> void cancelSubscriptionUsingPOST_0(subscriptionId, cancelSubscriptionsRequest)
+> void cancelSubscriptionUsingPOST(subscriptionId, cancelSubscriptionsRequest)
 
 Cancel Subscription
 
@@ -29,11 +29,11 @@ Cancels the specified subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -44,9 +44,9 @@ public class Example {
         String subscriptionId = "subscriptionId_example"; // String | subscription_id
         CancelSubscriptionsRequest cancelSubscriptionsRequest = new CancelSubscriptionsRequest(); // CancelSubscriptionsRequest | cancelSubscriptionsRequest
         try {
-            apiInstance.cancelSubscriptionUsingPOST_0(subscriptionId, cancelSubscriptionsRequest);
+            apiInstance.cancelSubscriptionUsingPOST(subscriptionId, cancelSubscriptionsRequest);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#cancelSubscriptionUsingPOST_0");
+            System.err.println("Exception when calling SubscriptionsApi#cancelSubscriptionUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -85,9 +85,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## cancelSubscriptionUsingPOST_0WithHttpInfo
+## cancelSubscriptionUsingPOSTWithHttpInfo
 
-> ApiResponse<Void> cancelSubscriptionUsingPOST_0 cancelSubscriptionUsingPOST_0WithHttpInfo(subscriptionId, cancelSubscriptionsRequest)
+> ApiResponse<Void> cancelSubscriptionUsingPOST cancelSubscriptionUsingPOSTWithHttpInfo(subscriptionId, cancelSubscriptionsRequest)
 
 Cancel Subscription
 
@@ -97,12 +97,12 @@ Cancels the specified subscription
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -113,11 +113,11 @@ public class Example {
         String subscriptionId = "subscriptionId_example"; // String | subscription_id
         CancelSubscriptionsRequest cancelSubscriptionsRequest = new CancelSubscriptionsRequest(); // CancelSubscriptionsRequest | cancelSubscriptionsRequest
         try {
-            ApiResponse<Void> response = apiInstance.cancelSubscriptionUsingPOST_0WithHttpInfo(subscriptionId, cancelSubscriptionsRequest);
+            ApiResponse<Void> response = apiInstance.cancelSubscriptionUsingPOSTWithHttpInfo(subscriptionId, cancelSubscriptionsRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#cancelSubscriptionUsingPOST_0");
+            System.err.println("Exception when calling SubscriptionsApi#cancelSubscriptionUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -157,9 +157,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createSubscriptionCustomFieldUsingPOST_0
+## createSubscriptionCustomFieldUsingPOST
 
-> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST_0(customField)
+> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(customField)
 
 Create a Subscription&#39;s Custom Field
 
@@ -169,11 +169,11 @@ Adds a custom field of the specified type and options to the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -183,10 +183,10 @@ public class Example {
         SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createSubscriptionCustomFieldUsingPOST_0(customField);
+            CustomFieldMetaData result = apiInstance.createSubscriptionCustomFieldUsingPOST(customField);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#createSubscriptionCustomFieldUsingPOST_0");
+            System.err.println("Exception when calling SubscriptionsApi#createSubscriptionCustomFieldUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -224,9 +224,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createSubscriptionCustomFieldUsingPOST_0WithHttpInfo
+## createSubscriptionCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createSubscriptionCustomFieldUsingPOST_0 createSubscriptionCustomFieldUsingPOST_0WithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createSubscriptionCustomFieldUsingPOST createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField)
 
 Create a Subscription&#39;s Custom Field
 
@@ -236,12 +236,12 @@ Adds a custom field of the specified type and options to the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -251,12 +251,12 @@ public class Example {
         SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createSubscriptionCustomFieldUsingPOST_0WithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#createSubscriptionCustomFieldUsingPOST_0");
+            System.err.println("Exception when calling SubscriptionsApi#createSubscriptionCustomFieldUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -307,11 +307,11 @@ Creates a subscription with the specified product and product subscription id.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -374,12 +374,12 @@ Creates a subscription with the specified product and product subscription id.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -433,9 +433,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## retrieveSubscriptionCustomFieldModelUsingGET_0
+## retrieveSubscriptionCustomFieldModelUsingGET
 
-> ObjectModel retrieveSubscriptionCustomFieldModelUsingGET_0()
+> ObjectModel retrieveSubscriptionCustomFieldModelUsingGET()
 
 Retrieve Subscription&#39;s Custom Field Model
 
@@ -445,11 +445,11 @@ Gets the custom field&#39;s model for the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -458,10 +458,10 @@ public class Example {
 
         SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
         try {
-            ObjectModel result = apiInstance.retrieveSubscriptionCustomFieldModelUsingGET_0();
+            ObjectModel result = apiInstance.retrieveSubscriptionCustomFieldModelUsingGET();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#retrieveSubscriptionCustomFieldModelUsingGET_0");
+            System.err.println("Exception when calling SubscriptionsApi#retrieveSubscriptionCustomFieldModelUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -497,9 +497,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo
+## retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo
 
-> ApiResponse<ObjectModel> retrieveSubscriptionCustomFieldModelUsingGET_0 retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo()
+> ApiResponse<ObjectModel> retrieveSubscriptionCustomFieldModelUsingGET retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo()
 
 Retrieve Subscription&#39;s Custom Field Model
 
@@ -509,12 +509,12 @@ Gets the custom field&#39;s model for the Subscription object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -523,12 +523,12 @@ public class Example {
 
         SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
         try {
-            ApiResponse<ObjectModel> response = apiInstance.retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo();
+            ApiResponse<ObjectModel> response = apiInstance.retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#retrieveSubscriptionCustomFieldModelUsingGET_0");
+            System.err.println("Exception when calling SubscriptionsApi#retrieveSubscriptionCustomFieldModelUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -565,9 +565,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## updateSubscriptionCustomFieldUsingPATCH_0
+## updateSubscriptionCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH_0(customFieldId, request, updateMask)
+> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask)
 
 Update a Subscription&#39;s Custom Field
 
@@ -577,11 +577,11 @@ Updates a custom field of the specified type and options to the Subscription obj
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -593,10 +593,10 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateSubscriptionCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#updateSubscriptionCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling SubscriptionsApi#updateSubscriptionCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -637,9 +637,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo
+## updateSubscriptionCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateSubscriptionCustomFieldUsingPATCH_0 updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateSubscriptionCustomFieldUsingPATCH updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
 
 Update a Subscription&#39;s Custom Field
 
@@ -649,12 +649,12 @@ Updates a custom field of the specified type and options to the Subscription obj
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionsApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -666,12 +666,12 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionsApi#updateSubscriptionCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling SubscriptionsApi#updateSubscriptionCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

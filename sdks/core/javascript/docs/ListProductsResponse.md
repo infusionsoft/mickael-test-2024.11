@@ -1,4 +1,4 @@
-# KeapRestApi.ListProductsResponse
+# KeapCoreServiceCoreSdk.ListProductsResponse
 
 ## Properties
 

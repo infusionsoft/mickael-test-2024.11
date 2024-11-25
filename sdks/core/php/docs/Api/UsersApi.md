@@ -4,18 +4,18 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createUserUsingPOST1_0()**](UsersApi.md#createUserUsingPOST1_0) | **POST** /v2/users | Create a User |
-| [**getUserByIdUsingGET_0()**](UsersApi.md#getUserByIdUsingGET_0) | **GET** /v2/users/{user_id} | Get User |
-| [**getUserInfoUsingGET1_0()**](UsersApi.md#getUserInfoUsingGET1_0) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
-| [**getUserSignatureUsingGET1_0()**](UsersApi.md#getUserSignatureUsingGET1_0) | **GET** /v2/users/{user_id}/signature | Get User email signature |
-| [**listUsersUsingGET1_0()**](UsersApi.md#listUsersUsingGET1_0) | **GET** /v2/users | List Users |
-| [**patchUserUsingPATCH_0()**](UsersApi.md#patchUserUsingPATCH_0) | **PATCH** /v2/users/{user_id} | Update User |
+| [**createUserUsingPOST1()**](UsersApi.md#createUserUsingPOST1) | **POST** /v2/users | Create a User |
+| [**getUserByIdUsingGET()**](UsersApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User |
+| [**getUserInfoUsingGET1()**](UsersApi.md#getUserInfoUsingGET1) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
+| [**getUserSignatureUsingGET1()**](UsersApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature |
+| [**listUsersUsingGET1()**](UsersApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users |
+| [**patchUserUsingPATCH()**](UsersApi.md#patchUserUsingPATCH) | **PATCH** /v2/users/{user_id} | Update User |
 
 
-## `createUserUsingPOST1_0()`
+## `createUserUsingPOST1()`
 
 ```php
-createUserUsingPOST1_0($user): \Com\Keap\Sdk\Core\Model\User
+createUserUsingPOST1($user): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Create a User
@@ -37,10 +37,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
 $user = new \Com\Keap\Sdk\Core\Model\CreateUserRequestV2(); // \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 | user
 
 try {
-    $result = $apiInstance->createUserUsingPOST1_0($user);
+    $result = $apiInstance->createUserUsingPOST1($user);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->createUserUsingPOST1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->createUserUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -67,10 +67,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getUserByIdUsingGET_0()`
+## `getUserByIdUsingGET()`
 
 ```php
-getUserByIdUsingGET_0($user_id): \Com\Keap\Sdk\Core\Model\User
+getUserByIdUsingGET($user_id): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Get User
@@ -92,10 +92,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
 $user_id = 'user_id_example'; // string | user_id
 
 try {
-    $result = $apiInstance->getUserByIdUsingGET_0($user_id);
+    $result = $apiInstance->getUserByIdUsingGET($user_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->getUserByIdUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->getUserByIdUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -122,10 +122,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getUserInfoUsingGET1_0()`
+## `getUserInfoUsingGET1()`
 
 ```php
-getUserInfoUsingGET1_0(): \Com\Keap\Sdk\Core\Model\GetUserInfoResponse
+getUserInfoUsingGET1(): \Com\Keap\Sdk\Core\Model\GetUserInfoResponse
 ```
 
 Retrieve User Info
@@ -146,10 +146,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
 );
 
 try {
-    $result = $apiInstance->getUserInfoUsingGET1_0();
+    $result = $apiInstance->getUserInfoUsingGET1();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->getUserInfoUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->getUserInfoUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -174,10 +174,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getUserSignatureUsingGET1_0()`
+## `getUserSignatureUsingGET1()`
 
 ```php
-getUserSignatureUsingGET1_0($user_id): string
+getUserSignatureUsingGET1($user_id): string
 ```
 
 Get User email signature
@@ -199,10 +199,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
 $user_id = 'user_id_example'; // string | user_id
 
 try {
-    $result = $apiInstance->getUserSignatureUsingGET1_0($user_id);
+    $result = $apiInstance->getUserSignatureUsingGET1($user_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->getUserSignatureUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->getUserSignatureUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -229,10 +229,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listUsersUsingGET1_0()`
+## `listUsersUsingGET1()`
 
 ```php
-listUsersUsingGET1_0($filter, $order_by): \Com\Keap\Sdk\Core\Model\ListUserResponse
+listUsersUsingGET1($filter, $order_by): \Com\Keap\Sdk\Core\Model\ListUserResponse
 ```
 
 List Users
@@ -255,10 +255,10 @@ $filter = 'filter_example'; // string | Search filter to apply to results
 $order_by = 'order_by_example'; // string | Attribute and direction to order items by. E.g. 'given_name desc'
 
 try {
-    $result = $apiInstance->listUsersUsingGET1_0($filter, $order_by);
+    $result = $apiInstance->listUsersUsingGET1($filter, $order_by);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->listUsersUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->listUsersUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -286,10 +286,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchUserUsingPATCH_0()`
+## `patchUserUsingPATCH()`
 
 ```php
-patchUserUsingPATCH_0($user_id, $update_mask, $user): \Com\Keap\Sdk\Core\Model\User
+patchUserUsingPATCH($user_id, $update_mask, $user): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Update User
@@ -313,10 +313,10 @@ $update_mask = array('update_mask_example'); // string[] | An optional list of f
 $user = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
 
 try {
-    $result = $apiInstance->patchUserUsingPATCH_0($user_id, $update_mask, $user);
+    $result = $apiInstance->patchUserUsingPATCH($user_id, $update_mask, $user);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->patchUserUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->patchUserUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

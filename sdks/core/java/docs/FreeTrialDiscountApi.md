@@ -4,14 +4,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**deleteDiscountUsingDELETE1_0**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1_0) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
-| [**deleteDiscountUsingDELETE1_0WithHttpInfo**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1_0WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**deleteDiscountUsingDELETE1**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**deleteDiscountUsingDELETE1WithHttpInfo**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 
 
 
-## deleteDiscountUsingDELETE1_0
+## deleteDiscountUsingDELETE1
 
-> void deleteDiscountUsingDELETE1_0(discountId)
+> void deleteDiscountUsingDELETE1(discountId)
 
 Delete a Free Trial Discount
 
@@ -21,11 +21,11 @@ Deletes a specified Free Trial Discount
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FreeTrialDiscountApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FreeTrialDiscountApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -35,9 +35,9 @@ public class Example {
         FreeTrialDiscountApi apiInstance = new FreeTrialDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
         try {
-            apiInstance.deleteDiscountUsingDELETE1_0(discountId);
+            apiInstance.deleteDiscountUsingDELETE1(discountId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FreeTrialDiscountApi#deleteDiscountUsingDELETE1_0");
+            System.err.println("Exception when calling FreeTrialDiscountApi#deleteDiscountUsingDELETE1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -76,9 +76,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteDiscountUsingDELETE1_0WithHttpInfo
+## deleteDiscountUsingDELETE1WithHttpInfo
 
-> ApiResponse<Void> deleteDiscountUsingDELETE1_0 deleteDiscountUsingDELETE1_0WithHttpInfo(discountId)
+> ApiResponse<Void> deleteDiscountUsingDELETE1 deleteDiscountUsingDELETE1WithHttpInfo(discountId)
 
 Delete a Free Trial Discount
 
@@ -88,12 +88,12 @@ Deletes a specified Free Trial Discount
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FreeTrialDiscountApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FreeTrialDiscountApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -103,11 +103,11 @@ public class Example {
         FreeTrialDiscountApi apiInstance = new FreeTrialDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETE1_0WithHttpInfo(discountId);
+            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETE1WithHttpInfo(discountId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling FreeTrialDiscountApi#deleteDiscountUsingDELETE1_0");
+            System.err.println("Exception when calling FreeTrialDiscountApi#deleteDiscountUsingDELETE1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

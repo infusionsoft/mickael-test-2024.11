@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listProductsUsingGET1_0**](ProductApi.md#listProductsUsingGET1_0) | **GET** /v2/products | List Products
+[**listProductsUsingGET1**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
 
 
-# **listProductsUsingGET1_0**
-> ListProductsResponse listProductsUsingGET1_0()
+# **listProductsUsingGET1**
+> ListProductsResponse listProductsUsingGET1()
 
 Retrieves a list of Products
 
@@ -17,12 +17,12 @@ Retrieves a list of Products
 
 ```typescript
 import { createConfiguration, ProductApi } from '';
-import type { ProductApiListProductsUsingGET10Request } from '';
+import type { ProductApiListProductsUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new ProductApi(configuration);
 
-const request: ProductApiListProductsUsingGET10Request = {
+const request: ProductApiListProductsUsingGET1Request = {
     // Filter to apply, allowed fields are:   - (String) name    (optional)
   filter: "filter_example",
     // Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc (optional)
@@ -33,7 +33,7 @@ const request: ProductApiListProductsUsingGET10Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listProductsUsingGET1_0(request);
+const data = await apiInstance.listProductsUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

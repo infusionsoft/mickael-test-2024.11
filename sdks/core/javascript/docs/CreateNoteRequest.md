@@ -1,4 +1,4 @@
-# KeapRestApi.CreateNoteRequest
+# KeapCoreServiceCoreSdk.CreateNoteRequest
 
 ## Properties
 

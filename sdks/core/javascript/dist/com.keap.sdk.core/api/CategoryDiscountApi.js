@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * CategoryDiscount service.
 * @module com.keap.sdk.core/api/CategoryDiscountApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var CategoryDiscountApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -50,12 +50,12 @@ var CategoryDiscountApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
   return _createClass(CategoryDiscountApi, [{
-    key: "deleteDiscountUsingDELETE_0WithHttpInfo",
-    value: function deleteDiscountUsingDELETE_0WithHttpInfo(discountId) {
+    key: "deleteDiscountUsingDELETEWithHttpInfo",
+    value: function deleteDiscountUsingDELETEWithHttpInfo(discountId) {
       var postBody = null;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
-        throw new _Error["default"]("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE_0");
+        throw new _Error["default"]("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE");
       }
       var pathParams = {
         'discount_id': discountId
@@ -77,9 +77,9 @@ var CategoryDiscountApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteDiscountUsingDELETE_0",
-    value: function deleteDiscountUsingDELETE_0(discountId) {
-      return this.deleteDiscountUsingDELETE_0WithHttpInfo(discountId).then(function (response_and_data) {
+    key: "deleteDiscountUsingDELETE",
+    value: function deleteDiscountUsingDELETE(discountId) {
+      return this.deleteDiscountUsingDELETEWithHttpInfo(discountId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -91,12 +91,12 @@ var CategoryDiscountApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CategoryDiscount} and HTTP response
      */
   }, {
-    key: "getDiscountUsingGET_0WithHttpInfo",
-    value: function getDiscountUsingGET_0WithHttpInfo(discountId) {
+    key: "getDiscountUsingGETWithHttpInfo",
+    value: function getDiscountUsingGETWithHttpInfo(discountId) {
       var postBody = null;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
-        throw new _Error["default"]("Missing the required parameter 'discountId' when calling getDiscountUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'discountId' when calling getDiscountUsingGET");
       }
       var pathParams = {
         'discount_id': discountId
@@ -118,9 +118,9 @@ var CategoryDiscountApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CategoryDiscount}
      */
   }, {
-    key: "getDiscountUsingGET_0",
-    value: function getDiscountUsingGET_0(discountId) {
-      return this.getDiscountUsingGET_0WithHttpInfo(discountId).then(function (response_and_data) {
+    key: "getDiscountUsingGET",
+    value: function getDiscountUsingGET(discountId) {
+      return this.getDiscountUsingGETWithHttpInfo(discountId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

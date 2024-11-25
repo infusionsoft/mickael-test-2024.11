@@ -1,4 +1,4 @@
-# KeapRestApi.AutomationCategoryApi
+# KeapCoreServiceCoreSdk.AutomationCategoryApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -22,10 +22,10 @@ Creates a single automation category
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationCategoryApi();
-let createAutomationCategoryRequest = new KeapRestApi.CreateAutomationCategoryRequest(); // CreateAutomationCategoryRequest | createAutomationCategoryRequest
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationCategoryApi();
+let createAutomationCategoryRequest = new KeapCoreServiceCoreSdk.CreateAutomationCategoryRequest(); // CreateAutomationCategoryRequest | createAutomationCategoryRequest
 apiInstance.createCategoryUsingPOST(createAutomationCategoryRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -66,9 +66,9 @@ Deletes one or more automation categories based on the request parameters
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationCategoryApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationCategoryApi();
 let ids = [null]; // [Number] | ids
 apiInstance.deleteCategoriesUsingDELETE(ids).then(() => {
   console.log('API called successfully.');
@@ -110,9 +110,9 @@ Lists all automation categories based on the request parameters
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationCategoryApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationCategoryApi();
 apiInstance.listCategoriesUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -150,10 +150,10 @@ Creates or updates a single automation category
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationCategoryApi();
-let saveAutomationCategoryRequest = new KeapRestApi.SaveAutomationCategoryRequest(); // SaveAutomationCategoryRequest | saveAutomationCategoryRequest
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationCategoryApi();
+let saveAutomationCategoryRequest = new KeapCoreServiceCoreSdk.SaveAutomationCategoryRequest(); // SaveAutomationCategoryRequest | saveAutomationCategoryRequest
 apiInstance.saveCategoryUsingPUT(saveAutomationCategoryRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

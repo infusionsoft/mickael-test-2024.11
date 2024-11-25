@@ -1,17 +1,17 @@
-# KeapRestApi.CategoryDiscountApi
+# KeapCoreServiceCoreSdk.CategoryDiscountApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteDiscountUsingDELETE_0**](CategoryDiscountApi.md#deleteDiscountUsingDELETE_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-[**getDiscountUsingGET_0**](CategoryDiscountApi.md#getDiscountUsingGET_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**deleteDiscountUsingDELETE**](CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+[**getDiscountUsingGET**](CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 
 
 
-## deleteDiscountUsingDELETE_0
+## deleteDiscountUsingDELETE
 
-> deleteDiscountUsingDELETE_0(discountId)
+> deleteDiscountUsingDELETE(discountId)
 
 Delete a Category Discount
 
@@ -20,11 +20,11 @@ Deletes a specified Category Discount
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CategoryDiscountApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CategoryDiscountApi();
 let discountId = "discountId_example"; // String | discount_id
-apiInstance.deleteDiscountUsingDELETE_0(discountId).then(() => {
+apiInstance.deleteDiscountUsingDELETE(discountId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -53,9 +53,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## getDiscountUsingGET_0
+## getDiscountUsingGET
 
-> CategoryDiscount getDiscountUsingGET_0(discountId)
+> CategoryDiscount getDiscountUsingGET(discountId)
 
 Retrieve a Category Discount
 
@@ -64,11 +64,11 @@ Retrieves a single Category Discount
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CategoryDiscountApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CategoryDiscountApi();
 let discountId = "discountId_example"; // String | discount_id
-apiInstance.getDiscountUsingGET_0(discountId).then((data) => {
+apiInstance.getDiscountUsingGET(discountId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

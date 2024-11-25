@@ -37,7 +37,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="leadsource">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>LeadSource</returns>
-        LeadSource CreateLeadSourceUsingPOST_0(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0);
+        LeadSource CreateLeadSourceUsingPOST(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create a Lead Source
@@ -49,7 +49,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="leadsource">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of LeadSource</returns>
-        ApiResponse<LeadSource> CreateLeadSourceUsingPOST_0WithHttpInfo(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0);
+        ApiResponse<LeadSource> CreateLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0);
         /// <summary>
         /// List Lead Sources
         /// </summary>
@@ -63,7 +63,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListLeadSourcesResponse</returns>
-        ListLeadSourcesResponse ListLeadSourcesUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListLeadSourcesResponse ListLeadSourcesUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Lead Sources
@@ -78,7 +78,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListLeadSourcesResponse</returns>
-        ApiResponse<ListLeadSourcesResponse> ListLeadSourcesUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListLeadSourcesResponse> ListLeadSourcesUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -99,7 +99,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of LeadSource</returns>
-        System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOST_0Async(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOSTAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Lead Source
@@ -112,7 +112,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (LeadSource)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LeadSource>> CreateLeadSourceUsingPOST_0WithHttpInfoAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<LeadSource>> CreateLeadSourceUsingPOSTWithHttpInfoAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Lead Sources
         /// </summary>
@@ -127,7 +127,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListLeadSourcesResponse</returns>
-        System.Threading.Tasks.Task<ListLeadSourcesResponse> ListLeadSourcesUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListLeadSourcesResponse> ListLeadSourcesUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Lead Sources
@@ -143,7 +143,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListLeadSourcesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListLeadSourcesResponse>> ListLeadSourcesUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListLeadSourcesResponse>> ListLeadSourcesUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -271,9 +271,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="leadsource">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>LeadSource</returns>
-        public LeadSource CreateLeadSourceUsingPOST_0(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0)
+        public LeadSource CreateLeadSourceUsingPOST(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = CreateLeadSourceUsingPOST_0WithHttpInfo(leadsource);
+            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = CreateLeadSourceUsingPOSTWithHttpInfo(leadsource);
             return localVarResponse.Data;
         }
 
@@ -284,7 +284,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="leadsource">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of LeadSource</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<LeadSource> CreateLeadSourceUsingPOST_0WithHttpInfo(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<LeadSource> CreateLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -311,7 +311,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = leadsource;
 
-            localVarRequestOptions.Operation = "LeadSourcesApi.CreateLeadSourceUsingPOST_0";
+            localVarRequestOptions.Operation = "LeadSourcesApi.CreateLeadSourceUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -319,7 +319,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<LeadSource>("/v2/leadsources", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateLeadSourceUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateLeadSourceUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -337,9 +337,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of LeadSource</returns>
-        public async System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOST_0Async(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOSTAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = await CreateLeadSourceUsingPOST_0WithHttpInfoAsync(leadsource, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = await CreateLeadSourceUsingPOSTWithHttpInfoAsync(leadsource, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -351,7 +351,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (LeadSource)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<LeadSource>> CreateLeadSourceUsingPOST_0WithHttpInfoAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<LeadSource>> CreateLeadSourceUsingPOSTWithHttpInfoAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -379,7 +379,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = leadsource;
 
-            localVarRequestOptions.Operation = "LeadSourcesApi.CreateLeadSourceUsingPOST_0";
+            localVarRequestOptions.Operation = "LeadSourcesApi.CreateLeadSourceUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -388,7 +388,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateLeadSourceUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateLeadSourceUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -408,9 +408,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListLeadSourcesResponse</returns>
-        public ListLeadSourcesResponse ListLeadSourcesUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListLeadSourcesResponse ListLeadSourcesUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse> localVarResponse = ListLeadSourcesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse> localVarResponse = ListLeadSourcesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -424,7 +424,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListLeadSourcesResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse> ListLeadSourcesUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse> ListLeadSourcesUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -465,7 +465,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "LeadSourcesApi.ListLeadSourcesUsingGET_0";
+            localVarRequestOptions.Operation = "LeadSourcesApi.ListLeadSourcesUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -473,7 +473,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListLeadSourcesResponse>("/v2/leadsources", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLeadSourcesUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListLeadSourcesUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -494,9 +494,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListLeadSourcesResponse</returns>
-        public async System.Threading.Tasks.Task<ListLeadSourcesResponse> ListLeadSourcesUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListLeadSourcesResponse> ListLeadSourcesUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse> localVarResponse = await ListLeadSourcesUsingGET_0WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse> localVarResponse = await ListLeadSourcesUsingGETWithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -511,7 +511,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListLeadSourcesResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse>> ListLeadSourcesUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListLeadSourcesResponse>> ListLeadSourcesUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -553,7 +553,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "LeadSourcesApi.ListLeadSourcesUsingGET_0";
+            localVarRequestOptions.Operation = "LeadSourcesApi.ListLeadSourcesUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -562,7 +562,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLeadSourcesUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListLeadSourcesUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

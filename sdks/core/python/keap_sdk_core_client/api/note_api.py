@@ -48,7 +48,7 @@ class NoteApi:
 
 
     @validate_call
-    def create_note_custom_field_using_post1_0(
+    def create_note_custom_field_using_post1(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -92,7 +92,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_note_custom_field_using_post1_0_serialize(
+        _param = self._create_note_custom_field_using_post1_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -116,7 +116,7 @@ class NoteApi:
 
 
     @validate_call
-    def create_note_custom_field_using_post1_0_with_http_info(
+    def create_note_custom_field_using_post1_with_http_info(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -160,7 +160,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_note_custom_field_using_post1_0_serialize(
+        _param = self._create_note_custom_field_using_post1_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -184,7 +184,7 @@ class NoteApi:
 
 
     @validate_call
-    def create_note_custom_field_using_post1_0_without_preload_content(
+    def create_note_custom_field_using_post1_without_preload_content(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -228,7 +228,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_note_custom_field_using_post1_0_serialize(
+        _param = self._create_note_custom_field_using_post1_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -247,7 +247,7 @@ class NoteApi:
         return response_data.response
 
 
-    def _create_note_custom_field_using_post1_0_serialize(
+    def _create_note_custom_field_using_post1_serialize(
         self,
         custom_field,
         _request_auth,
@@ -1511,7 +1511,7 @@ class NoteApi:
 
 
     @validate_call
-    def retrieve_note_model_using_get1_0(
+    def retrieve_note_model_using_get1(
         self,
         _request_timeout: Union[
             None,
@@ -1552,7 +1552,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_note_model_using_get1_0_serialize(
+        _param = self._retrieve_note_model_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1576,7 +1576,7 @@ class NoteApi:
 
 
     @validate_call
-    def retrieve_note_model_using_get1_0_with_http_info(
+    def retrieve_note_model_using_get1_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -1617,7 +1617,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_note_model_using_get1_0_serialize(
+        _param = self._retrieve_note_model_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1641,7 +1641,7 @@ class NoteApi:
 
 
     @validate_call
-    def retrieve_note_model_using_get1_0_without_preload_content(
+    def retrieve_note_model_using_get1_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1682,7 +1682,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_note_model_using_get1_0_serialize(
+        _param = self._retrieve_note_model_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1701,7 +1701,7 @@ class NoteApi:
         return response_data.response
 
 
-    def _retrieve_note_model_using_get1_0_serialize(
+    def _retrieve_note_model_using_get1_serialize(
         self,
         _request_auth,
         _content_type,
@@ -2089,7 +2089,7 @@ class NoteApi:
 
 
     @validate_call
-    def update_notes_custom_field_using_patch_0(
+    def update_notes_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2139,7 +2139,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_notes_custom_field_using_patch_0_serialize(
+        _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2166,7 +2166,7 @@ class NoteApi:
 
 
     @validate_call
-    def update_notes_custom_field_using_patch_0_with_http_info(
+    def update_notes_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2216,7 +2216,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_notes_custom_field_using_patch_0_serialize(
+        _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2243,7 +2243,7 @@ class NoteApi:
 
 
     @validate_call
-    def update_notes_custom_field_using_patch_0_without_preload_content(
+    def update_notes_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2293,7 +2293,7 @@ class NoteApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_notes_custom_field_using_patch_0_serialize(
+        _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2315,7 +2315,7 @@ class NoteApi:
         return response_data.response
 
 
-    def _update_notes_custom_field_using_patch_0_serialize(
+    def _update_notes_custom_field_using_patch_serialize(
         self,
         custom_field_id,
         request,

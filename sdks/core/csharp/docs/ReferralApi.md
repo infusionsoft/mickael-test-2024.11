@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateReferralUsingPOST_0**](ReferralApi.md#createreferralusingpost_0) | **POST** /v2/referrals | Create a Referral |
+| [**CreateReferralUsingPOST**](ReferralApi.md#createreferralusingpost) | **POST** /v2/referrals | Create a Referral |
 
-<a id="createreferralusingpost_0"></a>
-# **CreateReferralUsingPOST_0**
-> Referral CreateReferralUsingPOST_0 (CreateReferralRequest request)
+<a id="createreferralusingpost"></a>
+# **CreateReferralUsingPOST**
+> Referral CreateReferralUsingPOST (CreateReferralRequest request)
 
 Create a Referral
 
@@ -24,7 +24,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateReferralUsingPOST_0Example
+    public class CreateReferralUsingPOSTExample
     {
         public static void Main()
         {
@@ -36,12 +36,12 @@ namespace Example
             try
             {
                 // Create a Referral
-                Referral result = apiInstance.CreateReferralUsingPOST_0(request);
+                Referral result = apiInstance.CreateReferralUsingPOST(request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferralApi.CreateReferralUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling ReferralApi.CreateReferralUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -50,21 +50,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateReferralUsingPOST_0WithHttpInfo variant
+#### Using the CreateReferralUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a Referral
-    ApiResponse<Referral> response = apiInstance.CreateReferralUsingPOST_0WithHttpInfo(request);
+    ApiResponse<Referral> response = apiInstance.CreateReferralUsingPOSTWithHttpInfo(request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferralApi.CreateReferralUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferralApi.CreateReferralUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

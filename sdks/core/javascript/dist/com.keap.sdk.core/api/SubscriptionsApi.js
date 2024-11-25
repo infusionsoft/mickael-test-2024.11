@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Subscriptions service.
 * @module com.keap.sdk.core/api/SubscriptionsApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -57,16 +57,16 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
   return _createClass(SubscriptionsApi, [{
-    key: "cancelSubscriptionUsingPOST_0WithHttpInfo",
-    value: function cancelSubscriptionUsingPOST_0WithHttpInfo(subscriptionId, cancelSubscriptionsRequest) {
+    key: "cancelSubscriptionUsingPOSTWithHttpInfo",
+    value: function cancelSubscriptionUsingPOSTWithHttpInfo(subscriptionId, cancelSubscriptionsRequest) {
       var postBody = cancelSubscriptionsRequest;
       // verify the required parameter 'subscriptionId' is set
       if (subscriptionId === undefined || subscriptionId === null) {
-        throw new _Error["default"]("Missing the required parameter 'subscriptionId' when calling cancelSubscriptionUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'subscriptionId' when calling cancelSubscriptionUsingPOST");
       }
       // verify the required parameter 'cancelSubscriptionsRequest' is set
       if (cancelSubscriptionsRequest === undefined || cancelSubscriptionsRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'cancelSubscriptionsRequest' when calling cancelSubscriptionUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'cancelSubscriptionsRequest' when calling cancelSubscriptionUsingPOST");
       }
       var pathParams = {
         'subscription_id': subscriptionId
@@ -89,9 +89,9 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "cancelSubscriptionUsingPOST_0",
-    value: function cancelSubscriptionUsingPOST_0(subscriptionId, cancelSubscriptionsRequest) {
-      return this.cancelSubscriptionUsingPOST_0WithHttpInfo(subscriptionId, cancelSubscriptionsRequest).then(function (response_and_data) {
+    key: "cancelSubscriptionUsingPOST",
+    value: function cancelSubscriptionUsingPOST(subscriptionId, cancelSubscriptionsRequest) {
+      return this.cancelSubscriptionUsingPOSTWithHttpInfo(subscriptionId, cancelSubscriptionsRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -103,12 +103,12 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "createSubscriptionCustomFieldUsingPOST_0WithHttpInfo",
-    value: function createSubscriptionCustomFieldUsingPOST_0WithHttpInfo(customField) {
+    key: "createSubscriptionCustomFieldUsingPOSTWithHttpInfo",
+    value: function createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField) {
       var postBody = customField;
       // verify the required parameter 'customField' is set
       if (customField === undefined || customField === null) {
-        throw new _Error["default"]("Missing the required parameter 'customField' when calling createSubscriptionCustomFieldUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'customField' when calling createSubscriptionCustomFieldUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -128,9 +128,9 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "createSubscriptionCustomFieldUsingPOST_0",
-    value: function createSubscriptionCustomFieldUsingPOST_0(customField) {
-      return this.createSubscriptionCustomFieldUsingPOST_0WithHttpInfo(customField).then(function (response_and_data) {
+    key: "createSubscriptionCustomFieldUsingPOST",
+    value: function createSubscriptionCustomFieldUsingPOST(customField) {
+      return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -180,8 +180,8 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ObjectModel} and HTTP response
      */
   }, {
-    key: "retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo",
-    value: function retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo() {
+    key: "retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo",
+    value: function retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -200,9 +200,9 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ObjectModel}
      */
   }, {
-    key: "retrieveSubscriptionCustomFieldModelUsingGET_0",
-    value: function retrieveSubscriptionCustomFieldModelUsingGET_0() {
-      return this.retrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo().then(function (response_and_data) {
+    key: "retrieveSubscriptionCustomFieldModelUsingGET",
+    value: function retrieveSubscriptionCustomFieldModelUsingGET() {
+      return this.retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -217,17 +217,17 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo",
-    value: function updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts) {
+    key: "updateSubscriptionCustomFieldUsingPATCHWithHttpInfo",
+    value: function updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
       opts = opts || {};
       var postBody = request;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateSubscriptionCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateSubscriptionCustomFieldUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling updateSubscriptionCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling updateSubscriptionCustomFieldUsingPATCH");
       }
       var pathParams = {
         'custom_field_id': customFieldId
@@ -254,9 +254,9 @@ var SubscriptionsApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "updateSubscriptionCustomFieldUsingPATCH_0",
-    value: function updateSubscriptionCustomFieldUsingPATCH_0(customFieldId, request, opts) {
-      return this.updateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
+    key: "updateSubscriptionCustomFieldUsingPATCH",
+    value: function updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts) {
+      return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

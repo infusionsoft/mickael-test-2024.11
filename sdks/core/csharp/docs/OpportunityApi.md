@@ -4,21 +4,21 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateOpportunityCustomFieldsUsingPOST_0**](OpportunityApi.md#createopportunitycustomfieldsusingpost_0) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
-| [**CreateOpportunityStageUsingPOST_0**](OpportunityApi.md#createopportunitystageusingpost_0) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
-| [**CreateOpportunityUsingPOST1_0**](OpportunityApi.md#createopportunityusingpost1_0) | **POST** /v2/opportunities | Create an Opportunity |
-| [**DeleteOpportunityStageUsingDELETE_0**](OpportunityApi.md#deleteopportunitystageusingdelete_0) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
-| [**DeleteOpportunityUsingDELETE_0**](OpportunityApi.md#deleteopportunityusingdelete_0) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
-| [**GetOpportunityStageUsingGET_0**](OpportunityApi.md#getopportunitystageusingget_0) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
-| [**GetOpportunityUsingGET1_0**](OpportunityApi.md#getopportunityusingget1_0) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
-| [**ListOpportunitiesUsingGET1_0**](OpportunityApi.md#listopportunitiesusingget1_0) | **GET** /v2/opportunities | List Opportunities |
-| [**ListOpportunityStagesUsingGET_0**](OpportunityApi.md#listopportunitystagesusingget_0) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
-| [**UpdateOpportunityCustomFieldUsingPATCH_0**](OpportunityApi.md#updateopportunitycustomfieldusingpatch_0) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
-| [**UpdateOpportunityUsingPATCH_0**](OpportunityApi.md#updateopportunityusingpatch_0) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
+| [**CreateOpportunityCustomFieldsUsingPOST**](OpportunityApi.md#createopportunitycustomfieldsusingpost) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
+| [**CreateOpportunityStageUsingPOST**](OpportunityApi.md#createopportunitystageusingpost) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
+| [**CreateOpportunityUsingPOST1**](OpportunityApi.md#createopportunityusingpost1) | **POST** /v2/opportunities | Create an Opportunity |
+| [**DeleteOpportunityStageUsingDELETE**](OpportunityApi.md#deleteopportunitystageusingdelete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
+| [**DeleteOpportunityUsingDELETE**](OpportunityApi.md#deleteopportunityusingdelete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**GetOpportunityStageUsingGET**](OpportunityApi.md#getopportunitystageusingget) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
+| [**GetOpportunityUsingGET1**](OpportunityApi.md#getopportunityusingget1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**ListOpportunitiesUsingGET1**](OpportunityApi.md#listopportunitiesusingget1) | **GET** /v2/opportunities | List Opportunities |
+| [**ListOpportunityStagesUsingGET**](OpportunityApi.md#listopportunitystagesusingget) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**UpdateOpportunityCustomFieldUsingPATCH**](OpportunityApi.md#updateopportunitycustomfieldusingpatch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**UpdateOpportunityUsingPATCH**](OpportunityApi.md#updateopportunityusingpatch) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 
-<a id="createopportunitycustomfieldsusingpost_0"></a>
-# **CreateOpportunityCustomFieldsUsingPOST_0**
-> CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST_0 (CreateCustomFieldRequest customField)
+<a id="createopportunitycustomfieldsusingpost"></a>
+# **CreateOpportunityCustomFieldsUsingPOST**
+> CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST (CreateCustomFieldRequest customField)
 
 Create an Opportunity Custom Field
 
@@ -34,7 +34,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateOpportunityCustomFieldsUsingPOST_0Example
+    public class CreateOpportunityCustomFieldsUsingPOSTExample
     {
         public static void Main()
         {
@@ -46,12 +46,12 @@ namespace Example
             try
             {
                 // Create an Opportunity Custom Field
-                CustomFieldMetaData result = apiInstance.CreateOpportunityCustomFieldsUsingPOST_0(customField);
+                CustomFieldMetaData result = apiInstance.CreateOpportunityCustomFieldsUsingPOST(customField);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.CreateOpportunityCustomFieldsUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.CreateOpportunityCustomFieldsUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -60,21 +60,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateOpportunityCustomFieldsUsingPOST_0WithHttpInfo variant
+#### Using the CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create an Opportunity Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOpportunityCustomFieldsUsingPOST_0WithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.CreateOpportunityCustomFieldsUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -109,9 +109,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createopportunitystageusingpost_0"></a>
-# **CreateOpportunityStageUsingPOST_0**
-> RestOpportunityStage CreateOpportunityStageUsingPOST_0 (CreateOpportunityStageRequest? opportunityStage = null)
+<a id="createopportunitystageusingpost"></a>
+# **CreateOpportunityStageUsingPOST**
+> RestOpportunityStage CreateOpportunityStageUsingPOST (CreateOpportunityStageRequest? opportunityStage = null)
 
 Create an Opportunity Stage
 
@@ -127,7 +127,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateOpportunityStageUsingPOST_0Example
+    public class CreateOpportunityStageUsingPOSTExample
     {
         public static void Main()
         {
@@ -139,12 +139,12 @@ namespace Example
             try
             {
                 // Create an Opportunity Stage
-                RestOpportunityStage result = apiInstance.CreateOpportunityStageUsingPOST_0(opportunityStage);
+                RestOpportunityStage result = apiInstance.CreateOpportunityStageUsingPOST(opportunityStage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.CreateOpportunityStageUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.CreateOpportunityStageUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -153,21 +153,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateOpportunityStageUsingPOST_0WithHttpInfo variant
+#### Using the CreateOpportunityStageUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create an Opportunity Stage
-    ApiResponse<RestOpportunityStage> response = apiInstance.CreateOpportunityStageUsingPOST_0WithHttpInfo(opportunityStage);
+    ApiResponse<RestOpportunityStage> response = apiInstance.CreateOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.CreateOpportunityStageUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.CreateOpportunityStageUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -202,9 +202,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createopportunityusingpost1_0"></a>
-# **CreateOpportunityUsingPOST1_0**
-> RestV2Opportunity CreateOpportunityUsingPOST1_0 (CreateOpportunityRequest? opportunity = null)
+<a id="createopportunityusingpost1"></a>
+# **CreateOpportunityUsingPOST1**
+> RestV2Opportunity CreateOpportunityUsingPOST1 (CreateOpportunityRequest? opportunity = null)
 
 Create an Opportunity
 
@@ -220,7 +220,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateOpportunityUsingPOST1_0Example
+    public class CreateOpportunityUsingPOST1Example
     {
         public static void Main()
         {
@@ -232,12 +232,12 @@ namespace Example
             try
             {
                 // Create an Opportunity
-                RestV2Opportunity result = apiInstance.CreateOpportunityUsingPOST1_0(opportunity);
+                RestV2Opportunity result = apiInstance.CreateOpportunityUsingPOST1(opportunity);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.CreateOpportunityUsingPOST1_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.CreateOpportunityUsingPOST1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -246,21 +246,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateOpportunityUsingPOST1_0WithHttpInfo variant
+#### Using the CreateOpportunityUsingPOST1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create an Opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.CreateOpportunityUsingPOST1_0WithHttpInfo(opportunity);
+    ApiResponse<RestV2Opportunity> response = apiInstance.CreateOpportunityUsingPOST1WithHttpInfo(opportunity);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.CreateOpportunityUsingPOST1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.CreateOpportunityUsingPOST1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -295,9 +295,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deleteopportunitystageusingdelete_0"></a>
-# **DeleteOpportunityStageUsingDELETE_0**
-> void DeleteOpportunityStageUsingDELETE_0 (string stageId)
+<a id="deleteopportunitystageusingdelete"></a>
+# **DeleteOpportunityStageUsingDELETE**
+> void DeleteOpportunityStageUsingDELETE (string stageId)
 
 Delete an Opportunity Stage
 
@@ -313,7 +313,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class DeleteOpportunityStageUsingDELETE_0Example
+    public class DeleteOpportunityStageUsingDELETEExample
     {
         public static void Main()
         {
@@ -325,11 +325,11 @@ namespace Example
             try
             {
                 // Delete an Opportunity Stage
-                apiInstance.DeleteOpportunityStageUsingDELETE_0(stageId);
+                apiInstance.DeleteOpportunityStageUsingDELETE(stageId);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityStageUsingDELETE_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityStageUsingDELETE: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -338,18 +338,18 @@ namespace Example
 }
 ```
 
-#### Using the DeleteOpportunityStageUsingDELETE_0WithHttpInfo variant
+#### Using the DeleteOpportunityStageUsingDELETEWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete an Opportunity Stage
-    apiInstance.DeleteOpportunityStageUsingDELETE_0WithHttpInfo(stageId);
+    apiInstance.DeleteOpportunityStageUsingDELETEWithHttpInfo(stageId);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityStageUsingDELETE_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityStageUsingDELETEWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -385,9 +385,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deleteopportunityusingdelete_0"></a>
-# **DeleteOpportunityUsingDELETE_0**
-> void DeleteOpportunityUsingDELETE_0 (string opportunityId)
+<a id="deleteopportunityusingdelete"></a>
+# **DeleteOpportunityUsingDELETE**
+> void DeleteOpportunityUsingDELETE (string opportunityId)
 
 Delete an Opportunity
 
@@ -403,7 +403,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class DeleteOpportunityUsingDELETE_0Example
+    public class DeleteOpportunityUsingDELETEExample
     {
         public static void Main()
         {
@@ -415,11 +415,11 @@ namespace Example
             try
             {
                 // Delete an Opportunity
-                apiInstance.DeleteOpportunityUsingDELETE_0(opportunityId);
+                apiInstance.DeleteOpportunityUsingDELETE(opportunityId);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityUsingDELETE_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityUsingDELETE: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -428,18 +428,18 @@ namespace Example
 }
 ```
 
-#### Using the DeleteOpportunityUsingDELETE_0WithHttpInfo variant
+#### Using the DeleteOpportunityUsingDELETEWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete an Opportunity
-    apiInstance.DeleteOpportunityUsingDELETE_0WithHttpInfo(opportunityId);
+    apiInstance.DeleteOpportunityUsingDELETEWithHttpInfo(opportunityId);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityUsingDELETE_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.DeleteOpportunityUsingDELETEWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -475,9 +475,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getopportunitystageusingget_0"></a>
-# **GetOpportunityStageUsingGET_0**
-> RestOpportunityStage GetOpportunityStageUsingGET_0 (string stageId)
+<a id="getopportunitystageusingget"></a>
+# **GetOpportunityStageUsingGET**
+> RestOpportunityStage GetOpportunityStageUsingGET (string stageId)
 
 Retrieve an Opportunity Stage
 
@@ -493,7 +493,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetOpportunityStageUsingGET_0Example
+    public class GetOpportunityStageUsingGETExample
     {
         public static void Main()
         {
@@ -505,12 +505,12 @@ namespace Example
             try
             {
                 // Retrieve an Opportunity Stage
-                RestOpportunityStage result = apiInstance.GetOpportunityStageUsingGET_0(stageId);
+                RestOpportunityStage result = apiInstance.GetOpportunityStageUsingGET(stageId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.GetOpportunityStageUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.GetOpportunityStageUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -519,21 +519,21 @@ namespace Example
 }
 ```
 
-#### Using the GetOpportunityStageUsingGET_0WithHttpInfo variant
+#### Using the GetOpportunityStageUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve an Opportunity Stage
-    ApiResponse<RestOpportunityStage> response = apiInstance.GetOpportunityStageUsingGET_0WithHttpInfo(stageId);
+    ApiResponse<RestOpportunityStage> response = apiInstance.GetOpportunityStageUsingGETWithHttpInfo(stageId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.GetOpportunityStageUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.GetOpportunityStageUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -569,9 +569,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getopportunityusingget1_0"></a>
-# **GetOpportunityUsingGET1_0**
-> RestV2Opportunity GetOpportunityUsingGET1_0 (string opportunityId)
+<a id="getopportunityusingget1"></a>
+# **GetOpportunityUsingGET1**
+> RestV2Opportunity GetOpportunityUsingGET1 (string opportunityId)
 
 Retrieve a Opportunity
 
@@ -587,7 +587,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetOpportunityUsingGET1_0Example
+    public class GetOpportunityUsingGET1Example
     {
         public static void Main()
         {
@@ -599,12 +599,12 @@ namespace Example
             try
             {
                 // Retrieve a Opportunity
-                RestV2Opportunity result = apiInstance.GetOpportunityUsingGET1_0(opportunityId);
+                RestV2Opportunity result = apiInstance.GetOpportunityUsingGET1(opportunityId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.GetOpportunityUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.GetOpportunityUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -613,21 +613,21 @@ namespace Example
 }
 ```
 
-#### Using the GetOpportunityUsingGET1_0WithHttpInfo variant
+#### Using the GetOpportunityUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve a Opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.GetOpportunityUsingGET1_0WithHttpInfo(opportunityId);
+    ApiResponse<RestV2Opportunity> response = apiInstance.GetOpportunityUsingGET1WithHttpInfo(opportunityId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.GetOpportunityUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.GetOpportunityUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -663,9 +663,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listopportunitiesusingget1_0"></a>
-# **ListOpportunitiesUsingGET1_0**
-> ListOpportunitiesResponse ListOpportunitiesUsingGET1_0 (List<string>? fields = null, string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listopportunitiesusingget1"></a>
+# **ListOpportunitiesUsingGET1**
+> ListOpportunitiesResponse ListOpportunitiesUsingGET1 (List<string>? fields = null, string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List Opportunities
 
@@ -681,7 +681,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListOpportunitiesUsingGET1_0Example
+    public class ListOpportunitiesUsingGET1Example
     {
         public static void Main()
         {
@@ -697,12 +697,12 @@ namespace Example
             try
             {
                 // List Opportunities
-                ListOpportunitiesResponse result = apiInstance.ListOpportunitiesUsingGET1_0(fields, filter, orderBy, pageSize, pageToken);
+                ListOpportunitiesResponse result = apiInstance.ListOpportunitiesUsingGET1(fields, filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.ListOpportunitiesUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.ListOpportunitiesUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -711,21 +711,21 @@ namespace Example
 }
 ```
 
-#### Using the ListOpportunitiesUsingGET1_0WithHttpInfo variant
+#### Using the ListOpportunitiesUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Opportunities
-    ApiResponse<ListOpportunitiesResponse> response = apiInstance.ListOpportunitiesUsingGET1_0WithHttpInfo(fields, filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListOpportunitiesResponse> response = apiInstance.ListOpportunitiesUsingGET1WithHttpInfo(fields, filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.ListOpportunitiesUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.ListOpportunitiesUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -765,9 +765,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listopportunitystagesusingget_0"></a>
-# **ListOpportunityStagesUsingGET_0**
-> ListOpportunityStagesResponse ListOpportunityStagesUsingGET_0 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listopportunitystagesusingget"></a>
+# **ListOpportunityStagesUsingGET**
+> ListOpportunityStagesResponse ListOpportunityStagesUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List of Opportunity Stages
 
@@ -783,7 +783,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListOpportunityStagesUsingGET_0Example
+    public class ListOpportunityStagesUsingGETExample
     {
         public static void Main()
         {
@@ -798,12 +798,12 @@ namespace Example
             try
             {
                 // List of Opportunity Stages
-                ListOpportunityStagesResponse result = apiInstance.ListOpportunityStagesUsingGET_0(filter, orderBy, pageSize, pageToken);
+                ListOpportunityStagesResponse result = apiInstance.ListOpportunityStagesUsingGET(filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.ListOpportunityStagesUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.ListOpportunityStagesUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -812,21 +812,21 @@ namespace Example
 }
 ```
 
-#### Using the ListOpportunityStagesUsingGET_0WithHttpInfo variant
+#### Using the ListOpportunityStagesUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List of Opportunity Stages
-    ApiResponse<ListOpportunityStagesResponse> response = apiInstance.ListOpportunityStagesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListOpportunityStagesResponse> response = apiInstance.ListOpportunityStagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.ListOpportunityStagesUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.ListOpportunityStagesUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -865,9 +865,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updateopportunitycustomfieldusingpatch_0"></a>
-# **UpdateOpportunityCustomFieldUsingPATCH_0**
-> CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH_0 (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+<a id="updateopportunitycustomfieldusingpatch"></a>
+# **UpdateOpportunityCustomFieldUsingPATCH**
+> CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
 
 Update a Opportunity's Custom Field
 
@@ -883,7 +883,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class UpdateOpportunityCustomFieldUsingPATCH_0Example
+    public class UpdateOpportunityCustomFieldUsingPATCHExample
     {
         public static void Main()
         {
@@ -897,12 +897,12 @@ namespace Example
             try
             {
                 // Update a Opportunity's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateOpportunityCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityCustomFieldUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityCustomFieldUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -911,21 +911,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateOpportunityCustomFieldUsingPATCH_0WithHttpInfo variant
+#### Using the UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update a Opportunity's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOpportunityCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityCustomFieldUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -963,9 +963,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updateopportunityusingpatch_0"></a>
-# **UpdateOpportunityUsingPATCH_0**
-> RestV2Opportunity UpdateOpportunityUsingPATCH_0 (string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = null)
+<a id="updateopportunityusingpatch"></a>
+# **UpdateOpportunityUsingPATCH**
+> RestV2Opportunity UpdateOpportunityUsingPATCH (string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = null)
 
 Update an opportunity
 
@@ -981,7 +981,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class UpdateOpportunityUsingPATCH_0Example
+    public class UpdateOpportunityUsingPATCHExample
     {
         public static void Main()
         {
@@ -995,12 +995,12 @@ namespace Example
             try
             {
                 // Update an opportunity
-                RestV2Opportunity result = apiInstance.UpdateOpportunityUsingPATCH_0(opportunityId, request, updateMask);
+                RestV2Opportunity result = apiInstance.UpdateOpportunityUsingPATCH(opportunityId, request, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1009,21 +1009,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateOpportunityUsingPATCH_0WithHttpInfo variant
+#### Using the UpdateOpportunityUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update an opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.UpdateOpportunityUsingPATCH_0WithHttpInfo(opportunityId, request, updateMask);
+    ApiResponse<RestV2Opportunity> response = apiInstance.UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

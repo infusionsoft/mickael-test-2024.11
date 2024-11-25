@@ -1,4 +1,4 @@
-# KeapRestApi.Error
+# KeapCoreServiceCoreSdk.Error
 
 ## Properties
 

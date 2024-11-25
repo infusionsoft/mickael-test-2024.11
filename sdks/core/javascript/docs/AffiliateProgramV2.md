@@ -1,4 +1,4 @@
-# KeapRestApi.AffiliateProgramV2
+# KeapCoreServiceCoreSdk.AffiliateProgramV2
 
 ## Properties
 

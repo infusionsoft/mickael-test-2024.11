@@ -1,4 +1,4 @@
-# KeapRestApi.DeleteSubscriptionPlanCommissionRequest
+# KeapCoreServiceCoreSdk.DeleteSubscriptionPlanCommissionRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.PatchOpportunityRequest
+# KeapCoreServiceCoreSdk.PatchOpportunityRequest
 
 ## Properties
 

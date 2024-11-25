@@ -33,7 +33,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListCountriesResponse</returns>
-        ListCountriesResponse ListCountriesUsingGET2_0(int operationIndex = 0);
+        ListCountriesResponse ListCountriesUsingGET2(int operationIndex = 0);
 
         /// <summary>
         /// List Countries
@@ -44,7 +44,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListCountriesResponse</returns>
-        ApiResponse<ListCountriesResponse> ListCountriesUsingGET2_0WithHttpInfo(int operationIndex = 0);
+        ApiResponse<ListCountriesResponse> ListCountriesUsingGET2WithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List a Country&#39;s Provinces
         /// </summary>
@@ -52,7 +52,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="countryCode">country_code</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListProvincesResponse</returns>
-        ListProvincesResponse ListProvincesForCountryUsingGET_0(string countryCode, int operationIndex = 0);
+        ListProvincesResponse ListProvincesForCountryUsingGET(string countryCode, int operationIndex = 0);
 
         /// <summary>
         /// List a Country&#39;s Provinces
@@ -64,7 +64,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="countryCode">country_code</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListProvincesResponse</returns>
-        ApiResponse<ListProvincesResponse> ListProvincesForCountryUsingGET_0WithHttpInfo(string countryCode, int operationIndex = 0);
+        ApiResponse<ListProvincesResponse> ListProvincesForCountryUsingGETWithHttpInfo(string countryCode, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -84,7 +84,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListCountriesResponse</returns>
-        System.Threading.Tasks.Task<ListCountriesResponse> ListCountriesUsingGET2_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListCountriesResponse> ListCountriesUsingGET2Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Countries
@@ -96,7 +96,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListCountriesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListCountriesResponse>> ListCountriesUsingGET2_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListCountriesResponse>> ListCountriesUsingGET2WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List a Country&#39;s Provinces
         /// </summary>
@@ -108,7 +108,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListProvincesResponse</returns>
-        System.Threading.Tasks.Task<ListProvincesResponse> ListProvincesForCountryUsingGET_0Async(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListProvincesResponse> ListProvincesForCountryUsingGETAsync(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List a Country&#39;s Provinces
@@ -121,7 +121,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListProvincesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListProvincesResponse>> ListProvincesForCountryUsingGET_0WithHttpInfoAsync(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListProvincesResponse>> ListProvincesForCountryUsingGETWithHttpInfoAsync(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -248,9 +248,9 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListCountriesResponse</returns>
-        public ListCountriesResponse ListCountriesUsingGET2_0(int operationIndex = 0)
+        public ListCountriesResponse ListCountriesUsingGET2(int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse> localVarResponse = ListCountriesUsingGET2_0WithHttpInfo();
+            Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse> localVarResponse = ListCountriesUsingGET2WithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -260,7 +260,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListCountriesResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse> ListCountriesUsingGET2_0WithHttpInfo(int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse> ListCountriesUsingGET2WithHttpInfo(int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -285,7 +285,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "LocaleApi.ListCountriesUsingGET2_0";
+            localVarRequestOptions.Operation = "LocaleApi.ListCountriesUsingGET2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -293,7 +293,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListCountriesResponse>("/v2/locales/countries", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCountriesUsingGET2_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCountriesUsingGET2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -310,9 +310,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListCountriesResponse</returns>
-        public async System.Threading.Tasks.Task<ListCountriesResponse> ListCountriesUsingGET2_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListCountriesResponse> ListCountriesUsingGET2Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse> localVarResponse = await ListCountriesUsingGET2_0WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse> localVarResponse = await ListCountriesUsingGET2WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -323,7 +323,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListCountriesResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse>> ListCountriesUsingGET2_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListCountriesResponse>> ListCountriesUsingGET2WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -349,7 +349,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "LocaleApi.ListCountriesUsingGET2_0";
+            localVarRequestOptions.Operation = "LocaleApi.ListCountriesUsingGET2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -358,7 +358,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCountriesUsingGET2_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCountriesUsingGET2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -375,9 +375,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="countryCode">country_code</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListProvincesResponse</returns>
-        public ListProvincesResponse ListProvincesForCountryUsingGET_0(string countryCode, int operationIndex = 0)
+        public ListProvincesResponse ListProvincesForCountryUsingGET(string countryCode, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse> localVarResponse = ListProvincesForCountryUsingGET_0WithHttpInfo(countryCode);
+            Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse> localVarResponse = ListProvincesForCountryUsingGETWithHttpInfo(countryCode);
             return localVarResponse.Data;
         }
 
@@ -388,12 +388,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="countryCode">country_code</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListProvincesResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse> ListProvincesForCountryUsingGET_0WithHttpInfo(string countryCode, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse> ListProvincesForCountryUsingGETWithHttpInfo(string countryCode, int operationIndex = 0)
         {
             // verify the required parameter 'countryCode' is set
             if (countryCode == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'countryCode' when calling LocaleApi->ListProvincesForCountryUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'countryCode' when calling LocaleApi->ListProvincesForCountryUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -420,7 +420,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("country_code", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(countryCode)); // path parameter
 
-            localVarRequestOptions.Operation = "LocaleApi.ListProvincesForCountryUsingGET_0";
+            localVarRequestOptions.Operation = "LocaleApi.ListProvincesForCountryUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -428,7 +428,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListProvincesResponse>("/v2/locales/countries/{country_code}/provinces", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListProvincesForCountryUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListProvincesForCountryUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -446,9 +446,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListProvincesResponse</returns>
-        public async System.Threading.Tasks.Task<ListProvincesResponse> ListProvincesForCountryUsingGET_0Async(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListProvincesResponse> ListProvincesForCountryUsingGETAsync(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse> localVarResponse = await ListProvincesForCountryUsingGET_0WithHttpInfoAsync(countryCode, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse> localVarResponse = await ListProvincesForCountryUsingGETWithHttpInfoAsync(countryCode, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -460,12 +460,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListProvincesResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse>> ListProvincesForCountryUsingGET_0WithHttpInfoAsync(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListProvincesResponse>> ListProvincesForCountryUsingGETWithHttpInfoAsync(string countryCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'countryCode' is set
             if (countryCode == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'countryCode' when calling LocaleApi->ListProvincesForCountryUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'countryCode' when calling LocaleApi->ListProvincesForCountryUsingGET");
             }
 
 
@@ -493,7 +493,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("country_code", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(countryCode)); // path parameter
 
-            localVarRequestOptions.Operation = "LocaleApi.ListProvincesForCountryUsingGET_0";
+            localVarRequestOptions.Operation = "LocaleApi.ListProvincesForCountryUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -502,7 +502,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListProvincesForCountryUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListProvincesForCountryUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

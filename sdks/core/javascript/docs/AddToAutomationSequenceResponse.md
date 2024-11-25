@@ -1,4 +1,4 @@
-# KeapRestApi.AddToAutomationSequenceResponse
+# KeapCoreServiceCoreSdk.AddToAutomationSequenceResponse
 
 ## Properties
 

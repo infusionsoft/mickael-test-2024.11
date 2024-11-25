@@ -4,13 +4,13 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#createfunnelintegrationusingpost_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
-| [**CreateIntegrationTriggerEventUsingPOST_0**](FunnelIntegrationApi.md#createintegrationtriggereventusingpost_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
-| [**DeleteFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#deletefunnelintegrationusingpost_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**CreateFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#createfunnelintegrationusingpost) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
+| [**CreateIntegrationTriggerEventUsingPOST**](FunnelIntegrationApi.md#createintegrationtriggereventusingpost) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**DeleteFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 
-<a id="createfunnelintegrationusingpost_0"></a>
-# **CreateFunnelIntegrationUsingPOST_0**
-> void CreateFunnelIntegrationUsingPOST_0 (CreateFunnelIntegrationRequest createFunnelIntegrationRequest)
+<a id="createfunnelintegrationusingpost"></a>
+# **CreateFunnelIntegrationUsingPOST**
+> void CreateFunnelIntegrationUsingPOST (CreateFunnelIntegrationRequest createFunnelIntegrationRequest)
 
 Create Funnel Integrations into the app.
 
@@ -26,7 +26,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateFunnelIntegrationUsingPOST_0Example
+    public class CreateFunnelIntegrationUsingPOSTExample
     {
         public static void Main()
         {
@@ -38,11 +38,11 @@ namespace Example
             try
             {
                 // Create Funnel Integrations into the app.
-                apiInstance.CreateFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest);
+                apiInstance.CreateFunnelIntegrationUsingPOST(createFunnelIntegrationRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -51,18 +51,18 @@ namespace Example
 }
 ```
 
-#### Using the CreateFunnelIntegrationUsingPOST_0WithHttpInfo variant
+#### Using the CreateFunnelIntegrationUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Funnel Integrations into the app.
-    apiInstance.CreateFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest);
+    apiInstance.CreateFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling FunnelIntegrationApi.CreateFunnelIntegrationUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling FunnelIntegrationApi.CreateFunnelIntegrationUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -97,9 +97,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createintegrationtriggereventusingpost_0"></a>
-# **CreateIntegrationTriggerEventUsingPOST_0**
-> List&lt;FunnelIntegrationTriggerResultDTO&gt; CreateIntegrationTriggerEventUsingPOST_0 (CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents)
+<a id="createintegrationtriggereventusingpost"></a>
+# **CreateIntegrationTriggerEventUsingPOST**
+> List&lt;FunnelIntegrationTriggerResultDTO&gt; CreateIntegrationTriggerEventUsingPOST (CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents)
 
 Achieve Funnel Integration Trigger Goal
 
@@ -113,7 +113,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateIntegrationTriggerEventUsingPOST_0Example
+    public class CreateIntegrationTriggerEventUsingPOSTExample
     {
         public static void Main()
         {
@@ -125,12 +125,12 @@ namespace Example
             try
             {
                 // Achieve Funnel Integration Trigger Goal
-                List<FunnelIntegrationTriggerResultDTO> result = apiInstance.CreateIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents);
+                List<FunnelIntegrationTriggerResultDTO> result = apiInstance.CreateIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -139,21 +139,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateIntegrationTriggerEventUsingPOST_0WithHttpInfo variant
+#### Using the CreateIntegrationTriggerEventUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Achieve Funnel Integration Trigger Goal
-    ApiResponse<List<FunnelIntegrationTriggerResultDTO>> response = apiInstance.CreateIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents);
+    ApiResponse<List<FunnelIntegrationTriggerResultDTO>> response = apiInstance.CreateIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling FunnelIntegrationApi.CreateIntegrationTriggerEventUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -188,9 +188,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletefunnelintegrationusingpost_0"></a>
-# **DeleteFunnelIntegrationUsingPOST_0**
-> void DeleteFunnelIntegrationUsingPOST_0 (DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest)
+<a id="deletefunnelintegrationusingpost"></a>
+# **DeleteFunnelIntegrationUsingPOST**
+> void DeleteFunnelIntegrationUsingPOST (DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest)
 
 Deletes Funnel Integrations from the app.
 
@@ -206,7 +206,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class DeleteFunnelIntegrationUsingPOST_0Example
+    public class DeleteFunnelIntegrationUsingPOSTExample
     {
         public static void Main()
         {
@@ -218,11 +218,11 @@ namespace Example
             try
             {
                 // Deletes Funnel Integrations from the app.
-                apiInstance.DeleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest);
+                apiInstance.DeleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -231,18 +231,18 @@ namespace Example
 }
 ```
 
-#### Using the DeleteFunnelIntegrationUsingPOST_0WithHttpInfo variant
+#### Using the DeleteFunnelIntegrationUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Deletes Funnel Integrations from the app.
-    apiInstance.DeleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest);
+    apiInstance.DeleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling FunnelIntegrationApi.DeleteFunnelIntegrationUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

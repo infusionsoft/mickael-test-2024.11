@@ -1,23 +1,23 @@
-# KeapRestApi.NoteApi
+# KeapCoreServiceCoreSdk.NoteApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createNoteCustomFieldUsingPOST1_0**](NoteApi.md#createNoteCustomFieldUsingPOST1_0) | **POST** /v2/notes/model/customFields | Create a Custom Field
+[**createNoteCustomFieldUsingPOST1**](NoteApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 [**createNoteUsingPOST1**](NoteApi.md#createNoteUsingPOST1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note
 [**deleteNoteUsingDELETE1**](NoteApi.md#deleteNoteUsingDELETE1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note
 [**getNoteUsingGET1**](NoteApi.md#getNoteUsingGET1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
 [**listNotesUsingGET1**](NoteApi.md#listNotesUsingGET1) | **GET** /v2/contacts/{contact_id}/notes | List Notes
-[**retrieveNoteModelUsingGET1_0**](NoteApi.md#retrieveNoteModelUsingGET1_0) | **GET** /v2/notes/model | Retrieve Note Model
+[**retrieveNoteModelUsingGET1**](NoteApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model
 [**updateNoteUsingPATCH**](NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
-[**updateNotesCustomFieldUsingPATCH_0**](NoteApi.md#updateNotesCustomFieldUsingPATCH_0) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
+[**updateNotesCustomFieldUsingPATCH**](NoteApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 
 
 
-## createNoteCustomFieldUsingPOST1_0
+## createNoteCustomFieldUsingPOST1
 
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1_0(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
 
 Create a Custom Field
 
@@ -26,11 +26,11 @@ Adds a custom field of the specified type and options to the Note object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createNoteCustomFieldUsingPOST1_0(customField).then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createNoteCustomFieldUsingPOST1(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -70,11 +70,11 @@ Creates a new Note.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let contactId = "contactId_example"; // String | contact_id
-let request = new KeapRestApi.CreateNoteRequest(); // CreateNoteRequest | request
+let request = new KeapCoreServiceCoreSdk.CreateNoteRequest(); // CreateNoteRequest | request
 apiInstance.createNoteUsingPOST1(contactId, request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -116,9 +116,9 @@ Deletes the specified Note
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let contactId = "contactId_example"; // String | contact_id
 let noteId = "noteId_example"; // String | note_id
 apiInstance.deleteNoteUsingDELETE1(contactId, noteId).then(() => {
@@ -162,9 +162,9 @@ Retrieves the specified Note
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let contactId = "contactId_example"; // String | contact_id
 let noteId = "noteId_example"; // String | note_id
 apiInstance.getNoteUsingGET1(contactId, noteId).then((data) => {
@@ -208,9 +208,9 @@ Retrieves a list of Notes
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let contactId = "contactId_example"; // String | contact_id
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
@@ -251,9 +251,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## retrieveNoteModelUsingGET1_0
+## retrieveNoteModelUsingGET1
 
-> ObjectModel retrieveNoteModelUsingGET1_0()
+> ObjectModel retrieveNoteModelUsingGET1()
 
 Retrieve Note Model
 
@@ -262,10 +262,10 @@ Gets the custom fields for the Note object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
-apiInstance.retrieveNoteModelUsingGET1_0().then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
+apiInstance.retrieveNoteModelUsingGET1().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -302,12 +302,12 @@ Updates a Note for a Contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let contactId = "contactId_example"; // String | contact_id
 let noteId = "noteId_example"; // String | note_id
-let updateNoteRequest = new KeapRestApi.UpdateNoteRequest(); // UpdateNoteRequest | updateNoteRequest
+let updateNoteRequest = new KeapCoreServiceCoreSdk.UpdateNoteRequest(); // UpdateNoteRequest | updateNoteRequest
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -343,9 +343,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## updateNotesCustomFieldUsingPATCH_0
+## updateNotesCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH_0(customFieldId, request, opts)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, opts)
 
 Update a Custom Field
 
@@ -354,15 +354,15 @@ Updates a custom field of the specified type and options to the Note object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.NoteApi();
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateNotesCustomFieldUsingPATCH_0(customFieldId, request, opts).then((data) => {
+apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

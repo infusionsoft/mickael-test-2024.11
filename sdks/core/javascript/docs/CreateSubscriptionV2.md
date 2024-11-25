@@ -1,4 +1,4 @@
-# KeapRestApi.CreateSubscriptionV2
+# KeapCoreServiceCoreSdk.CreateSubscriptionV2
 
 ## Properties
 

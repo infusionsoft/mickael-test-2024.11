@@ -1,4 +1,4 @@
-# KeapRestApi.CreateContactLinkTypeRequest
+# KeapCoreServiceCoreSdk.CreateContactLinkTypeRequest
 
 ## Properties
 

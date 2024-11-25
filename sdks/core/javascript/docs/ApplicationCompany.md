@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationCompany
+# KeapCoreServiceCoreSdk.ApplicationCompany
 
 ## Properties
 

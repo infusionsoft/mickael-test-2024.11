@@ -1,4 +1,4 @@
-# KeapRestApi.ListOrders
+# KeapCoreServiceCoreSdk.ListOrders
 
 ## Properties
 

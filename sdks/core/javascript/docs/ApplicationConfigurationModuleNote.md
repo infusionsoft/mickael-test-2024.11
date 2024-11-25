@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleNote
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleNote
 
 ## Properties
 

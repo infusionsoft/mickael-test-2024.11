@@ -131,7 +131,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="searchParam">searchParam</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListBasicContactResponse</returns>
-        ListBasicContactResponse GetContactsBySearchTermUsingGET_0(string searchParam, int operationIndex = 0);
+        ListBasicContactResponse GetContactsBySearchTermUsingGET(string searchParam, int operationIndex = 0);
 
         /// <summary>
         /// Search for Contacts
@@ -143,7 +143,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="searchParam">searchParam</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListBasicContactResponse</returns>
-        ApiResponse<ListBasicContactResponse> GetContactsBySearchTermUsingGET_0WithHttpInfo(string searchParam, int operationIndex = 0);
+        ApiResponse<ListBasicContactResponse> GetContactsBySearchTermUsingGETWithHttpInfo(string searchParam, int operationIndex = 0);
         /// <summary>
         /// Link Contacts
         /// </summary>
@@ -466,7 +466,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListBasicContactResponse</returns>
-        System.Threading.Tasks.Task<ListBasicContactResponse> GetContactsBySearchTermUsingGET_0Async(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListBasicContactResponse> GetContactsBySearchTermUsingGETAsync(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Search for Contacts
@@ -479,7 +479,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListBasicContactResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListBasicContactResponse>> GetContactsBySearchTermUsingGET_0WithHttpInfoAsync(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListBasicContactResponse>> GetContactsBySearchTermUsingGETWithHttpInfoAsync(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Link Contacts
         /// </summary>
@@ -1401,9 +1401,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="searchParam">searchParam</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListBasicContactResponse</returns>
-        public ListBasicContactResponse GetContactsBySearchTermUsingGET_0(string searchParam, int operationIndex = 0)
+        public ListBasicContactResponse GetContactsBySearchTermUsingGET(string searchParam, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse> localVarResponse = GetContactsBySearchTermUsingGET_0WithHttpInfo(searchParam);
+            Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse> localVarResponse = GetContactsBySearchTermUsingGETWithHttpInfo(searchParam);
             return localVarResponse.Data;
         }
 
@@ -1414,12 +1414,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="searchParam">searchParam</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListBasicContactResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse> GetContactsBySearchTermUsingGET_0WithHttpInfo(string searchParam, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse> GetContactsBySearchTermUsingGETWithHttpInfo(string searchParam, int operationIndex = 0)
         {
             // verify the required parameter 'searchParam' is set
             if (searchParam == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'searchParam' when calling ContactApi->GetContactsBySearchTermUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'searchParam' when calling ContactApi->GetContactsBySearchTermUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1446,7 +1446,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "searchParam", searchParam));
 
-            localVarRequestOptions.Operation = "ContactApi.GetContactsBySearchTermUsingGET_0";
+            localVarRequestOptions.Operation = "ContactApi.GetContactsBySearchTermUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1454,7 +1454,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListBasicContactResponse>("/v2/contacts:search", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetContactsBySearchTermUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetContactsBySearchTermUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1472,9 +1472,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListBasicContactResponse</returns>
-        public async System.Threading.Tasks.Task<ListBasicContactResponse> GetContactsBySearchTermUsingGET_0Async(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListBasicContactResponse> GetContactsBySearchTermUsingGETAsync(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse> localVarResponse = await GetContactsBySearchTermUsingGET_0WithHttpInfoAsync(searchParam, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse> localVarResponse = await GetContactsBySearchTermUsingGETWithHttpInfoAsync(searchParam, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1486,12 +1486,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListBasicContactResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse>> GetContactsBySearchTermUsingGET_0WithHttpInfoAsync(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListBasicContactResponse>> GetContactsBySearchTermUsingGETWithHttpInfoAsync(string searchParam, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'searchParam' is set
             if (searchParam == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'searchParam' when calling ContactApi->GetContactsBySearchTermUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'searchParam' when calling ContactApi->GetContactsBySearchTermUsingGET");
             }
 
 
@@ -1519,7 +1519,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "searchParam", searchParam));
 
-            localVarRequestOptions.Operation = "ContactApi.GetContactsBySearchTermUsingGET_0";
+            localVarRequestOptions.Operation = "ContactApi.GetContactsBySearchTermUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1528,7 +1528,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetContactsBySearchTermUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetContactsBySearchTermUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -19,7 +19,7 @@ import ListLandingPagesResponse from '../model/ListLandingPagesResponse';
 /**
 * LandingPages service.
 * @module com.keap.sdk.core/api/LandingPagesApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class LandingPagesApi {
 
@@ -46,7 +46,7 @@ export default class LandingPagesApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListLandingPagesResponse} and HTTP response
      */
-    listLandingPagesUsingGET_0WithHttpInfo(opts) {
+    listLandingPagesUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -84,8 +84,8 @@ export default class LandingPagesApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListLandingPagesResponse}
      */
-    listLandingPagesUsingGET_0(opts) {
-      return this.listLandingPagesUsingGET_0WithHttpInfo(opts)
+    listLandingPagesUsingGET(opts) {
+      return this.listLandingPagesUsingGETWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

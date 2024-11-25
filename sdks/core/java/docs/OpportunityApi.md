@@ -4,34 +4,34 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createOpportunityCustomFieldsUsingPOST_0**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST_0) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
-| [**createOpportunityCustomFieldsUsingPOST_0WithHttpInfo**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST_0WithHttpInfo) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
-| [**createOpportunityStageUsingPOST_0**](OpportunityApi.md#createOpportunityStageUsingPOST_0) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
-| [**createOpportunityStageUsingPOST_0WithHttpInfo**](OpportunityApi.md#createOpportunityStageUsingPOST_0WithHttpInfo) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
-| [**createOpportunityUsingPOST1_0**](OpportunityApi.md#createOpportunityUsingPOST1_0) | **POST** /v2/opportunities | Create an Opportunity |
-| [**createOpportunityUsingPOST1_0WithHttpInfo**](OpportunityApi.md#createOpportunityUsingPOST1_0WithHttpInfo) | **POST** /v2/opportunities | Create an Opportunity |
-| [**deleteOpportunityStageUsingDELETE_0**](OpportunityApi.md#deleteOpportunityStageUsingDELETE_0) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
-| [**deleteOpportunityStageUsingDELETE_0WithHttpInfo**](OpportunityApi.md#deleteOpportunityStageUsingDELETE_0WithHttpInfo) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
-| [**deleteOpportunityUsingDELETE_0**](OpportunityApi.md#deleteOpportunityUsingDELETE_0) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
-| [**deleteOpportunityUsingDELETE_0WithHttpInfo**](OpportunityApi.md#deleteOpportunityUsingDELETE_0WithHttpInfo) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
-| [**getOpportunityStageUsingGET_0**](OpportunityApi.md#getOpportunityStageUsingGET_0) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
-| [**getOpportunityStageUsingGET_0WithHttpInfo**](OpportunityApi.md#getOpportunityStageUsingGET_0WithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
-| [**getOpportunityUsingGET1_0**](OpportunityApi.md#getOpportunityUsingGET1_0) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
-| [**getOpportunityUsingGET1_0WithHttpInfo**](OpportunityApi.md#getOpportunityUsingGET1_0WithHttpInfo) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
-| [**listOpportunitiesUsingGET1_0**](OpportunityApi.md#listOpportunitiesUsingGET1_0) | **GET** /v2/opportunities | List Opportunities |
-| [**listOpportunitiesUsingGET1_0WithHttpInfo**](OpportunityApi.md#listOpportunitiesUsingGET1_0WithHttpInfo) | **GET** /v2/opportunities | List Opportunities |
-| [**listOpportunityStagesUsingGET_0**](OpportunityApi.md#listOpportunityStagesUsingGET_0) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
-| [**listOpportunityStagesUsingGET_0WithHttpInfo**](OpportunityApi.md#listOpportunityStagesUsingGET_0WithHttpInfo) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
-| [**updateOpportunityCustomFieldUsingPATCH_0**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH_0) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
-| [**updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
-| [**updateOpportunityUsingPATCH_0**](OpportunityApi.md#updateOpportunityUsingPATCH_0) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
-| [**updateOpportunityUsingPATCH_0WithHttpInfo**](OpportunityApi.md#updateOpportunityUsingPATCH_0WithHttpInfo) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
+| [**createOpportunityCustomFieldsUsingPOST**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
+| [**createOpportunityCustomFieldsUsingPOSTWithHttpInfo**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOSTWithHttpInfo) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
+| [**createOpportunityStageUsingPOST**](OpportunityApi.md#createOpportunityStageUsingPOST) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
+| [**createOpportunityStageUsingPOSTWithHttpInfo**](OpportunityApi.md#createOpportunityStageUsingPOSTWithHttpInfo) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
+| [**createOpportunityUsingPOST1**](OpportunityApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity |
+| [**createOpportunityUsingPOST1WithHttpInfo**](OpportunityApi.md#createOpportunityUsingPOST1WithHttpInfo) | **POST** /v2/opportunities | Create an Opportunity |
+| [**deleteOpportunityStageUsingDELETE**](OpportunityApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
+| [**deleteOpportunityStageUsingDELETEWithHttpInfo**](OpportunityApi.md#deleteOpportunityStageUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
+| [**deleteOpportunityUsingDELETE**](OpportunityApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**deleteOpportunityUsingDELETEWithHttpInfo**](OpportunityApi.md#deleteOpportunityUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**getOpportunityStageUsingGET**](OpportunityApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
+| [**getOpportunityStageUsingGETWithHttpInfo**](OpportunityApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
+| [**getOpportunityUsingGET1**](OpportunityApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**getOpportunityUsingGET1WithHttpInfo**](OpportunityApi.md#getOpportunityUsingGET1WithHttpInfo) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**listOpportunitiesUsingGET1**](OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities |
+| [**listOpportunitiesUsingGET1WithHttpInfo**](OpportunityApi.md#listOpportunitiesUsingGET1WithHttpInfo) | **GET** /v2/opportunities | List Opportunities |
+| [**listOpportunityStagesUsingGET**](OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**listOpportunityStagesUsingGETWithHttpInfo**](OpportunityApi.md#listOpportunityStagesUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**updateOpportunityCustomFieldUsingPATCH**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**updateOpportunityCustomFieldUsingPATCHWithHttpInfo**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**updateOpportunityUsingPATCH**](OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
+| [**updateOpportunityUsingPATCHWithHttpInfo**](OpportunityApi.md#updateOpportunityUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 
 
 
-## createOpportunityCustomFieldsUsingPOST_0
+## createOpportunityCustomFieldsUsingPOST
 
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST_0(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
 
 Create an Opportunity Custom Field
 
@@ -41,11 +41,11 @@ Adds a custom field of the specified type and options to the Opportunity object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -55,10 +55,10 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createOpportunityCustomFieldsUsingPOST_0(customField);
+            CustomFieldMetaData result = apiInstance.createOpportunityCustomFieldsUsingPOST(customField);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#createOpportunityCustomFieldsUsingPOST_0");
+            System.err.println("Exception when calling OpportunityApi#createOpportunityCustomFieldsUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -96,9 +96,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createOpportunityCustomFieldsUsingPOST_0WithHttpInfo
+## createOpportunityCustomFieldsUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOST_0 createOpportunityCustomFieldsUsingPOST_0WithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOST createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField)
 
 Create an Opportunity Custom Field
 
@@ -108,12 +108,12 @@ Adds a custom field of the specified type and options to the Opportunity object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -123,12 +123,12 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createOpportunityCustomFieldsUsingPOST_0WithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#createOpportunityCustomFieldsUsingPOST_0");
+            System.err.println("Exception when calling OpportunityApi#createOpportunityCustomFieldsUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -167,9 +167,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createOpportunityStageUsingPOST_0
+## createOpportunityStageUsingPOST
 
-> RestOpportunityStage createOpportunityStageUsingPOST_0(opportunityStage)
+> RestOpportunityStage createOpportunityStageUsingPOST(opportunityStage)
 
 Create an Opportunity Stage
 
@@ -179,11 +179,11 @@ Creates a new Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -193,10 +193,10 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         CreateOpportunityStageRequest opportunityStage = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
         try {
-            RestOpportunityStage result = apiInstance.createOpportunityStageUsingPOST_0(opportunityStage);
+            RestOpportunityStage result = apiInstance.createOpportunityStageUsingPOST(opportunityStage);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#createOpportunityStageUsingPOST_0");
+            System.err.println("Exception when calling OpportunityApi#createOpportunityStageUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -234,9 +234,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createOpportunityStageUsingPOST_0WithHttpInfo
+## createOpportunityStageUsingPOSTWithHttpInfo
 
-> ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOST_0 createOpportunityStageUsingPOST_0WithHttpInfo(opportunityStage)
+> ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOST createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage)
 
 Create an Opportunity Stage
 
@@ -246,12 +246,12 @@ Creates a new Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -261,12 +261,12 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         CreateOpportunityStageRequest opportunityStage = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
         try {
-            ApiResponse<RestOpportunityStage> response = apiInstance.createOpportunityStageUsingPOST_0WithHttpInfo(opportunityStage);
+            ApiResponse<RestOpportunityStage> response = apiInstance.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#createOpportunityStageUsingPOST_0");
+            System.err.println("Exception when calling OpportunityApi#createOpportunityStageUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -305,9 +305,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createOpportunityUsingPOST1_0
+## createOpportunityUsingPOST1
 
-> RestV2Opportunity createOpportunityUsingPOST1_0(opportunity)
+> RestV2Opportunity createOpportunityUsingPOST1(opportunity)
 
 Create an Opportunity
 
@@ -317,11 +317,11 @@ Creates a new opportunity as the authenticated user.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -331,10 +331,10 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         CreateOpportunityRequest opportunity = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
         try {
-            RestV2Opportunity result = apiInstance.createOpportunityUsingPOST1_0(opportunity);
+            RestV2Opportunity result = apiInstance.createOpportunityUsingPOST1(opportunity);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#createOpportunityUsingPOST1_0");
+            System.err.println("Exception when calling OpportunityApi#createOpportunityUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -372,9 +372,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createOpportunityUsingPOST1_0WithHttpInfo
+## createOpportunityUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1_0 createOpportunityUsingPOST1_0WithHttpInfo(opportunity)
+> ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1 createOpportunityUsingPOST1WithHttpInfo(opportunity)
 
 Create an Opportunity
 
@@ -384,12 +384,12 @@ Creates a new opportunity as the authenticated user.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -399,12 +399,12 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         CreateOpportunityRequest opportunity = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.createOpportunityUsingPOST1_0WithHttpInfo(opportunity);
+            ApiResponse<RestV2Opportunity> response = apiInstance.createOpportunityUsingPOST1WithHttpInfo(opportunity);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#createOpportunityUsingPOST1_0");
+            System.err.println("Exception when calling OpportunityApi#createOpportunityUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -443,9 +443,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## deleteOpportunityStageUsingDELETE_0
+## deleteOpportunityStageUsingDELETE
 
-> void deleteOpportunityStageUsingDELETE_0(stageId)
+> void deleteOpportunityStageUsingDELETE(stageId)
 
 Delete an Opportunity Stage
 
@@ -455,11 +455,11 @@ Deletes the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -469,9 +469,9 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
         try {
-            apiInstance.deleteOpportunityStageUsingDELETE_0(stageId);
+            apiInstance.deleteOpportunityStageUsingDELETE(stageId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#deleteOpportunityStageUsingDELETE_0");
+            System.err.println("Exception when calling OpportunityApi#deleteOpportunityStageUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -510,9 +510,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteOpportunityStageUsingDELETE_0WithHttpInfo
+## deleteOpportunityStageUsingDELETEWithHttpInfo
 
-> ApiResponse<Void> deleteOpportunityStageUsingDELETE_0 deleteOpportunityStageUsingDELETE_0WithHttpInfo(stageId)
+> ApiResponse<Void> deleteOpportunityStageUsingDELETE deleteOpportunityStageUsingDELETEWithHttpInfo(stageId)
 
 Delete an Opportunity Stage
 
@@ -522,12 +522,12 @@ Deletes the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -537,11 +537,11 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteOpportunityStageUsingDELETE_0WithHttpInfo(stageId);
+            ApiResponse<Void> response = apiInstance.deleteOpportunityStageUsingDELETEWithHttpInfo(stageId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#deleteOpportunityStageUsingDELETE_0");
+            System.err.println("Exception when calling OpportunityApi#deleteOpportunityStageUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -581,9 +581,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## deleteOpportunityUsingDELETE_0
+## deleteOpportunityUsingDELETE
 
-> void deleteOpportunityUsingDELETE_0(opportunityId)
+> void deleteOpportunityUsingDELETE(opportunityId)
 
 Delete an Opportunity
 
@@ -593,11 +593,11 @@ Deletes the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -607,9 +607,9 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
         try {
-            apiInstance.deleteOpportunityUsingDELETE_0(opportunityId);
+            apiInstance.deleteOpportunityUsingDELETE(opportunityId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#deleteOpportunityUsingDELETE_0");
+            System.err.println("Exception when calling OpportunityApi#deleteOpportunityUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -648,9 +648,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteOpportunityUsingDELETE_0WithHttpInfo
+## deleteOpportunityUsingDELETEWithHttpInfo
 
-> ApiResponse<Void> deleteOpportunityUsingDELETE_0 deleteOpportunityUsingDELETE_0WithHttpInfo(opportunityId)
+> ApiResponse<Void> deleteOpportunityUsingDELETE deleteOpportunityUsingDELETEWithHttpInfo(opportunityId)
 
 Delete an Opportunity
 
@@ -660,12 +660,12 @@ Deletes the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -675,11 +675,11 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteOpportunityUsingDELETE_0WithHttpInfo(opportunityId);
+            ApiResponse<Void> response = apiInstance.deleteOpportunityUsingDELETEWithHttpInfo(opportunityId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#deleteOpportunityUsingDELETE_0");
+            System.err.println("Exception when calling OpportunityApi#deleteOpportunityUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -719,9 +719,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getOpportunityStageUsingGET_0
+## getOpportunityStageUsingGET
 
-> RestOpportunityStage getOpportunityStageUsingGET_0(stageId)
+> RestOpportunityStage getOpportunityStageUsingGET(stageId)
 
 Retrieve an Opportunity Stage
 
@@ -731,11 +731,11 @@ Retrieves the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -745,10 +745,10 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
         try {
-            RestOpportunityStage result = apiInstance.getOpportunityStageUsingGET_0(stageId);
+            RestOpportunityStage result = apiInstance.getOpportunityStageUsingGET(stageId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#getOpportunityStageUsingGET_0");
+            System.err.println("Exception when calling OpportunityApi#getOpportunityStageUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -787,9 +787,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getOpportunityStageUsingGET_0WithHttpInfo
+## getOpportunityStageUsingGETWithHttpInfo
 
-> ApiResponse<RestOpportunityStage> getOpportunityStageUsingGET_0 getOpportunityStageUsingGET_0WithHttpInfo(stageId)
+> ApiResponse<RestOpportunityStage> getOpportunityStageUsingGET getOpportunityStageUsingGETWithHttpInfo(stageId)
 
 Retrieve an Opportunity Stage
 
@@ -799,12 +799,12 @@ Retrieves the specified Opportunity Stage
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -814,12 +814,12 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
         try {
-            ApiResponse<RestOpportunityStage> response = apiInstance.getOpportunityStageUsingGET_0WithHttpInfo(stageId);
+            ApiResponse<RestOpportunityStage> response = apiInstance.getOpportunityStageUsingGETWithHttpInfo(stageId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#getOpportunityStageUsingGET_0");
+            System.err.println("Exception when calling OpportunityApi#getOpportunityStageUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -859,9 +859,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getOpportunityUsingGET1_0
+## getOpportunityUsingGET1
 
-> RestV2Opportunity getOpportunityUsingGET1_0(opportunityId)
+> RestV2Opportunity getOpportunityUsingGET1(opportunityId)
 
 Retrieve a Opportunity
 
@@ -871,11 +871,11 @@ Retrieves the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -885,10 +885,10 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
         try {
-            RestV2Opportunity result = apiInstance.getOpportunityUsingGET1_0(opportunityId);
+            RestV2Opportunity result = apiInstance.getOpportunityUsingGET1(opportunityId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#getOpportunityUsingGET1_0");
+            System.err.println("Exception when calling OpportunityApi#getOpportunityUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -927,9 +927,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getOpportunityUsingGET1_0WithHttpInfo
+## getOpportunityUsingGET1WithHttpInfo
 
-> ApiResponse<RestV2Opportunity> getOpportunityUsingGET1_0 getOpportunityUsingGET1_0WithHttpInfo(opportunityId)
+> ApiResponse<RestV2Opportunity> getOpportunityUsingGET1 getOpportunityUsingGET1WithHttpInfo(opportunityId)
 
 Retrieve a Opportunity
 
@@ -939,12 +939,12 @@ Retrieves the specified Opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -954,12 +954,12 @@ public class Example {
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.getOpportunityUsingGET1_0WithHttpInfo(opportunityId);
+            ApiResponse<RestV2Opportunity> response = apiInstance.getOpportunityUsingGET1WithHttpInfo(opportunityId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#getOpportunityUsingGET1_0");
+            System.err.println("Exception when calling OpportunityApi#getOpportunityUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -999,9 +999,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## listOpportunitiesUsingGET1_0
+## listOpportunitiesUsingGET1
 
-> ListOpportunitiesResponse listOpportunitiesUsingGET1_0(fields, filter, orderBy, pageSize, pageToken)
+> ListOpportunitiesResponse listOpportunitiesUsingGET1(fields, filter, orderBy, pageSize, pageToken)
 
 List Opportunities
 
@@ -1011,11 +1011,11 @@ Retrieves a list of all Opportunities.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1029,10 +1029,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListOpportunitiesResponse result = apiInstance.listOpportunitiesUsingGET1_0(fields, filter, orderBy, pageSize, pageToken);
+            ListOpportunitiesResponse result = apiInstance.listOpportunitiesUsingGET1(fields, filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#listOpportunitiesUsingGET1_0");
+            System.err.println("Exception when calling OpportunityApi#listOpportunitiesUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1075,9 +1075,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listOpportunitiesUsingGET1_0WithHttpInfo
+## listOpportunitiesUsingGET1WithHttpInfo
 
-> ApiResponse<ListOpportunitiesResponse> listOpportunitiesUsingGET1_0 listOpportunitiesUsingGET1_0WithHttpInfo(fields, filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListOpportunitiesResponse> listOpportunitiesUsingGET1 listOpportunitiesUsingGET1WithHttpInfo(fields, filter, orderBy, pageSize, pageToken)
 
 List Opportunities
 
@@ -1087,12 +1087,12 @@ Retrieves a list of all Opportunities.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1106,12 +1106,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListOpportunitiesResponse> response = apiInstance.listOpportunitiesUsingGET1_0WithHttpInfo(fields, filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListOpportunitiesResponse> response = apiInstance.listOpportunitiesUsingGET1WithHttpInfo(fields, filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#listOpportunitiesUsingGET1_0");
+            System.err.println("Exception when calling OpportunityApi#listOpportunitiesUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1155,9 +1155,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## listOpportunityStagesUsingGET_0
+## listOpportunityStagesUsingGET
 
-> ListOpportunityStagesResponse listOpportunityStagesUsingGET_0(filter, orderBy, pageSize, pageToken)
+> ListOpportunityStagesResponse listOpportunityStagesUsingGET(filter, orderBy, pageSize, pageToken)
 
 List of Opportunity Stages
 
@@ -1167,11 +1167,11 @@ Retrieves a list of Opportunity Stages.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1184,10 +1184,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListOpportunityStagesResponse result = apiInstance.listOpportunityStagesUsingGET_0(filter, orderBy, pageSize, pageToken);
+            ListOpportunityStagesResponse result = apiInstance.listOpportunityStagesUsingGET(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#listOpportunityStagesUsingGET_0");
+            System.err.println("Exception when calling OpportunityApi#listOpportunityStagesUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1229,9 +1229,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listOpportunityStagesUsingGET_0WithHttpInfo
+## listOpportunityStagesUsingGETWithHttpInfo
 
-> ApiResponse<ListOpportunityStagesResponse> listOpportunityStagesUsingGET_0 listOpportunityStagesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListOpportunityStagesResponse> listOpportunityStagesUsingGET listOpportunityStagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List of Opportunity Stages
 
@@ -1241,12 +1241,12 @@ Retrieves a list of Opportunity Stages.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1259,12 +1259,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListOpportunityStagesResponse> response = apiInstance.listOpportunityStagesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListOpportunityStagesResponse> response = apiInstance.listOpportunityStagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#listOpportunityStagesUsingGET_0");
+            System.err.println("Exception when calling OpportunityApi#listOpportunityStagesUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1307,9 +1307,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## updateOpportunityCustomFieldUsingPATCH_0
+## updateOpportunityCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH_0(customFieldId, request, updateMask)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -1319,11 +1319,11 @@ Updates a custom field of the specified type and options to the Opportunity obje
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1335,10 +1335,10 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateOpportunityCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#updateOpportunityCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling OpportunityApi#updateOpportunityCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1379,9 +1379,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo
+## updateOpportunityCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCH_0 updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCH updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -1391,12 +1391,12 @@ Updates a custom field of the specified type and options to the Opportunity obje
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1408,12 +1408,12 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#updateOpportunityCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling OpportunityApi#updateOpportunityCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1455,9 +1455,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## updateOpportunityUsingPATCH_0
+## updateOpportunityUsingPATCH
 
-> RestV2Opportunity updateOpportunityUsingPATCH_0(opportunityId, request, updateMask)
+> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, updateMask)
 
 Update an opportunity
 
@@ -1467,11 +1467,11 @@ Updates specified values of a given opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1483,10 +1483,10 @@ public class Example {
         PatchOpportunityRequest request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            RestV2Opportunity result = apiInstance.updateOpportunityUsingPATCH_0(opportunityId, request, updateMask);
+            RestV2Opportunity result = apiInstance.updateOpportunityUsingPATCH(opportunityId, request, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#updateOpportunityUsingPATCH_0");
+            System.err.println("Exception when calling OpportunityApi#updateOpportunityUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1527,9 +1527,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## updateOpportunityUsingPATCH_0WithHttpInfo
+## updateOpportunityUsingPATCHWithHttpInfo
 
-> ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCH_0 updateOpportunityUsingPATCH_0WithHttpInfo(opportunityId, request, updateMask)
+> ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCH updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask)
 
 Update an opportunity
 
@@ -1539,12 +1539,12 @@ Updates specified values of a given opportunity
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.OpportunityApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.OpportunityApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1556,12 +1556,12 @@ public class Example {
         PatchOpportunityRequest request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.updateOpportunityUsingPATCH_0WithHttpInfo(opportunityId, request, updateMask);
+            ApiResponse<RestV2Opportunity> response = apiInstance.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling OpportunityApi#updateOpportunityUsingPATCH_0");
+            System.err.println("Exception when calling OpportunityApi#updateOpportunityUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

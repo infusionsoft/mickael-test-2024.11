@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _superagent = _interopRequireDefault(require("superagent"));
-var _querystring = _interopRequireDefault(require("querystring"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +25,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
  */
 /**
 * @module com.keap.sdk.core/ApiClient
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -67,7 +66,7 @@ var ApiClient = /*#__PURE__*/function () {
      * @default {}
      */
     this.defaultHeaders = {
-      'User-Agent': 'core -service-core-javascript/dev-2024.1125.0009-a0bbb4902f'
+      'User-Agent': 'core-service-core-javascript/0.0.18'
     };
 
     /**
@@ -435,7 +434,10 @@ var ApiClient = /*#__PURE__*/function () {
         }
       }
       if (contentType === 'application/x-www-form-urlencoded') {
-        request.send(_querystring["default"].stringify(this.normalizeParams(formParams)));
+        var normalizedParams = this.normalizeParams(formParams);
+        var urlSearchParams = new URLSearchParams(normalizedParams);
+        var queryString = urlSearchParams.toString();
+        request.send(queryString);
       } else if (contentType == 'multipart/form-data') {
         var _formParams = this.normalizeParams(formParams);
         for (var key in _formParams) {

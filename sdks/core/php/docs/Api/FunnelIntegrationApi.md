@@ -4,15 +4,15 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createFunnelIntegrationUsingPOST_0()**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
-| [**createIntegrationTriggerEventUsingPOST_0()**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
-| [**deleteFunnelIntegrationUsingPOST_0()**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**createFunnelIntegrationUsingPOST()**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
+| [**createIntegrationTriggerEventUsingPOST()**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**deleteFunnelIntegrationUsingPOST()**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 
 
-## `createFunnelIntegrationUsingPOST_0()`
+## `createFunnelIntegrationUsingPOST()`
 
 ```php
-createFunnelIntegrationUsingPOST_0($create_funnel_integration_request)
+createFunnelIntegrationUsingPOST($create_funnel_integration_request)
 ```
 
 Create Funnel Integrations into the app.
@@ -34,9 +34,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\FunnelIntegrationApi(
 $create_funnel_integration_request = new \Com\Keap\Sdk\Core\Model\CreateFunnelIntegrationRequest(); // \Com\Keap\Sdk\Core\Model\CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
 
 try {
-    $apiInstance->createFunnelIntegrationUsingPOST_0($create_funnel_integration_request);
+    $apiInstance->createFunnelIntegrationUsingPOST($create_funnel_integration_request);
 } catch (Exception $e) {
-    echo 'Exception when calling FunnelIntegrationApi->createFunnelIntegrationUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FunnelIntegrationApi->createFunnelIntegrationUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -63,10 +63,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createIntegrationTriggerEventUsingPOST_0()`
+## `createIntegrationTriggerEventUsingPOST()`
 
 ```php
-createIntegrationTriggerEventUsingPOST_0($create_funnel_integration_trigger_events): \Com\Keap\Sdk\Core\Model\FunnelIntegrationTriggerResultDTO[]
+createIntegrationTriggerEventUsingPOST($create_funnel_integration_trigger_events): \Com\Keap\Sdk\Core\Model\FunnelIntegrationTriggerResultDTO[]
 ```
 
 Achieve Funnel Integration Trigger Goal
@@ -86,10 +86,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\FunnelIntegrationApi(
 $create_funnel_integration_trigger_events = new \Com\Keap\Sdk\Core\Model\CreateFunnelIntegrationTriggerEvents(); // \Com\Keap\Sdk\Core\Model\CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
 
 try {
-    $result = $apiInstance->createIntegrationTriggerEventUsingPOST_0($create_funnel_integration_trigger_events);
+    $result = $apiInstance->createIntegrationTriggerEventUsingPOST($create_funnel_integration_trigger_events);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FunnelIntegrationApi->createIntegrationTriggerEventUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FunnelIntegrationApi->createIntegrationTriggerEventUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -116,10 +116,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteFunnelIntegrationUsingPOST_0()`
+## `deleteFunnelIntegrationUsingPOST()`
 
 ```php
-deleteFunnelIntegrationUsingPOST_0($delete_funnel_integration_request)
+deleteFunnelIntegrationUsingPOST($delete_funnel_integration_request)
 ```
 
 Deletes Funnel Integrations from the app.
@@ -141,9 +141,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\FunnelIntegrationApi(
 $delete_funnel_integration_request = new \Com\Keap\Sdk\Core\Model\DeleteFunnelIntegrationRequest(); // \Com\Keap\Sdk\Core\Model\DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
 
 try {
-    $apiInstance->deleteFunnelIntegrationUsingPOST_0($delete_funnel_integration_request);
+    $apiInstance->deleteFunnelIntegrationUsingPOST($delete_funnel_integration_request);
 } catch (Exception $e) {
-    echo 'Exception when calling FunnelIntegrationApi->deleteFunnelIntegrationUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FunnelIntegrationApi->deleteFunnelIntegrationUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

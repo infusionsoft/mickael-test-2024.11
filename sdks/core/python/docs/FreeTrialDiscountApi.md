@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_discount_using_delete1_0**](FreeTrialDiscountApi.md#delete_discount_using_delete1_0) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+[**delete_discount_using_delete1**](FreeTrialDiscountApi.md#delete_discount_using_delete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 
 
-# **delete_discount_using_delete1_0**
-> delete_discount_using_delete1_0(discount_id)
+# **delete_discount_using_delete1**
+> delete_discount_using_delete1(discount_id)
 
 Delete a Free Trial Discount
 
@@ -36,9 +36,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete a Free Trial Discount
-        api_instance.delete_discount_using_delete1_0(discount_id)
+        api_instance.delete_discount_using_delete1(discount_id)
     except Exception as e:
-        print("Exception when calling FreeTrialDiscountApi->delete_discount_using_delete1_0: %s\n" % e)
+        print("Exception when calling FreeTrialDiscountApi->delete_discount_using_delete1: %s\n" % e)
 ```
 
 

@@ -1,4 +1,4 @@
-# KeapRestApi.FunnelIntegrationTriggerEventDTO
+# KeapCoreServiceCoreSdk.FunnelIntegrationTriggerEventDTO
 
 ## Properties
 

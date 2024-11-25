@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteDiscountUsingDELETE1_0**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1_0) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+[**deleteDiscountUsingDELETE1**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 
 
-# **deleteDiscountUsingDELETE1_0**
-> void deleteDiscountUsingDELETE1_0()
+# **deleteDiscountUsingDELETE1**
+> void deleteDiscountUsingDELETE1()
 
 Deletes a specified Free Trial Discount
 
@@ -17,17 +17,17 @@ Deletes a specified Free Trial Discount
 
 ```typescript
 import { createConfiguration, FreeTrialDiscountApi } from '';
-import type { FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request } from '';
+import type { FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new FreeTrialDiscountApi(configuration);
 
-const request: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request = {
+const request: FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request = {
     // discount_id
   discountId: "discount_id_example",
 };
 
-const data = await apiInstance.deleteDiscountUsingDELETE1_0(request);
+const data = await apiInstance.deleteDiscountUsingDELETE1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

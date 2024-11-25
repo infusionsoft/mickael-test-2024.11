@@ -1,4 +1,4 @@
-# KeapRestApi.RestV2User
+# KeapCoreServiceCoreSdk.RestV2User
 
 ## Properties
 

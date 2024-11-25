@@ -1,4 +1,4 @@
-# KeapRestApi.LandingPage
+# KeapCoreServiceCoreSdk.LandingPage
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.Criteria
+# KeapCoreServiceCoreSdk.Criteria
 
 ## Properties
 

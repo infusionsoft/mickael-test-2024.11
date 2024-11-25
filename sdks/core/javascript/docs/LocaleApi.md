@@ -1,27 +1,27 @@
-# KeapRestApi.LocaleApi
+# KeapCoreServiceCoreSdk.LocaleApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listCountriesUsingGET2_0**](LocaleApi.md#listCountriesUsingGET2_0) | **GET** /v2/locales/countries | List Countries
-[**listProvincesForCountryUsingGET_0**](LocaleApi.md#listProvincesForCountryUsingGET_0) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
+[**listCountriesUsingGET2**](LocaleApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
+[**listProvincesForCountryUsingGET**](LocaleApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
 
 
 
-## listCountriesUsingGET2_0
+## listCountriesUsingGET2
 
-> ListCountriesResponse listCountriesUsingGET2_0()
+> ListCountriesResponse listCountriesUsingGET2()
 
 List Countries
 
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.LocaleApi();
-apiInstance.listCountriesUsingGET2_0().then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.LocaleApi();
+apiInstance.listCountriesUsingGET2().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -47,20 +47,20 @@ No authorization required
 - **Accept**: application/json
 
 
-## listProvincesForCountryUsingGET_0
+## listProvincesForCountryUsingGET
 
-> ListProvincesResponse listProvincesForCountryUsingGET_0(countryCode)
+> ListProvincesResponse listProvincesForCountryUsingGET(countryCode)
 
 List a Country&#39;s Provinces
 
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.LocaleApi();
+let apiInstance = new KeapCoreServiceCoreSdk.LocaleApi();
 let countryCode = "countryCode_example"; // String | country_code
-apiInstance.listProvincesForCountryUsingGET_0(countryCode).then((data) => {
+apiInstance.listProvincesForCountryUsingGET(countryCode).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

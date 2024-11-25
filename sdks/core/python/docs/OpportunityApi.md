@@ -4,21 +4,21 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_opportunity_custom_fields_using_post_0**](OpportunityApi.md#create_opportunity_custom_fields_using_post_0) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
-[**create_opportunity_stage_using_post_0**](OpportunityApi.md#create_opportunity_stage_using_post_0) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
-[**create_opportunity_using_post1_0**](OpportunityApi.md#create_opportunity_using_post1_0) | **POST** /v2/opportunities | Create an Opportunity
-[**delete_opportunity_stage_using_delete_0**](OpportunityApi.md#delete_opportunity_stage_using_delete_0) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
-[**delete_opportunity_using_delete_0**](OpportunityApi.md#delete_opportunity_using_delete_0) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
-[**get_opportunity_stage_using_get_0**](OpportunityApi.md#get_opportunity_stage_using_get_0) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
-[**get_opportunity_using_get1_0**](OpportunityApi.md#get_opportunity_using_get1_0) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
-[**list_opportunities_using_get1_0**](OpportunityApi.md#list_opportunities_using_get1_0) | **GET** /v2/opportunities | List Opportunities
-[**list_opportunity_stages_using_get_0**](OpportunityApi.md#list_opportunity_stages_using_get_0) | **GET** /v2/opportunities/stages | List of Opportunity Stages
-[**update_opportunity_custom_field_using_patch_0**](OpportunityApi.md#update_opportunity_custom_field_using_patch_0) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
-[**update_opportunity_using_patch_0**](OpportunityApi.md#update_opportunity_using_patch_0) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
+[**create_opportunity_custom_fields_using_post**](OpportunityApi.md#create_opportunity_custom_fields_using_post) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
+[**create_opportunity_stage_using_post**](OpportunityApi.md#create_opportunity_stage_using_post) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
+[**create_opportunity_using_post1**](OpportunityApi.md#create_opportunity_using_post1) | **POST** /v2/opportunities | Create an Opportunity
+[**delete_opportunity_stage_using_delete**](OpportunityApi.md#delete_opportunity_stage_using_delete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
+[**delete_opportunity_using_delete**](OpportunityApi.md#delete_opportunity_using_delete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
+[**get_opportunity_stage_using_get**](OpportunityApi.md#get_opportunity_stage_using_get) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
+[**get_opportunity_using_get1**](OpportunityApi.md#get_opportunity_using_get1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
+[**list_opportunities_using_get1**](OpportunityApi.md#list_opportunities_using_get1) | **GET** /v2/opportunities | List Opportunities
+[**list_opportunity_stages_using_get**](OpportunityApi.md#list_opportunity_stages_using_get) | **GET** /v2/opportunities/stages | List of Opportunity Stages
+[**update_opportunity_custom_field_using_patch**](OpportunityApi.md#update_opportunity_custom_field_using_patch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
+[**update_opportunity_using_patch**](OpportunityApi.md#update_opportunity_using_patch) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 
 
-# **create_opportunity_custom_fields_using_post_0**
-> CustomFieldMetaData create_opportunity_custom_fields_using_post_0(custom_field)
+# **create_opportunity_custom_fields_using_post**
+> CustomFieldMetaData create_opportunity_custom_fields_using_post(custom_field)
 
 Create an Opportunity Custom Field
 
@@ -48,11 +48,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Opportunity Custom Field
-        api_response = api_instance.create_opportunity_custom_fields_using_post_0(custom_field)
-        print("The response of OpportunityApi->create_opportunity_custom_fields_using_post_0:\n")
+        api_response = api_instance.create_opportunity_custom_fields_using_post(custom_field)
+        print("The response of OpportunityApi->create_opportunity_custom_fields_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->create_opportunity_custom_fields_using_post_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->create_opportunity_custom_fields_using_post: %s\n" % e)
 ```
 
 
@@ -86,8 +86,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_opportunity_stage_using_post_0**
-> RestOpportunityStage create_opportunity_stage_using_post_0(opportunity_stage=opportunity_stage)
+# **create_opportunity_stage_using_post**
+> RestOpportunityStage create_opportunity_stage_using_post(opportunity_stage=opportunity_stage)
 
 Create an Opportunity Stage
 
@@ -117,11 +117,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Opportunity Stage
-        api_response = api_instance.create_opportunity_stage_using_post_0(opportunity_stage=opportunity_stage)
-        print("The response of OpportunityApi->create_opportunity_stage_using_post_0:\n")
+        api_response = api_instance.create_opportunity_stage_using_post(opportunity_stage=opportunity_stage)
+        print("The response of OpportunityApi->create_opportunity_stage_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->create_opportunity_stage_using_post_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->create_opportunity_stage_using_post: %s\n" % e)
 ```
 
 
@@ -155,8 +155,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_opportunity_using_post1_0**
-> RestV2Opportunity create_opportunity_using_post1_0(opportunity=opportunity)
+# **create_opportunity_using_post1**
+> RestV2Opportunity create_opportunity_using_post1(opportunity=opportunity)
 
 Create an Opportunity
 
@@ -186,11 +186,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Opportunity
-        api_response = api_instance.create_opportunity_using_post1_0(opportunity=opportunity)
-        print("The response of OpportunityApi->create_opportunity_using_post1_0:\n")
+        api_response = api_instance.create_opportunity_using_post1(opportunity=opportunity)
+        print("The response of OpportunityApi->create_opportunity_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->create_opportunity_using_post1_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->create_opportunity_using_post1: %s\n" % e)
 ```
 
 
@@ -224,8 +224,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_opportunity_stage_using_delete_0**
-> delete_opportunity_stage_using_delete_0(stage_id)
+# **delete_opportunity_stage_using_delete**
+> delete_opportunity_stage_using_delete(stage_id)
 
 Delete an Opportunity Stage
 
@@ -253,9 +253,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete an Opportunity Stage
-        api_instance.delete_opportunity_stage_using_delete_0(stage_id)
+        api_instance.delete_opportunity_stage_using_delete(stage_id)
     except Exception as e:
-        print("Exception when calling OpportunityApi->delete_opportunity_stage_using_delete_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->delete_opportunity_stage_using_delete: %s\n" % e)
 ```
 
 
@@ -290,8 +290,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_opportunity_using_delete_0**
-> delete_opportunity_using_delete_0(opportunity_id)
+# **delete_opportunity_using_delete**
+> delete_opportunity_using_delete(opportunity_id)
 
 Delete an Opportunity
 
@@ -319,9 +319,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete an Opportunity
-        api_instance.delete_opportunity_using_delete_0(opportunity_id)
+        api_instance.delete_opportunity_using_delete(opportunity_id)
     except Exception as e:
-        print("Exception when calling OpportunityApi->delete_opportunity_using_delete_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->delete_opportunity_using_delete: %s\n" % e)
 ```
 
 
@@ -356,8 +356,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_opportunity_stage_using_get_0**
-> RestOpportunityStage get_opportunity_stage_using_get_0(stage_id)
+# **get_opportunity_stage_using_get**
+> RestOpportunityStage get_opportunity_stage_using_get(stage_id)
 
 Retrieve an Opportunity Stage
 
@@ -386,11 +386,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve an Opportunity Stage
-        api_response = api_instance.get_opportunity_stage_using_get_0(stage_id)
-        print("The response of OpportunityApi->get_opportunity_stage_using_get_0:\n")
+        api_response = api_instance.get_opportunity_stage_using_get(stage_id)
+        print("The response of OpportunityApi->get_opportunity_stage_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->get_opportunity_stage_using_get_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->get_opportunity_stage_using_get: %s\n" % e)
 ```
 
 
@@ -425,8 +425,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_opportunity_using_get1_0**
-> RestV2Opportunity get_opportunity_using_get1_0(opportunity_id)
+# **get_opportunity_using_get1**
+> RestV2Opportunity get_opportunity_using_get1(opportunity_id)
 
 Retrieve a Opportunity
 
@@ -455,11 +455,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve a Opportunity
-        api_response = api_instance.get_opportunity_using_get1_0(opportunity_id)
-        print("The response of OpportunityApi->get_opportunity_using_get1_0:\n")
+        api_response = api_instance.get_opportunity_using_get1(opportunity_id)
+        print("The response of OpportunityApi->get_opportunity_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->get_opportunity_using_get1_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->get_opportunity_using_get1: %s\n" % e)
 ```
 
 
@@ -494,8 +494,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_opportunities_using_get1_0**
-> ListOpportunitiesResponse list_opportunities_using_get1_0(fields=fields, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_opportunities_using_get1**
+> ListOpportunitiesResponse list_opportunities_using_get1(fields=fields, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Opportunities
 
@@ -528,11 +528,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Opportunities
-        api_response = api_instance.list_opportunities_using_get1_0(fields=fields, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of OpportunityApi->list_opportunities_using_get1_0:\n")
+        api_response = api_instance.list_opportunities_using_get1(fields=fields, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of OpportunityApi->list_opportunities_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->list_opportunities_using_get1_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->list_opportunities_using_get1: %s\n" % e)
 ```
 
 
@@ -571,8 +571,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_opportunity_stages_using_get_0**
-> ListOpportunityStagesResponse list_opportunity_stages_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_opportunity_stages_using_get**
+> ListOpportunityStagesResponse list_opportunity_stages_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List of Opportunity Stages
 
@@ -604,11 +604,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List of Opportunity Stages
-        api_response = api_instance.list_opportunity_stages_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of OpportunityApi->list_opportunity_stages_using_get_0:\n")
+        api_response = api_instance.list_opportunity_stages_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of OpportunityApi->list_opportunity_stages_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->list_opportunity_stages_using_get_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->list_opportunity_stages_using_get: %s\n" % e)
 ```
 
 
@@ -646,8 +646,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_opportunity_custom_field_using_patch_0**
-> CustomFieldMetaData update_opportunity_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
+# **update_opportunity_custom_field_using_patch**
+> CustomFieldMetaData update_opportunity_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
 Update a Opportunity's Custom Field
 
@@ -679,11 +679,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Opportunity's Custom Field
-        api_response = api_instance.update_opportunity_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
-        print("The response of OpportunityApi->update_opportunity_custom_field_using_patch_0:\n")
+        api_response = api_instance.update_opportunity_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        print("The response of OpportunityApi->update_opportunity_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->update_opportunity_custom_field_using_patch_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->update_opportunity_custom_field_using_patch: %s\n" % e)
 ```
 
 
@@ -720,8 +720,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_opportunity_using_patch_0**
-> RestV2Opportunity update_opportunity_using_patch_0(opportunity_id, request, update_mask=update_mask)
+# **update_opportunity_using_patch**
+> RestV2Opportunity update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
 
 Update an opportunity
 
@@ -753,11 +753,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update an opportunity
-        api_response = api_instance.update_opportunity_using_patch_0(opportunity_id, request, update_mask=update_mask)
-        print("The response of OpportunityApi->update_opportunity_using_patch_0:\n")
+        api_response = api_instance.update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
+        print("The response of OpportunityApi->update_opportunity_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OpportunityApi->update_opportunity_using_patch_0: %s\n" % e)
+        print("Exception when calling OpportunityApi->update_opportunity_using_patch: %s\n" % e)
 ```
 
 

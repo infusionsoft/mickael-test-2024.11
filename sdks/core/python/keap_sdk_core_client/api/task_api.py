@@ -48,7 +48,7 @@ class TaskApi:
 
 
     @validate_call
-    def create_task_custom_field_using_post1_0(
+    def create_task_custom_field_using_post1(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -92,7 +92,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_task_custom_field_using_post1_0_serialize(
+        _param = self._create_task_custom_field_using_post1_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -116,7 +116,7 @@ class TaskApi:
 
 
     @validate_call
-    def create_task_custom_field_using_post1_0_with_http_info(
+    def create_task_custom_field_using_post1_with_http_info(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -160,7 +160,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_task_custom_field_using_post1_0_serialize(
+        _param = self._create_task_custom_field_using_post1_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -184,7 +184,7 @@ class TaskApi:
 
 
     @validate_call
-    def create_task_custom_field_using_post1_0_without_preload_content(
+    def create_task_custom_field_using_post1_without_preload_content(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -228,7 +228,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_task_custom_field_using_post1_0_serialize(
+        _param = self._create_task_custom_field_using_post1_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -247,7 +247,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _create_task_custom_field_using_post1_0_serialize(
+    def _create_task_custom_field_using_post1_serialize(
         self,
         custom_field,
         _request_auth,
@@ -324,7 +324,7 @@ class TaskApi:
 
 
     @validate_call
-    def create_task_using_post1_0(
+    def create_task_using_post1(
         self,
         task: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
@@ -368,7 +368,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_task_using_post1_0_serialize(
+        _param = self._create_task_using_post1_serialize(
             task=task,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -392,7 +392,7 @@ class TaskApi:
 
 
     @validate_call
-    def create_task_using_post1_0_with_http_info(
+    def create_task_using_post1_with_http_info(
         self,
         task: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
@@ -436,7 +436,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_task_using_post1_0_serialize(
+        _param = self._create_task_using_post1_serialize(
             task=task,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -460,7 +460,7 @@ class TaskApi:
 
 
     @validate_call
-    def create_task_using_post1_0_without_preload_content(
+    def create_task_using_post1_without_preload_content(
         self,
         task: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
@@ -504,7 +504,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_task_using_post1_0_serialize(
+        _param = self._create_task_using_post1_serialize(
             task=task,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -523,7 +523,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _create_task_using_post1_0_serialize(
+    def _create_task_using_post1_serialize(
         self,
         task,
         _request_auth,
@@ -600,7 +600,7 @@ class TaskApi:
 
 
     @validate_call
-    def delete_task_custom_field_using_delete_0(
+    def delete_task_custom_field_using_delete(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         _request_timeout: Union[
@@ -644,7 +644,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_task_custom_field_using_delete_0_serialize(
+        _param = self._delete_task_custom_field_using_delete_serialize(
             custom_field_id=custom_field_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -669,7 +669,7 @@ class TaskApi:
 
 
     @validate_call
-    def delete_task_custom_field_using_delete_0_with_http_info(
+    def delete_task_custom_field_using_delete_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         _request_timeout: Union[
@@ -713,7 +713,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_task_custom_field_using_delete_0_serialize(
+        _param = self._delete_task_custom_field_using_delete_serialize(
             custom_field_id=custom_field_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -738,7 +738,7 @@ class TaskApi:
 
 
     @validate_call
-    def delete_task_custom_field_using_delete_0_without_preload_content(
+    def delete_task_custom_field_using_delete_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         _request_timeout: Union[
@@ -782,7 +782,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_task_custom_field_using_delete_0_serialize(
+        _param = self._delete_task_custom_field_using_delete_serialize(
             custom_field_id=custom_field_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -802,7 +802,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _delete_task_custom_field_using_delete_0_serialize(
+    def _delete_task_custom_field_using_delete_serialize(
         self,
         custom_field_id,
         _request_auth,
@@ -866,7 +866,7 @@ class TaskApi:
 
 
     @validate_call
-    def delete_task_using_delete1_0(
+    def delete_task_using_delete1(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         _request_timeout: Union[
@@ -910,7 +910,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_task_using_delete1_0_serialize(
+        _param = self._delete_task_using_delete1_serialize(
             task_id=task_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -935,7 +935,7 @@ class TaskApi:
 
 
     @validate_call
-    def delete_task_using_delete1_0_with_http_info(
+    def delete_task_using_delete1_with_http_info(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         _request_timeout: Union[
@@ -979,7 +979,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_task_using_delete1_0_serialize(
+        _param = self._delete_task_using_delete1_serialize(
             task_id=task_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1004,7 +1004,7 @@ class TaskApi:
 
 
     @validate_call
-    def delete_task_using_delete1_0_without_preload_content(
+    def delete_task_using_delete1_without_preload_content(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         _request_timeout: Union[
@@ -1048,7 +1048,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_task_using_delete1_0_serialize(
+        _param = self._delete_task_using_delete1_serialize(
             task_id=task_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1068,7 +1068,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _delete_task_using_delete1_0_serialize(
+    def _delete_task_using_delete1_serialize(
         self,
         task_id,
         _request_auth,
@@ -1132,7 +1132,7 @@ class TaskApi:
 
 
     @validate_call
-    def get_task_using_get1_0(
+    def get_task_using_get1(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         _request_timeout: Union[
@@ -1176,7 +1176,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_task_using_get1_0_serialize(
+        _param = self._get_task_using_get1_serialize(
             task_id=task_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1201,7 +1201,7 @@ class TaskApi:
 
 
     @validate_call
-    def get_task_using_get1_0_with_http_info(
+    def get_task_using_get1_with_http_info(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         _request_timeout: Union[
@@ -1245,7 +1245,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_task_using_get1_0_serialize(
+        _param = self._get_task_using_get1_serialize(
             task_id=task_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1270,7 +1270,7 @@ class TaskApi:
 
 
     @validate_call
-    def get_task_using_get1_0_without_preload_content(
+    def get_task_using_get1_without_preload_content(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         _request_timeout: Union[
@@ -1314,7 +1314,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_task_using_get1_0_serialize(
+        _param = self._get_task_using_get1_serialize(
             task_id=task_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1334,7 +1334,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _get_task_using_get1_0_serialize(
+    def _get_task_using_get1_serialize(
         self,
         task_id,
         _request_auth,
@@ -1398,7 +1398,7 @@ class TaskApi:
 
 
     @validate_call
-    def list_tasks_using_get1_0(
+    def list_tasks_using_get1(
         self,
         end_due_time: Optional[StrictStr] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
@@ -1457,7 +1457,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_tasks_using_get1_0_serialize(
+        _param = self._list_tasks_using_get1_serialize(
             end_due_time=end_due_time,
             filter=filter,
             order_by=order_by,
@@ -1487,7 +1487,7 @@ class TaskApi:
 
 
     @validate_call
-    def list_tasks_using_get1_0_with_http_info(
+    def list_tasks_using_get1_with_http_info(
         self,
         end_due_time: Optional[StrictStr] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
@@ -1546,7 +1546,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_tasks_using_get1_0_serialize(
+        _param = self._list_tasks_using_get1_serialize(
             end_due_time=end_due_time,
             filter=filter,
             order_by=order_by,
@@ -1576,7 +1576,7 @@ class TaskApi:
 
 
     @validate_call
-    def list_tasks_using_get1_0_without_preload_content(
+    def list_tasks_using_get1_without_preload_content(
         self,
         end_due_time: Optional[StrictStr] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
@@ -1635,7 +1635,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_tasks_using_get1_0_serialize(
+        _param = self._list_tasks_using_get1_serialize(
             end_due_time=end_due_time,
             filter=filter,
             order_by=order_by,
@@ -1660,7 +1660,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _list_tasks_using_get1_0_serialize(
+    def _list_tasks_using_get1_serialize(
         self,
         end_due_time,
         filter,
@@ -1751,7 +1751,7 @@ class TaskApi:
 
 
     @validate_call
-    def patch_task_using_patch_0(
+    def patch_task_using_patch(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
@@ -1801,7 +1801,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_task_using_patch_0_serialize(
+        _param = self._patch_task_using_patch_serialize(
             task_id=task_id,
             update_mask=update_mask,
             task=task,
@@ -1828,7 +1828,7 @@ class TaskApi:
 
 
     @validate_call
-    def patch_task_using_patch_0_with_http_info(
+    def patch_task_using_patch_with_http_info(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
@@ -1878,7 +1878,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_task_using_patch_0_serialize(
+        _param = self._patch_task_using_patch_serialize(
             task_id=task_id,
             update_mask=update_mask,
             task=task,
@@ -1905,7 +1905,7 @@ class TaskApi:
 
 
     @validate_call
-    def patch_task_using_patch_0_without_preload_content(
+    def patch_task_using_patch_without_preload_content(
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
@@ -1955,7 +1955,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_task_using_patch_0_serialize(
+        _param = self._patch_task_using_patch_serialize(
             task_id=task_id,
             update_mask=update_mask,
             task=task,
@@ -1977,7 +1977,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _patch_task_using_patch_0_serialize(
+    def _patch_task_using_patch_serialize(
         self,
         task_id,
         update_mask,
@@ -2063,7 +2063,7 @@ class TaskApi:
 
 
     @validate_call
-    def retrieve_task_model_using_get1_0(
+    def retrieve_task_model_using_get1(
         self,
         _request_timeout: Union[
             None,
@@ -2104,7 +2104,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_task_model_using_get1_0_serialize(
+        _param = self._retrieve_task_model_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2128,7 +2128,7 @@ class TaskApi:
 
 
     @validate_call
-    def retrieve_task_model_using_get1_0_with_http_info(
+    def retrieve_task_model_using_get1_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -2169,7 +2169,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_task_model_using_get1_0_serialize(
+        _param = self._retrieve_task_model_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2193,7 +2193,7 @@ class TaskApi:
 
 
     @validate_call
-    def retrieve_task_model_using_get1_0_without_preload_content(
+    def retrieve_task_model_using_get1_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -2234,7 +2234,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_task_model_using_get1_0_serialize(
+        _param = self._retrieve_task_model_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2253,7 +2253,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _retrieve_task_model_using_get1_0_serialize(
+    def _retrieve_task_model_using_get1_serialize(
         self,
         _request_auth,
         _content_type,
@@ -2314,7 +2314,7 @@ class TaskApi:
 
 
     @validate_call
-    def update_task_custom_field_using_patch_0(
+    def update_task_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2364,7 +2364,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_task_custom_field_using_patch_0_serialize(
+        _param = self._update_task_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2391,7 +2391,7 @@ class TaskApi:
 
 
     @validate_call
-    def update_task_custom_field_using_patch_0_with_http_info(
+    def update_task_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2441,7 +2441,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_task_custom_field_using_patch_0_serialize(
+        _param = self._update_task_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2468,7 +2468,7 @@ class TaskApi:
 
 
     @validate_call
-    def update_task_custom_field_using_patch_0_without_preload_content(
+    def update_task_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2518,7 +2518,7 @@ class TaskApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_task_custom_field_using_patch_0_serialize(
+        _param = self._update_task_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2540,7 +2540,7 @@ class TaskApi:
         return response_data.response
 
 
-    def _update_task_custom_field_using_patch_0_serialize(
+    def _update_task_custom_field_using_patch_serialize(
         self,
         custom_field_id,
         request,

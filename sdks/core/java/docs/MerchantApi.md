@@ -4,14 +4,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**listMerchantsUsingGET_0**](MerchantApi.md#listMerchantsUsingGET_0) | **GET** /v2/merchants | List Merchant accounts |
-| [**listMerchantsUsingGET_0WithHttpInfo**](MerchantApi.md#listMerchantsUsingGET_0WithHttpInfo) | **GET** /v2/merchants | List Merchant accounts |
+| [**listMerchantsUsingGET**](MerchantApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts |
+| [**listMerchantsUsingGETWithHttpInfo**](MerchantApi.md#listMerchantsUsingGETWithHttpInfo) | **GET** /v2/merchants | List Merchant accounts |
 
 
 
-## listMerchantsUsingGET_0
+## listMerchantsUsingGET
 
-> ListRestMerchantResponse listMerchantsUsingGET_0(filter, orderBy, pageSize, pageToken)
+> ListRestMerchantResponse listMerchantsUsingGET(filter, orderBy, pageSize, pageToken)
 
 List Merchant accounts
 
@@ -21,11 +21,11 @@ Retrieves a list of Merchant accounts
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.MerchantApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.MerchantApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -38,10 +38,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListRestMerchantResponse result = apiInstance.listMerchantsUsingGET_0(filter, orderBy, pageSize, pageToken);
+            ListRestMerchantResponse result = apiInstance.listMerchantsUsingGET(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling MerchantApi#listMerchantsUsingGET_0");
+            System.err.println("Exception when calling MerchantApi#listMerchantsUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -83,9 +83,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listMerchantsUsingGET_0WithHttpInfo
+## listMerchantsUsingGETWithHttpInfo
 
-> ApiResponse<ListRestMerchantResponse> listMerchantsUsingGET_0 listMerchantsUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListRestMerchantResponse> listMerchantsUsingGET listMerchantsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List Merchant accounts
 
@@ -95,12 +95,12 @@ Retrieves a list of Merchant accounts
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.MerchantApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.MerchantApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -113,12 +113,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListRestMerchantResponse> response = apiInstance.listMerchantsUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListRestMerchantResponse> response = apiInstance.listMerchantsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling MerchantApi#listMerchantsUsingGET_0");
+            System.err.println("Exception when calling MerchantApi#listMerchantsUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

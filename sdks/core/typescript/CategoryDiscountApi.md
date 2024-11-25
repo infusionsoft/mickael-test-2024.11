@@ -4,12 +4,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteDiscountUsingDELETE_0**](CategoryDiscountApi.md#deleteDiscountUsingDELETE_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-[**getDiscountUsingGET_0**](CategoryDiscountApi.md#getDiscountUsingGET_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**deleteDiscountUsingDELETE**](CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
+[**getDiscountUsingGET**](CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 
 
-# **deleteDiscountUsingDELETE_0**
-> void deleteDiscountUsingDELETE_0()
+# **deleteDiscountUsingDELETE**
+> void deleteDiscountUsingDELETE()
 
 Deletes a specified Category Discount
 
@@ -18,17 +18,17 @@ Deletes a specified Category Discount
 
 ```typescript
 import { createConfiguration, CategoryDiscountApi } from '';
-import type { CategoryDiscountApiDeleteDiscountUsingDELETE0Request } from '';
+import type { CategoryDiscountApiDeleteDiscountUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new CategoryDiscountApi(configuration);
 
-const request: CategoryDiscountApiDeleteDiscountUsingDELETE0Request = {
+const request: CategoryDiscountApiDeleteDiscountUsingDELETERequest = {
     // discount_id
   discountId: "discount_id_example",
 };
 
-const data = await apiInstance.deleteDiscountUsingDELETE_0(request);
+const data = await apiInstance.deleteDiscountUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getDiscountUsingGET_0**
-> CategoryDiscount getDiscountUsingGET_0()
+# **getDiscountUsingGET**
+> CategoryDiscount getDiscountUsingGET()
 
 Retrieves a single Category Discount
 
@@ -74,17 +74,17 @@ Retrieves a single Category Discount
 
 ```typescript
 import { createConfiguration, CategoryDiscountApi } from '';
-import type { CategoryDiscountApiGetDiscountUsingGET0Request } from '';
+import type { CategoryDiscountApiGetDiscountUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new CategoryDiscountApi(configuration);
 
-const request: CategoryDiscountApiGetDiscountUsingGET0Request = {
+const request: CategoryDiscountApiGetDiscountUsingGETRequest = {
     // discount_id
   discountId: "discount_id_example",
 };
 
-const data = await apiInstance.getDiscountUsingGET_0(request);
+const data = await apiInstance.getDiscountUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

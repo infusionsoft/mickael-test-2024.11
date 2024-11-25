@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listMerchantsUsingGET_0()**](MerchantApi.md#listMerchantsUsingGET_0) | **GET** /v2/merchants | List Merchant accounts |
+| [**listMerchantsUsingGET()**](MerchantApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts |
 
 
-## `listMerchantsUsingGET_0()`
+## `listMerchantsUsingGET()`
 
 ```php
-listMerchantsUsingGET_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListRestMerchantResponse
+listMerchantsUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListRestMerchantResponse
 ```
 
 List Merchant accounts
@@ -35,10 +35,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listMerchantsUsingGET_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listMerchantsUsingGET($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MerchantApi->listMerchantsUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MerchantApi->listMerchantsUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

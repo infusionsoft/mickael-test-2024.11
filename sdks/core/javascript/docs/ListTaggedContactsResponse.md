@@ -1,4 +1,4 @@
-# KeapRestApi.ListTaggedContactsResponse
+# KeapCoreServiceCoreSdk.ListTaggedContactsResponse
 
 ## Properties
 

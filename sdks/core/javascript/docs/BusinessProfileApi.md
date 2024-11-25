@@ -1,4 +1,4 @@
-# KeapRestApi.BusinessProfileApi
+# KeapCoreServiceCoreSdk.BusinessProfileApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -20,9 +20,9 @@ Retrieves Business Profile information.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.BusinessProfileApi();
+let apiInstance = new KeapCoreServiceCoreSdk.BusinessProfileApi();
 apiInstance.getBusinessProfileUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -60,12 +60,12 @@ Updates Business Profile information.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.BusinessProfileApi();
+let apiInstance = new KeapCoreServiceCoreSdk.BusinessProfileApi();
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-  'businessProfile': new KeapRestApi.PatchBusinessProfileRequest() // PatchBusinessProfileRequest | businessProfile
+  'businessProfile': new KeapCoreServiceCoreSdk.PatchBusinessProfileRequest() // PatchBusinessProfileRequest | businessProfile
 };
 apiInstance.patchBusinessProfileUsingPATCH(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

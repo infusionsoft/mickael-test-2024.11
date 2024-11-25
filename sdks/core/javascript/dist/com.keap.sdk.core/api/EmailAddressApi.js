@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * EmailAddress service.
 * @module com.keap.sdk.core/api/EmailAddressApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var EmailAddressApi = exports["default"] = /*#__PURE__*/function () {
   /**

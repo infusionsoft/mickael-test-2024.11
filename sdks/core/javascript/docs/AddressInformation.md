@@ -1,4 +1,4 @@
-# KeapRestApi.AddressInformation
+# KeapCoreServiceCoreSdk.AddressInformation
 
 ## Properties
 

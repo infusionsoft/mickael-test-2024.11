@@ -1,4 +1,4 @@
-# KeapRestApi.AffiliateAddToProgramRequest
+# KeapCoreServiceCoreSdk.AffiliateAddToProgramRequest
 
 ## Properties
 

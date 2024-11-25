@@ -4,12 +4,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLeadSourceUsingPOST_0**](LeadSourcesApi.md#createLeadSourceUsingPOST_0) | **POST** /v2/leadsources | Create a Lead Source
-[**listLeadSourcesUsingGET_0**](LeadSourcesApi.md#listLeadSourcesUsingGET_0) | **GET** /v2/leadsources | List Lead Sources
+[**createLeadSourceUsingPOST**](LeadSourcesApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
+[**listLeadSourcesUsingGET**](LeadSourcesApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
 
 
-# **createLeadSourceUsingPOST_0**
-> LeadSource createLeadSourceUsingPOST_0()
+# **createLeadSourceUsingPOST**
+> LeadSource createLeadSourceUsingPOST()
 
 Creates a new Lead Source
 
@@ -18,12 +18,12 @@ Creates a new Lead Source
 
 ```typescript
 import { createConfiguration, LeadSourcesApi } from '';
-import type { LeadSourcesApiCreateLeadSourceUsingPOST0Request } from '';
+import type { LeadSourcesApiCreateLeadSourceUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new LeadSourcesApi(configuration);
 
-const request: LeadSourcesApiCreateLeadSourceUsingPOST0Request = {
+const request: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {
     // leadsource (optional)
   leadsource: {
     category: {
@@ -41,7 +41,7 @@ const request: LeadSourcesApiCreateLeadSourceUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createLeadSourceUsingPOST_0(request);
+const data = await apiInstance.createLeadSourceUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -76,8 +76,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listLeadSourcesUsingGET_0**
-> ListLeadSourcesResponse listLeadSourcesUsingGET_0()
+# **listLeadSourcesUsingGET**
+> ListLeadSourcesResponse listLeadSourcesUsingGET()
 
 Retrieves a list of lead sources
 
@@ -86,12 +86,12 @@ Retrieves a list of lead sources
 
 ```typescript
 import { createConfiguration, LeadSourcesApi } from '';
-import type { LeadSourcesApiListLeadSourcesUsingGET0Request } from '';
+import type { LeadSourcesApiListLeadSourcesUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new LeadSourcesApi(configuration);
 
-const request: LeadSourcesApiListLeadSourcesUsingGET0Request = {
+const request: LeadSourcesApiListLeadSourcesUsingGETRequest = {
     // Search filter to apply to results (optional)
   filter: "filter_example",
     // Attribute and direction to order items by. E.g. `given_name desc` (optional)
@@ -102,7 +102,7 @@ const request: LeadSourcesApiListLeadSourcesUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listLeadSourcesUsingGET_0(request);
+const data = await apiInstance.listLeadSourcesUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

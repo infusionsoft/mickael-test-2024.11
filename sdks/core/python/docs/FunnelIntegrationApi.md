@@ -4,13 +4,13 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_funnel_integration_using_post_0**](FunnelIntegrationApi.md#create_funnel_integration_using_post_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-[**create_integration_trigger_event_using_post_0**](FunnelIntegrationApi.md#create_integration_trigger_event_using_post_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-[**delete_funnel_integration_using_post_0**](FunnelIntegrationApi.md#delete_funnel_integration_using_post_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+[**create_funnel_integration_using_post**](FunnelIntegrationApi.md#create_funnel_integration_using_post) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
+[**create_integration_trigger_event_using_post**](FunnelIntegrationApi.md#create_integration_trigger_event_using_post) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+[**delete_funnel_integration_using_post**](FunnelIntegrationApi.md#delete_funnel_integration_using_post) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 
 
-# **create_funnel_integration_using_post_0**
-> create_funnel_integration_using_post_0(create_funnel_integration_request)
+# **create_funnel_integration_using_post**
+> create_funnel_integration_using_post(create_funnel_integration_request)
 
 Create Funnel Integrations into the app.
 
@@ -39,9 +39,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create Funnel Integrations into the app.
-        api_instance.create_funnel_integration_using_post_0(create_funnel_integration_request)
+        api_instance.create_funnel_integration_using_post(create_funnel_integration_request)
     except Exception as e:
-        print("Exception when calling FunnelIntegrationApi->create_funnel_integration_using_post_0: %s\n" % e)
+        print("Exception when calling FunnelIntegrationApi->create_funnel_integration_using_post: %s\n" % e)
 ```
 
 
@@ -75,8 +75,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_integration_trigger_event_using_post_0**
-> List[FunnelIntegrationTriggerResultDTO] create_integration_trigger_event_using_post_0(create_funnel_integration_trigger_events)
+# **create_integration_trigger_event_using_post**
+> List[FunnelIntegrationTriggerResultDTO] create_integration_trigger_event_using_post(create_funnel_integration_trigger_events)
 
 Achieve Funnel Integration Trigger Goal
 
@@ -104,11 +104,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Achieve Funnel Integration Trigger Goal
-        api_response = api_instance.create_integration_trigger_event_using_post_0(create_funnel_integration_trigger_events)
-        print("The response of FunnelIntegrationApi->create_integration_trigger_event_using_post_0:\n")
+        api_response = api_instance.create_integration_trigger_event_using_post(create_funnel_integration_trigger_events)
+        print("The response of FunnelIntegrationApi->create_integration_trigger_event_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling FunnelIntegrationApi->create_integration_trigger_event_using_post_0: %s\n" % e)
+        print("Exception when calling FunnelIntegrationApi->create_integration_trigger_event_using_post: %s\n" % e)
 ```
 
 
@@ -142,8 +142,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_funnel_integration_using_post_0**
-> delete_funnel_integration_using_post_0(delete_funnel_integration_request)
+# **delete_funnel_integration_using_post**
+> delete_funnel_integration_using_post(delete_funnel_integration_request)
 
 Deletes Funnel Integrations from the app.
 
@@ -172,9 +172,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Deletes Funnel Integrations from the app.
-        api_instance.delete_funnel_integration_using_post_0(delete_funnel_integration_request)
+        api_instance.delete_funnel_integration_using_post(delete_funnel_integration_request)
     except Exception as e:
-        print("Exception when calling FunnelIntegrationApi->delete_funnel_integration_using_post_0: %s\n" % e)
+        print("Exception when calling FunnelIntegrationApi->delete_funnel_integration_using_post: %s\n" % e)
 ```
 
 

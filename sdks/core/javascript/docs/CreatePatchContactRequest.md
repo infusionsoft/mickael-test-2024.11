@@ -1,4 +1,4 @@
-# KeapRestApi.CreatePatchContactRequest
+# KeapCoreServiceCoreSdk.CreatePatchContactRequest
 
 ## Properties
 

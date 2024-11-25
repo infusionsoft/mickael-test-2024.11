@@ -1,16 +1,16 @@
-# KeapRestApi.LandingPagesApi
+# KeapCoreServiceCoreSdk.LandingPagesApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listLandingPagesUsingGET_0**](LandingPagesApi.md#listLandingPagesUsingGET_0) | **GET** /v2/landingpages | List Landing Pages
+[**listLandingPagesUsingGET**](LandingPagesApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
 
 
 
-## listLandingPagesUsingGET_0
+## listLandingPagesUsingGET
 
-> ListLandingPagesResponse listLandingPagesUsingGET_0(opts)
+> ListLandingPagesResponse listLandingPagesUsingGET(opts)
 
 List Landing Pages
 
@@ -19,16 +19,16 @@ Retrieves a list of all landing pages
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.LandingPagesApi();
+let apiInstance = new KeapCoreServiceCoreSdk.LandingPagesApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
   'pageSize': 0, // Number | Total number of items to return per page
   'pageToken': "pageToken_example" // String | Page token
 };
-apiInstance.listLandingPagesUsingGET_0(opts).then((data) => {
+apiInstance.listLandingPagesUsingGET(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -1,4 +1,4 @@
-# KeapRestApi.Throwable
+# KeapCoreServiceCoreSdk.Throwable
 
 ## Properties
 

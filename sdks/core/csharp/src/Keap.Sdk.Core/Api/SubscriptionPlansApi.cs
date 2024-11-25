@@ -40,7 +40,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListSubscriptionPlansResponse</returns>
-        ListSubscriptionPlansResponse ListSubscriptionPlansUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListSubscriptionPlansResponse ListSubscriptionPlansUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Subscription Plans
@@ -55,7 +55,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListSubscriptionPlansResponse</returns>
-        ApiResponse<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -79,7 +79,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListSubscriptionPlansResponse</returns>
-        System.Threading.Tasks.Task<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Subscription Plans
@@ -95,7 +95,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListSubscriptionPlansResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListSubscriptionPlansResponse>> ListSubscriptionPlansUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListSubscriptionPlansResponse>> ListSubscriptionPlansUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -226,9 +226,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListSubscriptionPlansResponse</returns>
-        public ListSubscriptionPlansResponse ListSubscriptionPlansUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListSubscriptionPlansResponse ListSubscriptionPlansUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse> localVarResponse = ListSubscriptionPlansUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse> localVarResponse = ListSubscriptionPlansUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -242,7 +242,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListSubscriptionPlansResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -283,7 +283,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "SubscriptionPlansApi.ListSubscriptionPlansUsingGET_0";
+            localVarRequestOptions.Operation = "SubscriptionPlansApi.ListSubscriptionPlansUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -291,7 +291,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListSubscriptionPlansResponse>("/v2/subscriptionPlans", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSubscriptionPlansUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListSubscriptionPlansUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -312,9 +312,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListSubscriptionPlansResponse</returns>
-        public async System.Threading.Tasks.Task<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListSubscriptionPlansResponse> ListSubscriptionPlansUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse> localVarResponse = await ListSubscriptionPlansUsingGET_0WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse> localVarResponse = await ListSubscriptionPlansUsingGETWithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -329,7 +329,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListSubscriptionPlansResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse>> ListSubscriptionPlansUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListSubscriptionPlansResponse>> ListSubscriptionPlansUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -371,7 +371,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "SubscriptionPlansApi.ListSubscriptionPlansUsingGET_0";
+            localVarRequestOptions.Operation = "SubscriptionPlansApi.ListSubscriptionPlansUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -380,7 +380,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSubscriptionPlansUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListSubscriptionPlansUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

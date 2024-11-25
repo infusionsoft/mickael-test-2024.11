@@ -37,7 +37,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteDiscountUsingDELETE1_0(string discountId, int operationIndex = 0);
+        void DeleteDiscountUsingDELETE1(string discountId, int operationIndex = 0);
 
         /// <summary>
         /// Delete a Free Trial Discount
@@ -49,7 +49,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteDiscountUsingDELETE1_0WithHttpInfo(string discountId, int operationIndex = 0);
+        ApiResponse<Object> DeleteDiscountUsingDELETE1WithHttpInfo(string discountId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -70,7 +70,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteDiscountUsingDELETE1_0Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteDiscountUsingDELETE1Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete a Free Trial Discount
@@ -83,7 +83,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDiscountUsingDELETE1_0WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDiscountUsingDELETE1WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -211,9 +211,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteDiscountUsingDELETE1_0(string discountId, int operationIndex = 0)
+        public void DeleteDiscountUsingDELETE1(string discountId, int operationIndex = 0)
         {
-            DeleteDiscountUsingDELETE1_0WithHttpInfo(discountId);
+            DeleteDiscountUsingDELETE1WithHttpInfo(discountId);
         }
 
         /// <summary>
@@ -223,12 +223,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteDiscountUsingDELETE1_0WithHttpInfo(string discountId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteDiscountUsingDELETE1WithHttpInfo(string discountId, int operationIndex = 0)
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling FreeTrialDiscountApi->DeleteDiscountUsingDELETE1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling FreeTrialDiscountApi->DeleteDiscountUsingDELETE1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -255,7 +255,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("discount_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(discountId)); // path parameter
 
-            localVarRequestOptions.Operation = "FreeTrialDiscountApi.DeleteDiscountUsingDELETE1_0";
+            localVarRequestOptions.Operation = "FreeTrialDiscountApi.DeleteDiscountUsingDELETE1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -263,7 +263,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/discounts/freeTrials/{discount_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -281,9 +281,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteDiscountUsingDELETE1_0Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteDiscountUsingDELETE1Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteDiscountUsingDELETE1_0WithHttpInfoAsync(discountId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteDiscountUsingDELETE1WithHttpInfoAsync(discountId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -294,12 +294,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteDiscountUsingDELETE1_0WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteDiscountUsingDELETE1WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling FreeTrialDiscountApi->DeleteDiscountUsingDELETE1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling FreeTrialDiscountApi->DeleteDiscountUsingDELETE1");
             }
 
 
@@ -327,7 +327,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("discount_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(discountId)); // path parameter
 
-            localVarRequestOptions.Operation = "FreeTrialDiscountApi.DeleteDiscountUsingDELETE1_0";
+            localVarRequestOptions.Operation = "FreeTrialDiscountApi.DeleteDiscountUsingDELETE1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -336,7 +336,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

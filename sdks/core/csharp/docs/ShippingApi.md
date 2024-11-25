@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListShippingMethodsUsingGET_0**](ShippingApi.md#listshippingmethodsusingget_0) | **GET** /v2/shipping | List Shipping methods |
+| [**ListShippingMethodsUsingGET**](ShippingApi.md#listshippingmethodsusingget) | **GET** /v2/shipping | List Shipping methods |
 
-<a id="listshippingmethodsusingget_0"></a>
-# **ListShippingMethodsUsingGET_0**
-> ListRestShippingMethodsResponse ListShippingMethodsUsingGET_0 ()
+<a id="listshippingmethodsusingget"></a>
+# **ListShippingMethodsUsingGET**
+> ListRestShippingMethodsResponse ListShippingMethodsUsingGET ()
 
 List Shipping methods
 
@@ -24,7 +24,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListShippingMethodsUsingGET_0Example
+    public class ListShippingMethodsUsingGETExample
     {
         public static void Main()
         {
@@ -35,12 +35,12 @@ namespace Example
             try
             {
                 // List Shipping methods
-                ListRestShippingMethodsResponse result = apiInstance.ListShippingMethodsUsingGET_0();
+                ListRestShippingMethodsResponse result = apiInstance.ListShippingMethodsUsingGET();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ShippingApi.ListShippingMethodsUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling ShippingApi.ListShippingMethodsUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -49,21 +49,21 @@ namespace Example
 }
 ```
 
-#### Using the ListShippingMethodsUsingGET_0WithHttpInfo variant
+#### Using the ListShippingMethodsUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Shipping methods
-    ApiResponse<ListRestShippingMethodsResponse> response = apiInstance.ListShippingMethodsUsingGET_0WithHttpInfo();
+    ApiResponse<ListRestShippingMethodsResponse> response = apiInstance.ListShippingMethodsUsingGETWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ShippingApi.ListShippingMethodsUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ShippingApi.ListShippingMethodsUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

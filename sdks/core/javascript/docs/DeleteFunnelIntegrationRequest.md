@@ -1,4 +1,4 @@
-# KeapRestApi.DeleteFunnelIntegrationRequest
+# KeapCoreServiceCoreSdk.DeleteFunnelIntegrationRequest
 
 ## Properties
 

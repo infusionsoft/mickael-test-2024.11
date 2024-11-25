@@ -1,4 +1,4 @@
-# KeapRestApi.UpdateNoteResponse
+# KeapCoreServiceCoreSdk.UpdateNoteResponse
 
 ## Properties
 

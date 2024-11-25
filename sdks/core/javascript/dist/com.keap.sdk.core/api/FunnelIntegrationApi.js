@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * FunnelIntegration service.
 * @module com.keap.sdk.core/api/FunnelIntegrationApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -53,12 +53,12 @@ var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
   return _createClass(FunnelIntegrationApi, [{
-    key: "createFunnelIntegrationUsingPOST_0WithHttpInfo",
-    value: function createFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest) {
+    key: "createFunnelIntegrationUsingPOSTWithHttpInfo",
+    value: function createFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest) {
       var postBody = createFunnelIntegrationRequest;
       // verify the required parameter 'createFunnelIntegrationRequest' is set
       if (createFunnelIntegrationRequest === undefined || createFunnelIntegrationRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'createFunnelIntegrationRequest' when calling createFunnelIntegrationUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'createFunnelIntegrationRequest' when calling createFunnelIntegrationUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -78,9 +78,9 @@ var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "createFunnelIntegrationUsingPOST_0",
-    value: function createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest) {
-      return this.createFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest).then(function (response_and_data) {
+    key: "createFunnelIntegrationUsingPOST",
+    value: function createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest) {
+      return this.createFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -91,12 +91,12 @@ var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:com.keap.sdk.core/model/FunnelIntegrationTriggerResultDTO>} and HTTP response
      */
   }, {
-    key: "createIntegrationTriggerEventUsingPOST_0WithHttpInfo",
-    value: function createIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents) {
+    key: "createIntegrationTriggerEventUsingPOSTWithHttpInfo",
+    value: function createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents) {
       var postBody = createFunnelIntegrationTriggerEvents;
       // verify the required parameter 'createFunnelIntegrationTriggerEvents' is set
       if (createFunnelIntegrationTriggerEvents === undefined || createFunnelIntegrationTriggerEvents === null) {
-        throw new _Error["default"]("Missing the required parameter 'createFunnelIntegrationTriggerEvents' when calling createIntegrationTriggerEventUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'createFunnelIntegrationTriggerEvents' when calling createIntegrationTriggerEventUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -115,9 +115,9 @@ var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:com.keap.sdk.core/model/FunnelIntegrationTriggerResultDTO>}
      */
   }, {
-    key: "createIntegrationTriggerEventUsingPOST_0",
-    value: function createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents) {
-      return this.createIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents).then(function (response_and_data) {
+    key: "createIntegrationTriggerEventUsingPOST",
+    value: function createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents) {
+      return this.createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -129,12 +129,12 @@ var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteFunnelIntegrationUsingPOST_0WithHttpInfo",
-    value: function deleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest) {
+    key: "deleteFunnelIntegrationUsingPOSTWithHttpInfo",
+    value: function deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest) {
       var postBody = deleteFunnelIntegrationRequest;
       // verify the required parameter 'deleteFunnelIntegrationRequest' is set
       if (deleteFunnelIntegrationRequest === undefined || deleteFunnelIntegrationRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'deleteFunnelIntegrationRequest' when calling deleteFunnelIntegrationUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'deleteFunnelIntegrationRequest' when calling deleteFunnelIntegrationUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -154,9 +154,9 @@ var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteFunnelIntegrationUsingPOST_0",
-    value: function deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest) {
-      return this.deleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest).then(function (response_and_data) {
+    key: "deleteFunnelIntegrationUsingPOST",
+    value: function deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest) {
+      return this.deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

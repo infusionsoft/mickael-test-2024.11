@@ -19,7 +19,7 @@ import Error from '../model/Error';
 /**
 * CategoryDiscount service.
 * @module com.keap.sdk.core/api/CategoryDiscountApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class CategoryDiscountApi {
 
@@ -42,11 +42,11 @@ export default class CategoryDiscountApi {
      * @param {String} discountId discount_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteDiscountUsingDELETE_0WithHttpInfo(discountId) {
+    deleteDiscountUsingDELETEWithHttpInfo(discountId) {
       let postBody = null;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
-        throw new Error("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE_0");
+        throw new Error("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE");
       }
 
       let pathParams = {
@@ -76,8 +76,8 @@ export default class CategoryDiscountApi {
      * @param {String} discountId discount_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteDiscountUsingDELETE_0(discountId) {
-      return this.deleteDiscountUsingDELETE_0WithHttpInfo(discountId)
+    deleteDiscountUsingDELETE(discountId) {
+      return this.deleteDiscountUsingDELETEWithHttpInfo(discountId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -90,11 +90,11 @@ export default class CategoryDiscountApi {
      * @param {String} discountId discount_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CategoryDiscount} and HTTP response
      */
-    getDiscountUsingGET_0WithHttpInfo(discountId) {
+    getDiscountUsingGETWithHttpInfo(discountId) {
       let postBody = null;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
-        throw new Error("Missing the required parameter 'discountId' when calling getDiscountUsingGET_0");
+        throw new Error("Missing the required parameter 'discountId' when calling getDiscountUsingGET");
       }
 
       let pathParams = {
@@ -124,8 +124,8 @@ export default class CategoryDiscountApi {
      * @param {String} discountId discount_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CategoryDiscount}
      */
-    getDiscountUsingGET_0(discountId) {
-      return this.getDiscountUsingGET_0WithHttpInfo(discountId)
+    getDiscountUsingGET(discountId) {
+      return this.getDiscountUsingGETWithHttpInfo(discountId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

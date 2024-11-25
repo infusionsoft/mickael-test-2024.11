@@ -4,19 +4,19 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createTaskCustomFieldUsingPOST1_0**](TaskApi.md#createTaskCustomFieldUsingPOST1_0) | **POST** /v2/tasks/model/customFields | Create a Custom Field
-[**createTaskUsingPOST1_0**](TaskApi.md#createTaskUsingPOST1_0) | **POST** /v2/tasks | Create a Task
-[**deleteTaskCustomFieldUsingDELETE_0**](TaskApi.md#deleteTaskCustomFieldUsingDELETE_0) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
-[**deleteTaskUsingDELETE1_0**](TaskApi.md#deleteTaskUsingDELETE1_0) | **DELETE** /v2/tasks/{task_id} | Delete a Task
-[**getTaskUsingGET1_0**](TaskApi.md#getTaskUsingGET1_0) | **GET** /v2/tasks/{task_id} | Retrieve a Task
-[**listTasksUsingGET1_0**](TaskApi.md#listTasksUsingGET1_0) | **GET** /v2/tasks | List Tasks
-[**patchTaskUsingPATCH_0**](TaskApi.md#patchTaskUsingPATCH_0) | **PATCH** /v2/tasks/{task_id} | Update a Task
-[**retrieveTaskModelUsingGET1_0**](TaskApi.md#retrieveTaskModelUsingGET1_0) | **GET** /v2/tasks/model | Retrieve Task Model
-[**updateTaskCustomFieldUsingPATCH_0**](TaskApi.md#updateTaskCustomFieldUsingPATCH_0) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task\&#39;s Custom Field
+[**createTaskCustomFieldUsingPOST1**](TaskApi.md#createTaskCustomFieldUsingPOST1) | **POST** /v2/tasks/model/customFields | Create a Custom Field
+[**createTaskUsingPOST1**](TaskApi.md#createTaskUsingPOST1) | **POST** /v2/tasks | Create a Task
+[**deleteTaskCustomFieldUsingDELETE**](TaskApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
+[**deleteTaskUsingDELETE1**](TaskApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
+[**getTaskUsingGET1**](TaskApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
+[**listTasksUsingGET1**](TaskApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
+[**patchTaskUsingPATCH**](TaskApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task
+[**retrieveTaskModelUsingGET1**](TaskApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model
+[**updateTaskCustomFieldUsingPATCH**](TaskApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task\&#39;s Custom Field
 
 
-# **createTaskCustomFieldUsingPOST1_0**
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1_0(customField)
+# **createTaskCustomFieldUsingPOST1**
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
 
 Adds a custom field of the specified type and options to the Task object.
 
@@ -25,12 +25,12 @@ Adds a custom field of the specified type and options to the Task object.
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiCreateTaskCustomFieldUsingPOST10Request } from '';
+import type { TaskApiCreateTaskCustomFieldUsingPOST1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiCreateTaskCustomFieldUsingPOST10Request = {
+const request: TaskApiCreateTaskCustomFieldUsingPOST1Request = {
     // customField
   customField: {
     fieldType: "CURRENCY",
@@ -46,7 +46,7 @@ const request: TaskApiCreateTaskCustomFieldUsingPOST10Request = {
   },
 };
 
-const data = await apiInstance.createTaskCustomFieldUsingPOST1_0(request);
+const data = await apiInstance.createTaskCustomFieldUsingPOST1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -81,8 +81,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createTaskUsingPOST1_0**
-> Task createTaskUsingPOST1_0()
+# **createTaskUsingPOST1**
+> Task createTaskUsingPOST1()
 
 Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
 
@@ -91,12 +91,12 @@ Creates a new task as the authenticated user.   This endpoint does not currently
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiCreateTaskUsingPOST10Request } from '';
+import type { TaskApiCreateTaskUsingPOST1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiCreateTaskUsingPOST10Request = {
+const request: TaskApiCreateTaskUsingPOST1Request = {
     // task (optional)
   task: {
     assignedToUserId: "assignedToUserId_example",
@@ -112,7 +112,7 @@ const request: TaskApiCreateTaskUsingPOST10Request = {
   },
 };
 
-const data = await apiInstance.createTaskUsingPOST1_0(request);
+const data = await apiInstance.createTaskUsingPOST1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -147,8 +147,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteTaskCustomFieldUsingDELETE_0**
-> void deleteTaskCustomFieldUsingDELETE_0()
+# **deleteTaskCustomFieldUsingDELETE**
+> void deleteTaskCustomFieldUsingDELETE()
 
 Deletes a Custom Field from Task.
 
@@ -157,17 +157,17 @@ Deletes a Custom Field from Task.
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiDeleteTaskCustomFieldUsingDELETE0Request } from '';
+import type { TaskApiDeleteTaskCustomFieldUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiDeleteTaskCustomFieldUsingDELETE0Request = {
+const request: TaskApiDeleteTaskCustomFieldUsingDELETERequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
 };
 
-const data = await apiInstance.deleteTaskCustomFieldUsingDELETE_0(request);
+const data = await apiInstance.deleteTaskCustomFieldUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -203,8 +203,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteTaskUsingDELETE1_0**
-> void deleteTaskUsingDELETE1_0()
+# **deleteTaskUsingDELETE1**
+> void deleteTaskUsingDELETE1()
 
 Deletes a single task
 
@@ -213,17 +213,17 @@ Deletes a single task
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiDeleteTaskUsingDELETE10Request } from '';
+import type { TaskApiDeleteTaskUsingDELETE1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiDeleteTaskUsingDELETE10Request = {
+const request: TaskApiDeleteTaskUsingDELETE1Request = {
     // task_id
   taskId: "task_id_example",
 };
 
-const data = await apiInstance.deleteTaskUsingDELETE1_0(request);
+const data = await apiInstance.deleteTaskUsingDELETE1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -259,8 +259,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getTaskUsingGET1_0**
-> Task getTaskUsingGET1_0()
+# **getTaskUsingGET1**
+> Task getTaskUsingGET1()
 
 Retrieves a single task
 
@@ -269,17 +269,17 @@ Retrieves a single task
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiGetTaskUsingGET10Request } from '';
+import type { TaskApiGetTaskUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiGetTaskUsingGET10Request = {
+const request: TaskApiGetTaskUsingGET1Request = {
     // task_id
   taskId: "task_id_example",
 };
 
-const data = await apiInstance.getTaskUsingGET1_0(request);
+const data = await apiInstance.getTaskUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -315,8 +315,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listTasksUsingGET1_0**
-> ListTasksResponse listTasksUsingGET1_0()
+# **listTasksUsingGET1**
+> ListTasksResponse listTasksUsingGET1()
 
 Retrieve a list of tasks based on the provided filter. Tasks which are not assigned to a User may be queried with user_id==UNASSIGNED.
 
@@ -325,12 +325,12 @@ Retrieve a list of tasks based on the provided filter. Tasks which are not assig
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiListTasksUsingGET10Request } from '';
+import type { TaskApiListTasksUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiListTasksUsingGET10Request = {
+const request: TaskApiListTasksUsingGET1Request = {
   
   endDueTime: "end_due_time_example",
     // Search filter to apply to results (optional)
@@ -345,7 +345,7 @@ const request: TaskApiListTasksUsingGET10Request = {
   startDueTime: "start_due_time_example",
 };
 
-const data = await apiInstance.listTasksUsingGET1_0(request);
+const data = await apiInstance.listTasksUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -386,8 +386,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchTaskUsingPATCH_0**
-> UpdateTaskResponse patchTaskUsingPATCH_0()
+# **patchTaskUsingPATCH**
+> UpdateTaskResponse patchTaskUsingPATCH()
 
 Updates a task with only the values provided in the request.  This endpoint does not currently support updating Custom Field values.
 
@@ -396,12 +396,12 @@ Updates a task with only the values provided in the request.  This endpoint does
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiPatchTaskUsingPATCH0Request } from '';
+import type { TaskApiPatchTaskUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiPatchTaskUsingPATCH0Request = {
+const request: TaskApiPatchTaskUsingPATCHRequest = {
     // task_id
   taskId: "task_id_example",
     // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
@@ -423,7 +423,7 @@ const request: TaskApiPatchTaskUsingPATCH0Request = {
   },
 };
 
-const data = await apiInstance.patchTaskUsingPATCH_0(request);
+const data = await apiInstance.patchTaskUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -461,8 +461,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **retrieveTaskModelUsingGET1_0**
-> ObjectModel retrieveTaskModelUsingGET1_0()
+# **retrieveTaskModelUsingGET1**
+> ObjectModel retrieveTaskModelUsingGET1()
 
 Get the custom fields for the Task object
 
@@ -477,7 +477,7 @@ const apiInstance = new TaskApi(configuration);
 
 const request = {};
 
-const data = await apiInstance.retrieveTaskModelUsingGET1_0(request);
+const data = await apiInstance.retrieveTaskModelUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -510,8 +510,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateTaskCustomFieldUsingPATCH_0**
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH_0(request)
+# **updateTaskCustomFieldUsingPATCH**
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(request)
 
 Updates a custom field of the specified type and options to the Task object.
 
@@ -520,12 +520,12 @@ Updates a custom field of the specified type and options to the Task object.
 
 ```typescript
 import { createConfiguration, TaskApi } from '';
-import type { TaskApiUpdateTaskCustomFieldUsingPATCH0Request } from '';
+import type { TaskApiUpdateTaskCustomFieldUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new TaskApi(configuration);
 
-const request: TaskApiUpdateTaskCustomFieldUsingPATCH0Request = {
+const request: TaskApiUpdateTaskCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
@@ -546,7 +546,7 @@ const request: TaskApiUpdateTaskCustomFieldUsingPATCH0Request = {
   ],
 };
 
-const data = await apiInstance.updateTaskCustomFieldUsingPATCH_0(request);
+const data = await apiInstance.updateTaskCustomFieldUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

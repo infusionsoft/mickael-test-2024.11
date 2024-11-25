@@ -4,14 +4,14 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**deleteDiscountUsingDELETE_0()**](CategoryDiscountApi.md#deleteDiscountUsingDELETE_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
-| [**getDiscountUsingGET_0()**](CategoryDiscountApi.md#getDiscountUsingGET_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**deleteDiscountUsingDELETE()**](CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**getDiscountUsingGET()**](CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 
 
-## `deleteDiscountUsingDELETE_0()`
+## `deleteDiscountUsingDELETE()`
 
 ```php
-deleteDiscountUsingDELETE_0($discount_id)
+deleteDiscountUsingDELETE($discount_id)
 ```
 
 Delete a Category Discount
@@ -33,9 +33,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CategoryDiscountApi(
 $discount_id = 'discount_id_example'; // string | discount_id
 
 try {
-    $apiInstance->deleteDiscountUsingDELETE_0($discount_id);
+    $apiInstance->deleteDiscountUsingDELETE($discount_id);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoryDiscountApi->deleteDiscountUsingDELETE_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoryDiscountApi->deleteDiscountUsingDELETE: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -62,10 +62,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getDiscountUsingGET_0()`
+## `getDiscountUsingGET()`
 
 ```php
-getDiscountUsingGET_0($discount_id): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+getDiscountUsingGET($discount_id): \Com\Keap\Sdk\Core\Model\CategoryDiscount
 ```
 
 Retrieve a Category Discount
@@ -87,10 +87,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CategoryDiscountApi(
 $discount_id = 'discount_id_example'; // string | discount_id
 
 try {
-    $result = $apiInstance->getDiscountUsingGET_0($discount_id);
+    $result = $apiInstance->getDiscountUsingGET($discount_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoryDiscountApi->getDiscountUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoryDiscountApi->getDiscountUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

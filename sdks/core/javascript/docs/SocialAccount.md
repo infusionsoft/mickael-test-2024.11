@@ -1,4 +1,4 @@
-# KeapRestApi.SocialAccount
+# KeapCoreServiceCoreSdk.SocialAccount
 
 ## Properties
 

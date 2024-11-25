@@ -1,4 +1,4 @@
-# KeapRestApi.TaggedCompany
+# KeapCoreServiceCoreSdk.TaggedCompany
 
 ## Properties
 

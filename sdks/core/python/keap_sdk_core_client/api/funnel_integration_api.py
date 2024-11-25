@@ -42,7 +42,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def create_funnel_integration_using_post_0(
+    def create_funnel_integration_using_post(
         self,
         create_funnel_integration_request: Annotated[CreateFunnelIntegrationRequest, Field(description="createFunnelIntegrationRequest")],
         _request_timeout: Union[
@@ -86,7 +86,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_funnel_integration_using_post_0_serialize(
+        _param = self._create_funnel_integration_using_post_serialize(
             create_funnel_integration_request=create_funnel_integration_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -110,7 +110,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def create_funnel_integration_using_post_0_with_http_info(
+    def create_funnel_integration_using_post_with_http_info(
         self,
         create_funnel_integration_request: Annotated[CreateFunnelIntegrationRequest, Field(description="createFunnelIntegrationRequest")],
         _request_timeout: Union[
@@ -154,7 +154,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_funnel_integration_using_post_0_serialize(
+        _param = self._create_funnel_integration_using_post_serialize(
             create_funnel_integration_request=create_funnel_integration_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -178,7 +178,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def create_funnel_integration_using_post_0_without_preload_content(
+    def create_funnel_integration_using_post_without_preload_content(
         self,
         create_funnel_integration_request: Annotated[CreateFunnelIntegrationRequest, Field(description="createFunnelIntegrationRequest")],
         _request_timeout: Union[
@@ -222,7 +222,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_funnel_integration_using_post_0_serialize(
+        _param = self._create_funnel_integration_using_post_serialize(
             create_funnel_integration_request=create_funnel_integration_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -241,7 +241,7 @@ class FunnelIntegrationApi:
         return response_data.response
 
 
-    def _create_funnel_integration_using_post_0_serialize(
+    def _create_funnel_integration_using_post_serialize(
         self,
         create_funnel_integration_request,
         _request_auth,
@@ -318,7 +318,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def create_integration_trigger_event_using_post_0(
+    def create_integration_trigger_event_using_post(
         self,
         create_funnel_integration_trigger_events: Annotated[CreateFunnelIntegrationTriggerEvents, Field(description="createFunnelIntegrationTriggerEvents")],
         _request_timeout: Union[
@@ -361,7 +361,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_integration_trigger_event_using_post_0_serialize(
+        _param = self._create_integration_trigger_event_using_post_serialize(
             create_funnel_integration_trigger_events=create_funnel_integration_trigger_events,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -385,7 +385,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def create_integration_trigger_event_using_post_0_with_http_info(
+    def create_integration_trigger_event_using_post_with_http_info(
         self,
         create_funnel_integration_trigger_events: Annotated[CreateFunnelIntegrationTriggerEvents, Field(description="createFunnelIntegrationTriggerEvents")],
         _request_timeout: Union[
@@ -428,7 +428,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_integration_trigger_event_using_post_0_serialize(
+        _param = self._create_integration_trigger_event_using_post_serialize(
             create_funnel_integration_trigger_events=create_funnel_integration_trigger_events,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -452,7 +452,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def create_integration_trigger_event_using_post_0_without_preload_content(
+    def create_integration_trigger_event_using_post_without_preload_content(
         self,
         create_funnel_integration_trigger_events: Annotated[CreateFunnelIntegrationTriggerEvents, Field(description="createFunnelIntegrationTriggerEvents")],
         _request_timeout: Union[
@@ -495,7 +495,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_integration_trigger_event_using_post_0_serialize(
+        _param = self._create_integration_trigger_event_using_post_serialize(
             create_funnel_integration_trigger_events=create_funnel_integration_trigger_events,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -514,7 +514,7 @@ class FunnelIntegrationApi:
         return response_data.response
 
 
-    def _create_integration_trigger_event_using_post_0_serialize(
+    def _create_integration_trigger_event_using_post_serialize(
         self,
         create_funnel_integration_trigger_events,
         _request_auth,
@@ -591,7 +591,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def delete_funnel_integration_using_post_0(
+    def delete_funnel_integration_using_post(
         self,
         delete_funnel_integration_request: Annotated[DeleteFunnelIntegrationRequest, Field(description="deleteFunnelIntegrationRequest")],
         _request_timeout: Union[
@@ -635,7 +635,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_funnel_integration_using_post_0_serialize(
+        _param = self._delete_funnel_integration_using_post_serialize(
             delete_funnel_integration_request=delete_funnel_integration_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -659,7 +659,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def delete_funnel_integration_using_post_0_with_http_info(
+    def delete_funnel_integration_using_post_with_http_info(
         self,
         delete_funnel_integration_request: Annotated[DeleteFunnelIntegrationRequest, Field(description="deleteFunnelIntegrationRequest")],
         _request_timeout: Union[
@@ -703,7 +703,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_funnel_integration_using_post_0_serialize(
+        _param = self._delete_funnel_integration_using_post_serialize(
             delete_funnel_integration_request=delete_funnel_integration_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -727,7 +727,7 @@ class FunnelIntegrationApi:
 
 
     @validate_call
-    def delete_funnel_integration_using_post_0_without_preload_content(
+    def delete_funnel_integration_using_post_without_preload_content(
         self,
         delete_funnel_integration_request: Annotated[DeleteFunnelIntegrationRequest, Field(description="deleteFunnelIntegrationRequest")],
         _request_timeout: Union[
@@ -771,7 +771,7 @@ class FunnelIntegrationApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_funnel_integration_using_post_0_serialize(
+        _param = self._delete_funnel_integration_using_post_serialize(
             delete_funnel_integration_request=delete_funnel_integration_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -790,7 +790,7 @@ class FunnelIntegrationApi:
         return response_data.response
 
 
-    def _delete_funnel_integration_using_post_0_serialize(
+    def _delete_funnel_integration_using_post_serialize(
         self,
         delete_funnel_integration_request,
         _request_auth,

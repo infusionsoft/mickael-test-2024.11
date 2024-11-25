@@ -1,4 +1,4 @@
-# KeapRestApi.RemoveContactsFromSequenceResponse
+# KeapCoreServiceCoreSdk.RemoveContactsFromSequenceResponse
 
 ## Properties
 

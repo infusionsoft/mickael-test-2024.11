@@ -1,4 +1,4 @@
-# KeapRestApi.PatchBusinessProfileRequest
+# KeapCoreServiceCoreSdk.PatchBusinessProfileRequest
 
 ## Properties
 

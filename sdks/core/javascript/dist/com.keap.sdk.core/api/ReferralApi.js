@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Referral service.
 * @module com.keap.sdk.core/api/ReferralApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var ReferralApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -51,12 +51,12 @@ var ReferralApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Referral} and HTTP response
    */
   return _createClass(ReferralApi, [{
-    key: "createReferralUsingPOST_0WithHttpInfo",
-    value: function createReferralUsingPOST_0WithHttpInfo(request) {
+    key: "createReferralUsingPOSTWithHttpInfo",
+    value: function createReferralUsingPOSTWithHttpInfo(request) {
       var postBody = request;
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling createReferralUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling createReferralUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -76,9 +76,9 @@ var ReferralApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Referral}
      */
   }, {
-    key: "createReferralUsingPOST_0",
-    value: function createReferralUsingPOST_0(request) {
-      return this.createReferralUsingPOST_0WithHttpInfo(request).then(function (response_and_data) {
+    key: "createReferralUsingPOST",
+    value: function createReferralUsingPOST(request) {
+      return this.createReferralUsingPOSTWithHttpInfo(request).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

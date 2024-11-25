@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleApplication
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleApplication
 
 ## Properties
 

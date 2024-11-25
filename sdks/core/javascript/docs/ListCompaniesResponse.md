@@ -1,4 +1,4 @@
-# KeapRestApi.ListCompaniesResponse
+# KeapCoreServiceCoreSdk.ListCompaniesResponse
 
 ## Properties
 

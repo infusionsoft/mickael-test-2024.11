@@ -1,4 +1,4 @@
-# KeapRestApi.RestPaymentMethod
+# KeapCoreServiceCoreSdk.RestPaymentMethod
 
 ## Properties
 

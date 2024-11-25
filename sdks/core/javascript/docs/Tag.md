@@ -1,4 +1,4 @@
-# KeapRestApi.Tag
+# KeapCoreServiceCoreSdk.Tag
 
 ## Properties
 

@@ -4,16 +4,16 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_user_using_post1_0**](UsersApi.md#create_user_using_post1_0) | **POST** /v2/users | Create a User
-[**get_user_by_id_using_get_0**](UsersApi.md#get_user_by_id_using_get_0) | **GET** /v2/users/{user_id} | Get User
-[**get_user_info_using_get1_0**](UsersApi.md#get_user_info_using_get1_0) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info
-[**get_user_signature_using_get1_0**](UsersApi.md#get_user_signature_using_get1_0) | **GET** /v2/users/{user_id}/signature | Get User email signature
-[**list_users_using_get1_0**](UsersApi.md#list_users_using_get1_0) | **GET** /v2/users | List Users
-[**patch_user_using_patch_0**](UsersApi.md#patch_user_using_patch_0) | **PATCH** /v2/users/{user_id} | Update User
+[**create_user_using_post1**](UsersApi.md#create_user_using_post1) | **POST** /v2/users | Create a User
+[**get_user_by_id_using_get**](UsersApi.md#get_user_by_id_using_get) | **GET** /v2/users/{user_id} | Get User
+[**get_user_info_using_get1**](UsersApi.md#get_user_info_using_get1) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info
+[**get_user_signature_using_get1**](UsersApi.md#get_user_signature_using_get1) | **GET** /v2/users/{user_id}/signature | Get User email signature
+[**list_users_using_get1**](UsersApi.md#list_users_using_get1) | **GET** /v2/users | List Users
+[**patch_user_using_patch**](UsersApi.md#patch_user_using_patch) | **PATCH** /v2/users/{user_id} | Update User
 
 
-# **create_user_using_post1_0**
-> User create_user_using_post1_0(user=user)
+# **create_user_using_post1**
+> User create_user_using_post1(user=user)
 
 Create a User
 
@@ -43,11 +43,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a User
-        api_response = api_instance.create_user_using_post1_0(user=user)
-        print("The response of UsersApi->create_user_using_post1_0:\n")
+        api_response = api_instance.create_user_using_post1(user=user)
+        print("The response of UsersApi->create_user_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling UsersApi->create_user_using_post1_0: %s\n" % e)
+        print("Exception when calling UsersApi->create_user_using_post1: %s\n" % e)
 ```
 
 
@@ -81,8 +81,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_by_id_using_get_0**
-> User get_user_by_id_using_get_0(user_id)
+# **get_user_by_id_using_get**
+> User get_user_by_id_using_get(user_id)
 
 Get User
 
@@ -111,11 +111,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Get User
-        api_response = api_instance.get_user_by_id_using_get_0(user_id)
-        print("The response of UsersApi->get_user_by_id_using_get_0:\n")
+        api_response = api_instance.get_user_by_id_using_get(user_id)
+        print("The response of UsersApi->get_user_by_id_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling UsersApi->get_user_by_id_using_get_0: %s\n" % e)
+        print("Exception when calling UsersApi->get_user_by_id_using_get: %s\n" % e)
 ```
 
 
@@ -150,8 +150,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_info_using_get1_0**
-> GetUserInfoResponse get_user_info_using_get1_0()
+# **get_user_info_using_get1**
+> GetUserInfoResponse get_user_info_using_get1()
 
 Retrieve User Info
 
@@ -179,11 +179,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve User Info
-        api_response = api_instance.get_user_info_using_get1_0()
-        print("The response of UsersApi->get_user_info_using_get1_0:\n")
+        api_response = api_instance.get_user_info_using_get1()
+        print("The response of UsersApi->get_user_info_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling UsersApi->get_user_info_using_get1_0: %s\n" % e)
+        print("Exception when calling UsersApi->get_user_info_using_get1: %s\n" % e)
 ```
 
 
@@ -215,8 +215,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_signature_using_get1_0**
-> str get_user_signature_using_get1_0(user_id)
+# **get_user_signature_using_get1**
+> str get_user_signature_using_get1(user_id)
 
 Get User email signature
 
@@ -244,11 +244,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Get User email signature
-        api_response = api_instance.get_user_signature_using_get1_0(user_id)
-        print("The response of UsersApi->get_user_signature_using_get1_0:\n")
+        api_response = api_instance.get_user_signature_using_get1(user_id)
+        print("The response of UsersApi->get_user_signature_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling UsersApi->get_user_signature_using_get1_0: %s\n" % e)
+        print("Exception when calling UsersApi->get_user_signature_using_get1: %s\n" % e)
 ```
 
 
@@ -283,8 +283,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_users_using_get1_0**
-> ListUserResponse list_users_using_get1_0(filter=filter, order_by=order_by)
+# **list_users_using_get1**
+> ListUserResponse list_users_using_get1(filter=filter, order_by=order_by)
 
 List Users
 
@@ -314,11 +314,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Users
-        api_response = api_instance.list_users_using_get1_0(filter=filter, order_by=order_by)
-        print("The response of UsersApi->list_users_using_get1_0:\n")
+        api_response = api_instance.list_users_using_get1(filter=filter, order_by=order_by)
+        print("The response of UsersApi->list_users_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling UsersApi->list_users_using_get1_0: %s\n" % e)
+        print("Exception when calling UsersApi->list_users_using_get1: %s\n" % e)
 ```
 
 
@@ -354,8 +354,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_user_using_patch_0**
-> User patch_user_using_patch_0(user_id, update_mask=update_mask, user=user)
+# **patch_user_using_patch**
+> User patch_user_using_patch(user_id, update_mask=update_mask, user=user)
 
 Update User
 
@@ -387,11 +387,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update User
-        api_response = api_instance.patch_user_using_patch_0(user_id, update_mask=update_mask, user=user)
-        print("The response of UsersApi->patch_user_using_patch_0:\n")
+        api_response = api_instance.patch_user_using_patch(user_id, update_mask=update_mask, user=user)
+        print("The response of UsersApi->patch_user_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling UsersApi->patch_user_using_patch_0: %s\n" % e)
+        print("Exception when calling UsersApi->patch_user_using_patch: %s\n" % e)
 ```
 
 

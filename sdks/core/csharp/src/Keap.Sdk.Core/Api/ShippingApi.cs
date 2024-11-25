@@ -36,7 +36,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListRestShippingMethodsResponse</returns>
-        ListRestShippingMethodsResponse ListShippingMethodsUsingGET_0(int operationIndex = 0);
+        ListRestShippingMethodsResponse ListShippingMethodsUsingGET(int operationIndex = 0);
 
         /// <summary>
         /// List Shipping methods
@@ -47,7 +47,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListRestShippingMethodsResponse</returns>
-        ApiResponse<ListRestShippingMethodsResponse> ListShippingMethodsUsingGET_0WithHttpInfo(int operationIndex = 0);
+        ApiResponse<ListRestShippingMethodsResponse> ListShippingMethodsUsingGETWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -67,7 +67,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListRestShippingMethodsResponse</returns>
-        System.Threading.Tasks.Task<ListRestShippingMethodsResponse> ListShippingMethodsUsingGET_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListRestShippingMethodsResponse> ListShippingMethodsUsingGETAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Shipping methods
@@ -79,7 +79,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListRestShippingMethodsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListRestShippingMethodsResponse>> ListShippingMethodsUsingGET_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListRestShippingMethodsResponse>> ListShippingMethodsUsingGETWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -206,9 +206,9 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListRestShippingMethodsResponse</returns>
-        public ListRestShippingMethodsResponse ListShippingMethodsUsingGET_0(int operationIndex = 0)
+        public ListRestShippingMethodsResponse ListShippingMethodsUsingGET(int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse> localVarResponse = ListShippingMethodsUsingGET_0WithHttpInfo();
+            Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse> localVarResponse = ListShippingMethodsUsingGETWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -218,7 +218,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListRestShippingMethodsResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse> ListShippingMethodsUsingGET_0WithHttpInfo(int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse> ListShippingMethodsUsingGETWithHttpInfo(int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -243,7 +243,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "ShippingApi.ListShippingMethodsUsingGET_0";
+            localVarRequestOptions.Operation = "ShippingApi.ListShippingMethodsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -251,7 +251,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListRestShippingMethodsResponse>("/v2/shipping", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListShippingMethodsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListShippingMethodsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -268,9 +268,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListRestShippingMethodsResponse</returns>
-        public async System.Threading.Tasks.Task<ListRestShippingMethodsResponse> ListShippingMethodsUsingGET_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListRestShippingMethodsResponse> ListShippingMethodsUsingGETAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse> localVarResponse = await ListShippingMethodsUsingGET_0WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse> localVarResponse = await ListShippingMethodsUsingGETWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -281,7 +281,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListRestShippingMethodsResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse>> ListShippingMethodsUsingGET_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListRestShippingMethodsResponse>> ListShippingMethodsUsingGETWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -307,7 +307,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "ShippingApi.ListShippingMethodsUsingGET_0";
+            localVarRequestOptions.Operation = "ShippingApi.ListShippingMethodsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -316,7 +316,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListShippingMethodsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListShippingMethodsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

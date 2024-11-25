@@ -39,7 +39,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Orders service.
 * @module com.keap.sdk.core/api/OrdersApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var OrdersApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -61,12 +61,12 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
    */
   return _createClass(OrdersApi, [{
-    key: "createOrderCustomFieldUsingPOST_0WithHttpInfo",
-    value: function createOrderCustomFieldUsingPOST_0WithHttpInfo(customField) {
+    key: "createOrderCustomFieldUsingPOSTWithHttpInfo",
+    value: function createOrderCustomFieldUsingPOSTWithHttpInfo(customField) {
       var postBody = customField;
       // verify the required parameter 'customField' is set
       if (customField === undefined || customField === null) {
-        throw new _Error["default"]("Missing the required parameter 'customField' when calling createOrderCustomFieldUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'customField' when calling createOrderCustomFieldUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -86,9 +86,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "createOrderCustomFieldUsingPOST_0",
-    value: function createOrderCustomFieldUsingPOST_0(customField) {
-      return this.createOrderCustomFieldUsingPOST_0WithHttpInfo(customField).then(function (response_and_data) {
+    key: "createOrderCustomFieldUsingPOST",
+    value: function createOrderCustomFieldUsingPOST(customField) {
+      return this.createOrderCustomFieldUsingPOSTWithHttpInfo(customField).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -101,16 +101,16 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2OrderItem} and HTTP response
      */
   }, {
-    key: "createOrderItemsOnOrderUsingPOST1_0WithHttpInfo",
-    value: function createOrderItemsOnOrderUsingPOST1_0WithHttpInfo(orderId, createRestOrderItemRequest) {
+    key: "createOrderItemsOnOrderUsingPOST1WithHttpInfo",
+    value: function createOrderItemsOnOrderUsingPOST1WithHttpInfo(orderId, createRestOrderItemRequest) {
       var postBody = createRestOrderItemRequest;
       // verify the required parameter 'orderId' is set
       if (orderId === undefined || orderId === null) {
-        throw new _Error["default"]("Missing the required parameter 'orderId' when calling createOrderItemsOnOrderUsingPOST1_0");
+        throw new _Error["default"]("Missing the required parameter 'orderId' when calling createOrderItemsOnOrderUsingPOST1");
       }
       // verify the required parameter 'createRestOrderItemRequest' is set
       if (createRestOrderItemRequest === undefined || createRestOrderItemRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'createRestOrderItemRequest' when calling createOrderItemsOnOrderUsingPOST1_0");
+        throw new _Error["default"]("Missing the required parameter 'createRestOrderItemRequest' when calling createOrderItemsOnOrderUsingPOST1");
       }
       var pathParams = {
         'order_id': orderId
@@ -133,9 +133,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2OrderItem}
      */
   }, {
-    key: "createOrderItemsOnOrderUsingPOST1_0",
-    value: function createOrderItemsOnOrderUsingPOST1_0(orderId, createRestOrderItemRequest) {
-      return this.createOrderItemsOnOrderUsingPOST1_0WithHttpInfo(orderId, createRestOrderItemRequest).then(function (response_and_data) {
+    key: "createOrderItemsOnOrderUsingPOST1",
+    value: function createOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest) {
+      return this.createOrderItemsOnOrderUsingPOST1WithHttpInfo(orderId, createRestOrderItemRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -147,12 +147,12 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
   }, {
-    key: "createOrderUsingPOST1_0WithHttpInfo",
-    value: function createOrderUsingPOST1_0WithHttpInfo(createOrderRequest) {
+    key: "createOrderUsingPOST1WithHttpInfo",
+    value: function createOrderUsingPOST1WithHttpInfo(createOrderRequest) {
       var postBody = createOrderRequest;
       // verify the required parameter 'createOrderRequest' is set
       if (createOrderRequest === undefined || createOrderRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'createOrderRequest' when calling createOrderUsingPOST1_0");
+        throw new _Error["default"]("Missing the required parameter 'createOrderRequest' when calling createOrderUsingPOST1");
       }
       var pathParams = {};
       var queryParams = {};
@@ -172,9 +172,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
   }, {
-    key: "createOrderUsingPOST1_0",
-    value: function createOrderUsingPOST1_0(createOrderRequest) {
-      return this.createOrderUsingPOST1_0WithHttpInfo(createOrderRequest).then(function (response_and_data) {
+    key: "createOrderUsingPOST1",
+    value: function createOrderUsingPOST1(createOrderRequest) {
+      return this.createOrderUsingPOST1WithHttpInfo(createOrderRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -233,12 +233,12 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteOrderUsingDELETE1_0WithHttpInfo",
-    value: function deleteOrderUsingDELETE1_0WithHttpInfo(orderId) {
+    key: "deleteOrderUsingDELETE1WithHttpInfo",
+    value: function deleteOrderUsingDELETE1WithHttpInfo(orderId) {
       var postBody = null;
       // verify the required parameter 'orderId' is set
       if (orderId === undefined || orderId === null) {
-        throw new _Error["default"]("Missing the required parameter 'orderId' when calling deleteOrderUsingDELETE1_0");
+        throw new _Error["default"]("Missing the required parameter 'orderId' when calling deleteOrderUsingDELETE1");
       }
       var pathParams = {
         'order_id': orderId
@@ -260,9 +260,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteOrderUsingDELETE1_0",
-    value: function deleteOrderUsingDELETE1_0(orderId) {
-      return this.deleteOrderUsingDELETE1_0WithHttpInfo(orderId).then(function (response_and_data) {
+    key: "deleteOrderUsingDELETE1",
+    value: function deleteOrderUsingDELETE1(orderId) {
+      return this.deleteOrderUsingDELETE1WithHttpInfo(orderId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -274,12 +274,12 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
   }, {
-    key: "getOrderUsingGET1_0WithHttpInfo",
-    value: function getOrderUsingGET1_0WithHttpInfo(orderId) {
+    key: "getOrderUsingGET1WithHttpInfo",
+    value: function getOrderUsingGET1WithHttpInfo(orderId) {
       var postBody = null;
       // verify the required parameter 'orderId' is set
       if (orderId === undefined || orderId === null) {
-        throw new _Error["default"]("Missing the required parameter 'orderId' when calling getOrderUsingGET1_0");
+        throw new _Error["default"]("Missing the required parameter 'orderId' when calling getOrderUsingGET1");
       }
       var pathParams = {
         'order_id': orderId
@@ -301,9 +301,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
   }, {
-    key: "getOrderUsingGET1_0",
-    value: function getOrderUsingGET1_0(orderId) {
-      return this.getOrderUsingGET1_0WithHttpInfo(orderId).then(function (response_and_data) {
+    key: "getOrderUsingGET1",
+    value: function getOrderUsingGET1(orderId) {
+      return this.getOrderUsingGET1WithHttpInfo(orderId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -319,8 +319,8 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListOrders} and HTTP response
      */
   }, {
-    key: "listOrdersUsingGET1_0WithHttpInfo",
-    value: function listOrdersUsingGET1_0WithHttpInfo(opts) {
+    key: "listOrdersUsingGET1WithHttpInfo",
+    value: function listOrdersUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -350,9 +350,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListOrders}
      */
   }, {
-    key: "listOrdersUsingGET1_0",
-    value: function listOrdersUsingGET1_0(opts) {
-      return this.listOrdersUsingGET1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listOrdersUsingGET1",
+    value: function listOrdersUsingGET1(opts) {
+      return this.listOrdersUsingGET1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -367,13 +367,13 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
   }, {
-    key: "patchOrderUsingPATCH_0WithHttpInfo",
-    value: function patchOrderUsingPATCH_0WithHttpInfo(orderId, opts) {
+    key: "patchOrderUsingPATCHWithHttpInfo",
+    value: function patchOrderUsingPATCHWithHttpInfo(orderId, opts) {
       opts = opts || {};
       var postBody = opts['order'];
       // verify the required parameter 'orderId' is set
       if (orderId === undefined || orderId === null) {
-        throw new _Error["default"]("Missing the required parameter 'orderId' when calling patchOrderUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'orderId' when calling patchOrderUsingPATCH");
       }
       var pathParams = {
         'order_id': orderId
@@ -400,9 +400,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
   }, {
-    key: "patchOrderUsingPATCH_0",
-    value: function patchOrderUsingPATCH_0(orderId, opts) {
-      return this.patchOrderUsingPATCH_0WithHttpInfo(orderId, opts).then(function (response_and_data) {
+    key: "patchOrderUsingPATCH",
+    value: function patchOrderUsingPATCH(orderId, opts) {
+      return this.patchOrderUsingPATCHWithHttpInfo(orderId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -413,8 +413,8 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ObjectModel} and HTTP response
      */
   }, {
-    key: "retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo",
-    value: function retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo() {
+    key: "retrieveOrderCustomFieldModelUsingGETWithHttpInfo",
+    value: function retrieveOrderCustomFieldModelUsingGETWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -433,9 +433,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ObjectModel}
      */
   }, {
-    key: "retrieveOrderCustomFieldModelUsingGET_0",
-    value: function retrieveOrderCustomFieldModelUsingGET_0() {
-      return this.retrieveOrderCustomFieldModelUsingGET_0WithHttpInfo().then(function (response_and_data) {
+    key: "retrieveOrderCustomFieldModelUsingGET",
+    value: function retrieveOrderCustomFieldModelUsingGET() {
+      return this.retrieveOrderCustomFieldModelUsingGETWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -450,17 +450,17 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "updateOrderCustomFieldUsingPATCH_0WithHttpInfo",
-    value: function updateOrderCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts) {
+    key: "updateOrderCustomFieldUsingPATCHWithHttpInfo",
+    value: function updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
       opts = opts || {};
       var postBody = request;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateOrderCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateOrderCustomFieldUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling updateOrderCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling updateOrderCustomFieldUsingPATCH");
       }
       var pathParams = {
         'custom_field_id': customFieldId
@@ -487,9 +487,9 @@ var OrdersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "updateOrderCustomFieldUsingPATCH_0",
-    value: function updateOrderCustomFieldUsingPATCH_0(customFieldId, request, opts) {
-      return this.updateOrderCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
+    key: "updateOrderCustomFieldUsingPATCH",
+    value: function updateOrderCustomFieldUsingPATCH(customFieldId, request, opts) {
+      return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

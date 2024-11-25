@@ -4,15 +4,15 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_subscription_using_post_0**](SubscriptionsApi.md#cancel_subscription_using_post_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
-[**create_subscription_custom_field_using_post_0**](SubscriptionsApi.md#create_subscription_custom_field_using_post_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
+[**cancel_subscription_using_post**](SubscriptionsApi.md#cancel_subscription_using_post) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
+[**create_subscription_custom_field_using_post**](SubscriptionsApi.md#create_subscription_custom_field_using_post) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
 [**create_subscription_v2_using_post**](SubscriptionsApi.md#create_subscription_v2_using_post) | **POST** /v2/subscriptions | Create Subscription
-[**retrieve_subscription_custom_field_model_using_get_0**](SubscriptionsApi.md#retrieve_subscription_custom_field_model_using_get_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
-[**update_subscription_custom_field_using_patch_0**](SubscriptionsApi.md#update_subscription_custom_field_using_patch_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
+[**retrieve_subscription_custom_field_model_using_get**](SubscriptionsApi.md#retrieve_subscription_custom_field_model_using_get) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
+[**update_subscription_custom_field_using_patch**](SubscriptionsApi.md#update_subscription_custom_field_using_patch) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 
 
-# **cancel_subscription_using_post_0**
-> cancel_subscription_using_post_0(subscription_id, cancel_subscriptions_request)
+# **cancel_subscription_using_post**
+> cancel_subscription_using_post(subscription_id, cancel_subscriptions_request)
 
 Cancel Subscription
 
@@ -42,9 +42,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Cancel Subscription
-        api_instance.cancel_subscription_using_post_0(subscription_id, cancel_subscriptions_request)
+        api_instance.cancel_subscription_using_post(subscription_id, cancel_subscriptions_request)
     except Exception as e:
-        print("Exception when calling SubscriptionsApi->cancel_subscription_using_post_0: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->cancel_subscription_using_post: %s\n" % e)
 ```
 
 
@@ -79,8 +79,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_subscription_custom_field_using_post_0**
-> CustomFieldMetaData create_subscription_custom_field_using_post_0(custom_field)
+# **create_subscription_custom_field_using_post**
+> CustomFieldMetaData create_subscription_custom_field_using_post(custom_field)
 
 Create a Subscription's Custom Field
 
@@ -110,11 +110,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Subscription's Custom Field
-        api_response = api_instance.create_subscription_custom_field_using_post_0(custom_field)
-        print("The response of SubscriptionsApi->create_subscription_custom_field_using_post_0:\n")
+        api_response = api_instance.create_subscription_custom_field_using_post(custom_field)
+        print("The response of SubscriptionsApi->create_subscription_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SubscriptionsApi->create_subscription_custom_field_using_post_0: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->create_subscription_custom_field_using_post: %s\n" % e)
 ```
 
 
@@ -217,8 +217,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **retrieve_subscription_custom_field_model_using_get_0**
-> ObjectModel retrieve_subscription_custom_field_model_using_get_0()
+# **retrieve_subscription_custom_field_model_using_get**
+> ObjectModel retrieve_subscription_custom_field_model_using_get()
 
 Retrieve Subscription's Custom Field Model
 
@@ -246,11 +246,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve Subscription's Custom Field Model
-        api_response = api_instance.retrieve_subscription_custom_field_model_using_get_0()
-        print("The response of SubscriptionsApi->retrieve_subscription_custom_field_model_using_get_0:\n")
+        api_response = api_instance.retrieve_subscription_custom_field_model_using_get()
+        print("The response of SubscriptionsApi->retrieve_subscription_custom_field_model_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SubscriptionsApi->retrieve_subscription_custom_field_model_using_get_0: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->retrieve_subscription_custom_field_model_using_get: %s\n" % e)
 ```
 
 
@@ -282,8 +282,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_subscription_custom_field_using_patch_0**
-> CustomFieldMetaData update_subscription_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
+# **update_subscription_custom_field_using_patch**
+> CustomFieldMetaData update_subscription_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
 Update a Subscription's Custom Field
 
@@ -315,11 +315,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Subscription's Custom Field
-        api_response = api_instance.update_subscription_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
-        print("The response of SubscriptionsApi->update_subscription_custom_field_using_patch_0:\n")
+        api_response = api_instance.update_subscription_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        print("The response of SubscriptionsApi->update_subscription_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SubscriptionsApi->update_subscription_custom_field_using_patch_0: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->update_subscription_custom_field_using_patch: %s\n" % e)
 ```
 
 

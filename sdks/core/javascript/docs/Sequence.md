@@ -1,4 +1,4 @@
-# KeapRestApi.Sequence
+# KeapCoreServiceCoreSdk.Sequence
 
 ## Properties
 

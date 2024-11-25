@@ -1,4 +1,4 @@
-# KeapRestApi.OrderItemTax
+# KeapCoreServiceCoreSdk.OrderItemTax
 
 ## Properties
 

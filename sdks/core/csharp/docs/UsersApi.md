@@ -4,16 +4,16 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateUserUsingPOST1_0**](UsersApi.md#createuserusingpost1_0) | **POST** /v2/users | Create a User |
-| [**GetUserByIdUsingGET_0**](UsersApi.md#getuserbyidusingget_0) | **GET** /v2/users/{user_id} | Get User |
-| [**GetUserInfoUsingGET1_0**](UsersApi.md#getuserinfousingget1_0) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
-| [**GetUserSignatureUsingGET1_0**](UsersApi.md#getusersignatureusingget1_0) | **GET** /v2/users/{user_id}/signature | Get User email signature |
-| [**ListUsersUsingGET1_0**](UsersApi.md#listusersusingget1_0) | **GET** /v2/users | List Users |
-| [**PatchUserUsingPATCH_0**](UsersApi.md#patchuserusingpatch_0) | **PATCH** /v2/users/{user_id} | Update User |
+| [**CreateUserUsingPOST1**](UsersApi.md#createuserusingpost1) | **POST** /v2/users | Create a User |
+| [**GetUserByIdUsingGET**](UsersApi.md#getuserbyidusingget) | **GET** /v2/users/{user_id} | Get User |
+| [**GetUserInfoUsingGET1**](UsersApi.md#getuserinfousingget1) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
+| [**GetUserSignatureUsingGET1**](UsersApi.md#getusersignatureusingget1) | **GET** /v2/users/{user_id}/signature | Get User email signature |
+| [**ListUsersUsingGET1**](UsersApi.md#listusersusingget1) | **GET** /v2/users | List Users |
+| [**PatchUserUsingPATCH**](UsersApi.md#patchuserusingpatch) | **PATCH** /v2/users/{user_id} | Update User |
 
-<a id="createuserusingpost1_0"></a>
-# **CreateUserUsingPOST1_0**
-> User CreateUserUsingPOST1_0 (CreateUserRequestV2? user = null)
+<a id="createuserusingpost1"></a>
+# **CreateUserUsingPOST1**
+> User CreateUserUsingPOST1 (CreateUserRequestV2? user = null)
 
 Create a User
 
@@ -29,7 +29,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateUserUsingPOST1_0Example
+    public class CreateUserUsingPOST1Example
     {
         public static void Main()
         {
@@ -41,12 +41,12 @@ namespace Example
             try
             {
                 // Create a User
-                User result = apiInstance.CreateUserUsingPOST1_0(user);
+                User result = apiInstance.CreateUserUsingPOST1(user);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.CreateUserUsingPOST1_0: " + e.Message);
+                Debug.Print("Exception when calling UsersApi.CreateUserUsingPOST1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -55,21 +55,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateUserUsingPOST1_0WithHttpInfo variant
+#### Using the CreateUserUsingPOST1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a User
-    ApiResponse<User> response = apiInstance.CreateUserUsingPOST1_0WithHttpInfo(user);
+    ApiResponse<User> response = apiInstance.CreateUserUsingPOST1WithHttpInfo(user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UsersApi.CreateUserUsingPOST1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UsersApi.CreateUserUsingPOST1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -104,9 +104,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getuserbyidusingget_0"></a>
-# **GetUserByIdUsingGET_0**
-> User GetUserByIdUsingGET_0 (string userId)
+<a id="getuserbyidusingget"></a>
+# **GetUserByIdUsingGET**
+> User GetUserByIdUsingGET (string userId)
 
 Get User
 
@@ -122,7 +122,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetUserByIdUsingGET_0Example
+    public class GetUserByIdUsingGETExample
     {
         public static void Main()
         {
@@ -134,12 +134,12 @@ namespace Example
             try
             {
                 // Get User
-                User result = apiInstance.GetUserByIdUsingGET_0(userId);
+                User result = apiInstance.GetUserByIdUsingGET(userId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserByIdUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling UsersApi.GetUserByIdUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -148,21 +148,21 @@ namespace Example
 }
 ```
 
-#### Using the GetUserByIdUsingGET_0WithHttpInfo variant
+#### Using the GetUserByIdUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get User
-    ApiResponse<User> response = apiInstance.GetUserByIdUsingGET_0WithHttpInfo(userId);
+    ApiResponse<User> response = apiInstance.GetUserByIdUsingGETWithHttpInfo(userId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UsersApi.GetUserByIdUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UsersApi.GetUserByIdUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,9 +198,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getuserinfousingget1_0"></a>
-# **GetUserInfoUsingGET1_0**
-> GetUserInfoResponse GetUserInfoUsingGET1_0 ()
+<a id="getuserinfousingget1"></a>
+# **GetUserInfoUsingGET1**
+> GetUserInfoResponse GetUserInfoUsingGET1 ()
 
 Retrieve User Info
 
@@ -216,7 +216,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetUserInfoUsingGET1_0Example
+    public class GetUserInfoUsingGET1Example
     {
         public static void Main()
         {
@@ -227,12 +227,12 @@ namespace Example
             try
             {
                 // Retrieve User Info
-                GetUserInfoResponse result = apiInstance.GetUserInfoUsingGET1_0();
+                GetUserInfoResponse result = apiInstance.GetUserInfoUsingGET1();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserInfoUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling UsersApi.GetUserInfoUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -241,21 +241,21 @@ namespace Example
 }
 ```
 
-#### Using the GetUserInfoUsingGET1_0WithHttpInfo variant
+#### Using the GetUserInfoUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve User Info
-    ApiResponse<GetUserInfoResponse> response = apiInstance.GetUserInfoUsingGET1_0WithHttpInfo();
+    ApiResponse<GetUserInfoResponse> response = apiInstance.GetUserInfoUsingGET1WithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UsersApi.GetUserInfoUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UsersApi.GetUserInfoUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -287,9 +287,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getusersignatureusingget1_0"></a>
-# **GetUserSignatureUsingGET1_0**
-> string GetUserSignatureUsingGET1_0 (string userId)
+<a id="getusersignatureusingget1"></a>
+# **GetUserSignatureUsingGET1**
+> string GetUserSignatureUsingGET1 (string userId)
 
 Get User email signature
 
@@ -305,7 +305,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetUserSignatureUsingGET1_0Example
+    public class GetUserSignatureUsingGET1Example
     {
         public static void Main()
         {
@@ -317,12 +317,12 @@ namespace Example
             try
             {
                 // Get User email signature
-                string result = apiInstance.GetUserSignatureUsingGET1_0(userId);
+                string result = apiInstance.GetUserSignatureUsingGET1(userId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserSignatureUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling UsersApi.GetUserSignatureUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -331,21 +331,21 @@ namespace Example
 }
 ```
 
-#### Using the GetUserSignatureUsingGET1_0WithHttpInfo variant
+#### Using the GetUserSignatureUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get User email signature
-    ApiResponse<string> response = apiInstance.GetUserSignatureUsingGET1_0WithHttpInfo(userId);
+    ApiResponse<string> response = apiInstance.GetUserSignatureUsingGET1WithHttpInfo(userId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UsersApi.GetUserSignatureUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UsersApi.GetUserSignatureUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -381,9 +381,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listusersusingget1_0"></a>
-# **ListUsersUsingGET1_0**
-> ListUserResponse ListUsersUsingGET1_0 (string? filter = null, string? orderBy = null)
+<a id="listusersusingget1"></a>
+# **ListUsersUsingGET1**
+> ListUserResponse ListUsersUsingGET1 (string? filter = null, string? orderBy = null)
 
 List Users
 
@@ -399,7 +399,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListUsersUsingGET1_0Example
+    public class ListUsersUsingGET1Example
     {
         public static void Main()
         {
@@ -412,12 +412,12 @@ namespace Example
             try
             {
                 // List Users
-                ListUserResponse result = apiInstance.ListUsersUsingGET1_0(filter, orderBy);
+                ListUserResponse result = apiInstance.ListUsersUsingGET1(filter, orderBy);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.ListUsersUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling UsersApi.ListUsersUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -426,21 +426,21 @@ namespace Example
 }
 ```
 
-#### Using the ListUsersUsingGET1_0WithHttpInfo variant
+#### Using the ListUsersUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Users
-    ApiResponse<ListUserResponse> response = apiInstance.ListUsersUsingGET1_0WithHttpInfo(filter, orderBy);
+    ApiResponse<ListUserResponse> response = apiInstance.ListUsersUsingGET1WithHttpInfo(filter, orderBy);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UsersApi.ListUsersUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UsersApi.ListUsersUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -477,9 +477,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchuserusingpatch_0"></a>
-# **PatchUserUsingPATCH_0**
-> User PatchUserUsingPATCH_0 (string userId, List<string>? updateMask = null, PatchUserRequestV2? user = null)
+<a id="patchuserusingpatch"></a>
+# **PatchUserUsingPATCH**
+> User PatchUserUsingPATCH (string userId, List<string>? updateMask = null, PatchUserRequestV2? user = null)
 
 Update User
 
@@ -495,7 +495,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class PatchUserUsingPATCH_0Example
+    public class PatchUserUsingPATCHExample
     {
         public static void Main()
         {
@@ -509,12 +509,12 @@ namespace Example
             try
             {
                 // Update User
-                User result = apiInstance.PatchUserUsingPATCH_0(userId, updateMask, user);
+                User result = apiInstance.PatchUserUsingPATCH(userId, updateMask, user);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.PatchUserUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling UsersApi.PatchUserUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -523,21 +523,21 @@ namespace Example
 }
 ```
 
-#### Using the PatchUserUsingPATCH_0WithHttpInfo variant
+#### Using the PatchUserUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update User
-    ApiResponse<User> response = apiInstance.PatchUserUsingPATCH_0WithHttpInfo(userId, updateMask, user);
+    ApiResponse<User> response = apiInstance.PatchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling UsersApi.PatchUserUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling UsersApi.PatchUserUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

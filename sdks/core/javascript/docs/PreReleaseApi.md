@@ -1,4 +1,4 @@
-# KeapRestApi.PreReleaseApi
+# KeapCoreServiceCoreSdk.PreReleaseApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -102,11 +102,11 @@ Assigns an Affiliate to Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let id = "id_example"; // String | id
-let affiliateAddToProgramRequest = new KeapRestApi.AffiliateAddToProgramRequest(); // AffiliateAddToProgramRequest | affiliateAddToProgramRequest
+let affiliateAddToProgramRequest = new KeapCoreServiceCoreSdk.AffiliateAddToProgramRequest(); // AffiliateAddToProgramRequest | affiliateAddToProgramRequest
 apiInstance.addAffiliateToProgramUsingPOST(id, affiliateAddToProgramRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -148,11 +148,11 @@ Creates an Affiliate Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'insertCommissionProgram': new KeapRestApi.CreateCommissionProgramRequest() // CreateCommissionProgramRequest | Commission Program to insert
+  'insertCommissionProgram': new KeapCoreServiceCoreSdk.CreateCommissionProgramRequest() // CreateCommissionProgramRequest | Commission Program to insert
 };
 apiInstance.addCommissionProgramUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -194,12 +194,12 @@ Assigns a Product Commission Program to a Product
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'productCommissionProgram': new KeapRestApi.CreateProductCommissionProgramRequest() // CreateProductCommissionProgramRequest | Product Commission Program
+  'productCommissionProgram': new KeapCoreServiceCoreSdk.CreateProductCommissionProgramRequest() // CreateProductCommissionProgramRequest | Product Commission Program
 };
 apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -242,12 +242,12 @@ Assigns a Subscription Commission Program to a Subscription
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'subscriptionCommissionProgram': new KeapRestApi.CreateSubscriptionCommissionProgramRequest() // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+  'subscriptionCommissionProgram': new KeapCoreServiceCoreSdk.CreateSubscriptionCommissionProgramRequest() // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
 };
 apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -290,11 +290,11 @@ Cancels the specified subscription
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let subscriptionId = "subscriptionId_example"; // String | subscription_id
-let cancelSubscriptionsRequest = new KeapRestApi.CancelSubscriptionsRequest(); // CancelSubscriptionsRequest | cancelSubscriptionsRequest
+let cancelSubscriptionsRequest = new KeapCoreServiceCoreSdk.CancelSubscriptionsRequest(); // CancelSubscriptionsRequest | cancelSubscriptionsRequest
 apiInstance.cancelSubscriptionUsingPOST(subscriptionId, cancelSubscriptionsRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -336,10 +336,10 @@ Creates a single Affiliate Custom Field
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 apiInstance.createAffiliateCustomFieldUsingPOST(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -380,12 +380,12 @@ Creates a Default Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'createDefaultCommissionProgramRequest': new KeapRestApi.CreateDefaultCommissionProgramRequest() // CreateDefaultCommissionProgramRequest | Values of the Default Commission Program
+  'createDefaultCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateDefaultCommissionProgramRequest() // CreateDefaultCommissionProgramRequest | Values of the Default Commission Program
 };
 apiInstance.createDefaultCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -428,10 +428,10 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let createFunnelIntegrationRequest = new KeapRestApi.CreateFunnelIntegrationRequest(); // CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let createFunnelIntegrationRequest = new KeapCoreServiceCoreSdk.CreateFunnelIntegrationRequest(); // CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
 apiInstance.createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -470,10 +470,10 @@ Achieve Funnel Integration Trigger Goal
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let createFunnelIntegrationTriggerEvents = new KeapRestApi.CreateFunnelIntegrationTriggerEvents(); // CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let createFunnelIntegrationTriggerEvents = new KeapCoreServiceCoreSdk.CreateFunnelIntegrationTriggerEvents(); // CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
 apiInstance.createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -514,11 +514,11 @@ Creates a new Lead Source
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'leadsource': new KeapRestApi.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
+  'leadsource': new KeapCoreServiceCoreSdk.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
 };
 apiInstance.createLeadSourceUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -560,10 +560,10 @@ Adds a custom field of the specified type and options to the Note object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 apiInstance.createNoteCustomFieldUsingPOST1(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -604,10 +604,10 @@ Adds a custom field of the specified type and options to the Opportunity object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 apiInstance.createOpportunityCustomFieldsUsingPOST(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -648,11 +648,11 @@ Creates a new Opportunity Stage
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'opportunityStage': new KeapRestApi.CreateOpportunityStageRequest() // CreateOpportunityStageRequest | opportunity
+  'opportunityStage': new KeapCoreServiceCoreSdk.CreateOpportunityStageRequest() // CreateOpportunityStageRequest | opportunity
 };
 apiInstance.createOpportunityStageUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -694,11 +694,11 @@ Creates a new opportunity as the authenticated user.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'opportunity': new KeapRestApi.CreateOpportunityRequest() // CreateOpportunityRequest | opportunity
+  'opportunity': new KeapCoreServiceCoreSdk.CreateOpportunityRequest() // CreateOpportunityRequest | opportunity
 };
 apiInstance.createOpportunityUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -740,10 +740,10 @@ Adds a custom field of the specified type and options to the Order object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 apiInstance.createOrderCustomFieldUsingPOST(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -784,11 +784,11 @@ Creates an order item on an existing order.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let orderId = "orderId_example"; // String | order_id
-let createRestOrderItemRequest = new KeapRestApi.CreateRestOrderItemRequest(); // CreateRestOrderItemRequest | createRestOrderItemRequest
+let createRestOrderItemRequest = new KeapCoreServiceCoreSdk.CreateRestOrderItemRequest(); // CreateRestOrderItemRequest | createRestOrderItemRequest
 apiInstance.createOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -830,10 +830,10 @@ Create a one time Order with Order items.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let createOrderRequest = new KeapRestApi.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let createOrderRequest = new KeapCoreServiceCoreSdk.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
 apiInstance.createOrderUsingPOST1(createOrderRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -874,10 +874,10 @@ Creates a single Affiliate Link
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let request = new KeapRestApi.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let request = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
 apiInstance.createRedirectLinkUsingPOST(request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -918,10 +918,10 @@ Creates a new referral partner referral on the provided contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let request = new KeapRestApi.CreateReferralRequest(); // CreateReferralRequest | request
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let request = new KeapCoreServiceCoreSdk.CreateReferralRequest(); // CreateReferralRequest | request
 apiInstance.createReferralUsingPOST(request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -962,10 +962,10 @@ Adds a custom field of the specified type and options to the Subscription object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 apiInstance.createSubscriptionCustomFieldUsingPOST(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -1006,10 +1006,10 @@ Adds a custom field of the specified type and options to the Task object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let customField = new KeapRestApi.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 apiInstance.createTaskCustomFieldUsingPOST1(customField).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -1050,11 +1050,11 @@ Creates a new task as the authenticated user.   This endpoint does not currently
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'task': new KeapRestApi.CreateTaskRequest() // CreateTaskRequest | task
+  'task': new KeapCoreServiceCoreSdk.CreateTaskRequest() // CreateTaskRequest | task
 };
 apiInstance.createTaskUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1096,11 +1096,11 @@ Creates a new user record. NB: Users will be invited to the application and rema
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'user': new KeapRestApi.CreateUserRequestV2() // CreateUserRequestV2 | user
+  'user': new KeapCoreServiceCoreSdk.CreateUserRequestV2() // CreateUserRequestV2 | user
 };
 apiInstance.createUserUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1142,9 +1142,9 @@ Deletes a Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 apiInstance.deleteAffiliateCommissionProgramUsingDELETE(commissionProgramId).then(() => {
   console.log('API called successfully.');
@@ -1186,9 +1186,9 @@ Deletes the specified Affiliate
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let id = "id_example"; // String | id
 apiInstance.deleteAffiliateUsingDELETE(id).then(() => {
   console.log('API called successfully.');
@@ -1230,9 +1230,9 @@ Deletes a specified Category Discount
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let discountId = "discountId_example"; // String | discount_id
 apiInstance.deleteDiscountUsingDELETE(discountId).then(() => {
   console.log('API called successfully.');
@@ -1274,9 +1274,9 @@ Deletes a specified Free Trial Discount
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let discountId = "discountId_example"; // String | discount_id
 apiInstance.deleteDiscountUsingDELETE1(discountId).then(() => {
   console.log('API called successfully.');
@@ -1318,10 +1318,10 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
-let deleteFunnelIntegrationRequest = new KeapRestApi.DeleteFunnelIntegrationRequest(); // DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let deleteFunnelIntegrationRequest = new KeapCoreServiceCoreSdk.DeleteFunnelIntegrationRequest(); // DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
 apiInstance.deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -1362,9 +1362,9 @@ Deletes the specified Opportunity Stage
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let stageId = "stageId_example"; // String | stage_id
 apiInstance.deleteOpportunityStageUsingDELETE(stageId).then(() => {
   console.log('API called successfully.');
@@ -1406,9 +1406,9 @@ Deletes the specified Opportunity
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opportunityId = "opportunityId_example"; // String | opportunity_id
 apiInstance.deleteOpportunityUsingDELETE(opportunityId).then(() => {
   console.log('API called successfully.');
@@ -1450,9 +1450,9 @@ Delete an Order
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let orderId = "orderId_example"; // String | order_id
 apiInstance.deleteOrderUsingDELETE1(orderId).then(() => {
   console.log('API called successfully.');
@@ -1494,9 +1494,9 @@ Deletes an Affiliate Link
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let redirectId = "redirectId_example"; // String | redirect_id
 apiInstance.deleteRedirectLinkUsingDELETE(redirectId).then(() => {
   console.log('API called successfully.');
@@ -1538,9 +1538,9 @@ Deletes a Custom Field from Task.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
 apiInstance.deleteTaskCustomFieldUsingDELETE(customFieldId).then(() => {
   console.log('API called successfully.');
@@ -1582,9 +1582,9 @@ Deletes a single task
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let taskId = "taskId_example"; // String | task_id
 apiInstance.deleteTaskUsingDELETE1(taskId).then(() => {
   console.log('API called successfully.');
@@ -1626,9 +1626,9 @@ Get the Affiliate Commission Earned and View LedgerURl for portal
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let affiliateId = "affiliateId_example"; // String | affiliate_id
 apiInstance.getAffiliateCommissionTotalUsingGET(affiliateId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1670,9 +1670,9 @@ Retrieve a list of Affiliate&#39;s Commissions and Clawbacks
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let affiliateId = "affiliateId_example"; // String | affiliate_id
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) affiliateId  - (String) since  - (String) until  
@@ -1724,9 +1724,9 @@ Get the custom fields and optional properties for the Affiliate object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.getAffiliateCustomFieldsUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -1764,9 +1764,9 @@ Retrieves a single Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 apiInstance.getCommissionProgramUsingGET(commissionProgramId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1808,9 +1808,9 @@ Get a list of Contacts based search parameters.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let searchParam = "searchParam_example"; // String | searchParam
 apiInstance.getContactsBySearchTermUsingGET(searchParam).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1852,9 +1852,9 @@ Retrieves a single Category Discount
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let discountId = "discountId_example"; // String | discount_id
 apiInstance.getDiscountUsingGET(discountId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1896,9 +1896,9 @@ Retrieves the specified Opportunity Stage
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let stageId = "stageId_example"; // String | stage_id
 apiInstance.getOpportunityStageUsingGET(stageId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1940,9 +1940,9 @@ Retrieves the specified Opportunity
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opportunityId = "opportunityId_example"; // String | opportunity_id
 apiInstance.getOpportunityUsingGET1(opportunityId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1984,9 +1984,9 @@ Retrieves a single Order for a given order id
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let orderId = "orderId_example"; // String | order_id
 apiInstance.getOrderUsingGET1(orderId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -2028,9 +2028,9 @@ Retrieves information about a single Affiliate Link
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let redirectId = "redirectId_example"; // String | redirect_id
 apiInstance.getRedirectLinkUsingGET(redirectId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -2072,9 +2072,9 @@ Retrieves a single task
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let taskId = "taskId_example"; // String | task_id
 apiInstance.getTaskUsingGET1(taskId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -2116,9 +2116,9 @@ Retrieves a specific User
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let userId = "userId_example"; // String | user_id
 apiInstance.getUserByIdUsingGET(userId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -2160,9 +2160,9 @@ Retrieves information for the current authenticated end-user, as outlined by the
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.getUserInfoUsingGET1().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -2200,9 +2200,9 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let userId = "userId_example"; // String | user_id
 apiInstance.getUserSignatureUsingGET1(userId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -2244,9 +2244,9 @@ Retrieves a list of Affiliate Commission Programs
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc
@@ -2296,9 +2296,9 @@ Retrieves a list of Affiliate Links
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc
@@ -2346,9 +2346,9 @@ List Countries
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.listCountriesUsingGET2().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -2386,9 +2386,9 @@ Retrieves a list of all landing pages
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
@@ -2438,9 +2438,9 @@ Retrieves a list of lead sources
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
@@ -2490,9 +2490,9 @@ Retrieves a list of Merchant accounts
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`
   'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc
@@ -2542,9 +2542,9 @@ Retrieves a list of all Opportunities.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'fields': ["null"], // [String] | fields
   'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) stage_id - (String) user_id 
@@ -2596,9 +2596,9 @@ Retrieves a list of Opportunity Stages.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order stage items. One of the following fields: - stage_order One of the following directions: - asc - desc 
@@ -2648,9 +2648,9 @@ Retrieves a list of orders
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`
   'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
@@ -2700,9 +2700,9 @@ Retrieves a list of Products
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name   
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc
@@ -2750,9 +2750,9 @@ List a Country&#39;s Provinces
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let countryCode = "countryCode_example"; // String | country_code
 apiInstance.listProvincesForCountryUsingGET(countryCode).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -2794,9 +2794,9 @@ Retrieves a list of Shipping methods
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.listShippingMethodsUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -2834,9 +2834,9 @@ Retrieves a list of Subscription Plans
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name   
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc
@@ -2886,9 +2886,9 @@ Retrieve a list of Affiliate Summaries
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are: - (List[String]) affiliate_ids - (String) since_time - (String) until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:  - `filter=since_time%3D%3D2024-09-17T-15:50+00`  - `filter=until_time%3D%3D2024-09-17T-15:50+00`  - `filter=affiliate_ids%3D%3D123,456,789` 
   'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - affiliate_id - amount_earned - balance - clawbacks One of the following directions: - asc - desc
@@ -2938,9 +2938,9 @@ Retrieve a list of tasks based on the provided filter. Tasks which are not assig
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'endDueTime': "endDueTime_example", // String | 
   'filter': "filter_example", // String | Search filter to apply to results
@@ -2994,9 +2994,9 @@ Retrieves a list of users
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example" // String | Attribute and direction to order items by. E.g. 'given_name desc'
@@ -3042,13 +3042,13 @@ Updates a Default Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
   'updateMask': ["null"], // [String] | update_mask
-  'patchDefaultCommissionProgramRequest': new KeapRestApi.PatchDefaultCommissionProgramRequest() // PatchDefaultCommissionProgramRequest | Values of the default Commission Program
+  'patchDefaultCommissionProgramRequest': new KeapCoreServiceCoreSdk.PatchDefaultCommissionProgramRequest() // PatchDefaultCommissionProgramRequest | Values of the default Commission Program
 };
 apiInstance.patchDefaultCommissionProgramUsingPATCH(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3092,13 +3092,13 @@ Updates an Order
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let orderId = "orderId_example"; // String | order_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'order': new KeapRestApi.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
+  'order': new KeapCoreServiceCoreSdk.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
 };
 apiInstance.patchOrderUsingPATCH(orderId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3142,13 +3142,13 @@ Updates a Product Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
   'updateMask': ["null"], // [String] | update_mask
-  'patchProductCommissionProgramRequest': new KeapRestApi.PatchProductCommissionProgramRequest() // PatchProductCommissionProgramRequest | Values of the product Commission Program
+  'patchProductCommissionProgramRequest': new KeapCoreServiceCoreSdk.PatchProductCommissionProgramRequest() // PatchProductCommissionProgramRequest | Values of the product Commission Program
 };
 apiInstance.patchProductCommissionProgramUsingPATCH(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3192,13 +3192,13 @@ Updates a Subscription Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
   'updateMask': ["null"], // [String] | update_mask
-  'patchSubscriptionCommissionProgramRequest': new KeapRestApi.PatchSubscriptionCommissionProgramRequest() // PatchSubscriptionCommissionProgramRequest | Values of the subscription Commission Program
+  'patchSubscriptionCommissionProgramRequest': new KeapCoreServiceCoreSdk.PatchSubscriptionCommissionProgramRequest() // PatchSubscriptionCommissionProgramRequest | Values of the subscription Commission Program
 };
 apiInstance.patchSubscriptionCommissionProgramUsingPATCH(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3242,13 +3242,13 @@ Updates a task with only the values provided in the request.  This endpoint does
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let taskId = "taskId_example"; // String | task_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'task': new KeapRestApi.CreatePatchTaskRequest() // CreatePatchTaskRequest | task
+  'task': new KeapCoreServiceCoreSdk.CreatePatchTaskRequest() // CreatePatchTaskRequest | task
 };
 apiInstance.patchTaskUsingPATCH(taskId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3292,13 +3292,13 @@ Updates information on a specific User
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let userId = "userId_example"; // String | user_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
-  'user': new KeapRestApi.PatchUserRequestV2() // PatchUserRequestV2 | user
+  'user': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
 };
 apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3342,11 +3342,11 @@ Removes an Affiliate from a Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let id = "id_example"; // String | id
-let removeFromProgramRequest = new KeapRestApi.AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+let removeFromProgramRequest = new KeapCoreServiceCoreSdk.AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -3388,11 +3388,11 @@ Removes a Subscription from a Commission Program
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionId = "commissionId_example"; // String | commission_id
-let deleteSubscriptionPlanCommissionRequest = new KeapRestApi.DeleteSubscriptionPlanCommissionRequest(); // DeleteSubscriptionPlanCommissionRequest | deleteSubscriptionPlanCommissionRequest
+let deleteSubscriptionPlanCommissionRequest = new KeapCoreServiceCoreSdk.DeleteSubscriptionPlanCommissionRequest(); // DeleteSubscriptionPlanCommissionRequest | deleteSubscriptionPlanCommissionRequest
 apiInstance.removeSubscriptionPlanCommissionFromCommissionsUsingPOST(commissionId, deleteSubscriptionPlanCommissionRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -3434,9 +3434,9 @@ Gets the custom fields for the Note object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.retrieveNoteModelUsingGET1().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -3474,9 +3474,9 @@ Gets the custom field&#39;s model for the Order object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.retrieveOrderCustomFieldModelUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -3514,9 +3514,9 @@ Gets the custom field&#39;s model for the Subscription object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.retrieveSubscriptionCustomFieldModelUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -3554,9 +3554,9 @@ Get the custom fields for the Task object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 apiInstance.retrieveTaskModelUsingGET1().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -3594,11 +3594,11 @@ Updates a custom field of the specified type and options to the Affiliate object
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -3644,11 +3644,11 @@ Updates a custom field of the specified type and options to the Note object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -3694,11 +3694,11 @@ Updates a custom field of the specified type and options to the Opportunity obje
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -3744,11 +3744,11 @@ Updates specified values of a given opportunity
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opportunityId = "opportunityId_example"; // String | opportunity_id
-let request = new KeapRestApi.PatchOpportunityRequest(); // PatchOpportunityRequest | request
+let request = new KeapCoreServiceCoreSdk.PatchOpportunityRequest(); // PatchOpportunityRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -3794,11 +3794,11 @@ Updates a custom field of the specified type and options to the Order object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -3844,11 +3844,11 @@ Updates an Affiliate Link
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let redirectId = "redirectId_example"; // String | redirect_id
-let request = new KeapRestApi.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+let request = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
 apiInstance.updateRedirectLinkUsingPATCH(redirectId, request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -3890,11 +3890,11 @@ Updates a custom field of the specified type and options to the Subscription obj
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
@@ -3940,11 +3940,11 @@ Updates a custom field of the specified type and options to the Task object.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PreReleaseApi();
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapRestApi.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };

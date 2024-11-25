@@ -19,7 +19,7 @@ import ListRestShippingMethodsResponse from '../model/ListRestShippingMethodsRes
 /**
 * Shipping service.
 * @module com.keap.sdk.core/api/ShippingApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class ShippingApi {
 
@@ -41,7 +41,7 @@ export default class ShippingApi {
      * Retrieves a list of Shipping methods
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListRestShippingMethodsResponse} and HTTP response
      */
-    listShippingMethodsUsingGET_0WithHttpInfo() {
+    listShippingMethodsUsingGETWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -69,8 +69,8 @@ export default class ShippingApi {
      * Retrieves a list of Shipping methods
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListRestShippingMethodsResponse}
      */
-    listShippingMethodsUsingGET_0() {
-      return this.listShippingMethodsUsingGET_0WithHttpInfo()
+    listShippingMethodsUsingGET() {
+      return this.listShippingMethodsUsingGETWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

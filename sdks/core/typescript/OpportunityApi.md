@@ -4,21 +4,21 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createOpportunityCustomFieldsUsingPOST_0**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST_0) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
-[**createOpportunityStageUsingPOST_0**](OpportunityApi.md#createOpportunityStageUsingPOST_0) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
-[**createOpportunityUsingPOST1_0**](OpportunityApi.md#createOpportunityUsingPOST1_0) | **POST** /v2/opportunities | Create an Opportunity
-[**deleteOpportunityStageUsingDELETE_0**](OpportunityApi.md#deleteOpportunityStageUsingDELETE_0) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
-[**deleteOpportunityUsingDELETE_0**](OpportunityApi.md#deleteOpportunityUsingDELETE_0) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
-[**getOpportunityStageUsingGET_0**](OpportunityApi.md#getOpportunityStageUsingGET_0) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
-[**getOpportunityUsingGET1_0**](OpportunityApi.md#getOpportunityUsingGET1_0) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
-[**listOpportunitiesUsingGET1_0**](OpportunityApi.md#listOpportunitiesUsingGET1_0) | **GET** /v2/opportunities | List Opportunities
-[**listOpportunityStagesUsingGET_0**](OpportunityApi.md#listOpportunityStagesUsingGET_0) | **GET** /v2/opportunities/stages | List of Opportunity Stages
-[**updateOpportunityCustomFieldUsingPATCH_0**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH_0) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity\&#39;s Custom Field
-[**updateOpportunityUsingPATCH_0**](OpportunityApi.md#updateOpportunityUsingPATCH_0) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
+[**createOpportunityCustomFieldsUsingPOST**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
+[**createOpportunityStageUsingPOST**](OpportunityApi.md#createOpportunityStageUsingPOST) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
+[**createOpportunityUsingPOST1**](OpportunityApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity
+[**deleteOpportunityStageUsingDELETE**](OpportunityApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
+[**deleteOpportunityUsingDELETE**](OpportunityApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
+[**getOpportunityStageUsingGET**](OpportunityApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
+[**getOpportunityUsingGET1**](OpportunityApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
+[**listOpportunitiesUsingGET1**](OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
+[**listOpportunityStagesUsingGET**](OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
+[**updateOpportunityCustomFieldUsingPATCH**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity\&#39;s Custom Field
+[**updateOpportunityUsingPATCH**](OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 
 
-# **createOpportunityCustomFieldsUsingPOST_0**
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST_0(customField)
+# **createOpportunityCustomFieldsUsingPOST**
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
 
 Adds a custom field of the specified type and options to the Opportunity object.
 
@@ -27,12 +27,12 @@ Adds a custom field of the specified type and options to the Opportunity object.
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request } from '';
+import type { OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request = {
+const request: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest = {
     // customField
   customField: {
     fieldType: "CURRENCY",
@@ -48,7 +48,7 @@ const request: OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createOpportunityCustomFieldsUsingPOST_0(request);
+const data = await apiInstance.createOpportunityCustomFieldsUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -83,8 +83,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createOpportunityStageUsingPOST_0**
-> RestOpportunityStage createOpportunityStageUsingPOST_0()
+# **createOpportunityStageUsingPOST**
+> RestOpportunityStage createOpportunityStageUsingPOST()
 
 Creates a new Opportunity Stage
 
@@ -93,12 +93,12 @@ Creates a new Opportunity Stage
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiCreateOpportunityStageUsingPOST0Request } from '';
+import type { OpportunityApiCreateOpportunityStageUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiCreateOpportunityStageUsingPOST0Request = {
+const request: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {
     // opportunity (optional)
   opportunityStage: {
     checkListItems: [
@@ -115,7 +115,7 @@ const request: OpportunityApiCreateOpportunityStageUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createOpportunityStageUsingPOST_0(request);
+const data = await apiInstance.createOpportunityStageUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -150,8 +150,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createOpportunityUsingPOST1_0**
-> RestV2Opportunity createOpportunityUsingPOST1_0()
+# **createOpportunityUsingPOST1**
+> RestV2Opportunity createOpportunityUsingPOST1()
 
 Creates a new opportunity as the authenticated user.
 
@@ -160,12 +160,12 @@ Creates a new opportunity as the authenticated user.
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiCreateOpportunityUsingPOST10Request } from '';
+import type { OpportunityApiCreateOpportunityUsingPOST1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiCreateOpportunityUsingPOST10Request = {
+const request: OpportunityApiCreateOpportunityUsingPOST1Request = {
     // opportunity (optional)
   opportunity: {
     affiliateId: "affiliateId_example",
@@ -189,7 +189,7 @@ const request: OpportunityApiCreateOpportunityUsingPOST10Request = {
   },
 };
 
-const data = await apiInstance.createOpportunityUsingPOST1_0(request);
+const data = await apiInstance.createOpportunityUsingPOST1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -224,8 +224,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteOpportunityStageUsingDELETE_0**
-> void deleteOpportunityStageUsingDELETE_0()
+# **deleteOpportunityStageUsingDELETE**
+> void deleteOpportunityStageUsingDELETE()
 
 Deletes the specified Opportunity Stage
 
@@ -234,17 +234,17 @@ Deletes the specified Opportunity Stage
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiDeleteOpportunityStageUsingDELETE0Request } from '';
+import type { OpportunityApiDeleteOpportunityStageUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiDeleteOpportunityStageUsingDELETE0Request = {
+const request: OpportunityApiDeleteOpportunityStageUsingDELETERequest = {
     // stage_id
   stageId: "stage_id_example",
 };
 
-const data = await apiInstance.deleteOpportunityStageUsingDELETE_0(request);
+const data = await apiInstance.deleteOpportunityStageUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -280,8 +280,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteOpportunityUsingDELETE_0**
-> void deleteOpportunityUsingDELETE_0()
+# **deleteOpportunityUsingDELETE**
+> void deleteOpportunityUsingDELETE()
 
 Deletes the specified Opportunity
 
@@ -290,17 +290,17 @@ Deletes the specified Opportunity
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiDeleteOpportunityUsingDELETE0Request } from '';
+import type { OpportunityApiDeleteOpportunityUsingDELETERequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiDeleteOpportunityUsingDELETE0Request = {
+const request: OpportunityApiDeleteOpportunityUsingDELETERequest = {
     // opportunity_id
   opportunityId: "opportunity_id_example",
 };
 
-const data = await apiInstance.deleteOpportunityUsingDELETE_0(request);
+const data = await apiInstance.deleteOpportunityUsingDELETE(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -336,8 +336,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getOpportunityStageUsingGET_0**
-> RestOpportunityStage getOpportunityStageUsingGET_0()
+# **getOpportunityStageUsingGET**
+> RestOpportunityStage getOpportunityStageUsingGET()
 
 Retrieves the specified Opportunity Stage
 
@@ -346,17 +346,17 @@ Retrieves the specified Opportunity Stage
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiGetOpportunityStageUsingGET0Request } from '';
+import type { OpportunityApiGetOpportunityStageUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiGetOpportunityStageUsingGET0Request = {
+const request: OpportunityApiGetOpportunityStageUsingGETRequest = {
     // stage_id
   stageId: "stage_id_example",
 };
 
-const data = await apiInstance.getOpportunityStageUsingGET_0(request);
+const data = await apiInstance.getOpportunityStageUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -392,8 +392,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getOpportunityUsingGET1_0**
-> RestV2Opportunity getOpportunityUsingGET1_0()
+# **getOpportunityUsingGET1**
+> RestV2Opportunity getOpportunityUsingGET1()
 
 Retrieves the specified Opportunity
 
@@ -402,17 +402,17 @@ Retrieves the specified Opportunity
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiGetOpportunityUsingGET10Request } from '';
+import type { OpportunityApiGetOpportunityUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiGetOpportunityUsingGET10Request = {
+const request: OpportunityApiGetOpportunityUsingGET1Request = {
     // opportunity_id
   opportunityId: "opportunity_id_example",
 };
 
-const data = await apiInstance.getOpportunityUsingGET1_0(request);
+const data = await apiInstance.getOpportunityUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -448,8 +448,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listOpportunitiesUsingGET1_0**
-> ListOpportunitiesResponse listOpportunitiesUsingGET1_0()
+# **listOpportunitiesUsingGET1**
+> ListOpportunitiesResponse listOpportunitiesUsingGET1()
 
 Retrieves a list of all Opportunities.
 
@@ -458,12 +458,12 @@ Retrieves a list of all Opportunities.
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiListOpportunitiesUsingGET10Request } from '';
+import type { OpportunityApiListOpportunitiesUsingGET1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiListOpportunitiesUsingGET10Request = {
+const request: OpportunityApiListOpportunitiesUsingGET1Request = {
     // fields (optional)
   fields: [
     "fields_example",
@@ -478,7 +478,7 @@ const request: OpportunityApiListOpportunitiesUsingGET10Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listOpportunitiesUsingGET1_0(request);
+const data = await apiInstance.listOpportunitiesUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -518,8 +518,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **listOpportunityStagesUsingGET_0**
-> ListOpportunityStagesResponse listOpportunityStagesUsingGET_0()
+# **listOpportunityStagesUsingGET**
+> ListOpportunityStagesResponse listOpportunityStagesUsingGET()
 
 Retrieves a list of Opportunity Stages.
 
@@ -528,12 +528,12 @@ Retrieves a list of Opportunity Stages.
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiListOpportunityStagesUsingGET0Request } from '';
+import type { OpportunityApiListOpportunityStagesUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiListOpportunityStagesUsingGET0Request = {
+const request: OpportunityApiListOpportunityStagesUsingGETRequest = {
     // Search filter to apply to results (optional)
   filter: "filter_example",
     // Attribute and direction to order stage items. One of the following fields: - stage_order One of the following directions: - asc - desc  (optional)
@@ -544,7 +544,7 @@ const request: OpportunityApiListOpportunityStagesUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listOpportunityStagesUsingGET_0(request);
+const data = await apiInstance.listOpportunityStagesUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -583,8 +583,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateOpportunityCustomFieldUsingPATCH_0**
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH_0(request)
+# **updateOpportunityCustomFieldUsingPATCH**
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(request)
 
 Updates a custom field of the specified type and options to the Opportunity object.
 
@@ -593,12 +593,12 @@ Updates a custom field of the specified type and options to the Opportunity obje
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request } from '';
+import type { OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request = {
+const request: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
@@ -619,7 +619,7 @@ const request: OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request = {
   ],
 };
 
-const data = await apiInstance.updateOpportunityCustomFieldUsingPATCH_0(request);
+const data = await apiInstance.updateOpportunityCustomFieldUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -657,8 +657,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateOpportunityUsingPATCH_0**
-> RestV2Opportunity updateOpportunityUsingPATCH_0(request)
+# **updateOpportunityUsingPATCH**
+> RestV2Opportunity updateOpportunityUsingPATCH(request)
 
 Updates specified values of a given opportunity
 
@@ -667,12 +667,12 @@ Updates specified values of a given opportunity
 
 ```typescript
 import { createConfiguration, OpportunityApi } from '';
-import type { OpportunityApiUpdateOpportunityUsingPATCH0Request } from '';
+import type { OpportunityApiUpdateOpportunityUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new OpportunityApi(configuration);
 
-const request: OpportunityApiUpdateOpportunityUsingPATCH0Request = {
+const request: OpportunityApiUpdateOpportunityUsingPATCHRequest = {
     // opportunity_id
   opportunityId: "opportunity_id_example",
     // request
@@ -702,7 +702,7 @@ const request: OpportunityApiUpdateOpportunityUsingPATCH0Request = {
   ],
 };
 
-const data = await apiInstance.updateOpportunityUsingPATCH_0(request);
+const data = await apiInstance.updateOpportunityUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

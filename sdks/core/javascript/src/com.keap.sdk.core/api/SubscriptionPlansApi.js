@@ -19,7 +19,7 @@ import ListSubscriptionPlansResponse from '../model/ListSubscriptionPlansRespons
 /**
 * SubscriptionPlans service.
 * @module com.keap.sdk.core/api/SubscriptionPlansApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class SubscriptionPlansApi {
 
@@ -46,7 +46,7 @@ export default class SubscriptionPlansApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListSubscriptionPlansResponse} and HTTP response
      */
-    listSubscriptionPlansUsingGET_0WithHttpInfo(opts) {
+    listSubscriptionPlansUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -84,8 +84,8 @@ export default class SubscriptionPlansApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListSubscriptionPlansResponse}
      */
-    listSubscriptionPlansUsingGET_0(opts) {
-      return this.listSubscriptionPlansUsingGET_0WithHttpInfo(opts)
+    listSubscriptionPlansUsingGET(opts) {
+      return this.listSubscriptionPlansUsingGETWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

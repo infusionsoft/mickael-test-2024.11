@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listSubscriptionPlansUsingGET_0()**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**listSubscriptionPlansUsingGET()**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans |
 
 
-## `listSubscriptionPlansUsingGET_0()`
+## `listSubscriptionPlansUsingGET()`
 
 ```php
-listSubscriptionPlansUsingGET_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListSubscriptionPlansResponse
+listSubscriptionPlansUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListSubscriptionPlansResponse
 ```
 
 List Subscription Plans
@@ -35,10 +35,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listSubscriptionPlansUsingGET_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listSubscriptionPlansUsingGET($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionPlansApi->listSubscriptionPlansUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionPlansApi->listSubscriptionPlansUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

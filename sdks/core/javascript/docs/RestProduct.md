@@ -1,4 +1,4 @@
-# KeapRestApi.RestProduct
+# KeapCoreServiceCoreSdk.RestProduct
 
 ## Properties
 

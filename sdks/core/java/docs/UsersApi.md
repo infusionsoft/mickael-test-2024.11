@@ -4,24 +4,24 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createUserUsingPOST1_0**](UsersApi.md#createUserUsingPOST1_0) | **POST** /v2/users | Create a User |
-| [**createUserUsingPOST1_0WithHttpInfo**](UsersApi.md#createUserUsingPOST1_0WithHttpInfo) | **POST** /v2/users | Create a User |
-| [**getUserByIdUsingGET_0**](UsersApi.md#getUserByIdUsingGET_0) | **GET** /v2/users/{user_id} | Get User |
-| [**getUserByIdUsingGET_0WithHttpInfo**](UsersApi.md#getUserByIdUsingGET_0WithHttpInfo) | **GET** /v2/users/{user_id} | Get User |
-| [**getUserInfoUsingGET1_0**](UsersApi.md#getUserInfoUsingGET1_0) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
-| [**getUserInfoUsingGET1_0WithHttpInfo**](UsersApi.md#getUserInfoUsingGET1_0WithHttpInfo) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
-| [**getUserSignatureUsingGET1_0**](UsersApi.md#getUserSignatureUsingGET1_0) | **GET** /v2/users/{user_id}/signature | Get User email signature |
-| [**getUserSignatureUsingGET1_0WithHttpInfo**](UsersApi.md#getUserSignatureUsingGET1_0WithHttpInfo) | **GET** /v2/users/{user_id}/signature | Get User email signature |
-| [**listUsersUsingGET1_0**](UsersApi.md#listUsersUsingGET1_0) | **GET** /v2/users | List Users |
-| [**listUsersUsingGET1_0WithHttpInfo**](UsersApi.md#listUsersUsingGET1_0WithHttpInfo) | **GET** /v2/users | List Users |
-| [**patchUserUsingPATCH_0**](UsersApi.md#patchUserUsingPATCH_0) | **PATCH** /v2/users/{user_id} | Update User |
-| [**patchUserUsingPATCH_0WithHttpInfo**](UsersApi.md#patchUserUsingPATCH_0WithHttpInfo) | **PATCH** /v2/users/{user_id} | Update User |
+| [**createUserUsingPOST1**](UsersApi.md#createUserUsingPOST1) | **POST** /v2/users | Create a User |
+| [**createUserUsingPOST1WithHttpInfo**](UsersApi.md#createUserUsingPOST1WithHttpInfo) | **POST** /v2/users | Create a User |
+| [**getUserByIdUsingGET**](UsersApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User |
+| [**getUserByIdUsingGETWithHttpInfo**](UsersApi.md#getUserByIdUsingGETWithHttpInfo) | **GET** /v2/users/{user_id} | Get User |
+| [**getUserInfoUsingGET1**](UsersApi.md#getUserInfoUsingGET1) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
+| [**getUserInfoUsingGET1WithHttpInfo**](UsersApi.md#getUserInfoUsingGET1WithHttpInfo) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info |
+| [**getUserSignatureUsingGET1**](UsersApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature |
+| [**getUserSignatureUsingGET1WithHttpInfo**](UsersApi.md#getUserSignatureUsingGET1WithHttpInfo) | **GET** /v2/users/{user_id}/signature | Get User email signature |
+| [**listUsersUsingGET1**](UsersApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users |
+| [**listUsersUsingGET1WithHttpInfo**](UsersApi.md#listUsersUsingGET1WithHttpInfo) | **GET** /v2/users | List Users |
+| [**patchUserUsingPATCH**](UsersApi.md#patchUserUsingPATCH) | **PATCH** /v2/users/{user_id} | Update User |
+| [**patchUserUsingPATCHWithHttpInfo**](UsersApi.md#patchUserUsingPATCHWithHttpInfo) | **PATCH** /v2/users/{user_id} | Update User |
 
 
 
-## createUserUsingPOST1_0
+## createUserUsingPOST1
 
-> User createUserUsingPOST1_0(user)
+> User createUserUsingPOST1(user)
 
 Create a User
 
@@ -31,11 +31,11 @@ Creates a new user record. NB: Users will be invited to the application and rema
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -45,10 +45,10 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         CreateUserRequestV2 user = new CreateUserRequestV2(); // CreateUserRequestV2 | user
         try {
-            User result = apiInstance.createUserUsingPOST1_0(user);
+            User result = apiInstance.createUserUsingPOST1(user);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#createUserUsingPOST1_0");
+            System.err.println("Exception when calling UsersApi#createUserUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -86,9 +86,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createUserUsingPOST1_0WithHttpInfo
+## createUserUsingPOST1WithHttpInfo
 
-> ApiResponse<User> createUserUsingPOST1_0 createUserUsingPOST1_0WithHttpInfo(user)
+> ApiResponse<User> createUserUsingPOST1 createUserUsingPOST1WithHttpInfo(user)
 
 Create a User
 
@@ -98,12 +98,12 @@ Creates a new user record. NB: Users will be invited to the application and rema
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -113,12 +113,12 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         CreateUserRequestV2 user = new CreateUserRequestV2(); // CreateUserRequestV2 | user
         try {
-            ApiResponse<User> response = apiInstance.createUserUsingPOST1_0WithHttpInfo(user);
+            ApiResponse<User> response = apiInstance.createUserUsingPOST1WithHttpInfo(user);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#createUserUsingPOST1_0");
+            System.err.println("Exception when calling UsersApi#createUserUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -157,9 +157,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## getUserByIdUsingGET_0
+## getUserByIdUsingGET
 
-> User getUserByIdUsingGET_0(userId)
+> User getUserByIdUsingGET(userId)
 
 Get User
 
@@ -169,11 +169,11 @@ Retrieves a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -183,10 +183,10 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         try {
-            User result = apiInstance.getUserByIdUsingGET_0(userId);
+            User result = apiInstance.getUserByIdUsingGET(userId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#getUserByIdUsingGET_0");
+            System.err.println("Exception when calling UsersApi#getUserByIdUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -225,9 +225,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getUserByIdUsingGET_0WithHttpInfo
+## getUserByIdUsingGETWithHttpInfo
 
-> ApiResponse<User> getUserByIdUsingGET_0 getUserByIdUsingGET_0WithHttpInfo(userId)
+> ApiResponse<User> getUserByIdUsingGET getUserByIdUsingGETWithHttpInfo(userId)
 
 Get User
 
@@ -237,12 +237,12 @@ Retrieves a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -252,12 +252,12 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         try {
-            ApiResponse<User> response = apiInstance.getUserByIdUsingGET_0WithHttpInfo(userId);
+            ApiResponse<User> response = apiInstance.getUserByIdUsingGETWithHttpInfo(userId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#getUserByIdUsingGET_0");
+            System.err.println("Exception when calling UsersApi#getUserByIdUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -297,9 +297,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getUserInfoUsingGET1_0
+## getUserInfoUsingGET1
 
-> GetUserInfoResponse getUserInfoUsingGET1_0()
+> GetUserInfoResponse getUserInfoUsingGET1()
 
 Retrieve User Info
 
@@ -309,11 +309,11 @@ Retrieves information for the current authenticated end-user, as outlined by the
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -322,10 +322,10 @@ public class Example {
 
         UsersApi apiInstance = new UsersApi(defaultClient);
         try {
-            GetUserInfoResponse result = apiInstance.getUserInfoUsingGET1_0();
+            GetUserInfoResponse result = apiInstance.getUserInfoUsingGET1();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#getUserInfoUsingGET1_0");
+            System.err.println("Exception when calling UsersApi#getUserInfoUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -361,9 +361,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getUserInfoUsingGET1_0WithHttpInfo
+## getUserInfoUsingGET1WithHttpInfo
 
-> ApiResponse<GetUserInfoResponse> getUserInfoUsingGET1_0 getUserInfoUsingGET1_0WithHttpInfo()
+> ApiResponse<GetUserInfoResponse> getUserInfoUsingGET1 getUserInfoUsingGET1WithHttpInfo()
 
 Retrieve User Info
 
@@ -373,12 +373,12 @@ Retrieves information for the current authenticated end-user, as outlined by the
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -387,12 +387,12 @@ public class Example {
 
         UsersApi apiInstance = new UsersApi(defaultClient);
         try {
-            ApiResponse<GetUserInfoResponse> response = apiInstance.getUserInfoUsingGET1_0WithHttpInfo();
+            ApiResponse<GetUserInfoResponse> response = apiInstance.getUserInfoUsingGET1WithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#getUserInfoUsingGET1_0");
+            System.err.println("Exception when calling UsersApi#getUserInfoUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -429,9 +429,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getUserSignatureUsingGET1_0
+## getUserSignatureUsingGET1
 
-> String getUserSignatureUsingGET1_0(userId)
+> String getUserSignatureUsingGET1(userId)
 
 Get User email signature
 
@@ -441,11 +441,11 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -455,10 +455,10 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         try {
-            String result = apiInstance.getUserSignatureUsingGET1_0(userId);
+            String result = apiInstance.getUserSignatureUsingGET1(userId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#getUserSignatureUsingGET1_0");
+            System.err.println("Exception when calling UsersApi#getUserSignatureUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -497,9 +497,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getUserSignatureUsingGET1_0WithHttpInfo
+## getUserSignatureUsingGET1WithHttpInfo
 
-> ApiResponse<String> getUserSignatureUsingGET1_0 getUserSignatureUsingGET1_0WithHttpInfo(userId)
+> ApiResponse<String> getUserSignatureUsingGET1 getUserSignatureUsingGET1WithHttpInfo(userId)
 
 Get User email signature
 
@@ -509,12 +509,12 @@ Retrieves a HTML snippet that contains the user&#39;s email signature.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -524,12 +524,12 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         try {
-            ApiResponse<String> response = apiInstance.getUserSignatureUsingGET1_0WithHttpInfo(userId);
+            ApiResponse<String> response = apiInstance.getUserSignatureUsingGET1WithHttpInfo(userId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#getUserSignatureUsingGET1_0");
+            System.err.println("Exception when calling UsersApi#getUserSignatureUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -569,9 +569,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## listUsersUsingGET1_0
+## listUsersUsingGET1
 
-> ListUserResponse listUsersUsingGET1_0(filter, orderBy)
+> ListUserResponse listUsersUsingGET1(filter, orderBy)
 
 List Users
 
@@ -581,11 +581,11 @@ Retrieves a list of users
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -596,10 +596,10 @@ public class Example {
         String filter = "filter_example"; // String | Search filter to apply to results
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. 'given_name desc'
         try {
-            ListUserResponse result = apiInstance.listUsersUsingGET1_0(filter, orderBy);
+            ListUserResponse result = apiInstance.listUsersUsingGET1(filter, orderBy);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#listUsersUsingGET1_0");
+            System.err.println("Exception when calling UsersApi#listUsersUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -639,9 +639,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listUsersUsingGET1_0WithHttpInfo
+## listUsersUsingGET1WithHttpInfo
 
-> ApiResponse<ListUserResponse> listUsersUsingGET1_0 listUsersUsingGET1_0WithHttpInfo(filter, orderBy)
+> ApiResponse<ListUserResponse> listUsersUsingGET1 listUsersUsingGET1WithHttpInfo(filter, orderBy)
 
 List Users
 
@@ -651,12 +651,12 @@ Retrieves a list of users
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -667,12 +667,12 @@ public class Example {
         String filter = "filter_example"; // String | Search filter to apply to results
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. 'given_name desc'
         try {
-            ApiResponse<ListUserResponse> response = apiInstance.listUsersUsingGET1_0WithHttpInfo(filter, orderBy);
+            ApiResponse<ListUserResponse> response = apiInstance.listUsersUsingGET1WithHttpInfo(filter, orderBy);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#listUsersUsingGET1_0");
+            System.err.println("Exception when calling UsersApi#listUsersUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -713,9 +713,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## patchUserUsingPATCH_0
+## patchUserUsingPATCH
 
-> User patchUserUsingPATCH_0(userId, updateMask, user)
+> User patchUserUsingPATCH(userId, updateMask, user)
 
 Update User
 
@@ -725,11 +725,11 @@ Updates information on a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -741,10 +741,10 @@ public class Example {
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
         PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
-            User result = apiInstance.patchUserUsingPATCH_0(userId, updateMask, user);
+            User result = apiInstance.patchUserUsingPATCH(userId, updateMask, user);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#patchUserUsingPATCH_0");
+            System.err.println("Exception when calling UsersApi#patchUserUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -785,9 +785,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## patchUserUsingPATCH_0WithHttpInfo
+## patchUserUsingPATCHWithHttpInfo
 
-> ApiResponse<User> patchUserUsingPATCH_0 patchUserUsingPATCH_0WithHttpInfo(userId, updateMask, user)
+> ApiResponse<User> patchUserUsingPATCH patchUserUsingPATCHWithHttpInfo(userId, updateMask, user)
 
 Update User
 
@@ -797,12 +797,12 @@ Updates information on a specific User
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.UsersApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.UsersApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -814,12 +814,12 @@ public class Example {
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
         PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
-            ApiResponse<User> response = apiInstance.patchUserUsingPATCH_0WithHttpInfo(userId, updateMask, user);
+            ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling UsersApi#patchUserUsingPATCH_0");
+            System.err.println("Exception when calling UsersApi#patchUserUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

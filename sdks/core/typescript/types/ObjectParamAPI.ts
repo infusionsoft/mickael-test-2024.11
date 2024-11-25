@@ -239,7 +239,7 @@ import { User } from '../models/User';
 import { ObservableAffiliateApi } from "./ObservableAPI";
 import { AffiliateApiRequestFactory, AffiliateApiResponseProcessor} from "../apis/AffiliateApi";
 
-export interface AffiliateApiAddAffiliateToProgramUsingPOST0Request {
+export interface AffiliateApiAddAffiliateToProgramUsingPOSTRequest {
     /**
      * id
      * Defaults to: undefined
@@ -264,7 +264,7 @@ export interface AffiliateApiAddAffiliateUsingPOSTRequest {
     insertAffiliate?: CreateAffiliateRequest
 }
 
-export interface AffiliateApiAddCommissionProgramUsingPOST0Request {
+export interface AffiliateApiAddCommissionProgramUsingPOSTRequest {
     /**
      * Commission Program to insert
      * @type CreateCommissionProgramRequest
@@ -273,7 +273,7 @@ export interface AffiliateApiAddCommissionProgramUsingPOST0Request {
     insertCommissionProgram?: CreateCommissionProgramRequest
 }
 
-export interface AffiliateApiAssignProductCommissionProgramUsingPOST0Request {
+export interface AffiliateApiAssignProductCommissionProgramUsingPOSTRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -289,7 +289,7 @@ export interface AffiliateApiAssignProductCommissionProgramUsingPOST0Request {
     productCommissionProgram?: CreateProductCommissionProgramRequest
 }
 
-export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request {
+export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -305,7 +305,7 @@ export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Reques
     subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest
 }
 
-export interface AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request {
+export interface AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest {
     /**
      * customField
      * @type CreateCustomFieldRequest
@@ -314,7 +314,7 @@ export interface AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request {
     customField: CreateCustomFieldRequest
 }
 
-export interface AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request {
+export interface AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -330,7 +330,7 @@ export interface AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request {
     createDefaultCommissionProgramRequest?: CreateDefaultCommissionProgramRequest
 }
 
-export interface AffiliateApiCreateRedirectLinkUsingPOST0Request {
+export interface AffiliateApiCreateRedirectLinkUsingPOSTRequest {
     /**
      * request
      * @type CreateOrPatchAffiliateLinkRequest
@@ -339,7 +339,7 @@ export interface AffiliateApiCreateRedirectLinkUsingPOST0Request {
     request: CreateOrPatchAffiliateLinkRequest
 }
 
-export interface AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request {
+export interface AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -349,7 +349,7 @@ export interface AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request
     commissionProgramId: string
 }
 
-export interface AffiliateApiDeleteAffiliateUsingDELETE0Request {
+export interface AffiliateApiDeleteAffiliateUsingDELETERequest {
     /**
      * id
      * Defaults to: undefined
@@ -359,7 +359,7 @@ export interface AffiliateApiDeleteAffiliateUsingDELETE0Request {
     id: string
 }
 
-export interface AffiliateApiDeleteRedirectLinkUsingDELETE0Request {
+export interface AffiliateApiDeleteRedirectLinkUsingDELETERequest {
     /**
      * redirect_id
      * Defaults to: undefined
@@ -369,7 +369,7 @@ export interface AffiliateApiDeleteRedirectLinkUsingDELETE0Request {
     redirectId: string
 }
 
-export interface AffiliateApiGetAffiliateCommissionTotalUsingGET0Request {
+export interface AffiliateApiGetAffiliateCommissionTotalUsingGETRequest {
     /**
      * affiliate_id
      * Defaults to: undefined
@@ -379,7 +379,7 @@ export interface AffiliateApiGetAffiliateCommissionTotalUsingGET0Request {
     affiliateId: string
 }
 
-export interface AffiliateApiGetAffiliateCommissionsUsingGET0Request {
+export interface AffiliateApiGetAffiliateCommissionsUsingGETRequest {
     /**
      * affiliate_id
      * Defaults to: undefined
@@ -419,7 +419,7 @@ export interface AffiliateApiGetAffiliateCommissionsUsingGET0Request {
     pageToken?: string
 }
 
-export interface AffiliateApiGetAffiliateCustomFieldsUsingGET0Request {
+export interface AffiliateApiGetAffiliateCustomFieldsUsingGETRequest {
 }
 
 export interface AffiliateApiGetAffiliateUsingGET1Request {
@@ -432,7 +432,7 @@ export interface AffiliateApiGetAffiliateUsingGET1Request {
     id: string
 }
 
-export interface AffiliateApiGetCommissionProgramUsingGET0Request {
+export interface AffiliateApiGetCommissionProgramUsingGETRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -442,7 +442,7 @@ export interface AffiliateApiGetCommissionProgramUsingGET0Request {
     commissionProgramId: string
 }
 
-export interface AffiliateApiGetRedirectLinkUsingGET0Request {
+export interface AffiliateApiGetRedirectLinkUsingGETRequest {
     /**
      * redirect_id
      * Defaults to: undefined
@@ -452,7 +452,7 @@ export interface AffiliateApiGetRedirectLinkUsingGET0Request {
     redirectId: string
 }
 
-export interface AffiliateApiListAffiliateCommissionProgramsUsingGET0Request {
+export interface AffiliateApiListAffiliateCommissionProgramsUsingGETRequest {
     /**
      * Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  
      * Defaults to: undefined
@@ -485,7 +485,7 @@ export interface AffiliateApiListAffiliateCommissionProgramsUsingGET0Request {
     pageToken?: string
 }
 
-export interface AffiliateApiListAffiliateLinksUsingGET0Request {
+export interface AffiliateApiListAffiliateLinksUsingGETRequest {
     /**
      * Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  
      * Defaults to: undefined
@@ -518,7 +518,7 @@ export interface AffiliateApiListAffiliateLinksUsingGET0Request {
     pageToken?: string
 }
 
-export interface AffiliateApiListSummariesUsingGET10Request {
+export interface AffiliateApiListSummariesUsingGET1Request {
     /**
      * Filter to apply, allowed fields are: - (List[String]) affiliate_ids - (String) since_time - (String) until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:  - &#x60;filter&#x3D;since_time%3D%3D2024-09-17T-15:50+00&#x60;  - &#x60;filter&#x3D;until_time%3D%3D2024-09-17T-15:50+00&#x60;  - &#x60;filter&#x3D;affiliate_ids%3D%3D123,456,789&#x60; 
      * Defaults to: undefined
@@ -574,7 +574,7 @@ export interface AffiliateApiPatchCommissionProgramUsingPATCHRequest {
     updateMask?: Array<string>
 }
 
-export interface AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request {
+export interface AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -597,7 +597,7 @@ export interface AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request {
     patchDefaultCommissionProgramRequest?: PatchDefaultCommissionProgramRequest
 }
 
-export interface AffiliateApiPatchProductCommissionProgramUsingPATCH0Request {
+export interface AffiliateApiPatchProductCommissionProgramUsingPATCHRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -620,7 +620,7 @@ export interface AffiliateApiPatchProductCommissionProgramUsingPATCH0Request {
     patchProductCommissionProgramRequest?: PatchProductCommissionProgramRequest
 }
 
-export interface AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request {
+export interface AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest {
     /**
      * commission_program_id
      * Defaults to: undefined
@@ -643,7 +643,7 @@ export interface AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Reques
     patchSubscriptionCommissionProgramRequest?: PatchSubscriptionCommissionProgramRequest
 }
 
-export interface AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request {
+export interface AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest {
     /**
      * id
      * Defaults to: undefined
@@ -659,7 +659,7 @@ export interface AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request {
     removeFromProgramRequest: AffiliateRemoveFromProgramRequest
 }
 
-export interface AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request {
+export interface AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest {
     /**
      * commission_id
      * Defaults to: undefined
@@ -675,7 +675,7 @@ export interface AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsin
     deleteSubscriptionPlanCommissionRequest: DeleteSubscriptionPlanCommissionRequest
 }
 
-export interface AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request {
+export interface AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -714,7 +714,7 @@ export interface AffiliateApiUpdateAffiliateUsingPATCHRequest {
     patchAffiliate?: PatchAffiliateRequest
 }
 
-export interface AffiliateApiUpdateRedirectLinkUsingPATCH0Request {
+export interface AffiliateApiUpdateRedirectLinkUsingPATCHRequest {
     /**
      * redirect_id
      * Defaults to: undefined
@@ -742,7 +742,7 @@ export class ObjectAffiliateApi {
      * Assign Affiliate to Commission program
      * @param param the request object
      */
-    public addAffiliateToProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddAffiliateToProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public addAffiliateToProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddAffiliateToProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.addAffiliateToProgramUsingPOSTWithHttpInfo(param.id, param.affiliateAddToProgramRequest,  options).toPromise();
     }
 
@@ -751,7 +751,7 @@ export class ObjectAffiliateApi {
      * Assign Affiliate to Commission program
      * @param param the request object
      */
-    public addAffiliateToProgramUsingPOST(param: AffiliateApiAddAffiliateToProgramUsingPOST0Request, options?: Configuration): Promise<void> {
+    public addAffiliateToProgramUsingPOST(param: AffiliateApiAddAffiliateToProgramUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.addAffiliateToProgramUsingPOST(param.id, param.affiliateAddToProgramRequest,  options).toPromise();
     }
 
@@ -778,7 +778,7 @@ export class ObjectAffiliateApi {
      * Create an Affiliate Commission Program
      * @param param the request object
      */
-    public addCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddCommissionProgramUsingPOST0Request = {}, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
+    public addCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddCommissionProgramUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
         return this.api.addCommissionProgramUsingPOSTWithHttpInfo(param.insertCommissionProgram,  options).toPromise();
     }
 
@@ -787,7 +787,7 @@ export class ObjectAffiliateApi {
      * Create an Affiliate Commission Program
      * @param param the request object
      */
-    public addCommissionProgramUsingPOST(param: AffiliateApiAddCommissionProgramUsingPOST0Request = {}, options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
+    public addCommissionProgramUsingPOST(param: AffiliateApiAddCommissionProgramUsingPOSTRequest = {}, options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
         return this.api.addCommissionProgramUsingPOST(param.insertCommissionProgram,  options).toPromise();
     }
 
@@ -796,7 +796,7 @@ export class ObjectAffiliateApi {
      * Assign a Product Commission Program
      * @param param the request object
      */
-    public assignProductCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignProductCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
+    public assignProductCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
         return this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.productCommissionProgram,  options).toPromise();
     }
 
@@ -805,7 +805,7 @@ export class ObjectAffiliateApi {
      * Assign a Product Commission Program
      * @param param the request object
      */
-    public assignProductCommissionProgramUsingPOST(param: AffiliateApiAssignProductCommissionProgramUsingPOST0Request, options?: Configuration): Promise<ProductCommissionProgram> {
+    public assignProductCommissionProgramUsingPOST(param: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<ProductCommissionProgram> {
         return this.api.assignProductCommissionProgramUsingPOST(param.commissionProgramId, param.productCommissionProgram,  options).toPromise();
     }
 
@@ -814,7 +814,7 @@ export class ObjectAffiliateApi {
      * Assign a Subscription Commission Program
      * @param param the request object
      */
-    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
+    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
         return this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.subscriptionCommissionProgram,  options).toPromise();
     }
 
@@ -823,7 +823,7 @@ export class ObjectAffiliateApi {
      * Assign a Subscription Commission Program
      * @param param the request object
      */
-    public assignSubscriptionCommissionProgramUsingPOST(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request, options?: Configuration): Promise<SubscriptionCommissionProgram> {
+    public assignSubscriptionCommissionProgramUsingPOST(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<SubscriptionCommissionProgram> {
         return this.api.assignSubscriptionCommissionProgramUsingPOST(param.commissionProgramId, param.subscriptionCommissionProgram,  options).toPromise();
     }
 
@@ -832,7 +832,7 @@ export class ObjectAffiliateApi {
      * Create an Affiliate Custom Field
      * @param param the request object
      */
-    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(param: AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(param: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
     }
 
@@ -841,7 +841,7 @@ export class ObjectAffiliateApi {
      * Create an Affiliate Custom Field
      * @param param the request object
      */
-    public createAffiliateCustomFieldUsingPOST(param: AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public createAffiliateCustomFieldUsingPOST(param: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.createAffiliateCustomFieldUsingPOST(param.customField,  options).toPromise();
     }
 
@@ -850,7 +850,7 @@ export class ObjectAffiliateApi {
      * Create a Default Commission Program
      * @param param the request object
      */
-    public createDefaultCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>> {
+    public createDefaultCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>> {
         return this.api.createDefaultCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.createDefaultCommissionProgramRequest,  options).toPromise();
     }
 
@@ -859,7 +859,7 @@ export class ObjectAffiliateApi {
      * Create a Default Commission Program
      * @param param the request object
      */
-    public createDefaultCommissionProgramUsingPOST(param: AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request, options?: Configuration): Promise<SetDefaultCommissionProgramResponse> {
+    public createDefaultCommissionProgramUsingPOST(param: AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<SetDefaultCommissionProgramResponse> {
         return this.api.createDefaultCommissionProgramUsingPOST(param.commissionProgramId, param.createDefaultCommissionProgramRequest,  options).toPromise();
     }
 
@@ -868,7 +868,7 @@ export class ObjectAffiliateApi {
      * Create an Affiliate Link
      * @param param the request object
      */
-    public createRedirectLinkUsingPOSTWithHttpInfo(param: AffiliateApiCreateRedirectLinkUsingPOST0Request, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+    public createRedirectLinkUsingPOSTWithHttpInfo(param: AffiliateApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
         return this.api.createRedirectLinkUsingPOSTWithHttpInfo(param.request,  options).toPromise();
     }
 
@@ -877,7 +877,7 @@ export class ObjectAffiliateApi {
      * Create an Affiliate Link
      * @param param the request object
      */
-    public createRedirectLinkUsingPOST(param: AffiliateApiCreateRedirectLinkUsingPOST0Request, options?: Configuration): Promise<AffiliateLink> {
+    public createRedirectLinkUsingPOST(param: AffiliateApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<AffiliateLink> {
         return this.api.createRedirectLinkUsingPOST(param.request,  options).toPromise();
     }
 
@@ -886,7 +886,7 @@ export class ObjectAffiliateApi {
      * Delete a Commission Program
      * @param param the request object
      */
-    public deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(param.commissionProgramId,  options).toPromise();
     }
 
@@ -895,7 +895,7 @@ export class ObjectAffiliateApi {
      * Delete a Commission Program
      * @param param the request object
      */
-    public deleteAffiliateCommissionProgramUsingDELETE(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteAffiliateCommissionProgramUsingDELETE(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteAffiliateCommissionProgramUsingDELETE(param.commissionProgramId,  options).toPromise();
     }
 
@@ -904,7 +904,7 @@ export class ObjectAffiliateApi {
      * Delete Affiliate
      * @param param the request object
      */
-    public deleteAffiliateUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteAffiliateUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteAffiliateUsingDELETEWithHttpInfo(param.id,  options).toPromise();
     }
 
@@ -913,7 +913,7 @@ export class ObjectAffiliateApi {
      * Delete Affiliate
      * @param param the request object
      */
-    public deleteAffiliateUsingDELETE(param: AffiliateApiDeleteAffiliateUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteAffiliateUsingDELETE(param: AffiliateApiDeleteAffiliateUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteAffiliateUsingDELETE(param.id,  options).toPromise();
     }
 
@@ -922,7 +922,7 @@ export class ObjectAffiliateApi {
      * Delete an Affiliate Link
      * @param param the request object
      */
-    public deleteRedirectLinkUsingDELETEWithHttpInfo(param: AffiliateApiDeleteRedirectLinkUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteRedirectLinkUsingDELETEWithHttpInfo(param: AffiliateApiDeleteRedirectLinkUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteRedirectLinkUsingDELETEWithHttpInfo(param.redirectId,  options).toPromise();
     }
 
@@ -931,7 +931,7 @@ export class ObjectAffiliateApi {
      * Delete an Affiliate Link
      * @param param the request object
      */
-    public deleteRedirectLinkUsingDELETE(param: AffiliateApiDeleteRedirectLinkUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteRedirectLinkUsingDELETE(param: AffiliateApiDeleteRedirectLinkUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteRedirectLinkUsingDELETE(param.redirectId,  options).toPromise();
     }
 
@@ -940,7 +940,7 @@ export class ObjectAffiliateApi {
      * Retrieve Affiliate Commission Earned and View LedgerURl for portal
      * @param param the request object
      */
-    public getAffiliateCommissionTotalUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionTotalUsingGET0Request, options?: Configuration): Promise<HttpInfo<AffiliateCommissionEarned>> {
+    public getAffiliateCommissionTotalUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionTotalUsingGETRequest, options?: Configuration): Promise<HttpInfo<AffiliateCommissionEarned>> {
         return this.api.getAffiliateCommissionTotalUsingGETWithHttpInfo(param.affiliateId,  options).toPromise();
     }
 
@@ -949,7 +949,7 @@ export class ObjectAffiliateApi {
      * Retrieve Affiliate Commission Earned and View LedgerURl for portal
      * @param param the request object
      */
-    public getAffiliateCommissionTotalUsingGET(param: AffiliateApiGetAffiliateCommissionTotalUsingGET0Request, options?: Configuration): Promise<AffiliateCommissionEarned> {
+    public getAffiliateCommissionTotalUsingGET(param: AffiliateApiGetAffiliateCommissionTotalUsingGETRequest, options?: Configuration): Promise<AffiliateCommissionEarned> {
         return this.api.getAffiliateCommissionTotalUsingGET(param.affiliateId,  options).toPromise();
     }
 
@@ -958,7 +958,7 @@ export class ObjectAffiliateApi {
      * Retrieve Affiliate Commission and Clawbacks
      * @param param the request object
      */
-    public getAffiliateCommissionsUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionsUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionResponse>> {
+    public getAffiliateCommissionsUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionsUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionResponse>> {
         return this.api.getAffiliateCommissionsUsingGETWithHttpInfo(param.affiliateId, param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -967,7 +967,7 @@ export class ObjectAffiliateApi {
      * Retrieve Affiliate Commission and Clawbacks
      * @param param the request object
      */
-    public getAffiliateCommissionsUsingGET(param: AffiliateApiGetAffiliateCommissionsUsingGET0Request, options?: Configuration): Promise<ListAffiliateCommissionResponse> {
+    public getAffiliateCommissionsUsingGET(param: AffiliateApiGetAffiliateCommissionsUsingGETRequest, options?: Configuration): Promise<ListAffiliateCommissionResponse> {
         return this.api.getAffiliateCommissionsUsingGET(param.affiliateId, param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -976,7 +976,7 @@ export class ObjectAffiliateApi {
      * Retrieve Affiliate Model
      * @param param the request object
      */
-    public getAffiliateCustomFieldsUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCustomFieldsUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
+    public getAffiliateCustomFieldsUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCustomFieldsUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
         return this.api.getAffiliateCustomFieldsUsingGETWithHttpInfo( options).toPromise();
     }
 
@@ -985,7 +985,7 @@ export class ObjectAffiliateApi {
      * Retrieve Affiliate Model
      * @param param the request object
      */
-    public getAffiliateCustomFieldsUsingGET(param: AffiliateApiGetAffiliateCustomFieldsUsingGET0Request = {}, options?: Configuration): Promise<ObjectModel> {
+    public getAffiliateCustomFieldsUsingGET(param: AffiliateApiGetAffiliateCustomFieldsUsingGETRequest = {}, options?: Configuration): Promise<ObjectModel> {
         return this.api.getAffiliateCustomFieldsUsingGET( options).toPromise();
     }
 
@@ -1012,7 +1012,7 @@ export class ObjectAffiliateApi {
      * Retrieve a Commission Program
      * @param param the request object
      */
-    public getCommissionProgramUsingGETWithHttpInfo(param: AffiliateApiGetCommissionProgramUsingGET0Request, options?: Configuration): Promise<HttpInfo<AffiliateProgramV2>> {
+    public getCommissionProgramUsingGETWithHttpInfo(param: AffiliateApiGetCommissionProgramUsingGETRequest, options?: Configuration): Promise<HttpInfo<AffiliateProgramV2>> {
         return this.api.getCommissionProgramUsingGETWithHttpInfo(param.commissionProgramId,  options).toPromise();
     }
 
@@ -1021,7 +1021,7 @@ export class ObjectAffiliateApi {
      * Retrieve a Commission Program
      * @param param the request object
      */
-    public getCommissionProgramUsingGET(param: AffiliateApiGetCommissionProgramUsingGET0Request, options?: Configuration): Promise<AffiliateProgramV2> {
+    public getCommissionProgramUsingGET(param: AffiliateApiGetCommissionProgramUsingGETRequest, options?: Configuration): Promise<AffiliateProgramV2> {
         return this.api.getCommissionProgramUsingGET(param.commissionProgramId,  options).toPromise();
     }
 
@@ -1030,7 +1030,7 @@ export class ObjectAffiliateApi {
      * Retrieve an Affiliate Link
      * @param param the request object
      */
-    public getRedirectLinkUsingGETWithHttpInfo(param: AffiliateApiGetRedirectLinkUsingGET0Request, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+    public getRedirectLinkUsingGETWithHttpInfo(param: AffiliateApiGetRedirectLinkUsingGETRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
         return this.api.getRedirectLinkUsingGETWithHttpInfo(param.redirectId,  options).toPromise();
     }
 
@@ -1039,7 +1039,7 @@ export class ObjectAffiliateApi {
      * Retrieve an Affiliate Link
      * @param param the request object
      */
-    public getRedirectLinkUsingGET(param: AffiliateApiGetRedirectLinkUsingGET0Request, options?: Configuration): Promise<AffiliateLink> {
+    public getRedirectLinkUsingGET(param: AffiliateApiGetRedirectLinkUsingGETRequest, options?: Configuration): Promise<AffiliateLink> {
         return this.api.getRedirectLinkUsingGET(param.redirectId,  options).toPromise();
     }
 
@@ -1048,7 +1048,7 @@ export class ObjectAffiliateApi {
      * List Affiliate Commission Programs
      * @param param the request object
      */
-    public listAffiliateCommissionProgramsUsingGETWithHttpInfo(param: AffiliateApiListAffiliateCommissionProgramsUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionProgramsResponse>> {
+    public listAffiliateCommissionProgramsUsingGETWithHttpInfo(param: AffiliateApiListAffiliateCommissionProgramsUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionProgramsResponse>> {
         return this.api.listAffiliateCommissionProgramsUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -1057,7 +1057,7 @@ export class ObjectAffiliateApi {
      * List Affiliate Commission Programs
      * @param param the request object
      */
-    public listAffiliateCommissionProgramsUsingGET(param: AffiliateApiListAffiliateCommissionProgramsUsingGET0Request = {}, options?: Configuration): Promise<ListAffiliateCommissionProgramsResponse> {
+    public listAffiliateCommissionProgramsUsingGET(param: AffiliateApiListAffiliateCommissionProgramsUsingGETRequest = {}, options?: Configuration): Promise<ListAffiliateCommissionProgramsResponse> {
         return this.api.listAffiliateCommissionProgramsUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -1066,7 +1066,7 @@ export class ObjectAffiliateApi {
      * List Affiliate Links
      * @param param the request object
      */
-    public listAffiliateLinksUsingGETWithHttpInfo(param: AffiliateApiListAffiliateLinksUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListAffiliateLinksResponse>> {
+    public listAffiliateLinksUsingGETWithHttpInfo(param: AffiliateApiListAffiliateLinksUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListAffiliateLinksResponse>> {
         return this.api.listAffiliateLinksUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -1075,7 +1075,7 @@ export class ObjectAffiliateApi {
      * List Affiliate Links
      * @param param the request object
      */
-    public listAffiliateLinksUsingGET(param: AffiliateApiListAffiliateLinksUsingGET0Request = {}, options?: Configuration): Promise<ListAffiliateLinksResponse> {
+    public listAffiliateLinksUsingGET(param: AffiliateApiListAffiliateLinksUsingGETRequest = {}, options?: Configuration): Promise<ListAffiliateLinksResponse> {
         return this.api.listAffiliateLinksUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -1084,7 +1084,7 @@ export class ObjectAffiliateApi {
      * List Affiliate Summaries
      * @param param the request object
      */
-    public listSummariesUsingGET1WithHttpInfo(param: AffiliateApiListSummariesUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ListAffiliateSummariesResponse>> {
+    public listSummariesUsingGET1WithHttpInfo(param: AffiliateApiListSummariesUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListAffiliateSummariesResponse>> {
         return this.api.listSummariesUsingGET1WithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -1093,7 +1093,7 @@ export class ObjectAffiliateApi {
      * List Affiliate Summaries
      * @param param the request object
      */
-    public listSummariesUsingGET1(param: AffiliateApiListSummariesUsingGET10Request = {}, options?: Configuration): Promise<ListAffiliateSummariesResponse> {
+    public listSummariesUsingGET1(param: AffiliateApiListSummariesUsingGET1Request = {}, options?: Configuration): Promise<ListAffiliateSummariesResponse> {
         return this.api.listSummariesUsingGET1(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -1120,7 +1120,7 @@ export class ObjectAffiliateApi {
      * Update a Default Commission Program
      * @param param the request object
      */
-    public patchDefaultCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>> {
+    public patchDefaultCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>> {
         return this.api.patchDefaultCommissionProgramUsingPATCHWithHttpInfo(param.commissionProgramId, param.updateMask, param.patchDefaultCommissionProgramRequest,  options).toPromise();
     }
 
@@ -1129,7 +1129,7 @@ export class ObjectAffiliateApi {
      * Update a Default Commission Program
      * @param param the request object
      */
-    public patchDefaultCommissionProgramUsingPATCH(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<SetDefaultCommissionProgramResponse> {
+    public patchDefaultCommissionProgramUsingPATCH(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<SetDefaultCommissionProgramResponse> {
         return this.api.patchDefaultCommissionProgramUsingPATCH(param.commissionProgramId, param.updateMask, param.patchDefaultCommissionProgramRequest,  options).toPromise();
     }
 
@@ -1138,7 +1138,7 @@ export class ObjectAffiliateApi {
      * Update a Product Commission Program
      * @param param the request object
      */
-    public patchProductCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchProductCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
+    public patchProductCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchProductCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
         return this.api.patchProductCommissionProgramUsingPATCHWithHttpInfo(param.commissionProgramId, param.updateMask, param.patchProductCommissionProgramRequest,  options).toPromise();
     }
 
@@ -1147,7 +1147,7 @@ export class ObjectAffiliateApi {
      * Update a Product Commission Program
      * @param param the request object
      */
-    public patchProductCommissionProgramUsingPATCH(param: AffiliateApiPatchProductCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<ProductCommissionProgram> {
+    public patchProductCommissionProgramUsingPATCH(param: AffiliateApiPatchProductCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<ProductCommissionProgram> {
         return this.api.patchProductCommissionProgramUsingPATCH(param.commissionProgramId, param.updateMask, param.patchProductCommissionProgramRequest,  options).toPromise();
     }
 
@@ -1156,7 +1156,7 @@ export class ObjectAffiliateApi {
      * Update a Subscription Commission Program
      * @param param the request object
      */
-    public patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
+    public patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
         return this.api.patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(param.commissionProgramId, param.updateMask, param.patchSubscriptionCommissionProgramRequest,  options).toPromise();
     }
 
@@ -1165,7 +1165,7 @@ export class ObjectAffiliateApi {
      * Update a Subscription Commission Program
      * @param param the request object
      */
-    public patchSubscriptionCommissionProgramUsingPATCH(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<SubscriptionCommissionProgram> {
+    public patchSubscriptionCommissionProgramUsingPATCH(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<SubscriptionCommissionProgram> {
         return this.api.patchSubscriptionCommissionProgramUsingPATCH(param.commissionProgramId, param.updateMask, param.patchSubscriptionCommissionProgramRequest,  options).toPromise();
     }
 
@@ -1174,7 +1174,7 @@ export class ObjectAffiliateApi {
      * Remove an Affiliate from a Commission Program
      * @param param the request object
      */
-    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(param: AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(param: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(param.id, param.removeFromProgramRequest,  options).toPromise();
     }
 
@@ -1183,7 +1183,7 @@ export class ObjectAffiliateApi {
      * Remove an Affiliate from a Commission Program
      * @param param the request object
      */
-    public removeAffiliateFromProgramUsingPOST(param: AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request, options?: Configuration): Promise<void> {
+    public removeAffiliateFromProgramUsingPOST(param: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.removeAffiliateFromProgramUsingPOST(param.id, param.removeFromProgramRequest,  options).toPromise();
     }
 
@@ -1192,7 +1192,7 @@ export class ObjectAffiliateApi {
      * Remove a Subscription from a Commission Program
      * @param param the request object
      */
-    public removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(param.commissionId, param.deleteSubscriptionPlanCommissionRequest,  options).toPromise();
     }
 
@@ -1201,7 +1201,7 @@ export class ObjectAffiliateApi {
      * Remove a Subscription from a Commission Program
      * @param param the request object
      */
-    public removeSubscriptionPlanCommissionFromCommissionsUsingPOST(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request, options?: Configuration): Promise<void> {
+    public removeSubscriptionPlanCommissionFromCommissionsUsingPOST(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.removeSubscriptionPlanCommissionFromCommissionsUsingPOST(param.commissionId, param.deleteSubscriptionPlanCommissionRequest,  options).toPromise();
     }
 
@@ -1210,7 +1210,7 @@ export class ObjectAffiliateApi {
      * Update a Custom Field
      * @param param the request object
      */
-    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -1219,7 +1219,7 @@ export class ObjectAffiliateApi {
      * Update a Custom Field
      * @param param the request object
      */
-    public updateAffiliateCustomFieldUsingPATCH(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public updateAffiliateCustomFieldUsingPATCH(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.updateAffiliateCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -1246,7 +1246,7 @@ export class ObjectAffiliateApi {
      * Update an Affiliate Link
      * @param param the request object
      */
-    public updateRedirectLinkUsingPATCHWithHttpInfo(param: AffiliateApiUpdateRedirectLinkUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+    public updateRedirectLinkUsingPATCHWithHttpInfo(param: AffiliateApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
         return this.api.updateRedirectLinkUsingPATCHWithHttpInfo(param.redirectId, param.request,  options).toPromise();
     }
 
@@ -1255,7 +1255,7 @@ export class ObjectAffiliateApi {
      * Update an Affiliate Link
      * @param param the request object
      */
-    public updateRedirectLinkUsingPATCH(param: AffiliateApiUpdateRedirectLinkUsingPATCH0Request, options?: Configuration): Promise<AffiliateLink> {
+    public updateRedirectLinkUsingPATCH(param: AffiliateApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<AffiliateLink> {
         return this.api.updateRedirectLinkUsingPATCH(param.redirectId, param.request,  options).toPromise();
     }
 
@@ -1878,7 +1878,7 @@ export class ObjectCampaignApi {
 import { ObservableCategoryDiscountApi } from "./ObservableAPI";
 import { CategoryDiscountApiRequestFactory, CategoryDiscountApiResponseProcessor} from "../apis/CategoryDiscountApi";
 
-export interface CategoryDiscountApiDeleteDiscountUsingDELETE0Request {
+export interface CategoryDiscountApiDeleteDiscountUsingDELETERequest {
     /**
      * discount_id
      * Defaults to: undefined
@@ -1888,7 +1888,7 @@ export interface CategoryDiscountApiDeleteDiscountUsingDELETE0Request {
     discountId: string
 }
 
-export interface CategoryDiscountApiGetDiscountUsingGET0Request {
+export interface CategoryDiscountApiGetDiscountUsingGETRequest {
     /**
      * discount_id
      * Defaults to: undefined
@@ -1910,7 +1910,7 @@ export class ObjectCategoryDiscountApi {
      * Delete a Category Discount
      * @param param the request object
      */
-    public deleteDiscountUsingDELETEWithHttpInfo(param: CategoryDiscountApiDeleteDiscountUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteDiscountUsingDELETEWithHttpInfo(param: CategoryDiscountApiDeleteDiscountUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteDiscountUsingDELETEWithHttpInfo(param.discountId,  options).toPromise();
     }
 
@@ -1919,7 +1919,7 @@ export class ObjectCategoryDiscountApi {
      * Delete a Category Discount
      * @param param the request object
      */
-    public deleteDiscountUsingDELETE(param: CategoryDiscountApiDeleteDiscountUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteDiscountUsingDELETE(param: CategoryDiscountApiDeleteDiscountUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteDiscountUsingDELETE(param.discountId,  options).toPromise();
     }
 
@@ -1928,7 +1928,7 @@ export class ObjectCategoryDiscountApi {
      * Retrieve a Category Discount
      * @param param the request object
      */
-    public getDiscountUsingGETWithHttpInfo(param: CategoryDiscountApiGetDiscountUsingGET0Request, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+    public getDiscountUsingGETWithHttpInfo(param: CategoryDiscountApiGetDiscountUsingGETRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
         return this.api.getDiscountUsingGETWithHttpInfo(param.discountId,  options).toPromise();
     }
 
@@ -1937,7 +1937,7 @@ export class ObjectCategoryDiscountApi {
      * Retrieve a Category Discount
      * @param param the request object
      */
-    public getDiscountUsingGET(param: CategoryDiscountApiGetDiscountUsingGET0Request, options?: Configuration): Promise<CategoryDiscount> {
+    public getDiscountUsingGET(param: CategoryDiscountApiGetDiscountUsingGETRequest, options?: Configuration): Promise<CategoryDiscount> {
         return this.api.getDiscountUsingGET(param.discountId,  options).toPromise();
     }
 
@@ -2192,7 +2192,7 @@ export interface ContactApiGetContactUsingGET1Request {
     fields?: Array<string>
 }
 
-export interface ContactApiGetContactsBySearchTermUsingGET0Request {
+export interface ContactApiGetContactsBySearchTermUsingGETRequest {
     /**
      * searchParam
      * Defaults to: undefined
@@ -2421,7 +2421,7 @@ export class ObjectContactApi {
      * Search for Contacts
      * @param param the request object
      */
-    public getContactsBySearchTermUsingGETWithHttpInfo(param: ContactApiGetContactsBySearchTermUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListBasicContactResponse>> {
+    public getContactsBySearchTermUsingGETWithHttpInfo(param: ContactApiGetContactsBySearchTermUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListBasicContactResponse>> {
         return this.api.getContactsBySearchTermUsingGETWithHttpInfo(param.searchParam,  options).toPromise();
     }
 
@@ -2430,7 +2430,7 @@ export class ObjectContactApi {
      * Search for Contacts
      * @param param the request object
      */
-    public getContactsBySearchTermUsingGET(param: ContactApiGetContactsBySearchTermUsingGET0Request, options?: Configuration): Promise<ListBasicContactResponse> {
+    public getContactsBySearchTermUsingGET(param: ContactApiGetContactsBySearchTermUsingGETRequest, options?: Configuration): Promise<ListBasicContactResponse> {
         return this.api.getContactsBySearchTermUsingGET(param.searchParam,  options).toPromise();
     }
 
@@ -2833,7 +2833,7 @@ export class ObjectEmailAddressApi {
 import { ObservableFreeTrialDiscountApi } from "./ObservableAPI";
 import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor} from "../apis/FreeTrialDiscountApi";
 
-export interface FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request {
+export interface FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request {
     /**
      * discount_id
      * Defaults to: undefined
@@ -2855,7 +2855,7 @@ export class ObjectFreeTrialDiscountApi {
      * Delete a Free Trial Discount
      * @param param the request object
      */
-    public deleteDiscountUsingDELETE1WithHttpInfo(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteDiscountUsingDELETE1WithHttpInfo(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteDiscountUsingDELETE1WithHttpInfo(param.discountId,  options).toPromise();
     }
 
@@ -2864,7 +2864,7 @@ export class ObjectFreeTrialDiscountApi {
      * Delete a Free Trial Discount
      * @param param the request object
      */
-    public deleteDiscountUsingDELETE1(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request, options?: Configuration): Promise<void> {
+    public deleteDiscountUsingDELETE1(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request, options?: Configuration): Promise<void> {
         return this.api.deleteDiscountUsingDELETE1(param.discountId,  options).toPromise();
     }
 
@@ -2873,7 +2873,7 @@ export class ObjectFreeTrialDiscountApi {
 import { ObservableFunnelIntegrationApi } from "./ObservableAPI";
 import { FunnelIntegrationApiRequestFactory, FunnelIntegrationApiResponseProcessor} from "../apis/FunnelIntegrationApi";
 
-export interface FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request {
+export interface FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest {
     /**
      * createFunnelIntegrationRequest
      * @type CreateFunnelIntegrationRequest
@@ -2882,7 +2882,7 @@ export interface FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request {
     createFunnelIntegrationRequest: CreateFunnelIntegrationRequest
 }
 
-export interface FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request {
+export interface FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest {
     /**
      * createFunnelIntegrationTriggerEvents
      * @type CreateFunnelIntegrationTriggerEvents
@@ -2891,7 +2891,7 @@ export interface FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Requ
     createFunnelIntegrationTriggerEvents: CreateFunnelIntegrationTriggerEvents
 }
 
-export interface FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request {
+export interface FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest {
     /**
      * deleteFunnelIntegrationRequest
      * @type DeleteFunnelIntegrationRequest
@@ -2912,7 +2912,7 @@ export class ObjectFunnelIntegrationApi {
      * Create Funnel Integrations into the app.
      * @param param the request object
      */
-    public createFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public createFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.createFunnelIntegrationUsingPOSTWithHttpInfo(param.createFunnelIntegrationRequest,  options).toPromise();
     }
 
@@ -2921,7 +2921,7 @@ export class ObjectFunnelIntegrationApi {
      * Create Funnel Integrations into the app.
      * @param param the request object
      */
-    public createFunnelIntegrationUsingPOST(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<void> {
+    public createFunnelIntegrationUsingPOST(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.createFunnelIntegrationUsingPOST(param.createFunnelIntegrationRequest,  options).toPromise();
     }
 
@@ -2929,7 +2929,7 @@ export class ObjectFunnelIntegrationApi {
      * Achieve Funnel Integration Trigger Goal
      * @param param the request object
      */
-    public createIntegrationTriggerEventUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request, options?: Configuration): Promise<HttpInfo<Array<FunnelIntegrationTriggerResultDTO>>> {
+    public createIntegrationTriggerEventUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<Array<FunnelIntegrationTriggerResultDTO>>> {
         return this.api.createIntegrationTriggerEventUsingPOSTWithHttpInfo(param.createFunnelIntegrationTriggerEvents,  options).toPromise();
     }
 
@@ -2937,7 +2937,7 @@ export class ObjectFunnelIntegrationApi {
      * Achieve Funnel Integration Trigger Goal
      * @param param the request object
      */
-    public createIntegrationTriggerEventUsingPOST(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request, options?: Configuration): Promise<Array<FunnelIntegrationTriggerResultDTO>> {
+    public createIntegrationTriggerEventUsingPOST(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest, options?: Configuration): Promise<Array<FunnelIntegrationTriggerResultDTO>> {
         return this.api.createIntegrationTriggerEventUsingPOST(param.createFunnelIntegrationTriggerEvents,  options).toPromise();
     }
 
@@ -2946,7 +2946,7 @@ export class ObjectFunnelIntegrationApi {
      * Deletes Funnel Integrations from the app.
      * @param param the request object
      */
-    public deleteFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteFunnelIntegrationUsingPOSTWithHttpInfo(param.deleteFunnelIntegrationRequest,  options).toPromise();
     }
 
@@ -2955,7 +2955,7 @@ export class ObjectFunnelIntegrationApi {
      * Deletes Funnel Integrations from the app.
      * @param param the request object
      */
-    public deleteFunnelIntegrationUsingPOST(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<void> {
+    public deleteFunnelIntegrationUsingPOST(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.deleteFunnelIntegrationUsingPOST(param.deleteFunnelIntegrationRequest,  options).toPromise();
     }
 
@@ -2964,7 +2964,7 @@ export class ObjectFunnelIntegrationApi {
 import { ObservableLandingPagesApi } from "./ObservableAPI";
 import { LandingPagesApiRequestFactory, LandingPagesApiResponseProcessor} from "../apis/LandingPagesApi";
 
-export interface LandingPagesApiListLandingPagesUsingGET0Request {
+export interface LandingPagesApiListLandingPagesUsingGETRequest {
     /**
      * Search filter to apply to results
      * Defaults to: undefined
@@ -3009,7 +3009,7 @@ export class ObjectLandingPagesApi {
      * List Landing Pages
      * @param param the request object
      */
-    public listLandingPagesUsingGETWithHttpInfo(param: LandingPagesApiListLandingPagesUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListLandingPagesResponse>> {
+    public listLandingPagesUsingGETWithHttpInfo(param: LandingPagesApiListLandingPagesUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListLandingPagesResponse>> {
         return this.api.listLandingPagesUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3018,7 +3018,7 @@ export class ObjectLandingPagesApi {
      * List Landing Pages
      * @param param the request object
      */
-    public listLandingPagesUsingGET(param: LandingPagesApiListLandingPagesUsingGET0Request = {}, options?: Configuration): Promise<ListLandingPagesResponse> {
+    public listLandingPagesUsingGET(param: LandingPagesApiListLandingPagesUsingGETRequest = {}, options?: Configuration): Promise<ListLandingPagesResponse> {
         return this.api.listLandingPagesUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3027,7 +3027,7 @@ export class ObjectLandingPagesApi {
 import { ObservableLeadSourcesApi } from "./ObservableAPI";
 import { LeadSourcesApiRequestFactory, LeadSourcesApiResponseProcessor} from "../apis/LeadSourcesApi";
 
-export interface LeadSourcesApiCreateLeadSourceUsingPOST0Request {
+export interface LeadSourcesApiCreateLeadSourceUsingPOSTRequest {
     /**
      * leadsource
      * @type CreateLeadSourceRequest
@@ -3036,7 +3036,7 @@ export interface LeadSourcesApiCreateLeadSourceUsingPOST0Request {
     leadsource?: CreateLeadSourceRequest
 }
 
-export interface LeadSourcesApiListLeadSourcesUsingGET0Request {
+export interface LeadSourcesApiListLeadSourcesUsingGETRequest {
     /**
      * Search filter to apply to results
      * Defaults to: undefined
@@ -3081,7 +3081,7 @@ export class ObjectLeadSourcesApi {
      * Create a Lead Source
      * @param param the request object
      */
-    public createLeadSourceUsingPOSTWithHttpInfo(param: LeadSourcesApiCreateLeadSourceUsingPOST0Request = {}, options?: Configuration): Promise<HttpInfo<LeadSource>> {
+    public createLeadSourceUsingPOSTWithHttpInfo(param: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<LeadSource>> {
         return this.api.createLeadSourceUsingPOSTWithHttpInfo(param.leadsource,  options).toPromise();
     }
 
@@ -3090,7 +3090,7 @@ export class ObjectLeadSourcesApi {
      * Create a Lead Source
      * @param param the request object
      */
-    public createLeadSourceUsingPOST(param: LeadSourcesApiCreateLeadSourceUsingPOST0Request = {}, options?: Configuration): Promise<LeadSource> {
+    public createLeadSourceUsingPOST(param: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {}, options?: Configuration): Promise<LeadSource> {
         return this.api.createLeadSourceUsingPOST(param.leadsource,  options).toPromise();
     }
 
@@ -3099,7 +3099,7 @@ export class ObjectLeadSourcesApi {
      * List Lead Sources
      * @param param the request object
      */
-    public listLeadSourcesUsingGETWithHttpInfo(param: LeadSourcesApiListLeadSourcesUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListLeadSourcesResponse>> {
+    public listLeadSourcesUsingGETWithHttpInfo(param: LeadSourcesApiListLeadSourcesUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListLeadSourcesResponse>> {
         return this.api.listLeadSourcesUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3108,7 +3108,7 @@ export class ObjectLeadSourcesApi {
      * List Lead Sources
      * @param param the request object
      */
-    public listLeadSourcesUsingGET(param: LeadSourcesApiListLeadSourcesUsingGET0Request = {}, options?: Configuration): Promise<ListLeadSourcesResponse> {
+    public listLeadSourcesUsingGET(param: LeadSourcesApiListLeadSourcesUsingGETRequest = {}, options?: Configuration): Promise<ListLeadSourcesResponse> {
         return this.api.listLeadSourcesUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3117,10 +3117,10 @@ export class ObjectLeadSourcesApi {
 import { ObservableLocaleApi } from "./ObservableAPI";
 import { LocaleApiRequestFactory, LocaleApiResponseProcessor} from "../apis/LocaleApi";
 
-export interface LocaleApiListCountriesUsingGET20Request {
+export interface LocaleApiListCountriesUsingGET2Request {
 }
 
-export interface LocaleApiListProvincesForCountryUsingGET0Request {
+export interface LocaleApiListProvincesForCountryUsingGETRequest {
     /**
      * country_code
      * Defaults to: undefined
@@ -3141,7 +3141,7 @@ export class ObjectLocaleApi {
      * List Countries
      * @param param the request object
      */
-    public listCountriesUsingGET2WithHttpInfo(param: LocaleApiListCountriesUsingGET20Request = {}, options?: Configuration): Promise<HttpInfo<ListCountriesResponse>> {
+    public listCountriesUsingGET2WithHttpInfo(param: LocaleApiListCountriesUsingGET2Request = {}, options?: Configuration): Promise<HttpInfo<ListCountriesResponse>> {
         return this.api.listCountriesUsingGET2WithHttpInfo( options).toPromise();
     }
 
@@ -3149,7 +3149,7 @@ export class ObjectLocaleApi {
      * List Countries
      * @param param the request object
      */
-    public listCountriesUsingGET2(param: LocaleApiListCountriesUsingGET20Request = {}, options?: Configuration): Promise<ListCountriesResponse> {
+    public listCountriesUsingGET2(param: LocaleApiListCountriesUsingGET2Request = {}, options?: Configuration): Promise<ListCountriesResponse> {
         return this.api.listCountriesUsingGET2( options).toPromise();
     }
 
@@ -3157,7 +3157,7 @@ export class ObjectLocaleApi {
      * List a Country\'s Provinces
      * @param param the request object
      */
-    public listProvincesForCountryUsingGETWithHttpInfo(param: LocaleApiListProvincesForCountryUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListProvincesResponse>> {
+    public listProvincesForCountryUsingGETWithHttpInfo(param: LocaleApiListProvincesForCountryUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListProvincesResponse>> {
         return this.api.listProvincesForCountryUsingGETWithHttpInfo(param.countryCode,  options).toPromise();
     }
 
@@ -3165,7 +3165,7 @@ export class ObjectLocaleApi {
      * List a Country\'s Provinces
      * @param param the request object
      */
-    public listProvincesForCountryUsingGET(param: LocaleApiListProvincesForCountryUsingGET0Request, options?: Configuration): Promise<ListProvincesResponse> {
+    public listProvincesForCountryUsingGET(param: LocaleApiListProvincesForCountryUsingGETRequest, options?: Configuration): Promise<ListProvincesResponse> {
         return this.api.listProvincesForCountryUsingGET(param.countryCode,  options).toPromise();
     }
 
@@ -3174,7 +3174,7 @@ export class ObjectLocaleApi {
 import { ObservableMerchantApi } from "./ObservableAPI";
 import { MerchantApiRequestFactory, MerchantApiResponseProcessor} from "../apis/MerchantApi";
 
-export interface MerchantApiListMerchantsUsingGET0Request {
+export interface MerchantApiListMerchantsUsingGETRequest {
     /**
      * Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60;
      * Defaults to: undefined
@@ -3219,7 +3219,7 @@ export class ObjectMerchantApi {
      * List Merchant accounts
      * @param param the request object
      */
-    public listMerchantsUsingGETWithHttpInfo(param: MerchantApiListMerchantsUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListRestMerchantResponse>> {
+    public listMerchantsUsingGETWithHttpInfo(param: MerchantApiListMerchantsUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListRestMerchantResponse>> {
         return this.api.listMerchantsUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3228,7 +3228,7 @@ export class ObjectMerchantApi {
      * List Merchant accounts
      * @param param the request object
      */
-    public listMerchantsUsingGET(param: MerchantApiListMerchantsUsingGET0Request = {}, options?: Configuration): Promise<ListRestMerchantResponse> {
+    public listMerchantsUsingGET(param: MerchantApiListMerchantsUsingGETRequest = {}, options?: Configuration): Promise<ListRestMerchantResponse> {
         return this.api.listMerchantsUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3237,7 +3237,7 @@ export class ObjectMerchantApi {
 import { ObservableNoteApi } from "./ObservableAPI";
 import { NoteApiRequestFactory, NoteApiResponseProcessor} from "../apis/NoteApi";
 
-export interface NoteApiCreateNoteCustomFieldUsingPOST10Request {
+export interface NoteApiCreateNoteCustomFieldUsingPOST1Request {
     /**
      * customField
      * @type CreateCustomFieldRequest
@@ -3336,7 +3336,7 @@ export interface NoteApiListNotesUsingGET1Request {
     pageToken?: string
 }
 
-export interface NoteApiRetrieveNoteModelUsingGET10Request {
+export interface NoteApiRetrieveNoteModelUsingGET1Request {
 }
 
 export interface NoteApiUpdateNoteUsingPATCHRequest {
@@ -3369,7 +3369,7 @@ export interface NoteApiUpdateNoteUsingPATCHRequest {
     updateMask?: Array<string>
 }
 
-export interface NoteApiUpdateNotesCustomFieldUsingPATCH0Request {
+export interface NoteApiUpdateNotesCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -3404,7 +3404,7 @@ export class ObjectNoteApi {
      * Create a Custom Field
      * @param param the request object
      */
-    public createNoteCustomFieldUsingPOST1WithHttpInfo(param: NoteApiCreateNoteCustomFieldUsingPOST10Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public createNoteCustomFieldUsingPOST1WithHttpInfo(param: NoteApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(param.customField,  options).toPromise();
     }
 
@@ -3413,7 +3413,7 @@ export class ObjectNoteApi {
      * Create a Custom Field
      * @param param the request object
      */
-    public createNoteCustomFieldUsingPOST1(param: NoteApiCreateNoteCustomFieldUsingPOST10Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public createNoteCustomFieldUsingPOST1(param: NoteApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.createNoteCustomFieldUsingPOST1(param.customField,  options).toPromise();
     }
 
@@ -3494,7 +3494,7 @@ export class ObjectNoteApi {
      * Retrieve Note Model
      * @param param the request object
      */
-    public retrieveNoteModelUsingGET1WithHttpInfo(param: NoteApiRetrieveNoteModelUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
+    public retrieveNoteModelUsingGET1WithHttpInfo(param: NoteApiRetrieveNoteModelUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
         return this.api.retrieveNoteModelUsingGET1WithHttpInfo( options).toPromise();
     }
 
@@ -3503,7 +3503,7 @@ export class ObjectNoteApi {
      * Retrieve Note Model
      * @param param the request object
      */
-    public retrieveNoteModelUsingGET1(param: NoteApiRetrieveNoteModelUsingGET10Request = {}, options?: Configuration): Promise<ObjectModel> {
+    public retrieveNoteModelUsingGET1(param: NoteApiRetrieveNoteModelUsingGET1Request = {}, options?: Configuration): Promise<ObjectModel> {
         return this.api.retrieveNoteModelUsingGET1( options).toPromise();
     }
 
@@ -3530,7 +3530,7 @@ export class ObjectNoteApi {
      * Update a Custom Field
      * @param param the request object
      */
-    public updateNotesCustomFieldUsingPATCHWithHttpInfo(param: NoteApiUpdateNotesCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public updateNotesCustomFieldUsingPATCHWithHttpInfo(param: NoteApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -3539,7 +3539,7 @@ export class ObjectNoteApi {
      * Update a Custom Field
      * @param param the request object
      */
-    public updateNotesCustomFieldUsingPATCH(param: NoteApiUpdateNotesCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public updateNotesCustomFieldUsingPATCH(param: NoteApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.updateNotesCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -3548,7 +3548,7 @@ export class ObjectNoteApi {
 import { ObservableOpportunityApi } from "./ObservableAPI";
 import { OpportunityApiRequestFactory, OpportunityApiResponseProcessor} from "../apis/OpportunityApi";
 
-export interface OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request {
+export interface OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest {
     /**
      * customField
      * @type CreateCustomFieldRequest
@@ -3557,7 +3557,7 @@ export interface OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request {
     customField: CreateCustomFieldRequest
 }
 
-export interface OpportunityApiCreateOpportunityStageUsingPOST0Request {
+export interface OpportunityApiCreateOpportunityStageUsingPOSTRequest {
     /**
      * opportunity
      * @type CreateOpportunityStageRequest
@@ -3566,7 +3566,7 @@ export interface OpportunityApiCreateOpportunityStageUsingPOST0Request {
     opportunityStage?: CreateOpportunityStageRequest
 }
 
-export interface OpportunityApiCreateOpportunityUsingPOST10Request {
+export interface OpportunityApiCreateOpportunityUsingPOST1Request {
     /**
      * opportunity
      * @type CreateOpportunityRequest
@@ -3575,7 +3575,7 @@ export interface OpportunityApiCreateOpportunityUsingPOST10Request {
     opportunity?: CreateOpportunityRequest
 }
 
-export interface OpportunityApiDeleteOpportunityStageUsingDELETE0Request {
+export interface OpportunityApiDeleteOpportunityStageUsingDELETERequest {
     /**
      * stage_id
      * Defaults to: undefined
@@ -3585,7 +3585,7 @@ export interface OpportunityApiDeleteOpportunityStageUsingDELETE0Request {
     stageId: string
 }
 
-export interface OpportunityApiDeleteOpportunityUsingDELETE0Request {
+export interface OpportunityApiDeleteOpportunityUsingDELETERequest {
     /**
      * opportunity_id
      * Defaults to: undefined
@@ -3595,7 +3595,7 @@ export interface OpportunityApiDeleteOpportunityUsingDELETE0Request {
     opportunityId: string
 }
 
-export interface OpportunityApiGetOpportunityStageUsingGET0Request {
+export interface OpportunityApiGetOpportunityStageUsingGETRequest {
     /**
      * stage_id
      * Defaults to: undefined
@@ -3605,7 +3605,7 @@ export interface OpportunityApiGetOpportunityStageUsingGET0Request {
     stageId: string
 }
 
-export interface OpportunityApiGetOpportunityUsingGET10Request {
+export interface OpportunityApiGetOpportunityUsingGET1Request {
     /**
      * opportunity_id
      * Defaults to: undefined
@@ -3615,7 +3615,7 @@ export interface OpportunityApiGetOpportunityUsingGET10Request {
     opportunityId: string
 }
 
-export interface OpportunityApiListOpportunitiesUsingGET10Request {
+export interface OpportunityApiListOpportunitiesUsingGET1Request {
     /**
      * fields
      * Defaults to: undefined
@@ -3655,7 +3655,7 @@ export interface OpportunityApiListOpportunitiesUsingGET10Request {
     pageToken?: string
 }
 
-export interface OpportunityApiListOpportunityStagesUsingGET0Request {
+export interface OpportunityApiListOpportunityStagesUsingGETRequest {
     /**
      * Search filter to apply to results
      * Defaults to: undefined
@@ -3688,7 +3688,7 @@ export interface OpportunityApiListOpportunityStagesUsingGET0Request {
     pageToken?: string
 }
 
-export interface OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request {
+export interface OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -3711,7 +3711,7 @@ export interface OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request {
     updateMask?: Array<string>
 }
 
-export interface OpportunityApiUpdateOpportunityUsingPATCH0Request {
+export interface OpportunityApiUpdateOpportunityUsingPATCHRequest {
     /**
      * opportunity_id
      * Defaults to: undefined
@@ -3746,7 +3746,7 @@ export class ObjectOpportunityApi {
      * Create an Opportunity Custom Field
      * @param param the request object
      */
-    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
     }
 
@@ -3755,7 +3755,7 @@ export class ObjectOpportunityApi {
      * Create an Opportunity Custom Field
      * @param param the request object
      */
-    public createOpportunityCustomFieldsUsingPOST(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public createOpportunityCustomFieldsUsingPOST(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.createOpportunityCustomFieldsUsingPOST(param.customField,  options).toPromise();
     }
 
@@ -3764,7 +3764,7 @@ export class ObjectOpportunityApi {
      * Create an Opportunity Stage
      * @param param the request object
      */
-    public createOpportunityStageUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityStageUsingPOST0Request = {}, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
+    public createOpportunityStageUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
         return this.api.createOpportunityStageUsingPOSTWithHttpInfo(param.opportunityStage,  options).toPromise();
     }
 
@@ -3773,7 +3773,7 @@ export class ObjectOpportunityApi {
      * Create an Opportunity Stage
      * @param param the request object
      */
-    public createOpportunityStageUsingPOST(param: OpportunityApiCreateOpportunityStageUsingPOST0Request = {}, options?: Configuration): Promise<RestOpportunityStage> {
+    public createOpportunityStageUsingPOST(param: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {}, options?: Configuration): Promise<RestOpportunityStage> {
         return this.api.createOpportunityStageUsingPOST(param.opportunityStage,  options).toPromise();
     }
 
@@ -3782,7 +3782,7 @@ export class ObjectOpportunityApi {
      * Create an Opportunity
      * @param param the request object
      */
-    public createOpportunityUsingPOST1WithHttpInfo(param: OpportunityApiCreateOpportunityUsingPOST10Request = {}, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+    public createOpportunityUsingPOST1WithHttpInfo(param: OpportunityApiCreateOpportunityUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
         return this.api.createOpportunityUsingPOST1WithHttpInfo(param.opportunity,  options).toPromise();
     }
 
@@ -3791,7 +3791,7 @@ export class ObjectOpportunityApi {
      * Create an Opportunity
      * @param param the request object
      */
-    public createOpportunityUsingPOST1(param: OpportunityApiCreateOpportunityUsingPOST10Request = {}, options?: Configuration): Promise<RestV2Opportunity> {
+    public createOpportunityUsingPOST1(param: OpportunityApiCreateOpportunityUsingPOST1Request = {}, options?: Configuration): Promise<RestV2Opportunity> {
         return this.api.createOpportunityUsingPOST1(param.opportunity,  options).toPromise();
     }
 
@@ -3800,7 +3800,7 @@ export class ObjectOpportunityApi {
      * Delete an Opportunity Stage
      * @param param the request object
      */
-    public deleteOpportunityStageUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityStageUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteOpportunityStageUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityStageUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteOpportunityStageUsingDELETEWithHttpInfo(param.stageId,  options).toPromise();
     }
 
@@ -3809,7 +3809,7 @@ export class ObjectOpportunityApi {
      * Delete an Opportunity Stage
      * @param param the request object
      */
-    public deleteOpportunityStageUsingDELETE(param: OpportunityApiDeleteOpportunityStageUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteOpportunityStageUsingDELETE(param: OpportunityApiDeleteOpportunityStageUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteOpportunityStageUsingDELETE(param.stageId,  options).toPromise();
     }
 
@@ -3818,7 +3818,7 @@ export class ObjectOpportunityApi {
      * Delete an Opportunity
      * @param param the request object
      */
-    public deleteOpportunityUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteOpportunityUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteOpportunityUsingDELETEWithHttpInfo(param.opportunityId,  options).toPromise();
     }
 
@@ -3827,7 +3827,7 @@ export class ObjectOpportunityApi {
      * Delete an Opportunity
      * @param param the request object
      */
-    public deleteOpportunityUsingDELETE(param: OpportunityApiDeleteOpportunityUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteOpportunityUsingDELETE(param: OpportunityApiDeleteOpportunityUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteOpportunityUsingDELETE(param.opportunityId,  options).toPromise();
     }
 
@@ -3836,7 +3836,7 @@ export class ObjectOpportunityApi {
      * Retrieve an Opportunity Stage
      * @param param the request object
      */
-    public getOpportunityStageUsingGETWithHttpInfo(param: OpportunityApiGetOpportunityStageUsingGET0Request, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
+    public getOpportunityStageUsingGETWithHttpInfo(param: OpportunityApiGetOpportunityStageUsingGETRequest, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
         return this.api.getOpportunityStageUsingGETWithHttpInfo(param.stageId,  options).toPromise();
     }
 
@@ -3845,7 +3845,7 @@ export class ObjectOpportunityApi {
      * Retrieve an Opportunity Stage
      * @param param the request object
      */
-    public getOpportunityStageUsingGET(param: OpportunityApiGetOpportunityStageUsingGET0Request, options?: Configuration): Promise<RestOpportunityStage> {
+    public getOpportunityStageUsingGET(param: OpportunityApiGetOpportunityStageUsingGETRequest, options?: Configuration): Promise<RestOpportunityStage> {
         return this.api.getOpportunityStageUsingGET(param.stageId,  options).toPromise();
     }
 
@@ -3854,7 +3854,7 @@ export class ObjectOpportunityApi {
      * Retrieve a Opportunity
      * @param param the request object
      */
-    public getOpportunityUsingGET1WithHttpInfo(param: OpportunityApiGetOpportunityUsingGET10Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+    public getOpportunityUsingGET1WithHttpInfo(param: OpportunityApiGetOpportunityUsingGET1Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
         return this.api.getOpportunityUsingGET1WithHttpInfo(param.opportunityId,  options).toPromise();
     }
 
@@ -3863,7 +3863,7 @@ export class ObjectOpportunityApi {
      * Retrieve a Opportunity
      * @param param the request object
      */
-    public getOpportunityUsingGET1(param: OpportunityApiGetOpportunityUsingGET10Request, options?: Configuration): Promise<RestV2Opportunity> {
+    public getOpportunityUsingGET1(param: OpportunityApiGetOpportunityUsingGET1Request, options?: Configuration): Promise<RestV2Opportunity> {
         return this.api.getOpportunityUsingGET1(param.opportunityId,  options).toPromise();
     }
 
@@ -3872,7 +3872,7 @@ export class ObjectOpportunityApi {
      * List Opportunities
      * @param param the request object
      */
-    public listOpportunitiesUsingGET1WithHttpInfo(param: OpportunityApiListOpportunitiesUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ListOpportunitiesResponse>> {
+    public listOpportunitiesUsingGET1WithHttpInfo(param: OpportunityApiListOpportunitiesUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListOpportunitiesResponse>> {
         return this.api.listOpportunitiesUsingGET1WithHttpInfo(param.fields, param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3881,7 +3881,7 @@ export class ObjectOpportunityApi {
      * List Opportunities
      * @param param the request object
      */
-    public listOpportunitiesUsingGET1(param: OpportunityApiListOpportunitiesUsingGET10Request = {}, options?: Configuration): Promise<ListOpportunitiesResponse> {
+    public listOpportunitiesUsingGET1(param: OpportunityApiListOpportunitiesUsingGET1Request = {}, options?: Configuration): Promise<ListOpportunitiesResponse> {
         return this.api.listOpportunitiesUsingGET1(param.fields, param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3890,7 +3890,7 @@ export class ObjectOpportunityApi {
      * List of Opportunity Stages
      * @param param the request object
      */
-    public listOpportunityStagesUsingGETWithHttpInfo(param: OpportunityApiListOpportunityStagesUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListOpportunityStagesResponse>> {
+    public listOpportunityStagesUsingGETWithHttpInfo(param: OpportunityApiListOpportunityStagesUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListOpportunityStagesResponse>> {
         return this.api.listOpportunityStagesUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3899,7 +3899,7 @@ export class ObjectOpportunityApi {
      * List of Opportunity Stages
      * @param param the request object
      */
-    public listOpportunityStagesUsingGET(param: OpportunityApiListOpportunityStagesUsingGET0Request = {}, options?: Configuration): Promise<ListOpportunityStagesResponse> {
+    public listOpportunityStagesUsingGET(param: OpportunityApiListOpportunityStagesUsingGETRequest = {}, options?: Configuration): Promise<ListOpportunityStagesResponse> {
         return this.api.listOpportunityStagesUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -3908,7 +3908,7 @@ export class ObjectOpportunityApi {
      * Update a Opportunity\'s Custom Field
      * @param param the request object
      */
-    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -3917,7 +3917,7 @@ export class ObjectOpportunityApi {
      * Update a Opportunity\'s Custom Field
      * @param param the request object
      */
-    public updateOpportunityCustomFieldUsingPATCH(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public updateOpportunityCustomFieldUsingPATCH(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.updateOpportunityCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -3926,7 +3926,7 @@ export class ObjectOpportunityApi {
      * Update an opportunity
      * @param param the request object
      */
-    public updateOpportunityUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+    public updateOpportunityUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
         return this.api.updateOpportunityUsingPATCHWithHttpInfo(param.opportunityId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -3935,7 +3935,7 @@ export class ObjectOpportunityApi {
      * Update an opportunity
      * @param param the request object
      */
-    public updateOpportunityUsingPATCH(param: OpportunityApiUpdateOpportunityUsingPATCH0Request, options?: Configuration): Promise<RestV2Opportunity> {
+    public updateOpportunityUsingPATCH(param: OpportunityApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<RestV2Opportunity> {
         return this.api.updateOpportunityUsingPATCH(param.opportunityId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -3944,7 +3944,7 @@ export class ObjectOpportunityApi {
 import { ObservableOrdersApi } from "./ObservableAPI";
 import { OrdersApiRequestFactory, OrdersApiResponseProcessor} from "../apis/OrdersApi";
 
-export interface OrdersApiCreateOrderCustomFieldUsingPOST0Request {
+export interface OrdersApiCreateOrderCustomFieldUsingPOSTRequest {
     /**
      * customField
      * @type CreateCustomFieldRequest
@@ -3953,7 +3953,7 @@ export interface OrdersApiCreateOrderCustomFieldUsingPOST0Request {
     customField: CreateCustomFieldRequest
 }
 
-export interface OrdersApiCreateOrderItemsOnOrderUsingPOST10Request {
+export interface OrdersApiCreateOrderItemsOnOrderUsingPOST1Request {
     /**
      * order_id
      * Defaults to: undefined
@@ -3969,7 +3969,7 @@ export interface OrdersApiCreateOrderItemsOnOrderUsingPOST10Request {
     createRestOrderItemRequest: CreateRestOrderItemRequest
 }
 
-export interface OrdersApiCreateOrderUsingPOST10Request {
+export interface OrdersApiCreateOrderUsingPOST1Request {
     /**
      * createOrderRequest
      * @type RestCreateOrderRequest
@@ -3994,7 +3994,7 @@ export interface OrdersApiCreatePaymentOnOrderUsingPOST1Request {
     createPaymentRequest: CreatePaymentRequest
 }
 
-export interface OrdersApiDeleteOrderUsingDELETE10Request {
+export interface OrdersApiDeleteOrderUsingDELETE1Request {
     /**
      * order_id
      * Defaults to: undefined
@@ -4004,7 +4004,7 @@ export interface OrdersApiDeleteOrderUsingDELETE10Request {
     orderId: string
 }
 
-export interface OrdersApiGetOrderUsingGET10Request {
+export interface OrdersApiGetOrderUsingGET1Request {
     /**
      * order_id
      * Defaults to: undefined
@@ -4014,7 +4014,7 @@ export interface OrdersApiGetOrderUsingGET10Request {
     orderId: string
 }
 
-export interface OrdersApiListOrdersUsingGET10Request {
+export interface OrdersApiListOrdersUsingGET1Request {
     /**
      * Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60;
      * Defaults to: undefined
@@ -4047,7 +4047,7 @@ export interface OrdersApiListOrdersUsingGET10Request {
     pageToken?: string
 }
 
-export interface OrdersApiPatchOrderUsingPATCH0Request {
+export interface OrdersApiPatchOrderUsingPATCHRequest {
     /**
      * order_id
      * Defaults to: undefined
@@ -4070,10 +4070,10 @@ export interface OrdersApiPatchOrderUsingPATCH0Request {
     order?: RestV2PatchOrderRequest
 }
 
-export interface OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request {
+export interface OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest {
 }
 
-export interface OrdersApiUpdateOrderCustomFieldUsingPATCH0Request {
+export interface OrdersApiUpdateOrderCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -4108,7 +4108,7 @@ export class ObjectOrdersApi {
      * Create an Order\'s Custom Field
      * @param param the request object
      */
-    public createOrderCustomFieldUsingPOSTWithHttpInfo(param: OrdersApiCreateOrderCustomFieldUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public createOrderCustomFieldUsingPOSTWithHttpInfo(param: OrdersApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
     }
 
@@ -4117,7 +4117,7 @@ export class ObjectOrdersApi {
      * Create an Order\'s Custom Field
      * @param param the request object
      */
-    public createOrderCustomFieldUsingPOST(param: OrdersApiCreateOrderCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public createOrderCustomFieldUsingPOST(param: OrdersApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.createOrderCustomFieldUsingPOST(param.customField,  options).toPromise();
     }
 
@@ -4126,7 +4126,7 @@ export class ObjectOrdersApi {
      * Create an Order Item
      * @param param the request object
      */
-    public createOrderItemsOnOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderItemsOnOrderUsingPOST10Request, options?: Configuration): Promise<HttpInfo<RestV2OrderItem>> {
+    public createOrderItemsOnOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderItemsOnOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2OrderItem>> {
         return this.api.createOrderItemsOnOrderUsingPOST1WithHttpInfo(param.orderId, param.createRestOrderItemRequest,  options).toPromise();
     }
 
@@ -4135,7 +4135,7 @@ export class ObjectOrdersApi {
      * Create an Order Item
      * @param param the request object
      */
-    public createOrderItemsOnOrderUsingPOST1(param: OrdersApiCreateOrderItemsOnOrderUsingPOST10Request, options?: Configuration): Promise<RestV2OrderItem> {
+    public createOrderItemsOnOrderUsingPOST1(param: OrdersApiCreateOrderItemsOnOrderUsingPOST1Request, options?: Configuration): Promise<RestV2OrderItem> {
         return this.api.createOrderItemsOnOrderUsingPOST1(param.orderId, param.createRestOrderItemRequest,  options).toPromise();
     }
 
@@ -4144,7 +4144,7 @@ export class ObjectOrdersApi {
      * Create an Order
      * @param param the request object
      */
-    public createOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderUsingPOST10Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+    public createOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
         return this.api.createOrderUsingPOST1WithHttpInfo(param.createOrderRequest,  options).toPromise();
     }
 
@@ -4153,7 +4153,7 @@ export class ObjectOrdersApi {
      * Create an Order
      * @param param the request object
      */
-    public createOrderUsingPOST1(param: OrdersApiCreateOrderUsingPOST10Request, options?: Configuration): Promise<RestV2Order> {
+    public createOrderUsingPOST1(param: OrdersApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<RestV2Order> {
         return this.api.createOrderUsingPOST1(param.createOrderRequest,  options).toPromise();
     }
 
@@ -4180,7 +4180,7 @@ export class ObjectOrdersApi {
      * Delete an Order
      * @param param the request object
      */
-    public deleteOrderUsingDELETE1WithHttpInfo(param: OrdersApiDeleteOrderUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteOrderUsingDELETE1WithHttpInfo(param: OrdersApiDeleteOrderUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteOrderUsingDELETE1WithHttpInfo(param.orderId,  options).toPromise();
     }
 
@@ -4189,7 +4189,7 @@ export class ObjectOrdersApi {
      * Delete an Order
      * @param param the request object
      */
-    public deleteOrderUsingDELETE1(param: OrdersApiDeleteOrderUsingDELETE10Request, options?: Configuration): Promise<void> {
+    public deleteOrderUsingDELETE1(param: OrdersApiDeleteOrderUsingDELETE1Request, options?: Configuration): Promise<void> {
         return this.api.deleteOrderUsingDELETE1(param.orderId,  options).toPromise();
     }
 
@@ -4198,7 +4198,7 @@ export class ObjectOrdersApi {
      * Retrieve an Order
      * @param param the request object
      */
-    public getOrderUsingGET1WithHttpInfo(param: OrdersApiGetOrderUsingGET10Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+    public getOrderUsingGET1WithHttpInfo(param: OrdersApiGetOrderUsingGET1Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
         return this.api.getOrderUsingGET1WithHttpInfo(param.orderId,  options).toPromise();
     }
 
@@ -4207,7 +4207,7 @@ export class ObjectOrdersApi {
      * Retrieve an Order
      * @param param the request object
      */
-    public getOrderUsingGET1(param: OrdersApiGetOrderUsingGET10Request, options?: Configuration): Promise<RestV2Order> {
+    public getOrderUsingGET1(param: OrdersApiGetOrderUsingGET1Request, options?: Configuration): Promise<RestV2Order> {
         return this.api.getOrderUsingGET1(param.orderId,  options).toPromise();
     }
 
@@ -4216,7 +4216,7 @@ export class ObjectOrdersApi {
      * List orders
      * @param param the request object
      */
-    public listOrdersUsingGET1WithHttpInfo(param: OrdersApiListOrdersUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ListOrders>> {
+    public listOrdersUsingGET1WithHttpInfo(param: OrdersApiListOrdersUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListOrders>> {
         return this.api.listOrdersUsingGET1WithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -4225,7 +4225,7 @@ export class ObjectOrdersApi {
      * List orders
      * @param param the request object
      */
-    public listOrdersUsingGET1(param: OrdersApiListOrdersUsingGET10Request = {}, options?: Configuration): Promise<ListOrders> {
+    public listOrdersUsingGET1(param: OrdersApiListOrdersUsingGET1Request = {}, options?: Configuration): Promise<ListOrders> {
         return this.api.listOrdersUsingGET1(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -4234,7 +4234,7 @@ export class ObjectOrdersApi {
      * Update an Order
      * @param param the request object
      */
-    public patchOrderUsingPATCHWithHttpInfo(param: OrdersApiPatchOrderUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+    public patchOrderUsingPATCHWithHttpInfo(param: OrdersApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
         return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.order,  options).toPromise();
     }
 
@@ -4243,7 +4243,7 @@ export class ObjectOrdersApi {
      * Update an Order
      * @param param the request object
      */
-    public patchOrderUsingPATCH(param: OrdersApiPatchOrderUsingPATCH0Request, options?: Configuration): Promise<RestV2Order> {
+    public patchOrderUsingPATCH(param: OrdersApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<RestV2Order> {
         return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.order,  options).toPromise();
     }
 
@@ -4252,7 +4252,7 @@ export class ObjectOrdersApi {
      * Retrieve an Order\'s Custom Field Model
      * @param param the request object
      */
-    public retrieveOrderCustomFieldModelUsingGETWithHttpInfo(param: OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
+    public retrieveOrderCustomFieldModelUsingGETWithHttpInfo(param: OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
         return this.api.retrieveOrderCustomFieldModelUsingGETWithHttpInfo( options).toPromise();
     }
 
@@ -4261,7 +4261,7 @@ export class ObjectOrdersApi {
      * Retrieve an Order\'s Custom Field Model
      * @param param the request object
      */
-    public retrieveOrderCustomFieldModelUsingGET(param: OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request = {}, options?: Configuration): Promise<ObjectModel> {
+    public retrieveOrderCustomFieldModelUsingGET(param: OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest = {}, options?: Configuration): Promise<ObjectModel> {
         return this.api.retrieveOrderCustomFieldModelUsingGET( options).toPromise();
     }
 
@@ -4270,7 +4270,7 @@ export class ObjectOrdersApi {
      * Update an Order\'s Custom Field
      * @param param the request object
      */
-    public updateOrderCustomFieldUsingPATCHWithHttpInfo(param: OrdersApiUpdateOrderCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public updateOrderCustomFieldUsingPATCHWithHttpInfo(param: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -4279,7 +4279,7 @@ export class ObjectOrdersApi {
      * Update an Order\'s Custom Field
      * @param param the request object
      */
-    public updateOrderCustomFieldUsingPATCH(param: OrdersApiUpdateOrderCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public updateOrderCustomFieldUsingPATCH(param: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.updateOrderCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -7168,7 +7168,7 @@ export class ObjectPreReleaseApi {
 import { ObservableProductApi } from "./ObservableAPI";
 import { ProductApiRequestFactory, ProductApiResponseProcessor} from "../apis/ProductApi";
 
-export interface ProductApiListProductsUsingGET10Request {
+export interface ProductApiListProductsUsingGET1Request {
     /**
      * Filter to apply, allowed fields are:   - (String) name   
      * Defaults to: undefined
@@ -7213,7 +7213,7 @@ export class ObjectProductApi {
      * List Products
      * @param param the request object
      */
-    public listProductsUsingGET1WithHttpInfo(param: ProductApiListProductsUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ListProductsResponse>> {
+    public listProductsUsingGET1WithHttpInfo(param: ProductApiListProductsUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListProductsResponse>> {
         return this.api.listProductsUsingGET1WithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -7222,7 +7222,7 @@ export class ObjectProductApi {
      * List Products
      * @param param the request object
      */
-    public listProductsUsingGET1(param: ProductApiListProductsUsingGET10Request = {}, options?: Configuration): Promise<ListProductsResponse> {
+    public listProductsUsingGET1(param: ProductApiListProductsUsingGET1Request = {}, options?: Configuration): Promise<ListProductsResponse> {
         return this.api.listProductsUsingGET1(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -7231,7 +7231,7 @@ export class ObjectProductApi {
 import { ObservableReferralApi } from "./ObservableAPI";
 import { ReferralApiRequestFactory, ReferralApiResponseProcessor} from "../apis/ReferralApi";
 
-export interface ReferralApiCreateReferralUsingPOST0Request {
+export interface ReferralApiCreateReferralUsingPOSTRequest {
     /**
      * request
      * @type CreateReferralRequest
@@ -7252,7 +7252,7 @@ export class ObjectReferralApi {
      * Create a Referral
      * @param param the request object
      */
-    public createReferralUsingPOSTWithHttpInfo(param: ReferralApiCreateReferralUsingPOST0Request, options?: Configuration): Promise<HttpInfo<Referral>> {
+    public createReferralUsingPOSTWithHttpInfo(param: ReferralApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<Referral>> {
         return this.api.createReferralUsingPOSTWithHttpInfo(param.request,  options).toPromise();
     }
 
@@ -7261,7 +7261,7 @@ export class ObjectReferralApi {
      * Create a Referral
      * @param param the request object
      */
-    public createReferralUsingPOST(param: ReferralApiCreateReferralUsingPOST0Request, options?: Configuration): Promise<Referral> {
+    public createReferralUsingPOST(param: ReferralApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<Referral> {
         return this.api.createReferralUsingPOST(param.request,  options).toPromise();
     }
 
@@ -7462,7 +7462,7 @@ export class ObjectSettingsApi {
 import { ObservableShippingApi } from "./ObservableAPI";
 import { ShippingApiRequestFactory, ShippingApiResponseProcessor} from "../apis/ShippingApi";
 
-export interface ShippingApiListShippingMethodsUsingGET0Request {
+export interface ShippingApiListShippingMethodsUsingGETRequest {
 }
 
 export class ObjectShippingApi {
@@ -7477,7 +7477,7 @@ export class ObjectShippingApi {
      * List Shipping methods
      * @param param the request object
      */
-    public listShippingMethodsUsingGETWithHttpInfo(param: ShippingApiListShippingMethodsUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListRestShippingMethodsResponse>> {
+    public listShippingMethodsUsingGETWithHttpInfo(param: ShippingApiListShippingMethodsUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListRestShippingMethodsResponse>> {
         return this.api.listShippingMethodsUsingGETWithHttpInfo( options).toPromise();
     }
 
@@ -7486,7 +7486,7 @@ export class ObjectShippingApi {
      * List Shipping methods
      * @param param the request object
      */
-    public listShippingMethodsUsingGET(param: ShippingApiListShippingMethodsUsingGET0Request = {}, options?: Configuration): Promise<ListRestShippingMethodsResponse> {
+    public listShippingMethodsUsingGET(param: ShippingApiListShippingMethodsUsingGETRequest = {}, options?: Configuration): Promise<ListRestShippingMethodsResponse> {
         return this.api.listShippingMethodsUsingGET( options).toPromise();
     }
 
@@ -7495,7 +7495,7 @@ export class ObjectShippingApi {
 import { ObservableSubscriptionPlansApi } from "./ObservableAPI";
 import { SubscriptionPlansApiRequestFactory, SubscriptionPlansApiResponseProcessor} from "../apis/SubscriptionPlansApi";
 
-export interface SubscriptionPlansApiListSubscriptionPlansUsingGET0Request {
+export interface SubscriptionPlansApiListSubscriptionPlansUsingGETRequest {
     /**
      * Filter to apply, allowed fields are:   - (String) name   
      * Defaults to: undefined
@@ -7540,7 +7540,7 @@ export class ObjectSubscriptionPlansApi {
      * List Subscription Plans
      * @param param the request object
      */
-    public listSubscriptionPlansUsingGETWithHttpInfo(param: SubscriptionPlansApiListSubscriptionPlansUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ListSubscriptionPlansResponse>> {
+    public listSubscriptionPlansUsingGETWithHttpInfo(param: SubscriptionPlansApiListSubscriptionPlansUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListSubscriptionPlansResponse>> {
         return this.api.listSubscriptionPlansUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -7549,7 +7549,7 @@ export class ObjectSubscriptionPlansApi {
      * List Subscription Plans
      * @param param the request object
      */
-    public listSubscriptionPlansUsingGET(param: SubscriptionPlansApiListSubscriptionPlansUsingGET0Request = {}, options?: Configuration): Promise<ListSubscriptionPlansResponse> {
+    public listSubscriptionPlansUsingGET(param: SubscriptionPlansApiListSubscriptionPlansUsingGETRequest = {}, options?: Configuration): Promise<ListSubscriptionPlansResponse> {
         return this.api.listSubscriptionPlansUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
@@ -7558,7 +7558,7 @@ export class ObjectSubscriptionPlansApi {
 import { ObservableSubscriptionsApi } from "./ObservableAPI";
 import { SubscriptionsApiRequestFactory, SubscriptionsApiResponseProcessor} from "../apis/SubscriptionsApi";
 
-export interface SubscriptionsApiCancelSubscriptionUsingPOST0Request {
+export interface SubscriptionsApiCancelSubscriptionUsingPOSTRequest {
     /**
      * subscription_id
      * Defaults to: undefined
@@ -7574,7 +7574,7 @@ export interface SubscriptionsApiCancelSubscriptionUsingPOST0Request {
     cancelSubscriptionsRequest: CancelSubscriptionsRequest
 }
 
-export interface SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request {
+export interface SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest {
     /**
      * customField
      * @type CreateCustomFieldRequest
@@ -7592,10 +7592,10 @@ export interface SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest {
     createSubscriptionV2: CreateSubscriptionV2
 }
 
-export interface SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request {
+export interface SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGETRequest {
 }
 
-export interface SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request {
+export interface SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -7630,7 +7630,7 @@ export class ObjectSubscriptionsApi {
      * Cancel Subscription
      * @param param the request object
      */
-    public cancelSubscriptionUsingPOSTWithHttpInfo(param: SubscriptionsApiCancelSubscriptionUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public cancelSubscriptionUsingPOSTWithHttpInfo(param: SubscriptionsApiCancelSubscriptionUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.cancelSubscriptionUsingPOSTWithHttpInfo(param.subscriptionId, param.cancelSubscriptionsRequest,  options).toPromise();
     }
 
@@ -7639,7 +7639,7 @@ export class ObjectSubscriptionsApi {
      * Cancel Subscription
      * @param param the request object
      */
-    public cancelSubscriptionUsingPOST(param: SubscriptionsApiCancelSubscriptionUsingPOST0Request, options?: Configuration): Promise<void> {
+    public cancelSubscriptionUsingPOST(param: SubscriptionsApiCancelSubscriptionUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.cancelSubscriptionUsingPOST(param.subscriptionId, param.cancelSubscriptionsRequest,  options).toPromise();
     }
 
@@ -7648,7 +7648,7 @@ export class ObjectSubscriptionsApi {
      * Create a Subscription\'s Custom Field
      * @param param the request object
      */
-    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
     }
 
@@ -7657,7 +7657,7 @@ export class ObjectSubscriptionsApi {
      * Create a Subscription\'s Custom Field
      * @param param the request object
      */
-    public createSubscriptionCustomFieldUsingPOST(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public createSubscriptionCustomFieldUsingPOST(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.createSubscriptionCustomFieldUsingPOST(param.customField,  options).toPromise();
     }
 
@@ -7684,7 +7684,7 @@ export class ObjectSubscriptionsApi {
      * Retrieve Subscription\'s Custom Field Model
      * @param param the request object
      */
-    public retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo(param: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
+    public retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo(param: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
         return this.api.retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo( options).toPromise();
     }
 
@@ -7693,7 +7693,7 @@ export class ObjectSubscriptionsApi {
      * Retrieve Subscription\'s Custom Field Model
      * @param param the request object
      */
-    public retrieveSubscriptionCustomFieldModelUsingGET(param: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request = {}, options?: Configuration): Promise<ObjectModel> {
+    public retrieveSubscriptionCustomFieldModelUsingGET(param: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGETRequest = {}, options?: Configuration): Promise<ObjectModel> {
         return this.api.retrieveSubscriptionCustomFieldModelUsingGET( options).toPromise();
     }
 
@@ -7702,7 +7702,7 @@ export class ObjectSubscriptionsApi {
      * Update a Subscription\'s Custom Field
      * @param param the request object
      */
-    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -7711,7 +7711,7 @@ export class ObjectSubscriptionsApi {
      * Update a Subscription\'s Custom Field
      * @param param the request object
      */
-    public updateSubscriptionCustomFieldUsingPATCH(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public updateSubscriptionCustomFieldUsingPATCH(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.updateSubscriptionCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -8266,7 +8266,7 @@ export class ObjectTagsApi {
 import { ObservableTaskApi } from "./ObservableAPI";
 import { TaskApiRequestFactory, TaskApiResponseProcessor} from "../apis/TaskApi";
 
-export interface TaskApiCreateTaskCustomFieldUsingPOST10Request {
+export interface TaskApiCreateTaskCustomFieldUsingPOST1Request {
     /**
      * customField
      * @type CreateCustomFieldRequest
@@ -8275,7 +8275,7 @@ export interface TaskApiCreateTaskCustomFieldUsingPOST10Request {
     customField: CreateCustomFieldRequest
 }
 
-export interface TaskApiCreateTaskUsingPOST10Request {
+export interface TaskApiCreateTaskUsingPOST1Request {
     /**
      * task
      * @type CreateTaskRequest
@@ -8284,7 +8284,7 @@ export interface TaskApiCreateTaskUsingPOST10Request {
     task?: CreateTaskRequest
 }
 
-export interface TaskApiDeleteTaskCustomFieldUsingDELETE0Request {
+export interface TaskApiDeleteTaskCustomFieldUsingDELETERequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -8294,7 +8294,7 @@ export interface TaskApiDeleteTaskCustomFieldUsingDELETE0Request {
     customFieldId: string
 }
 
-export interface TaskApiDeleteTaskUsingDELETE10Request {
+export interface TaskApiDeleteTaskUsingDELETE1Request {
     /**
      * task_id
      * Defaults to: undefined
@@ -8304,7 +8304,7 @@ export interface TaskApiDeleteTaskUsingDELETE10Request {
     taskId: string
 }
 
-export interface TaskApiGetTaskUsingGET10Request {
+export interface TaskApiGetTaskUsingGET1Request {
     /**
      * task_id
      * Defaults to: undefined
@@ -8314,7 +8314,7 @@ export interface TaskApiGetTaskUsingGET10Request {
     taskId: string
 }
 
-export interface TaskApiListTasksUsingGET10Request {
+export interface TaskApiListTasksUsingGET1Request {
     /**
      * 
      * Defaults to: undefined
@@ -8361,7 +8361,7 @@ export interface TaskApiListTasksUsingGET10Request {
     startDueTime?: string
 }
 
-export interface TaskApiPatchTaskUsingPATCH0Request {
+export interface TaskApiPatchTaskUsingPATCHRequest {
     /**
      * task_id
      * Defaults to: undefined
@@ -8384,10 +8384,10 @@ export interface TaskApiPatchTaskUsingPATCH0Request {
     task?: CreatePatchTaskRequest
 }
 
-export interface TaskApiRetrieveTaskModelUsingGET10Request {
+export interface TaskApiRetrieveTaskModelUsingGET1Request {
 }
 
-export interface TaskApiUpdateTaskCustomFieldUsingPATCH0Request {
+export interface TaskApiUpdateTaskCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
      * Defaults to: undefined
@@ -8422,7 +8422,7 @@ export class ObjectTaskApi {
      * Create a Custom Field
      * @param param the request object
      */
-    public createTaskCustomFieldUsingPOST1WithHttpInfo(param: TaskApiCreateTaskCustomFieldUsingPOST10Request, options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
+    public createTaskCustomFieldUsingPOST1WithHttpInfo(param: TaskApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
         return this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(param.customField,  options).toPromise();
     }
 
@@ -8431,7 +8431,7 @@ export class ObjectTaskApi {
      * Create a Custom Field
      * @param param the request object
      */
-    public createTaskCustomFieldUsingPOST1(param: TaskApiCreateTaskCustomFieldUsingPOST10Request, options?: Configuration): Promise<CreateCustomFieldResponse> {
+    public createTaskCustomFieldUsingPOST1(param: TaskApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<CreateCustomFieldResponse> {
         return this.api.createTaskCustomFieldUsingPOST1(param.customField,  options).toPromise();
     }
 
@@ -8440,7 +8440,7 @@ export class ObjectTaskApi {
      * Create a Task
      * @param param the request object
      */
-    public createTaskUsingPOST1WithHttpInfo(param: TaskApiCreateTaskUsingPOST10Request = {}, options?: Configuration): Promise<HttpInfo<Task>> {
+    public createTaskUsingPOST1WithHttpInfo(param: TaskApiCreateTaskUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<Task>> {
         return this.api.createTaskUsingPOST1WithHttpInfo(param.task,  options).toPromise();
     }
 
@@ -8449,7 +8449,7 @@ export class ObjectTaskApi {
      * Create a Task
      * @param param the request object
      */
-    public createTaskUsingPOST1(param: TaskApiCreateTaskUsingPOST10Request = {}, options?: Configuration): Promise<Task> {
+    public createTaskUsingPOST1(param: TaskApiCreateTaskUsingPOST1Request = {}, options?: Configuration): Promise<Task> {
         return this.api.createTaskUsingPOST1(param.task,  options).toPromise();
     }
 
@@ -8458,7 +8458,7 @@ export class ObjectTaskApi {
      * Delete a Custom Field
      * @param param the request object
      */
-    public deleteTaskCustomFieldUsingDELETEWithHttpInfo(param: TaskApiDeleteTaskCustomFieldUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteTaskCustomFieldUsingDELETEWithHttpInfo(param: TaskApiDeleteTaskCustomFieldUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteTaskCustomFieldUsingDELETEWithHttpInfo(param.customFieldId,  options).toPromise();
     }
 
@@ -8467,7 +8467,7 @@ export class ObjectTaskApi {
      * Delete a Custom Field
      * @param param the request object
      */
-    public deleteTaskCustomFieldUsingDELETE(param: TaskApiDeleteTaskCustomFieldUsingDELETE0Request, options?: Configuration): Promise<void> {
+    public deleteTaskCustomFieldUsingDELETE(param: TaskApiDeleteTaskCustomFieldUsingDELETERequest, options?: Configuration): Promise<void> {
         return this.api.deleteTaskCustomFieldUsingDELETE(param.customFieldId,  options).toPromise();
     }
 
@@ -8476,7 +8476,7 @@ export class ObjectTaskApi {
      * Delete a Task
      * @param param the request object
      */
-    public deleteTaskUsingDELETE1WithHttpInfo(param: TaskApiDeleteTaskUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>> {
+    public deleteTaskUsingDELETE1WithHttpInfo(param: TaskApiDeleteTaskUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>> {
         return this.api.deleteTaskUsingDELETE1WithHttpInfo(param.taskId,  options).toPromise();
     }
 
@@ -8485,7 +8485,7 @@ export class ObjectTaskApi {
      * Delete a Task
      * @param param the request object
      */
-    public deleteTaskUsingDELETE1(param: TaskApiDeleteTaskUsingDELETE10Request, options?: Configuration): Promise<void> {
+    public deleteTaskUsingDELETE1(param: TaskApiDeleteTaskUsingDELETE1Request, options?: Configuration): Promise<void> {
         return this.api.deleteTaskUsingDELETE1(param.taskId,  options).toPromise();
     }
 
@@ -8494,7 +8494,7 @@ export class ObjectTaskApi {
      * Retrieve a Task
      * @param param the request object
      */
-    public getTaskUsingGET1WithHttpInfo(param: TaskApiGetTaskUsingGET10Request, options?: Configuration): Promise<HttpInfo<Task>> {
+    public getTaskUsingGET1WithHttpInfo(param: TaskApiGetTaskUsingGET1Request, options?: Configuration): Promise<HttpInfo<Task>> {
         return this.api.getTaskUsingGET1WithHttpInfo(param.taskId,  options).toPromise();
     }
 
@@ -8503,7 +8503,7 @@ export class ObjectTaskApi {
      * Retrieve a Task
      * @param param the request object
      */
-    public getTaskUsingGET1(param: TaskApiGetTaskUsingGET10Request, options?: Configuration): Promise<Task> {
+    public getTaskUsingGET1(param: TaskApiGetTaskUsingGET1Request, options?: Configuration): Promise<Task> {
         return this.api.getTaskUsingGET1(param.taskId,  options).toPromise();
     }
 
@@ -8512,7 +8512,7 @@ export class ObjectTaskApi {
      * List Tasks
      * @param param the request object
      */
-    public listTasksUsingGET1WithHttpInfo(param: TaskApiListTasksUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ListTasksResponse>> {
+    public listTasksUsingGET1WithHttpInfo(param: TaskApiListTasksUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListTasksResponse>> {
         return this.api.listTasksUsingGET1WithHttpInfo(param.endDueTime, param.filter, param.orderBy, param.pageSize, param.pageToken, param.startDueTime,  options).toPromise();
     }
 
@@ -8521,7 +8521,7 @@ export class ObjectTaskApi {
      * List Tasks
      * @param param the request object
      */
-    public listTasksUsingGET1(param: TaskApiListTasksUsingGET10Request = {}, options?: Configuration): Promise<ListTasksResponse> {
+    public listTasksUsingGET1(param: TaskApiListTasksUsingGET1Request = {}, options?: Configuration): Promise<ListTasksResponse> {
         return this.api.listTasksUsingGET1(param.endDueTime, param.filter, param.orderBy, param.pageSize, param.pageToken, param.startDueTime,  options).toPromise();
     }
 
@@ -8530,7 +8530,7 @@ export class ObjectTaskApi {
      * Update a Task
      * @param param the request object
      */
-    public patchTaskUsingPATCHWithHttpInfo(param: TaskApiPatchTaskUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
+    public patchTaskUsingPATCHWithHttpInfo(param: TaskApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
         return this.api.patchTaskUsingPATCHWithHttpInfo(param.taskId, param.updateMask, param.task,  options).toPromise();
     }
 
@@ -8539,7 +8539,7 @@ export class ObjectTaskApi {
      * Update a Task
      * @param param the request object
      */
-    public patchTaskUsingPATCH(param: TaskApiPatchTaskUsingPATCH0Request, options?: Configuration): Promise<UpdateTaskResponse> {
+    public patchTaskUsingPATCH(param: TaskApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<UpdateTaskResponse> {
         return this.api.patchTaskUsingPATCH(param.taskId, param.updateMask, param.task,  options).toPromise();
     }
 
@@ -8548,7 +8548,7 @@ export class ObjectTaskApi {
      * Retrieve Task Model
      * @param param the request object
      */
-    public retrieveTaskModelUsingGET1WithHttpInfo(param: TaskApiRetrieveTaskModelUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
+    public retrieveTaskModelUsingGET1WithHttpInfo(param: TaskApiRetrieveTaskModelUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ObjectModel>> {
         return this.api.retrieveTaskModelUsingGET1WithHttpInfo( options).toPromise();
     }
 
@@ -8557,7 +8557,7 @@ export class ObjectTaskApi {
      * Retrieve Task Model
      * @param param the request object
      */
-    public retrieveTaskModelUsingGET1(param: TaskApiRetrieveTaskModelUsingGET10Request = {}, options?: Configuration): Promise<ObjectModel> {
+    public retrieveTaskModelUsingGET1(param: TaskApiRetrieveTaskModelUsingGET1Request = {}, options?: Configuration): Promise<ObjectModel> {
         return this.api.retrieveTaskModelUsingGET1( options).toPromise();
     }
 
@@ -8566,7 +8566,7 @@ export class ObjectTaskApi {
      * Update a Task\'s Custom Field
      * @param param the request object
      */
-    public updateTaskCustomFieldUsingPATCHWithHttpInfo(param: TaskApiUpdateTaskCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+    public updateTaskCustomFieldUsingPATCHWithHttpInfo(param: TaskApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         return this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -8575,7 +8575,7 @@ export class ObjectTaskApi {
      * Update a Task\'s Custom Field
      * @param param the request object
      */
-    public updateTaskCustomFieldUsingPATCH(param: TaskApiUpdateTaskCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData> {
+    public updateTaskCustomFieldUsingPATCH(param: TaskApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
         return this.api.updateTaskCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
     }
 
@@ -8584,7 +8584,7 @@ export class ObjectTaskApi {
 import { ObservableUsersApi } from "./ObservableAPI";
 import { UsersApiRequestFactory, UsersApiResponseProcessor} from "../apis/UsersApi";
 
-export interface UsersApiCreateUserUsingPOST10Request {
+export interface UsersApiCreateUserUsingPOST1Request {
     /**
      * user
      * @type CreateUserRequestV2
@@ -8593,7 +8593,7 @@ export interface UsersApiCreateUserUsingPOST10Request {
     user?: CreateUserRequestV2
 }
 
-export interface UsersApiGetUserByIdUsingGET0Request {
+export interface UsersApiGetUserByIdUsingGETRequest {
     /**
      * user_id
      * Defaults to: undefined
@@ -8603,10 +8603,10 @@ export interface UsersApiGetUserByIdUsingGET0Request {
     userId: string
 }
 
-export interface UsersApiGetUserInfoUsingGET10Request {
+export interface UsersApiGetUserInfoUsingGET1Request {
 }
 
-export interface UsersApiGetUserSignatureUsingGET10Request {
+export interface UsersApiGetUserSignatureUsingGET1Request {
     /**
      * user_id
      * Defaults to: undefined
@@ -8616,7 +8616,7 @@ export interface UsersApiGetUserSignatureUsingGET10Request {
     userId: string
 }
 
-export interface UsersApiListUsersUsingGET10Request {
+export interface UsersApiListUsersUsingGET1Request {
     /**
      * Search filter to apply to results
      * Defaults to: undefined
@@ -8633,7 +8633,7 @@ export interface UsersApiListUsersUsingGET10Request {
     orderBy?: string
 }
 
-export interface UsersApiPatchUserUsingPATCH0Request {
+export interface UsersApiPatchUserUsingPATCHRequest {
     /**
      * user_id
      * Defaults to: undefined
@@ -8668,7 +8668,7 @@ export class ObjectUsersApi {
      * Create a User
      * @param param the request object
      */
-    public createUserUsingPOST1WithHttpInfo(param: UsersApiCreateUserUsingPOST10Request = {}, options?: Configuration): Promise<HttpInfo<User>> {
+    public createUserUsingPOST1WithHttpInfo(param: UsersApiCreateUserUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<User>> {
         return this.api.createUserUsingPOST1WithHttpInfo(param.user,  options).toPromise();
     }
 
@@ -8677,7 +8677,7 @@ export class ObjectUsersApi {
      * Create a User
      * @param param the request object
      */
-    public createUserUsingPOST1(param: UsersApiCreateUserUsingPOST10Request = {}, options?: Configuration): Promise<User> {
+    public createUserUsingPOST1(param: UsersApiCreateUserUsingPOST1Request = {}, options?: Configuration): Promise<User> {
         return this.api.createUserUsingPOST1(param.user,  options).toPromise();
     }
 
@@ -8686,7 +8686,7 @@ export class ObjectUsersApi {
      * Get User
      * @param param the request object
      */
-    public getUserByIdUsingGETWithHttpInfo(param: UsersApiGetUserByIdUsingGET0Request, options?: Configuration): Promise<HttpInfo<User>> {
+    public getUserByIdUsingGETWithHttpInfo(param: UsersApiGetUserByIdUsingGETRequest, options?: Configuration): Promise<HttpInfo<User>> {
         return this.api.getUserByIdUsingGETWithHttpInfo(param.userId,  options).toPromise();
     }
 
@@ -8695,7 +8695,7 @@ export class ObjectUsersApi {
      * Get User
      * @param param the request object
      */
-    public getUserByIdUsingGET(param: UsersApiGetUserByIdUsingGET0Request, options?: Configuration): Promise<User> {
+    public getUserByIdUsingGET(param: UsersApiGetUserByIdUsingGETRequest, options?: Configuration): Promise<User> {
         return this.api.getUserByIdUsingGET(param.userId,  options).toPromise();
     }
 
@@ -8704,7 +8704,7 @@ export class ObjectUsersApi {
      * Retrieve User Info
      * @param param the request object
      */
-    public getUserInfoUsingGET1WithHttpInfo(param: UsersApiGetUserInfoUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<GetUserInfoResponse>> {
+    public getUserInfoUsingGET1WithHttpInfo(param: UsersApiGetUserInfoUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<GetUserInfoResponse>> {
         return this.api.getUserInfoUsingGET1WithHttpInfo( options).toPromise();
     }
 
@@ -8713,7 +8713,7 @@ export class ObjectUsersApi {
      * Retrieve User Info
      * @param param the request object
      */
-    public getUserInfoUsingGET1(param: UsersApiGetUserInfoUsingGET10Request = {}, options?: Configuration): Promise<GetUserInfoResponse> {
+    public getUserInfoUsingGET1(param: UsersApiGetUserInfoUsingGET1Request = {}, options?: Configuration): Promise<GetUserInfoResponse> {
         return this.api.getUserInfoUsingGET1( options).toPromise();
     }
 
@@ -8722,7 +8722,7 @@ export class ObjectUsersApi {
      * Get User email signature
      * @param param the request object
      */
-    public getUserSignatureUsingGET1WithHttpInfo(param: UsersApiGetUserSignatureUsingGET10Request, options?: Configuration): Promise<HttpInfo<string>> {
+    public getUserSignatureUsingGET1WithHttpInfo(param: UsersApiGetUserSignatureUsingGET1Request, options?: Configuration): Promise<HttpInfo<string>> {
         return this.api.getUserSignatureUsingGET1WithHttpInfo(param.userId,  options).toPromise();
     }
 
@@ -8731,7 +8731,7 @@ export class ObjectUsersApi {
      * Get User email signature
      * @param param the request object
      */
-    public getUserSignatureUsingGET1(param: UsersApiGetUserSignatureUsingGET10Request, options?: Configuration): Promise<string> {
+    public getUserSignatureUsingGET1(param: UsersApiGetUserSignatureUsingGET1Request, options?: Configuration): Promise<string> {
         return this.api.getUserSignatureUsingGET1(param.userId,  options).toPromise();
     }
 
@@ -8740,7 +8740,7 @@ export class ObjectUsersApi {
      * List Users
      * @param param the request object
      */
-    public listUsersUsingGET1WithHttpInfo(param: UsersApiListUsersUsingGET10Request = {}, options?: Configuration): Promise<HttpInfo<ListUserResponse>> {
+    public listUsersUsingGET1WithHttpInfo(param: UsersApiListUsersUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListUserResponse>> {
         return this.api.listUsersUsingGET1WithHttpInfo(param.filter, param.orderBy,  options).toPromise();
     }
 
@@ -8749,7 +8749,7 @@ export class ObjectUsersApi {
      * List Users
      * @param param the request object
      */
-    public listUsersUsingGET1(param: UsersApiListUsersUsingGET10Request = {}, options?: Configuration): Promise<ListUserResponse> {
+    public listUsersUsingGET1(param: UsersApiListUsersUsingGET1Request = {}, options?: Configuration): Promise<ListUserResponse> {
         return this.api.listUsersUsingGET1(param.filter, param.orderBy,  options).toPromise();
     }
 
@@ -8758,7 +8758,7 @@ export class ObjectUsersApi {
      * Update User
      * @param param the request object
      */
-    public patchUserUsingPATCHWithHttpInfo(param: UsersApiPatchUserUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<User>> {
+    public patchUserUsingPATCHWithHttpInfo(param: UsersApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<User>> {
         return this.api.patchUserUsingPATCHWithHttpInfo(param.userId, param.updateMask, param.user,  options).toPromise();
     }
 
@@ -8767,7 +8767,7 @@ export class ObjectUsersApi {
      * Update User
      * @param param the request object
      */
-    public patchUserUsingPATCH(param: UsersApiPatchUserUsingPATCH0Request, options?: Configuration): Promise<User> {
+    public patchUserUsingPATCH(param: UsersApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<User> {
         return this.api.patchUserUsingPATCH(param.userId, param.updateMask, param.user,  options).toPromise();
     }
 

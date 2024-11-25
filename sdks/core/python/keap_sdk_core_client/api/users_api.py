@@ -43,7 +43,7 @@ class UsersApi:
 
 
     @validate_call
-    def create_user_using_post1_0(
+    def create_user_using_post1(
         self,
         user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
@@ -87,7 +87,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_user_using_post1_0_serialize(
+        _param = self._create_user_using_post1_serialize(
             user=user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -111,7 +111,7 @@ class UsersApi:
 
 
     @validate_call
-    def create_user_using_post1_0_with_http_info(
+    def create_user_using_post1_with_http_info(
         self,
         user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
@@ -155,7 +155,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_user_using_post1_0_serialize(
+        _param = self._create_user_using_post1_serialize(
             user=user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -179,7 +179,7 @@ class UsersApi:
 
 
     @validate_call
-    def create_user_using_post1_0_without_preload_content(
+    def create_user_using_post1_without_preload_content(
         self,
         user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
@@ -223,7 +223,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_user_using_post1_0_serialize(
+        _param = self._create_user_using_post1_serialize(
             user=user,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -242,7 +242,7 @@ class UsersApi:
         return response_data.response
 
 
-    def _create_user_using_post1_0_serialize(
+    def _create_user_using_post1_serialize(
         self,
         user,
         _request_auth,
@@ -319,7 +319,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_by_id_using_get_0(
+    def get_user_by_id_using_get(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         _request_timeout: Union[
@@ -363,7 +363,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_by_id_using_get_0_serialize(
+        _param = self._get_user_by_id_using_get_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -388,7 +388,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_by_id_using_get_0_with_http_info(
+    def get_user_by_id_using_get_with_http_info(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         _request_timeout: Union[
@@ -432,7 +432,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_by_id_using_get_0_serialize(
+        _param = self._get_user_by_id_using_get_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -457,7 +457,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_by_id_using_get_0_without_preload_content(
+    def get_user_by_id_using_get_without_preload_content(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         _request_timeout: Union[
@@ -501,7 +501,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_by_id_using_get_0_serialize(
+        _param = self._get_user_by_id_using_get_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -521,7 +521,7 @@ class UsersApi:
         return response_data.response
 
 
-    def _get_user_by_id_using_get_0_serialize(
+    def _get_user_by_id_using_get_serialize(
         self,
         user_id,
         _request_auth,
@@ -585,7 +585,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_info_using_get1_0(
+    def get_user_info_using_get1(
         self,
         _request_timeout: Union[
             None,
@@ -626,7 +626,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_info_using_get1_0_serialize(
+        _param = self._get_user_info_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -650,7 +650,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_info_using_get1_0_with_http_info(
+    def get_user_info_using_get1_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -691,7 +691,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_info_using_get1_0_serialize(
+        _param = self._get_user_info_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -715,7 +715,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_info_using_get1_0_without_preload_content(
+    def get_user_info_using_get1_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -756,7 +756,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_info_using_get1_0_serialize(
+        _param = self._get_user_info_using_get1_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -775,7 +775,7 @@ class UsersApi:
         return response_data.response
 
 
-    def _get_user_info_using_get1_0_serialize(
+    def _get_user_info_using_get1_serialize(
         self,
         _request_auth,
         _content_type,
@@ -836,7 +836,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_signature_using_get1_0(
+    def get_user_signature_using_get1(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         _request_timeout: Union[
@@ -880,7 +880,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_signature_using_get1_0_serialize(
+        _param = self._get_user_signature_using_get1_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -905,7 +905,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_signature_using_get1_0_with_http_info(
+    def get_user_signature_using_get1_with_http_info(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         _request_timeout: Union[
@@ -949,7 +949,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_signature_using_get1_0_serialize(
+        _param = self._get_user_signature_using_get1_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -974,7 +974,7 @@ class UsersApi:
 
 
     @validate_call
-    def get_user_signature_using_get1_0_without_preload_content(
+    def get_user_signature_using_get1_without_preload_content(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         _request_timeout: Union[
@@ -1018,7 +1018,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_user_signature_using_get1_0_serialize(
+        _param = self._get_user_signature_using_get1_serialize(
             user_id=user_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1038,7 +1038,7 @@ class UsersApi:
         return response_data.response
 
 
-    def _get_user_signature_using_get1_0_serialize(
+    def _get_user_signature_using_get1_serialize(
         self,
         user_id,
         _request_auth,
@@ -1102,7 +1102,7 @@ class UsersApi:
 
 
     @validate_call
-    def list_users_using_get1_0(
+    def list_users_using_get1(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. 'given_name desc'")] = None,
@@ -1149,7 +1149,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_users_using_get1_0_serialize(
+        _param = self._list_users_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             _request_auth=_request_auth,
@@ -1175,7 +1175,7 @@ class UsersApi:
 
 
     @validate_call
-    def list_users_using_get1_0_with_http_info(
+    def list_users_using_get1_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. 'given_name desc'")] = None,
@@ -1222,7 +1222,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_users_using_get1_0_serialize(
+        _param = self._list_users_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             _request_auth=_request_auth,
@@ -1248,7 +1248,7 @@ class UsersApi:
 
 
     @validate_call
-    def list_users_using_get1_0_without_preload_content(
+    def list_users_using_get1_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. 'given_name desc'")] = None,
@@ -1295,7 +1295,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_users_using_get1_0_serialize(
+        _param = self._list_users_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             _request_auth=_request_auth,
@@ -1316,7 +1316,7 @@ class UsersApi:
         return response_data.response
 
 
-    def _list_users_using_get1_0_serialize(
+    def _list_users_using_get1_serialize(
         self,
         filter,
         order_by,
@@ -1387,7 +1387,7 @@ class UsersApi:
 
 
     @validate_call
-    def patch_user_using_patch_0(
+    def patch_user_using_patch(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.")] = None,
@@ -1437,7 +1437,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_user_using_patch_0_serialize(
+        _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
             user=user,
@@ -1464,7 +1464,7 @@ class UsersApi:
 
 
     @validate_call
-    def patch_user_using_patch_0_with_http_info(
+    def patch_user_using_patch_with_http_info(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.")] = None,
@@ -1514,7 +1514,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_user_using_patch_0_serialize(
+        _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
             user=user,
@@ -1541,7 +1541,7 @@ class UsersApi:
 
 
     @validate_call
-    def patch_user_using_patch_0_without_preload_content(
+    def patch_user_using_patch_without_preload_content(
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.")] = None,
@@ -1591,7 +1591,7 @@ class UsersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_user_using_patch_0_serialize(
+        _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
             user=user,
@@ -1613,7 +1613,7 @@ class UsersApi:
         return response_data.response
 
 
-    def _patch_user_using_patch_0_serialize(
+    def _patch_user_using_patch_serialize(
         self,
         user_id,
         update_mask,

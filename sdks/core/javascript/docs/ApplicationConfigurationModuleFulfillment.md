@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleFulfillment
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleFulfillment
 
 ## Properties
 

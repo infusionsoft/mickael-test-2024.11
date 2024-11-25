@@ -37,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Note service.
 * @module com.keap.sdk.core/api/NoteApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var NoteApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -59,12 +59,12 @@ var NoteApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
    */
   return _createClass(NoteApi, [{
-    key: "createNoteCustomFieldUsingPOST1_0WithHttpInfo",
-    value: function createNoteCustomFieldUsingPOST1_0WithHttpInfo(customField) {
+    key: "createNoteCustomFieldUsingPOST1WithHttpInfo",
+    value: function createNoteCustomFieldUsingPOST1WithHttpInfo(customField) {
       var postBody = customField;
       // verify the required parameter 'customField' is set
       if (customField === undefined || customField === null) {
-        throw new _Error["default"]("Missing the required parameter 'customField' when calling createNoteCustomFieldUsingPOST1_0");
+        throw new _Error["default"]("Missing the required parameter 'customField' when calling createNoteCustomFieldUsingPOST1");
       }
       var pathParams = {};
       var queryParams = {};
@@ -84,9 +84,9 @@ var NoteApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "createNoteCustomFieldUsingPOST1_0",
-    value: function createNoteCustomFieldUsingPOST1_0(customField) {
-      return this.createNoteCustomFieldUsingPOST1_0WithHttpInfo(customField).then(function (response_and_data) {
+    key: "createNoteCustomFieldUsingPOST1",
+    value: function createNoteCustomFieldUsingPOST1(customField) {
+      return this.createNoteCustomFieldUsingPOST1WithHttpInfo(customField).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -297,8 +297,8 @@ var NoteApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ObjectModel} and HTTP response
      */
   }, {
-    key: "retrieveNoteModelUsingGET1_0WithHttpInfo",
-    value: function retrieveNoteModelUsingGET1_0WithHttpInfo() {
+    key: "retrieveNoteModelUsingGET1WithHttpInfo",
+    value: function retrieveNoteModelUsingGET1WithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -317,9 +317,9 @@ var NoteApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ObjectModel}
      */
   }, {
-    key: "retrieveNoteModelUsingGET1_0",
-    value: function retrieveNoteModelUsingGET1_0() {
-      return this.retrieveNoteModelUsingGET1_0WithHttpInfo().then(function (response_and_data) {
+    key: "retrieveNoteModelUsingGET1",
+    value: function retrieveNoteModelUsingGET1() {
+      return this.retrieveNoteModelUsingGET1WithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -395,17 +395,17 @@ var NoteApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "updateNotesCustomFieldUsingPATCH_0WithHttpInfo",
-    value: function updateNotesCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts) {
+    key: "updateNotesCustomFieldUsingPATCHWithHttpInfo",
+    value: function updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
       opts = opts || {};
       var postBody = request;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateNotesCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateNotesCustomFieldUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling updateNotesCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling updateNotesCustomFieldUsingPATCH");
       }
       var pathParams = {
         'custom_field_id': customFieldId
@@ -432,9 +432,9 @@ var NoteApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "updateNotesCustomFieldUsingPATCH_0",
-    value: function updateNotesCustomFieldUsingPATCH_0(customFieldId, request, opts) {
-      return this.updateNotesCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
+    key: "updateNotesCustomFieldUsingPATCH",
+    value: function updateNotesCustomFieldUsingPATCH(customFieldId, request, opts) {
+      return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

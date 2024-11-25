@@ -4,12 +4,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListCountriesUsingGET2_0**](LocaleApi.md#listcountriesusingget2_0) | **GET** /v2/locales/countries | List Countries |
-| [**ListProvincesForCountryUsingGET_0**](LocaleApi.md#listprovincesforcountryusingget_0) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
+| [**ListCountriesUsingGET2**](LocaleApi.md#listcountriesusingget2) | **GET** /v2/locales/countries | List Countries |
+| [**ListProvincesForCountryUsingGET**](LocaleApi.md#listprovincesforcountryusingget) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
 
-<a id="listcountriesusingget2_0"></a>
-# **ListCountriesUsingGET2_0**
-> ListCountriesResponse ListCountriesUsingGET2_0 ()
+<a id="listcountriesusingget2"></a>
+# **ListCountriesUsingGET2**
+> ListCountriesResponse ListCountriesUsingGET2 ()
 
 List Countries
 
@@ -23,7 +23,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListCountriesUsingGET2_0Example
+    public class ListCountriesUsingGET2Example
     {
         public static void Main()
         {
@@ -34,12 +34,12 @@ namespace Example
             try
             {
                 // List Countries
-                ListCountriesResponse result = apiInstance.ListCountriesUsingGET2_0();
+                ListCountriesResponse result = apiInstance.ListCountriesUsingGET2();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling LocaleApi.ListCountriesUsingGET2_0: " + e.Message);
+                Debug.Print("Exception when calling LocaleApi.ListCountriesUsingGET2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -48,21 +48,21 @@ namespace Example
 }
 ```
 
-#### Using the ListCountriesUsingGET2_0WithHttpInfo variant
+#### Using the ListCountriesUsingGET2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Countries
-    ApiResponse<ListCountriesResponse> response = apiInstance.ListCountriesUsingGET2_0WithHttpInfo();
+    ApiResponse<ListCountriesResponse> response = apiInstance.ListCountriesUsingGET2WithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling LocaleApi.ListCountriesUsingGET2_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling LocaleApi.ListCountriesUsingGET2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -94,9 +94,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listprovincesforcountryusingget_0"></a>
-# **ListProvincesForCountryUsingGET_0**
-> ListProvincesResponse ListProvincesForCountryUsingGET_0 (string countryCode)
+<a id="listprovincesforcountryusingget"></a>
+# **ListProvincesForCountryUsingGET**
+> ListProvincesResponse ListProvincesForCountryUsingGET (string countryCode)
 
 List a Country's Provinces
 
@@ -110,7 +110,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListProvincesForCountryUsingGET_0Example
+    public class ListProvincesForCountryUsingGETExample
     {
         public static void Main()
         {
@@ -122,12 +122,12 @@ namespace Example
             try
             {
                 // List a Country's Provinces
-                ListProvincesResponse result = apiInstance.ListProvincesForCountryUsingGET_0(countryCode);
+                ListProvincesResponse result = apiInstance.ListProvincesForCountryUsingGET(countryCode);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling LocaleApi.ListProvincesForCountryUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling LocaleApi.ListProvincesForCountryUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -136,21 +136,21 @@ namespace Example
 }
 ```
 
-#### Using the ListProvincesForCountryUsingGET_0WithHttpInfo variant
+#### Using the ListProvincesForCountryUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List a Country's Provinces
-    ApiResponse<ListProvincesResponse> response = apiInstance.ListProvincesForCountryUsingGET_0WithHttpInfo(countryCode);
+    ApiResponse<ListProvincesResponse> response = apiInstance.ListProvincesForCountryUsingGETWithHttpInfo(countryCode);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling LocaleApi.ListProvincesForCountryUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling LocaleApi.ListProvincesForCountryUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

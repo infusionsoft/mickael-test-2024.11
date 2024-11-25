@@ -20,7 +20,7 @@ import Referral from '../model/Referral';
 /**
 * Referral service.
 * @module com.keap.sdk.core/api/ReferralApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class ReferralApi {
 
@@ -43,11 +43,11 @@ export default class ReferralApi {
      * @param {module:com.keap.sdk.core/model/CreateReferralRequest} request request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Referral} and HTTP response
      */
-    createReferralUsingPOST_0WithHttpInfo(request) {
+    createReferralUsingPOSTWithHttpInfo(request) {
       let postBody = request;
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createReferralUsingPOST_0");
+        throw new Error("Missing the required parameter 'request' when calling createReferralUsingPOST");
       }
 
       let pathParams = {
@@ -76,8 +76,8 @@ export default class ReferralApi {
      * @param {module:com.keap.sdk.core/model/CreateReferralRequest} request request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Referral}
      */
-    createReferralUsingPOST_0(request) {
-      return this.createReferralUsingPOST_0WithHttpInfo(request)
+    createReferralUsingPOST(request) {
+      return this.createReferralUsingPOSTWithHttpInfo(request)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

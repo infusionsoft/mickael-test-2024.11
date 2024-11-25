@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * SubscriptionPlans service.
 * @module com.keap.sdk.core/api/SubscriptionPlansApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var SubscriptionPlansApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -54,8 +54,8 @@ var SubscriptionPlansApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListSubscriptionPlansResponse} and HTTP response
    */
   return _createClass(SubscriptionPlansApi, [{
-    key: "listSubscriptionPlansUsingGET_0WithHttpInfo",
-    value: function listSubscriptionPlansUsingGET_0WithHttpInfo(opts) {
+    key: "listSubscriptionPlansUsingGETWithHttpInfo",
+    value: function listSubscriptionPlansUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -85,9 +85,9 @@ var SubscriptionPlansApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListSubscriptionPlansResponse}
      */
   }, {
-    key: "listSubscriptionPlansUsingGET_0",
-    value: function listSubscriptionPlansUsingGET_0(opts) {
-      return this.listSubscriptionPlansUsingGET_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listSubscriptionPlansUsingGET",
+    value: function listSubscriptionPlansUsingGET(opts) {
+      return this.listSubscriptionPlansUsingGETWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -37,7 +37,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCustomFieldResponse</returns>
-        CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1_0(CreateCustomFieldRequest customField, int operationIndex = 0);
+        CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1(CreateCustomFieldRequest customField, int operationIndex = 0);
 
         /// <summary>
         /// Create a Custom Field
@@ -49,7 +49,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCustomFieldResponse</returns>
-        ApiResponse<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1_0WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
+        ApiResponse<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
         /// <summary>
         /// Create a Task
         /// </summary>
@@ -60,7 +60,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Task</returns>
-        Task CreateTaskUsingPOST1_0(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0);
+        Task CreateTaskUsingPOST1(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create a Task
@@ -72,7 +72,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Task</returns>
-        ApiResponse<Task> CreateTaskUsingPOST1_0WithHttpInfo(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0);
+        ApiResponse<Task> CreateTaskUsingPOST1WithHttpInfo(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0);
         /// <summary>
         /// Delete a Custom Field
         /// </summary>
@@ -83,7 +83,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customFieldId">custom_field_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteTaskCustomFieldUsingDELETE_0(string customFieldId, int operationIndex = 0);
+        void DeleteTaskCustomFieldUsingDELETE(string customFieldId, int operationIndex = 0);
 
         /// <summary>
         /// Delete a Custom Field
@@ -95,7 +95,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customFieldId">custom_field_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteTaskCustomFieldUsingDELETE_0WithHttpInfo(string customFieldId, int operationIndex = 0);
+        ApiResponse<Object> DeleteTaskCustomFieldUsingDELETEWithHttpInfo(string customFieldId, int operationIndex = 0);
         /// <summary>
         /// Delete a Task
         /// </summary>
@@ -106,7 +106,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteTaskUsingDELETE1_0(string taskId, int operationIndex = 0);
+        void DeleteTaskUsingDELETE1(string taskId, int operationIndex = 0);
 
         /// <summary>
         /// Delete a Task
@@ -118,7 +118,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteTaskUsingDELETE1_0WithHttpInfo(string taskId, int operationIndex = 0);
+        ApiResponse<Object> DeleteTaskUsingDELETE1WithHttpInfo(string taskId, int operationIndex = 0);
         /// <summary>
         /// Retrieve a Task
         /// </summary>
@@ -129,7 +129,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Task</returns>
-        Task GetTaskUsingGET1_0(string taskId, int operationIndex = 0);
+        Task GetTaskUsingGET1(string taskId, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve a Task
@@ -141,7 +141,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Task</returns>
-        ApiResponse<Task> GetTaskUsingGET1_0WithHttpInfo(string taskId, int operationIndex = 0);
+        ApiResponse<Task> GetTaskUsingGET1WithHttpInfo(string taskId, int operationIndex = 0);
         /// <summary>
         /// List Tasks
         /// </summary>
@@ -157,7 +157,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="startDueTime"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTasksResponse</returns>
-        ListTasksResponse ListTasksUsingGET1_0(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0);
+        ListTasksResponse ListTasksUsingGET1(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Tasks
@@ -174,7 +174,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="startDueTime"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTasksResponse</returns>
-        ApiResponse<ListTasksResponse> ListTasksUsingGET1_0WithHttpInfo(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0);
+        ApiResponse<ListTasksResponse> ListTasksUsingGET1WithHttpInfo(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0);
         /// <summary>
         /// Update a Task
         /// </summary>
@@ -187,7 +187,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UpdateTaskResponse</returns>
-        UpdateTaskResponse PatchTaskUsingPATCH_0(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0);
+        UpdateTaskResponse PatchTaskUsingPATCH(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Task
@@ -201,7 +201,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UpdateTaskResponse</returns>
-        ApiResponse<UpdateTaskResponse> PatchTaskUsingPATCH_0WithHttpInfo(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0);
+        ApiResponse<UpdateTaskResponse> PatchTaskUsingPATCHWithHttpInfo(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0);
         /// <summary>
         /// Retrieve Task Model
         /// </summary>
@@ -211,7 +211,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ObjectModel</returns>
-        ObjectModel RetrieveTaskModelUsingGET1_0(int operationIndex = 0);
+        ObjectModel RetrieveTaskModelUsingGET1(int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Task Model
@@ -222,7 +222,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ObjectModel</returns>
-        ApiResponse<ObjectModel> RetrieveTaskModelUsingGET1_0WithHttpInfo(int operationIndex = 0);
+        ApiResponse<ObjectModel> RetrieveTaskModelUsingGET1WithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Update a Task&#39;s Custom Field
         /// </summary>
@@ -235,7 +235,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH_0(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Task&#39;s Custom Field
@@ -249,7 +249,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCH_0WithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -270,7 +270,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCustomFieldResponse</returns>
-        System.Threading.Tasks.Task<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1_0Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Custom Field
@@ -283,7 +283,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCustomFieldResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateCustomFieldResponse>> CreateTaskCustomFieldUsingPOST1_0WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateCustomFieldResponse>> CreateTaskCustomFieldUsingPOST1WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a Task
         /// </summary>
@@ -295,7 +295,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Task</returns>
-        System.Threading.Tasks.Task<Task> CreateTaskUsingPOST1_0Async(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Task> CreateTaskUsingPOST1Async(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Task
@@ -308,7 +308,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Task)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Task>> CreateTaskUsingPOST1_0WithHttpInfoAsync(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Task>> CreateTaskUsingPOST1WithHttpInfoAsync(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Custom Field
         /// </summary>
@@ -320,7 +320,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteTaskCustomFieldUsingDELETE_0Async(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTaskCustomFieldUsingDELETEAsync(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete a Custom Field
@@ -333,7 +333,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskCustomFieldUsingDELETE_0WithHttpInfoAsync(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskCustomFieldUsingDELETEWithHttpInfoAsync(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Task
         /// </summary>
@@ -345,7 +345,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteTaskUsingDELETE1_0Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTaskUsingDELETE1Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete a Task
@@ -358,7 +358,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskUsingDELETE1_0WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaskUsingDELETE1WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve a Task
         /// </summary>
@@ -370,7 +370,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Task</returns>
-        System.Threading.Tasks.Task<Task> GetTaskUsingGET1_0Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Task> GetTaskUsingGET1Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve a Task
@@ -383,7 +383,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Task)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Task>> GetTaskUsingGET1_0WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Task>> GetTaskUsingGET1WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Tasks
         /// </summary>
@@ -400,7 +400,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTasksResponse</returns>
-        System.Threading.Tasks.Task<ListTasksResponse> ListTasksUsingGET1_0Async(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListTasksResponse> ListTasksUsingGET1Async(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Tasks
@@ -418,7 +418,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTasksResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListTasksResponse>> ListTasksUsingGET1_0WithHttpInfoAsync(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListTasksResponse>> ListTasksUsingGET1WithHttpInfoAsync(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Task
         /// </summary>
@@ -432,7 +432,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UpdateTaskResponse</returns>
-        System.Threading.Tasks.Task<UpdateTaskResponse> PatchTaskUsingPATCH_0Async(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UpdateTaskResponse> PatchTaskUsingPATCHAsync(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Task
@@ -447,7 +447,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UpdateTaskResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UpdateTaskResponse>> PatchTaskUsingPATCH_0WithHttpInfoAsync(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UpdateTaskResponse>> PatchTaskUsingPATCHWithHttpInfoAsync(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Task Model
         /// </summary>
@@ -458,7 +458,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectModel</returns>
-        System.Threading.Tasks.Task<ObjectModel> RetrieveTaskModelUsingGET1_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ObjectModel> RetrieveTaskModelUsingGET1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Task Model
@@ -470,7 +470,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObjectModel>> RetrieveTaskModelUsingGET1_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ObjectModel>> RetrieveTaskModelUsingGET1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Task&#39;s Custom Field
         /// </summary>
@@ -484,7 +484,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCH_0Async(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Task&#39;s Custom Field
@@ -499,7 +499,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateTaskCustomFieldUsingPATCH_0WithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateTaskCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -627,9 +627,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCustomFieldResponse</returns>
-        public CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1_0(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1(CreateCustomFieldRequest customField, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse> localVarResponse = CreateTaskCustomFieldUsingPOST1_0WithHttpInfo(customField);
+            Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse> localVarResponse = CreateTaskCustomFieldUsingPOST1WithHttpInfo(customField);
             return localVarResponse.Data;
         }
 
@@ -640,12 +640,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCustomFieldResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1_0WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
         {
             // verify the required parameter 'customField' is set
             if (customField == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling TaskApi->CreateTaskCustomFieldUsingPOST1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling TaskApi->CreateTaskCustomFieldUsingPOST1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -673,7 +673,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = customField;
 
-            localVarRequestOptions.Operation = "TaskApi.CreateTaskCustomFieldUsingPOST1_0";
+            localVarRequestOptions.Operation = "TaskApi.CreateTaskCustomFieldUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -681,7 +681,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<CreateCustomFieldResponse>("/v2/tasks/model/customFields", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTaskCustomFieldUsingPOST1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTaskCustomFieldUsingPOST1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -699,9 +699,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCustomFieldResponse</returns>
-        public async System.Threading.Tasks.Task<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1_0Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateCustomFieldResponse> CreateTaskCustomFieldUsingPOST1Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse> localVarResponse = await CreateTaskCustomFieldUsingPOST1_0WithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse> localVarResponse = await CreateTaskCustomFieldUsingPOST1WithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -713,12 +713,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCustomFieldResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse>> CreateTaskCustomFieldUsingPOST1_0WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CreateCustomFieldResponse>> CreateTaskCustomFieldUsingPOST1WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customField' is set
             if (customField == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling TaskApi->CreateTaskCustomFieldUsingPOST1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling TaskApi->CreateTaskCustomFieldUsingPOST1");
             }
 
 
@@ -747,7 +747,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = customField;
 
-            localVarRequestOptions.Operation = "TaskApi.CreateTaskCustomFieldUsingPOST1_0";
+            localVarRequestOptions.Operation = "TaskApi.CreateTaskCustomFieldUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -756,7 +756,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTaskCustomFieldUsingPOST1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTaskCustomFieldUsingPOST1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -773,9 +773,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Task</returns>
-        public Task CreateTaskUsingPOST1_0(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0)
+        public Task CreateTaskUsingPOST1(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = CreateTaskUsingPOST1_0WithHttpInfo(task);
+            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = CreateTaskUsingPOST1WithHttpInfo(task);
             return localVarResponse.Data;
         }
 
@@ -786,7 +786,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Task</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Task> CreateTaskUsingPOST1_0WithHttpInfo(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Task> CreateTaskUsingPOST1WithHttpInfo(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -813,7 +813,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = task;
 
-            localVarRequestOptions.Operation = "TaskApi.CreateTaskUsingPOST1_0";
+            localVarRequestOptions.Operation = "TaskApi.CreateTaskUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -821,7 +821,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Task>("/v2/tasks", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTaskUsingPOST1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTaskUsingPOST1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -839,9 +839,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Task</returns>
-        public async System.Threading.Tasks.Task<Task> CreateTaskUsingPOST1_0Async(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Task> CreateTaskUsingPOST1Async(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = await CreateTaskUsingPOST1_0WithHttpInfoAsync(task, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = await CreateTaskUsingPOST1WithHttpInfoAsync(task, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -853,7 +853,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Task)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Task>> CreateTaskUsingPOST1_0WithHttpInfoAsync(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Task>> CreateTaskUsingPOST1WithHttpInfoAsync(CreateTaskRequest? task = default(CreateTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -881,7 +881,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = task;
 
-            localVarRequestOptions.Operation = "TaskApi.CreateTaskUsingPOST1_0";
+            localVarRequestOptions.Operation = "TaskApi.CreateTaskUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -890,7 +890,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTaskUsingPOST1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTaskUsingPOST1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -907,9 +907,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customFieldId">custom_field_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteTaskCustomFieldUsingDELETE_0(string customFieldId, int operationIndex = 0)
+        public void DeleteTaskCustomFieldUsingDELETE(string customFieldId, int operationIndex = 0)
         {
-            DeleteTaskCustomFieldUsingDELETE_0WithHttpInfo(customFieldId);
+            DeleteTaskCustomFieldUsingDELETEWithHttpInfo(customFieldId);
         }
 
         /// <summary>
@@ -919,12 +919,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customFieldId">custom_field_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteTaskCustomFieldUsingDELETE_0WithHttpInfo(string customFieldId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteTaskCustomFieldUsingDELETEWithHttpInfo(string customFieldId, int operationIndex = 0)
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->DeleteTaskCustomFieldUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->DeleteTaskCustomFieldUsingDELETE");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -951,7 +951,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("custom_field_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(customFieldId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaskApi.DeleteTaskCustomFieldUsingDELETE_0";
+            localVarRequestOptions.Operation = "TaskApi.DeleteTaskCustomFieldUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -959,7 +959,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/tasks/model/customFields/{custom_field_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTaskCustomFieldUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTaskCustomFieldUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -977,9 +977,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteTaskCustomFieldUsingDELETE_0Async(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteTaskCustomFieldUsingDELETEAsync(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteTaskCustomFieldUsingDELETE_0WithHttpInfoAsync(customFieldId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteTaskCustomFieldUsingDELETEWithHttpInfoAsync(customFieldId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -990,12 +990,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteTaskCustomFieldUsingDELETE_0WithHttpInfoAsync(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteTaskCustomFieldUsingDELETEWithHttpInfoAsync(string customFieldId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->DeleteTaskCustomFieldUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->DeleteTaskCustomFieldUsingDELETE");
             }
 
 
@@ -1023,7 +1023,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("custom_field_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(customFieldId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaskApi.DeleteTaskCustomFieldUsingDELETE_0";
+            localVarRequestOptions.Operation = "TaskApi.DeleteTaskCustomFieldUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1032,7 +1032,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTaskCustomFieldUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTaskCustomFieldUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1049,9 +1049,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteTaskUsingDELETE1_0(string taskId, int operationIndex = 0)
+        public void DeleteTaskUsingDELETE1(string taskId, int operationIndex = 0)
         {
-            DeleteTaskUsingDELETE1_0WithHttpInfo(taskId);
+            DeleteTaskUsingDELETE1WithHttpInfo(taskId);
         }
 
         /// <summary>
@@ -1061,12 +1061,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteTaskUsingDELETE1_0WithHttpInfo(string taskId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteTaskUsingDELETE1WithHttpInfo(string taskId, int operationIndex = 0)
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->DeleteTaskUsingDELETE1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->DeleteTaskUsingDELETE1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1093,7 +1093,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("task_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(taskId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaskApi.DeleteTaskUsingDELETE1_0";
+            localVarRequestOptions.Operation = "TaskApi.DeleteTaskUsingDELETE1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1101,7 +1101,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/tasks/{task_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTaskUsingDELETE1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTaskUsingDELETE1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1119,9 +1119,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteTaskUsingDELETE1_0Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteTaskUsingDELETE1Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteTaskUsingDELETE1_0WithHttpInfoAsync(taskId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteTaskUsingDELETE1WithHttpInfoAsync(taskId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1132,12 +1132,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteTaskUsingDELETE1_0WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteTaskUsingDELETE1WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->DeleteTaskUsingDELETE1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->DeleteTaskUsingDELETE1");
             }
 
 
@@ -1165,7 +1165,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("task_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(taskId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaskApi.DeleteTaskUsingDELETE1_0";
+            localVarRequestOptions.Operation = "TaskApi.DeleteTaskUsingDELETE1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1174,7 +1174,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTaskUsingDELETE1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTaskUsingDELETE1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1191,9 +1191,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Task</returns>
-        public Task GetTaskUsingGET1_0(string taskId, int operationIndex = 0)
+        public Task GetTaskUsingGET1(string taskId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = GetTaskUsingGET1_0WithHttpInfo(taskId);
+            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = GetTaskUsingGET1WithHttpInfo(taskId);
             return localVarResponse.Data;
         }
 
@@ -1204,12 +1204,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="taskId">task_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Task</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Task> GetTaskUsingGET1_0WithHttpInfo(string taskId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Task> GetTaskUsingGET1WithHttpInfo(string taskId, int operationIndex = 0)
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->GetTaskUsingGET1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->GetTaskUsingGET1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1236,7 +1236,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("task_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(taskId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaskApi.GetTaskUsingGET1_0";
+            localVarRequestOptions.Operation = "TaskApi.GetTaskUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1244,7 +1244,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<Task>("/v2/tasks/{task_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTaskUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTaskUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1262,9 +1262,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Task</returns>
-        public async System.Threading.Tasks.Task<Task> GetTaskUsingGET1_0Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Task> GetTaskUsingGET1Async(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = await GetTaskUsingGET1_0WithHttpInfoAsync(taskId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Task> localVarResponse = await GetTaskUsingGET1WithHttpInfoAsync(taskId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1276,12 +1276,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Task)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Task>> GetTaskUsingGET1_0WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Task>> GetTaskUsingGET1WithHttpInfoAsync(string taskId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->GetTaskUsingGET1_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->GetTaskUsingGET1");
             }
 
 
@@ -1309,7 +1309,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("task_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(taskId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaskApi.GetTaskUsingGET1_0";
+            localVarRequestOptions.Operation = "TaskApi.GetTaskUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1318,7 +1318,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTaskUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTaskUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1340,9 +1340,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="startDueTime"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTasksResponse</returns>
-        public ListTasksResponse ListTasksUsingGET1_0(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0)
+        public ListTasksResponse ListTasksUsingGET1(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse> localVarResponse = ListTasksUsingGET1_0WithHttpInfo(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime);
+            Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse> localVarResponse = ListTasksUsingGET1WithHttpInfo(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime);
             return localVarResponse.Data;
         }
 
@@ -1358,7 +1358,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="startDueTime"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTasksResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse> ListTasksUsingGET1_0WithHttpInfo(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse> ListTasksUsingGET1WithHttpInfo(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -1407,7 +1407,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "start_due_time", startDueTime));
             }
 
-            localVarRequestOptions.Operation = "TaskApi.ListTasksUsingGET1_0";
+            localVarRequestOptions.Operation = "TaskApi.ListTasksUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1415,7 +1415,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListTasksResponse>("/v2/tasks", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTasksUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTasksUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1438,9 +1438,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTasksResponse</returns>
-        public async System.Threading.Tasks.Task<ListTasksResponse> ListTasksUsingGET1_0Async(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListTasksResponse> ListTasksUsingGET1Async(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse> localVarResponse = await ListTasksUsingGET1_0WithHttpInfoAsync(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse> localVarResponse = await ListTasksUsingGET1WithHttpInfoAsync(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1457,7 +1457,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTasksResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse>> ListTasksUsingGET1_0WithHttpInfoAsync(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListTasksResponse>> ListTasksUsingGET1WithHttpInfoAsync(string? endDueTime = default(string?), string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), string? startDueTime = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1507,7 +1507,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "start_due_time", startDueTime));
             }
 
-            localVarRequestOptions.Operation = "TaskApi.ListTasksUsingGET1_0";
+            localVarRequestOptions.Operation = "TaskApi.ListTasksUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1516,7 +1516,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTasksUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTasksUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1535,9 +1535,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UpdateTaskResponse</returns>
-        public UpdateTaskResponse PatchTaskUsingPATCH_0(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0)
+        public UpdateTaskResponse PatchTaskUsingPATCH(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse> localVarResponse = PatchTaskUsingPATCH_0WithHttpInfo(taskId, updateMask, task);
+            Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse> localVarResponse = PatchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
             return localVarResponse.Data;
         }
 
@@ -1550,12 +1550,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="task">task (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UpdateTaskResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse> PatchTaskUsingPATCH_0WithHttpInfo(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse> PatchTaskUsingPATCHWithHttpInfo(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->PatchTaskUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->PatchTaskUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1588,7 +1588,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = task;
 
-            localVarRequestOptions.Operation = "TaskApi.PatchTaskUsingPATCH_0";
+            localVarRequestOptions.Operation = "TaskApi.PatchTaskUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1596,7 +1596,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<UpdateTaskResponse>("/v2/tasks/{task_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchTaskUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchTaskUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1616,9 +1616,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UpdateTaskResponse</returns>
-        public async System.Threading.Tasks.Task<UpdateTaskResponse> PatchTaskUsingPATCH_0Async(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UpdateTaskResponse> PatchTaskUsingPATCHAsync(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse> localVarResponse = await PatchTaskUsingPATCH_0WithHttpInfoAsync(taskId, updateMask, task, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse> localVarResponse = await PatchTaskUsingPATCHWithHttpInfoAsync(taskId, updateMask, task, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1632,12 +1632,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UpdateTaskResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse>> PatchTaskUsingPATCH_0WithHttpInfoAsync(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<UpdateTaskResponse>> PatchTaskUsingPATCHWithHttpInfoAsync(string taskId, List<string>? updateMask = default(List<string>?), CreatePatchTaskRequest? task = default(CreatePatchTaskRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->PatchTaskUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'taskId' when calling TaskApi->PatchTaskUsingPATCH");
             }
 
 
@@ -1671,7 +1671,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = task;
 
-            localVarRequestOptions.Operation = "TaskApi.PatchTaskUsingPATCH_0";
+            localVarRequestOptions.Operation = "TaskApi.PatchTaskUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1680,7 +1680,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchTaskUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchTaskUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1696,9 +1696,9 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ObjectModel</returns>
-        public ObjectModel RetrieveTaskModelUsingGET1_0(int operationIndex = 0)
+        public ObjectModel RetrieveTaskModelUsingGET1(int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = RetrieveTaskModelUsingGET1_0WithHttpInfo();
+            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = RetrieveTaskModelUsingGET1WithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -1708,7 +1708,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ObjectModel</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ObjectModel> RetrieveTaskModelUsingGET1_0WithHttpInfo(int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ObjectModel> RetrieveTaskModelUsingGET1WithHttpInfo(int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -1733,7 +1733,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "TaskApi.RetrieveTaskModelUsingGET1_0";
+            localVarRequestOptions.Operation = "TaskApi.RetrieveTaskModelUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1741,7 +1741,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ObjectModel>("/v2/tasks/model", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetrieveTaskModelUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetrieveTaskModelUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1758,9 +1758,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectModel</returns>
-        public async System.Threading.Tasks.Task<ObjectModel> RetrieveTaskModelUsingGET1_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ObjectModel> RetrieveTaskModelUsingGET1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = await RetrieveTaskModelUsingGET1_0WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = await RetrieveTaskModelUsingGET1WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1771,7 +1771,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectModel)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ObjectModel>> RetrieveTaskModelUsingGET1_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ObjectModel>> RetrieveTaskModelUsingGET1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1797,7 +1797,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "TaskApi.RetrieveTaskModelUsingGET1_0";
+            localVarRequestOptions.Operation = "TaskApi.RetrieveTaskModelUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1806,7 +1806,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetrieveTaskModelUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetrieveTaskModelUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1825,9 +1825,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH_0(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateTaskCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             return localVarResponse.Data;
         }
 
@@ -1840,18 +1840,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCH_0WithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1884,7 +1884,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "TaskApi.UpdateTaskCustomFieldUsingPATCH_0";
+            localVarRequestOptions.Operation = "TaskApi.UpdateTaskCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1892,7 +1892,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<CustomFieldMetaData>("/v2/tasks/model/customFields/{custom_field_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTaskCustomFieldUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateTaskCustomFieldUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1912,9 +1912,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCH_0Async(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateTaskCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateTaskCustomFieldUsingPATCH_0WithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateTaskCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1928,18 +1928,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateTaskCustomFieldUsingPATCH_0WithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateTaskCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling TaskApi->UpdateTaskCustomFieldUsingPATCH");
             }
 
 
@@ -1973,7 +1973,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "TaskApi.UpdateTaskCustomFieldUsingPATCH_0";
+            localVarRequestOptions.Operation = "TaskApi.UpdateTaskCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1982,7 +1982,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTaskCustomFieldUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateTaskCustomFieldUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

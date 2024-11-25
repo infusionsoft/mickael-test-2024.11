@@ -41,7 +41,7 @@ class LeadSourcesApi:
 
 
     @validate_call
-    def create_lead_source_using_post_0(
+    def create_lead_source_using_post(
         self,
         leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
@@ -85,7 +85,7 @@ class LeadSourcesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_lead_source_using_post_0_serialize(
+        _param = self._create_lead_source_using_post_serialize(
             leadsource=leadsource,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -109,7 +109,7 @@ class LeadSourcesApi:
 
 
     @validate_call
-    def create_lead_source_using_post_0_with_http_info(
+    def create_lead_source_using_post_with_http_info(
         self,
         leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
@@ -153,7 +153,7 @@ class LeadSourcesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_lead_source_using_post_0_serialize(
+        _param = self._create_lead_source_using_post_serialize(
             leadsource=leadsource,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -177,7 +177,7 @@ class LeadSourcesApi:
 
 
     @validate_call
-    def create_lead_source_using_post_0_without_preload_content(
+    def create_lead_source_using_post_without_preload_content(
         self,
         leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
@@ -221,7 +221,7 @@ class LeadSourcesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_lead_source_using_post_0_serialize(
+        _param = self._create_lead_source_using_post_serialize(
             leadsource=leadsource,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -240,7 +240,7 @@ class LeadSourcesApi:
         return response_data.response
 
 
-    def _create_lead_source_using_post_0_serialize(
+    def _create_lead_source_using_post_serialize(
         self,
         leadsource,
         _request_auth,
@@ -317,7 +317,7 @@ class LeadSourcesApi:
 
 
     @validate_call
-    def list_lead_sources_using_get_0(
+    def list_lead_sources_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. `given_name desc`")] = None,
@@ -370,7 +370,7 @@ class LeadSourcesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_lead_sources_using_get_0_serialize(
+        _param = self._list_lead_sources_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -398,7 +398,7 @@ class LeadSourcesApi:
 
 
     @validate_call
-    def list_lead_sources_using_get_0_with_http_info(
+    def list_lead_sources_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. `given_name desc`")] = None,
@@ -451,7 +451,7 @@ class LeadSourcesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_lead_sources_using_get_0_serialize(
+        _param = self._list_lead_sources_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -479,7 +479,7 @@ class LeadSourcesApi:
 
 
     @validate_call
-    def list_lead_sources_using_get_0_without_preload_content(
+    def list_lead_sources_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. `given_name desc`")] = None,
@@ -532,7 +532,7 @@ class LeadSourcesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_lead_sources_using_get_0_serialize(
+        _param = self._list_lead_sources_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -555,7 +555,7 @@ class LeadSourcesApi:
         return response_data.response
 
 
-    def _list_lead_sources_using_get_0_serialize(
+    def _list_lead_sources_using_get_serialize(
         self,
         filter,
         order_by,

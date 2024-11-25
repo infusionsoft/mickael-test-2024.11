@@ -39,7 +39,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Contact service.
 * @module com.keap.sdk.core/api/ContactApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var ContactApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -227,12 +227,12 @@ var ContactApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListBasicContactResponse} and HTTP response
      */
   }, {
-    key: "getContactsBySearchTermUsingGET_0WithHttpInfo",
-    value: function getContactsBySearchTermUsingGET_0WithHttpInfo(searchParam) {
+    key: "getContactsBySearchTermUsingGETWithHttpInfo",
+    value: function getContactsBySearchTermUsingGETWithHttpInfo(searchParam) {
       var postBody = null;
       // verify the required parameter 'searchParam' is set
       if (searchParam === undefined || searchParam === null) {
-        throw new _Error["default"]("Missing the required parameter 'searchParam' when calling getContactsBySearchTermUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'searchParam' when calling getContactsBySearchTermUsingGET");
       }
       var pathParams = {};
       var queryParams = {
@@ -254,9 +254,9 @@ var ContactApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListBasicContactResponse}
      */
   }, {
-    key: "getContactsBySearchTermUsingGET_0",
-    value: function getContactsBySearchTermUsingGET_0(searchParam) {
-      return this.getContactsBySearchTermUsingGET_0WithHttpInfo(searchParam).then(function (response_and_data) {
+    key: "getContactsBySearchTermUsingGET",
+    value: function getContactsBySearchTermUsingGET(searchParam) {
+      return this.getContactsBySearchTermUsingGETWithHttpInfo(searchParam).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -68,7 +68,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def add_affiliate_to_program_using_post_0(
+    def add_affiliate_to_program_using_post(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         affiliate_add_to_program_request: Annotated[AffiliateAddToProgramRequest, Field(description="affiliateAddToProgramRequest")],
@@ -115,7 +115,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._add_affiliate_to_program_using_post_0_serialize(
+        _param = self._add_affiliate_to_program_using_post_serialize(
             id=id,
             affiliate_add_to_program_request=affiliate_add_to_program_request,
             _request_auth=_request_auth,
@@ -140,7 +140,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def add_affiliate_to_program_using_post_0_with_http_info(
+    def add_affiliate_to_program_using_post_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         affiliate_add_to_program_request: Annotated[AffiliateAddToProgramRequest, Field(description="affiliateAddToProgramRequest")],
@@ -187,7 +187,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._add_affiliate_to_program_using_post_0_serialize(
+        _param = self._add_affiliate_to_program_using_post_serialize(
             id=id,
             affiliate_add_to_program_request=affiliate_add_to_program_request,
             _request_auth=_request_auth,
@@ -212,7 +212,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def add_affiliate_to_program_using_post_0_without_preload_content(
+    def add_affiliate_to_program_using_post_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         affiliate_add_to_program_request: Annotated[AffiliateAddToProgramRequest, Field(description="affiliateAddToProgramRequest")],
@@ -259,7 +259,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._add_affiliate_to_program_using_post_0_serialize(
+        _param = self._add_affiliate_to_program_using_post_serialize(
             id=id,
             affiliate_add_to_program_request=affiliate_add_to_program_request,
             _request_auth=_request_auth,
@@ -279,7 +279,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _add_affiliate_to_program_using_post_0_serialize(
+    def _add_affiliate_to_program_using_post_serialize(
         self,
         id,
         affiliate_add_to_program_request,
@@ -635,7 +635,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def add_commission_program_using_post_0(
+    def add_commission_program_using_post(
         self,
         insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
@@ -679,7 +679,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._add_commission_program_using_post_0_serialize(
+        _param = self._add_commission_program_using_post_serialize(
             insert_commission_program=insert_commission_program,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -703,7 +703,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def add_commission_program_using_post_0_with_http_info(
+    def add_commission_program_using_post_with_http_info(
         self,
         insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
@@ -747,7 +747,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._add_commission_program_using_post_0_serialize(
+        _param = self._add_commission_program_using_post_serialize(
             insert_commission_program=insert_commission_program,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -771,7 +771,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def add_commission_program_using_post_0_without_preload_content(
+    def add_commission_program_using_post_without_preload_content(
         self,
         insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
@@ -815,7 +815,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._add_commission_program_using_post_0_serialize(
+        _param = self._add_commission_program_using_post_serialize(
             insert_commission_program=insert_commission_program,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -834,7 +834,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _add_commission_program_using_post_0_serialize(
+    def _add_commission_program_using_post_serialize(
         self,
         insert_commission_program,
         _request_auth,
@@ -911,7 +911,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def assign_product_commission_program_using_post_0(
+    def assign_product_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
@@ -958,7 +958,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._assign_product_commission_program_using_post_0_serialize(
+        _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             product_commission_program=product_commission_program,
             _request_auth=_request_auth,
@@ -983,7 +983,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def assign_product_commission_program_using_post_0_with_http_info(
+    def assign_product_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
@@ -1030,7 +1030,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._assign_product_commission_program_using_post_0_serialize(
+        _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             product_commission_program=product_commission_program,
             _request_auth=_request_auth,
@@ -1055,7 +1055,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def assign_product_commission_program_using_post_0_without_preload_content(
+    def assign_product_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
@@ -1102,7 +1102,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._assign_product_commission_program_using_post_0_serialize(
+        _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             product_commission_program=product_commission_program,
             _request_auth=_request_auth,
@@ -1122,7 +1122,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _assign_product_commission_program_using_post_0_serialize(
+    def _assign_product_commission_program_using_post_serialize(
         self,
         commission_program_id,
         product_commission_program,
@@ -1202,7 +1202,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def assign_subscription_commission_program_using_post_0(
+    def assign_subscription_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
@@ -1249,7 +1249,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._assign_subscription_commission_program_using_post_0_serialize(
+        _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             subscription_commission_program=subscription_commission_program,
             _request_auth=_request_auth,
@@ -1274,7 +1274,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def assign_subscription_commission_program_using_post_0_with_http_info(
+    def assign_subscription_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
@@ -1321,7 +1321,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._assign_subscription_commission_program_using_post_0_serialize(
+        _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             subscription_commission_program=subscription_commission_program,
             _request_auth=_request_auth,
@@ -1346,7 +1346,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def assign_subscription_commission_program_using_post_0_without_preload_content(
+    def assign_subscription_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
@@ -1393,7 +1393,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._assign_subscription_commission_program_using_post_0_serialize(
+        _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             subscription_commission_program=subscription_commission_program,
             _request_auth=_request_auth,
@@ -1413,7 +1413,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _assign_subscription_commission_program_using_post_0_serialize(
+    def _assign_subscription_commission_program_using_post_serialize(
         self,
         commission_program_id,
         subscription_commission_program,
@@ -1493,7 +1493,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_affiliate_custom_field_using_post_0(
+    def create_affiliate_custom_field_using_post(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -1537,7 +1537,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_affiliate_custom_field_using_post_0_serialize(
+        _param = self._create_affiliate_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1561,7 +1561,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_affiliate_custom_field_using_post_0_with_http_info(
+    def create_affiliate_custom_field_using_post_with_http_info(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -1605,7 +1605,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_affiliate_custom_field_using_post_0_serialize(
+        _param = self._create_affiliate_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1629,7 +1629,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_affiliate_custom_field_using_post_0_without_preload_content(
+    def create_affiliate_custom_field_using_post_without_preload_content(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -1673,7 +1673,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_affiliate_custom_field_using_post_0_serialize(
+        _param = self._create_affiliate_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1692,7 +1692,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _create_affiliate_custom_field_using_post_0_serialize(
+    def _create_affiliate_custom_field_using_post_serialize(
         self,
         custom_field,
         _request_auth,
@@ -1769,7 +1769,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_default_commission_program_using_post_0(
+    def create_default_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         create_default_commission_program_request: Annotated[Optional[CreateDefaultCommissionProgramRequest], Field(description="Values of the Default Commission Program")] = None,
@@ -1816,7 +1816,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_default_commission_program_using_post_0_serialize(
+        _param = self._create_default_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             create_default_commission_program_request=create_default_commission_program_request,
             _request_auth=_request_auth,
@@ -1841,7 +1841,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_default_commission_program_using_post_0_with_http_info(
+    def create_default_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         create_default_commission_program_request: Annotated[Optional[CreateDefaultCommissionProgramRequest], Field(description="Values of the Default Commission Program")] = None,
@@ -1888,7 +1888,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_default_commission_program_using_post_0_serialize(
+        _param = self._create_default_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             create_default_commission_program_request=create_default_commission_program_request,
             _request_auth=_request_auth,
@@ -1913,7 +1913,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_default_commission_program_using_post_0_without_preload_content(
+    def create_default_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         create_default_commission_program_request: Annotated[Optional[CreateDefaultCommissionProgramRequest], Field(description="Values of the Default Commission Program")] = None,
@@ -1960,7 +1960,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_default_commission_program_using_post_0_serialize(
+        _param = self._create_default_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
             create_default_commission_program_request=create_default_commission_program_request,
             _request_auth=_request_auth,
@@ -1980,7 +1980,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _create_default_commission_program_using_post_0_serialize(
+    def _create_default_commission_program_using_post_serialize(
         self,
         commission_program_id,
         create_default_commission_program_request,
@@ -2060,7 +2060,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_redirect_link_using_post_0(
+    def create_redirect_link_using_post(
         self,
         request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
@@ -2104,7 +2104,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_redirect_link_using_post_0_serialize(
+        _param = self._create_redirect_link_using_post_serialize(
             request=request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2128,7 +2128,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_redirect_link_using_post_0_with_http_info(
+    def create_redirect_link_using_post_with_http_info(
         self,
         request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
@@ -2172,7 +2172,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_redirect_link_using_post_0_serialize(
+        _param = self._create_redirect_link_using_post_serialize(
             request=request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2196,7 +2196,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def create_redirect_link_using_post_0_without_preload_content(
+    def create_redirect_link_using_post_without_preload_content(
         self,
         request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
@@ -2240,7 +2240,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_redirect_link_using_post_0_serialize(
+        _param = self._create_redirect_link_using_post_serialize(
             request=request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2259,7 +2259,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _create_redirect_link_using_post_0_serialize(
+    def _create_redirect_link_using_post_serialize(
         self,
         request,
         _request_auth,
@@ -2336,7 +2336,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_affiliate_commission_program_using_delete_0(
+    def delete_affiliate_commission_program_using_delete(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         _request_timeout: Union[
@@ -2380,7 +2380,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_affiliate_commission_program_using_delete_0_serialize(
+        _param = self._delete_affiliate_commission_program_using_delete_serialize(
             commission_program_id=commission_program_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2405,7 +2405,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_affiliate_commission_program_using_delete_0_with_http_info(
+    def delete_affiliate_commission_program_using_delete_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         _request_timeout: Union[
@@ -2449,7 +2449,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_affiliate_commission_program_using_delete_0_serialize(
+        _param = self._delete_affiliate_commission_program_using_delete_serialize(
             commission_program_id=commission_program_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2474,7 +2474,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_affiliate_commission_program_using_delete_0_without_preload_content(
+    def delete_affiliate_commission_program_using_delete_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         _request_timeout: Union[
@@ -2518,7 +2518,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_affiliate_commission_program_using_delete_0_serialize(
+        _param = self._delete_affiliate_commission_program_using_delete_serialize(
             commission_program_id=commission_program_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2538,7 +2538,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _delete_affiliate_commission_program_using_delete_0_serialize(
+    def _delete_affiliate_commission_program_using_delete_serialize(
         self,
         commission_program_id,
         _request_auth,
@@ -2602,7 +2602,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_affiliate_using_delete_0(
+    def delete_affiliate_using_delete(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         _request_timeout: Union[
@@ -2646,7 +2646,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_affiliate_using_delete_0_serialize(
+        _param = self._delete_affiliate_using_delete_serialize(
             id=id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2671,7 +2671,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_affiliate_using_delete_0_with_http_info(
+    def delete_affiliate_using_delete_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         _request_timeout: Union[
@@ -2715,7 +2715,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_affiliate_using_delete_0_serialize(
+        _param = self._delete_affiliate_using_delete_serialize(
             id=id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2740,7 +2740,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_affiliate_using_delete_0_without_preload_content(
+    def delete_affiliate_using_delete_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         _request_timeout: Union[
@@ -2784,7 +2784,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_affiliate_using_delete_0_serialize(
+        _param = self._delete_affiliate_using_delete_serialize(
             id=id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2804,7 +2804,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _delete_affiliate_using_delete_0_serialize(
+    def _delete_affiliate_using_delete_serialize(
         self,
         id,
         _request_auth,
@@ -2868,7 +2868,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_redirect_link_using_delete_0(
+    def delete_redirect_link_using_delete(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         _request_timeout: Union[
@@ -2912,7 +2912,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_redirect_link_using_delete_0_serialize(
+        _param = self._delete_redirect_link_using_delete_serialize(
             redirect_id=redirect_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2937,7 +2937,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_redirect_link_using_delete_0_with_http_info(
+    def delete_redirect_link_using_delete_with_http_info(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         _request_timeout: Union[
@@ -2981,7 +2981,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_redirect_link_using_delete_0_serialize(
+        _param = self._delete_redirect_link_using_delete_serialize(
             redirect_id=redirect_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3006,7 +3006,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def delete_redirect_link_using_delete_0_without_preload_content(
+    def delete_redirect_link_using_delete_without_preload_content(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         _request_timeout: Union[
@@ -3050,7 +3050,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_redirect_link_using_delete_0_serialize(
+        _param = self._delete_redirect_link_using_delete_serialize(
             redirect_id=redirect_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3070,7 +3070,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _delete_redirect_link_using_delete_0_serialize(
+    def _delete_redirect_link_using_delete_serialize(
         self,
         redirect_id,
         _request_auth,
@@ -3134,7 +3134,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_commission_total_using_get_0(
+    def get_affiliate_commission_total_using_get(
         self,
         affiliate_id: Annotated[StrictStr, Field(description="affiliate_id")],
         _request_timeout: Union[
@@ -3178,7 +3178,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_commission_total_using_get_0_serialize(
+        _param = self._get_affiliate_commission_total_using_get_serialize(
             affiliate_id=affiliate_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3203,7 +3203,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_commission_total_using_get_0_with_http_info(
+    def get_affiliate_commission_total_using_get_with_http_info(
         self,
         affiliate_id: Annotated[StrictStr, Field(description="affiliate_id")],
         _request_timeout: Union[
@@ -3247,7 +3247,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_commission_total_using_get_0_serialize(
+        _param = self._get_affiliate_commission_total_using_get_serialize(
             affiliate_id=affiliate_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3272,7 +3272,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_commission_total_using_get_0_without_preload_content(
+    def get_affiliate_commission_total_using_get_without_preload_content(
         self,
         affiliate_id: Annotated[StrictStr, Field(description="affiliate_id")],
         _request_timeout: Union[
@@ -3316,7 +3316,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_commission_total_using_get_0_serialize(
+        _param = self._get_affiliate_commission_total_using_get_serialize(
             affiliate_id=affiliate_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3336,7 +3336,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _get_affiliate_commission_total_using_get_0_serialize(
+    def _get_affiliate_commission_total_using_get_serialize(
         self,
         affiliate_id,
         _request_auth,
@@ -3400,7 +3400,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_commissions_using_get_0(
+    def get_affiliate_commissions_using_get(
         self,
         affiliate_id: Annotated[StrictStr, Field(description="affiliate_id")],
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) affiliateId  - (String) since  - (String) until  ")] = None,
@@ -3456,7 +3456,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_commissions_using_get_0_serialize(
+        _param = self._get_affiliate_commissions_using_get_serialize(
             affiliate_id=affiliate_id,
             filter=filter,
             order_by=order_by,
@@ -3485,7 +3485,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_commissions_using_get_0_with_http_info(
+    def get_affiliate_commissions_using_get_with_http_info(
         self,
         affiliate_id: Annotated[StrictStr, Field(description="affiliate_id")],
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) affiliateId  - (String) since  - (String) until  ")] = None,
@@ -3541,7 +3541,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_commissions_using_get_0_serialize(
+        _param = self._get_affiliate_commissions_using_get_serialize(
             affiliate_id=affiliate_id,
             filter=filter,
             order_by=order_by,
@@ -3570,7 +3570,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_commissions_using_get_0_without_preload_content(
+    def get_affiliate_commissions_using_get_without_preload_content(
         self,
         affiliate_id: Annotated[StrictStr, Field(description="affiliate_id")],
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) affiliateId  - (String) since  - (String) until  ")] = None,
@@ -3626,7 +3626,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_commissions_using_get_0_serialize(
+        _param = self._get_affiliate_commissions_using_get_serialize(
             affiliate_id=affiliate_id,
             filter=filter,
             order_by=order_by,
@@ -3650,7 +3650,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _get_affiliate_commissions_using_get_0_serialize(
+    def _get_affiliate_commissions_using_get_serialize(
         self,
         affiliate_id,
         filter,
@@ -3734,7 +3734,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_custom_fields_using_get_0(
+    def get_affiliate_custom_fields_using_get(
         self,
         _request_timeout: Union[
             None,
@@ -3775,7 +3775,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_custom_fields_using_get_0_serialize(
+        _param = self._get_affiliate_custom_fields_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3799,7 +3799,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_custom_fields_using_get_0_with_http_info(
+    def get_affiliate_custom_fields_using_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -3840,7 +3840,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_custom_fields_using_get_0_serialize(
+        _param = self._get_affiliate_custom_fields_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3864,7 +3864,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_affiliate_custom_fields_using_get_0_without_preload_content(
+    def get_affiliate_custom_fields_using_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -3905,7 +3905,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_affiliate_custom_fields_using_get_0_serialize(
+        _param = self._get_affiliate_custom_fields_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3924,7 +3924,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _get_affiliate_custom_fields_using_get_0_serialize(
+    def _get_affiliate_custom_fields_using_get_serialize(
         self,
         _request_auth,
         _content_type,
@@ -4251,7 +4251,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_commission_program_using_get_0(
+    def get_commission_program_using_get(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         _request_timeout: Union[
@@ -4295,7 +4295,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_commission_program_using_get_0_serialize(
+        _param = self._get_commission_program_using_get_serialize(
             commission_program_id=commission_program_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4320,7 +4320,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_commission_program_using_get_0_with_http_info(
+    def get_commission_program_using_get_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         _request_timeout: Union[
@@ -4364,7 +4364,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_commission_program_using_get_0_serialize(
+        _param = self._get_commission_program_using_get_serialize(
             commission_program_id=commission_program_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4389,7 +4389,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_commission_program_using_get_0_without_preload_content(
+    def get_commission_program_using_get_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         _request_timeout: Union[
@@ -4433,7 +4433,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_commission_program_using_get_0_serialize(
+        _param = self._get_commission_program_using_get_serialize(
             commission_program_id=commission_program_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4453,7 +4453,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _get_commission_program_using_get_0_serialize(
+    def _get_commission_program_using_get_serialize(
         self,
         commission_program_id,
         _request_auth,
@@ -4517,7 +4517,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_redirect_link_using_get_0(
+    def get_redirect_link_using_get(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         _request_timeout: Union[
@@ -4561,7 +4561,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_redirect_link_using_get_0_serialize(
+        _param = self._get_redirect_link_using_get_serialize(
             redirect_id=redirect_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4586,7 +4586,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_redirect_link_using_get_0_with_http_info(
+    def get_redirect_link_using_get_with_http_info(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         _request_timeout: Union[
@@ -4630,7 +4630,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_redirect_link_using_get_0_serialize(
+        _param = self._get_redirect_link_using_get_serialize(
             redirect_id=redirect_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4655,7 +4655,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def get_redirect_link_using_get_0_without_preload_content(
+    def get_redirect_link_using_get_without_preload_content(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         _request_timeout: Union[
@@ -4699,7 +4699,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_redirect_link_using_get_0_serialize(
+        _param = self._get_redirect_link_using_get_serialize(
             redirect_id=redirect_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -4719,7 +4719,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _get_redirect_link_using_get_0_serialize(
+    def _get_redirect_link_using_get_serialize(
         self,
         redirect_id,
         _request_auth,
@@ -4783,7 +4783,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_affiliate_commission_programs_using_get_0(
+    def list_affiliate_commission_programs_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc")] = None,
@@ -4836,7 +4836,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_affiliate_commission_programs_using_get_0_serialize(
+        _param = self._list_affiliate_commission_programs_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -4864,7 +4864,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_affiliate_commission_programs_using_get_0_with_http_info(
+    def list_affiliate_commission_programs_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc")] = None,
@@ -4917,7 +4917,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_affiliate_commission_programs_using_get_0_serialize(
+        _param = self._list_affiliate_commission_programs_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -4945,7 +4945,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_affiliate_commission_programs_using_get_0_without_preload_content(
+    def list_affiliate_commission_programs_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc")] = None,
@@ -4998,7 +4998,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_affiliate_commission_programs_using_get_0_serialize(
+        _param = self._list_affiliate_commission_programs_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5021,7 +5021,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _list_affiliate_commission_programs_using_get_0_serialize(
+    def _list_affiliate_commission_programs_using_get_serialize(
         self,
         filter,
         order_by,
@@ -5102,7 +5102,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_affiliate_links_using_get_0(
+    def list_affiliate_links_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc")] = None,
@@ -5155,7 +5155,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_affiliate_links_using_get_0_serialize(
+        _param = self._list_affiliate_links_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5183,7 +5183,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_affiliate_links_using_get_0_with_http_info(
+    def list_affiliate_links_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc")] = None,
@@ -5236,7 +5236,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_affiliate_links_using_get_0_serialize(
+        _param = self._list_affiliate_links_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5264,7 +5264,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_affiliate_links_using_get_0_without_preload_content(
+    def list_affiliate_links_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   - (String) affiliate_id  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   - date_created   One of the following directions:   - asc   - desc")] = None,
@@ -5317,7 +5317,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_affiliate_links_using_get_0_serialize(
+        _param = self._list_affiliate_links_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5340,7 +5340,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _list_affiliate_links_using_get_0_serialize(
+    def _list_affiliate_links_using_get_serialize(
         self,
         filter,
         order_by,
@@ -5421,7 +5421,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_summaries_using_get1_0(
+    def list_summaries_using_get1(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (List[String]) affiliate_ids - (String) since_time - (String) until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:  - `filter=since_time%3D%3D2024-09-17T-15:50+00`  - `filter=until_time%3D%3D2024-09-17T-15:50+00`  - `filter=affiliate_ids%3D%3D123,456,789` ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - affiliate_id - amount_earned - balance - clawbacks One of the following directions: - asc - desc")] = None,
@@ -5474,7 +5474,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_summaries_using_get1_0_serialize(
+        _param = self._list_summaries_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5502,7 +5502,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_summaries_using_get1_0_with_http_info(
+    def list_summaries_using_get1_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (List[String]) affiliate_ids - (String) since_time - (String) until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:  - `filter=since_time%3D%3D2024-09-17T-15:50+00`  - `filter=until_time%3D%3D2024-09-17T-15:50+00`  - `filter=affiliate_ids%3D%3D123,456,789` ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - affiliate_id - amount_earned - balance - clawbacks One of the following directions: - asc - desc")] = None,
@@ -5555,7 +5555,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_summaries_using_get1_0_serialize(
+        _param = self._list_summaries_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5583,7 +5583,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def list_summaries_using_get1_0_without_preload_content(
+    def list_summaries_using_get1_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (List[String]) affiliate_ids - (String) since_time - (String) until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:  - `filter=since_time%3D%3D2024-09-17T-15:50+00`  - `filter=until_time%3D%3D2024-09-17T-15:50+00`  - `filter=affiliate_ids%3D%3D123,456,789` ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - affiliate_id - amount_earned - balance - clawbacks One of the following directions: - asc - desc")] = None,
@@ -5636,7 +5636,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_summaries_using_get1_0_serialize(
+        _param = self._list_summaries_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -5659,7 +5659,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _list_summaries_using_get1_0_serialize(
+    def _list_summaries_using_get1_serialize(
         self,
         filter,
         order_by,
@@ -6052,7 +6052,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_default_commission_program_using_patch_0(
+    def patch_default_commission_program_using_patch(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6102,7 +6102,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_default_commission_program_using_patch_0_serialize(
+        _param = self._patch_default_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_default_commission_program_request=patch_default_commission_program_request,
@@ -6129,7 +6129,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_default_commission_program_using_patch_0_with_http_info(
+    def patch_default_commission_program_using_patch_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6179,7 +6179,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_default_commission_program_using_patch_0_serialize(
+        _param = self._patch_default_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_default_commission_program_request=patch_default_commission_program_request,
@@ -6206,7 +6206,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_default_commission_program_using_patch_0_without_preload_content(
+    def patch_default_commission_program_using_patch_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6256,7 +6256,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_default_commission_program_using_patch_0_serialize(
+        _param = self._patch_default_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_default_commission_program_request=patch_default_commission_program_request,
@@ -6278,7 +6278,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _patch_default_commission_program_using_patch_0_serialize(
+    def _patch_default_commission_program_using_patch_serialize(
         self,
         commission_program_id,
         update_mask,
@@ -6364,7 +6364,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_product_commission_program_using_patch_0(
+    def patch_product_commission_program_using_patch(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6414,7 +6414,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_product_commission_program_using_patch_0_serialize(
+        _param = self._patch_product_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_product_commission_program_request=patch_product_commission_program_request,
@@ -6441,7 +6441,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_product_commission_program_using_patch_0_with_http_info(
+    def patch_product_commission_program_using_patch_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6491,7 +6491,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_product_commission_program_using_patch_0_serialize(
+        _param = self._patch_product_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_product_commission_program_request=patch_product_commission_program_request,
@@ -6518,7 +6518,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_product_commission_program_using_patch_0_without_preload_content(
+    def patch_product_commission_program_using_patch_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6568,7 +6568,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_product_commission_program_using_patch_0_serialize(
+        _param = self._patch_product_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_product_commission_program_request=patch_product_commission_program_request,
@@ -6590,7 +6590,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _patch_product_commission_program_using_patch_0_serialize(
+    def _patch_product_commission_program_using_patch_serialize(
         self,
         commission_program_id,
         update_mask,
@@ -6676,7 +6676,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_subscription_commission_program_using_patch_0(
+    def patch_subscription_commission_program_using_patch(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6726,7 +6726,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_subscription_commission_program_using_patch_0_serialize(
+        _param = self._patch_subscription_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_subscription_commission_program_request=patch_subscription_commission_program_request,
@@ -6753,7 +6753,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_subscription_commission_program_using_patch_0_with_http_info(
+    def patch_subscription_commission_program_using_patch_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6803,7 +6803,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_subscription_commission_program_using_patch_0_serialize(
+        _param = self._patch_subscription_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_subscription_commission_program_request=patch_subscription_commission_program_request,
@@ -6830,7 +6830,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def patch_subscription_commission_program_using_patch_0_without_preload_content(
+    def patch_subscription_commission_program_using_patch_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="update_mask")] = None,
@@ -6880,7 +6880,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_subscription_commission_program_using_patch_0_serialize(
+        _param = self._patch_subscription_commission_program_using_patch_serialize(
             commission_program_id=commission_program_id,
             update_mask=update_mask,
             patch_subscription_commission_program_request=patch_subscription_commission_program_request,
@@ -6902,7 +6902,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _patch_subscription_commission_program_using_patch_0_serialize(
+    def _patch_subscription_commission_program_using_patch_serialize(
         self,
         commission_program_id,
         update_mask,
@@ -6988,7 +6988,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def remove_affiliate_from_program_using_post_0(
+    def remove_affiliate_from_program_using_post(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
@@ -7035,7 +7035,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._remove_affiliate_from_program_using_post_0_serialize(
+        _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
             remove_from_program_request=remove_from_program_request,
             _request_auth=_request_auth,
@@ -7060,7 +7060,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def remove_affiliate_from_program_using_post_0_with_http_info(
+    def remove_affiliate_from_program_using_post_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
@@ -7107,7 +7107,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._remove_affiliate_from_program_using_post_0_serialize(
+        _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
             remove_from_program_request=remove_from_program_request,
             _request_auth=_request_auth,
@@ -7132,7 +7132,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def remove_affiliate_from_program_using_post_0_without_preload_content(
+    def remove_affiliate_from_program_using_post_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="id")],
         remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
@@ -7179,7 +7179,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._remove_affiliate_from_program_using_post_0_serialize(
+        _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
             remove_from_program_request=remove_from_program_request,
             _request_auth=_request_auth,
@@ -7199,7 +7199,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _remove_affiliate_from_program_using_post_0_serialize(
+    def _remove_affiliate_from_program_using_post_serialize(
         self,
         id,
         remove_from_program_request,
@@ -7279,7 +7279,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def remove_subscription_plan_commission_from_commissions_using_post_0(
+    def remove_subscription_plan_commission_from_commissions_using_post(
         self,
         commission_id: Annotated[StrictStr, Field(description="commission_id")],
         delete_subscription_plan_commission_request: Annotated[DeleteSubscriptionPlanCommissionRequest, Field(description="deleteSubscriptionPlanCommissionRequest")],
@@ -7326,7 +7326,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._remove_subscription_plan_commission_from_commissions_using_post_0_serialize(
+        _param = self._remove_subscription_plan_commission_from_commissions_using_post_serialize(
             commission_id=commission_id,
             delete_subscription_plan_commission_request=delete_subscription_plan_commission_request,
             _request_auth=_request_auth,
@@ -7351,7 +7351,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def remove_subscription_plan_commission_from_commissions_using_post_0_with_http_info(
+    def remove_subscription_plan_commission_from_commissions_using_post_with_http_info(
         self,
         commission_id: Annotated[StrictStr, Field(description="commission_id")],
         delete_subscription_plan_commission_request: Annotated[DeleteSubscriptionPlanCommissionRequest, Field(description="deleteSubscriptionPlanCommissionRequest")],
@@ -7398,7 +7398,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._remove_subscription_plan_commission_from_commissions_using_post_0_serialize(
+        _param = self._remove_subscription_plan_commission_from_commissions_using_post_serialize(
             commission_id=commission_id,
             delete_subscription_plan_commission_request=delete_subscription_plan_commission_request,
             _request_auth=_request_auth,
@@ -7423,7 +7423,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def remove_subscription_plan_commission_from_commissions_using_post_0_without_preload_content(
+    def remove_subscription_plan_commission_from_commissions_using_post_without_preload_content(
         self,
         commission_id: Annotated[StrictStr, Field(description="commission_id")],
         delete_subscription_plan_commission_request: Annotated[DeleteSubscriptionPlanCommissionRequest, Field(description="deleteSubscriptionPlanCommissionRequest")],
@@ -7470,7 +7470,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._remove_subscription_plan_commission_from_commissions_using_post_0_serialize(
+        _param = self._remove_subscription_plan_commission_from_commissions_using_post_serialize(
             commission_id=commission_id,
             delete_subscription_plan_commission_request=delete_subscription_plan_commission_request,
             _request_auth=_request_auth,
@@ -7490,7 +7490,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _remove_subscription_plan_commission_from_commissions_using_post_0_serialize(
+    def _remove_subscription_plan_commission_from_commissions_using_post_serialize(
         self,
         commission_id,
         delete_subscription_plan_commission_request,
@@ -7570,7 +7570,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def update_affiliate_custom_field_using_patch_0(
+    def update_affiliate_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -7620,7 +7620,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_affiliate_custom_field_using_patch_0_serialize(
+        _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -7647,7 +7647,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def update_affiliate_custom_field_using_patch_0_with_http_info(
+    def update_affiliate_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -7697,7 +7697,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_affiliate_custom_field_using_patch_0_serialize(
+        _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -7724,7 +7724,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def update_affiliate_custom_field_using_patch_0_without_preload_content(
+    def update_affiliate_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -7774,7 +7774,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_affiliate_custom_field_using_patch_0_serialize(
+        _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -7796,7 +7796,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _update_affiliate_custom_field_using_patch_0_serialize(
+    def _update_affiliate_custom_field_using_patch_serialize(
         self,
         custom_field_id,
         request,
@@ -8176,7 +8176,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def update_redirect_link_using_patch_0(
+    def update_redirect_link_using_patch(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
@@ -8223,7 +8223,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_redirect_link_using_patch_0_serialize(
+        _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
             request=request,
             _request_auth=_request_auth,
@@ -8249,7 +8249,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def update_redirect_link_using_patch_0_with_http_info(
+    def update_redirect_link_using_patch_with_http_info(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
@@ -8296,7 +8296,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_redirect_link_using_patch_0_serialize(
+        _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
             request=request,
             _request_auth=_request_auth,
@@ -8322,7 +8322,7 @@ class AffiliateApi:
 
 
     @validate_call
-    def update_redirect_link_using_patch_0_without_preload_content(
+    def update_redirect_link_using_patch_without_preload_content(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
         request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
@@ -8369,7 +8369,7 @@ class AffiliateApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_redirect_link_using_patch_0_serialize(
+        _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
             request=request,
             _request_auth=_request_auth,
@@ -8390,7 +8390,7 @@ class AffiliateApi:
         return response_data.response
 
 
-    def _update_redirect_link_using_patch_0_serialize(
+    def _update_redirect_link_using_patch_serialize(
         self,
         redirect_id,
         request,

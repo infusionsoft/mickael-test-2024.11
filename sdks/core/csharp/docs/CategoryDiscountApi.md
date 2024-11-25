@@ -4,12 +4,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DeleteDiscountUsingDELETE_0**](CategoryDiscountApi.md#deletediscountusingdelete_0) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
-| [**GetDiscountUsingGET_0**](CategoryDiscountApi.md#getdiscountusingget_0) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**DeleteDiscountUsingDELETE**](CategoryDiscountApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
+| [**GetDiscountUsingGET**](CategoryDiscountApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 
-<a id="deletediscountusingdelete_0"></a>
-# **DeleteDiscountUsingDELETE_0**
-> void DeleteDiscountUsingDELETE_0 (string discountId)
+<a id="deletediscountusingdelete"></a>
+# **DeleteDiscountUsingDELETE**
+> void DeleteDiscountUsingDELETE (string discountId)
 
 Delete a Category Discount
 
@@ -25,7 +25,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class DeleteDiscountUsingDELETE_0Example
+    public class DeleteDiscountUsingDELETEExample
     {
         public static void Main()
         {
@@ -37,11 +37,11 @@ namespace Example
             try
             {
                 // Delete a Category Discount
-                apiInstance.DeleteDiscountUsingDELETE_0(discountId);
+                apiInstance.DeleteDiscountUsingDELETE(discountId);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CategoryDiscountApi.DeleteDiscountUsingDELETE_0: " + e.Message);
+                Debug.Print("Exception when calling CategoryDiscountApi.DeleteDiscountUsingDELETE: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -50,18 +50,18 @@ namespace Example
 }
 ```
 
-#### Using the DeleteDiscountUsingDELETE_0WithHttpInfo variant
+#### Using the DeleteDiscountUsingDELETEWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete a Category Discount
-    apiInstance.DeleteDiscountUsingDELETE_0WithHttpInfo(discountId);
+    apiInstance.DeleteDiscountUsingDELETEWithHttpInfo(discountId);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CategoryDiscountApi.DeleteDiscountUsingDELETE_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CategoryDiscountApi.DeleteDiscountUsingDELETEWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -97,9 +97,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getdiscountusingget_0"></a>
-# **GetDiscountUsingGET_0**
-> CategoryDiscount GetDiscountUsingGET_0 (string discountId)
+<a id="getdiscountusingget"></a>
+# **GetDiscountUsingGET**
+> CategoryDiscount GetDiscountUsingGET (string discountId)
 
 Retrieve a Category Discount
 
@@ -115,7 +115,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetDiscountUsingGET_0Example
+    public class GetDiscountUsingGETExample
     {
         public static void Main()
         {
@@ -127,12 +127,12 @@ namespace Example
             try
             {
                 // Retrieve a Category Discount
-                CategoryDiscount result = apiInstance.GetDiscountUsingGET_0(discountId);
+                CategoryDiscount result = apiInstance.GetDiscountUsingGET(discountId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CategoryDiscountApi.GetDiscountUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling CategoryDiscountApi.GetDiscountUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -141,21 +141,21 @@ namespace Example
 }
 ```
 
-#### Using the GetDiscountUsingGET_0WithHttpInfo variant
+#### Using the GetDiscountUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve a Category Discount
-    ApiResponse<CategoryDiscount> response = apiInstance.GetDiscountUsingGET_0WithHttpInfo(discountId);
+    ApiResponse<CategoryDiscount> response = apiInstance.GetDiscountUsingGETWithHttpInfo(discountId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CategoryDiscountApi.GetDiscountUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CategoryDiscountApi.GetDiscountUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

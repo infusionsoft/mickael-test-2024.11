@@ -37,7 +37,7 @@ class FreeTrialDiscountApi:
 
 
     @validate_call
-    def delete_discount_using_delete1_0(
+    def delete_discount_using_delete1(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -81,7 +81,7 @@ class FreeTrialDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_discount_using_delete1_0_serialize(
+        _param = self._delete_discount_using_delete1_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -106,7 +106,7 @@ class FreeTrialDiscountApi:
 
 
     @validate_call
-    def delete_discount_using_delete1_0_with_http_info(
+    def delete_discount_using_delete1_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -150,7 +150,7 @@ class FreeTrialDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_discount_using_delete1_0_serialize(
+        _param = self._delete_discount_using_delete1_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -175,7 +175,7 @@ class FreeTrialDiscountApi:
 
 
     @validate_call
-    def delete_discount_using_delete1_0_without_preload_content(
+    def delete_discount_using_delete1_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -219,7 +219,7 @@ class FreeTrialDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_discount_using_delete1_0_serialize(
+        _param = self._delete_discount_using_delete1_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -239,7 +239,7 @@ class FreeTrialDiscountApi:
         return response_data.response
 
 
-    def _delete_discount_using_delete1_0_serialize(
+    def _delete_discount_using_delete1_serialize(
         self,
         discount_id,
         _request_auth,

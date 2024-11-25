@@ -1,4 +1,4 @@
-# KeapRestApi.CreateEmailSentRequest
+# KeapCoreServiceCoreSdk.CreateEmailSentRequest
 
 ## Properties
 

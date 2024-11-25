@@ -1,4 +1,4 @@
-# KeapRestApi.Campaign
+# KeapCoreServiceCoreSdk.Campaign
 
 ## Properties
 

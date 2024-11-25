@@ -1,4 +1,4 @@
-# KeapRestApi.TagsApi
+# KeapCoreServiceCoreSdk.TagsApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -32,11 +32,11 @@ Applies a Tag to a list of Contacts.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
-let applyRemoveTagRequest = new KeapRestApi.ApplyRemoveTagRequest(); // ApplyRemoveTagRequest | applyRemoveTagRequest
+let applyRemoveTagRequest = new KeapCoreServiceCoreSdk.ApplyRemoveTagRequest(); // ApplyRemoveTagRequest | applyRemoveTagRequest
 apiInstance.applyTagsUsingPOST(tagId, applyRemoveTagRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -78,10 +78,10 @@ Creates a new Tag Category.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
-let request = new KeapRestApi.CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
+let request = new KeapCoreServiceCoreSdk.CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
 apiInstance.createTagCategoryUsingPOST1(request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -122,10 +122,10 @@ Creates a new Tag
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
-let tag = new KeapRestApi.CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
+let tag = new KeapCoreServiceCoreSdk.CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
 apiInstance.createTagUsingPOST1(tag).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -166,9 +166,9 @@ Deletes the specified Tag Category
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
 apiInstance.deleteTagCategoryUsingDELETE(tagCategoryId).then(() => {
   console.log('API called successfully.');
@@ -210,9 +210,9 @@ Deletes a Tag.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
 apiInstance.deleteTagUsingDELETE(tagId).then(() => {
   console.log('API called successfully.');
@@ -254,9 +254,9 @@ Returns information about the specified Tag Category
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
 apiInstance.getCategoryUsingGET(tagCategoryId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -298,9 +298,9 @@ Retrieves information about the specified Tag
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
 apiInstance.getTagUsingGET1(tagId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -342,9 +342,9 @@ Retrieves a list of Companies that have the given Tag applied. To search for &#x
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
@@ -396,9 +396,9 @@ Retrieve a list of Contacts with the specified Tag. To search for &#x60;null&#x6
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
@@ -450,9 +450,9 @@ Retrieves the list of defined Tag Categories To search for &#x60;null&#x60; or e
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
@@ -502,9 +502,9 @@ Retrieve a list of Tags defined in the application. To search for &#x60;null&#x6
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
@@ -554,13 +554,13 @@ Updates a Tag Category with only the values provided in the request
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-  'tagCategory': new KeapRestApi.CreateUpdateTagCategoryRequest() // CreateUpdateTagCategoryRequest | tagCategory
+  'tagCategory': new KeapCoreServiceCoreSdk.CreateUpdateTagCategoryRequest() // CreateUpdateTagCategoryRequest | tagCategory
 };
 apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -604,13 +604,13 @@ Updates a Tag with only the values provided in the request
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-  'tag': new KeapRestApi.CreateUpdateTagRequest() // CreateUpdateTagRequest | tag
+  'tag': new KeapCoreServiceCoreSdk.CreateUpdateTagRequest() // CreateUpdateTagRequest | tag
 };
 apiInstance.patchTagUsingPATCH(tagId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -654,11 +654,11 @@ Removes a Tag from a list of Contacts.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.TagsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
-let applyRemoveTagRequest = new KeapRestApi.ApplyRemoveTagRequest(); // ApplyRemoveTagRequest | applyRemoveTagRequest
+let applyRemoveTagRequest = new KeapCoreServiceCoreSdk.ApplyRemoveTagRequest(); // ApplyRemoveTagRequest | applyRemoveTagRequest
 apiInstance.removeTagsUsingPOST(tagId, applyRemoveTagRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {

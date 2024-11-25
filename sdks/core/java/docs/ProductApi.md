@@ -4,14 +4,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**listProductsUsingGET1_0**](ProductApi.md#listProductsUsingGET1_0) | **GET** /v2/products | List Products |
-| [**listProductsUsingGET1_0WithHttpInfo**](ProductApi.md#listProductsUsingGET1_0WithHttpInfo) | **GET** /v2/products | List Products |
+| [**listProductsUsingGET1**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products |
+| [**listProductsUsingGET1WithHttpInfo**](ProductApi.md#listProductsUsingGET1WithHttpInfo) | **GET** /v2/products | List Products |
 
 
 
-## listProductsUsingGET1_0
+## listProductsUsingGET1
 
-> ListProductsResponse listProductsUsingGET1_0(filter, orderBy, pageSize, pageToken)
+> ListProductsResponse listProductsUsingGET1(filter, orderBy, pageSize, pageToken)
 
 List Products
 
@@ -21,11 +21,11 @@ Retrieves a list of Products
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ProductApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ProductApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -38,10 +38,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListProductsResponse result = apiInstance.listProductsUsingGET1_0(filter, orderBy, pageSize, pageToken);
+            ListProductsResponse result = apiInstance.listProductsUsingGET1(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ProductApi#listProductsUsingGET1_0");
+            System.err.println("Exception when calling ProductApi#listProductsUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -83,9 +83,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listProductsUsingGET1_0WithHttpInfo
+## listProductsUsingGET1WithHttpInfo
 
-> ApiResponse<ListProductsResponse> listProductsUsingGET1_0 listProductsUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListProductsResponse> listProductsUsingGET1 listProductsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List Products
 
@@ -95,12 +95,12 @@ Retrieves a list of Products
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ProductApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ProductApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -113,12 +113,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListProductsResponse> response = apiInstance.listProductsUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListProductsResponse> response = apiInstance.listProductsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling ProductApi#listProductsUsingGET1_0");
+            System.err.println("Exception when calling ProductApi#listProductsUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

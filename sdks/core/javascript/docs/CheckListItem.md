@@ -1,4 +1,4 @@
-# KeapRestApi.CheckListItem
+# KeapCoreServiceCoreSdk.CheckListItem
 
 ## Properties
 

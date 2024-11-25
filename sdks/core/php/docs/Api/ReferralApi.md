@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createReferralUsingPOST_0()**](ReferralApi.md#createReferralUsingPOST_0) | **POST** /v2/referrals | Create a Referral |
+| [**createReferralUsingPOST()**](ReferralApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral |
 
 
-## `createReferralUsingPOST_0()`
+## `createReferralUsingPOST()`
 
 ```php
-createReferralUsingPOST_0($request): \Com\Keap\Sdk\Core\Model\Referral
+createReferralUsingPOST($request): \Com\Keap\Sdk\Core\Model\Referral
 ```
 
 Create a Referral
@@ -32,10 +32,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ReferralApi(
 $request = new \Com\Keap\Sdk\Core\Model\CreateReferralRequest(); // \Com\Keap\Sdk\Core\Model\CreateReferralRequest | request
 
 try {
-    $result = $apiInstance->createReferralUsingPOST_0($request);
+    $result = $apiInstance->createReferralUsingPOST($request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ReferralApi->createReferralUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ReferralApi->createReferralUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PatchBusinessProfileRequest model module.
  * @module com.keap.sdk.core/model/PatchBusinessProfileRequest
- * @version 2.70.0.739356-hf-202411181744
+ * @version 0.0.18
  */
 var PatchBusinessProfileRequest = /*#__PURE__*/function () {
   /**

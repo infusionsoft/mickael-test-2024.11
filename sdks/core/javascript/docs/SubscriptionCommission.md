@@ -1,4 +1,4 @@
-# KeapRestApi.SubscriptionCommission
+# KeapCoreServiceCoreSdk.SubscriptionCommission
 
 ## Properties
 

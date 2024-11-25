@@ -30,7 +30,7 @@ import PaymentMethodList from '../model/PaymentMethodList';
 /**
 * Contact service.
 * @module com.keap.sdk.core/api/ContactApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class ContactApi {
 
@@ -248,11 +248,11 @@ export default class ContactApi {
      * @param {String} searchParam searchParam
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListBasicContactResponse} and HTTP response
      */
-    getContactsBySearchTermUsingGET_0WithHttpInfo(searchParam) {
+    getContactsBySearchTermUsingGETWithHttpInfo(searchParam) {
       let postBody = null;
       // verify the required parameter 'searchParam' is set
       if (searchParam === undefined || searchParam === null) {
-        throw new Error("Missing the required parameter 'searchParam' when calling getContactsBySearchTermUsingGET_0");
+        throw new Error("Missing the required parameter 'searchParam' when calling getContactsBySearchTermUsingGET");
       }
 
       let pathParams = {
@@ -282,8 +282,8 @@ export default class ContactApi {
      * @param {String} searchParam searchParam
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListBasicContactResponse}
      */
-    getContactsBySearchTermUsingGET_0(searchParam) {
-      return this.getContactsBySearchTermUsingGET_0WithHttpInfo(searchParam)
+    getContactsBySearchTermUsingGET(searchParam) {
+      return this.getContactsBySearchTermUsingGETWithHttpInfo(searchParam)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

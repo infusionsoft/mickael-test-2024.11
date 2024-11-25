@@ -1,4 +1,4 @@
-# KeapRestApi.CreateReferralRequest
+# KeapCoreServiceCoreSdk.CreateReferralRequest
 
 ## Properties
 

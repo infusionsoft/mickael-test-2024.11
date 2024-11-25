@@ -1,4 +1,4 @@
-# KeapRestApi.AddContactsToSequenceResponse
+# KeapCoreServiceCoreSdk.AddContactsToSequenceResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.PatchUserRequestV2
+# KeapCoreServiceCoreSdk.PatchUserRequestV2
 
 ## Properties
 

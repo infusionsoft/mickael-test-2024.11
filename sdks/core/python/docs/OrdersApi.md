@@ -4,20 +4,20 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_order_custom_field_using_post_0**](OrdersApi.md#create_order_custom_field_using_post_0) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
-[**create_order_items_on_order_using_post1_0**](OrdersApi.md#create_order_items_on_order_using_post1_0) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-[**create_order_using_post1_0**](OrdersApi.md#create_order_using_post1_0) | **POST** /v2/orders | Create an Order
+[**create_order_custom_field_using_post**](OrdersApi.md#create_order_custom_field_using_post) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
+[**create_order_items_on_order_using_post1**](OrdersApi.md#create_order_items_on_order_using_post1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
+[**create_order_using_post1**](OrdersApi.md#create_order_using_post1) | **POST** /v2/orders | Create an Order
 [**create_payment_on_order_using_post1**](OrdersApi.md#create_payment_on_order_using_post1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
-[**delete_order_using_delete1_0**](OrdersApi.md#delete_order_using_delete1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order
-[**get_order_using_get1_0**](OrdersApi.md#get_order_using_get1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order
-[**list_orders_using_get1_0**](OrdersApi.md#list_orders_using_get1_0) | **GET** /v2/orders | List orders
-[**patch_order_using_patch_0**](OrdersApi.md#patch_order_using_patch_0) | **PATCH** /v2/orders/{order_id} | Update an Order
-[**retrieve_order_custom_field_model_using_get_0**](OrdersApi.md#retrieve_order_custom_field_model_using_get_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
-[**update_order_custom_field_using_patch_0**](OrdersApi.md#update_order_custom_field_using_patch_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
+[**delete_order_using_delete1**](OrdersApi.md#delete_order_using_delete1) | **DELETE** /v2/orders/{order_id} | Delete an Order
+[**get_order_using_get1**](OrdersApi.md#get_order_using_get1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**list_orders_using_get1**](OrdersApi.md#list_orders_using_get1) | **GET** /v2/orders | List orders
+[**patch_order_using_patch**](OrdersApi.md#patch_order_using_patch) | **PATCH** /v2/orders/{order_id} | Update an Order
+[**retrieve_order_custom_field_model_using_get**](OrdersApi.md#retrieve_order_custom_field_model_using_get) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
+[**update_order_custom_field_using_patch**](OrdersApi.md#update_order_custom_field_using_patch) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
 
 
-# **create_order_custom_field_using_post_0**
-> CustomFieldMetaData create_order_custom_field_using_post_0(custom_field)
+# **create_order_custom_field_using_post**
+> CustomFieldMetaData create_order_custom_field_using_post(custom_field)
 
 Create an Order's Custom Field
 
@@ -47,11 +47,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Order's Custom Field
-        api_response = api_instance.create_order_custom_field_using_post_0(custom_field)
-        print("The response of OrdersApi->create_order_custom_field_using_post_0:\n")
+        api_response = api_instance.create_order_custom_field_using_post(custom_field)
+        print("The response of OrdersApi->create_order_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->create_order_custom_field_using_post_0: %s\n" % e)
+        print("Exception when calling OrdersApi->create_order_custom_field_using_post: %s\n" % e)
 ```
 
 
@@ -85,8 +85,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_order_items_on_order_using_post1_0**
-> RestV2OrderItem create_order_items_on_order_using_post1_0(order_id, create_rest_order_item_request)
+# **create_order_items_on_order_using_post1**
+> RestV2OrderItem create_order_items_on_order_using_post1(order_id, create_rest_order_item_request)
 
 Create an Order Item
 
@@ -117,11 +117,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Order Item
-        api_response = api_instance.create_order_items_on_order_using_post1_0(order_id, create_rest_order_item_request)
-        print("The response of OrdersApi->create_order_items_on_order_using_post1_0:\n")
+        api_response = api_instance.create_order_items_on_order_using_post1(order_id, create_rest_order_item_request)
+        print("The response of OrdersApi->create_order_items_on_order_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->create_order_items_on_order_using_post1_0: %s\n" % e)
+        print("Exception when calling OrdersApi->create_order_items_on_order_using_post1: %s\n" % e)
 ```
 
 
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_order_using_post1_0**
-> RestV2Order create_order_using_post1_0(create_order_request)
+# **create_order_using_post1**
+> RestV2Order create_order_using_post1(create_order_request)
 
 Create an Order
 
@@ -187,11 +187,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Order
-        api_response = api_instance.create_order_using_post1_0(create_order_request)
-        print("The response of OrdersApi->create_order_using_post1_0:\n")
+        api_response = api_instance.create_order_using_post1(create_order_request)
+        print("The response of OrdersApi->create_order_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->create_order_using_post1_0: %s\n" % e)
+        print("Exception when calling OrdersApi->create_order_using_post1: %s\n" % e)
 ```
 
 
@@ -296,8 +296,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_order_using_delete1_0**
-> delete_order_using_delete1_0(order_id)
+# **delete_order_using_delete1**
+> delete_order_using_delete1(order_id)
 
 Delete an Order
 
@@ -325,9 +325,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete an Order
-        api_instance.delete_order_using_delete1_0(order_id)
+        api_instance.delete_order_using_delete1(order_id)
     except Exception as e:
-        print("Exception when calling OrdersApi->delete_order_using_delete1_0: %s\n" % e)
+        print("Exception when calling OrdersApi->delete_order_using_delete1: %s\n" % e)
 ```
 
 
@@ -362,8 +362,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_order_using_get1_0**
-> RestV2Order get_order_using_get1_0(order_id)
+# **get_order_using_get1**
+> RestV2Order get_order_using_get1(order_id)
 
 Retrieve an Order
 
@@ -392,11 +392,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve an Order
-        api_response = api_instance.get_order_using_get1_0(order_id)
-        print("The response of OrdersApi->get_order_using_get1_0:\n")
+        api_response = api_instance.get_order_using_get1(order_id)
+        print("The response of OrdersApi->get_order_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->get_order_using_get1_0: %s\n" % e)
+        print("Exception when calling OrdersApi->get_order_using_get1: %s\n" % e)
 ```
 
 
@@ -431,8 +431,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_orders_using_get1_0**
-> ListOrders list_orders_using_get1_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_orders_using_get1**
+> ListOrders list_orders_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List orders
 
@@ -464,11 +464,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List orders
-        api_response = api_instance.list_orders_using_get1_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of OrdersApi->list_orders_using_get1_0:\n")
+        api_response = api_instance.list_orders_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of OrdersApi->list_orders_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->list_orders_using_get1_0: %s\n" % e)
+        print("Exception when calling OrdersApi->list_orders_using_get1: %s\n" % e)
 ```
 
 
@@ -506,8 +506,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_order_using_patch_0**
-> RestV2Order patch_order_using_patch_0(order_id, update_mask=update_mask, order=order)
+# **patch_order_using_patch**
+> RestV2Order patch_order_using_patch(order_id, update_mask=update_mask, order=order)
 
 Update an Order
 
@@ -539,11 +539,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update an Order
-        api_response = api_instance.patch_order_using_patch_0(order_id, update_mask=update_mask, order=order)
-        print("The response of OrdersApi->patch_order_using_patch_0:\n")
+        api_response = api_instance.patch_order_using_patch(order_id, update_mask=update_mask, order=order)
+        print("The response of OrdersApi->patch_order_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->patch_order_using_patch_0: %s\n" % e)
+        print("Exception when calling OrdersApi->patch_order_using_patch: %s\n" % e)
 ```
 
 
@@ -580,8 +580,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **retrieve_order_custom_field_model_using_get_0**
-> ObjectModel retrieve_order_custom_field_model_using_get_0()
+# **retrieve_order_custom_field_model_using_get**
+> ObjectModel retrieve_order_custom_field_model_using_get()
 
 Retrieve an Order's Custom Field Model
 
@@ -609,11 +609,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve an Order's Custom Field Model
-        api_response = api_instance.retrieve_order_custom_field_model_using_get_0()
-        print("The response of OrdersApi->retrieve_order_custom_field_model_using_get_0:\n")
+        api_response = api_instance.retrieve_order_custom_field_model_using_get()
+        print("The response of OrdersApi->retrieve_order_custom_field_model_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->retrieve_order_custom_field_model_using_get_0: %s\n" % e)
+        print("Exception when calling OrdersApi->retrieve_order_custom_field_model_using_get: %s\n" % e)
 ```
 
 
@@ -645,8 +645,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_order_custom_field_using_patch_0**
-> CustomFieldMetaData update_order_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
+# **update_order_custom_field_using_patch**
+> CustomFieldMetaData update_order_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
 Update an Order's Custom Field
 
@@ -678,11 +678,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update an Order's Custom Field
-        api_response = api_instance.update_order_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
-        print("The response of OrdersApi->update_order_custom_field_using_patch_0:\n")
+        api_response = api_instance.update_order_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        print("The response of OrdersApi->update_order_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling OrdersApi->update_order_custom_field_using_patch_0: %s\n" % e)
+        print("Exception when calling OrdersApi->update_order_custom_field_using_patch: %s\n" % e)
 ```
 
 

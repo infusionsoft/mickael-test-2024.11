@@ -1,4 +1,4 @@
-# KeapRestApi.RestPaymentGateway
+# KeapCoreServiceCoreSdk.RestPaymentGateway
 
 ## Properties
 

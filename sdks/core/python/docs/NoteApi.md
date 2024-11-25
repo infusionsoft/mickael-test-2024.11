@@ -4,18 +4,18 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_note_custom_field_using_post1_0**](NoteApi.md#create_note_custom_field_using_post1_0) | **POST** /v2/notes/model/customFields | Create a Custom Field
+[**create_note_custom_field_using_post1**](NoteApi.md#create_note_custom_field_using_post1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 [**create_note_using_post1**](NoteApi.md#create_note_using_post1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note
 [**delete_note_using_delete1**](NoteApi.md#delete_note_using_delete1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note
 [**get_note_using_get1**](NoteApi.md#get_note_using_get1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
 [**list_notes_using_get1**](NoteApi.md#list_notes_using_get1) | **GET** /v2/contacts/{contact_id}/notes | List Notes
-[**retrieve_note_model_using_get1_0**](NoteApi.md#retrieve_note_model_using_get1_0) | **GET** /v2/notes/model | Retrieve Note Model
+[**retrieve_note_model_using_get1**](NoteApi.md#retrieve_note_model_using_get1) | **GET** /v2/notes/model | Retrieve Note Model
 [**update_note_using_patch**](NoteApi.md#update_note_using_patch) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
-[**update_notes_custom_field_using_patch_0**](NoteApi.md#update_notes_custom_field_using_patch_0) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
+[**update_notes_custom_field_using_patch**](NoteApi.md#update_notes_custom_field_using_patch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 
 
-# **create_note_custom_field_using_post1_0**
-> CustomFieldMetaData create_note_custom_field_using_post1_0(custom_field)
+# **create_note_custom_field_using_post1**
+> CustomFieldMetaData create_note_custom_field_using_post1(custom_field)
 
 Create a Custom Field
 
@@ -45,11 +45,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Custom Field
-        api_response = api_instance.create_note_custom_field_using_post1_0(custom_field)
-        print("The response of NoteApi->create_note_custom_field_using_post1_0:\n")
+        api_response = api_instance.create_note_custom_field_using_post1(custom_field)
+        print("The response of NoteApi->create_note_custom_field_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NoteApi->create_note_custom_field_using_post1_0: %s\n" % e)
+        print("Exception when calling NoteApi->create_note_custom_field_using_post1: %s\n" % e)
 ```
 
 
@@ -370,8 +370,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **retrieve_note_model_using_get1_0**
-> ObjectModel retrieve_note_model_using_get1_0()
+# **retrieve_note_model_using_get1**
+> ObjectModel retrieve_note_model_using_get1()
 
 Retrieve Note Model
 
@@ -399,11 +399,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve Note Model
-        api_response = api_instance.retrieve_note_model_using_get1_0()
-        print("The response of NoteApi->retrieve_note_model_using_get1_0:\n")
+        api_response = api_instance.retrieve_note_model_using_get1()
+        print("The response of NoteApi->retrieve_note_model_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NoteApi->retrieve_note_model_using_get1_0: %s\n" % e)
+        print("Exception when calling NoteApi->retrieve_note_model_using_get1: %s\n" % e)
 ```
 
 
@@ -511,8 +511,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_notes_custom_field_using_patch_0**
-> CustomFieldMetaData update_notes_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
+# **update_notes_custom_field_using_patch**
+> CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
 Update a Custom Field
 
@@ -544,11 +544,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Custom Field
-        api_response = api_instance.update_notes_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
-        print("The response of NoteApi->update_notes_custom_field_using_patch_0:\n")
+        api_response = api_instance.update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        print("The response of NoteApi->update_notes_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling NoteApi->update_notes_custom_field_using_patch_0: %s\n" % e)
+        print("Exception when calling NoteApi->update_notes_custom_field_using_patch: %s\n" % e)
 ```
 
 

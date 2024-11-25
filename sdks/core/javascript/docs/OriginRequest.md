@@ -1,4 +1,4 @@
-# KeapRestApi.OriginRequest
+# KeapCoreServiceCoreSdk.OriginRequest
 
 ## Properties
 

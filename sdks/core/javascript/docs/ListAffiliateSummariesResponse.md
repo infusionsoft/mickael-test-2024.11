@@ -1,4 +1,4 @@
-# KeapRestApi.ListAffiliateSummariesResponse
+# KeapCoreServiceCoreSdk.ListAffiliateSummariesResponse
 
 ## Properties
 

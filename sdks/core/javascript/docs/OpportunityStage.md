@@ -1,4 +1,4 @@
-# KeapRestApi.OpportunityStage
+# KeapCoreServiceCoreSdk.OpportunityStage
 
 ## Properties
 

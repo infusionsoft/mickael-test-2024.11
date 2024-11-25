@@ -39,7 +39,7 @@ class MerchantApi:
 
 
     @validate_call
-    def list_merchants_using_get_0(
+    def list_merchants_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc")] = None,
@@ -92,7 +92,7 @@ class MerchantApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_merchants_using_get_0_serialize(
+        _param = self._list_merchants_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -120,7 +120,7 @@ class MerchantApi:
 
 
     @validate_call
-    def list_merchants_using_get_0_with_http_info(
+    def list_merchants_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc")] = None,
@@ -173,7 +173,7 @@ class MerchantApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_merchants_using_get_0_serialize(
+        _param = self._list_merchants_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -201,7 +201,7 @@ class MerchantApi:
 
 
     @validate_call
-    def list_merchants_using_get_0_without_preload_content(
+    def list_merchants_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc")] = None,
@@ -254,7 +254,7 @@ class MerchantApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_merchants_using_get_0_serialize(
+        _param = self._list_merchants_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -277,7 +277,7 @@ class MerchantApi:
         return response_data.response
 
 
-    def _list_merchants_using_get_0_serialize(
+    def _list_merchants_using_get_serialize(
         self,
         filter,
         order_by,

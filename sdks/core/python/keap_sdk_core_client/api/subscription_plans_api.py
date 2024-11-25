@@ -39,7 +39,7 @@ class SubscriptionPlansApi:
 
 
     @validate_call
-    def list_subscription_plans_using_get_0(
+    def list_subscription_plans_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc")] = None,
@@ -92,7 +92,7 @@ class SubscriptionPlansApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_subscription_plans_using_get_0_serialize(
+        _param = self._list_subscription_plans_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -120,7 +120,7 @@ class SubscriptionPlansApi:
 
 
     @validate_call
-    def list_subscription_plans_using_get_0_with_http_info(
+    def list_subscription_plans_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc")] = None,
@@ -173,7 +173,7 @@ class SubscriptionPlansApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_subscription_plans_using_get_0_serialize(
+        _param = self._list_subscription_plans_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -201,7 +201,7 @@ class SubscriptionPlansApi:
 
 
     @validate_call
-    def list_subscription_plans_using_get_0_without_preload_content(
+    def list_subscription_plans_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc")] = None,
@@ -254,7 +254,7 @@ class SubscriptionPlansApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_subscription_plans_using_get_0_serialize(
+        _param = self._list_subscription_plans_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -277,7 +277,7 @@ class SubscriptionPlansApi:
         return response_data.response
 
 
-    def _list_subscription_plans_using_get_0_serialize(
+    def _list_subscription_plans_using_get_serialize(
         self,
         filter,
         order_by,

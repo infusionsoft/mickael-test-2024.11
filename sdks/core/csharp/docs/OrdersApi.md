@@ -4,20 +4,20 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateOrderCustomFieldUsingPOST_0**](OrdersApi.md#createordercustomfieldusingpost_0) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
-| [**CreateOrderItemsOnOrderUsingPOST1_0**](OrdersApi.md#createorderitemsonorderusingpost1_0) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
-| [**CreateOrderUsingPOST1_0**](OrdersApi.md#createorderusingpost1_0) | **POST** /v2/orders | Create an Order |
+| [**CreateOrderCustomFieldUsingPOST**](OrdersApi.md#createordercustomfieldusingpost) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
+| [**CreateOrderItemsOnOrderUsingPOST1**](OrdersApi.md#createorderitemsonorderusingpost1) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**CreateOrderUsingPOST1**](OrdersApi.md#createorderusingpost1) | **POST** /v2/orders | Create an Order |
 | [**CreatePaymentOnOrderUsingPOST1**](OrdersApi.md#createpaymentonorderusingpost1) | **POST** /v2/orders/{order_id}/payments | Create a Payment |
-| [**DeleteOrderUsingDELETE1_0**](OrdersApi.md#deleteorderusingdelete1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order |
-| [**GetOrderUsingGET1_0**](OrdersApi.md#getorderusingget1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order |
-| [**ListOrdersUsingGET1_0**](OrdersApi.md#listordersusingget1_0) | **GET** /v2/orders | List orders |
-| [**PatchOrderUsingPATCH_0**](OrdersApi.md#patchorderusingpatch_0) | **PATCH** /v2/orders/{order_id} | Update an Order |
-| [**RetrieveOrderCustomFieldModelUsingGET_0**](OrdersApi.md#retrieveordercustomfieldmodelusingget_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
-| [**UpdateOrderCustomFieldUsingPATCH_0**](OrdersApi.md#updateordercustomfieldusingpatch_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**DeleteOrderUsingDELETE1**](OrdersApi.md#deleteorderusingdelete1) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**GetOrderUsingGET1**](OrdersApi.md#getorderusingget1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**ListOrdersUsingGET1**](OrdersApi.md#listordersusingget1) | **GET** /v2/orders | List orders |
+| [**PatchOrderUsingPATCH**](OrdersApi.md#patchorderusingpatch) | **PATCH** /v2/orders/{order_id} | Update an Order |
+| [**RetrieveOrderCustomFieldModelUsingGET**](OrdersApi.md#retrieveordercustomfieldmodelusingget) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
+| [**UpdateOrderCustomFieldUsingPATCH**](OrdersApi.md#updateordercustomfieldusingpatch) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
 
-<a id="createordercustomfieldusingpost_0"></a>
-# **CreateOrderCustomFieldUsingPOST_0**
-> CustomFieldMetaData CreateOrderCustomFieldUsingPOST_0 (CreateCustomFieldRequest customField)
+<a id="createordercustomfieldusingpost"></a>
+# **CreateOrderCustomFieldUsingPOST**
+> CustomFieldMetaData CreateOrderCustomFieldUsingPOST (CreateCustomFieldRequest customField)
 
 Create an Order's Custom Field
 
@@ -33,7 +33,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateOrderCustomFieldUsingPOST_0Example
+    public class CreateOrderCustomFieldUsingPOSTExample
     {
         public static void Main()
         {
@@ -45,12 +45,12 @@ namespace Example
             try
             {
                 // Create an Order's Custom Field
-                CustomFieldMetaData result = apiInstance.CreateOrderCustomFieldUsingPOST_0(customField);
+                CustomFieldMetaData result = apiInstance.CreateOrderCustomFieldUsingPOST(customField);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.CreateOrderCustomFieldUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.CreateOrderCustomFieldUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -59,21 +59,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateOrderCustomFieldUsingPOST_0WithHttpInfo variant
+#### Using the CreateOrderCustomFieldUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create an Order's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOrderCustomFieldUsingPOST_0WithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOrderCustomFieldUsingPOSTWithHttpInfo(customField);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.CreateOrderCustomFieldUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.CreateOrderCustomFieldUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -108,9 +108,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createorderitemsonorderusingpost1_0"></a>
-# **CreateOrderItemsOnOrderUsingPOST1_0**
-> RestV2OrderItem CreateOrderItemsOnOrderUsingPOST1_0 (string orderId, CreateRestOrderItemRequest createRestOrderItemRequest)
+<a id="createorderitemsonorderusingpost1"></a>
+# **CreateOrderItemsOnOrderUsingPOST1**
+> RestV2OrderItem CreateOrderItemsOnOrderUsingPOST1 (string orderId, CreateRestOrderItemRequest createRestOrderItemRequest)
 
 Create an Order Item
 
@@ -126,7 +126,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateOrderItemsOnOrderUsingPOST1_0Example
+    public class CreateOrderItemsOnOrderUsingPOST1Example
     {
         public static void Main()
         {
@@ -139,12 +139,12 @@ namespace Example
             try
             {
                 // Create an Order Item
-                RestV2OrderItem result = apiInstance.CreateOrderItemsOnOrderUsingPOST1_0(orderId, createRestOrderItemRequest);
+                RestV2OrderItem result = apiInstance.CreateOrderItemsOnOrderUsingPOST1(orderId, createRestOrderItemRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.CreateOrderItemsOnOrderUsingPOST1_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.CreateOrderItemsOnOrderUsingPOST1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -153,21 +153,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateOrderItemsOnOrderUsingPOST1_0WithHttpInfo variant
+#### Using the CreateOrderItemsOnOrderUsingPOST1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create an Order Item
-    ApiResponse<RestV2OrderItem> response = apiInstance.CreateOrderItemsOnOrderUsingPOST1_0WithHttpInfo(orderId, createRestOrderItemRequest);
+    ApiResponse<RestV2OrderItem> response = apiInstance.CreateOrderItemsOnOrderUsingPOST1WithHttpInfo(orderId, createRestOrderItemRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.CreateOrderItemsOnOrderUsingPOST1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.CreateOrderItemsOnOrderUsingPOST1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -203,9 +203,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createorderusingpost1_0"></a>
-# **CreateOrderUsingPOST1_0**
-> RestV2Order CreateOrderUsingPOST1_0 (RestCreateOrderRequest createOrderRequest)
+<a id="createorderusingpost1"></a>
+# **CreateOrderUsingPOST1**
+> RestV2Order CreateOrderUsingPOST1 (RestCreateOrderRequest createOrderRequest)
 
 Create an Order
 
@@ -221,7 +221,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateOrderUsingPOST1_0Example
+    public class CreateOrderUsingPOST1Example
     {
         public static void Main()
         {
@@ -233,12 +233,12 @@ namespace Example
             try
             {
                 // Create an Order
-                RestV2Order result = apiInstance.CreateOrderUsingPOST1_0(createOrderRequest);
+                RestV2Order result = apiInstance.CreateOrderUsingPOST1(createOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.CreateOrderUsingPOST1_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.CreateOrderUsingPOST1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -247,21 +247,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateOrderUsingPOST1_0WithHttpInfo variant
+#### Using the CreateOrderUsingPOST1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create an Order
-    ApiResponse<RestV2Order> response = apiInstance.CreateOrderUsingPOST1_0WithHttpInfo(createOrderRequest);
+    ApiResponse<RestV2Order> response = apiInstance.CreateOrderUsingPOST1WithHttpInfo(createOrderRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.CreateOrderUsingPOST1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.CreateOrderUsingPOST1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -391,9 +391,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deleteorderusingdelete1_0"></a>
-# **DeleteOrderUsingDELETE1_0**
-> void DeleteOrderUsingDELETE1_0 (string orderId)
+<a id="deleteorderusingdelete1"></a>
+# **DeleteOrderUsingDELETE1**
+> void DeleteOrderUsingDELETE1 (string orderId)
 
 Delete an Order
 
@@ -409,7 +409,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class DeleteOrderUsingDELETE1_0Example
+    public class DeleteOrderUsingDELETE1Example
     {
         public static void Main()
         {
@@ -421,11 +421,11 @@ namespace Example
             try
             {
                 // Delete an Order
-                apiInstance.DeleteOrderUsingDELETE1_0(orderId);
+                apiInstance.DeleteOrderUsingDELETE1(orderId);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.DeleteOrderUsingDELETE1_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.DeleteOrderUsingDELETE1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -434,18 +434,18 @@ namespace Example
 }
 ```
 
-#### Using the DeleteOrderUsingDELETE1_0WithHttpInfo variant
+#### Using the DeleteOrderUsingDELETE1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete an Order
-    apiInstance.DeleteOrderUsingDELETE1_0WithHttpInfo(orderId);
+    apiInstance.DeleteOrderUsingDELETE1WithHttpInfo(orderId);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.DeleteOrderUsingDELETE1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.DeleteOrderUsingDELETE1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -481,9 +481,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getorderusingget1_0"></a>
-# **GetOrderUsingGET1_0**
-> RestV2Order GetOrderUsingGET1_0 (string orderId)
+<a id="getorderusingget1"></a>
+# **GetOrderUsingGET1**
+> RestV2Order GetOrderUsingGET1 (string orderId)
 
 Retrieve an Order
 
@@ -499,7 +499,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetOrderUsingGET1_0Example
+    public class GetOrderUsingGET1Example
     {
         public static void Main()
         {
@@ -511,12 +511,12 @@ namespace Example
             try
             {
                 // Retrieve an Order
-                RestV2Order result = apiInstance.GetOrderUsingGET1_0(orderId);
+                RestV2Order result = apiInstance.GetOrderUsingGET1(orderId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.GetOrderUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.GetOrderUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -525,21 +525,21 @@ namespace Example
 }
 ```
 
-#### Using the GetOrderUsingGET1_0WithHttpInfo variant
+#### Using the GetOrderUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve an Order
-    ApiResponse<RestV2Order> response = apiInstance.GetOrderUsingGET1_0WithHttpInfo(orderId);
+    ApiResponse<RestV2Order> response = apiInstance.GetOrderUsingGET1WithHttpInfo(orderId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.GetOrderUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.GetOrderUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -575,9 +575,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listordersusingget1_0"></a>
-# **ListOrdersUsingGET1_0**
-> ListOrders ListOrdersUsingGET1_0 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listordersusingget1"></a>
+# **ListOrdersUsingGET1**
+> ListOrders ListOrdersUsingGET1 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List orders
 
@@ -593,7 +593,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListOrdersUsingGET1_0Example
+    public class ListOrdersUsingGET1Example
     {
         public static void Main()
         {
@@ -608,12 +608,12 @@ namespace Example
             try
             {
                 // List orders
-                ListOrders result = apiInstance.ListOrdersUsingGET1_0(filter, orderBy, pageSize, pageToken);
+                ListOrders result = apiInstance.ListOrdersUsingGET1(filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.ListOrdersUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.ListOrdersUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -622,21 +622,21 @@ namespace Example
 }
 ```
 
-#### Using the ListOrdersUsingGET1_0WithHttpInfo variant
+#### Using the ListOrdersUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List orders
-    ApiResponse<ListOrders> response = apiInstance.ListOrdersUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListOrders> response = apiInstance.ListOrdersUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.ListOrdersUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.ListOrdersUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -675,9 +675,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchorderusingpatch_0"></a>
-# **PatchOrderUsingPATCH_0**
-> RestV2Order PatchOrderUsingPATCH_0 (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? order = null)
+<a id="patchorderusingpatch"></a>
+# **PatchOrderUsingPATCH**
+> RestV2Order PatchOrderUsingPATCH (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? order = null)
 
 Update an Order
 
@@ -693,7 +693,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class PatchOrderUsingPATCH_0Example
+    public class PatchOrderUsingPATCHExample
     {
         public static void Main()
         {
@@ -707,12 +707,12 @@ namespace Example
             try
             {
                 // Update an Order
-                RestV2Order result = apiInstance.PatchOrderUsingPATCH_0(orderId, updateMask, order);
+                RestV2Order result = apiInstance.PatchOrderUsingPATCH(orderId, updateMask, order);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.PatchOrderUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.PatchOrderUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -721,21 +721,21 @@ namespace Example
 }
 ```
 
-#### Using the PatchOrderUsingPATCH_0WithHttpInfo variant
+#### Using the PatchOrderUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update an Order
-    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCH_0WithHttpInfo(orderId, updateMask, order);
+    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.PatchOrderUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.PatchOrderUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -773,9 +773,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="retrieveordercustomfieldmodelusingget_0"></a>
-# **RetrieveOrderCustomFieldModelUsingGET_0**
-> ObjectModel RetrieveOrderCustomFieldModelUsingGET_0 ()
+<a id="retrieveordercustomfieldmodelusingget"></a>
+# **RetrieveOrderCustomFieldModelUsingGET**
+> ObjectModel RetrieveOrderCustomFieldModelUsingGET ()
 
 Retrieve an Order's Custom Field Model
 
@@ -791,7 +791,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class RetrieveOrderCustomFieldModelUsingGET_0Example
+    public class RetrieveOrderCustomFieldModelUsingGETExample
     {
         public static void Main()
         {
@@ -802,12 +802,12 @@ namespace Example
             try
             {
                 // Retrieve an Order's Custom Field Model
-                ObjectModel result = apiInstance.RetrieveOrderCustomFieldModelUsingGET_0();
+                ObjectModel result = apiInstance.RetrieveOrderCustomFieldModelUsingGET();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.RetrieveOrderCustomFieldModelUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.RetrieveOrderCustomFieldModelUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -816,21 +816,21 @@ namespace Example
 }
 ```
 
-#### Using the RetrieveOrderCustomFieldModelUsingGET_0WithHttpInfo variant
+#### Using the RetrieveOrderCustomFieldModelUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve an Order's Custom Field Model
-    ApiResponse<ObjectModel> response = apiInstance.RetrieveOrderCustomFieldModelUsingGET_0WithHttpInfo();
+    ApiResponse<ObjectModel> response = apiInstance.RetrieveOrderCustomFieldModelUsingGETWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.RetrieveOrderCustomFieldModelUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.RetrieveOrderCustomFieldModelUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -862,9 +862,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updateordercustomfieldusingpatch_0"></a>
-# **UpdateOrderCustomFieldUsingPATCH_0**
-> CustomFieldMetaData UpdateOrderCustomFieldUsingPATCH_0 (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+<a id="updateordercustomfieldusingpatch"></a>
+# **UpdateOrderCustomFieldUsingPATCH**
+> CustomFieldMetaData UpdateOrderCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
 
 Update an Order's Custom Field
 
@@ -880,7 +880,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class UpdateOrderCustomFieldUsingPATCH_0Example
+    public class UpdateOrderCustomFieldUsingPATCHExample
     {
         public static void Main()
         {
@@ -894,12 +894,12 @@ namespace Example
             try
             {
                 // Update an Order's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateOrderCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrdersApi.UpdateOrderCustomFieldUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling OrdersApi.UpdateOrderCustomFieldUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -908,21 +908,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateOrderCustomFieldUsingPATCH_0WithHttpInfo variant
+#### Using the UpdateOrderCustomFieldUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update an Order's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOrderCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling OrdersApi.UpdateOrderCustomFieldUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling OrdersApi.UpdateOrderCustomFieldUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

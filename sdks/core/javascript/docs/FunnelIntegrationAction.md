@@ -1,4 +1,4 @@
-# KeapRestApi.FunnelIntegrationAction
+# KeapCoreServiceCoreSdk.FunnelIntegrationAction
 
 ## Properties
 

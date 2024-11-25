@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Shipping service.
 * @module com.keap.sdk.core/api/ShippingApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var ShippingApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -49,8 +49,8 @@ var ShippingApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListRestShippingMethodsResponse} and HTTP response
    */
   return _createClass(ShippingApi, [{
-    key: "listShippingMethodsUsingGET_0WithHttpInfo",
-    value: function listShippingMethodsUsingGET_0WithHttpInfo() {
+    key: "listShippingMethodsUsingGETWithHttpInfo",
+    value: function listShippingMethodsUsingGETWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -69,9 +69,9 @@ var ShippingApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListRestShippingMethodsResponse}
      */
   }, {
-    key: "listShippingMethodsUsingGET_0",
-    value: function listShippingMethodsUsingGET_0() {
-      return this.listShippingMethodsUsingGET_0WithHttpInfo().then(function (response_and_data) {
+    key: "listShippingMethodsUsingGET",
+    value: function listShippingMethodsUsingGET() {
+      return this.listShippingMethodsUsingGETWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }

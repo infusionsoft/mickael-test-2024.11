@@ -1,4 +1,4 @@
-# KeapRestApi.Note
+# KeapCoreServiceCoreSdk.Note
 
 ## Properties
 

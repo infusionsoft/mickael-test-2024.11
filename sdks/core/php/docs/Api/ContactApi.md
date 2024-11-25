@@ -8,7 +8,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**createContactUsingPOST1()**](ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact |
 | [**deleteContactUsingDELETE1()**](ContactApi.md#deleteContactUsingDELETE1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact |
 | [**getContactUsingGET1()**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact |
-| [**getContactsBySearchTermUsingGET_0()**](ContactApi.md#getContactsBySearchTermUsingGET_0) | **GET** /v2/contacts:search | Search for Contacts |
+| [**getContactsBySearchTermUsingGET()**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts |
 | [**linkContactsUsingPOST()**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts |
 | [**listContactLinkTypesUsingGET()**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types |
 | [**listContactLinksUsingGET()**](ContactApi.md#listContactLinksUsingGET) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts |
@@ -240,10 +240,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getContactsBySearchTermUsingGET_0()`
+## `getContactsBySearchTermUsingGET()`
 
 ```php
-getContactsBySearchTermUsingGET_0($search_param): \Com\Keap\Sdk\Core\Model\ListBasicContactResponse
+getContactsBySearchTermUsingGET($search_param): \Com\Keap\Sdk\Core\Model\ListBasicContactResponse
 ```
 
 Search for Contacts
@@ -265,10 +265,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
 $search_param = 'search_param_example'; // string | searchParam
 
 try {
-    $result = $apiInstance->getContactsBySearchTermUsingGET_0($search_param);
+    $result = $apiInstance->getContactsBySearchTermUsingGET($search_param);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContactApi->getContactsBySearchTermUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContactApi->getContactsBySearchTermUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

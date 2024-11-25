@@ -1,4 +1,4 @@
-# KeapRestApi.Goal
+# KeapCoreServiceCoreSdk.Goal
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.EmailSentCreateError
+# KeapCoreServiceCoreSdk.EmailSentCreateError
 
 ## Properties
 

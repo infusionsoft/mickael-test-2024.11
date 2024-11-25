@@ -4,16 +4,16 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createLeadSourceUsingPOST_0**](LeadSourcesApi.md#createLeadSourceUsingPOST_0) | **POST** /v2/leadsources | Create a Lead Source |
-| [**createLeadSourceUsingPOST_0WithHttpInfo**](LeadSourcesApi.md#createLeadSourceUsingPOST_0WithHttpInfo) | **POST** /v2/leadsources | Create a Lead Source |
-| [**listLeadSourcesUsingGET_0**](LeadSourcesApi.md#listLeadSourcesUsingGET_0) | **GET** /v2/leadsources | List Lead Sources |
-| [**listLeadSourcesUsingGET_0WithHttpInfo**](LeadSourcesApi.md#listLeadSourcesUsingGET_0WithHttpInfo) | **GET** /v2/leadsources | List Lead Sources |
+| [**createLeadSourceUsingPOST**](LeadSourcesApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source |
+| [**createLeadSourceUsingPOSTWithHttpInfo**](LeadSourcesApi.md#createLeadSourceUsingPOSTWithHttpInfo) | **POST** /v2/leadsources | Create a Lead Source |
+| [**listLeadSourcesUsingGET**](LeadSourcesApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources |
+| [**listLeadSourcesUsingGETWithHttpInfo**](LeadSourcesApi.md#listLeadSourcesUsingGETWithHttpInfo) | **GET** /v2/leadsources | List Lead Sources |
 
 
 
-## createLeadSourceUsingPOST_0
+## createLeadSourceUsingPOST
 
-> LeadSource createLeadSourceUsingPOST_0(leadsource)
+> LeadSource createLeadSourceUsingPOST(leadsource)
 
 Create a Lead Source
 
@@ -23,11 +23,11 @@ Creates a new Lead Source
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LeadSourcesApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LeadSourcesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -37,10 +37,10 @@ public class Example {
         LeadSourcesApi apiInstance = new LeadSourcesApi(defaultClient);
         CreateLeadSourceRequest leadsource = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
         try {
-            LeadSource result = apiInstance.createLeadSourceUsingPOST_0(leadsource);
+            LeadSource result = apiInstance.createLeadSourceUsingPOST(leadsource);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LeadSourcesApi#createLeadSourceUsingPOST_0");
+            System.err.println("Exception when calling LeadSourcesApi#createLeadSourceUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -78,9 +78,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createLeadSourceUsingPOST_0WithHttpInfo
+## createLeadSourceUsingPOSTWithHttpInfo
 
-> ApiResponse<LeadSource> createLeadSourceUsingPOST_0 createLeadSourceUsingPOST_0WithHttpInfo(leadsource)
+> ApiResponse<LeadSource> createLeadSourceUsingPOST createLeadSourceUsingPOSTWithHttpInfo(leadsource)
 
 Create a Lead Source
 
@@ -90,12 +90,12 @@ Creates a new Lead Source
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LeadSourcesApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LeadSourcesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -105,12 +105,12 @@ public class Example {
         LeadSourcesApi apiInstance = new LeadSourcesApi(defaultClient);
         CreateLeadSourceRequest leadsource = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
         try {
-            ApiResponse<LeadSource> response = apiInstance.createLeadSourceUsingPOST_0WithHttpInfo(leadsource);
+            ApiResponse<LeadSource> response = apiInstance.createLeadSourceUsingPOSTWithHttpInfo(leadsource);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling LeadSourcesApi#createLeadSourceUsingPOST_0");
+            System.err.println("Exception when calling LeadSourcesApi#createLeadSourceUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -149,9 +149,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## listLeadSourcesUsingGET_0
+## listLeadSourcesUsingGET
 
-> ListLeadSourcesResponse listLeadSourcesUsingGET_0(filter, orderBy, pageSize, pageToken)
+> ListLeadSourcesResponse listLeadSourcesUsingGET(filter, orderBy, pageSize, pageToken)
 
 List Lead Sources
 
@@ -161,11 +161,11 @@ Retrieves a list of lead sources
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LeadSourcesApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LeadSourcesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -178,10 +178,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListLeadSourcesResponse result = apiInstance.listLeadSourcesUsingGET_0(filter, orderBy, pageSize, pageToken);
+            ListLeadSourcesResponse result = apiInstance.listLeadSourcesUsingGET(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LeadSourcesApi#listLeadSourcesUsingGET_0");
+            System.err.println("Exception when calling LeadSourcesApi#listLeadSourcesUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -223,9 +223,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listLeadSourcesUsingGET_0WithHttpInfo
+## listLeadSourcesUsingGETWithHttpInfo
 
-> ApiResponse<ListLeadSourcesResponse> listLeadSourcesUsingGET_0 listLeadSourcesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListLeadSourcesResponse> listLeadSourcesUsingGET listLeadSourcesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List Lead Sources
 
@@ -235,12 +235,12 @@ Retrieves a list of lead sources
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LeadSourcesApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LeadSourcesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -253,12 +253,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListLeadSourcesResponse> response = apiInstance.listLeadSourcesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListLeadSourcesResponse> response = apiInstance.listLeadSourcesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling LeadSourcesApi#listLeadSourcesUsingGET_0");
+            System.err.println("Exception when calling LeadSourcesApi#listLeadSourcesUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

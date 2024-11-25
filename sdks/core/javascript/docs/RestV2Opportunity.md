@@ -1,4 +1,4 @@
-# KeapRestApi.RestV2Opportunity
+# KeapCoreServiceCoreSdk.RestV2Opportunity
 
 ## Properties
 

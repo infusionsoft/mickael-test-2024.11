@@ -143,77 +143,77 @@ import { UpdateTagResponse } from '../models/UpdateTagResponse';
 import { UpdateTaskResponse } from '../models/UpdateTaskResponse';
 import { User } from '../models/User';
 import { AffiliateApiRequestFactory, AffiliateApiResponseProcessor } from "../apis/AffiliateApi";
-export interface AffiliateApiAddAffiliateToProgramUsingPOST0Request {
+export interface AffiliateApiAddAffiliateToProgramUsingPOSTRequest {
     id: string;
     affiliateAddToProgramRequest: AffiliateAddToProgramRequest;
 }
 export interface AffiliateApiAddAffiliateUsingPOSTRequest {
     insertAffiliate?: CreateAffiliateRequest;
 }
-export interface AffiliateApiAddCommissionProgramUsingPOST0Request {
+export interface AffiliateApiAddCommissionProgramUsingPOSTRequest {
     insertCommissionProgram?: CreateCommissionProgramRequest;
 }
-export interface AffiliateApiAssignProductCommissionProgramUsingPOST0Request {
+export interface AffiliateApiAssignProductCommissionProgramUsingPOSTRequest {
     commissionProgramId: string;
     productCommissionProgram?: CreateProductCommissionProgramRequest;
 }
-export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request {
+export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest {
     commissionProgramId: string;
     subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest;
 }
-export interface AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request {
+export interface AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest {
     customField: CreateCustomFieldRequest;
 }
-export interface AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request {
+export interface AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest {
     commissionProgramId: string;
     createDefaultCommissionProgramRequest?: CreateDefaultCommissionProgramRequest;
 }
-export interface AffiliateApiCreateRedirectLinkUsingPOST0Request {
+export interface AffiliateApiCreateRedirectLinkUsingPOSTRequest {
     request: CreateOrPatchAffiliateLinkRequest;
 }
-export interface AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request {
+export interface AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest {
     commissionProgramId: string;
 }
-export interface AffiliateApiDeleteAffiliateUsingDELETE0Request {
+export interface AffiliateApiDeleteAffiliateUsingDELETERequest {
     id: string;
 }
-export interface AffiliateApiDeleteRedirectLinkUsingDELETE0Request {
+export interface AffiliateApiDeleteRedirectLinkUsingDELETERequest {
     redirectId: string;
 }
-export interface AffiliateApiGetAffiliateCommissionTotalUsingGET0Request {
+export interface AffiliateApiGetAffiliateCommissionTotalUsingGETRequest {
     affiliateId: string;
 }
-export interface AffiliateApiGetAffiliateCommissionsUsingGET0Request {
+export interface AffiliateApiGetAffiliateCommissionsUsingGETRequest {
     affiliateId: string;
     filter?: string;
     orderBy?: string;
     pageSize?: number;
     pageToken?: string;
 }
-export interface AffiliateApiGetAffiliateCustomFieldsUsingGET0Request {
+export interface AffiliateApiGetAffiliateCustomFieldsUsingGETRequest {
 }
 export interface AffiliateApiGetAffiliateUsingGET1Request {
     id: string;
 }
-export interface AffiliateApiGetCommissionProgramUsingGET0Request {
+export interface AffiliateApiGetCommissionProgramUsingGETRequest {
     commissionProgramId: string;
 }
-export interface AffiliateApiGetRedirectLinkUsingGET0Request {
+export interface AffiliateApiGetRedirectLinkUsingGETRequest {
     redirectId: string;
 }
-export interface AffiliateApiListAffiliateCommissionProgramsUsingGET0Request {
+export interface AffiliateApiListAffiliateCommissionProgramsUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
     pageToken?: string;
 }
-export interface AffiliateApiListAffiliateLinksUsingGET0Request {
+export interface AffiliateApiListAffiliateLinksUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
     pageToken?: string;
 }
-export interface AffiliateApiListSummariesUsingGET10Request {
+export interface AffiliateApiListSummariesUsingGET1Request {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
@@ -224,30 +224,30 @@ export interface AffiliateApiPatchCommissionProgramUsingPATCHRequest {
     patchCommissionProgramRequest: PatchCommissionProgramRequest;
     updateMask?: Array<string>;
 }
-export interface AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request {
+export interface AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest {
     commissionProgramId: string;
     updateMask?: Array<string>;
     patchDefaultCommissionProgramRequest?: PatchDefaultCommissionProgramRequest;
 }
-export interface AffiliateApiPatchProductCommissionProgramUsingPATCH0Request {
+export interface AffiliateApiPatchProductCommissionProgramUsingPATCHRequest {
     commissionProgramId: string;
     updateMask?: Array<string>;
     patchProductCommissionProgramRequest?: PatchProductCommissionProgramRequest;
 }
-export interface AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request {
+export interface AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest {
     commissionProgramId: string;
     updateMask?: Array<string>;
     patchSubscriptionCommissionProgramRequest?: PatchSubscriptionCommissionProgramRequest;
 }
-export interface AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request {
+export interface AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest {
     id: string;
     removeFromProgramRequest: AffiliateRemoveFromProgramRequest;
 }
-export interface AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request {
+export interface AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest {
     commissionId: string;
     deleteSubscriptionPlanCommissionRequest: DeleteSubscriptionPlanCommissionRequest;
 }
-export interface AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request {
+export interface AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest {
     customFieldId: string;
     request: UpdateCustomFieldMetaDataRequest;
     updateMask?: Array<string>;
@@ -256,71 +256,71 @@ export interface AffiliateApiUpdateAffiliateUsingPATCHRequest {
     id: string;
     patchAffiliate?: PatchAffiliateRequest;
 }
-export interface AffiliateApiUpdateRedirectLinkUsingPATCH0Request {
+export interface AffiliateApiUpdateRedirectLinkUsingPATCHRequest {
     redirectId: string;
     request: CreateOrPatchAffiliateLinkRequest;
 }
 export declare class ObjectAffiliateApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: AffiliateApiRequestFactory, responseProcessor?: AffiliateApiResponseProcessor);
-    addAffiliateToProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddAffiliateToProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    addAffiliateToProgramUsingPOST(param: AffiliateApiAddAffiliateToProgramUsingPOST0Request, options?: Configuration): Promise<void>;
+    addAffiliateToProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddAffiliateToProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>>;
+    addAffiliateToProgramUsingPOST(param: AffiliateApiAddAffiliateToProgramUsingPOSTRequest, options?: Configuration): Promise<void>;
     addAffiliateUsingPOSTWithHttpInfo(param?: AffiliateApiAddAffiliateUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestAffiliate>>;
     addAffiliateUsingPOST(param?: AffiliateApiAddAffiliateUsingPOSTRequest, options?: Configuration): Promise<RestAffiliate>;
-    addCommissionProgramUsingPOSTWithHttpInfo(param?: AffiliateApiAddCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>>;
-    addCommissionProgramUsingPOST(param?: AffiliateApiAddCommissionProgramUsingPOST0Request, options?: Configuration): Promise<AffiliateCommissionProgramResponse>;
-    assignProductCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignProductCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>>;
-    assignProductCommissionProgramUsingPOST(param: AffiliateApiAssignProductCommissionProgramUsingPOST0Request, options?: Configuration): Promise<ProductCommissionProgram>;
-    assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>>;
-    assignSubscriptionCommissionProgramUsingPOST(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOST0Request, options?: Configuration): Promise<SubscriptionCommissionProgram>;
-    createAffiliateCustomFieldUsingPOSTWithHttpInfo(param: AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    createAffiliateCustomFieldUsingPOST(param: AffiliateApiCreateAffiliateCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData>;
-    createDefaultCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>>;
-    createDefaultCommissionProgramUsingPOST(param: AffiliateApiCreateDefaultCommissionProgramUsingPOST0Request, options?: Configuration): Promise<SetDefaultCommissionProgramResponse>;
-    createRedirectLinkUsingPOSTWithHttpInfo(param: AffiliateApiCreateRedirectLinkUsingPOST0Request, options?: Configuration): Promise<HttpInfo<AffiliateLink>>;
-    createRedirectLinkUsingPOST(param: AffiliateApiCreateRedirectLinkUsingPOST0Request, options?: Configuration): Promise<AffiliateLink>;
-    deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteAffiliateCommissionProgramUsingDELETE(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETE0Request, options?: Configuration): Promise<void>;
-    deleteAffiliateUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteAffiliateUsingDELETE(param: AffiliateApiDeleteAffiliateUsingDELETE0Request, options?: Configuration): Promise<void>;
-    deleteRedirectLinkUsingDELETEWithHttpInfo(param: AffiliateApiDeleteRedirectLinkUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteRedirectLinkUsingDELETE(param: AffiliateApiDeleteRedirectLinkUsingDELETE0Request, options?: Configuration): Promise<void>;
-    getAffiliateCommissionTotalUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionTotalUsingGET0Request, options?: Configuration): Promise<HttpInfo<AffiliateCommissionEarned>>;
-    getAffiliateCommissionTotalUsingGET(param: AffiliateApiGetAffiliateCommissionTotalUsingGET0Request, options?: Configuration): Promise<AffiliateCommissionEarned>;
-    getAffiliateCommissionsUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionsUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionResponse>>;
-    getAffiliateCommissionsUsingGET(param: AffiliateApiGetAffiliateCommissionsUsingGET0Request, options?: Configuration): Promise<ListAffiliateCommissionResponse>;
-    getAffiliateCustomFieldsUsingGETWithHttpInfo(param?: AffiliateApiGetAffiliateCustomFieldsUsingGET0Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
-    getAffiliateCustomFieldsUsingGET(param?: AffiliateApiGetAffiliateCustomFieldsUsingGET0Request, options?: Configuration): Promise<ObjectModel>;
+    addCommissionProgramUsingPOSTWithHttpInfo(param?: AffiliateApiAddCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>>;
+    addCommissionProgramUsingPOST(param?: AffiliateApiAddCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<AffiliateCommissionProgramResponse>;
+    assignProductCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>>;
+    assignProductCommissionProgramUsingPOST(param: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<ProductCommissionProgram>;
+    assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>>;
+    assignSubscriptionCommissionProgramUsingPOST(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<SubscriptionCommissionProgram>;
+    createAffiliateCustomFieldUsingPOSTWithHttpInfo(param: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    createAffiliateCustomFieldUsingPOST(param: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData>;
+    createDefaultCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>>;
+    createDefaultCommissionProgramUsingPOST(param: AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<SetDefaultCommissionProgramResponse>;
+    createRedirectLinkUsingPOSTWithHttpInfo(param: AffiliateApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>>;
+    createRedirectLinkUsingPOST(param: AffiliateApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<AffiliateLink>;
+    deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteAffiliateCommissionProgramUsingDELETE(param: AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest, options?: Configuration): Promise<void>;
+    deleteAffiliateUsingDELETEWithHttpInfo(param: AffiliateApiDeleteAffiliateUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteAffiliateUsingDELETE(param: AffiliateApiDeleteAffiliateUsingDELETERequest, options?: Configuration): Promise<void>;
+    deleteRedirectLinkUsingDELETEWithHttpInfo(param: AffiliateApiDeleteRedirectLinkUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteRedirectLinkUsingDELETE(param: AffiliateApiDeleteRedirectLinkUsingDELETERequest, options?: Configuration): Promise<void>;
+    getAffiliateCommissionTotalUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionTotalUsingGETRequest, options?: Configuration): Promise<HttpInfo<AffiliateCommissionEarned>>;
+    getAffiliateCommissionTotalUsingGET(param: AffiliateApiGetAffiliateCommissionTotalUsingGETRequest, options?: Configuration): Promise<AffiliateCommissionEarned>;
+    getAffiliateCommissionsUsingGETWithHttpInfo(param: AffiliateApiGetAffiliateCommissionsUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionResponse>>;
+    getAffiliateCommissionsUsingGET(param: AffiliateApiGetAffiliateCommissionsUsingGETRequest, options?: Configuration): Promise<ListAffiliateCommissionResponse>;
+    getAffiliateCustomFieldsUsingGETWithHttpInfo(param?: AffiliateApiGetAffiliateCustomFieldsUsingGETRequest, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
+    getAffiliateCustomFieldsUsingGET(param?: AffiliateApiGetAffiliateCustomFieldsUsingGETRequest, options?: Configuration): Promise<ObjectModel>;
     getAffiliateUsingGET1WithHttpInfo(param: AffiliateApiGetAffiliateUsingGET1Request, options?: Configuration): Promise<HttpInfo<RestAffiliate>>;
     getAffiliateUsingGET1(param: AffiliateApiGetAffiliateUsingGET1Request, options?: Configuration): Promise<RestAffiliate>;
-    getCommissionProgramUsingGETWithHttpInfo(param: AffiliateApiGetCommissionProgramUsingGET0Request, options?: Configuration): Promise<HttpInfo<AffiliateProgramV2>>;
-    getCommissionProgramUsingGET(param: AffiliateApiGetCommissionProgramUsingGET0Request, options?: Configuration): Promise<AffiliateProgramV2>;
-    getRedirectLinkUsingGETWithHttpInfo(param: AffiliateApiGetRedirectLinkUsingGET0Request, options?: Configuration): Promise<HttpInfo<AffiliateLink>>;
-    getRedirectLinkUsingGET(param: AffiliateApiGetRedirectLinkUsingGET0Request, options?: Configuration): Promise<AffiliateLink>;
-    listAffiliateCommissionProgramsUsingGETWithHttpInfo(param?: AffiliateApiListAffiliateCommissionProgramsUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionProgramsResponse>>;
-    listAffiliateCommissionProgramsUsingGET(param?: AffiliateApiListAffiliateCommissionProgramsUsingGET0Request, options?: Configuration): Promise<ListAffiliateCommissionProgramsResponse>;
-    listAffiliateLinksUsingGETWithHttpInfo(param?: AffiliateApiListAffiliateLinksUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListAffiliateLinksResponse>>;
-    listAffiliateLinksUsingGET(param?: AffiliateApiListAffiliateLinksUsingGET0Request, options?: Configuration): Promise<ListAffiliateLinksResponse>;
-    listSummariesUsingGET1WithHttpInfo(param?: AffiliateApiListSummariesUsingGET10Request, options?: Configuration): Promise<HttpInfo<ListAffiliateSummariesResponse>>;
-    listSummariesUsingGET1(param?: AffiliateApiListSummariesUsingGET10Request, options?: Configuration): Promise<ListAffiliateSummariesResponse>;
+    getCommissionProgramUsingGETWithHttpInfo(param: AffiliateApiGetCommissionProgramUsingGETRequest, options?: Configuration): Promise<HttpInfo<AffiliateProgramV2>>;
+    getCommissionProgramUsingGET(param: AffiliateApiGetCommissionProgramUsingGETRequest, options?: Configuration): Promise<AffiliateProgramV2>;
+    getRedirectLinkUsingGETWithHttpInfo(param: AffiliateApiGetRedirectLinkUsingGETRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>>;
+    getRedirectLinkUsingGET(param: AffiliateApiGetRedirectLinkUsingGETRequest, options?: Configuration): Promise<AffiliateLink>;
+    listAffiliateCommissionProgramsUsingGETWithHttpInfo(param?: AffiliateApiListAffiliateCommissionProgramsUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListAffiliateCommissionProgramsResponse>>;
+    listAffiliateCommissionProgramsUsingGET(param?: AffiliateApiListAffiliateCommissionProgramsUsingGETRequest, options?: Configuration): Promise<ListAffiliateCommissionProgramsResponse>;
+    listAffiliateLinksUsingGETWithHttpInfo(param?: AffiliateApiListAffiliateLinksUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListAffiliateLinksResponse>>;
+    listAffiliateLinksUsingGET(param?: AffiliateApiListAffiliateLinksUsingGETRequest, options?: Configuration): Promise<ListAffiliateLinksResponse>;
+    listSummariesUsingGET1WithHttpInfo(param?: AffiliateApiListSummariesUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListAffiliateSummariesResponse>>;
+    listSummariesUsingGET1(param?: AffiliateApiListSummariesUsingGET1Request, options?: Configuration): Promise<ListAffiliateSummariesResponse>;
     patchCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>>;
     patchCommissionProgramUsingPATCH(param: AffiliateApiPatchCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<AffiliateCommissionProgramResponse>;
-    patchDefaultCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>>;
-    patchDefaultCommissionProgramUsingPATCH(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<SetDefaultCommissionProgramResponse>;
-    patchProductCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchProductCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>>;
-    patchProductCommissionProgramUsingPATCH(param: AffiliateApiPatchProductCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<ProductCommissionProgram>;
-    patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>>;
-    patchSubscriptionCommissionProgramUsingPATCH(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCH0Request, options?: Configuration): Promise<SubscriptionCommissionProgram>;
-    removeAffiliateFromProgramUsingPOSTWithHttpInfo(param: AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    removeAffiliateFromProgramUsingPOST(param: AffiliateApiRemoveAffiliateFromProgramUsingPOST0Request, options?: Configuration): Promise<void>;
-    removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    removeSubscriptionPlanCommissionFromCommissionsUsingPOST(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOST0Request, options?: Configuration): Promise<void>;
-    updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    updateAffiliateCustomFieldUsingPATCH(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    patchDefaultCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<SetDefaultCommissionProgramResponse>>;
+    patchDefaultCommissionProgramUsingPATCH(param: AffiliateApiPatchDefaultCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<SetDefaultCommissionProgramResponse>;
+    patchProductCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchProductCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>>;
+    patchProductCommissionProgramUsingPATCH(param: AffiliateApiPatchProductCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<ProductCommissionProgram>;
+    patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>>;
+    patchSubscriptionCommissionProgramUsingPATCH(param: AffiliateApiPatchSubscriptionCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<SubscriptionCommissionProgram>;
+    removeAffiliateFromProgramUsingPOSTWithHttpInfo(param: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>>;
+    removeAffiliateFromProgramUsingPOST(param: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<void>;
+    removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>>;
+    removeSubscriptionPlanCommissionFromCommissionsUsingPOST(param: AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest, options?: Configuration): Promise<void>;
+    updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    updateAffiliateCustomFieldUsingPATCH(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
     updateAffiliateUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestAffiliate>>;
     updateAffiliateUsingPATCH(param: AffiliateApiUpdateAffiliateUsingPATCHRequest, options?: Configuration): Promise<RestAffiliate>;
-    updateRedirectLinkUsingPATCHWithHttpInfo(param: AffiliateApiUpdateRedirectLinkUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<AffiliateLink>>;
-    updateRedirectLinkUsingPATCH(param: AffiliateApiUpdateRedirectLinkUsingPATCH0Request, options?: Configuration): Promise<AffiliateLink>;
+    updateRedirectLinkUsingPATCHWithHttpInfo(param: AffiliateApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>>;
+    updateRedirectLinkUsingPATCH(param: AffiliateApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<AffiliateLink>;
 }
 import { AutomationApiRequestFactory, AutomationApiResponseProcessor } from "../apis/AutomationApi";
 export interface AutomationApiAddContactsToAutomationSequenceUsingPOSTRequest {
@@ -440,19 +440,19 @@ export declare class ObjectCampaignApi {
     removeContactsFromCampaignSequenceUsingPOST(param: CampaignApiRemoveContactsFromCampaignSequenceUsingPOSTRequest, options?: Configuration): Promise<RemoveContactsFromSequenceResponse>;
 }
 import { CategoryDiscountApiRequestFactory, CategoryDiscountApiResponseProcessor } from "../apis/CategoryDiscountApi";
-export interface CategoryDiscountApiDeleteDiscountUsingDELETE0Request {
+export interface CategoryDiscountApiDeleteDiscountUsingDELETERequest {
     discountId: string;
 }
-export interface CategoryDiscountApiGetDiscountUsingGET0Request {
+export interface CategoryDiscountApiGetDiscountUsingGETRequest {
     discountId: string;
 }
 export declare class ObjectCategoryDiscountApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: CategoryDiscountApiRequestFactory, responseProcessor?: CategoryDiscountApiResponseProcessor);
-    deleteDiscountUsingDELETEWithHttpInfo(param: CategoryDiscountApiDeleteDiscountUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteDiscountUsingDELETE(param: CategoryDiscountApiDeleteDiscountUsingDELETE0Request, options?: Configuration): Promise<void>;
-    getDiscountUsingGETWithHttpInfo(param: CategoryDiscountApiGetDiscountUsingGET0Request, options?: Configuration): Promise<HttpInfo<CategoryDiscount>>;
-    getDiscountUsingGET(param: CategoryDiscountApiGetDiscountUsingGET0Request, options?: Configuration): Promise<CategoryDiscount>;
+    deleteDiscountUsingDELETEWithHttpInfo(param: CategoryDiscountApiDeleteDiscountUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteDiscountUsingDELETE(param: CategoryDiscountApiDeleteDiscountUsingDELETERequest, options?: Configuration): Promise<void>;
+    getDiscountUsingGETWithHttpInfo(param: CategoryDiscountApiGetDiscountUsingGETRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>>;
+    getDiscountUsingGET(param: CategoryDiscountApiGetDiscountUsingGETRequest, options?: Configuration): Promise<CategoryDiscount>;
 }
 import { CompanyApiRequestFactory, CompanyApiResponseProcessor } from "../apis/CompanyApi";
 export interface CompanyApiCreateCompanyUsingPOST1Request {
@@ -505,7 +505,7 @@ export interface ContactApiGetContactUsingGET1Request {
     contactId: string;
     fields?: Array<string>;
 }
-export interface ContactApiGetContactsBySearchTermUsingGET0Request {
+export interface ContactApiGetContactsBySearchTermUsingGETRequest {
     searchParam: string;
 }
 export interface ContactApiLinkContactsUsingPOSTRequest {
@@ -551,8 +551,8 @@ export declare class ObjectContactApi {
     deleteContactUsingDELETE1(param: ContactApiDeleteContactUsingDELETE1Request, options?: Configuration): Promise<void>;
     getContactUsingGET1WithHttpInfo(param: ContactApiGetContactUsingGET1Request, options?: Configuration): Promise<HttpInfo<Contact>>;
     getContactUsingGET1(param: ContactApiGetContactUsingGET1Request, options?: Configuration): Promise<Contact>;
-    getContactsBySearchTermUsingGETWithHttpInfo(param: ContactApiGetContactsBySearchTermUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListBasicContactResponse>>;
-    getContactsBySearchTermUsingGET(param: ContactApiGetContactsBySearchTermUsingGET0Request, options?: Configuration): Promise<ListBasicContactResponse>;
+    getContactsBySearchTermUsingGETWithHttpInfo(param: ContactApiGetContactsBySearchTermUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListBasicContactResponse>>;
+    getContactsBySearchTermUsingGET(param: ContactApiGetContactsBySearchTermUsingGETRequest, options?: Configuration): Promise<ListBasicContactResponse>;
     linkContactsUsingPOSTWithHttpInfo(param: ContactApiLinkContactsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<ContactLink>>;
     linkContactsUsingPOST(param: ContactApiLinkContactsUsingPOSTRequest, options?: Configuration): Promise<ContactLink>;
     listContactLinkTypesUsingGETWithHttpInfo(param?: ContactApiListContactLinkTypesUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListContactLinkTypesResponse>>;
@@ -622,37 +622,37 @@ export declare class ObjectEmailAddressApi {
     updateEmailAddressOptStatusUsingPUT(param: EmailAddressApiUpdateEmailAddressOptStatusUsingPUTRequest, options?: Configuration): Promise<RestEmailAddress>;
 }
 import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor } from "../apis/FreeTrialDiscountApi";
-export interface FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request {
+export interface FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request {
     discountId: string;
 }
 export declare class ObjectFreeTrialDiscountApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: FreeTrialDiscountApiRequestFactory, responseProcessor?: FreeTrialDiscountApiResponseProcessor);
-    deleteDiscountUsingDELETE1WithHttpInfo(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteDiscountUsingDELETE1(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE10Request, options?: Configuration): Promise<void>;
+    deleteDiscountUsingDELETE1WithHttpInfo(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteDiscountUsingDELETE1(param: FreeTrialDiscountApiDeleteDiscountUsingDELETE1Request, options?: Configuration): Promise<void>;
 }
 import { FunnelIntegrationApiRequestFactory, FunnelIntegrationApiResponseProcessor } from "../apis/FunnelIntegrationApi";
-export interface FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request {
+export interface FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest {
     createFunnelIntegrationRequest: CreateFunnelIntegrationRequest;
 }
-export interface FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request {
+export interface FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest {
     createFunnelIntegrationTriggerEvents: CreateFunnelIntegrationTriggerEvents;
 }
-export interface FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request {
+export interface FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest {
     deleteFunnelIntegrationRequest: DeleteFunnelIntegrationRequest;
 }
 export declare class ObjectFunnelIntegrationApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: FunnelIntegrationApiRequestFactory, responseProcessor?: FunnelIntegrationApiResponseProcessor);
-    createFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    createFunnelIntegrationUsingPOST(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<void>;
-    createIntegrationTriggerEventUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request, options?: Configuration): Promise<HttpInfo<Array<FunnelIntegrationTriggerResultDTO>>>;
-    createIntegrationTriggerEventUsingPOST(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request, options?: Configuration): Promise<Array<FunnelIntegrationTriggerResultDTO>>;
-    deleteFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteFunnelIntegrationUsingPOST(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request, options?: Configuration): Promise<void>;
+    createFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>>;
+    createFunnelIntegrationUsingPOST(param: FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<void>;
+    createIntegrationTriggerEventUsingPOSTWithHttpInfo(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<Array<FunnelIntegrationTriggerResultDTO>>>;
+    createIntegrationTriggerEventUsingPOST(param: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest, options?: Configuration): Promise<Array<FunnelIntegrationTriggerResultDTO>>;
+    deleteFunnelIntegrationUsingPOSTWithHttpInfo(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteFunnelIntegrationUsingPOST(param: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<void>;
 }
 import { LandingPagesApiRequestFactory, LandingPagesApiResponseProcessor } from "../apis/LandingPagesApi";
-export interface LandingPagesApiListLandingPagesUsingGET0Request {
+export interface LandingPagesApiListLandingPagesUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
@@ -661,14 +661,14 @@ export interface LandingPagesApiListLandingPagesUsingGET0Request {
 export declare class ObjectLandingPagesApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: LandingPagesApiRequestFactory, responseProcessor?: LandingPagesApiResponseProcessor);
-    listLandingPagesUsingGETWithHttpInfo(param?: LandingPagesApiListLandingPagesUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListLandingPagesResponse>>;
-    listLandingPagesUsingGET(param?: LandingPagesApiListLandingPagesUsingGET0Request, options?: Configuration): Promise<ListLandingPagesResponse>;
+    listLandingPagesUsingGETWithHttpInfo(param?: LandingPagesApiListLandingPagesUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListLandingPagesResponse>>;
+    listLandingPagesUsingGET(param?: LandingPagesApiListLandingPagesUsingGETRequest, options?: Configuration): Promise<ListLandingPagesResponse>;
 }
 import { LeadSourcesApiRequestFactory, LeadSourcesApiResponseProcessor } from "../apis/LeadSourcesApi";
-export interface LeadSourcesApiCreateLeadSourceUsingPOST0Request {
+export interface LeadSourcesApiCreateLeadSourceUsingPOSTRequest {
     leadsource?: CreateLeadSourceRequest;
 }
-export interface LeadSourcesApiListLeadSourcesUsingGET0Request {
+export interface LeadSourcesApiListLeadSourcesUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
@@ -677,27 +677,27 @@ export interface LeadSourcesApiListLeadSourcesUsingGET0Request {
 export declare class ObjectLeadSourcesApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: LeadSourcesApiRequestFactory, responseProcessor?: LeadSourcesApiResponseProcessor);
-    createLeadSourceUsingPOSTWithHttpInfo(param?: LeadSourcesApiCreateLeadSourceUsingPOST0Request, options?: Configuration): Promise<HttpInfo<LeadSource>>;
-    createLeadSourceUsingPOST(param?: LeadSourcesApiCreateLeadSourceUsingPOST0Request, options?: Configuration): Promise<LeadSource>;
-    listLeadSourcesUsingGETWithHttpInfo(param?: LeadSourcesApiListLeadSourcesUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListLeadSourcesResponse>>;
-    listLeadSourcesUsingGET(param?: LeadSourcesApiListLeadSourcesUsingGET0Request, options?: Configuration): Promise<ListLeadSourcesResponse>;
+    createLeadSourceUsingPOSTWithHttpInfo(param?: LeadSourcesApiCreateLeadSourceUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<LeadSource>>;
+    createLeadSourceUsingPOST(param?: LeadSourcesApiCreateLeadSourceUsingPOSTRequest, options?: Configuration): Promise<LeadSource>;
+    listLeadSourcesUsingGETWithHttpInfo(param?: LeadSourcesApiListLeadSourcesUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListLeadSourcesResponse>>;
+    listLeadSourcesUsingGET(param?: LeadSourcesApiListLeadSourcesUsingGETRequest, options?: Configuration): Promise<ListLeadSourcesResponse>;
 }
 import { LocaleApiRequestFactory, LocaleApiResponseProcessor } from "../apis/LocaleApi";
-export interface LocaleApiListCountriesUsingGET20Request {
+export interface LocaleApiListCountriesUsingGET2Request {
 }
-export interface LocaleApiListProvincesForCountryUsingGET0Request {
+export interface LocaleApiListProvincesForCountryUsingGETRequest {
     countryCode: string;
 }
 export declare class ObjectLocaleApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: LocaleApiRequestFactory, responseProcessor?: LocaleApiResponseProcessor);
-    listCountriesUsingGET2WithHttpInfo(param?: LocaleApiListCountriesUsingGET20Request, options?: Configuration): Promise<HttpInfo<ListCountriesResponse>>;
-    listCountriesUsingGET2(param?: LocaleApiListCountriesUsingGET20Request, options?: Configuration): Promise<ListCountriesResponse>;
-    listProvincesForCountryUsingGETWithHttpInfo(param: LocaleApiListProvincesForCountryUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListProvincesResponse>>;
-    listProvincesForCountryUsingGET(param: LocaleApiListProvincesForCountryUsingGET0Request, options?: Configuration): Promise<ListProvincesResponse>;
+    listCountriesUsingGET2WithHttpInfo(param?: LocaleApiListCountriesUsingGET2Request, options?: Configuration): Promise<HttpInfo<ListCountriesResponse>>;
+    listCountriesUsingGET2(param?: LocaleApiListCountriesUsingGET2Request, options?: Configuration): Promise<ListCountriesResponse>;
+    listProvincesForCountryUsingGETWithHttpInfo(param: LocaleApiListProvincesForCountryUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListProvincesResponse>>;
+    listProvincesForCountryUsingGET(param: LocaleApiListProvincesForCountryUsingGETRequest, options?: Configuration): Promise<ListProvincesResponse>;
 }
 import { MerchantApiRequestFactory, MerchantApiResponseProcessor } from "../apis/MerchantApi";
-export interface MerchantApiListMerchantsUsingGET0Request {
+export interface MerchantApiListMerchantsUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
@@ -706,11 +706,11 @@ export interface MerchantApiListMerchantsUsingGET0Request {
 export declare class ObjectMerchantApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: MerchantApiRequestFactory, responseProcessor?: MerchantApiResponseProcessor);
-    listMerchantsUsingGETWithHttpInfo(param?: MerchantApiListMerchantsUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListRestMerchantResponse>>;
-    listMerchantsUsingGET(param?: MerchantApiListMerchantsUsingGET0Request, options?: Configuration): Promise<ListRestMerchantResponse>;
+    listMerchantsUsingGETWithHttpInfo(param?: MerchantApiListMerchantsUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListRestMerchantResponse>>;
+    listMerchantsUsingGET(param?: MerchantApiListMerchantsUsingGETRequest, options?: Configuration): Promise<ListRestMerchantResponse>;
 }
 import { NoteApiRequestFactory, NoteApiResponseProcessor } from "../apis/NoteApi";
-export interface NoteApiCreateNoteCustomFieldUsingPOST10Request {
+export interface NoteApiCreateNoteCustomFieldUsingPOST1Request {
     customField: CreateCustomFieldRequest;
 }
 export interface NoteApiCreateNoteUsingPOST1Request {
@@ -732,7 +732,7 @@ export interface NoteApiListNotesUsingGET1Request {
     pageSize?: number;
     pageToken?: string;
 }
-export interface NoteApiRetrieveNoteModelUsingGET10Request {
+export interface NoteApiRetrieveNoteModelUsingGET1Request {
 }
 export interface NoteApiUpdateNoteUsingPATCHRequest {
     contactId: string;
@@ -740,7 +740,7 @@ export interface NoteApiUpdateNoteUsingPATCHRequest {
     updateNoteRequest: UpdateNoteRequest;
     updateMask?: Array<string>;
 }
-export interface NoteApiUpdateNotesCustomFieldUsingPATCH0Request {
+export interface NoteApiUpdateNotesCustomFieldUsingPATCHRequest {
     customFieldId: string;
     request: UpdateCustomFieldMetaDataRequest;
     updateMask?: Array<string>;
@@ -748,8 +748,8 @@ export interface NoteApiUpdateNotesCustomFieldUsingPATCH0Request {
 export declare class ObjectNoteApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: NoteApiRequestFactory, responseProcessor?: NoteApiResponseProcessor);
-    createNoteCustomFieldUsingPOST1WithHttpInfo(param: NoteApiCreateNoteCustomFieldUsingPOST10Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    createNoteCustomFieldUsingPOST1(param: NoteApiCreateNoteCustomFieldUsingPOST10Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    createNoteCustomFieldUsingPOST1WithHttpInfo(param: NoteApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    createNoteCustomFieldUsingPOST1(param: NoteApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<CustomFieldMetaData>;
     createNoteUsingPOST1WithHttpInfo(param: NoteApiCreateNoteUsingPOST1Request, options?: Configuration): Promise<HttpInfo<Note>>;
     createNoteUsingPOST1(param: NoteApiCreateNoteUsingPOST1Request, options?: Configuration): Promise<Note>;
     deleteNoteUsingDELETE1WithHttpInfo(param: NoteApiDeleteNoteUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>>;
@@ -758,54 +758,54 @@ export declare class ObjectNoteApi {
     getNoteUsingGET1(param: NoteApiGetNoteUsingGET1Request, options?: Configuration): Promise<GetNoteResponse>;
     listNotesUsingGET1WithHttpInfo(param: NoteApiListNotesUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListNotesResponse>>;
     listNotesUsingGET1(param: NoteApiListNotesUsingGET1Request, options?: Configuration): Promise<ListNotesResponse>;
-    retrieveNoteModelUsingGET1WithHttpInfo(param?: NoteApiRetrieveNoteModelUsingGET10Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
-    retrieveNoteModelUsingGET1(param?: NoteApiRetrieveNoteModelUsingGET10Request, options?: Configuration): Promise<ObjectModel>;
+    retrieveNoteModelUsingGET1WithHttpInfo(param?: NoteApiRetrieveNoteModelUsingGET1Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
+    retrieveNoteModelUsingGET1(param?: NoteApiRetrieveNoteModelUsingGET1Request, options?: Configuration): Promise<ObjectModel>;
     updateNoteUsingPATCHWithHttpInfo(param: NoteApiUpdateNoteUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateNoteResponse>>;
     updateNoteUsingPATCH(param: NoteApiUpdateNoteUsingPATCHRequest, options?: Configuration): Promise<UpdateNoteResponse>;
-    updateNotesCustomFieldUsingPATCHWithHttpInfo(param: NoteApiUpdateNotesCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    updateNotesCustomFieldUsingPATCH(param: NoteApiUpdateNotesCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    updateNotesCustomFieldUsingPATCHWithHttpInfo(param: NoteApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    updateNotesCustomFieldUsingPATCH(param: NoteApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
 }
 import { OpportunityApiRequestFactory, OpportunityApiResponseProcessor } from "../apis/OpportunityApi";
-export interface OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request {
+export interface OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest {
     customField: CreateCustomFieldRequest;
 }
-export interface OpportunityApiCreateOpportunityStageUsingPOST0Request {
+export interface OpportunityApiCreateOpportunityStageUsingPOSTRequest {
     opportunityStage?: CreateOpportunityStageRequest;
 }
-export interface OpportunityApiCreateOpportunityUsingPOST10Request {
+export interface OpportunityApiCreateOpportunityUsingPOST1Request {
     opportunity?: CreateOpportunityRequest;
 }
-export interface OpportunityApiDeleteOpportunityStageUsingDELETE0Request {
+export interface OpportunityApiDeleteOpportunityStageUsingDELETERequest {
     stageId: string;
 }
-export interface OpportunityApiDeleteOpportunityUsingDELETE0Request {
+export interface OpportunityApiDeleteOpportunityUsingDELETERequest {
     opportunityId: string;
 }
-export interface OpportunityApiGetOpportunityStageUsingGET0Request {
+export interface OpportunityApiGetOpportunityStageUsingGETRequest {
     stageId: string;
 }
-export interface OpportunityApiGetOpportunityUsingGET10Request {
+export interface OpportunityApiGetOpportunityUsingGET1Request {
     opportunityId: string;
 }
-export interface OpportunityApiListOpportunitiesUsingGET10Request {
+export interface OpportunityApiListOpportunitiesUsingGET1Request {
     fields?: Array<string>;
     filter?: string;
     orderBy?: string;
     pageSize?: number;
     pageToken?: string;
 }
-export interface OpportunityApiListOpportunityStagesUsingGET0Request {
+export interface OpportunityApiListOpportunityStagesUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
     pageToken?: string;
 }
-export interface OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request {
+export interface OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest {
     customFieldId: string;
     request: UpdateCustomFieldMetaDataRequest;
     updateMask?: Array<string>;
 }
-export interface OpportunityApiUpdateOpportunityUsingPATCH0Request {
+export interface OpportunityApiUpdateOpportunityUsingPATCHRequest {
     opportunityId: string;
     request: PatchOpportunityRequest;
     updateMask?: Array<string>;
@@ -813,64 +813,64 @@ export interface OpportunityApiUpdateOpportunityUsingPATCH0Request {
 export declare class ObjectOpportunityApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: OpportunityApiRequestFactory, responseProcessor?: OpportunityApiResponseProcessor);
-    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    createOpportunityCustomFieldsUsingPOST(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData>;
-    createOpportunityStageUsingPOSTWithHttpInfo(param?: OpportunityApiCreateOpportunityStageUsingPOST0Request, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>>;
-    createOpportunityStageUsingPOST(param?: OpportunityApiCreateOpportunityStageUsingPOST0Request, options?: Configuration): Promise<RestOpportunityStage>;
-    createOpportunityUsingPOST1WithHttpInfo(param?: OpportunityApiCreateOpportunityUsingPOST10Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>>;
-    createOpportunityUsingPOST1(param?: OpportunityApiCreateOpportunityUsingPOST10Request, options?: Configuration): Promise<RestV2Opportunity>;
-    deleteOpportunityStageUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityStageUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteOpportunityStageUsingDELETE(param: OpportunityApiDeleteOpportunityStageUsingDELETE0Request, options?: Configuration): Promise<void>;
-    deleteOpportunityUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteOpportunityUsingDELETE(param: OpportunityApiDeleteOpportunityUsingDELETE0Request, options?: Configuration): Promise<void>;
-    getOpportunityStageUsingGETWithHttpInfo(param: OpportunityApiGetOpportunityStageUsingGET0Request, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>>;
-    getOpportunityStageUsingGET(param: OpportunityApiGetOpportunityStageUsingGET0Request, options?: Configuration): Promise<RestOpportunityStage>;
-    getOpportunityUsingGET1WithHttpInfo(param: OpportunityApiGetOpportunityUsingGET10Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>>;
-    getOpportunityUsingGET1(param: OpportunityApiGetOpportunityUsingGET10Request, options?: Configuration): Promise<RestV2Opportunity>;
-    listOpportunitiesUsingGET1WithHttpInfo(param?: OpportunityApiListOpportunitiesUsingGET10Request, options?: Configuration): Promise<HttpInfo<ListOpportunitiesResponse>>;
-    listOpportunitiesUsingGET1(param?: OpportunityApiListOpportunitiesUsingGET10Request, options?: Configuration): Promise<ListOpportunitiesResponse>;
-    listOpportunityStagesUsingGETWithHttpInfo(param?: OpportunityApiListOpportunityStagesUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListOpportunityStagesResponse>>;
-    listOpportunityStagesUsingGET(param?: OpportunityApiListOpportunityStagesUsingGET0Request, options?: Configuration): Promise<ListOpportunityStagesResponse>;
-    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    updateOpportunityCustomFieldUsingPATCH(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData>;
-    updateOpportunityUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>>;
-    updateOpportunityUsingPATCH(param: OpportunityApiUpdateOpportunityUsingPATCH0Request, options?: Configuration): Promise<RestV2Opportunity>;
+    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    createOpportunityCustomFieldsUsingPOST(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData>;
+    createOpportunityStageUsingPOSTWithHttpInfo(param?: OpportunityApiCreateOpportunityStageUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>>;
+    createOpportunityStageUsingPOST(param?: OpportunityApiCreateOpportunityStageUsingPOSTRequest, options?: Configuration): Promise<RestOpportunityStage>;
+    createOpportunityUsingPOST1WithHttpInfo(param?: OpportunityApiCreateOpportunityUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>>;
+    createOpportunityUsingPOST1(param?: OpportunityApiCreateOpportunityUsingPOST1Request, options?: Configuration): Promise<RestV2Opportunity>;
+    deleteOpportunityStageUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityStageUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteOpportunityStageUsingDELETE(param: OpportunityApiDeleteOpportunityStageUsingDELETERequest, options?: Configuration): Promise<void>;
+    deleteOpportunityUsingDELETEWithHttpInfo(param: OpportunityApiDeleteOpportunityUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteOpportunityUsingDELETE(param: OpportunityApiDeleteOpportunityUsingDELETERequest, options?: Configuration): Promise<void>;
+    getOpportunityStageUsingGETWithHttpInfo(param: OpportunityApiGetOpportunityStageUsingGETRequest, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>>;
+    getOpportunityStageUsingGET(param: OpportunityApiGetOpportunityStageUsingGETRequest, options?: Configuration): Promise<RestOpportunityStage>;
+    getOpportunityUsingGET1WithHttpInfo(param: OpportunityApiGetOpportunityUsingGET1Request, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>>;
+    getOpportunityUsingGET1(param: OpportunityApiGetOpportunityUsingGET1Request, options?: Configuration): Promise<RestV2Opportunity>;
+    listOpportunitiesUsingGET1WithHttpInfo(param?: OpportunityApiListOpportunitiesUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListOpportunitiesResponse>>;
+    listOpportunitiesUsingGET1(param?: OpportunityApiListOpportunitiesUsingGET1Request, options?: Configuration): Promise<ListOpportunitiesResponse>;
+    listOpportunityStagesUsingGETWithHttpInfo(param?: OpportunityApiListOpportunityStagesUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListOpportunityStagesResponse>>;
+    listOpportunityStagesUsingGET(param?: OpportunityApiListOpportunityStagesUsingGETRequest, options?: Configuration): Promise<ListOpportunityStagesResponse>;
+    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    updateOpportunityCustomFieldUsingPATCH(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
+    updateOpportunityUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>>;
+    updateOpportunityUsingPATCH(param: OpportunityApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<RestV2Opportunity>;
 }
 import { OrdersApiRequestFactory, OrdersApiResponseProcessor } from "../apis/OrdersApi";
-export interface OrdersApiCreateOrderCustomFieldUsingPOST0Request {
+export interface OrdersApiCreateOrderCustomFieldUsingPOSTRequest {
     customField: CreateCustomFieldRequest;
 }
-export interface OrdersApiCreateOrderItemsOnOrderUsingPOST10Request {
+export interface OrdersApiCreateOrderItemsOnOrderUsingPOST1Request {
     orderId: string;
     createRestOrderItemRequest: CreateRestOrderItemRequest;
 }
-export interface OrdersApiCreateOrderUsingPOST10Request {
+export interface OrdersApiCreateOrderUsingPOST1Request {
     createOrderRequest: RestCreateOrderRequest;
 }
 export interface OrdersApiCreatePaymentOnOrderUsingPOST1Request {
     orderId: string;
     createPaymentRequest: CreatePaymentRequest;
 }
-export interface OrdersApiDeleteOrderUsingDELETE10Request {
+export interface OrdersApiDeleteOrderUsingDELETE1Request {
     orderId: string;
 }
-export interface OrdersApiGetOrderUsingGET10Request {
+export interface OrdersApiGetOrderUsingGET1Request {
     orderId: string;
 }
-export interface OrdersApiListOrdersUsingGET10Request {
+export interface OrdersApiListOrdersUsingGET1Request {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
     pageToken?: string;
 }
-export interface OrdersApiPatchOrderUsingPATCH0Request {
+export interface OrdersApiPatchOrderUsingPATCHRequest {
     orderId: string;
     updateMask?: Array<string>;
     order?: RestV2PatchOrderRequest;
 }
-export interface OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request {
+export interface OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest {
 }
-export interface OrdersApiUpdateOrderCustomFieldUsingPATCH0Request {
+export interface OrdersApiUpdateOrderCustomFieldUsingPATCHRequest {
     customFieldId: string;
     request: UpdateCustomFieldMetaDataRequest;
     updateMask?: Array<string>;
@@ -878,26 +878,26 @@ export interface OrdersApiUpdateOrderCustomFieldUsingPATCH0Request {
 export declare class ObjectOrdersApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: OrdersApiRequestFactory, responseProcessor?: OrdersApiResponseProcessor);
-    createOrderCustomFieldUsingPOSTWithHttpInfo(param: OrdersApiCreateOrderCustomFieldUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    createOrderCustomFieldUsingPOST(param: OrdersApiCreateOrderCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData>;
-    createOrderItemsOnOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderItemsOnOrderUsingPOST10Request, options?: Configuration): Promise<HttpInfo<RestV2OrderItem>>;
-    createOrderItemsOnOrderUsingPOST1(param: OrdersApiCreateOrderItemsOnOrderUsingPOST10Request, options?: Configuration): Promise<RestV2OrderItem>;
-    createOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderUsingPOST10Request, options?: Configuration): Promise<HttpInfo<RestV2Order>>;
-    createOrderUsingPOST1(param: OrdersApiCreateOrderUsingPOST10Request, options?: Configuration): Promise<RestV2Order>;
+    createOrderCustomFieldUsingPOSTWithHttpInfo(param: OrdersApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    createOrderCustomFieldUsingPOST(param: OrdersApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData>;
+    createOrderItemsOnOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderItemsOnOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2OrderItem>>;
+    createOrderItemsOnOrderUsingPOST1(param: OrdersApiCreateOrderItemsOnOrderUsingPOST1Request, options?: Configuration): Promise<RestV2OrderItem>;
+    createOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2Order>>;
+    createOrderUsingPOST1(param: OrdersApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<RestV2Order>;
     createPaymentOnOrderUsingPOST1WithHttpInfo(param: OrdersApiCreatePaymentOnOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<PaymentResult>>;
     createPaymentOnOrderUsingPOST1(param: OrdersApiCreatePaymentOnOrderUsingPOST1Request, options?: Configuration): Promise<PaymentResult>;
-    deleteOrderUsingDELETE1WithHttpInfo(param: OrdersApiDeleteOrderUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteOrderUsingDELETE1(param: OrdersApiDeleteOrderUsingDELETE10Request, options?: Configuration): Promise<void>;
-    getOrderUsingGET1WithHttpInfo(param: OrdersApiGetOrderUsingGET10Request, options?: Configuration): Promise<HttpInfo<RestV2Order>>;
-    getOrderUsingGET1(param: OrdersApiGetOrderUsingGET10Request, options?: Configuration): Promise<RestV2Order>;
-    listOrdersUsingGET1WithHttpInfo(param?: OrdersApiListOrdersUsingGET10Request, options?: Configuration): Promise<HttpInfo<ListOrders>>;
-    listOrdersUsingGET1(param?: OrdersApiListOrdersUsingGET10Request, options?: Configuration): Promise<ListOrders>;
-    patchOrderUsingPATCHWithHttpInfo(param: OrdersApiPatchOrderUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<RestV2Order>>;
-    patchOrderUsingPATCH(param: OrdersApiPatchOrderUsingPATCH0Request, options?: Configuration): Promise<RestV2Order>;
-    retrieveOrderCustomFieldModelUsingGETWithHttpInfo(param?: OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
-    retrieveOrderCustomFieldModelUsingGET(param?: OrdersApiRetrieveOrderCustomFieldModelUsingGET0Request, options?: Configuration): Promise<ObjectModel>;
-    updateOrderCustomFieldUsingPATCHWithHttpInfo(param: OrdersApiUpdateOrderCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    updateOrderCustomFieldUsingPATCH(param: OrdersApiUpdateOrderCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    deleteOrderUsingDELETE1WithHttpInfo(param: OrdersApiDeleteOrderUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteOrderUsingDELETE1(param: OrdersApiDeleteOrderUsingDELETE1Request, options?: Configuration): Promise<void>;
+    getOrderUsingGET1WithHttpInfo(param: OrdersApiGetOrderUsingGET1Request, options?: Configuration): Promise<HttpInfo<RestV2Order>>;
+    getOrderUsingGET1(param: OrdersApiGetOrderUsingGET1Request, options?: Configuration): Promise<RestV2Order>;
+    listOrdersUsingGET1WithHttpInfo(param?: OrdersApiListOrdersUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListOrders>>;
+    listOrdersUsingGET1(param?: OrdersApiListOrdersUsingGET1Request, options?: Configuration): Promise<ListOrders>;
+    patchOrderUsingPATCHWithHttpInfo(param: OrdersApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Order>>;
+    patchOrderUsingPATCH(param: OrdersApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<RestV2Order>;
+    retrieveOrderCustomFieldModelUsingGETWithHttpInfo(param?: OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
+    retrieveOrderCustomFieldModelUsingGET(param?: OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest, options?: Configuration): Promise<ObjectModel>;
+    updateOrderCustomFieldUsingPATCHWithHttpInfo(param: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    updateOrderCustomFieldUsingPATCH(param: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
 }
 import { PaymentMethodConfigApiRequestFactory, PaymentMethodConfigApiResponseProcessor } from "../apis/PaymentMethodConfigApi";
 export interface PaymentMethodConfigApiCreatePaymentMethodConfigUsingPOSTRequest {
@@ -1406,7 +1406,7 @@ export declare class ObjectPreReleaseApi {
     updateTaskCustomFieldUsingPATCH(param: PreReleaseApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
 }
 import { ProductApiRequestFactory, ProductApiResponseProcessor } from "../apis/ProductApi";
-export interface ProductApiListProductsUsingGET10Request {
+export interface ProductApiListProductsUsingGET1Request {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
@@ -1415,18 +1415,18 @@ export interface ProductApiListProductsUsingGET10Request {
 export declare class ObjectProductApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: ProductApiRequestFactory, responseProcessor?: ProductApiResponseProcessor);
-    listProductsUsingGET1WithHttpInfo(param?: ProductApiListProductsUsingGET10Request, options?: Configuration): Promise<HttpInfo<ListProductsResponse>>;
-    listProductsUsingGET1(param?: ProductApiListProductsUsingGET10Request, options?: Configuration): Promise<ListProductsResponse>;
+    listProductsUsingGET1WithHttpInfo(param?: ProductApiListProductsUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListProductsResponse>>;
+    listProductsUsingGET1(param?: ProductApiListProductsUsingGET1Request, options?: Configuration): Promise<ListProductsResponse>;
 }
 import { ReferralApiRequestFactory, ReferralApiResponseProcessor } from "../apis/ReferralApi";
-export interface ReferralApiCreateReferralUsingPOST0Request {
+export interface ReferralApiCreateReferralUsingPOSTRequest {
     request: CreateReferralRequest;
 }
 export declare class ObjectReferralApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: ReferralApiRequestFactory, responseProcessor?: ReferralApiResponseProcessor);
-    createReferralUsingPOSTWithHttpInfo(param: ReferralApiCreateReferralUsingPOST0Request, options?: Configuration): Promise<HttpInfo<Referral>>;
-    createReferralUsingPOST(param: ReferralApiCreateReferralUsingPOST0Request, options?: Configuration): Promise<Referral>;
+    createReferralUsingPOSTWithHttpInfo(param: ReferralApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<Referral>>;
+    createReferralUsingPOST(param: ReferralApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<Referral>;
 }
 import { ReportingApiRequestFactory, ReportingApiResponseProcessor } from "../apis/ReportingApi";
 export interface ReportingApiRunReportUsingPOSTRequest {
@@ -1471,16 +1471,16 @@ export declare class ObjectSettingsApi {
     isApplicationEnabledUsingGET(param?: SettingsApiIsApplicationEnabledUsingGETRequest, options?: Configuration): Promise<GetApplicationEnabledStatusResponse>;
 }
 import { ShippingApiRequestFactory, ShippingApiResponseProcessor } from "../apis/ShippingApi";
-export interface ShippingApiListShippingMethodsUsingGET0Request {
+export interface ShippingApiListShippingMethodsUsingGETRequest {
 }
 export declare class ObjectShippingApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: ShippingApiRequestFactory, responseProcessor?: ShippingApiResponseProcessor);
-    listShippingMethodsUsingGETWithHttpInfo(param?: ShippingApiListShippingMethodsUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListRestShippingMethodsResponse>>;
-    listShippingMethodsUsingGET(param?: ShippingApiListShippingMethodsUsingGET0Request, options?: Configuration): Promise<ListRestShippingMethodsResponse>;
+    listShippingMethodsUsingGETWithHttpInfo(param?: ShippingApiListShippingMethodsUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListRestShippingMethodsResponse>>;
+    listShippingMethodsUsingGET(param?: ShippingApiListShippingMethodsUsingGETRequest, options?: Configuration): Promise<ListRestShippingMethodsResponse>;
 }
 import { SubscriptionPlansApiRequestFactory, SubscriptionPlansApiResponseProcessor } from "../apis/SubscriptionPlansApi";
-export interface SubscriptionPlansApiListSubscriptionPlansUsingGET0Request {
+export interface SubscriptionPlansApiListSubscriptionPlansUsingGETRequest {
     filter?: string;
     orderBy?: string;
     pageSize?: number;
@@ -1489,23 +1489,23 @@ export interface SubscriptionPlansApiListSubscriptionPlansUsingGET0Request {
 export declare class ObjectSubscriptionPlansApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: SubscriptionPlansApiRequestFactory, responseProcessor?: SubscriptionPlansApiResponseProcessor);
-    listSubscriptionPlansUsingGETWithHttpInfo(param?: SubscriptionPlansApiListSubscriptionPlansUsingGET0Request, options?: Configuration): Promise<HttpInfo<ListSubscriptionPlansResponse>>;
-    listSubscriptionPlansUsingGET(param?: SubscriptionPlansApiListSubscriptionPlansUsingGET0Request, options?: Configuration): Promise<ListSubscriptionPlansResponse>;
+    listSubscriptionPlansUsingGETWithHttpInfo(param?: SubscriptionPlansApiListSubscriptionPlansUsingGETRequest, options?: Configuration): Promise<HttpInfo<ListSubscriptionPlansResponse>>;
+    listSubscriptionPlansUsingGET(param?: SubscriptionPlansApiListSubscriptionPlansUsingGETRequest, options?: Configuration): Promise<ListSubscriptionPlansResponse>;
 }
 import { SubscriptionsApiRequestFactory, SubscriptionsApiResponseProcessor } from "../apis/SubscriptionsApi";
-export interface SubscriptionsApiCancelSubscriptionUsingPOST0Request {
+export interface SubscriptionsApiCancelSubscriptionUsingPOSTRequest {
     subscriptionId: string;
     cancelSubscriptionsRequest: CancelSubscriptionsRequest;
 }
-export interface SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request {
+export interface SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest {
     customField: CreateCustomFieldRequest;
 }
 export interface SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest {
     createSubscriptionV2: CreateSubscriptionV2;
 }
-export interface SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request {
+export interface SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGETRequest {
 }
-export interface SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request {
+export interface SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest {
     customFieldId: string;
     request: UpdateCustomFieldMetaDataRequest;
     updateMask?: Array<string>;
@@ -1513,16 +1513,16 @@ export interface SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request
 export declare class ObjectSubscriptionsApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: SubscriptionsApiRequestFactory, responseProcessor?: SubscriptionsApiResponseProcessor);
-    cancelSubscriptionUsingPOSTWithHttpInfo(param: SubscriptionsApiCancelSubscriptionUsingPOST0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    cancelSubscriptionUsingPOST(param: SubscriptionsApiCancelSubscriptionUsingPOST0Request, options?: Configuration): Promise<void>;
-    createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    createSubscriptionCustomFieldUsingPOST(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOST0Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    cancelSubscriptionUsingPOSTWithHttpInfo(param: SubscriptionsApiCancelSubscriptionUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>>;
+    cancelSubscriptionUsingPOST(param: SubscriptionsApiCancelSubscriptionUsingPOSTRequest, options?: Configuration): Promise<void>;
+    createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    createSubscriptionCustomFieldUsingPOST(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData>;
     createSubscriptionV2UsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestSubscriptionV2>>;
     createSubscriptionV2UsingPOST(param: SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest, options?: Configuration): Promise<RestSubscriptionV2>;
-    retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo(param?: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
-    retrieveSubscriptionCustomFieldModelUsingGET(param?: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGET0Request, options?: Configuration): Promise<ObjectModel>;
-    updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    updateSubscriptionCustomFieldUsingPATCH(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo(param?: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGETRequest, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
+    retrieveSubscriptionCustomFieldModelUsingGET(param?: SubscriptionsApiRetrieveSubscriptionCustomFieldModelUsingGETRequest, options?: Configuration): Promise<ObjectModel>;
+    updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    updateSubscriptionCustomFieldUsingPATCH(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
 }
 import { TagsApiRequestFactory, TagsApiResponseProcessor } from "../apis/TagsApi";
 export interface TagsApiApplyTagsUsingPOSTRequest {
@@ -1620,22 +1620,22 @@ export declare class ObjectTagsApi {
     removeTagsUsingPOST(param: TagsApiRemoveTagsUsingPOSTRequest, options?: Configuration): Promise<void>;
 }
 import { TaskApiRequestFactory, TaskApiResponseProcessor } from "../apis/TaskApi";
-export interface TaskApiCreateTaskCustomFieldUsingPOST10Request {
+export interface TaskApiCreateTaskCustomFieldUsingPOST1Request {
     customField: CreateCustomFieldRequest;
 }
-export interface TaskApiCreateTaskUsingPOST10Request {
+export interface TaskApiCreateTaskUsingPOST1Request {
     task?: CreateTaskRequest;
 }
-export interface TaskApiDeleteTaskCustomFieldUsingDELETE0Request {
+export interface TaskApiDeleteTaskCustomFieldUsingDELETERequest {
     customFieldId: string;
 }
-export interface TaskApiDeleteTaskUsingDELETE10Request {
+export interface TaskApiDeleteTaskUsingDELETE1Request {
     taskId: string;
 }
-export interface TaskApiGetTaskUsingGET10Request {
+export interface TaskApiGetTaskUsingGET1Request {
     taskId: string;
 }
-export interface TaskApiListTasksUsingGET10Request {
+export interface TaskApiListTasksUsingGET1Request {
     endDueTime?: string;
     filter?: string;
     orderBy?: string;
@@ -1643,14 +1643,14 @@ export interface TaskApiListTasksUsingGET10Request {
     pageToken?: string;
     startDueTime?: string;
 }
-export interface TaskApiPatchTaskUsingPATCH0Request {
+export interface TaskApiPatchTaskUsingPATCHRequest {
     taskId: string;
     updateMask?: Array<string>;
     task?: CreatePatchTaskRequest;
 }
-export interface TaskApiRetrieveTaskModelUsingGET10Request {
+export interface TaskApiRetrieveTaskModelUsingGET1Request {
 }
-export interface TaskApiUpdateTaskCustomFieldUsingPATCH0Request {
+export interface TaskApiUpdateTaskCustomFieldUsingPATCHRequest {
     customFieldId: string;
     request: UpdateCustomFieldMetaDataRequest;
     updateMask?: Array<string>;
@@ -1658,42 +1658,42 @@ export interface TaskApiUpdateTaskCustomFieldUsingPATCH0Request {
 export declare class ObjectTaskApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: TaskApiRequestFactory, responseProcessor?: TaskApiResponseProcessor);
-    createTaskCustomFieldUsingPOST1WithHttpInfo(param: TaskApiCreateTaskCustomFieldUsingPOST10Request, options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>>;
-    createTaskCustomFieldUsingPOST1(param: TaskApiCreateTaskCustomFieldUsingPOST10Request, options?: Configuration): Promise<CreateCustomFieldResponse>;
-    createTaskUsingPOST1WithHttpInfo(param?: TaskApiCreateTaskUsingPOST10Request, options?: Configuration): Promise<HttpInfo<Task>>;
-    createTaskUsingPOST1(param?: TaskApiCreateTaskUsingPOST10Request, options?: Configuration): Promise<Task>;
-    deleteTaskCustomFieldUsingDELETEWithHttpInfo(param: TaskApiDeleteTaskCustomFieldUsingDELETE0Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteTaskCustomFieldUsingDELETE(param: TaskApiDeleteTaskCustomFieldUsingDELETE0Request, options?: Configuration): Promise<void>;
-    deleteTaskUsingDELETE1WithHttpInfo(param: TaskApiDeleteTaskUsingDELETE10Request, options?: Configuration): Promise<HttpInfo<void>>;
-    deleteTaskUsingDELETE1(param: TaskApiDeleteTaskUsingDELETE10Request, options?: Configuration): Promise<void>;
-    getTaskUsingGET1WithHttpInfo(param: TaskApiGetTaskUsingGET10Request, options?: Configuration): Promise<HttpInfo<Task>>;
-    getTaskUsingGET1(param: TaskApiGetTaskUsingGET10Request, options?: Configuration): Promise<Task>;
-    listTasksUsingGET1WithHttpInfo(param?: TaskApiListTasksUsingGET10Request, options?: Configuration): Promise<HttpInfo<ListTasksResponse>>;
-    listTasksUsingGET1(param?: TaskApiListTasksUsingGET10Request, options?: Configuration): Promise<ListTasksResponse>;
-    patchTaskUsingPATCHWithHttpInfo(param: TaskApiPatchTaskUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>>;
-    patchTaskUsingPATCH(param: TaskApiPatchTaskUsingPATCH0Request, options?: Configuration): Promise<UpdateTaskResponse>;
-    retrieveTaskModelUsingGET1WithHttpInfo(param?: TaskApiRetrieveTaskModelUsingGET10Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
-    retrieveTaskModelUsingGET1(param?: TaskApiRetrieveTaskModelUsingGET10Request, options?: Configuration): Promise<ObjectModel>;
-    updateTaskCustomFieldUsingPATCHWithHttpInfo(param: TaskApiUpdateTaskCustomFieldUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
-    updateTaskCustomFieldUsingPATCH(param: TaskApiUpdateTaskCustomFieldUsingPATCH0Request, options?: Configuration): Promise<CustomFieldMetaData>;
+    createTaskCustomFieldUsingPOST1WithHttpInfo(param: TaskApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>>;
+    createTaskCustomFieldUsingPOST1(param: TaskApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<CreateCustomFieldResponse>;
+    createTaskUsingPOST1WithHttpInfo(param?: TaskApiCreateTaskUsingPOST1Request, options?: Configuration): Promise<HttpInfo<Task>>;
+    createTaskUsingPOST1(param?: TaskApiCreateTaskUsingPOST1Request, options?: Configuration): Promise<Task>;
+    deleteTaskCustomFieldUsingDELETEWithHttpInfo(param: TaskApiDeleteTaskCustomFieldUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteTaskCustomFieldUsingDELETE(param: TaskApiDeleteTaskCustomFieldUsingDELETERequest, options?: Configuration): Promise<void>;
+    deleteTaskUsingDELETE1WithHttpInfo(param: TaskApiDeleteTaskUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>>;
+    deleteTaskUsingDELETE1(param: TaskApiDeleteTaskUsingDELETE1Request, options?: Configuration): Promise<void>;
+    getTaskUsingGET1WithHttpInfo(param: TaskApiGetTaskUsingGET1Request, options?: Configuration): Promise<HttpInfo<Task>>;
+    getTaskUsingGET1(param: TaskApiGetTaskUsingGET1Request, options?: Configuration): Promise<Task>;
+    listTasksUsingGET1WithHttpInfo(param?: TaskApiListTasksUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListTasksResponse>>;
+    listTasksUsingGET1(param?: TaskApiListTasksUsingGET1Request, options?: Configuration): Promise<ListTasksResponse>;
+    patchTaskUsingPATCHWithHttpInfo(param: TaskApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>>;
+    patchTaskUsingPATCH(param: TaskApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<UpdateTaskResponse>;
+    retrieveTaskModelUsingGET1WithHttpInfo(param?: TaskApiRetrieveTaskModelUsingGET1Request, options?: Configuration): Promise<HttpInfo<ObjectModel>>;
+    retrieveTaskModelUsingGET1(param?: TaskApiRetrieveTaskModelUsingGET1Request, options?: Configuration): Promise<ObjectModel>;
+    updateTaskCustomFieldUsingPATCHWithHttpInfo(param: TaskApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>>;
+    updateTaskCustomFieldUsingPATCH(param: TaskApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData>;
 }
 import { UsersApiRequestFactory, UsersApiResponseProcessor } from "../apis/UsersApi";
-export interface UsersApiCreateUserUsingPOST10Request {
+export interface UsersApiCreateUserUsingPOST1Request {
     user?: CreateUserRequestV2;
 }
-export interface UsersApiGetUserByIdUsingGET0Request {
+export interface UsersApiGetUserByIdUsingGETRequest {
     userId: string;
 }
-export interface UsersApiGetUserInfoUsingGET10Request {
+export interface UsersApiGetUserInfoUsingGET1Request {
 }
-export interface UsersApiGetUserSignatureUsingGET10Request {
+export interface UsersApiGetUserSignatureUsingGET1Request {
     userId: string;
 }
-export interface UsersApiListUsersUsingGET10Request {
+export interface UsersApiListUsersUsingGET1Request {
     filter?: string;
     orderBy?: string;
 }
-export interface UsersApiPatchUserUsingPATCH0Request {
+export interface UsersApiPatchUserUsingPATCHRequest {
     userId: string;
     updateMask?: Array<string>;
     user?: PatchUserRequestV2;
@@ -1701,16 +1701,16 @@ export interface UsersApiPatchUserUsingPATCH0Request {
 export declare class ObjectUsersApi {
     private api;
     constructor(configuration: Configuration, requestFactory?: UsersApiRequestFactory, responseProcessor?: UsersApiResponseProcessor);
-    createUserUsingPOST1WithHttpInfo(param?: UsersApiCreateUserUsingPOST10Request, options?: Configuration): Promise<HttpInfo<User>>;
-    createUserUsingPOST1(param?: UsersApiCreateUserUsingPOST10Request, options?: Configuration): Promise<User>;
-    getUserByIdUsingGETWithHttpInfo(param: UsersApiGetUserByIdUsingGET0Request, options?: Configuration): Promise<HttpInfo<User>>;
-    getUserByIdUsingGET(param: UsersApiGetUserByIdUsingGET0Request, options?: Configuration): Promise<User>;
-    getUserInfoUsingGET1WithHttpInfo(param?: UsersApiGetUserInfoUsingGET10Request, options?: Configuration): Promise<HttpInfo<GetUserInfoResponse>>;
-    getUserInfoUsingGET1(param?: UsersApiGetUserInfoUsingGET10Request, options?: Configuration): Promise<GetUserInfoResponse>;
-    getUserSignatureUsingGET1WithHttpInfo(param: UsersApiGetUserSignatureUsingGET10Request, options?: Configuration): Promise<HttpInfo<string>>;
-    getUserSignatureUsingGET1(param: UsersApiGetUserSignatureUsingGET10Request, options?: Configuration): Promise<string>;
-    listUsersUsingGET1WithHttpInfo(param?: UsersApiListUsersUsingGET10Request, options?: Configuration): Promise<HttpInfo<ListUserResponse>>;
-    listUsersUsingGET1(param?: UsersApiListUsersUsingGET10Request, options?: Configuration): Promise<ListUserResponse>;
-    patchUserUsingPATCHWithHttpInfo(param: UsersApiPatchUserUsingPATCH0Request, options?: Configuration): Promise<HttpInfo<User>>;
-    patchUserUsingPATCH(param: UsersApiPatchUserUsingPATCH0Request, options?: Configuration): Promise<User>;
+    createUserUsingPOST1WithHttpInfo(param?: UsersApiCreateUserUsingPOST1Request, options?: Configuration): Promise<HttpInfo<User>>;
+    createUserUsingPOST1(param?: UsersApiCreateUserUsingPOST1Request, options?: Configuration): Promise<User>;
+    getUserByIdUsingGETWithHttpInfo(param: UsersApiGetUserByIdUsingGETRequest, options?: Configuration): Promise<HttpInfo<User>>;
+    getUserByIdUsingGET(param: UsersApiGetUserByIdUsingGETRequest, options?: Configuration): Promise<User>;
+    getUserInfoUsingGET1WithHttpInfo(param?: UsersApiGetUserInfoUsingGET1Request, options?: Configuration): Promise<HttpInfo<GetUserInfoResponse>>;
+    getUserInfoUsingGET1(param?: UsersApiGetUserInfoUsingGET1Request, options?: Configuration): Promise<GetUserInfoResponse>;
+    getUserSignatureUsingGET1WithHttpInfo(param: UsersApiGetUserSignatureUsingGET1Request, options?: Configuration): Promise<HttpInfo<string>>;
+    getUserSignatureUsingGET1(param: UsersApiGetUserSignatureUsingGET1Request, options?: Configuration): Promise<string>;
+    listUsersUsingGET1WithHttpInfo(param?: UsersApiListUsersUsingGET1Request, options?: Configuration): Promise<HttpInfo<ListUserResponse>>;
+    listUsersUsingGET1(param?: UsersApiListUsersUsingGET1Request, options?: Configuration): Promise<ListUserResponse>;
+    patchUserUsingPATCHWithHttpInfo(param: UsersApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<User>>;
+    patchUserUsingPATCH(param: UsersApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<User>;
 }

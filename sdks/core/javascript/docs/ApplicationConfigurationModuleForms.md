@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleForms
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleForms
 
 ## Properties
 

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_subscription_plans_using_get_0**](SubscriptionPlansApi.md#list_subscription_plans_using_get_0) | **GET** /v2/subscriptionPlans | List Subscription Plans
+[**list_subscription_plans_using_get**](SubscriptionPlansApi.md#list_subscription_plans_using_get) | **GET** /v2/subscriptionPlans | List Subscription Plans
 
 
-# **list_subscription_plans_using_get_0**
-> ListSubscriptionPlansResponse list_subscription_plans_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_subscription_plans_using_get**
+> ListSubscriptionPlansResponse list_subscription_plans_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Subscription Plans
 
@@ -40,11 +40,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Subscription Plans
-        api_response = api_instance.list_subscription_plans_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of SubscriptionPlansApi->list_subscription_plans_using_get_0:\n")
+        api_response = api_instance.list_subscription_plans_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of SubscriptionPlansApi->list_subscription_plans_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SubscriptionPlansApi->list_subscription_plans_using_get_0: %s\n" % e)
+        print("Exception when calling SubscriptionPlansApi->list_subscription_plans_using_get: %s\n" % e)
 ```
 
 

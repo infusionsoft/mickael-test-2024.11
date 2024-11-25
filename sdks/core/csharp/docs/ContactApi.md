@@ -8,7 +8,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateContactUsingPOST1**](ContactApi.md#createcontactusingpost1) | **POST** /v2/contacts | Create a Contact |
 | [**DeleteContactUsingDELETE1**](ContactApi.md#deletecontactusingdelete1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact |
 | [**GetContactUsingGET1**](ContactApi.md#getcontactusingget1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact |
-| [**GetContactsBySearchTermUsingGET_0**](ContactApi.md#getcontactsbysearchtermusingget_0) | **GET** /v2/contacts:search | Search for Contacts |
+| [**GetContactsBySearchTermUsingGET**](ContactApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts |
 | [**LinkContactsUsingPOST**](ContactApi.md#linkcontactsusingpost) | **POST** /v2/contacts:link | Link Contacts |
 | [**ListContactLinkTypesUsingGET**](ContactApi.md#listcontactlinktypesusingget) | **GET** /v2/contacts/links/types | List Contact Link types |
 | [**ListContactLinksUsingGET**](ContactApi.md#listcontactlinksusingget) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts |
@@ -390,9 +390,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getcontactsbysearchtermusingget_0"></a>
-# **GetContactsBySearchTermUsingGET_0**
-> ListBasicContactResponse GetContactsBySearchTermUsingGET_0 (string searchParam)
+<a id="getcontactsbysearchtermusingget"></a>
+# **GetContactsBySearchTermUsingGET**
+> ListBasicContactResponse GetContactsBySearchTermUsingGET (string searchParam)
 
 Search for Contacts
 
@@ -408,7 +408,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class GetContactsBySearchTermUsingGET_0Example
+    public class GetContactsBySearchTermUsingGETExample
     {
         public static void Main()
         {
@@ -420,12 +420,12 @@ namespace Example
             try
             {
                 // Search for Contacts
-                ListBasicContactResponse result = apiInstance.GetContactsBySearchTermUsingGET_0(searchParam);
+                ListBasicContactResponse result = apiInstance.GetContactsBySearchTermUsingGET(searchParam);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ContactApi.GetContactsBySearchTermUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling ContactApi.GetContactsBySearchTermUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -434,21 +434,21 @@ namespace Example
 }
 ```
 
-#### Using the GetContactsBySearchTermUsingGET_0WithHttpInfo variant
+#### Using the GetContactsBySearchTermUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Search for Contacts
-    ApiResponse<ListBasicContactResponse> response = apiInstance.GetContactsBySearchTermUsingGET_0WithHttpInfo(searchParam);
+    ApiResponse<ListBasicContactResponse> response = apiInstance.GetContactsBySearchTermUsingGETWithHttpInfo(searchParam);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ContactApi.GetContactsBySearchTermUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ContactApi.GetContactsBySearchTermUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

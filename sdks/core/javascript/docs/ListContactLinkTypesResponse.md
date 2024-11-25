@@ -1,4 +1,4 @@
-# KeapRestApi.ListContactLinkTypesResponse
+# KeapCoreServiceCoreSdk.ListContactLinkTypesResponse
 
 ## Properties
 

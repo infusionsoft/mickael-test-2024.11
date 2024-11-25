@@ -1,4 +1,4 @@
-# KeapRestApi.RestEmailAddress
+# KeapCoreServiceCoreSdk.RestEmailAddress
 
 ## Properties
 

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListSubscriptionPlansUsingGET_0**](SubscriptionPlansApi.md#listsubscriptionplansusingget_0) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**ListSubscriptionPlansUsingGET**](SubscriptionPlansApi.md#listsubscriptionplansusingget) | **GET** /v2/subscriptionPlans | List Subscription Plans |
 
-<a id="listsubscriptionplansusingget_0"></a>
-# **ListSubscriptionPlansUsingGET_0**
-> ListSubscriptionPlansResponse ListSubscriptionPlansUsingGET_0 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listsubscriptionplansusingget"></a>
+# **ListSubscriptionPlansUsingGET**
+> ListSubscriptionPlansResponse ListSubscriptionPlansUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List Subscription Plans
 
@@ -24,7 +24,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListSubscriptionPlansUsingGET_0Example
+    public class ListSubscriptionPlansUsingGETExample
     {
         public static void Main()
         {
@@ -39,12 +39,12 @@ namespace Example
             try
             {
                 // List Subscription Plans
-                ListSubscriptionPlansResponse result = apiInstance.ListSubscriptionPlansUsingGET_0(filter, orderBy, pageSize, pageToken);
+                ListSubscriptionPlansResponse result = apiInstance.ListSubscriptionPlansUsingGET(filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SubscriptionPlansApi.ListSubscriptionPlansUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling SubscriptionPlansApi.ListSubscriptionPlansUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +53,21 @@ namespace Example
 }
 ```
 
-#### Using the ListSubscriptionPlansUsingGET_0WithHttpInfo variant
+#### Using the ListSubscriptionPlansUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Subscription Plans
-    ApiResponse<ListSubscriptionPlansResponse> response = apiInstance.ListSubscriptionPlansUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListSubscriptionPlansResponse> response = apiInstance.ListSubscriptionPlansUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling SubscriptionPlansApi.ListSubscriptionPlansUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling SubscriptionPlansApi.ListSubscriptionPlansUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

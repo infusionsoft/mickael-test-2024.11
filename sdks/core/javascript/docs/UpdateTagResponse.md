@@ -1,4 +1,4 @@
-# KeapRestApi.UpdateTagResponse
+# KeapCoreServiceCoreSdk.UpdateTagResponse
 
 ## Properties
 

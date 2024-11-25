@@ -57,7 +57,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Affiliate service.
 * @module com.keap.sdk.core/api/AffiliateApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -80,16 +80,16 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
   return _createClass(AffiliateApi, [{
-    key: "addAffiliateToProgramUsingPOST_0WithHttpInfo",
-    value: function addAffiliateToProgramUsingPOST_0WithHttpInfo(id, affiliateAddToProgramRequest) {
+    key: "addAffiliateToProgramUsingPOSTWithHttpInfo",
+    value: function addAffiliateToProgramUsingPOSTWithHttpInfo(id, affiliateAddToProgramRequest) {
       var postBody = affiliateAddToProgramRequest;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new _Error["default"]("Missing the required parameter 'id' when calling addAffiliateToProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'id' when calling addAffiliateToProgramUsingPOST");
       }
       // verify the required parameter 'affiliateAddToProgramRequest' is set
       if (affiliateAddToProgramRequest === undefined || affiliateAddToProgramRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'affiliateAddToProgramRequest' when calling addAffiliateToProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'affiliateAddToProgramRequest' when calling addAffiliateToProgramUsingPOST");
       }
       var pathParams = {
         'id': id
@@ -112,9 +112,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "addAffiliateToProgramUsingPOST_0",
-    value: function addAffiliateToProgramUsingPOST_0(id, affiliateAddToProgramRequest) {
-      return this.addAffiliateToProgramUsingPOST_0WithHttpInfo(id, affiliateAddToProgramRequest).then(function (response_and_data) {
+    key: "addAffiliateToProgramUsingPOST",
+    value: function addAffiliateToProgramUsingPOST(id, affiliateAddToProgramRequest) {
+      return this.addAffiliateToProgramUsingPOSTWithHttpInfo(id, affiliateAddToProgramRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -165,8 +165,8 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateCommissionProgramResponse} and HTTP response
      */
   }, {
-    key: "addCommissionProgramUsingPOST_0WithHttpInfo",
-    value: function addCommissionProgramUsingPOST_0WithHttpInfo(opts) {
+    key: "addCommissionProgramUsingPOSTWithHttpInfo",
+    value: function addCommissionProgramUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['insertCommissionProgram'];
       var pathParams = {};
@@ -188,9 +188,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateCommissionProgramResponse}
      */
   }, {
-    key: "addCommissionProgramUsingPOST_0",
-    value: function addCommissionProgramUsingPOST_0(opts) {
-      return this.addCommissionProgramUsingPOST_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "addCommissionProgramUsingPOST",
+    value: function addCommissionProgramUsingPOST(opts) {
+      return this.addCommissionProgramUsingPOSTWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -204,13 +204,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ProductCommissionProgram} and HTTP response
      */
   }, {
-    key: "assignProductCommissionProgramUsingPOST_0WithHttpInfo",
-    value: function assignProductCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, opts) {
+    key: "assignProductCommissionProgramUsingPOSTWithHttpInfo",
+    value: function assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
       var postBody = opts['productCommissionProgram'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling assignProductCommissionProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling assignProductCommissionProgramUsingPOST");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -234,9 +234,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ProductCommissionProgram}
      */
   }, {
-    key: "assignProductCommissionProgramUsingPOST_0",
-    value: function assignProductCommissionProgramUsingPOST_0(commissionProgramId, opts) {
-      return this.assignProductCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
+    key: "assignProductCommissionProgramUsingPOST",
+    value: function assignProductCommissionProgramUsingPOST(commissionProgramId, opts) {
+      return this.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -250,13 +250,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/SubscriptionCommissionProgram} and HTTP response
      */
   }, {
-    key: "assignSubscriptionCommissionProgramUsingPOST_0WithHttpInfo",
-    value: function assignSubscriptionCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, opts) {
+    key: "assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo",
+    value: function assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
       var postBody = opts['subscriptionCommissionProgram'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling assignSubscriptionCommissionProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling assignSubscriptionCommissionProgramUsingPOST");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -280,9 +280,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/SubscriptionCommissionProgram}
      */
   }, {
-    key: "assignSubscriptionCommissionProgramUsingPOST_0",
-    value: function assignSubscriptionCommissionProgramUsingPOST_0(commissionProgramId, opts) {
-      return this.assignSubscriptionCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
+    key: "assignSubscriptionCommissionProgramUsingPOST",
+    value: function assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, opts) {
+      return this.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -294,12 +294,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "createAffiliateCustomFieldUsingPOST_0WithHttpInfo",
-    value: function createAffiliateCustomFieldUsingPOST_0WithHttpInfo(customField) {
+    key: "createAffiliateCustomFieldUsingPOSTWithHttpInfo",
+    value: function createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField) {
       var postBody = customField;
       // verify the required parameter 'customField' is set
       if (customField === undefined || customField === null) {
-        throw new _Error["default"]("Missing the required parameter 'customField' when calling createAffiliateCustomFieldUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'customField' when calling createAffiliateCustomFieldUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -319,9 +319,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "createAffiliateCustomFieldUsingPOST_0",
-    value: function createAffiliateCustomFieldUsingPOST_0(customField) {
-      return this.createAffiliateCustomFieldUsingPOST_0WithHttpInfo(customField).then(function (response_and_data) {
+    key: "createAffiliateCustomFieldUsingPOST",
+    value: function createAffiliateCustomFieldUsingPOST(customField) {
+      return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -335,13 +335,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/SetDefaultCommissionProgramResponse} and HTTP response
      */
   }, {
-    key: "createDefaultCommissionProgramUsingPOST_0WithHttpInfo",
-    value: function createDefaultCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, opts) {
+    key: "createDefaultCommissionProgramUsingPOSTWithHttpInfo",
+    value: function createDefaultCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
       var postBody = opts['createDefaultCommissionProgramRequest'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling createDefaultCommissionProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling createDefaultCommissionProgramUsingPOST");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -365,9 +365,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/SetDefaultCommissionProgramResponse}
      */
   }, {
-    key: "createDefaultCommissionProgramUsingPOST_0",
-    value: function createDefaultCommissionProgramUsingPOST_0(commissionProgramId, opts) {
-      return this.createDefaultCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
+    key: "createDefaultCommissionProgramUsingPOST",
+    value: function createDefaultCommissionProgramUsingPOST(commissionProgramId, opts) {
+      return this.createDefaultCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -379,12 +379,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateLink} and HTTP response
      */
   }, {
-    key: "createRedirectLinkUsingPOST_0WithHttpInfo",
-    value: function createRedirectLinkUsingPOST_0WithHttpInfo(request) {
+    key: "createRedirectLinkUsingPOSTWithHttpInfo",
+    value: function createRedirectLinkUsingPOSTWithHttpInfo(request) {
       var postBody = request;
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling createRedirectLinkUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling createRedirectLinkUsingPOST");
       }
       var pathParams = {};
       var queryParams = {};
@@ -404,9 +404,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateLink}
      */
   }, {
-    key: "createRedirectLinkUsingPOST_0",
-    value: function createRedirectLinkUsingPOST_0(request) {
-      return this.createRedirectLinkUsingPOST_0WithHttpInfo(request).then(function (response_and_data) {
+    key: "createRedirectLinkUsingPOST",
+    value: function createRedirectLinkUsingPOST(request) {
+      return this.createRedirectLinkUsingPOSTWithHttpInfo(request).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -418,12 +418,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfo",
-    value: function deleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfo(commissionProgramId) {
+    key: "deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo",
+    value: function deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(commissionProgramId) {
       var postBody = null;
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling deleteAffiliateCommissionProgramUsingDELETE_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling deleteAffiliateCommissionProgramUsingDELETE");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -445,9 +445,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteAffiliateCommissionProgramUsingDELETE_0",
-    value: function deleteAffiliateCommissionProgramUsingDELETE_0(commissionProgramId) {
-      return this.deleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfo(commissionProgramId).then(function (response_and_data) {
+    key: "deleteAffiliateCommissionProgramUsingDELETE",
+    value: function deleteAffiliateCommissionProgramUsingDELETE(commissionProgramId) {
+      return this.deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(commissionProgramId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -459,12 +459,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteAffiliateUsingDELETE_0WithHttpInfo",
-    value: function deleteAffiliateUsingDELETE_0WithHttpInfo(id) {
+    key: "deleteAffiliateUsingDELETEWithHttpInfo",
+    value: function deleteAffiliateUsingDELETEWithHttpInfo(id) {
       var postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new _Error["default"]("Missing the required parameter 'id' when calling deleteAffiliateUsingDELETE_0");
+        throw new _Error["default"]("Missing the required parameter 'id' when calling deleteAffiliateUsingDELETE");
       }
       var pathParams = {
         'id': id
@@ -486,9 +486,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteAffiliateUsingDELETE_0",
-    value: function deleteAffiliateUsingDELETE_0(id) {
-      return this.deleteAffiliateUsingDELETE_0WithHttpInfo(id).then(function (response_and_data) {
+    key: "deleteAffiliateUsingDELETE",
+    value: function deleteAffiliateUsingDELETE(id) {
+      return this.deleteAffiliateUsingDELETEWithHttpInfo(id).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -500,12 +500,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteRedirectLinkUsingDELETE_0WithHttpInfo",
-    value: function deleteRedirectLinkUsingDELETE_0WithHttpInfo(redirectId) {
+    key: "deleteRedirectLinkUsingDELETEWithHttpInfo",
+    value: function deleteRedirectLinkUsingDELETEWithHttpInfo(redirectId) {
       var postBody = null;
       // verify the required parameter 'redirectId' is set
       if (redirectId === undefined || redirectId === null) {
-        throw new _Error["default"]("Missing the required parameter 'redirectId' when calling deleteRedirectLinkUsingDELETE_0");
+        throw new _Error["default"]("Missing the required parameter 'redirectId' when calling deleteRedirectLinkUsingDELETE");
       }
       var pathParams = {
         'redirect_id': redirectId
@@ -527,9 +527,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteRedirectLinkUsingDELETE_0",
-    value: function deleteRedirectLinkUsingDELETE_0(redirectId) {
-      return this.deleteRedirectLinkUsingDELETE_0WithHttpInfo(redirectId).then(function (response_and_data) {
+    key: "deleteRedirectLinkUsingDELETE",
+    value: function deleteRedirectLinkUsingDELETE(redirectId) {
+      return this.deleteRedirectLinkUsingDELETEWithHttpInfo(redirectId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -541,12 +541,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateCommissionEarned} and HTTP response
      */
   }, {
-    key: "getAffiliateCommissionTotalUsingGET_0WithHttpInfo",
-    value: function getAffiliateCommissionTotalUsingGET_0WithHttpInfo(affiliateId) {
+    key: "getAffiliateCommissionTotalUsingGETWithHttpInfo",
+    value: function getAffiliateCommissionTotalUsingGETWithHttpInfo(affiliateId) {
       var postBody = null;
       // verify the required parameter 'affiliateId' is set
       if (affiliateId === undefined || affiliateId === null) {
-        throw new _Error["default"]("Missing the required parameter 'affiliateId' when calling getAffiliateCommissionTotalUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'affiliateId' when calling getAffiliateCommissionTotalUsingGET");
       }
       var pathParams = {
         'affiliate_id': affiliateId
@@ -568,9 +568,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateCommissionEarned}
      */
   }, {
-    key: "getAffiliateCommissionTotalUsingGET_0",
-    value: function getAffiliateCommissionTotalUsingGET_0(affiliateId) {
-      return this.getAffiliateCommissionTotalUsingGET_0WithHttpInfo(affiliateId).then(function (response_and_data) {
+    key: "getAffiliateCommissionTotalUsingGET",
+    value: function getAffiliateCommissionTotalUsingGET(affiliateId) {
+      return this.getAffiliateCommissionTotalUsingGETWithHttpInfo(affiliateId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -587,13 +587,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListAffiliateCommissionResponse} and HTTP response
      */
   }, {
-    key: "getAffiliateCommissionsUsingGET_0WithHttpInfo",
-    value: function getAffiliateCommissionsUsingGET_0WithHttpInfo(affiliateId, opts) {
+    key: "getAffiliateCommissionsUsingGETWithHttpInfo",
+    value: function getAffiliateCommissionsUsingGETWithHttpInfo(affiliateId, opts) {
       opts = opts || {};
       var postBody = null;
       // verify the required parameter 'affiliateId' is set
       if (affiliateId === undefined || affiliateId === null) {
-        throw new _Error["default"]("Missing the required parameter 'affiliateId' when calling getAffiliateCommissionsUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'affiliateId' when calling getAffiliateCommissionsUsingGET");
       }
       var pathParams = {
         'affiliate_id': affiliateId
@@ -625,9 +625,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListAffiliateCommissionResponse}
      */
   }, {
-    key: "getAffiliateCommissionsUsingGET_0",
-    value: function getAffiliateCommissionsUsingGET_0(affiliateId, opts) {
-      return this.getAffiliateCommissionsUsingGET_0WithHttpInfo(affiliateId, opts).then(function (response_and_data) {
+    key: "getAffiliateCommissionsUsingGET",
+    value: function getAffiliateCommissionsUsingGET(affiliateId, opts) {
+      return this.getAffiliateCommissionsUsingGETWithHttpInfo(affiliateId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -638,8 +638,8 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ObjectModel} and HTTP response
      */
   }, {
-    key: "getAffiliateCustomFieldsUsingGET_0WithHttpInfo",
-    value: function getAffiliateCustomFieldsUsingGET_0WithHttpInfo() {
+    key: "getAffiliateCustomFieldsUsingGETWithHttpInfo",
+    value: function getAffiliateCustomFieldsUsingGETWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -658,9 +658,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ObjectModel}
      */
   }, {
-    key: "getAffiliateCustomFieldsUsingGET_0",
-    value: function getAffiliateCustomFieldsUsingGET_0() {
-      return this.getAffiliateCustomFieldsUsingGET_0WithHttpInfo().then(function (response_and_data) {
+    key: "getAffiliateCustomFieldsUsingGET",
+    value: function getAffiliateCustomFieldsUsingGET() {
+      return this.getAffiliateCustomFieldsUsingGETWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -713,12 +713,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateProgramV2} and HTTP response
      */
   }, {
-    key: "getCommissionProgramUsingGET_0WithHttpInfo",
-    value: function getCommissionProgramUsingGET_0WithHttpInfo(commissionProgramId) {
+    key: "getCommissionProgramUsingGETWithHttpInfo",
+    value: function getCommissionProgramUsingGETWithHttpInfo(commissionProgramId) {
       var postBody = null;
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling getCommissionProgramUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling getCommissionProgramUsingGET");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -740,9 +740,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateProgramV2}
      */
   }, {
-    key: "getCommissionProgramUsingGET_0",
-    value: function getCommissionProgramUsingGET_0(commissionProgramId) {
-      return this.getCommissionProgramUsingGET_0WithHttpInfo(commissionProgramId).then(function (response_and_data) {
+    key: "getCommissionProgramUsingGET",
+    value: function getCommissionProgramUsingGET(commissionProgramId) {
+      return this.getCommissionProgramUsingGETWithHttpInfo(commissionProgramId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -754,12 +754,12 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateLink} and HTTP response
      */
   }, {
-    key: "getRedirectLinkUsingGET_0WithHttpInfo",
-    value: function getRedirectLinkUsingGET_0WithHttpInfo(redirectId) {
+    key: "getRedirectLinkUsingGETWithHttpInfo",
+    value: function getRedirectLinkUsingGETWithHttpInfo(redirectId) {
       var postBody = null;
       // verify the required parameter 'redirectId' is set
       if (redirectId === undefined || redirectId === null) {
-        throw new _Error["default"]("Missing the required parameter 'redirectId' when calling getRedirectLinkUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'redirectId' when calling getRedirectLinkUsingGET");
       }
       var pathParams = {
         'redirect_id': redirectId
@@ -781,9 +781,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateLink}
      */
   }, {
-    key: "getRedirectLinkUsingGET_0",
-    value: function getRedirectLinkUsingGET_0(redirectId) {
-      return this.getRedirectLinkUsingGET_0WithHttpInfo(redirectId).then(function (response_and_data) {
+    key: "getRedirectLinkUsingGET",
+    value: function getRedirectLinkUsingGET(redirectId) {
+      return this.getRedirectLinkUsingGETWithHttpInfo(redirectId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -799,8 +799,8 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListAffiliateCommissionProgramsResponse} and HTTP response
      */
   }, {
-    key: "listAffiliateCommissionProgramsUsingGET_0WithHttpInfo",
-    value: function listAffiliateCommissionProgramsUsingGET_0WithHttpInfo(opts) {
+    key: "listAffiliateCommissionProgramsUsingGETWithHttpInfo",
+    value: function listAffiliateCommissionProgramsUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -830,9 +830,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListAffiliateCommissionProgramsResponse}
      */
   }, {
-    key: "listAffiliateCommissionProgramsUsingGET_0",
-    value: function listAffiliateCommissionProgramsUsingGET_0(opts) {
-      return this.listAffiliateCommissionProgramsUsingGET_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listAffiliateCommissionProgramsUsingGET",
+    value: function listAffiliateCommissionProgramsUsingGET(opts) {
+      return this.listAffiliateCommissionProgramsUsingGETWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -848,8 +848,8 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListAffiliateLinksResponse} and HTTP response
      */
   }, {
-    key: "listAffiliateLinksUsingGET_0WithHttpInfo",
-    value: function listAffiliateLinksUsingGET_0WithHttpInfo(opts) {
+    key: "listAffiliateLinksUsingGETWithHttpInfo",
+    value: function listAffiliateLinksUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -879,9 +879,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListAffiliateLinksResponse}
      */
   }, {
-    key: "listAffiliateLinksUsingGET_0",
-    value: function listAffiliateLinksUsingGET_0(opts) {
-      return this.listAffiliateLinksUsingGET_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listAffiliateLinksUsingGET",
+    value: function listAffiliateLinksUsingGET(opts) {
+      return this.listAffiliateLinksUsingGETWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -897,8 +897,8 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListAffiliateSummariesResponse} and HTTP response
      */
   }, {
-    key: "listSummariesUsingGET1_0WithHttpInfo",
-    value: function listSummariesUsingGET1_0WithHttpInfo(opts) {
+    key: "listSummariesUsingGET1WithHttpInfo",
+    value: function listSummariesUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -928,9 +928,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListAffiliateSummariesResponse}
      */
   }, {
-    key: "listSummariesUsingGET1_0",
-    value: function listSummariesUsingGET1_0(opts) {
-      return this.listSummariesUsingGET1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listSummariesUsingGET1",
+    value: function listSummariesUsingGET1(opts) {
+      return this.listSummariesUsingGET1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -999,13 +999,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/SetDefaultCommissionProgramResponse} and HTTP response
      */
   }, {
-    key: "patchDefaultCommissionProgramUsingPATCH_0WithHttpInfo",
-    value: function patchDefaultCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, opts) {
+    key: "patchDefaultCommissionProgramUsingPATCHWithHttpInfo",
+    value: function patchDefaultCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
       var postBody = opts['patchDefaultCommissionProgramRequest'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling patchDefaultCommissionProgramUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling patchDefaultCommissionProgramUsingPATCH");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -1032,9 +1032,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/SetDefaultCommissionProgramResponse}
      */
   }, {
-    key: "patchDefaultCommissionProgramUsingPATCH_0",
-    value: function patchDefaultCommissionProgramUsingPATCH_0(commissionProgramId, opts) {
-      return this.patchDefaultCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
+    key: "patchDefaultCommissionProgramUsingPATCH",
+    value: function patchDefaultCommissionProgramUsingPATCH(commissionProgramId, opts) {
+      return this.patchDefaultCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1049,13 +1049,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ProductCommissionProgram} and HTTP response
      */
   }, {
-    key: "patchProductCommissionProgramUsingPATCH_0WithHttpInfo",
-    value: function patchProductCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, opts) {
+    key: "patchProductCommissionProgramUsingPATCHWithHttpInfo",
+    value: function patchProductCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
       var postBody = opts['patchProductCommissionProgramRequest'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling patchProductCommissionProgramUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling patchProductCommissionProgramUsingPATCH");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -1082,9 +1082,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ProductCommissionProgram}
      */
   }, {
-    key: "patchProductCommissionProgramUsingPATCH_0",
-    value: function patchProductCommissionProgramUsingPATCH_0(commissionProgramId, opts) {
-      return this.patchProductCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
+    key: "patchProductCommissionProgramUsingPATCH",
+    value: function patchProductCommissionProgramUsingPATCH(commissionProgramId, opts) {
+      return this.patchProductCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1099,13 +1099,13 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/SubscriptionCommissionProgram} and HTTP response
      */
   }, {
-    key: "patchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfo",
-    value: function patchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, opts) {
+    key: "patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo",
+    value: function patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
       var postBody = opts['patchSubscriptionCommissionProgramRequest'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling patchSubscriptionCommissionProgramUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionProgramId' when calling patchSubscriptionCommissionProgramUsingPATCH");
       }
       var pathParams = {
         'commission_program_id': commissionProgramId
@@ -1132,9 +1132,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/SubscriptionCommissionProgram}
      */
   }, {
-    key: "patchSubscriptionCommissionProgramUsingPATCH_0",
-    value: function patchSubscriptionCommissionProgramUsingPATCH_0(commissionProgramId, opts) {
-      return this.patchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
+    key: "patchSubscriptionCommissionProgramUsingPATCH",
+    value: function patchSubscriptionCommissionProgramUsingPATCH(commissionProgramId, opts) {
+      return this.patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1147,16 +1147,16 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "removeAffiliateFromProgramUsingPOST_0WithHttpInfo",
-    value: function removeAffiliateFromProgramUsingPOST_0WithHttpInfo(id, removeFromProgramRequest) {
+    key: "removeAffiliateFromProgramUsingPOSTWithHttpInfo",
+    value: function removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest) {
       var postBody = removeFromProgramRequest;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new _Error["default"]("Missing the required parameter 'id' when calling removeAffiliateFromProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'id' when calling removeAffiliateFromProgramUsingPOST");
       }
       // verify the required parameter 'removeFromProgramRequest' is set
       if (removeFromProgramRequest === undefined || removeFromProgramRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'removeFromProgramRequest' when calling removeAffiliateFromProgramUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'removeFromProgramRequest' when calling removeAffiliateFromProgramUsingPOST");
       }
       var pathParams = {
         'id': id
@@ -1179,9 +1179,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "removeAffiliateFromProgramUsingPOST_0",
-    value: function removeAffiliateFromProgramUsingPOST_0(id, removeFromProgramRequest) {
-      return this.removeAffiliateFromProgramUsingPOST_0WithHttpInfo(id, removeFromProgramRequest).then(function (response_and_data) {
+    key: "removeAffiliateFromProgramUsingPOST",
+    value: function removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest) {
+      return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1194,16 +1194,16 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfo",
-    value: function removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfo(commissionId, deleteSubscriptionPlanCommissionRequest) {
+    key: "removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo",
+    value: function removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(commissionId, deleteSubscriptionPlanCommissionRequest) {
       var postBody = deleteSubscriptionPlanCommissionRequest;
       // verify the required parameter 'commissionId' is set
       if (commissionId === undefined || commissionId === null) {
-        throw new _Error["default"]("Missing the required parameter 'commissionId' when calling removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'commissionId' when calling removeSubscriptionPlanCommissionFromCommissionsUsingPOST");
       }
       // verify the required parameter 'deleteSubscriptionPlanCommissionRequest' is set
       if (deleteSubscriptionPlanCommissionRequest === undefined || deleteSubscriptionPlanCommissionRequest === null) {
-        throw new _Error["default"]("Missing the required parameter 'deleteSubscriptionPlanCommissionRequest' when calling removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0");
+        throw new _Error["default"]("Missing the required parameter 'deleteSubscriptionPlanCommissionRequest' when calling removeSubscriptionPlanCommissionFromCommissionsUsingPOST");
       }
       var pathParams = {
         'commission_id': commissionId
@@ -1226,9 +1226,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0",
-    value: function removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0(commissionId, deleteSubscriptionPlanCommissionRequest) {
-      return this.removeSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfo(commissionId, deleteSubscriptionPlanCommissionRequest).then(function (response_and_data) {
+    key: "removeSubscriptionPlanCommissionFromCommissionsUsingPOST",
+    value: function removeSubscriptionPlanCommissionFromCommissionsUsingPOST(commissionId, deleteSubscriptionPlanCommissionRequest) {
+      return this.removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(commissionId, deleteSubscriptionPlanCommissionRequest).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1243,17 +1243,17 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "updateAffiliateCustomFieldUsingPATCH_0WithHttpInfo",
-    value: function updateAffiliateCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts) {
+    key: "updateAffiliateCustomFieldUsingPATCHWithHttpInfo",
+    value: function updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
       opts = opts || {};
       var postBody = request;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateAffiliateCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateAffiliateCustomFieldUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling updateAffiliateCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling updateAffiliateCustomFieldUsingPATCH");
       }
       var pathParams = {
         'custom_field_id': customFieldId
@@ -1280,9 +1280,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "updateAffiliateCustomFieldUsingPATCH_0",
-    value: function updateAffiliateCustomFieldUsingPATCH_0(customFieldId, request, opts) {
-      return this.updateAffiliateCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
+    key: "updateAffiliateCustomFieldUsingPATCH",
+    value: function updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts) {
+      return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -1341,16 +1341,16 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateLink} and HTTP response
      */
   }, {
-    key: "updateRedirectLinkUsingPATCH_0WithHttpInfo",
-    value: function updateRedirectLinkUsingPATCH_0WithHttpInfo(redirectId, request) {
+    key: "updateRedirectLinkUsingPATCHWithHttpInfo",
+    value: function updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request) {
       var postBody = request;
       // verify the required parameter 'redirectId' is set
       if (redirectId === undefined || redirectId === null) {
-        throw new _Error["default"]("Missing the required parameter 'redirectId' when calling updateRedirectLinkUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'redirectId' when calling updateRedirectLinkUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling updateRedirectLinkUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling updateRedirectLinkUsingPATCH");
       }
       var pathParams = {
         'redirect_id': redirectId
@@ -1373,9 +1373,9 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateLink}
      */
   }, {
-    key: "updateRedirectLinkUsingPATCH_0",
-    value: function updateRedirectLinkUsingPATCH_0(redirectId, request) {
-      return this.updateRedirectLinkUsingPATCH_0WithHttpInfo(redirectId, request).then(function (response_and_data) {
+    key: "updateRedirectLinkUsingPATCH",
+    value: function updateRedirectLinkUsingPATCH(redirectId, request) {
+      return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

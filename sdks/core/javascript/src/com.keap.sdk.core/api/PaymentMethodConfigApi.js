@@ -20,7 +20,7 @@ import PaymentMethodConfig from '../model/PaymentMethodConfig';
 /**
 * PaymentMethodConfig service.
 * @module com.keap.sdk.core/api/PaymentMethodConfigApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class PaymentMethodConfigApi {
 

@@ -1,4 +1,4 @@
-# KeapRestApi.GetContactOptionTypesResponse
+# KeapCoreServiceCoreSdk.GetContactOptionTypesResponse
 
 ## Properties
 

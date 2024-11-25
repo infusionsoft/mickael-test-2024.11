@@ -1,4 +1,4 @@
-# KeapRestApi.ContactUtmResponse
+# KeapCoreServiceCoreSdk.ContactUtmResponse
 
 ## Properties
 

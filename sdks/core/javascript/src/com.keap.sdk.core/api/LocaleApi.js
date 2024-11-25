@@ -20,7 +20,7 @@ import ListProvincesResponse from '../model/ListProvincesResponse';
 /**
 * Locale service.
 * @module com.keap.sdk.core/api/LocaleApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class LocaleApi {
 
@@ -41,7 +41,7 @@ export default class LocaleApi {
      * List Countries
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListCountriesResponse} and HTTP response
      */
-    listCountriesUsingGET2_0WithHttpInfo() {
+    listCountriesUsingGET2WithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -68,8 +68,8 @@ export default class LocaleApi {
      * List Countries
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListCountriesResponse}
      */
-    listCountriesUsingGET2_0() {
-      return this.listCountriesUsingGET2_0WithHttpInfo()
+    listCountriesUsingGET2() {
+      return this.listCountriesUsingGET2WithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -81,11 +81,11 @@ export default class LocaleApi {
      * @param {String} countryCode country_code
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListProvincesResponse} and HTTP response
      */
-    listProvincesForCountryUsingGET_0WithHttpInfo(countryCode) {
+    listProvincesForCountryUsingGETWithHttpInfo(countryCode) {
       let postBody = null;
       // verify the required parameter 'countryCode' is set
       if (countryCode === undefined || countryCode === null) {
-        throw new Error("Missing the required parameter 'countryCode' when calling listProvincesForCountryUsingGET_0");
+        throw new Error("Missing the required parameter 'countryCode' when calling listProvincesForCountryUsingGET");
       }
 
       let pathParams = {
@@ -114,8 +114,8 @@ export default class LocaleApi {
      * @param {String} countryCode country_code
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListProvincesResponse}
      */
-    listProvincesForCountryUsingGET_0(countryCode) {
-      return this.listProvincesForCountryUsingGET_0WithHttpInfo(countryCode)
+    listProvincesForCountryUsingGET(countryCode) {
+      return this.listProvincesForCountryUsingGETWithHttpInfo(countryCode)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

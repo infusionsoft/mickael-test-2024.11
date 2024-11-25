@@ -1,4 +1,4 @@
-# KeapRestApi.CustomField
+# KeapCoreServiceCoreSdk.CustomField
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.CreateRestOrderItemRequest
+# KeapCoreServiceCoreSdk.CreateRestOrderItemRequest
 
 ## Properties
 

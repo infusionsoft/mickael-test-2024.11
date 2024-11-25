@@ -48,7 +48,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_custom_fields_using_post_0(
+    def create_opportunity_custom_fields_using_post(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -92,7 +92,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_custom_fields_using_post_0_serialize(
+        _param = self._create_opportunity_custom_fields_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -116,7 +116,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_custom_fields_using_post_0_with_http_info(
+    def create_opportunity_custom_fields_using_post_with_http_info(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -160,7 +160,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_custom_fields_using_post_0_serialize(
+        _param = self._create_opportunity_custom_fields_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -184,7 +184,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_custom_fields_using_post_0_without_preload_content(
+    def create_opportunity_custom_fields_using_post_without_preload_content(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -228,7 +228,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_custom_fields_using_post_0_serialize(
+        _param = self._create_opportunity_custom_fields_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -247,7 +247,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _create_opportunity_custom_fields_using_post_0_serialize(
+    def _create_opportunity_custom_fields_using_post_serialize(
         self,
         custom_field,
         _request_auth,
@@ -324,7 +324,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_stage_using_post_0(
+    def create_opportunity_stage_using_post(
         self,
         opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
@@ -368,7 +368,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_stage_using_post_0_serialize(
+        _param = self._create_opportunity_stage_using_post_serialize(
             opportunity_stage=opportunity_stage,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -392,7 +392,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_stage_using_post_0_with_http_info(
+    def create_opportunity_stage_using_post_with_http_info(
         self,
         opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
@@ -436,7 +436,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_stage_using_post_0_serialize(
+        _param = self._create_opportunity_stage_using_post_serialize(
             opportunity_stage=opportunity_stage,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -460,7 +460,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_stage_using_post_0_without_preload_content(
+    def create_opportunity_stage_using_post_without_preload_content(
         self,
         opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
@@ -504,7 +504,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_stage_using_post_0_serialize(
+        _param = self._create_opportunity_stage_using_post_serialize(
             opportunity_stage=opportunity_stage,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -523,7 +523,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _create_opportunity_stage_using_post_0_serialize(
+    def _create_opportunity_stage_using_post_serialize(
         self,
         opportunity_stage,
         _request_auth,
@@ -600,7 +600,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_using_post1_0(
+    def create_opportunity_using_post1(
         self,
         opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
@@ -644,7 +644,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_using_post1_0_serialize(
+        _param = self._create_opportunity_using_post1_serialize(
             opportunity=opportunity,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -668,7 +668,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_using_post1_0_with_http_info(
+    def create_opportunity_using_post1_with_http_info(
         self,
         opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
@@ -712,7 +712,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_using_post1_0_serialize(
+        _param = self._create_opportunity_using_post1_serialize(
             opportunity=opportunity,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -736,7 +736,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def create_opportunity_using_post1_0_without_preload_content(
+    def create_opportunity_using_post1_without_preload_content(
         self,
         opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
@@ -780,7 +780,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_opportunity_using_post1_0_serialize(
+        _param = self._create_opportunity_using_post1_serialize(
             opportunity=opportunity,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -799,7 +799,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _create_opportunity_using_post1_0_serialize(
+    def _create_opportunity_using_post1_serialize(
         self,
         opportunity,
         _request_auth,
@@ -876,7 +876,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def delete_opportunity_stage_using_delete_0(
+    def delete_opportunity_stage_using_delete(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
         _request_timeout: Union[
@@ -920,7 +920,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_opportunity_stage_using_delete_0_serialize(
+        _param = self._delete_opportunity_stage_using_delete_serialize(
             stage_id=stage_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -945,7 +945,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def delete_opportunity_stage_using_delete_0_with_http_info(
+    def delete_opportunity_stage_using_delete_with_http_info(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
         _request_timeout: Union[
@@ -989,7 +989,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_opportunity_stage_using_delete_0_serialize(
+        _param = self._delete_opportunity_stage_using_delete_serialize(
             stage_id=stage_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1014,7 +1014,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def delete_opportunity_stage_using_delete_0_without_preload_content(
+    def delete_opportunity_stage_using_delete_without_preload_content(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
         _request_timeout: Union[
@@ -1058,7 +1058,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_opportunity_stage_using_delete_0_serialize(
+        _param = self._delete_opportunity_stage_using_delete_serialize(
             stage_id=stage_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1078,7 +1078,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _delete_opportunity_stage_using_delete_0_serialize(
+    def _delete_opportunity_stage_using_delete_serialize(
         self,
         stage_id,
         _request_auth,
@@ -1142,7 +1142,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def delete_opportunity_using_delete_0(
+    def delete_opportunity_using_delete(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         _request_timeout: Union[
@@ -1186,7 +1186,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_opportunity_using_delete_0_serialize(
+        _param = self._delete_opportunity_using_delete_serialize(
             opportunity_id=opportunity_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1211,7 +1211,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def delete_opportunity_using_delete_0_with_http_info(
+    def delete_opportunity_using_delete_with_http_info(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         _request_timeout: Union[
@@ -1255,7 +1255,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_opportunity_using_delete_0_serialize(
+        _param = self._delete_opportunity_using_delete_serialize(
             opportunity_id=opportunity_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1280,7 +1280,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def delete_opportunity_using_delete_0_without_preload_content(
+    def delete_opportunity_using_delete_without_preload_content(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         _request_timeout: Union[
@@ -1324,7 +1324,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_opportunity_using_delete_0_serialize(
+        _param = self._delete_opportunity_using_delete_serialize(
             opportunity_id=opportunity_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1344,7 +1344,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _delete_opportunity_using_delete_0_serialize(
+    def _delete_opportunity_using_delete_serialize(
         self,
         opportunity_id,
         _request_auth,
@@ -1408,7 +1408,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def get_opportunity_stage_using_get_0(
+    def get_opportunity_stage_using_get(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
         _request_timeout: Union[
@@ -1452,7 +1452,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_opportunity_stage_using_get_0_serialize(
+        _param = self._get_opportunity_stage_using_get_serialize(
             stage_id=stage_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1477,7 +1477,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def get_opportunity_stage_using_get_0_with_http_info(
+    def get_opportunity_stage_using_get_with_http_info(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
         _request_timeout: Union[
@@ -1521,7 +1521,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_opportunity_stage_using_get_0_serialize(
+        _param = self._get_opportunity_stage_using_get_serialize(
             stage_id=stage_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1546,7 +1546,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def get_opportunity_stage_using_get_0_without_preload_content(
+    def get_opportunity_stage_using_get_without_preload_content(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
         _request_timeout: Union[
@@ -1590,7 +1590,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_opportunity_stage_using_get_0_serialize(
+        _param = self._get_opportunity_stage_using_get_serialize(
             stage_id=stage_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1610,7 +1610,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _get_opportunity_stage_using_get_0_serialize(
+    def _get_opportunity_stage_using_get_serialize(
         self,
         stage_id,
         _request_auth,
@@ -1674,7 +1674,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def get_opportunity_using_get1_0(
+    def get_opportunity_using_get1(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         _request_timeout: Union[
@@ -1718,7 +1718,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_opportunity_using_get1_0_serialize(
+        _param = self._get_opportunity_using_get1_serialize(
             opportunity_id=opportunity_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1743,7 +1743,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def get_opportunity_using_get1_0_with_http_info(
+    def get_opportunity_using_get1_with_http_info(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         _request_timeout: Union[
@@ -1787,7 +1787,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_opportunity_using_get1_0_serialize(
+        _param = self._get_opportunity_using_get1_serialize(
             opportunity_id=opportunity_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1812,7 +1812,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def get_opportunity_using_get1_0_without_preload_content(
+    def get_opportunity_using_get1_without_preload_content(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         _request_timeout: Union[
@@ -1856,7 +1856,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_opportunity_using_get1_0_serialize(
+        _param = self._get_opportunity_using_get1_serialize(
             opportunity_id=opportunity_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1876,7 +1876,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _get_opportunity_using_get1_0_serialize(
+    def _get_opportunity_using_get1_serialize(
         self,
         opportunity_id,
         _request_auth,
@@ -1940,7 +1940,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def list_opportunities_using_get1_0(
+    def list_opportunities_using_get1(
         self,
         fields: Annotated[Optional[List[StrictStr]], Field(description="fields")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) stage_id - (String) user_id ")] = None,
@@ -1996,7 +1996,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_opportunities_using_get1_0_serialize(
+        _param = self._list_opportunities_using_get1_serialize(
             fields=fields,
             filter=filter,
             order_by=order_by,
@@ -2025,7 +2025,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def list_opportunities_using_get1_0_with_http_info(
+    def list_opportunities_using_get1_with_http_info(
         self,
         fields: Annotated[Optional[List[StrictStr]], Field(description="fields")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) stage_id - (String) user_id ")] = None,
@@ -2081,7 +2081,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_opportunities_using_get1_0_serialize(
+        _param = self._list_opportunities_using_get1_serialize(
             fields=fields,
             filter=filter,
             order_by=order_by,
@@ -2110,7 +2110,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def list_opportunities_using_get1_0_without_preload_content(
+    def list_opportunities_using_get1_without_preload_content(
         self,
         fields: Annotated[Optional[List[StrictStr]], Field(description="fields")] = None,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) stage_id - (String) user_id ")] = None,
@@ -2166,7 +2166,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_opportunities_using_get1_0_serialize(
+        _param = self._list_opportunities_using_get1_serialize(
             fields=fields,
             filter=filter,
             order_by=order_by,
@@ -2190,7 +2190,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _list_opportunities_using_get1_0_serialize(
+    def _list_opportunities_using_get1_serialize(
         self,
         fields,
         filter,
@@ -2277,7 +2277,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def list_opportunity_stages_using_get_0(
+    def list_opportunity_stages_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order stage items. One of the following fields: - stage_order One of the following directions: - asc - desc ")] = None,
@@ -2330,7 +2330,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_opportunity_stages_using_get_0_serialize(
+        _param = self._list_opportunity_stages_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -2358,7 +2358,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def list_opportunity_stages_using_get_0_with_http_info(
+    def list_opportunity_stages_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order stage items. One of the following fields: - stage_order One of the following directions: - asc - desc ")] = None,
@@ -2411,7 +2411,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_opportunity_stages_using_get_0_serialize(
+        _param = self._list_opportunity_stages_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -2439,7 +2439,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def list_opportunity_stages_using_get_0_without_preload_content(
+    def list_opportunity_stages_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order stage items. One of the following fields: - stage_order One of the following directions: - asc - desc ")] = None,
@@ -2492,7 +2492,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_opportunity_stages_using_get_0_serialize(
+        _param = self._list_opportunity_stages_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -2515,7 +2515,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _list_opportunity_stages_using_get_0_serialize(
+    def _list_opportunity_stages_using_get_serialize(
         self,
         filter,
         order_by,
@@ -2596,7 +2596,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def update_opportunity_custom_field_using_patch_0(
+    def update_opportunity_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2646,7 +2646,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_opportunity_custom_field_using_patch_0_serialize(
+        _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2673,7 +2673,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def update_opportunity_custom_field_using_patch_0_with_http_info(
+    def update_opportunity_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2723,7 +2723,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_opportunity_custom_field_using_patch_0_serialize(
+        _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2750,7 +2750,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def update_opportunity_custom_field_using_patch_0_without_preload_content(
+    def update_opportunity_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2800,7 +2800,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_opportunity_custom_field_using_patch_0_serialize(
+        _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2822,7 +2822,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _update_opportunity_custom_field_using_patch_0_serialize(
+    def _update_opportunity_custom_field_using_patch_serialize(
         self,
         custom_field_id,
         request,
@@ -2908,7 +2908,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def update_opportunity_using_patch_0(
+    def update_opportunity_using_patch(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         request: Annotated[PatchOpportunityRequest, Field(description="request")],
@@ -2958,7 +2958,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_opportunity_using_patch_0_serialize(
+        _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
             request=request,
             update_mask=update_mask,
@@ -2985,7 +2985,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def update_opportunity_using_patch_0_with_http_info(
+    def update_opportunity_using_patch_with_http_info(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         request: Annotated[PatchOpportunityRequest, Field(description="request")],
@@ -3035,7 +3035,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_opportunity_using_patch_0_serialize(
+        _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
             request=request,
             update_mask=update_mask,
@@ -3062,7 +3062,7 @@ class OpportunityApi:
 
 
     @validate_call
-    def update_opportunity_using_patch_0_without_preload_content(
+    def update_opportunity_using_patch_without_preload_content(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
         request: Annotated[PatchOpportunityRequest, Field(description="request")],
@@ -3112,7 +3112,7 @@ class OpportunityApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_opportunity_using_patch_0_serialize(
+        _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
             request=request,
             update_mask=update_mask,
@@ -3134,7 +3134,7 @@ class OpportunityApi:
         return response_data.response
 
 
-    def _update_opportunity_using_patch_0_serialize(
+    def _update_opportunity_using_patch_serialize(
         self,
         opportunity_id,
         request,

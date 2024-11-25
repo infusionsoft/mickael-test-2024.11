@@ -4,14 +4,14 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createLeadSourceUsingPOST_0()**](LeadSourcesApi.md#createLeadSourceUsingPOST_0) | **POST** /v2/leadsources | Create a Lead Source |
-| [**listLeadSourcesUsingGET_0()**](LeadSourcesApi.md#listLeadSourcesUsingGET_0) | **GET** /v2/leadsources | List Lead Sources |
+| [**createLeadSourceUsingPOST()**](LeadSourcesApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source |
+| [**listLeadSourcesUsingGET()**](LeadSourcesApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources |
 
 
-## `createLeadSourceUsingPOST_0()`
+## `createLeadSourceUsingPOST()`
 
 ```php
-createLeadSourceUsingPOST_0($leadsource): \Com\Keap\Sdk\Core\Model\LeadSource
+createLeadSourceUsingPOST($leadsource): \Com\Keap\Sdk\Core\Model\LeadSource
 ```
 
 Create a Lead Source
@@ -33,10 +33,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\LeadSourcesApi(
 $leadsource = new \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest(); // \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest | leadsource
 
 try {
-    $result = $apiInstance->createLeadSourceUsingPOST_0($leadsource);
+    $result = $apiInstance->createLeadSourceUsingPOST($leadsource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LeadSourcesApi->createLeadSourceUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LeadSourcesApi->createLeadSourceUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -63,10 +63,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listLeadSourcesUsingGET_0()`
+## `listLeadSourcesUsingGET()`
 
 ```php
-listLeadSourcesUsingGET_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListLeadSourcesResponse
+listLeadSourcesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListLeadSourcesResponse
 ```
 
 List Lead Sources
@@ -91,10 +91,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listLeadSourcesUsingGET_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listLeadSourcesUsingGET($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LeadSourcesApi->listLeadSourcesUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LeadSourcesApi->listLeadSourcesUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

@@ -1,4 +1,4 @@
-# KeapRestApi.ListAutomationResponse
+# KeapCoreServiceCoreSdk.ListAutomationResponse
 
 ## Properties
 

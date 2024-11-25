@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listLandingPagesUsingGET_0()**](LandingPagesApi.md#listLandingPagesUsingGET_0) | **GET** /v2/landingpages | List Landing Pages |
+| [**listLandingPagesUsingGET()**](LandingPagesApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages |
 
 
-## `listLandingPagesUsingGET_0()`
+## `listLandingPagesUsingGET()`
 
 ```php
-listLandingPagesUsingGET_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListLandingPagesResponse
+listLandingPagesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListLandingPagesResponse
 ```
 
 List Landing Pages
@@ -35,10 +35,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listLandingPagesUsingGET_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listLandingPagesUsingGET($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LandingPagesApi->listLandingPagesUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LandingPagesApi->listLandingPagesUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

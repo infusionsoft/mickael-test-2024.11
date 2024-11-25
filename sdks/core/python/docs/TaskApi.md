@@ -4,19 +4,19 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_task_custom_field_using_post1_0**](TaskApi.md#create_task_custom_field_using_post1_0) | **POST** /v2/tasks/model/customFields | Create a Custom Field
-[**create_task_using_post1_0**](TaskApi.md#create_task_using_post1_0) | **POST** /v2/tasks | Create a Task
-[**delete_task_custom_field_using_delete_0**](TaskApi.md#delete_task_custom_field_using_delete_0) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
-[**delete_task_using_delete1_0**](TaskApi.md#delete_task_using_delete1_0) | **DELETE** /v2/tasks/{task_id} | Delete a Task
-[**get_task_using_get1_0**](TaskApi.md#get_task_using_get1_0) | **GET** /v2/tasks/{task_id} | Retrieve a Task
-[**list_tasks_using_get1_0**](TaskApi.md#list_tasks_using_get1_0) | **GET** /v2/tasks | List Tasks
-[**patch_task_using_patch_0**](TaskApi.md#patch_task_using_patch_0) | **PATCH** /v2/tasks/{task_id} | Update a Task
-[**retrieve_task_model_using_get1_0**](TaskApi.md#retrieve_task_model_using_get1_0) | **GET** /v2/tasks/model | Retrieve Task Model
-[**update_task_custom_field_using_patch_0**](TaskApi.md#update_task_custom_field_using_patch_0) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
+[**create_task_custom_field_using_post1**](TaskApi.md#create_task_custom_field_using_post1) | **POST** /v2/tasks/model/customFields | Create a Custom Field
+[**create_task_using_post1**](TaskApi.md#create_task_using_post1) | **POST** /v2/tasks | Create a Task
+[**delete_task_custom_field_using_delete**](TaskApi.md#delete_task_custom_field_using_delete) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
+[**delete_task_using_delete1**](TaskApi.md#delete_task_using_delete1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
+[**get_task_using_get1**](TaskApi.md#get_task_using_get1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
+[**list_tasks_using_get1**](TaskApi.md#list_tasks_using_get1) | **GET** /v2/tasks | List Tasks
+[**patch_task_using_patch**](TaskApi.md#patch_task_using_patch) | **PATCH** /v2/tasks/{task_id} | Update a Task
+[**retrieve_task_model_using_get1**](TaskApi.md#retrieve_task_model_using_get1) | **GET** /v2/tasks/model | Retrieve Task Model
+[**update_task_custom_field_using_patch**](TaskApi.md#update_task_custom_field_using_patch) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
 
 
-# **create_task_custom_field_using_post1_0**
-> CreateCustomFieldResponse create_task_custom_field_using_post1_0(custom_field)
+# **create_task_custom_field_using_post1**
+> CreateCustomFieldResponse create_task_custom_field_using_post1(custom_field)
 
 Create a Custom Field
 
@@ -46,11 +46,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Custom Field
-        api_response = api_instance.create_task_custom_field_using_post1_0(custom_field)
-        print("The response of TaskApi->create_task_custom_field_using_post1_0:\n")
+        api_response = api_instance.create_task_custom_field_using_post1(custom_field)
+        print("The response of TaskApi->create_task_custom_field_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->create_task_custom_field_using_post1_0: %s\n" % e)
+        print("Exception when calling TaskApi->create_task_custom_field_using_post1: %s\n" % e)
 ```
 
 
@@ -84,8 +84,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_task_using_post1_0**
-> Task create_task_using_post1_0(task=task)
+# **create_task_using_post1**
+> Task create_task_using_post1(task=task)
 
 Create a Task
 
@@ -115,11 +115,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Task
-        api_response = api_instance.create_task_using_post1_0(task=task)
-        print("The response of TaskApi->create_task_using_post1_0:\n")
+        api_response = api_instance.create_task_using_post1(task=task)
+        print("The response of TaskApi->create_task_using_post1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->create_task_using_post1_0: %s\n" % e)
+        print("Exception when calling TaskApi->create_task_using_post1: %s\n" % e)
 ```
 
 
@@ -153,8 +153,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_task_custom_field_using_delete_0**
-> delete_task_custom_field_using_delete_0(custom_field_id)
+# **delete_task_custom_field_using_delete**
+> delete_task_custom_field_using_delete(custom_field_id)
 
 Delete a Custom Field
 
@@ -182,9 +182,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete a Custom Field
-        api_instance.delete_task_custom_field_using_delete_0(custom_field_id)
+        api_instance.delete_task_custom_field_using_delete(custom_field_id)
     except Exception as e:
-        print("Exception when calling TaskApi->delete_task_custom_field_using_delete_0: %s\n" % e)
+        print("Exception when calling TaskApi->delete_task_custom_field_using_delete: %s\n" % e)
 ```
 
 
@@ -219,8 +219,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_task_using_delete1_0**
-> delete_task_using_delete1_0(task_id)
+# **delete_task_using_delete1**
+> delete_task_using_delete1(task_id)
 
 Delete a Task
 
@@ -248,9 +248,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete a Task
-        api_instance.delete_task_using_delete1_0(task_id)
+        api_instance.delete_task_using_delete1(task_id)
     except Exception as e:
-        print("Exception when calling TaskApi->delete_task_using_delete1_0: %s\n" % e)
+        print("Exception when calling TaskApi->delete_task_using_delete1: %s\n" % e)
 ```
 
 
@@ -285,8 +285,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_task_using_get1_0**
-> Task get_task_using_get1_0(task_id)
+# **get_task_using_get1**
+> Task get_task_using_get1(task_id)
 
 Retrieve a Task
 
@@ -315,11 +315,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve a Task
-        api_response = api_instance.get_task_using_get1_0(task_id)
-        print("The response of TaskApi->get_task_using_get1_0:\n")
+        api_response = api_instance.get_task_using_get1(task_id)
+        print("The response of TaskApi->get_task_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->get_task_using_get1_0: %s\n" % e)
+        print("Exception when calling TaskApi->get_task_using_get1: %s\n" % e)
 ```
 
 
@@ -354,8 +354,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_tasks_using_get1_0**
-> ListTasksResponse list_tasks_using_get1_0(end_due_time=end_due_time, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token, start_due_time=start_due_time)
+# **list_tasks_using_get1**
+> ListTasksResponse list_tasks_using_get1(end_due_time=end_due_time, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token, start_due_time=start_due_time)
 
 List Tasks
 
@@ -389,11 +389,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Tasks
-        api_response = api_instance.list_tasks_using_get1_0(end_due_time=end_due_time, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token, start_due_time=start_due_time)
-        print("The response of TaskApi->list_tasks_using_get1_0:\n")
+        api_response = api_instance.list_tasks_using_get1(end_due_time=end_due_time, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token, start_due_time=start_due_time)
+        print("The response of TaskApi->list_tasks_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->list_tasks_using_get1_0: %s\n" % e)
+        print("Exception when calling TaskApi->list_tasks_using_get1: %s\n" % e)
 ```
 
 
@@ -433,8 +433,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_task_using_patch_0**
-> UpdateTaskResponse patch_task_using_patch_0(task_id, update_mask=update_mask, task=task)
+# **patch_task_using_patch**
+> UpdateTaskResponse patch_task_using_patch(task_id, update_mask=update_mask, task=task)
 
 Update a Task
 
@@ -466,11 +466,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Task
-        api_response = api_instance.patch_task_using_patch_0(task_id, update_mask=update_mask, task=task)
-        print("The response of TaskApi->patch_task_using_patch_0:\n")
+        api_response = api_instance.patch_task_using_patch(task_id, update_mask=update_mask, task=task)
+        print("The response of TaskApi->patch_task_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->patch_task_using_patch_0: %s\n" % e)
+        print("Exception when calling TaskApi->patch_task_using_patch: %s\n" % e)
 ```
 
 
@@ -507,8 +507,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **retrieve_task_model_using_get1_0**
-> ObjectModel retrieve_task_model_using_get1_0()
+# **retrieve_task_model_using_get1**
+> ObjectModel retrieve_task_model_using_get1()
 
 Retrieve Task Model
 
@@ -536,11 +536,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve Task Model
-        api_response = api_instance.retrieve_task_model_using_get1_0()
-        print("The response of TaskApi->retrieve_task_model_using_get1_0:\n")
+        api_response = api_instance.retrieve_task_model_using_get1()
+        print("The response of TaskApi->retrieve_task_model_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->retrieve_task_model_using_get1_0: %s\n" % e)
+        print("Exception when calling TaskApi->retrieve_task_model_using_get1: %s\n" % e)
 ```
 
 
@@ -572,8 +572,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_task_custom_field_using_patch_0**
-> CustomFieldMetaData update_task_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
+# **update_task_custom_field_using_patch**
+> CustomFieldMetaData update_task_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
 Update a Task's Custom Field
 
@@ -605,11 +605,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Task's Custom Field
-        api_response = api_instance.update_task_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
-        print("The response of TaskApi->update_task_custom_field_using_patch_0:\n")
+        api_response = api_instance.update_task_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        print("The response of TaskApi->update_task_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TaskApi->update_task_custom_field_using_patch_0: %s\n" % e)
+        print("Exception when calling TaskApi->update_task_custom_field_using_patch: %s\n" % e)
 ```
 
 

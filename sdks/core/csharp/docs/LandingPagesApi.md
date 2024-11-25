@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListLandingPagesUsingGET_0**](LandingPagesApi.md#listlandingpagesusingget_0) | **GET** /v2/landingpages | List Landing Pages |
+| [**ListLandingPagesUsingGET**](LandingPagesApi.md#listlandingpagesusingget) | **GET** /v2/landingpages | List Landing Pages |
 
-<a id="listlandingpagesusingget_0"></a>
-# **ListLandingPagesUsingGET_0**
-> ListLandingPagesResponse ListLandingPagesUsingGET_0 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listlandingpagesusingget"></a>
+# **ListLandingPagesUsingGET**
+> ListLandingPagesResponse ListLandingPagesUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List Landing Pages
 
@@ -24,7 +24,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListLandingPagesUsingGET_0Example
+    public class ListLandingPagesUsingGETExample
     {
         public static void Main()
         {
@@ -39,12 +39,12 @@ namespace Example
             try
             {
                 // List Landing Pages
-                ListLandingPagesResponse result = apiInstance.ListLandingPagesUsingGET_0(filter, orderBy, pageSize, pageToken);
+                ListLandingPagesResponse result = apiInstance.ListLandingPagesUsingGET(filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling LandingPagesApi.ListLandingPagesUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling LandingPagesApi.ListLandingPagesUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +53,21 @@ namespace Example
 }
 ```
 
-#### Using the ListLandingPagesUsingGET_0WithHttpInfo variant
+#### Using the ListLandingPagesUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Landing Pages
-    ApiResponse<ListLandingPagesResponse> response = apiInstance.ListLandingPagesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListLandingPagesResponse> response = apiInstance.ListLandingPagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling LandingPagesApi.ListLandingPagesUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling LandingPagesApi.ListLandingPagesUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

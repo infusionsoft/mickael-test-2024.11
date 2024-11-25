@@ -1,4 +1,4 @@
-# KeapRestApi.EmailApi
+# KeapCoreServiceCoreSdk.EmailApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -24,10 +24,10 @@ Creates a Record of an Email sent to a Contact
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailApi();
-let emailWithContent = new KeapRestApi.CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
+let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
+let emailWithContent = new KeapCoreServiceCoreSdk.CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
 apiInstance.createEmailUsingPOST1(emailWithContent).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -68,11 +68,11 @@ Creates a set of Records of Emails sent to Contacts, maximum 1000 per transactio
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailApi();
+let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
 let opts = {
-  'createEmailsSentRequest': new KeapRestApi.CreateEmailsSentRequest() // CreateEmailsSentRequest | Email records to persist, with content.
+  'createEmailsSentRequest': new KeapCoreServiceCoreSdk.CreateEmailsSentRequest() // CreateEmailsSentRequest | Email records to persist, with content.
 };
 apiInstance.createEmailsUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -114,9 +114,9 @@ Deletes a specific Email Record
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailApi();
+let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
 let id = "id_example"; // String | id
 apiInstance.deleteEmailUsingDELETE1(id).then(() => {
   console.log('API called successfully.');
@@ -158,10 +158,10 @@ Removes a set of Email Records
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailApi();
-let deleteEmailsRequest = new KeapRestApi.DeleteEmailsRequest(); // DeleteEmailsRequest | deleteEmailsRequest
+let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
+let deleteEmailsRequest = new KeapCoreServiceCoreSdk.DeleteEmailsRequest(); // DeleteEmailsRequest | deleteEmailsRequest
 apiInstance.deleteEmailsUsingPOST1(deleteEmailsRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -202,9 +202,9 @@ Retrieves a single Email that has been sent
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailApi();
+let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
 let id = "id_example"; // String | id
 apiInstance.getEmailUsingGET1(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -246,11 +246,11 @@ Sends an Email to a list of Contacts
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailApi();
+let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
 let opts = {
-  'emailSendRequest': new KeapRestApi.EmailSendRequest() // EmailSendRequest | emailSendRequest
+  'emailSendRequest': new KeapCoreServiceCoreSdk.EmailSendRequest() // EmailSendRequest | emailSendRequest
 };
 apiInstance.sendEmailUsingPOST1(opts).then(() => {
   console.log('API called successfully.');

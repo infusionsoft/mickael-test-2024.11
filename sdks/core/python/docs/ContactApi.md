@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**create_contact_using_post1**](ContactApi.md#create_contact_using_post1) | **POST** /v2/contacts | Create a Contact
 [**delete_contact_using_delete1**](ContactApi.md#delete_contact_using_delete1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 [**get_contact_using_get1**](ContactApi.md#get_contact_using_get1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-[**get_contacts_by_search_term_using_get_0**](ContactApi.md#get_contacts_by_search_term_using_get_0) | **GET** /v2/contacts:search | Search for Contacts
+[**get_contacts_by_search_term_using_get**](ContactApi.md#get_contacts_by_search_term_using_get) | **GET** /v2/contacts:search | Search for Contacts
 [**link_contacts_using_post**](ContactApi.md#link_contacts_using_post) | **POST** /v2/contacts:link | Link Contacts
 [**list_contact_link_types_using_get**](ContactApi.md#list_contact_link_types_using_get) | **GET** /v2/contacts/links/types | List Contact Link types
 [**list_contact_links_using_get**](ContactApi.md#list_contact_links_using_get) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts
@@ -294,8 +294,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_contacts_by_search_term_using_get_0**
-> ListBasicContactResponse get_contacts_by_search_term_using_get_0(search_param)
+# **get_contacts_by_search_term_using_get**
+> ListBasicContactResponse get_contacts_by_search_term_using_get(search_param)
 
 Search for Contacts
 
@@ -324,11 +324,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Search for Contacts
-        api_response = api_instance.get_contacts_by_search_term_using_get_0(search_param)
-        print("The response of ContactApi->get_contacts_by_search_term_using_get_0:\n")
+        api_response = api_instance.get_contacts_by_search_term_using_get(search_param)
+        print("The response of ContactApi->get_contacts_by_search_term_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ContactApi->get_contacts_by_search_term_using_get_0: %s\n" % e)
+        print("Exception when calling ContactApi->get_contacts_by_search_term_using_get: %s\n" % e)
 ```
 
 

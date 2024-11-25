@@ -1,4 +1,4 @@
-# KeapRestApi.BasicUser
+# KeapCoreServiceCoreSdk.BasicUser
 
 ## Properties
 

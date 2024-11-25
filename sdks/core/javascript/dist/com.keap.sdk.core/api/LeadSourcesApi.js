@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * LeadSources service.
 * @module com.keap.sdk.core/api/LeadSourcesApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var LeadSourcesApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -53,8 +53,8 @@ var LeadSourcesApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/LeadSource} and HTTP response
    */
   return _createClass(LeadSourcesApi, [{
-    key: "createLeadSourceUsingPOST_0WithHttpInfo",
-    value: function createLeadSourceUsingPOST_0WithHttpInfo(opts) {
+    key: "createLeadSourceUsingPOSTWithHttpInfo",
+    value: function createLeadSourceUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['leadsource'];
       var pathParams = {};
@@ -76,9 +76,9 @@ var LeadSourcesApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/LeadSource}
      */
   }, {
-    key: "createLeadSourceUsingPOST_0",
-    value: function createLeadSourceUsingPOST_0(opts) {
-      return this.createLeadSourceUsingPOST_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "createLeadSourceUsingPOST",
+    value: function createLeadSourceUsingPOST(opts) {
+      return this.createLeadSourceUsingPOSTWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -94,8 +94,8 @@ var LeadSourcesApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListLeadSourcesResponse} and HTTP response
      */
   }, {
-    key: "listLeadSourcesUsingGET_0WithHttpInfo",
-    value: function listLeadSourcesUsingGET_0WithHttpInfo(opts) {
+    key: "listLeadSourcesUsingGETWithHttpInfo",
+    value: function listLeadSourcesUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -125,9 +125,9 @@ var LeadSourcesApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListLeadSourcesResponse}
      */
   }, {
-    key: "listLeadSourcesUsingGET_0",
-    value: function listLeadSourcesUsingGET_0(opts) {
-      return this.listLeadSourcesUsingGET_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listLeadSourcesUsingGET",
+    value: function listLeadSourcesUsingGET(opts) {
+      return this.listLeadSourcesUsingGETWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

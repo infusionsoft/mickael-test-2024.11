@@ -28,7 +28,7 @@ import UpdateCustomFieldMetaDataRequest from '../model/UpdateCustomFieldMetaData
 /**
 * Opportunity service.
 * @module com.keap.sdk.core/api/OpportunityApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class OpportunityApi {
 
@@ -51,11 +51,11 @@ export default class OpportunityApi {
      * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createOpportunityCustomFieldsUsingPOST_0WithHttpInfo(customField) {
+    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField) {
       let postBody = customField;
       // verify the required parameter 'customField' is set
       if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createOpportunityCustomFieldsUsingPOST_0");
+        throw new Error("Missing the required parameter 'customField' when calling createOpportunityCustomFieldsUsingPOST");
       }
 
       let pathParams = {
@@ -84,8 +84,8 @@ export default class OpportunityApi {
      * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createOpportunityCustomFieldsUsingPOST_0(customField) {
-      return this.createOpportunityCustomFieldsUsingPOST_0WithHttpInfo(customField)
+    createOpportunityCustomFieldsUsingPOST(customField) {
+      return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -99,7 +99,7 @@ export default class OpportunityApi {
      * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} [opportunityStage] opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage} and HTTP response
      */
-    createOpportunityStageUsingPOST_0WithHttpInfo(opts) {
+    createOpportunityStageUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['opportunityStage'];
 
@@ -130,8 +130,8 @@ export default class OpportunityApi {
      * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} opts.opportunityStage opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage}
      */
-    createOpportunityStageUsingPOST_0(opts) {
-      return this.createOpportunityStageUsingPOST_0WithHttpInfo(opts)
+    createOpportunityStageUsingPOST(opts) {
+      return this.createOpportunityStageUsingPOSTWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -145,7 +145,7 @@ export default class OpportunityApi {
      * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} [opportunity] opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
-    createOpportunityUsingPOST1_0WithHttpInfo(opts) {
+    createOpportunityUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['opportunity'];
 
@@ -176,8 +176,8 @@ export default class OpportunityApi {
      * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} opts.opportunity opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
-    createOpportunityUsingPOST1_0(opts) {
-      return this.createOpportunityUsingPOST1_0WithHttpInfo(opts)
+    createOpportunityUsingPOST1(opts) {
+      return this.createOpportunityUsingPOST1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -190,11 +190,11 @@ export default class OpportunityApi {
      * @param {String} stageId stage_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteOpportunityStageUsingDELETE_0WithHttpInfo(stageId) {
+    deleteOpportunityStageUsingDELETEWithHttpInfo(stageId) {
       let postBody = null;
       // verify the required parameter 'stageId' is set
       if (stageId === undefined || stageId === null) {
-        throw new Error("Missing the required parameter 'stageId' when calling deleteOpportunityStageUsingDELETE_0");
+        throw new Error("Missing the required parameter 'stageId' when calling deleteOpportunityStageUsingDELETE");
       }
 
       let pathParams = {
@@ -224,8 +224,8 @@ export default class OpportunityApi {
      * @param {String} stageId stage_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteOpportunityStageUsingDELETE_0(stageId) {
-      return this.deleteOpportunityStageUsingDELETE_0WithHttpInfo(stageId)
+    deleteOpportunityStageUsingDELETE(stageId) {
+      return this.deleteOpportunityStageUsingDELETEWithHttpInfo(stageId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -238,11 +238,11 @@ export default class OpportunityApi {
      * @param {String} opportunityId opportunity_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteOpportunityUsingDELETE_0WithHttpInfo(opportunityId) {
+    deleteOpportunityUsingDELETEWithHttpInfo(opportunityId) {
       let postBody = null;
       // verify the required parameter 'opportunityId' is set
       if (opportunityId === undefined || opportunityId === null) {
-        throw new Error("Missing the required parameter 'opportunityId' when calling deleteOpportunityUsingDELETE_0");
+        throw new Error("Missing the required parameter 'opportunityId' when calling deleteOpportunityUsingDELETE");
       }
 
       let pathParams = {
@@ -272,8 +272,8 @@ export default class OpportunityApi {
      * @param {String} opportunityId opportunity_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteOpportunityUsingDELETE_0(opportunityId) {
-      return this.deleteOpportunityUsingDELETE_0WithHttpInfo(opportunityId)
+    deleteOpportunityUsingDELETE(opportunityId) {
+      return this.deleteOpportunityUsingDELETEWithHttpInfo(opportunityId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -286,11 +286,11 @@ export default class OpportunityApi {
      * @param {String} stageId stage_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage} and HTTP response
      */
-    getOpportunityStageUsingGET_0WithHttpInfo(stageId) {
+    getOpportunityStageUsingGETWithHttpInfo(stageId) {
       let postBody = null;
       // verify the required parameter 'stageId' is set
       if (stageId === undefined || stageId === null) {
-        throw new Error("Missing the required parameter 'stageId' when calling getOpportunityStageUsingGET_0");
+        throw new Error("Missing the required parameter 'stageId' when calling getOpportunityStageUsingGET");
       }
 
       let pathParams = {
@@ -320,8 +320,8 @@ export default class OpportunityApi {
      * @param {String} stageId stage_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage}
      */
-    getOpportunityStageUsingGET_0(stageId) {
-      return this.getOpportunityStageUsingGET_0WithHttpInfo(stageId)
+    getOpportunityStageUsingGET(stageId) {
+      return this.getOpportunityStageUsingGETWithHttpInfo(stageId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -334,11 +334,11 @@ export default class OpportunityApi {
      * @param {String} opportunityId opportunity_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
-    getOpportunityUsingGET1_0WithHttpInfo(opportunityId) {
+    getOpportunityUsingGET1WithHttpInfo(opportunityId) {
       let postBody = null;
       // verify the required parameter 'opportunityId' is set
       if (opportunityId === undefined || opportunityId === null) {
-        throw new Error("Missing the required parameter 'opportunityId' when calling getOpportunityUsingGET1_0");
+        throw new Error("Missing the required parameter 'opportunityId' when calling getOpportunityUsingGET1");
       }
 
       let pathParams = {
@@ -368,8 +368,8 @@ export default class OpportunityApi {
      * @param {String} opportunityId opportunity_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
-    getOpportunityUsingGET1_0(opportunityId) {
-      return this.getOpportunityUsingGET1_0WithHttpInfo(opportunityId)
+    getOpportunityUsingGET1(opportunityId) {
+      return this.getOpportunityUsingGET1WithHttpInfo(opportunityId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -387,7 +387,7 @@ export default class OpportunityApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListOpportunitiesResponse} and HTTP response
      */
-    listOpportunitiesUsingGET1_0WithHttpInfo(opts) {
+    listOpportunitiesUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -427,8 +427,8 @@ export default class OpportunityApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListOpportunitiesResponse}
      */
-    listOpportunitiesUsingGET1_0(opts) {
-      return this.listOpportunitiesUsingGET1_0WithHttpInfo(opts)
+    listOpportunitiesUsingGET1(opts) {
+      return this.listOpportunitiesUsingGET1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -445,7 +445,7 @@ export default class OpportunityApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListOpportunityStagesResponse} and HTTP response
      */
-    listOpportunityStagesUsingGET_0WithHttpInfo(opts) {
+    listOpportunityStagesUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -483,8 +483,8 @@ export default class OpportunityApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListOpportunityStagesResponse}
      */
-    listOpportunityStagesUsingGET_0(opts) {
-      return this.listOpportunityStagesUsingGET_0WithHttpInfo(opts)
+    listOpportunityStagesUsingGET(opts) {
+      return this.listOpportunityStagesUsingGETWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -500,16 +500,16 @@ export default class OpportunityApi {
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts) {
+    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
       opts = opts || {};
       let postBody = request;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new Error("Missing the required parameter 'customFieldId' when calling updateOpportunityCustomFieldUsingPATCH_0");
+        throw new Error("Missing the required parameter 'customFieldId' when calling updateOpportunityCustomFieldUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityCustomFieldUsingPATCH_0");
+        throw new Error("Missing the required parameter 'request' when calling updateOpportunityCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -543,8 +543,8 @@ export default class OpportunityApi {
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateOpportunityCustomFieldUsingPATCH_0(customFieldId, request, opts) {
-      return this.updateOpportunityCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts)
+    updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts) {
+      return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -560,16 +560,16 @@ export default class OpportunityApi {
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
-    updateOpportunityUsingPATCH_0WithHttpInfo(opportunityId, request, opts) {
+    updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, opts) {
       opts = opts || {};
       let postBody = request;
       // verify the required parameter 'opportunityId' is set
       if (opportunityId === undefined || opportunityId === null) {
-        throw new Error("Missing the required parameter 'opportunityId' when calling updateOpportunityUsingPATCH_0");
+        throw new Error("Missing the required parameter 'opportunityId' when calling updateOpportunityUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityUsingPATCH_0");
+        throw new Error("Missing the required parameter 'request' when calling updateOpportunityUsingPATCH");
       }
 
       let pathParams = {
@@ -603,8 +603,8 @@ export default class OpportunityApi {
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
-    updateOpportunityUsingPATCH_0(opportunityId, request, opts) {
-      return this.updateOpportunityUsingPATCH_0WithHttpInfo(opportunityId, request, opts)
+    updateOpportunityUsingPATCH(opportunityId, request, opts) {
+      return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

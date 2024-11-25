@@ -19,7 +19,7 @@ import ListProductsResponse from '../model/ListProductsResponse';
 /**
 * Product service.
 * @module com.keap.sdk.core/api/ProductApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class ProductApi {
 
@@ -46,7 +46,7 @@ export default class ProductApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListProductsResponse} and HTTP response
      */
-    listProductsUsingGET1_0WithHttpInfo(opts) {
+    listProductsUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -84,8 +84,8 @@ export default class ProductApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListProductsResponse}
      */
-    listProductsUsingGET1_0(opts) {
-      return this.listProductsUsingGET1_0WithHttpInfo(opts)
+    listProductsUsingGET1(opts) {
+      return this.listProductsUsingGET1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -4,23 +4,23 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createOpportunityCustomFieldsUsingPOST_0()**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST_0) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
-| [**createOpportunityStageUsingPOST_0()**](OpportunityApi.md#createOpportunityStageUsingPOST_0) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
-| [**createOpportunityUsingPOST1_0()**](OpportunityApi.md#createOpportunityUsingPOST1_0) | **POST** /v2/opportunities | Create an Opportunity |
-| [**deleteOpportunityStageUsingDELETE_0()**](OpportunityApi.md#deleteOpportunityStageUsingDELETE_0) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
-| [**deleteOpportunityUsingDELETE_0()**](OpportunityApi.md#deleteOpportunityUsingDELETE_0) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
-| [**getOpportunityStageUsingGET_0()**](OpportunityApi.md#getOpportunityStageUsingGET_0) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
-| [**getOpportunityUsingGET1_0()**](OpportunityApi.md#getOpportunityUsingGET1_0) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
-| [**listOpportunitiesUsingGET1_0()**](OpportunityApi.md#listOpportunitiesUsingGET1_0) | **GET** /v2/opportunities | List Opportunities |
-| [**listOpportunityStagesUsingGET_0()**](OpportunityApi.md#listOpportunityStagesUsingGET_0) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
-| [**updateOpportunityCustomFieldUsingPATCH_0()**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH_0) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
-| [**updateOpportunityUsingPATCH_0()**](OpportunityApi.md#updateOpportunityUsingPATCH_0) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
+| [**createOpportunityCustomFieldsUsingPOST()**](OpportunityApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
+| [**createOpportunityStageUsingPOST()**](OpportunityApi.md#createOpportunityStageUsingPOST) | **POST** /v2/opportunities/stages | Create an Opportunity Stage |
+| [**createOpportunityUsingPOST1()**](OpportunityApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity |
+| [**deleteOpportunityStageUsingDELETE()**](OpportunityApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
+| [**deleteOpportunityUsingDELETE()**](OpportunityApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**getOpportunityStageUsingGET()**](OpportunityApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
+| [**getOpportunityUsingGET1()**](OpportunityApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**listOpportunitiesUsingGET1()**](OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities |
+| [**listOpportunityStagesUsingGET()**](OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**updateOpportunityCustomFieldUsingPATCH()**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**updateOpportunityUsingPATCH()**](OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 
 
-## `createOpportunityCustomFieldsUsingPOST_0()`
+## `createOpportunityCustomFieldsUsingPOST()`
 
 ```php
-createOpportunityCustomFieldsUsingPOST_0($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createOpportunityCustomFieldsUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Opportunity Custom Field
@@ -42,10 +42,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createOpportunityCustomFieldsUsingPOST_0($custom_field);
+    $result = $apiInstance->createOpportunityCustomFieldsUsingPOST($custom_field);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->createOpportunityCustomFieldsUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->createOpportunityCustomFieldsUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -72,10 +72,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createOpportunityStageUsingPOST_0()`
+## `createOpportunityStageUsingPOST()`
 
 ```php
-createOpportunityStageUsingPOST_0($opportunity_stage): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+createOpportunityStageUsingPOST($opportunity_stage): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
 ```
 
 Create an Opportunity Stage
@@ -97,10 +97,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $opportunity_stage = new \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest | opportunity
 
 try {
-    $result = $apiInstance->createOpportunityStageUsingPOST_0($opportunity_stage);
+    $result = $apiInstance->createOpportunityStageUsingPOST($opportunity_stage);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->createOpportunityStageUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->createOpportunityStageUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -127,10 +127,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createOpportunityUsingPOST1_0()`
+## `createOpportunityUsingPOST1()`
 
 ```php
-createOpportunityUsingPOST1_0($opportunity): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+createOpportunityUsingPOST1($opportunity): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Create an Opportunity
@@ -152,10 +152,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $opportunity = new \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest | opportunity
 
 try {
-    $result = $apiInstance->createOpportunityUsingPOST1_0($opportunity);
+    $result = $apiInstance->createOpportunityUsingPOST1($opportunity);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->createOpportunityUsingPOST1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->createOpportunityUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -182,10 +182,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteOpportunityStageUsingDELETE_0()`
+## `deleteOpportunityStageUsingDELETE()`
 
 ```php
-deleteOpportunityStageUsingDELETE_0($stage_id)
+deleteOpportunityStageUsingDELETE($stage_id)
 ```
 
 Delete an Opportunity Stage
@@ -207,9 +207,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $stage_id = 'stage_id_example'; // string | stage_id
 
 try {
-    $apiInstance->deleteOpportunityStageUsingDELETE_0($stage_id);
+    $apiInstance->deleteOpportunityStageUsingDELETE($stage_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->deleteOpportunityStageUsingDELETE_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->deleteOpportunityStageUsingDELETE: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -236,10 +236,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteOpportunityUsingDELETE_0()`
+## `deleteOpportunityUsingDELETE()`
 
 ```php
-deleteOpportunityUsingDELETE_0($opportunity_id)
+deleteOpportunityUsingDELETE($opportunity_id)
 ```
 
 Delete an Opportunity
@@ -261,9 +261,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $opportunity_id = 'opportunity_id_example'; // string | opportunity_id
 
 try {
-    $apiInstance->deleteOpportunityUsingDELETE_0($opportunity_id);
+    $apiInstance->deleteOpportunityUsingDELETE($opportunity_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->deleteOpportunityUsingDELETE_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->deleteOpportunityUsingDELETE: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -290,10 +290,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getOpportunityStageUsingGET_0()`
+## `getOpportunityStageUsingGET()`
 
 ```php
-getOpportunityStageUsingGET_0($stage_id): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+getOpportunityStageUsingGET($stage_id): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
 ```
 
 Retrieve an Opportunity Stage
@@ -315,10 +315,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $stage_id = 'stage_id_example'; // string | stage_id
 
 try {
-    $result = $apiInstance->getOpportunityStageUsingGET_0($stage_id);
+    $result = $apiInstance->getOpportunityStageUsingGET($stage_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->getOpportunityStageUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->getOpportunityStageUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -345,10 +345,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getOpportunityUsingGET1_0()`
+## `getOpportunityUsingGET1()`
 
 ```php
-getOpportunityUsingGET1_0($opportunity_id): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+getOpportunityUsingGET1($opportunity_id): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Retrieve a Opportunity
@@ -370,10 +370,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
 $opportunity_id = 'opportunity_id_example'; // string | opportunity_id
 
 try {
-    $result = $apiInstance->getOpportunityUsingGET1_0($opportunity_id);
+    $result = $apiInstance->getOpportunityUsingGET1($opportunity_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->getOpportunityUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->getOpportunityUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -400,10 +400,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listOpportunitiesUsingGET1_0()`
+## `listOpportunitiesUsingGET1()`
 
 ```php
-listOpportunitiesUsingGET1_0($fields, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOpportunitiesResponse
+listOpportunitiesUsingGET1($fields, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOpportunitiesResponse
 ```
 
 List Opportunities
@@ -429,10 +429,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listOpportunitiesUsingGET1_0($fields, $filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listOpportunitiesUsingGET1($fields, $filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->listOpportunitiesUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->listOpportunitiesUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -463,10 +463,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listOpportunityStagesUsingGET_0()`
+## `listOpportunityStagesUsingGET()`
 
 ```php
-listOpportunityStagesUsingGET_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOpportunityStagesResponse
+listOpportunityStagesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOpportunityStagesResponse
 ```
 
 List of Opportunity Stages
@@ -491,10 +491,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listOpportunityStagesUsingGET_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listOpportunityStagesUsingGET($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->listOpportunityStagesUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->listOpportunityStagesUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -524,10 +524,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateOpportunityCustomFieldUsingPATCH_0()`
+## `updateOpportunityCustomFieldUsingPATCH()`
 
 ```php
-updateOpportunityCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Opportunity's Custom Field
@@ -551,10 +551,10 @@ $request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->updateOpportunityCustomFieldUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->updateOpportunityCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -583,10 +583,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateOpportunityUsingPATCH_0()`
+## `updateOpportunityUsingPATCH()`
 
 ```php
-updateOpportunityUsingPATCH_0($opportunity_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Update an opportunity
@@ -610,10 +610,10 @@ $request = new \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest(); // \Com\Keap\
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityUsingPATCH_0($opportunity_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OpportunityApi->updateOpportunityUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OpportunityApi->updateOpportunityUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

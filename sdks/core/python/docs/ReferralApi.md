@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_referral_using_post_0**](ReferralApi.md#create_referral_using_post_0) | **POST** /v2/referrals | Create a Referral
+[**create_referral_using_post**](ReferralApi.md#create_referral_using_post) | **POST** /v2/referrals | Create a Referral
 
 
-# **create_referral_using_post_0**
-> Referral create_referral_using_post_0(request)
+# **create_referral_using_post**
+> Referral create_referral_using_post(request)
 
 Create a Referral
 
@@ -38,11 +38,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Referral
-        api_response = api_instance.create_referral_using_post_0(request)
-        print("The response of ReferralApi->create_referral_using_post_0:\n")
+        api_response = api_instance.create_referral_using_post(request)
+        print("The response of ReferralApi->create_referral_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ReferralApi->create_referral_using_post_0: %s\n" % e)
+        print("Exception when calling ReferralApi->create_referral_using_post: %s\n" % e)
 ```
 
 

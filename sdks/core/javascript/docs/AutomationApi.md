@@ -1,4 +1,4 @@
-# KeapRestApi.AutomationApi
+# KeapCoreServiceCoreSdk.AutomationApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -24,12 +24,12 @@ Adds a list of contacts to an automation sequence Response contains a map of the
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationApi();
 let automationId = "automationId_example"; // String | automation_id
 let sequenceId = "sequenceId_example"; // String | sequence_id
-let addToAutomationSequenceRequest = new KeapRestApi.AddToAutomationSequenceRequest(); // AddToAutomationSequenceRequest | addToAutomationSequenceRequest
+let addToAutomationSequenceRequest = new KeapCoreServiceCoreSdk.AddToAutomationSequenceRequest(); // AddToAutomationSequenceRequest | addToAutomationSequenceRequest
 apiInstance.addContactsToAutomationSequenceUsingPOST(automationId, sequenceId, addToAutomationSequenceRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -72,9 +72,9 @@ Deletes a single automation
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationApi();
 let automationIds = [null]; // [Number] | automation_ids
 apiInstance.deleteAutomationUsingDELETE(automationIds).then(() => {
   console.log('API called successfully.');
@@ -116,9 +116,9 @@ Retrieves a single automation
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationApi();
 let automationId = "automationId_example"; // String | automation_id
 apiInstance.getAutomationUsingGET(automationId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -160,9 +160,9 @@ Lists all automations ids based on the request parameters.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.   - `filter=name%3D%3DSpring Automation`  - `filter=name%3D%3DTag New Contacts`  
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   - category   - activeContacts   - publishedDate   One of the following directions:   - asc   - desc
@@ -214,9 +214,9 @@ Lists all automations based on the request parameters.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationApi();
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.   - `filter=name%3D%3DSpring Automation`  - `filter=name%3D%3DTag New Contacts`  
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   - category   - activeContacts   - publishedDate   One of the following directions:   - asc   - desc
@@ -268,10 +268,10 @@ Updates the category of one or more automations
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.AutomationApi();
-let updateAutomationCategoryRequest = new KeapRestApi.UpdateAutomationCategoryRequest(); // UpdateAutomationCategoryRequest | updateAutomationCategoryRequest
+let apiInstance = new KeapCoreServiceCoreSdk.AutomationApi();
+let updateAutomationCategoryRequest = new KeapCoreServiceCoreSdk.UpdateAutomationCategoryRequest(); // UpdateAutomationCategoryRequest | updateAutomationCategoryRequest
 apiInstance.updateAutomationCategoryUsingPUT(updateAutomationCategoryRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {

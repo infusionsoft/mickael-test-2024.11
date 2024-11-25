@@ -1,4 +1,4 @@
-# KeapRestApi.AffiliateLink
+# KeapCoreServiceCoreSdk.AffiliateLink
 
 ## Properties
 

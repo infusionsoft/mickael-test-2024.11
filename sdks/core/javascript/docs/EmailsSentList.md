@@ -1,4 +1,4 @@
-# KeapRestApi.EmailsSentList
+# KeapCoreServiceCoreSdk.EmailsSentList
 
 ## Properties
 

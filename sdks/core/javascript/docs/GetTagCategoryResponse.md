@@ -1,4 +1,4 @@
-# KeapRestApi.GetTagCategoryResponse
+# KeapCoreServiceCoreSdk.GetTagCategoryResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.CreatePaymentMethodConfigRequest
+# KeapCoreServiceCoreSdk.CreatePaymentMethodConfigRequest
 
 ## Properties
 

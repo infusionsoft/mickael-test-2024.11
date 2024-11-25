@@ -1,4 +1,4 @@
-# KeapRestApi.SettingsApi
+# KeapCoreServiceCoreSdk.SettingsApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -21,9 +21,9 @@ Get configuration values for the application instance.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.SettingsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.SettingsApi();
 let opts = {
   'fields': ["null"] // [String] | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
 };
@@ -67,9 +67,9 @@ Gets a list of Contact Option types.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.SettingsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.SettingsApi();
 apiInstance.getContactOptionTypesUsingGET1().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -107,9 +107,9 @@ Check if the application is enabled or not
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.SettingsApi();
+let apiInstance = new KeapCoreServiceCoreSdk.SettingsApi();
 apiInstance.isApplicationEnabledUsingGET().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

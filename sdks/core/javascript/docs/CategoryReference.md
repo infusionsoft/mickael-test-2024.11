@@ -1,4 +1,4 @@
-# KeapRestApi.CategoryReference
+# KeapCoreServiceCoreSdk.CategoryReference
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.ShippingInformation
+# KeapCoreServiceCoreSdk.ShippingInformation
 
 ## Properties
 

@@ -287,9 +287,9 @@ import UsersApi from './api/UsersApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var KeapRestApi = require('com.keap.sdk.core/index'); // See note below*.
-* var xxxSvc = new KeapRestApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new KeapRestApi.Yyy(); // Construct a model instance.
+* var KeapCoreServiceCoreSdk = require('com.keap.sdk.core/index'); // See note below*.
+* var xxxSvc = new KeapCoreServiceCoreSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new KeapCoreServiceCoreSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -301,8 +301,8 @@ import UsersApi from './api/UsersApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new KeapRestApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new KeapRestApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new KeapCoreServiceCoreSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new KeapCoreServiceCoreSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -310,7 +310,7 @@ import UsersApi from './api/UsersApi';
 * </pre>
 * </p>
 * @module com.keap.sdk.core/index
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export {
     /**

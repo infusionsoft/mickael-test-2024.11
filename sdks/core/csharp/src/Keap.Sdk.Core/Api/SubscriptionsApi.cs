@@ -38,7 +38,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="cancelSubscriptionsRequest">cancelSubscriptionsRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CancelSubscriptionUsingPOST_0(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0);
+        void CancelSubscriptionUsingPOST(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0);
 
         /// <summary>
         /// Cancel Subscription
@@ -51,7 +51,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="cancelSubscriptionsRequest">cancelSubscriptionsRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CancelSubscriptionUsingPOST_0WithHttpInfo(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0);
+        ApiResponse<Object> CancelSubscriptionUsingPOSTWithHttpInfo(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0);
         /// <summary>
         /// Create a Subscription&#39;s Custom Field
         /// </summary>
@@ -62,7 +62,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST_0(CreateCustomFieldRequest customField, int operationIndex = 0);
+        CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST(CreateCustomFieldRequest customField, int operationIndex = 0);
 
         /// <summary>
         /// Create a Subscription&#39;s Custom Field
@@ -74,7 +74,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
         /// <summary>
         /// Create Subscription
         /// </summary>
@@ -107,7 +107,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ObjectModel</returns>
-        ObjectModel RetrieveSubscriptionCustomFieldModelUsingGET_0(int operationIndex = 0);
+        ObjectModel RetrieveSubscriptionCustomFieldModelUsingGET(int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Subscription&#39;s Custom Field Model
@@ -118,7 +118,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ObjectModel</returns>
-        ApiResponse<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo(int operationIndex = 0);
+        ApiResponse<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Update a Subscription&#39;s Custom Field
         /// </summary>
@@ -131,7 +131,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH_0(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Subscription&#39;s Custom Field
@@ -145,7 +145,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -167,7 +167,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CancelSubscriptionUsingPOST_0Async(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CancelSubscriptionUsingPOSTAsync(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Subscription
@@ -181,7 +181,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CancelSubscriptionUsingPOST_0WithHttpInfoAsync(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelSubscriptionUsingPOSTWithHttpInfoAsync(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a Subscription&#39;s Custom Field
         /// </summary>
@@ -193,7 +193,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOST_0Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOSTAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Subscription&#39;s Custom Field
@@ -206,7 +206,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateSubscriptionCustomFieldUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Subscription
         /// </summary>
@@ -242,7 +242,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectModel</returns>
-        System.Threading.Tasks.Task<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGET_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGETAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Subscription&#39;s Custom Field Model
@@ -254,7 +254,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObjectModel>> RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ObjectModel>> RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Subscription&#39;s Custom Field
         /// </summary>
@@ -268,7 +268,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCH_0Async(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Subscription&#39;s Custom Field
@@ -283,7 +283,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -412,9 +412,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="cancelSubscriptionsRequest">cancelSubscriptionsRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CancelSubscriptionUsingPOST_0(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0)
+        public void CancelSubscriptionUsingPOST(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0)
         {
-            CancelSubscriptionUsingPOST_0WithHttpInfo(subscriptionId, cancelSubscriptionsRequest);
+            CancelSubscriptionUsingPOSTWithHttpInfo(subscriptionId, cancelSubscriptionsRequest);
         }
 
         /// <summary>
@@ -425,18 +425,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="cancelSubscriptionsRequest">cancelSubscriptionsRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> CancelSubscriptionUsingPOST_0WithHttpInfo(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> CancelSubscriptionUsingPOSTWithHttpInfo(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0)
         {
             // verify the required parameter 'subscriptionId' is set
             if (subscriptionId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'subscriptionId' when calling SubscriptionsApi->CancelSubscriptionUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'subscriptionId' when calling SubscriptionsApi->CancelSubscriptionUsingPOST");
             }
 
             // verify the required parameter 'cancelSubscriptionsRequest' is set
             if (cancelSubscriptionsRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'cancelSubscriptionsRequest' when calling SubscriptionsApi->CancelSubscriptionUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'cancelSubscriptionsRequest' when calling SubscriptionsApi->CancelSubscriptionUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -465,7 +465,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("subscription_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(subscriptionId)); // path parameter
             localVarRequestOptions.Data = cancelSubscriptionsRequest;
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.CancelSubscriptionUsingPOST_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.CancelSubscriptionUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -473,7 +473,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Object>("/v2/subscriptions/{subscription_id}:deactivate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelSubscriptionUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelSubscriptionUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -492,9 +492,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CancelSubscriptionUsingPOST_0Async(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CancelSubscriptionUsingPOSTAsync(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await CancelSubscriptionUsingPOST_0WithHttpInfoAsync(subscriptionId, cancelSubscriptionsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            await CancelSubscriptionUsingPOSTWithHttpInfoAsync(subscriptionId, cancelSubscriptionsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -506,18 +506,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> CancelSubscriptionUsingPOST_0WithHttpInfoAsync(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> CancelSubscriptionUsingPOSTWithHttpInfoAsync(string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'subscriptionId' is set
             if (subscriptionId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'subscriptionId' when calling SubscriptionsApi->CancelSubscriptionUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'subscriptionId' when calling SubscriptionsApi->CancelSubscriptionUsingPOST");
             }
 
             // verify the required parameter 'cancelSubscriptionsRequest' is set
             if (cancelSubscriptionsRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'cancelSubscriptionsRequest' when calling SubscriptionsApi->CancelSubscriptionUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'cancelSubscriptionsRequest' when calling SubscriptionsApi->CancelSubscriptionUsingPOST");
             }
 
 
@@ -547,7 +547,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("subscription_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(subscriptionId)); // path parameter
             localVarRequestOptions.Data = cancelSubscriptionsRequest;
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.CancelSubscriptionUsingPOST_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.CancelSubscriptionUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -556,7 +556,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelSubscriptionUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelSubscriptionUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -573,9 +573,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST_0(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST(CreateCustomFieldRequest customField, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfo(customField);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField);
             return localVarResponse.Data;
         }
 
@@ -586,12 +586,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
         {
             // verify the required parameter 'customField' is set
             if (customField == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling SubscriptionsApi->CreateSubscriptionCustomFieldUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling SubscriptionsApi->CreateSubscriptionCustomFieldUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -619,7 +619,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = customField;
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -627,7 +627,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<CustomFieldMetaData>("/v2/subscriptions/model/customFields", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateSubscriptionCustomFieldUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateSubscriptionCustomFieldUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -645,9 +645,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOST_0Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateSubscriptionCustomFieldUsingPOSTAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateSubscriptionCustomFieldUsingPOSTWithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -659,12 +659,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateSubscriptionCustomFieldUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customField' is set
             if (customField == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling SubscriptionsApi->CreateSubscriptionCustomFieldUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling SubscriptionsApi->CreateSubscriptionCustomFieldUsingPOST");
             }
 
 
@@ -693,7 +693,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = customField;
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -702,7 +702,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateSubscriptionCustomFieldUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateSubscriptionCustomFieldUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -864,9 +864,9 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ObjectModel</returns>
-        public ObjectModel RetrieveSubscriptionCustomFieldModelUsingGET_0(int operationIndex = 0)
+        public ObjectModel RetrieveSubscriptionCustomFieldModelUsingGET(int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo();
+            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -876,7 +876,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ObjectModel</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo(int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo(int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -901,7 +901,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -909,7 +909,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ObjectModel>("/v2/subscriptions/model", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetrieveSubscriptionCustomFieldModelUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetrieveSubscriptionCustomFieldModelUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -926,9 +926,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectModel</returns>
-        public async System.Threading.Tasks.Task<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGET_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ObjectModel> RetrieveSubscriptionCustomFieldModelUsingGETAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = await RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = await RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -939,7 +939,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectModel)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ObjectModel>> RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ObjectModel>> RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -965,7 +965,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -974,7 +974,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetrieveSubscriptionCustomFieldModelUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetrieveSubscriptionCustomFieldModelUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -993,9 +993,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH_0(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             return localVarResponse.Data;
         }
 
@@ -1008,18 +1008,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1052,7 +1052,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1060,7 +1060,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<CustomFieldMetaData>("/v2/subscriptions/model/customFields/{custom_field_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSubscriptionCustomFieldUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateSubscriptionCustomFieldUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1080,9 +1080,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCH_0Async(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateSubscriptionCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1096,18 +1096,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling SubscriptionsApi->UpdateSubscriptionCustomFieldUsingPATCH");
             }
 
 
@@ -1141,7 +1141,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH_0";
+            localVarRequestOptions.Operation = "SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1150,7 +1150,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSubscriptionCustomFieldUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateSubscriptionCustomFieldUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

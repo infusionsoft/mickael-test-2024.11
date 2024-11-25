@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listShippingMethodsUsingGET_0()**](ShippingApi.md#listShippingMethodsUsingGET_0) | **GET** /v2/shipping | List Shipping methods |
+| [**listShippingMethodsUsingGET()**](ShippingApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods |
 
 
-## `listShippingMethodsUsingGET_0()`
+## `listShippingMethodsUsingGET()`
 
 ```php
-listShippingMethodsUsingGET_0(): \Com\Keap\Sdk\Core\Model\ListRestShippingMethodsResponse
+listShippingMethodsUsingGET(): \Com\Keap\Sdk\Core\Model\ListRestShippingMethodsResponse
 ```
 
 List Shipping methods
@@ -31,10 +31,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ShippingApi(
 );
 
 try {
-    $result = $apiInstance->listShippingMethodsUsingGET_0();
+    $result = $apiInstance->listShippingMethodsUsingGET();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ShippingApi->listShippingMethodsUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ShippingApi->listShippingMethodsUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

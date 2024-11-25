@@ -1,4 +1,4 @@
-# KeapRestApi.CreatePatchTaskRequest
+# KeapCoreServiceCoreSdk.CreatePatchTaskRequest
 
 ## Properties
 

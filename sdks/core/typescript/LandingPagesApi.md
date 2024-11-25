@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listLandingPagesUsingGET_0**](LandingPagesApi.md#listLandingPagesUsingGET_0) | **GET** /v2/landingpages | List Landing Pages
+[**listLandingPagesUsingGET**](LandingPagesApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
 
 
-# **listLandingPagesUsingGET_0**
-> ListLandingPagesResponse listLandingPagesUsingGET_0()
+# **listLandingPagesUsingGET**
+> ListLandingPagesResponse listLandingPagesUsingGET()
 
 Retrieves a list of all landing pages
 
@@ -17,12 +17,12 @@ Retrieves a list of all landing pages
 
 ```typescript
 import { createConfiguration, LandingPagesApi } from '';
-import type { LandingPagesApiListLandingPagesUsingGET0Request } from '';
+import type { LandingPagesApiListLandingPagesUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new LandingPagesApi(configuration);
 
-const request: LandingPagesApiListLandingPagesUsingGET0Request = {
+const request: LandingPagesApiListLandingPagesUsingGETRequest = {
     // Search filter to apply to results (optional)
   filter: "filter_example",
     // Attribute and direction to order items by. E.g. `given_name desc` (optional)
@@ -33,7 +33,7 @@ const request: LandingPagesApiListLandingPagesUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listLandingPagesUsingGET_0(request);
+const data = await apiInstance.listLandingPagesUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

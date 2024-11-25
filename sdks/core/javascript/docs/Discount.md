@@ -1,4 +1,4 @@
-# KeapRestApi.Discount
+# KeapCoreServiceCoreSdk.Discount
 
 ## Properties
 

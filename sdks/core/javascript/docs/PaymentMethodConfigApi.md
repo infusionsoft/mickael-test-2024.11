@@ -1,4 +1,4 @@
-# KeapRestApi.PaymentMethodConfigApi
+# KeapCoreServiceCoreSdk.PaymentMethodConfigApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -19,10 +19,10 @@ Creates configuration details for rendering payment method components
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.PaymentMethodConfigApi();
-let request = new KeapRestApi.CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
+let apiInstance = new KeapCoreServiceCoreSdk.PaymentMethodConfigApi();
+let request = new KeapCoreServiceCoreSdk.CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
 apiInstance.createPaymentMethodConfigUsingPOST(request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

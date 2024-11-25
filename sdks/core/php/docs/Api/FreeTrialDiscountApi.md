@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**deleteDiscountUsingDELETE1_0()**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1_0) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**deleteDiscountUsingDELETE1()**](FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 
 
-## `deleteDiscountUsingDELETE1_0()`
+## `deleteDiscountUsingDELETE1()`
 
 ```php
-deleteDiscountUsingDELETE1_0($discount_id)
+deleteDiscountUsingDELETE1($discount_id)
 ```
 
 Delete a Free Trial Discount
@@ -32,9 +32,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\FreeTrialDiscountApi(
 $discount_id = 'discount_id_example'; // string | discount_id
 
 try {
-    $apiInstance->deleteDiscountUsingDELETE1_0($discount_id);
+    $apiInstance->deleteDiscountUsingDELETE1($discount_id);
 } catch (Exception $e) {
-    echo 'Exception when calling FreeTrialDiscountApi->deleteDiscountUsingDELETE1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FreeTrialDiscountApi->deleteDiscountUsingDELETE1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

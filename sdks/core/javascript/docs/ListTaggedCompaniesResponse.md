@@ -1,4 +1,4 @@
-# KeapRestApi.ListTaggedCompaniesResponse
+# KeapCoreServiceCoreSdk.ListTaggedCompaniesResponse
 
 ## Properties
 

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**listSubscriptionPlansUsingGET_0**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0) | **GET** /v2/subscriptionPlans | List Subscription Plans |
-| [**listSubscriptionPlansUsingGET_0WithHttpInfo**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0WithHttpInfo) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**listSubscriptionPlansUsingGET**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**listSubscriptionPlansUsingGETWithHttpInfo**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGETWithHttpInfo) | **GET** /v2/subscriptionPlans | List Subscription Plans |
 
 
 
-## listSubscriptionPlansUsingGET_0
+## listSubscriptionPlansUsingGET
 
-> ListSubscriptionPlansResponse listSubscriptionPlansUsingGET_0(filter, orderBy, pageSize, pageToken)
+> ListSubscriptionPlansResponse listSubscriptionPlansUsingGET(filter, orderBy, pageSize, pageToken)
 
 List Subscription Plans
 
@@ -21,11 +21,11 @@ Retrieves a list of Subscription Plans
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionPlansApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionPlansApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -38,10 +38,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListSubscriptionPlansResponse result = apiInstance.listSubscriptionPlansUsingGET_0(filter, orderBy, pageSize, pageToken);
+            ListSubscriptionPlansResponse result = apiInstance.listSubscriptionPlansUsingGET(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionPlansApi#listSubscriptionPlansUsingGET_0");
+            System.err.println("Exception when calling SubscriptionPlansApi#listSubscriptionPlansUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -83,9 +83,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listSubscriptionPlansUsingGET_0WithHttpInfo
+## listSubscriptionPlansUsingGETWithHttpInfo
 
-> ApiResponse<ListSubscriptionPlansResponse> listSubscriptionPlansUsingGET_0 listSubscriptionPlansUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListSubscriptionPlansResponse> listSubscriptionPlansUsingGET listSubscriptionPlansUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List Subscription Plans
 
@@ -95,12 +95,12 @@ Retrieves a list of Subscription Plans
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.SubscriptionPlansApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionPlansApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -113,12 +113,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListSubscriptionPlansResponse> response = apiInstance.listSubscriptionPlansUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListSubscriptionPlansResponse> response = apiInstance.listSubscriptionPlansUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscriptionPlansApi#listSubscriptionPlansUsingGET_0");
+            System.err.println("Exception when calling SubscriptionPlansApi#listSubscriptionPlansUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

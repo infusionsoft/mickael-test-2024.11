@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "keap-sdk-core-sdk"
-VERSION = "0.0.17"
+VERSION = "0.0.18"
 PYTHON_REQUIRES = ">= 3.8"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 3.0.0",
@@ -35,7 +35,7 @@ setup(
     description="Keap REST API",
     author="https://developer.keap.com/get-support/",
     author_email="team@openapitools.org",
-    url="",
+    url="https://github.com/infusionsoft/keap-sdk.git",
     keywords=["OpenAPI", "OpenAPI-Generator", "Keap REST API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),

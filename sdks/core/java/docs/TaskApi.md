@@ -4,30 +4,30 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createTaskCustomFieldUsingPOST1_0**](TaskApi.md#createTaskCustomFieldUsingPOST1_0) | **POST** /v2/tasks/model/customFields | Create a Custom Field |
-| [**createTaskCustomFieldUsingPOST1_0WithHttpInfo**](TaskApi.md#createTaskCustomFieldUsingPOST1_0WithHttpInfo) | **POST** /v2/tasks/model/customFields | Create a Custom Field |
-| [**createTaskUsingPOST1_0**](TaskApi.md#createTaskUsingPOST1_0) | **POST** /v2/tasks | Create a Task |
-| [**createTaskUsingPOST1_0WithHttpInfo**](TaskApi.md#createTaskUsingPOST1_0WithHttpInfo) | **POST** /v2/tasks | Create a Task |
-| [**deleteTaskCustomFieldUsingDELETE_0**](TaskApi.md#deleteTaskCustomFieldUsingDELETE_0) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
-| [**deleteTaskCustomFieldUsingDELETE_0WithHttpInfo**](TaskApi.md#deleteTaskCustomFieldUsingDELETE_0WithHttpInfo) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
-| [**deleteTaskUsingDELETE1_0**](TaskApi.md#deleteTaskUsingDELETE1_0) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
-| [**deleteTaskUsingDELETE1_0WithHttpInfo**](TaskApi.md#deleteTaskUsingDELETE1_0WithHttpInfo) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
-| [**getTaskUsingGET1_0**](TaskApi.md#getTaskUsingGET1_0) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
-| [**getTaskUsingGET1_0WithHttpInfo**](TaskApi.md#getTaskUsingGET1_0WithHttpInfo) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
-| [**listTasksUsingGET1_0**](TaskApi.md#listTasksUsingGET1_0) | **GET** /v2/tasks | List Tasks |
-| [**listTasksUsingGET1_0WithHttpInfo**](TaskApi.md#listTasksUsingGET1_0WithHttpInfo) | **GET** /v2/tasks | List Tasks |
-| [**patchTaskUsingPATCH_0**](TaskApi.md#patchTaskUsingPATCH_0) | **PATCH** /v2/tasks/{task_id} | Update a Task |
-| [**patchTaskUsingPATCH_0WithHttpInfo**](TaskApi.md#patchTaskUsingPATCH_0WithHttpInfo) | **PATCH** /v2/tasks/{task_id} | Update a Task |
-| [**retrieveTaskModelUsingGET1_0**](TaskApi.md#retrieveTaskModelUsingGET1_0) | **GET** /v2/tasks/model | Retrieve Task Model |
-| [**retrieveTaskModelUsingGET1_0WithHttpInfo**](TaskApi.md#retrieveTaskModelUsingGET1_0WithHttpInfo) | **GET** /v2/tasks/model | Retrieve Task Model |
-| [**updateTaskCustomFieldUsingPATCH_0**](TaskApi.md#updateTaskCustomFieldUsingPATCH_0) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
-| [**updateTaskCustomFieldUsingPATCH_0WithHttpInfo**](TaskApi.md#updateTaskCustomFieldUsingPATCH_0WithHttpInfo) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
+| [**createTaskCustomFieldUsingPOST1**](TaskApi.md#createTaskCustomFieldUsingPOST1) | **POST** /v2/tasks/model/customFields | Create a Custom Field |
+| [**createTaskCustomFieldUsingPOST1WithHttpInfo**](TaskApi.md#createTaskCustomFieldUsingPOST1WithHttpInfo) | **POST** /v2/tasks/model/customFields | Create a Custom Field |
+| [**createTaskUsingPOST1**](TaskApi.md#createTaskUsingPOST1) | **POST** /v2/tasks | Create a Task |
+| [**createTaskUsingPOST1WithHttpInfo**](TaskApi.md#createTaskUsingPOST1WithHttpInfo) | **POST** /v2/tasks | Create a Task |
+| [**deleteTaskCustomFieldUsingDELETE**](TaskApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
+| [**deleteTaskCustomFieldUsingDELETEWithHttpInfo**](TaskApi.md#deleteTaskCustomFieldUsingDELETEWithHttpInfo) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
+| [**deleteTaskUsingDELETE1**](TaskApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
+| [**deleteTaskUsingDELETE1WithHttpInfo**](TaskApi.md#deleteTaskUsingDELETE1WithHttpInfo) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
+| [**getTaskUsingGET1**](TaskApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
+| [**getTaskUsingGET1WithHttpInfo**](TaskApi.md#getTaskUsingGET1WithHttpInfo) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
+| [**listTasksUsingGET1**](TaskApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks |
+| [**listTasksUsingGET1WithHttpInfo**](TaskApi.md#listTasksUsingGET1WithHttpInfo) | **GET** /v2/tasks | List Tasks |
+| [**patchTaskUsingPATCH**](TaskApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task |
+| [**patchTaskUsingPATCHWithHttpInfo**](TaskApi.md#patchTaskUsingPATCHWithHttpInfo) | **PATCH** /v2/tasks/{task_id} | Update a Task |
+| [**retrieveTaskModelUsingGET1**](TaskApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model |
+| [**retrieveTaskModelUsingGET1WithHttpInfo**](TaskApi.md#retrieveTaskModelUsingGET1WithHttpInfo) | **GET** /v2/tasks/model | Retrieve Task Model |
+| [**updateTaskCustomFieldUsingPATCH**](TaskApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
+| [**updateTaskCustomFieldUsingPATCHWithHttpInfo**](TaskApi.md#updateTaskCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
 
 
 
-## createTaskCustomFieldUsingPOST1_0
+## createTaskCustomFieldUsingPOST1
 
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1_0(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
 
 Create a Custom Field
 
@@ -37,11 +37,11 @@ Adds a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -51,10 +51,10 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CreateCustomFieldResponse result = apiInstance.createTaskCustomFieldUsingPOST1_0(customField);
+            CreateCustomFieldResponse result = apiInstance.createTaskCustomFieldUsingPOST1(customField);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#createTaskCustomFieldUsingPOST1_0");
+            System.err.println("Exception when calling TaskApi#createTaskCustomFieldUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -92,9 +92,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createTaskCustomFieldUsingPOST1_0WithHttpInfo
+## createTaskCustomFieldUsingPOST1WithHttpInfo
 
-> ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1_0 createTaskCustomFieldUsingPOST1_0WithHttpInfo(customField)
+> ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1 createTaskCustomFieldUsingPOST1WithHttpInfo(customField)
 
 Create a Custom Field
 
@@ -104,12 +104,12 @@ Adds a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -119,12 +119,12 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CreateCustomFieldResponse> response = apiInstance.createTaskCustomFieldUsingPOST1_0WithHttpInfo(customField);
+            ApiResponse<CreateCustomFieldResponse> response = apiInstance.createTaskCustomFieldUsingPOST1WithHttpInfo(customField);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#createTaskCustomFieldUsingPOST1_0");
+            System.err.println("Exception when calling TaskApi#createTaskCustomFieldUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -163,9 +163,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createTaskUsingPOST1_0
+## createTaskUsingPOST1
 
-> Task createTaskUsingPOST1_0(task)
+> Task createTaskUsingPOST1(task)
 
 Create a Task
 
@@ -175,11 +175,11 @@ Creates a new task as the authenticated user.   This endpoint does not currently
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -189,10 +189,10 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         CreateTaskRequest task = new CreateTaskRequest(); // CreateTaskRequest | task
         try {
-            Task result = apiInstance.createTaskUsingPOST1_0(task);
+            Task result = apiInstance.createTaskUsingPOST1(task);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#createTaskUsingPOST1_0");
+            System.err.println("Exception when calling TaskApi#createTaskUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -230,9 +230,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createTaskUsingPOST1_0WithHttpInfo
+## createTaskUsingPOST1WithHttpInfo
 
-> ApiResponse<Task> createTaskUsingPOST1_0 createTaskUsingPOST1_0WithHttpInfo(task)
+> ApiResponse<Task> createTaskUsingPOST1 createTaskUsingPOST1WithHttpInfo(task)
 
 Create a Task
 
@@ -242,12 +242,12 @@ Creates a new task as the authenticated user.   This endpoint does not currently
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -257,12 +257,12 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         CreateTaskRequest task = new CreateTaskRequest(); // CreateTaskRequest | task
         try {
-            ApiResponse<Task> response = apiInstance.createTaskUsingPOST1_0WithHttpInfo(task);
+            ApiResponse<Task> response = apiInstance.createTaskUsingPOST1WithHttpInfo(task);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#createTaskUsingPOST1_0");
+            System.err.println("Exception when calling TaskApi#createTaskUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -301,9 +301,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## deleteTaskCustomFieldUsingDELETE_0
+## deleteTaskCustomFieldUsingDELETE
 
-> void deleteTaskCustomFieldUsingDELETE_0(customFieldId)
+> void deleteTaskCustomFieldUsingDELETE(customFieldId)
 
 Delete a Custom Field
 
@@ -313,11 +313,11 @@ Deletes a Custom Field from Task.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -327,9 +327,9 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
         try {
-            apiInstance.deleteTaskCustomFieldUsingDELETE_0(customFieldId);
+            apiInstance.deleteTaskCustomFieldUsingDELETE(customFieldId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#deleteTaskCustomFieldUsingDELETE_0");
+            System.err.println("Exception when calling TaskApi#deleteTaskCustomFieldUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -368,9 +368,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteTaskCustomFieldUsingDELETE_0WithHttpInfo
+## deleteTaskCustomFieldUsingDELETEWithHttpInfo
 
-> ApiResponse<Void> deleteTaskCustomFieldUsingDELETE_0 deleteTaskCustomFieldUsingDELETE_0WithHttpInfo(customFieldId)
+> ApiResponse<Void> deleteTaskCustomFieldUsingDELETE deleteTaskCustomFieldUsingDELETEWithHttpInfo(customFieldId)
 
 Delete a Custom Field
 
@@ -380,12 +380,12 @@ Deletes a Custom Field from Task.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -395,11 +395,11 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteTaskCustomFieldUsingDELETE_0WithHttpInfo(customFieldId);
+            ApiResponse<Void> response = apiInstance.deleteTaskCustomFieldUsingDELETEWithHttpInfo(customFieldId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#deleteTaskCustomFieldUsingDELETE_0");
+            System.err.println("Exception when calling TaskApi#deleteTaskCustomFieldUsingDELETE");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -439,9 +439,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## deleteTaskUsingDELETE1_0
+## deleteTaskUsingDELETE1
 
-> void deleteTaskUsingDELETE1_0(taskId)
+> void deleteTaskUsingDELETE1(taskId)
 
 Delete a Task
 
@@ -451,11 +451,11 @@ Deletes a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -465,9 +465,9 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         try {
-            apiInstance.deleteTaskUsingDELETE1_0(taskId);
+            apiInstance.deleteTaskUsingDELETE1(taskId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#deleteTaskUsingDELETE1_0");
+            System.err.println("Exception when calling TaskApi#deleteTaskUsingDELETE1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -506,9 +506,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## deleteTaskUsingDELETE1_0WithHttpInfo
+## deleteTaskUsingDELETE1WithHttpInfo
 
-> ApiResponse<Void> deleteTaskUsingDELETE1_0 deleteTaskUsingDELETE1_0WithHttpInfo(taskId)
+> ApiResponse<Void> deleteTaskUsingDELETE1 deleteTaskUsingDELETE1WithHttpInfo(taskId)
 
 Delete a Task
 
@@ -518,12 +518,12 @@ Deletes a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -533,11 +533,11 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         try {
-            ApiResponse<Void> response = apiInstance.deleteTaskUsingDELETE1_0WithHttpInfo(taskId);
+            ApiResponse<Void> response = apiInstance.deleteTaskUsingDELETE1WithHttpInfo(taskId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#deleteTaskUsingDELETE1_0");
+            System.err.println("Exception when calling TaskApi#deleteTaskUsingDELETE1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -577,9 +577,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getTaskUsingGET1_0
+## getTaskUsingGET1
 
-> Task getTaskUsingGET1_0(taskId)
+> Task getTaskUsingGET1(taskId)
 
 Retrieve a Task
 
@@ -589,11 +589,11 @@ Retrieves a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -603,10 +603,10 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         try {
-            Task result = apiInstance.getTaskUsingGET1_0(taskId);
+            Task result = apiInstance.getTaskUsingGET1(taskId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#getTaskUsingGET1_0");
+            System.err.println("Exception when calling TaskApi#getTaskUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -645,9 +645,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getTaskUsingGET1_0WithHttpInfo
+## getTaskUsingGET1WithHttpInfo
 
-> ApiResponse<Task> getTaskUsingGET1_0 getTaskUsingGET1_0WithHttpInfo(taskId)
+> ApiResponse<Task> getTaskUsingGET1 getTaskUsingGET1WithHttpInfo(taskId)
 
 Retrieve a Task
 
@@ -657,12 +657,12 @@ Retrieves a single task
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -672,12 +672,12 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         try {
-            ApiResponse<Task> response = apiInstance.getTaskUsingGET1_0WithHttpInfo(taskId);
+            ApiResponse<Task> response = apiInstance.getTaskUsingGET1WithHttpInfo(taskId);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#getTaskUsingGET1_0");
+            System.err.println("Exception when calling TaskApi#getTaskUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -717,9 +717,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## listTasksUsingGET1_0
+## listTasksUsingGET1
 
-> ListTasksResponse listTasksUsingGET1_0(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime)
+> ListTasksResponse listTasksUsingGET1(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime)
 
 List Tasks
 
@@ -729,11 +729,11 @@ Retrieve a list of tasks based on the provided filter. Tasks which are not assig
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -748,10 +748,10 @@ public class Example {
         String pageToken = "pageToken_example"; // String | Page token
         String startDueTime = "startDueTime_example"; // String | 
         try {
-            ListTasksResponse result = apiInstance.listTasksUsingGET1_0(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime);
+            ListTasksResponse result = apiInstance.listTasksUsingGET1(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#listTasksUsingGET1_0");
+            System.err.println("Exception when calling TaskApi#listTasksUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -795,9 +795,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listTasksUsingGET1_0WithHttpInfo
+## listTasksUsingGET1WithHttpInfo
 
-> ApiResponse<ListTasksResponse> listTasksUsingGET1_0 listTasksUsingGET1_0WithHttpInfo(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime)
+> ApiResponse<ListTasksResponse> listTasksUsingGET1 listTasksUsingGET1WithHttpInfo(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime)
 
 List Tasks
 
@@ -807,12 +807,12 @@ Retrieve a list of tasks based on the provided filter. Tasks which are not assig
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -827,12 +827,12 @@ public class Example {
         String pageToken = "pageToken_example"; // String | Page token
         String startDueTime = "startDueTime_example"; // String | 
         try {
-            ApiResponse<ListTasksResponse> response = apiInstance.listTasksUsingGET1_0WithHttpInfo(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime);
+            ApiResponse<ListTasksResponse> response = apiInstance.listTasksUsingGET1WithHttpInfo(endDueTime, filter, orderBy, pageSize, pageToken, startDueTime);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#listTasksUsingGET1_0");
+            System.err.println("Exception when calling TaskApi#listTasksUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -877,9 +877,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## patchTaskUsingPATCH_0
+## patchTaskUsingPATCH
 
-> UpdateTaskResponse patchTaskUsingPATCH_0(taskId, updateMask, task)
+> UpdateTaskResponse patchTaskUsingPATCH(taskId, updateMask, task)
 
 Update a Task
 
@@ -889,11 +889,11 @@ Updates a task with only the values provided in the request.  This endpoint does
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -905,10 +905,10 @@ public class Example {
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         CreatePatchTaskRequest task = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
         try {
-            UpdateTaskResponse result = apiInstance.patchTaskUsingPATCH_0(taskId, updateMask, task);
+            UpdateTaskResponse result = apiInstance.patchTaskUsingPATCH(taskId, updateMask, task);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#patchTaskUsingPATCH_0");
+            System.err.println("Exception when calling TaskApi#patchTaskUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -949,9 +949,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## patchTaskUsingPATCH_0WithHttpInfo
+## patchTaskUsingPATCHWithHttpInfo
 
-> ApiResponse<UpdateTaskResponse> patchTaskUsingPATCH_0 patchTaskUsingPATCH_0WithHttpInfo(taskId, updateMask, task)
+> ApiResponse<UpdateTaskResponse> patchTaskUsingPATCH patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task)
 
 Update a Task
 
@@ -961,12 +961,12 @@ Updates a task with only the values provided in the request.  This endpoint does
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -978,12 +978,12 @@ public class Example {
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         CreatePatchTaskRequest task = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
         try {
-            ApiResponse<UpdateTaskResponse> response = apiInstance.patchTaskUsingPATCH_0WithHttpInfo(taskId, updateMask, task);
+            ApiResponse<UpdateTaskResponse> response = apiInstance.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#patchTaskUsingPATCH_0");
+            System.err.println("Exception when calling TaskApi#patchTaskUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1025,9 +1025,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## retrieveTaskModelUsingGET1_0
+## retrieveTaskModelUsingGET1
 
-> ObjectModel retrieveTaskModelUsingGET1_0()
+> ObjectModel retrieveTaskModelUsingGET1()
 
 Retrieve Task Model
 
@@ -1037,11 +1037,11 @@ Get the custom fields for the Task object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1050,10 +1050,10 @@ public class Example {
 
         TaskApi apiInstance = new TaskApi(defaultClient);
         try {
-            ObjectModel result = apiInstance.retrieveTaskModelUsingGET1_0();
+            ObjectModel result = apiInstance.retrieveTaskModelUsingGET1();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#retrieveTaskModelUsingGET1_0");
+            System.err.println("Exception when calling TaskApi#retrieveTaskModelUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1089,9 +1089,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## retrieveTaskModelUsingGET1_0WithHttpInfo
+## retrieveTaskModelUsingGET1WithHttpInfo
 
-> ApiResponse<ObjectModel> retrieveTaskModelUsingGET1_0 retrieveTaskModelUsingGET1_0WithHttpInfo()
+> ApiResponse<ObjectModel> retrieveTaskModelUsingGET1 retrieveTaskModelUsingGET1WithHttpInfo()
 
 Retrieve Task Model
 
@@ -1101,12 +1101,12 @@ Get the custom fields for the Task object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1115,12 +1115,12 @@ public class Example {
 
         TaskApi apiInstance = new TaskApi(defaultClient);
         try {
-            ApiResponse<ObjectModel> response = apiInstance.retrieveTaskModelUsingGET1_0WithHttpInfo();
+            ApiResponse<ObjectModel> response = apiInstance.retrieveTaskModelUsingGET1WithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#retrieveTaskModelUsingGET1_0");
+            System.err.println("Exception when calling TaskApi#retrieveTaskModelUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -1157,9 +1157,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## updateTaskCustomFieldUsingPATCH_0
+## updateTaskCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH_0(customFieldId, request, updateMask)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask)
 
 Update a Task&#39;s Custom Field
 
@@ -1169,11 +1169,11 @@ Updates a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1185,10 +1185,10 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateTaskCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#updateTaskCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling TaskApi#updateTaskCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1229,9 +1229,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## updateTaskCustomFieldUsingPATCH_0WithHttpInfo
+## updateTaskCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCH_0 updateTaskCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCH updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
 
 Update a Task&#39;s Custom Field
 
@@ -1241,12 +1241,12 @@ Updates a custom field of the specified type and options to the Task object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.TaskApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TaskApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1258,12 +1258,12 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateTaskCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling TaskApi#updateTaskCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling TaskApi#updateTaskCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

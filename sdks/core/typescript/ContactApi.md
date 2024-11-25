@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**createContactUsingPOST1**](ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact
 [**deleteContactUsingDELETE1**](ContactApi.md#deleteContactUsingDELETE1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 [**getContactUsingGET1**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-[**getContactsBySearchTermUsingGET_0**](ContactApi.md#getContactsBySearchTermUsingGET_0) | **GET** /v2/contacts:search | Search for Contacts
+[**getContactsBySearchTermUsingGET**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**linkContactsUsingPOST**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts
 [**listContactLinkTypesUsingGET**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types
 [**listContactLinksUsingGET**](ContactApi.md#listContactLinksUsingGET) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts
@@ -332,8 +332,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **getContactsBySearchTermUsingGET_0**
-> ListBasicContactResponse getContactsBySearchTermUsingGET_0()
+# **getContactsBySearchTermUsingGET**
+> ListBasicContactResponse getContactsBySearchTermUsingGET()
 
 Get a list of Contacts based search parameters.
 
@@ -342,17 +342,17 @@ Get a list of Contacts based search parameters.
 
 ```typescript
 import { createConfiguration, ContactApi } from '';
-import type { ContactApiGetContactsBySearchTermUsingGET0Request } from '';
+import type { ContactApiGetContactsBySearchTermUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new ContactApi(configuration);
 
-const request: ContactApiGetContactsBySearchTermUsingGET0Request = {
+const request: ContactApiGetContactsBySearchTermUsingGETRequest = {
     // searchParam
   searchParam: "searchParam_example",
 };
 
-const data = await apiInstance.getContactsBySearchTermUsingGET_0(request);
+const data = await apiInstance.getContactsBySearchTermUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

@@ -1,4 +1,4 @@
-# KeapRestApi.CreateUserRequestV2
+# KeapCoreServiceCoreSdk.CreateUserRequestV2
 
 ## Properties
 

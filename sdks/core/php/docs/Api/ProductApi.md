@@ -4,13 +4,13 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listProductsUsingGET1_0()**](ProductApi.md#listProductsUsingGET1_0) | **GET** /v2/products | List Products |
+| [**listProductsUsingGET1()**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products |
 
 
-## `listProductsUsingGET1_0()`
+## `listProductsUsingGET1()`
 
 ```php
-listProductsUsingGET1_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListProductsResponse
+listProductsUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListProductsResponse
 ```
 
 List Products
@@ -35,10 +35,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listProductsUsingGET1_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listProductsUsingGET1($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->listProductsUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductApi->listProductsUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createReferralUsingPOST_0**](ReferralApi.md#createReferralUsingPOST_0) | **POST** /v2/referrals | Create a Referral
+[**createReferralUsingPOST**](ReferralApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral
 
 
-# **createReferralUsingPOST_0**
-> Referral createReferralUsingPOST_0(request)
+# **createReferralUsingPOST**
+> Referral createReferralUsingPOST(request)
 
 Creates a new referral partner referral on the provided contact
 
@@ -17,12 +17,12 @@ Creates a new referral partner referral on the provided contact
 
 ```typescript
 import { createConfiguration, ReferralApi } from '';
-import type { ReferralApiCreateReferralUsingPOST0Request } from '';
+import type { ReferralApiCreateReferralUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new ReferralApi(configuration);
 
-const request: ReferralApiCreateReferralUsingPOST0Request = {
+const request: ReferralApiCreateReferralUsingPOSTRequest = {
     // request
   request: {
     contactId: "contactId_example",
@@ -36,7 +36,7 @@ const request: ReferralApiCreateReferralUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createReferralUsingPOST_0(request);
+const data = await apiInstance.createReferralUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

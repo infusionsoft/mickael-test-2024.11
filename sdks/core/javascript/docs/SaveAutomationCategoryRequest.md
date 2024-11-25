@@ -1,4 +1,4 @@
-# KeapRestApi.SaveAutomationCategoryRequest
+# KeapCoreServiceCoreSdk.SaveAutomationCategoryRequest
 
 ## Properties
 

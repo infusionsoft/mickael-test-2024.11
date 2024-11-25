@@ -1,4 +1,4 @@
-# KeapRestApi.ListRestMerchantResponse
+# KeapCoreServiceCoreSdk.ListRestMerchantResponse
 
 ## Properties
 

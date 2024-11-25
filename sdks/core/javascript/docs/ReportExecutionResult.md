@@ -1,4 +1,4 @@
-# KeapRestApi.ReportExecutionResult
+# KeapCoreServiceCoreSdk.ReportExecutionResult
 
 ## Properties
 

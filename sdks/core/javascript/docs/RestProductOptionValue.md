@@ -1,4 +1,4 @@
-# KeapRestApi.RestProductOptionValue
+# KeapCoreServiceCoreSdk.RestProductOptionValue
 
 ## Properties
 

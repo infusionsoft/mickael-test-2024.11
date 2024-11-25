@@ -1,4 +1,4 @@
-# KeapRestApi.BasicContact
+# KeapCoreServiceCoreSdk.BasicContact
 
 ## Properties
 

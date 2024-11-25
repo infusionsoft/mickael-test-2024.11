@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: keap-sdk-core-sdk
-Version: 0.0.17
+Version: 0.0.18
 Summary: Keap REST API
-Home-page: UNKNOWN
+Home-page: https://github.com/infusionsoft/keap-sdk.git
 Author: https://developer.keap.com/get-support/
 Author-email: team@openapitools.org
 License: UNKNOWN

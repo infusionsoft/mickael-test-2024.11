@@ -1,4 +1,4 @@
-# KeapRestApi.OpportunityContact
+# KeapCoreServiceCoreSdk.OpportunityContact
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KeapRestApi.AffiliateRemoveFromProgramRequest
+# KeapCoreServiceCoreSdk.AffiliateRemoveFromProgramRequest
 
 ## Properties
 

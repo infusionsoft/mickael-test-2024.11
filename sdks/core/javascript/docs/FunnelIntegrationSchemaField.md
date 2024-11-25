@@ -1,4 +1,4 @@
-# KeapRestApi.FunnelIntegrationSchemaField
+# KeapCoreServiceCoreSdk.FunnelIntegrationSchemaField
 
 ## Properties
 

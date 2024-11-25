@@ -13,11 +13,10 @@
 
 
 import superagent from "superagent";
-import querystring from "querystring";
 
 /**
 * @module com.keap.sdk.core/ApiClient
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 
 /**
@@ -55,7 +54,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'core -service-core-javascript/dev-2024.1125.0009-a0bbb4902f'
+            'User-Agent': 'core-service-core-javascript/0.0.18'
         };
 
         /**
@@ -431,7 +430,10 @@ class ApiClient {
         }
 
         if (contentType === 'application/x-www-form-urlencoded') {
-            request.send(querystring.stringify(this.normalizeParams(formParams)));
+            let normalizedParams = this.normalizeParams(formParams)
+            let urlSearchParams =  new URLSearchParams(normalizedParams);
+            let queryString = urlSearchParams.toString();
+            request.send(queryString);
         } else if (contentType == 'multipart/form-data') {
             var _formParams = this.normalizeParams(formParams);
             for (var key in _formParams) {

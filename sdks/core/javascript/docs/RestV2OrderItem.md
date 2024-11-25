@@ -1,4 +1,4 @@
-# KeapRestApi.RestV2OrderItem
+# KeapCoreServiceCoreSdk.RestV2OrderItem
 
 ## Properties
 

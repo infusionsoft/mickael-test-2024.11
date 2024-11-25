@@ -1,17 +1,17 @@
-# KeapRestApi.LeadSourcesApi
+# KeapCoreServiceCoreSdk.LeadSourcesApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLeadSourceUsingPOST_0**](LeadSourcesApi.md#createLeadSourceUsingPOST_0) | **POST** /v2/leadsources | Create a Lead Source
-[**listLeadSourcesUsingGET_0**](LeadSourcesApi.md#listLeadSourcesUsingGET_0) | **GET** /v2/leadsources | List Lead Sources
+[**createLeadSourceUsingPOST**](LeadSourcesApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
+[**listLeadSourcesUsingGET**](LeadSourcesApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
 
 
 
-## createLeadSourceUsingPOST_0
+## createLeadSourceUsingPOST
 
-> LeadSource createLeadSourceUsingPOST_0(opts)
+> LeadSource createLeadSourceUsingPOST(opts)
 
 Create a Lead Source
 
@@ -20,13 +20,13 @@ Creates a new Lead Source
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.LeadSourcesApi();
+let apiInstance = new KeapCoreServiceCoreSdk.LeadSourcesApi();
 let opts = {
-  'leadsource': new KeapRestApi.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
+  'leadsource': new KeapCoreServiceCoreSdk.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
 };
-apiInstance.createLeadSourceUsingPOST_0(opts).then((data) => {
+apiInstance.createLeadSourceUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -55,9 +55,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## listLeadSourcesUsingGET_0
+## listLeadSourcesUsingGET
 
-> ListLeadSourcesResponse listLeadSourcesUsingGET_0(opts)
+> ListLeadSourcesResponse listLeadSourcesUsingGET(opts)
 
 List Lead Sources
 
@@ -66,16 +66,16 @@ Retrieves a list of lead sources
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.LeadSourcesApi();
+let apiInstance = new KeapCoreServiceCoreSdk.LeadSourcesApi();
 let opts = {
   'filter': "filter_example", // String | Search filter to apply to results
   'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
   'pageSize': 0, // Number | Total number of items to return per page
   'pageToken': "pageToken_example" // String | Page token
 };
-apiInstance.listLeadSourcesUsingGET_0(opts).then((data) => {
+apiInstance.listLeadSourcesUsingGET(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

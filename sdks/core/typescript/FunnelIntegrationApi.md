@@ -4,13 +4,13 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-[**createIntegrationTriggerEventUsingPOST_0**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-[**deleteFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+[**createFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
+[**createIntegrationTriggerEventUsingPOST**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+[**deleteFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 
 
-# **createFunnelIntegrationUsingPOST_0**
-> void createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest)
+# **createFunnelIntegrationUsingPOST**
+> void createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
 
 Allows a list of both triggers / goals, and actions / sequence items to be installed at the same time.
 
@@ -19,12 +19,12 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```typescript
 import { createConfiguration, FunnelIntegrationApi } from '';
-import type { FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request } from '';
+import type { FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new FunnelIntegrationApi(configuration);
 
-const request: FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request = {
+const request: FunnelIntegrationApiCreateFunnelIntegrationUsingPOSTRequest = {
     // createFunnelIntegrationRequest
   createFunnelIntegrationRequest: {
     baseUrl: "baseUrl_example",
@@ -66,7 +66,7 @@ const request: FunnelIntegrationApiCreateFunnelIntegrationUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.createFunnelIntegrationUsingPOST_0(request);
+const data = await apiInstance.createFunnelIntegrationUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -101,8 +101,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **createIntegrationTriggerEventUsingPOST_0**
-> Array<FunnelIntegrationTriggerResultDTO> createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents)
+# **createIntegrationTriggerEventUsingPOST**
+> Array<FunnelIntegrationTriggerResultDTO> createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents)
 
 
 ### Example
@@ -110,12 +110,12 @@ No authorization required
 
 ```typescript
 import { createConfiguration, FunnelIntegrationApi } from '';
-import type { FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request } from '';
+import type { FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new FunnelIntegrationApi(configuration);
 
-const request: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Request = {
+const request: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOSTRequest = {
     // createFunnelIntegrationTriggerEvents
   createFunnelIntegrationTriggerEvents: {
     funnelIntegrationTriggerEvents: [
@@ -128,7 +128,7 @@ const request: FunnelIntegrationApiCreateIntegrationTriggerEventUsingPOST0Reques
   },
 };
 
-const data = await apiInstance.createIntegrationTriggerEventUsingPOST_0(request);
+const data = await apiInstance.createIntegrationTriggerEventUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -163,8 +163,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **deleteFunnelIntegrationUsingPOST_0**
-> void deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest)
+# **deleteFunnelIntegrationUsingPOST**
+> void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
 
 Deletes all triggers / goals, and actions / sequence items for the given funnel integration
 
@@ -173,12 +173,12 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```typescript
 import { createConfiguration, FunnelIntegrationApi } from '';
-import type { FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request } from '';
+import type { FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new FunnelIntegrationApi(configuration);
 
-const request: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request = {
+const request: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOSTRequest = {
     // deleteFunnelIntegrationRequest
   deleteFunnelIntegrationRequest: {
     actionNames: [
@@ -193,7 +193,7 @@ const request: FunnelIntegrationApiDeleteFunnelIntegrationUsingPOST0Request = {
   },
 };
 
-const data = await apiInstance.deleteFunnelIntegrationUsingPOST_0(request);
+const data = await apiInstance.deleteFunnelIntegrationUsingPOST(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

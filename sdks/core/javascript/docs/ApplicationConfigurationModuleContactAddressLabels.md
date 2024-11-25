@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleContactAddressLabels
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleContactAddressLabels
 
 ## Properties
 

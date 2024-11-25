@@ -63,9 +63,6 @@ export interface PromiseHttpLibrary {
 }
 export declare function wrapHttpLibrary(promiseHttpLibrary: PromiseHttpLibrary): HttpLibrary;
 export declare class HttpInfo<T> extends ResponseContext {
-    httpStatusCode: number;
-    headers: Headers;
-    body: ResponseBody;
     data: T;
     constructor(httpStatusCode: number, headers: Headers, body: ResponseBody, data: T);
 }

@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * LandingPages service.
 * @module com.keap.sdk.core/api/LandingPagesApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var LandingPagesApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -54,8 +54,8 @@ var LandingPagesApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListLandingPagesResponse} and HTTP response
    */
   return _createClass(LandingPagesApi, [{
-    key: "listLandingPagesUsingGET_0WithHttpInfo",
-    value: function listLandingPagesUsingGET_0WithHttpInfo(opts) {
+    key: "listLandingPagesUsingGETWithHttpInfo",
+    value: function listLandingPagesUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -85,9 +85,9 @@ var LandingPagesApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListLandingPagesResponse}
      */
   }, {
-    key: "listLandingPagesUsingGET_0",
-    value: function listLandingPagesUsingGET_0(opts) {
-      return this.listLandingPagesUsingGET_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listLandingPagesUsingGET",
+    value: function listLandingPagesUsingGET(opts) {
+      return this.listLandingPagesUsingGETWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

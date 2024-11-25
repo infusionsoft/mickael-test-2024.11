@@ -45,7 +45,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def cancel_subscription_using_post_0(
+    def cancel_subscription_using_post(
         self,
         subscription_id: Annotated[StrictStr, Field(description="subscription_id")],
         cancel_subscriptions_request: Annotated[CancelSubscriptionsRequest, Field(description="cancelSubscriptionsRequest")],
@@ -92,7 +92,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cancel_subscription_using_post_0_serialize(
+        _param = self._cancel_subscription_using_post_serialize(
             subscription_id=subscription_id,
             cancel_subscriptions_request=cancel_subscriptions_request,
             _request_auth=_request_auth,
@@ -117,7 +117,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def cancel_subscription_using_post_0_with_http_info(
+    def cancel_subscription_using_post_with_http_info(
         self,
         subscription_id: Annotated[StrictStr, Field(description="subscription_id")],
         cancel_subscriptions_request: Annotated[CancelSubscriptionsRequest, Field(description="cancelSubscriptionsRequest")],
@@ -164,7 +164,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cancel_subscription_using_post_0_serialize(
+        _param = self._cancel_subscription_using_post_serialize(
             subscription_id=subscription_id,
             cancel_subscriptions_request=cancel_subscriptions_request,
             _request_auth=_request_auth,
@@ -189,7 +189,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def cancel_subscription_using_post_0_without_preload_content(
+    def cancel_subscription_using_post_without_preload_content(
         self,
         subscription_id: Annotated[StrictStr, Field(description="subscription_id")],
         cancel_subscriptions_request: Annotated[CancelSubscriptionsRequest, Field(description="cancelSubscriptionsRequest")],
@@ -236,7 +236,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._cancel_subscription_using_post_0_serialize(
+        _param = self._cancel_subscription_using_post_serialize(
             subscription_id=subscription_id,
             cancel_subscriptions_request=cancel_subscriptions_request,
             _request_auth=_request_auth,
@@ -256,7 +256,7 @@ class SubscriptionsApi:
         return response_data.response
 
 
-    def _cancel_subscription_using_post_0_serialize(
+    def _cancel_subscription_using_post_serialize(
         self,
         subscription_id,
         cancel_subscriptions_request,
@@ -336,7 +336,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def create_subscription_custom_field_using_post_0(
+    def create_subscription_custom_field_using_post(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -380,7 +380,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_subscription_custom_field_using_post_0_serialize(
+        _param = self._create_subscription_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -404,7 +404,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def create_subscription_custom_field_using_post_0_with_http_info(
+    def create_subscription_custom_field_using_post_with_http_info(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -448,7 +448,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_subscription_custom_field_using_post_0_serialize(
+        _param = self._create_subscription_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -472,7 +472,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def create_subscription_custom_field_using_post_0_without_preload_content(
+    def create_subscription_custom_field_using_post_without_preload_content(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -516,7 +516,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_subscription_custom_field_using_post_0_serialize(
+        _param = self._create_subscription_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -535,7 +535,7 @@ class SubscriptionsApi:
         return response_data.response
 
 
-    def _create_subscription_custom_field_using_post_0_serialize(
+    def _create_subscription_custom_field_using_post_serialize(
         self,
         custom_field,
         _request_auth,
@@ -888,7 +888,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def retrieve_subscription_custom_field_model_using_get_0(
+    def retrieve_subscription_custom_field_model_using_get(
         self,
         _request_timeout: Union[
             None,
@@ -929,7 +929,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_subscription_custom_field_model_using_get_0_serialize(
+        _param = self._retrieve_subscription_custom_field_model_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -953,7 +953,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def retrieve_subscription_custom_field_model_using_get_0_with_http_info(
+    def retrieve_subscription_custom_field_model_using_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -994,7 +994,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_subscription_custom_field_model_using_get_0_serialize(
+        _param = self._retrieve_subscription_custom_field_model_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1018,7 +1018,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def retrieve_subscription_custom_field_model_using_get_0_without_preload_content(
+    def retrieve_subscription_custom_field_model_using_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1059,7 +1059,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_subscription_custom_field_model_using_get_0_serialize(
+        _param = self._retrieve_subscription_custom_field_model_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1078,7 +1078,7 @@ class SubscriptionsApi:
         return response_data.response
 
 
-    def _retrieve_subscription_custom_field_model_using_get_0_serialize(
+    def _retrieve_subscription_custom_field_model_using_get_serialize(
         self,
         _request_auth,
         _content_type,
@@ -1139,7 +1139,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def update_subscription_custom_field_using_patch_0(
+    def update_subscription_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -1189,7 +1189,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_subscription_custom_field_using_patch_0_serialize(
+        _param = self._update_subscription_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -1216,7 +1216,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def update_subscription_custom_field_using_patch_0_with_http_info(
+    def update_subscription_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -1266,7 +1266,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_subscription_custom_field_using_patch_0_serialize(
+        _param = self._update_subscription_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -1293,7 +1293,7 @@ class SubscriptionsApi:
 
 
     @validate_call
-    def update_subscription_custom_field_using_patch_0_without_preload_content(
+    def update_subscription_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -1343,7 +1343,7 @@ class SubscriptionsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_subscription_custom_field_using_patch_0_serialize(
+        _param = self._update_subscription_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -1365,7 +1365,7 @@ class SubscriptionsApi:
         return response_data.response
 
 
-    def _update_subscription_custom_field_using_patch_0_serialize(
+    def _update_subscription_custom_field_using_patch_serialize(
         self,
         custom_field_id,
         request,

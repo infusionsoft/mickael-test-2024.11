@@ -1,4 +1,4 @@
-# KeapRestApi.DeleteEmailsResponse
+# KeapCoreServiceCoreSdk.DeleteEmailsResponse
 
 ## Properties
 

@@ -774,7 +774,7 @@ var typeMap = {
     "User": User_1.User,
 };
 var parseMimeType = function (mimeType) {
-    var _a = mimeType.split('/'), type = _a[0], subtype = _a[1];
+    var _a = mimeType.split('/'), _b = _a[0], type = _b === void 0 ? '' : _b, _c = _a[1], subtype = _c === void 0 ? '' : _c;
     return {
         type: type,
         subtype: subtype,
@@ -968,10 +968,11 @@ var ObjectSerializer = (function () {
         }
     };
     ObjectSerializer.normalizeMediaType = function (mediaType) {
+        var _a;
         if (mediaType === undefined) {
             return undefined;
         }
-        return mediaType.split(";")[0].trim().toLowerCase();
+        return ((_a = mediaType.split(";")[0]) !== null && _a !== void 0 ? _a : '').trim().toLowerCase();
     };
     ObjectSerializer.getPreferredMediaType = function (mediaTypes) {
         if (mediaTypes.length === 0) {

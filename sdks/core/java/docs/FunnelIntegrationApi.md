@@ -4,18 +4,18 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
-| [**createFunnelIntegrationUsingPOST_0WithHttpInfo**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0WithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
-| [**createIntegrationTriggerEventUsingPOST_0**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
-| [**createIntegrationTriggerEventUsingPOST_0WithHttpInfo**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST_0WithHttpInfo) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
-| [**deleteFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
-| [**deleteFunnelIntegrationUsingPOST_0WithHttpInfo**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST_0WithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**createFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
+| [**createFunnelIntegrationUsingPOSTWithHttpInfo**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
+| [**createIntegrationTriggerEventUsingPOST**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**createIntegrationTriggerEventUsingPOSTWithHttpInfo**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**deleteFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 
 
 
-## createFunnelIntegrationUsingPOST_0
+## createFunnelIntegrationUsingPOST
 
-> void createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest)
+> void createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
 
 Create Funnel Integrations into the app.
 
@@ -25,11 +25,11 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FunnelIntegrationApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -39,9 +39,9 @@ public class Example {
         FunnelIntegrationApi apiInstance = new FunnelIntegrationApi(defaultClient);
         CreateFunnelIntegrationRequest createFunnelIntegrationRequest = new CreateFunnelIntegrationRequest(); // CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
         try {
-            apiInstance.createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest);
+            apiInstance.createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FunnelIntegrationApi#createFunnelIntegrationUsingPOST_0");
+            System.err.println("Exception when calling FunnelIntegrationApi#createFunnelIntegrationUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -79,9 +79,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createFunnelIntegrationUsingPOST_0WithHttpInfo
+## createFunnelIntegrationUsingPOSTWithHttpInfo
 
-> ApiResponse<Void> createFunnelIntegrationUsingPOST_0 createFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest)
+> ApiResponse<Void> createFunnelIntegrationUsingPOST createFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest)
 
 Create Funnel Integrations into the app.
 
@@ -91,12 +91,12 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FunnelIntegrationApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -106,11 +106,11 @@ public class Example {
         FunnelIntegrationApi apiInstance = new FunnelIntegrationApi(defaultClient);
         CreateFunnelIntegrationRequest createFunnelIntegrationRequest = new CreateFunnelIntegrationRequest(); // CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
         try {
-            ApiResponse<Void> response = apiInstance.createFunnelIntegrationUsingPOST_0WithHttpInfo(createFunnelIntegrationRequest);
+            ApiResponse<Void> response = apiInstance.createFunnelIntegrationUsingPOSTWithHttpInfo(createFunnelIntegrationRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling FunnelIntegrationApi#createFunnelIntegrationUsingPOST_0");
+            System.err.println("Exception when calling FunnelIntegrationApi#createFunnelIntegrationUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -149,9 +149,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## createIntegrationTriggerEventUsingPOST_0
+## createIntegrationTriggerEventUsingPOST
 
-> List<FunnelIntegrationTriggerResultDTO> createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents)
+> List<FunnelIntegrationTriggerResultDTO> createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents)
 
 Achieve Funnel Integration Trigger Goal
 
@@ -159,11 +159,11 @@ Achieve Funnel Integration Trigger Goal
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FunnelIntegrationApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -173,10 +173,10 @@ public class Example {
         FunnelIntegrationApi apiInstance = new FunnelIntegrationApi(defaultClient);
         CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents = new CreateFunnelIntegrationTriggerEvents(); // CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
         try {
-            List<FunnelIntegrationTriggerResultDTO> result = apiInstance.createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents);
+            List<FunnelIntegrationTriggerResultDTO> result = apiInstance.createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FunnelIntegrationApi#createIntegrationTriggerEventUsingPOST_0");
+            System.err.println("Exception when calling FunnelIntegrationApi#createIntegrationTriggerEventUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -214,9 +214,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createIntegrationTriggerEventUsingPOST_0WithHttpInfo
+## createIntegrationTriggerEventUsingPOSTWithHttpInfo
 
-> ApiResponse<List<FunnelIntegrationTriggerResultDTO>> createIntegrationTriggerEventUsingPOST_0 createIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents)
+> ApiResponse<List<FunnelIntegrationTriggerResultDTO>> createIntegrationTriggerEventUsingPOST createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents)
 
 Achieve Funnel Integration Trigger Goal
 
@@ -224,12 +224,12 @@ Achieve Funnel Integration Trigger Goal
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FunnelIntegrationApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -239,12 +239,12 @@ public class Example {
         FunnelIntegrationApi apiInstance = new FunnelIntegrationApi(defaultClient);
         CreateFunnelIntegrationTriggerEvents createFunnelIntegrationTriggerEvents = new CreateFunnelIntegrationTriggerEvents(); // CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
         try {
-            ApiResponse<List<FunnelIntegrationTriggerResultDTO>> response = apiInstance.createIntegrationTriggerEventUsingPOST_0WithHttpInfo(createFunnelIntegrationTriggerEvents);
+            ApiResponse<List<FunnelIntegrationTriggerResultDTO>> response = apiInstance.createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling FunnelIntegrationApi#createIntegrationTriggerEventUsingPOST_0");
+            System.err.println("Exception when calling FunnelIntegrationApi#createIntegrationTriggerEventUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -283,9 +283,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
-## deleteFunnelIntegrationUsingPOST_0
+## deleteFunnelIntegrationUsingPOST
 
-> void deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest)
+> void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
 
 Deletes Funnel Integrations from the app.
 
@@ -295,11 +295,11 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FunnelIntegrationApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -309,9 +309,9 @@ public class Example {
         FunnelIntegrationApi apiInstance = new FunnelIntegrationApi(defaultClient);
         DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest = new DeleteFunnelIntegrationRequest(); // DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
         try {
-            apiInstance.deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest);
+            apiInstance.deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FunnelIntegrationApi#deleteFunnelIntegrationUsingPOST_0");
+            System.err.println("Exception when calling FunnelIntegrationApi#deleteFunnelIntegrationUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -349,9 +349,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## deleteFunnelIntegrationUsingPOST_0WithHttpInfo
+## deleteFunnelIntegrationUsingPOSTWithHttpInfo
 
-> ApiResponse<Void> deleteFunnelIntegrationUsingPOST_0 deleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest)
+> ApiResponse<Void> deleteFunnelIntegrationUsingPOST deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest)
 
 Deletes Funnel Integrations from the app.
 
@@ -361,12 +361,12 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.FunnelIntegrationApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.FunnelIntegrationApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -376,11 +376,11 @@ public class Example {
         FunnelIntegrationApi apiInstance = new FunnelIntegrationApi(defaultClient);
         DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest = new DeleteFunnelIntegrationRequest(); // DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
         try {
-            ApiResponse<Void> response = apiInstance.deleteFunnelIntegrationUsingPOST_0WithHttpInfo(deleteFunnelIntegrationRequest);
+            ApiResponse<Void> response = apiInstance.deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
-            System.err.println("Exception when calling FunnelIntegrationApi#deleteFunnelIntegrationUsingPOST_0");
+            System.err.println("Exception when calling FunnelIntegrationApi#deleteFunnelIntegrationUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

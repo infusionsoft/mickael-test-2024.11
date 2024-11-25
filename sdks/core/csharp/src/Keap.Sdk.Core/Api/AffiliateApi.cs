@@ -38,7 +38,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateAddToProgramRequest">affiliateAddToProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void AddAffiliateToProgramUsingPOST_0(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0);
+        void AddAffiliateToProgramUsingPOST(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0);
 
         /// <summary>
         /// Assign Affiliate to Commission program
@@ -51,7 +51,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateAddToProgramRequest">affiliateAddToProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddAffiliateToProgramUsingPOST_0WithHttpInfo(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0);
+        ApiResponse<Object> AddAffiliateToProgramUsingPOSTWithHttpInfo(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0);
         /// <summary>
         /// Create an Affiliate
         /// </summary>
@@ -85,7 +85,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="insertCommissionProgram">Commission Program to insert (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateCommissionProgramResponse</returns>
-        AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST_0(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0);
+        AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create an Affiliate Commission Program
@@ -97,7 +97,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="insertCommissionProgram">Commission Program to insert (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateCommissionProgramResponse</returns>
-        ApiResponse<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOST_0WithHttpInfo(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOSTWithHttpInfo(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Assign a Product Commission Program
         /// </summary>
@@ -109,7 +109,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="productCommissionProgram">Product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCommissionProgram</returns>
-        ProductCommissionProgram AssignProductCommissionProgramUsingPOST_0(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0);
+        ProductCommissionProgram AssignProductCommissionProgramUsingPOST(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Assign a Product Commission Program
@@ -122,7 +122,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="productCommissionProgram">Product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCommissionProgram</returns>
-        ApiResponse<ProductCommissionProgram> AssignProductCommissionProgramUsingPOST_0WithHttpInfo(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<ProductCommissionProgram> AssignProductCommissionProgramUsingPOSTWithHttpInfo(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Assign a Subscription Commission Program
         /// </summary>
@@ -134,7 +134,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="subscriptionCommissionProgram">Subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SubscriptionCommissionProgram</returns>
-        SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST_0(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0);
+        SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Assign a Subscription Commission Program
@@ -147,7 +147,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="subscriptionCommissionProgram">Subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SubscriptionCommissionProgram</returns>
-        ApiResponse<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOST_0WithHttpInfo(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Create an Affiliate Custom Field
         /// </summary>
@@ -158,7 +158,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST_0(CreateCustomFieldRequest customField, int operationIndex = 0);
+        CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST(CreateCustomFieldRequest customField, int operationIndex = 0);
 
         /// <summary>
         /// Create an Affiliate Custom Field
@@ -170,7 +170,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOST_0WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
         /// <summary>
         /// Create a Default Commission Program
         /// </summary>
@@ -182,7 +182,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createDefaultCommissionProgramRequest">Values of the Default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetDefaultCommissionProgramResponse</returns>
-        SetDefaultCommissionProgramResponse CreateDefaultCommissionProgramUsingPOST_0(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0);
+        SetDefaultCommissionProgramResponse CreateDefaultCommissionProgramUsingPOST(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create a Default Commission Program
@@ -195,7 +195,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createDefaultCommissionProgramRequest">Values of the Default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetDefaultCommissionProgramResponse</returns>
-        ApiResponse<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOST_0WithHttpInfo(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOSTWithHttpInfo(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Create an Affiliate Link
         /// </summary>
@@ -206,7 +206,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateLink</returns>
-        AffiliateLink CreateRedirectLinkUsingPOST_0(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
+        AffiliateLink CreateRedirectLinkUsingPOST(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
 
         /// <summary>
         /// Create an Affiliate Link
@@ -218,7 +218,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateLink</returns>
-        ApiResponse<AffiliateLink> CreateRedirectLinkUsingPOST_0WithHttpInfo(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
+        ApiResponse<AffiliateLink> CreateRedirectLinkUsingPOSTWithHttpInfo(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
         /// <summary>
         /// Delete a Commission Program
         /// </summary>
@@ -229,7 +229,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteAffiliateCommissionProgramUsingDELETE_0(string commissionProgramId, int operationIndex = 0);
+        void DeleteAffiliateCommissionProgramUsingDELETE(string commissionProgramId, int operationIndex = 0);
 
         /// <summary>
         /// Delete a Commission Program
@@ -241,7 +241,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfo(string commissionProgramId, int operationIndex = 0);
+        ApiResponse<Object> DeleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(string commissionProgramId, int operationIndex = 0);
         /// <summary>
         /// Delete Affiliate
         /// </summary>
@@ -252,7 +252,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="id">id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteAffiliateUsingDELETE_0(string id, int operationIndex = 0);
+        void DeleteAffiliateUsingDELETE(string id, int operationIndex = 0);
 
         /// <summary>
         /// Delete Affiliate
@@ -264,7 +264,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="id">id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAffiliateUsingDELETE_0WithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<Object> DeleteAffiliateUsingDELETEWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
         /// Delete an Affiliate Link
         /// </summary>
@@ -275,7 +275,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteRedirectLinkUsingDELETE_0(string redirectId, int operationIndex = 0);
+        void DeleteRedirectLinkUsingDELETE(string redirectId, int operationIndex = 0);
 
         /// <summary>
         /// Delete an Affiliate Link
@@ -287,7 +287,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteRedirectLinkUsingDELETE_0WithHttpInfo(string redirectId, int operationIndex = 0);
+        ApiResponse<Object> DeleteRedirectLinkUsingDELETEWithHttpInfo(string redirectId, int operationIndex = 0);
         /// <summary>
         /// Retrieve Affiliate Commission Earned and View LedgerURl for portal
         /// </summary>
@@ -298,7 +298,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateId">affiliate_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateCommissionEarned</returns>
-        AffiliateCommissionEarned GetAffiliateCommissionTotalUsingGET_0(string affiliateId, int operationIndex = 0);
+        AffiliateCommissionEarned GetAffiliateCommissionTotalUsingGET(string affiliateId, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Affiliate Commission Earned and View LedgerURl for portal
@@ -310,7 +310,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateId">affiliate_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateCommissionEarned</returns>
-        ApiResponse<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGET_0WithHttpInfo(string affiliateId, int operationIndex = 0);
+        ApiResponse<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGETWithHttpInfo(string affiliateId, int operationIndex = 0);
         /// <summary>
         /// Retrieve Affiliate Commission and Clawbacks
         /// </summary>
@@ -325,7 +325,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateCommissionResponse</returns>
-        ListAffiliateCommissionResponse GetAffiliateCommissionsUsingGET_0(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListAffiliateCommissionResponse GetAffiliateCommissionsUsingGET(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Affiliate Commission and Clawbacks
@@ -341,7 +341,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateCommissionResponse</returns>
-        ApiResponse<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGET_0WithHttpInfo(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGETWithHttpInfo(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// Retrieve Affiliate Model
         /// </summary>
@@ -351,7 +351,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ObjectModel</returns>
-        ObjectModel GetAffiliateCustomFieldsUsingGET_0(int operationIndex = 0);
+        ObjectModel GetAffiliateCustomFieldsUsingGET(int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Affiliate Model
@@ -362,7 +362,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ObjectModel</returns>
-        ApiResponse<ObjectModel> GetAffiliateCustomFieldsUsingGET_0WithHttpInfo(int operationIndex = 0);
+        ApiResponse<ObjectModel> GetAffiliateCustomFieldsUsingGETWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Retrieve an Affiliate
         /// </summary>
@@ -396,7 +396,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateProgramV2</returns>
-        AffiliateProgramV2 GetCommissionProgramUsingGET_0(string commissionProgramId, int operationIndex = 0);
+        AffiliateProgramV2 GetCommissionProgramUsingGET(string commissionProgramId, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve a Commission Program
@@ -408,7 +408,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateProgramV2</returns>
-        ApiResponse<AffiliateProgramV2> GetCommissionProgramUsingGET_0WithHttpInfo(string commissionProgramId, int operationIndex = 0);
+        ApiResponse<AffiliateProgramV2> GetCommissionProgramUsingGETWithHttpInfo(string commissionProgramId, int operationIndex = 0);
         /// <summary>
         /// Retrieve an Affiliate Link
         /// </summary>
@@ -419,7 +419,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateLink</returns>
-        AffiliateLink GetRedirectLinkUsingGET_0(string redirectId, int operationIndex = 0);
+        AffiliateLink GetRedirectLinkUsingGET(string redirectId, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve an Affiliate Link
@@ -431,7 +431,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateLink</returns>
-        ApiResponse<AffiliateLink> GetRedirectLinkUsingGET_0WithHttpInfo(string redirectId, int operationIndex = 0);
+        ApiResponse<AffiliateLink> GetRedirectLinkUsingGETWithHttpInfo(string redirectId, int operationIndex = 0);
         /// <summary>
         /// List Affiliate Commission Programs
         /// </summary>
@@ -445,7 +445,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateCommissionProgramsResponse</returns>
-        ListAffiliateCommissionProgramsResponse ListAffiliateCommissionProgramsUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListAffiliateCommissionProgramsResponse ListAffiliateCommissionProgramsUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Affiliate Commission Programs
@@ -460,7 +460,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateCommissionProgramsResponse</returns>
-        ApiResponse<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// List Affiliate Links
         /// </summary>
@@ -474,7 +474,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateLinksResponse</returns>
-        ListAffiliateLinksResponse ListAffiliateLinksUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListAffiliateLinksResponse ListAffiliateLinksUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Affiliate Links
@@ -489,7 +489,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateLinksResponse</returns>
-        ApiResponse<ListAffiliateLinksResponse> ListAffiliateLinksUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListAffiliateLinksResponse> ListAffiliateLinksUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// List Affiliate Summaries
         /// </summary>
@@ -503,7 +503,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateSummariesResponse</returns>
-        ListAffiliateSummariesResponse ListSummariesUsingGET1_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ListAffiliateSummariesResponse ListSummariesUsingGET1(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Affiliate Summaries
@@ -518,7 +518,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateSummariesResponse</returns>
-        ApiResponse<ListAffiliateSummariesResponse> ListSummariesUsingGET1_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
+        ApiResponse<ListAffiliateSummariesResponse> ListSummariesUsingGET1WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0);
         /// <summary>
         /// Update a Affiliate Commission Program
         /// </summary>
@@ -558,7 +558,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchDefaultCommissionProgramRequest">Values of the default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetDefaultCommissionProgramResponse</returns>
-        SetDefaultCommissionProgramResponse PatchDefaultCommissionProgramUsingPATCH_0(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0);
+        SetDefaultCommissionProgramResponse PatchDefaultCommissionProgramUsingPATCH(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Default Commission Program
@@ -572,7 +572,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchDefaultCommissionProgramRequest">Values of the default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetDefaultCommissionProgramResponse</returns>
-        ApiResponse<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCH_0WithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCHWithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Update a Product Commission Program
         /// </summary>
@@ -585,7 +585,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchProductCommissionProgramRequest">Values of the product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCommissionProgram</returns>
-        ProductCommissionProgram PatchProductCommissionProgramUsingPATCH_0(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0);
+        ProductCommissionProgram PatchProductCommissionProgramUsingPATCH(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Product Commission Program
@@ -599,7 +599,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchProductCommissionProgramRequest">Values of the product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCommissionProgram</returns>
-        ApiResponse<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCH_0WithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCHWithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Update a Subscription Commission Program
         /// </summary>
@@ -612,7 +612,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchSubscriptionCommissionProgramRequest">Values of the subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SubscriptionCommissionProgram</returns>
-        SubscriptionCommissionProgram PatchSubscriptionCommissionProgramUsingPATCH_0(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0);
+        SubscriptionCommissionProgram PatchSubscriptionCommissionProgramUsingPATCH(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Subscription Commission Program
@@ -626,7 +626,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchSubscriptionCommissionProgramRequest">Values of the subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SubscriptionCommissionProgram</returns>
-        ApiResponse<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0);
+        ApiResponse<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0);
         /// <summary>
         /// Remove an Affiliate from a Commission Program
         /// </summary>
@@ -638,7 +638,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="removeFromProgramRequest">removeFromProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void RemoveAffiliateFromProgramUsingPOST_0(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0);
+        void RemoveAffiliateFromProgramUsingPOST(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0);
 
         /// <summary>
         /// Remove an Affiliate from a Commission Program
@@ -651,7 +651,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="removeFromProgramRequest">removeFromProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveAffiliateFromProgramUsingPOST_0WithHttpInfo(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0);
+        ApiResponse<Object> RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0);
         /// <summary>
         /// Remove a Subscription from a Commission Program
         /// </summary>
@@ -663,7 +663,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteSubscriptionPlanCommissionRequest">deleteSubscriptionPlanCommissionRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0);
+        void RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0);
 
         /// <summary>
         /// Remove a Subscription from a Commission Program
@@ -676,7 +676,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteSubscriptionPlanCommissionRequest">deleteSubscriptionPlanCommissionRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfo(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0);
+        ApiResponse<Object> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0);
         /// <summary>
         /// Update a Custom Field
         /// </summary>
@@ -689,7 +689,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH_0(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Custom Field
@@ -703,7 +703,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCH_0WithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         /// <summary>
         /// Update an Affiliate
         /// </summary>
@@ -740,7 +740,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateLink</returns>
-        AffiliateLink UpdateRedirectLinkUsingPATCH_0(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
+        AffiliateLink UpdateRedirectLinkUsingPATCH(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
 
         /// <summary>
         /// Update an Affiliate Link
@@ -753,7 +753,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateLink</returns>
-        ApiResponse<AffiliateLink> UpdateRedirectLinkUsingPATCH_0WithHttpInfo(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
+        ApiResponse<AffiliateLink> UpdateRedirectLinkUsingPATCHWithHttpInfo(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -775,7 +775,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AddAffiliateToProgramUsingPOST_0Async(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task AddAffiliateToProgramUsingPOSTAsync(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Assign Affiliate to Commission program
@@ -789,7 +789,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddAffiliateToProgramUsingPOST_0WithHttpInfoAsync(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> AddAffiliateToProgramUsingPOSTWithHttpInfoAsync(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an Affiliate
         /// </summary>
@@ -826,7 +826,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateCommissionProgramResponse</returns>
-        System.Threading.Tasks.Task<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOST_0Async(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOSTAsync(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Affiliate Commission Program
@@ -839,7 +839,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateCommissionProgramResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AffiliateCommissionProgramResponse>> AddCommissionProgramUsingPOST_0WithHttpInfoAsync(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AffiliateCommissionProgramResponse>> AddCommissionProgramUsingPOSTWithHttpInfoAsync(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Assign a Product Commission Program
         /// </summary>
@@ -852,7 +852,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCommissionProgram</returns>
-        System.Threading.Tasks.Task<ProductCommissionProgram> AssignProductCommissionProgramUsingPOST_0Async(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCommissionProgram> AssignProductCommissionProgramUsingPOSTAsync(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Assign a Product Commission Program
@@ -866,7 +866,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCommissionProgram)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductCommissionProgram>> AssignProductCommissionProgramUsingPOST_0WithHttpInfoAsync(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCommissionProgram>> AssignProductCommissionProgramUsingPOSTWithHttpInfoAsync(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Assign a Subscription Commission Program
         /// </summary>
@@ -879,7 +879,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubscriptionCommissionProgram</returns>
-        System.Threading.Tasks.Task<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOST_0Async(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOSTAsync(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Assign a Subscription Commission Program
@@ -893,7 +893,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubscriptionCommissionProgram)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubscriptionCommissionProgram>> AssignSubscriptionCommissionProgramUsingPOST_0WithHttpInfoAsync(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SubscriptionCommissionProgram>> AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfoAsync(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an Affiliate Custom Field
         /// </summary>
@@ -905,7 +905,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOST_0Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOSTAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Affiliate Custom Field
@@ -918,7 +918,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateAffiliateCustomFieldUsingPOST_0WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateAffiliateCustomFieldUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a Default Commission Program
         /// </summary>
@@ -931,7 +931,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetDefaultCommissionProgramResponse</returns>
-        System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOST_0Async(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOSTAsync(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Default Commission Program
@@ -945,7 +945,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetDefaultCommissionProgramResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetDefaultCommissionProgramResponse>> CreateDefaultCommissionProgramUsingPOST_0WithHttpInfoAsync(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetDefaultCommissionProgramResponse>> CreateDefaultCommissionProgramUsingPOSTWithHttpInfoAsync(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an Affiliate Link
         /// </summary>
@@ -957,7 +957,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateLink</returns>
-        System.Threading.Tasks.Task<AffiliateLink> CreateRedirectLinkUsingPOST_0Async(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AffiliateLink> CreateRedirectLinkUsingPOSTAsync(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Affiliate Link
@@ -970,7 +970,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AffiliateLink>> CreateRedirectLinkUsingPOST_0WithHttpInfoAsync(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AffiliateLink>> CreateRedirectLinkUsingPOSTWithHttpInfoAsync(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Commission Program
         /// </summary>
@@ -982,7 +982,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAffiliateCommissionProgramUsingDELETE_0Async(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteAffiliateCommissionProgramUsingDELETEAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete a Commission Program
@@ -995,7 +995,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAffiliateCommissionProgramUsingDELETEWithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete Affiliate
         /// </summary>
@@ -1007,7 +1007,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAffiliateUsingDELETE_0Async(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteAffiliateUsingDELETEAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Affiliate
@@ -1020,7 +1020,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAffiliateUsingDELETE_0WithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAffiliateUsingDELETEWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an Affiliate Link
         /// </summary>
@@ -1032,7 +1032,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteRedirectLinkUsingDELETE_0Async(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteRedirectLinkUsingDELETEAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an Affiliate Link
@@ -1045,7 +1045,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRedirectLinkUsingDELETE_0WithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRedirectLinkUsingDELETEWithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Affiliate Commission Earned and View LedgerURl for portal
         /// </summary>
@@ -1057,7 +1057,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateCommissionEarned</returns>
-        System.Threading.Tasks.Task<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGET_0Async(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGETAsync(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Affiliate Commission Earned and View LedgerURl for portal
@@ -1070,7 +1070,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateCommissionEarned)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AffiliateCommissionEarned>> GetAffiliateCommissionTotalUsingGET_0WithHttpInfoAsync(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AffiliateCommissionEarned>> GetAffiliateCommissionTotalUsingGETWithHttpInfoAsync(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Affiliate Commission and Clawbacks
         /// </summary>
@@ -1086,7 +1086,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateCommissionResponse</returns>
-        System.Threading.Tasks.Task<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGET_0Async(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGETAsync(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Affiliate Commission and Clawbacks
@@ -1103,7 +1103,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateCommissionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAffiliateCommissionResponse>> GetAffiliateCommissionsUsingGET_0WithHttpInfoAsync(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAffiliateCommissionResponse>> GetAffiliateCommissionsUsingGETWithHttpInfoAsync(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Affiliate Model
         /// </summary>
@@ -1114,7 +1114,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectModel</returns>
-        System.Threading.Tasks.Task<ObjectModel> GetAffiliateCustomFieldsUsingGET_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ObjectModel> GetAffiliateCustomFieldsUsingGETAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Affiliate Model
@@ -1126,7 +1126,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObjectModel>> GetAffiliateCustomFieldsUsingGET_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ObjectModel>> GetAffiliateCustomFieldsUsingGETWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an Affiliate
         /// </summary>
@@ -1163,7 +1163,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateProgramV2</returns>
-        System.Threading.Tasks.Task<AffiliateProgramV2> GetCommissionProgramUsingGET_0Async(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AffiliateProgramV2> GetCommissionProgramUsingGETAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve a Commission Program
@@ -1176,7 +1176,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateProgramV2)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AffiliateProgramV2>> GetCommissionProgramUsingGET_0WithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AffiliateProgramV2>> GetCommissionProgramUsingGETWithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an Affiliate Link
         /// </summary>
@@ -1188,7 +1188,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateLink</returns>
-        System.Threading.Tasks.Task<AffiliateLink> GetRedirectLinkUsingGET_0Async(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AffiliateLink> GetRedirectLinkUsingGETAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an Affiliate Link
@@ -1201,7 +1201,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AffiliateLink>> GetRedirectLinkUsingGET_0WithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AffiliateLink>> GetRedirectLinkUsingGETWithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Affiliate Commission Programs
         /// </summary>
@@ -1216,7 +1216,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateCommissionProgramsResponse</returns>
-        System.Threading.Tasks.Task<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Affiliate Commission Programs
@@ -1232,7 +1232,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateCommissionProgramsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAffiliateCommissionProgramsResponse>> ListAffiliateCommissionProgramsUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAffiliateCommissionProgramsResponse>> ListAffiliateCommissionProgramsUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Affiliate Links
         /// </summary>
@@ -1247,7 +1247,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateLinksResponse</returns>
-        System.Threading.Tasks.Task<ListAffiliateLinksResponse> ListAffiliateLinksUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAffiliateLinksResponse> ListAffiliateLinksUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Affiliate Links
@@ -1263,7 +1263,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateLinksResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAffiliateLinksResponse>> ListAffiliateLinksUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAffiliateLinksResponse>> ListAffiliateLinksUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Affiliate Summaries
         /// </summary>
@@ -1278,7 +1278,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateSummariesResponse</returns>
-        System.Threading.Tasks.Task<ListAffiliateSummariesResponse> ListSummariesUsingGET1_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAffiliateSummariesResponse> ListSummariesUsingGET1Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Affiliate Summaries
@@ -1294,7 +1294,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateSummariesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAffiliateSummariesResponse>> ListSummariesUsingGET1_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAffiliateSummariesResponse>> ListSummariesUsingGET1WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Affiliate Commission Program
         /// </summary>
@@ -1337,7 +1337,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetDefaultCommissionProgramResponse</returns>
-        System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCH_0Async(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCHAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Default Commission Program
@@ -1352,7 +1352,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetDefaultCommissionProgramResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetDefaultCommissionProgramResponse>> PatchDefaultCommissionProgramUsingPATCH_0WithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetDefaultCommissionProgramResponse>> PatchDefaultCommissionProgramUsingPATCHWithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Product Commission Program
         /// </summary>
@@ -1366,7 +1366,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCommissionProgram</returns>
-        System.Threading.Tasks.Task<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCH_0Async(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCHAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Product Commission Program
@@ -1381,7 +1381,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCommissionProgram)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductCommissionProgram>> PatchProductCommissionProgramUsingPATCH_0WithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCommissionProgram>> PatchProductCommissionProgramUsingPATCHWithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Subscription Commission Program
         /// </summary>
@@ -1395,7 +1395,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubscriptionCommissionProgram</returns>
-        System.Threading.Tasks.Task<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCH_0Async(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCHAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Subscription Commission Program
@@ -1410,7 +1410,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubscriptionCommissionProgram)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubscriptionCommissionProgram>> PatchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SubscriptionCommissionProgram>> PatchSubscriptionCommissionProgramUsingPATCHWithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Remove an Affiliate from a Commission Program
         /// </summary>
@@ -1423,7 +1423,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveAffiliateFromProgramUsingPOST_0Async(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task RemoveAffiliateFromProgramUsingPOSTAsync(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Remove an Affiliate from a Commission Program
@@ -1437,7 +1437,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveAffiliateFromProgramUsingPOST_0WithHttpInfoAsync(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveAffiliateFromProgramUsingPOSTWithHttpInfoAsync(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Remove a Subscription from a Commission Program
         /// </summary>
@@ -1450,7 +1450,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0Async(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTAsync(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Remove a Subscription from a Commission Program
@@ -1464,7 +1464,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfoAsync(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfoAsync(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a Custom Field
         /// </summary>
@@ -1478,7 +1478,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCH_0Async(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Custom Field
@@ -1493,7 +1493,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateAffiliateCustomFieldUsingPATCH_0WithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateAffiliateCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update an Affiliate
         /// </summary>
@@ -1533,7 +1533,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateLink</returns>
-        System.Threading.Tasks.Task<AffiliateLink> UpdateRedirectLinkUsingPATCH_0Async(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AffiliateLink> UpdateRedirectLinkUsingPATCHAsync(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update an Affiliate Link
@@ -1547,7 +1547,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AffiliateLink>> UpdateRedirectLinkUsingPATCH_0WithHttpInfoAsync(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AffiliateLink>> UpdateRedirectLinkUsingPATCHWithHttpInfoAsync(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1676,9 +1676,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateAddToProgramRequest">affiliateAddToProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void AddAffiliateToProgramUsingPOST_0(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0)
+        public void AddAffiliateToProgramUsingPOST(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0)
         {
-            AddAffiliateToProgramUsingPOST_0WithHttpInfo(id, affiliateAddToProgramRequest);
+            AddAffiliateToProgramUsingPOSTWithHttpInfo(id, affiliateAddToProgramRequest);
         }
 
         /// <summary>
@@ -1689,18 +1689,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateAddToProgramRequest">affiliateAddToProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> AddAffiliateToProgramUsingPOST_0WithHttpInfo(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> AddAffiliateToProgramUsingPOSTWithHttpInfo(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->AddAffiliateToProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->AddAffiliateToProgramUsingPOST");
             }
 
             // verify the required parameter 'affiliateAddToProgramRequest' is set
             if (affiliateAddToProgramRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateAddToProgramRequest' when calling AffiliateApi->AddAffiliateToProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateAddToProgramRequest' when calling AffiliateApi->AddAffiliateToProgramUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1729,7 +1729,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = affiliateAddToProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AddAffiliateToProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AddAffiliateToProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1737,7 +1737,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Object>("/v2/affiliates/{id}:assignToProgram", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AddAffiliateToProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddAffiliateToProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1756,9 +1756,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AddAffiliateToProgramUsingPOST_0Async(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task AddAffiliateToProgramUsingPOSTAsync(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await AddAffiliateToProgramUsingPOST_0WithHttpInfoAsync(id, affiliateAddToProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            await AddAffiliateToProgramUsingPOSTWithHttpInfoAsync(id, affiliateAddToProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1770,18 +1770,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> AddAffiliateToProgramUsingPOST_0WithHttpInfoAsync(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> AddAffiliateToProgramUsingPOSTWithHttpInfoAsync(string id, AffiliateAddToProgramRequest affiliateAddToProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->AddAffiliateToProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->AddAffiliateToProgramUsingPOST");
             }
 
             // verify the required parameter 'affiliateAddToProgramRequest' is set
             if (affiliateAddToProgramRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateAddToProgramRequest' when calling AffiliateApi->AddAffiliateToProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateAddToProgramRequest' when calling AffiliateApi->AddAffiliateToProgramUsingPOST");
             }
 
 
@@ -1811,7 +1811,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = affiliateAddToProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AddAffiliateToProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AddAffiliateToProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1820,7 +1820,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AddAffiliateToProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddAffiliateToProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1971,9 +1971,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="insertCommissionProgram">Commission Program to insert (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateCommissionProgramResponse</returns>
-        public AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST_0(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0)
+        public AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse> localVarResponse = AddCommissionProgramUsingPOST_0WithHttpInfo(insertCommissionProgram);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse> localVarResponse = AddCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram);
             return localVarResponse.Data;
         }
 
@@ -1984,7 +1984,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="insertCommissionProgram">Commission Program to insert (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateCommissionProgramResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOST_0WithHttpInfo(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOSTWithHttpInfo(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -2011,7 +2011,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = insertCommissionProgram;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AddCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AddCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2019,7 +2019,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<AffiliateCommissionProgramResponse>("/v2/affiliates/commissionPrograms", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AddCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2037,9 +2037,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateCommissionProgramResponse</returns>
-        public async System.Threading.Tasks.Task<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOST_0Async(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffiliateCommissionProgramResponse> AddCommissionProgramUsingPOSTAsync(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse> localVarResponse = await AddCommissionProgramUsingPOST_0WithHttpInfoAsync(insertCommissionProgram, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse> localVarResponse = await AddCommissionProgramUsingPOSTWithHttpInfoAsync(insertCommissionProgram, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2051,7 +2051,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateCommissionProgramResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse>> AddCommissionProgramUsingPOST_0WithHttpInfoAsync(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionProgramResponse>> AddCommissionProgramUsingPOSTWithHttpInfoAsync(CreateCommissionProgramRequest? insertCommissionProgram = default(CreateCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2079,7 +2079,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = insertCommissionProgram;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AddCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AddCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2088,7 +2088,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AddCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2106,9 +2106,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="productCommissionProgram">Product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCommissionProgram</returns>
-        public ProductCommissionProgram AssignProductCommissionProgramUsingPOST_0(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0)
+        public ProductCommissionProgram AssignProductCommissionProgramUsingPOST(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = AssignProductCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, productCommissionProgram);
+            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = AssignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram);
             return localVarResponse.Data;
         }
 
@@ -2120,12 +2120,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="productCommissionProgram">Product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCommissionProgram</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> AssignProductCommissionProgramUsingPOST_0WithHttpInfo(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> AssignProductCommissionProgramUsingPOSTWithHttpInfo(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignProductCommissionProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignProductCommissionProgramUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2154,7 +2154,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
             localVarRequestOptions.Data = productCommissionProgram;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AssignProductCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AssignProductCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2162,7 +2162,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<ProductCommissionProgram>("/v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AssignProductCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AssignProductCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2181,9 +2181,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCommissionProgram</returns>
-        public async System.Threading.Tasks.Task<ProductCommissionProgram> AssignProductCommissionProgramUsingPOST_0Async(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCommissionProgram> AssignProductCommissionProgramUsingPOSTAsync(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = await AssignProductCommissionProgramUsingPOST_0WithHttpInfoAsync(commissionProgramId, productCommissionProgram, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = await AssignProductCommissionProgramUsingPOSTWithHttpInfoAsync(commissionProgramId, productCommissionProgram, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2196,12 +2196,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCommissionProgram)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram>> AssignProductCommissionProgramUsingPOST_0WithHttpInfoAsync(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram>> AssignProductCommissionProgramUsingPOSTWithHttpInfoAsync(string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = default(CreateProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignProductCommissionProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignProductCommissionProgramUsingPOST");
             }
 
 
@@ -2231,7 +2231,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
             localVarRequestOptions.Data = productCommissionProgram;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AssignProductCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AssignProductCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2240,7 +2240,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AssignProductCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AssignProductCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2258,9 +2258,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="subscriptionCommissionProgram">Subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SubscriptionCommissionProgram</returns>
-        public SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST_0(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0)
+        public SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = AssignSubscriptionCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, subscriptionCommissionProgram);
+            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram);
             return localVarResponse.Data;
         }
 
@@ -2272,12 +2272,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="subscriptionCommissionProgram">Subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SubscriptionCommissionProgram</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOST_0WithHttpInfo(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignSubscriptionCommissionProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignSubscriptionCommissionProgramUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2306,7 +2306,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
             localVarRequestOptions.Data = subscriptionCommissionProgram;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AssignSubscriptionCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AssignSubscriptionCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2314,7 +2314,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<SubscriptionCommissionProgram>("/v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AssignSubscriptionCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AssignSubscriptionCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2333,9 +2333,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubscriptionCommissionProgram</returns>
-        public async System.Threading.Tasks.Task<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOST_0Async(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SubscriptionCommissionProgram> AssignSubscriptionCommissionProgramUsingPOSTAsync(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = await AssignSubscriptionCommissionProgramUsingPOST_0WithHttpInfoAsync(commissionProgramId, subscriptionCommissionProgram, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = await AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfoAsync(commissionProgramId, subscriptionCommissionProgram, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2348,12 +2348,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubscriptionCommissionProgram)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram>> AssignSubscriptionCommissionProgramUsingPOST_0WithHttpInfoAsync(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram>> AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfoAsync(string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = default(CreateSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignSubscriptionCommissionProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->AssignSubscriptionCommissionProgramUsingPOST");
             }
 
 
@@ -2383,7 +2383,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
             localVarRequestOptions.Data = subscriptionCommissionProgram;
 
-            localVarRequestOptions.Operation = "AffiliateApi.AssignSubscriptionCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.AssignSubscriptionCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2392,7 +2392,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("AssignSubscriptionCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AssignSubscriptionCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2409,9 +2409,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST_0(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST(CreateCustomFieldRequest customField, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateAffiliateCustomFieldUsingPOST_0WithHttpInfo(customField);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(customField);
             return localVarResponse.Data;
         }
 
@@ -2422,12 +2422,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="customField">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOST_0WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
         {
             // verify the required parameter 'customField' is set
             if (customField == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling AffiliateApi->CreateAffiliateCustomFieldUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling AffiliateApi->CreateAffiliateCustomFieldUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2455,7 +2455,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = customField;
 
-            localVarRequestOptions.Operation = "AffiliateApi.CreateAffiliateCustomFieldUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.CreateAffiliateCustomFieldUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2463,7 +2463,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<CustomFieldMetaData>("/v2/affiliates/model/customFields", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateAffiliateCustomFieldUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateAffiliateCustomFieldUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2481,9 +2481,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOST_0Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateAffiliateCustomFieldUsingPOSTAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateAffiliateCustomFieldUsingPOST_0WithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateAffiliateCustomFieldUsingPOSTWithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2495,12 +2495,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateAffiliateCustomFieldUsingPOST_0WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateAffiliateCustomFieldUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customField' is set
             if (customField == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling AffiliateApi->CreateAffiliateCustomFieldUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling AffiliateApi->CreateAffiliateCustomFieldUsingPOST");
             }
 
 
@@ -2529,7 +2529,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = customField;
 
-            localVarRequestOptions.Operation = "AffiliateApi.CreateAffiliateCustomFieldUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.CreateAffiliateCustomFieldUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2538,7 +2538,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateAffiliateCustomFieldUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateAffiliateCustomFieldUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2556,9 +2556,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createDefaultCommissionProgramRequest">Values of the Default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetDefaultCommissionProgramResponse</returns>
-        public SetDefaultCommissionProgramResponse CreateDefaultCommissionProgramUsingPOST_0(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0)
+        public SetDefaultCommissionProgramResponse CreateDefaultCommissionProgramUsingPOST(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = CreateDefaultCommissionProgramUsingPOST_0WithHttpInfo(commissionProgramId, createDefaultCommissionProgramRequest);
+            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = CreateDefaultCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createDefaultCommissionProgramRequest);
             return localVarResponse.Data;
         }
 
@@ -2570,12 +2570,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="createDefaultCommissionProgramRequest">Values of the Default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetDefaultCommissionProgramResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOST_0WithHttpInfo(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOSTWithHttpInfo(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->CreateDefaultCommissionProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->CreateDefaultCommissionProgramUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2604,7 +2604,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
             localVarRequestOptions.Data = createDefaultCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.CreateDefaultCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.CreateDefaultCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2612,7 +2612,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<SetDefaultCommissionProgramResponse>("/v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateDefaultCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDefaultCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2631,9 +2631,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetDefaultCommissionProgramResponse</returns>
-        public async System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOST_0Async(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> CreateDefaultCommissionProgramUsingPOSTAsync(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = await CreateDefaultCommissionProgramUsingPOST_0WithHttpInfoAsync(commissionProgramId, createDefaultCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = await CreateDefaultCommissionProgramUsingPOSTWithHttpInfoAsync(commissionProgramId, createDefaultCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2646,12 +2646,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetDefaultCommissionProgramResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse>> CreateDefaultCommissionProgramUsingPOST_0WithHttpInfoAsync(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse>> CreateDefaultCommissionProgramUsingPOSTWithHttpInfoAsync(string commissionProgramId, CreateDefaultCommissionProgramRequest? createDefaultCommissionProgramRequest = default(CreateDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->CreateDefaultCommissionProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->CreateDefaultCommissionProgramUsingPOST");
             }
 
 
@@ -2681,7 +2681,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
             localVarRequestOptions.Data = createDefaultCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.CreateDefaultCommissionProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.CreateDefaultCommissionProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2690,7 +2690,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateDefaultCommissionProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDefaultCommissionProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2707,9 +2707,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateLink</returns>
-        public AffiliateLink CreateRedirectLinkUsingPOST_0(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
+        public AffiliateLink CreateRedirectLinkUsingPOST(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = CreateRedirectLinkUsingPOST_0WithHttpInfo(request);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = CreateRedirectLinkUsingPOSTWithHttpInfo(request);
             return localVarResponse.Data;
         }
 
@@ -2720,12 +2720,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateLink</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> CreateRedirectLinkUsingPOST_0WithHttpInfo(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> CreateRedirectLinkUsingPOSTWithHttpInfo(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
         {
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->CreateRedirectLinkUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->CreateRedirectLinkUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2753,7 +2753,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "AffiliateApi.CreateRedirectLinkUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.CreateRedirectLinkUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2761,7 +2761,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<AffiliateLink>("/v2/affiliates/redirects", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateRedirectLinkUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateRedirectLinkUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2779,9 +2779,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateLink</returns>
-        public async System.Threading.Tasks.Task<AffiliateLink> CreateRedirectLinkUsingPOST_0Async(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffiliateLink> CreateRedirectLinkUsingPOSTAsync(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = await CreateRedirectLinkUsingPOST_0WithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = await CreateRedirectLinkUsingPOSTWithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2793,12 +2793,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateLink)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateLink>> CreateRedirectLinkUsingPOST_0WithHttpInfoAsync(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateLink>> CreateRedirectLinkUsingPOSTWithHttpInfoAsync(CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->CreateRedirectLinkUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->CreateRedirectLinkUsingPOST");
             }
 
 
@@ -2827,7 +2827,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "AffiliateApi.CreateRedirectLinkUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.CreateRedirectLinkUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2836,7 +2836,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateRedirectLinkUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateRedirectLinkUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2853,9 +2853,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteAffiliateCommissionProgramUsingDELETE_0(string commissionProgramId, int operationIndex = 0)
+        public void DeleteAffiliateCommissionProgramUsingDELETE(string commissionProgramId, int operationIndex = 0)
         {
-            DeleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfo(commissionProgramId);
+            DeleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(commissionProgramId);
         }
 
         /// <summary>
@@ -2865,12 +2865,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfo(string commissionProgramId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(string commissionProgramId, int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->DeleteAffiliateCommissionProgramUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->DeleteAffiliateCommissionProgramUsingDELETE");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2897,7 +2897,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateCommissionProgramUsingDELETE_0";
+            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateCommissionProgramUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2905,7 +2905,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/affiliates/commissionPrograms/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAffiliateCommissionProgramUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAffiliateCommissionProgramUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2923,9 +2923,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAffiliateCommissionProgramUsingDELETE_0Async(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteAffiliateCommissionProgramUsingDELETEAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfoAsync(commissionProgramId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteAffiliateCommissionProgramUsingDELETEWithHttpInfoAsync(commissionProgramId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -2936,12 +2936,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteAffiliateCommissionProgramUsingDELETE_0WithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteAffiliateCommissionProgramUsingDELETEWithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->DeleteAffiliateCommissionProgramUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->DeleteAffiliateCommissionProgramUsingDELETE");
             }
 
 
@@ -2969,7 +2969,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateCommissionProgramUsingDELETE_0";
+            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateCommissionProgramUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -2978,7 +2978,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAffiliateCommissionProgramUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAffiliateCommissionProgramUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2995,9 +2995,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="id">id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteAffiliateUsingDELETE_0(string id, int operationIndex = 0)
+        public void DeleteAffiliateUsingDELETE(string id, int operationIndex = 0)
         {
-            DeleteAffiliateUsingDELETE_0WithHttpInfo(id);
+            DeleteAffiliateUsingDELETEWithHttpInfo(id);
         }
 
         /// <summary>
@@ -3007,12 +3007,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="id">id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteAffiliateUsingDELETE_0WithHttpInfo(string id, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteAffiliateUsingDELETEWithHttpInfo(string id, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->DeleteAffiliateUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->DeleteAffiliateUsingDELETE");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -3039,7 +3039,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(id)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateUsingDELETE_0";
+            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3047,7 +3047,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/affiliates/{id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAffiliateUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAffiliateUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3065,9 +3065,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAffiliateUsingDELETE_0Async(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteAffiliateUsingDELETEAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteAffiliateUsingDELETE_0WithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteAffiliateUsingDELETEWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -3078,12 +3078,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteAffiliateUsingDELETE_0WithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteAffiliateUsingDELETEWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->DeleteAffiliateUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->DeleteAffiliateUsingDELETE");
             }
 
 
@@ -3111,7 +3111,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(id)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateUsingDELETE_0";
+            localVarRequestOptions.Operation = "AffiliateApi.DeleteAffiliateUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3120,7 +3120,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAffiliateUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteAffiliateUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3137,9 +3137,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteRedirectLinkUsingDELETE_0(string redirectId, int operationIndex = 0)
+        public void DeleteRedirectLinkUsingDELETE(string redirectId, int operationIndex = 0)
         {
-            DeleteRedirectLinkUsingDELETE_0WithHttpInfo(redirectId);
+            DeleteRedirectLinkUsingDELETEWithHttpInfo(redirectId);
         }
 
         /// <summary>
@@ -3149,12 +3149,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteRedirectLinkUsingDELETE_0WithHttpInfo(string redirectId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteRedirectLinkUsingDELETEWithHttpInfo(string redirectId, int operationIndex = 0)
         {
             // verify the required parameter 'redirectId' is set
             if (redirectId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->DeleteRedirectLinkUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->DeleteRedirectLinkUsingDELETE");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -3181,7 +3181,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("redirect_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(redirectId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.DeleteRedirectLinkUsingDELETE_0";
+            localVarRequestOptions.Operation = "AffiliateApi.DeleteRedirectLinkUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3189,7 +3189,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/affiliates/redirects/{redirect_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteRedirectLinkUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteRedirectLinkUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3207,9 +3207,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteRedirectLinkUsingDELETE_0Async(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteRedirectLinkUsingDELETEAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteRedirectLinkUsingDELETE_0WithHttpInfoAsync(redirectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteRedirectLinkUsingDELETEWithHttpInfoAsync(redirectId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -3220,12 +3220,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteRedirectLinkUsingDELETE_0WithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteRedirectLinkUsingDELETEWithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'redirectId' is set
             if (redirectId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->DeleteRedirectLinkUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->DeleteRedirectLinkUsingDELETE");
             }
 
 
@@ -3253,7 +3253,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("redirect_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(redirectId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.DeleteRedirectLinkUsingDELETE_0";
+            localVarRequestOptions.Operation = "AffiliateApi.DeleteRedirectLinkUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3262,7 +3262,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteRedirectLinkUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteRedirectLinkUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3279,9 +3279,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateId">affiliate_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateCommissionEarned</returns>
-        public AffiliateCommissionEarned GetAffiliateCommissionTotalUsingGET_0(string affiliateId, int operationIndex = 0)
+        public AffiliateCommissionEarned GetAffiliateCommissionTotalUsingGET(string affiliateId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned> localVarResponse = GetAffiliateCommissionTotalUsingGET_0WithHttpInfo(affiliateId);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned> localVarResponse = GetAffiliateCommissionTotalUsingGETWithHttpInfo(affiliateId);
             return localVarResponse.Data;
         }
 
@@ -3292,12 +3292,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="affiliateId">affiliate_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateCommissionEarned</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGET_0WithHttpInfo(string affiliateId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGETWithHttpInfo(string affiliateId, int operationIndex = 0)
         {
             // verify the required parameter 'affiliateId' is set
             if (affiliateId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionTotalUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionTotalUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -3324,7 +3324,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("affiliate_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(affiliateId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionTotalUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionTotalUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3332,7 +3332,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<AffiliateCommissionEarned>("/v2/affiliates/{affiliate_id}/commissionTotal", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionTotalUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionTotalUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3350,9 +3350,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateCommissionEarned</returns>
-        public async System.Threading.Tasks.Task<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGET_0Async(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffiliateCommissionEarned> GetAffiliateCommissionTotalUsingGETAsync(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned> localVarResponse = await GetAffiliateCommissionTotalUsingGET_0WithHttpInfoAsync(affiliateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned> localVarResponse = await GetAffiliateCommissionTotalUsingGETWithHttpInfoAsync(affiliateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3364,12 +3364,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateCommissionEarned)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned>> GetAffiliateCommissionTotalUsingGET_0WithHttpInfoAsync(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateCommissionEarned>> GetAffiliateCommissionTotalUsingGETWithHttpInfoAsync(string affiliateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'affiliateId' is set
             if (affiliateId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionTotalUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionTotalUsingGET");
             }
 
 
@@ -3397,7 +3397,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("affiliate_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(affiliateId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionTotalUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionTotalUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3406,7 +3406,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionTotalUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionTotalUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3427,9 +3427,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateCommissionResponse</returns>
-        public ListAffiliateCommissionResponse GetAffiliateCommissionsUsingGET_0(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListAffiliateCommissionResponse GetAffiliateCommissionsUsingGET(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse> localVarResponse = GetAffiliateCommissionsUsingGET_0WithHttpInfo(affiliateId, filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse> localVarResponse = GetAffiliateCommissionsUsingGETWithHttpInfo(affiliateId, filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -3444,12 +3444,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateCommissionResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGET_0WithHttpInfo(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGETWithHttpInfo(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'affiliateId' is set
             if (affiliateId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionsUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionsUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -3492,7 +3492,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionsUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3500,7 +3500,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListAffiliateCommissionResponse>("/v2/affiliates/{affiliate_id}:commissions", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3522,9 +3522,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateCommissionResponse</returns>
-        public async System.Threading.Tasks.Task<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGET_0Async(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAffiliateCommissionResponse> GetAffiliateCommissionsUsingGETAsync(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse> localVarResponse = await GetAffiliateCommissionsUsingGET_0WithHttpInfoAsync(affiliateId, filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse> localVarResponse = await GetAffiliateCommissionsUsingGETWithHttpInfoAsync(affiliateId, filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3540,12 +3540,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateCommissionResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse>> GetAffiliateCommissionsUsingGET_0WithHttpInfoAsync(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionResponse>> GetAffiliateCommissionsUsingGETWithHttpInfoAsync(string affiliateId, string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'affiliateId' is set
             if (affiliateId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionsUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'affiliateId' when calling AffiliateApi->GetAffiliateCommissionsUsingGET");
             }
 
 
@@ -3589,7 +3589,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionsUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCommissionsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3598,7 +3598,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAffiliateCommissionsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3614,9 +3614,9 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ObjectModel</returns>
-        public ObjectModel GetAffiliateCustomFieldsUsingGET_0(int operationIndex = 0)
+        public ObjectModel GetAffiliateCustomFieldsUsingGET(int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = GetAffiliateCustomFieldsUsingGET_0WithHttpInfo();
+            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = GetAffiliateCustomFieldsUsingGETWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -3626,7 +3626,7 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ObjectModel</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ObjectModel> GetAffiliateCustomFieldsUsingGET_0WithHttpInfo(int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ObjectModel> GetAffiliateCustomFieldsUsingGETWithHttpInfo(int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -3651,7 +3651,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCustomFieldsUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCustomFieldsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3659,7 +3659,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ObjectModel>("/v2/affiliates/model", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAffiliateCustomFieldsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAffiliateCustomFieldsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3676,9 +3676,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectModel</returns>
-        public async System.Threading.Tasks.Task<ObjectModel> GetAffiliateCustomFieldsUsingGET_0Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ObjectModel> GetAffiliateCustomFieldsUsingGETAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = await GetAffiliateCustomFieldsUsingGET_0WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ObjectModel> localVarResponse = await GetAffiliateCustomFieldsUsingGETWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3689,7 +3689,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectModel)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ObjectModel>> GetAffiliateCustomFieldsUsingGET_0WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ObjectModel>> GetAffiliateCustomFieldsUsingGETWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -3715,7 +3715,7 @@ namespace Keap.Sdk.Core.Api
             }
 
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCustomFieldsUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetAffiliateCustomFieldsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3724,7 +3724,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAffiliateCustomFieldsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAffiliateCustomFieldsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3885,9 +3885,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateProgramV2</returns>
-        public AffiliateProgramV2 GetCommissionProgramUsingGET_0(string commissionProgramId, int operationIndex = 0)
+        public AffiliateProgramV2 GetCommissionProgramUsingGET(string commissionProgramId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2> localVarResponse = GetCommissionProgramUsingGET_0WithHttpInfo(commissionProgramId);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2> localVarResponse = GetCommissionProgramUsingGETWithHttpInfo(commissionProgramId);
             return localVarResponse.Data;
         }
 
@@ -3898,12 +3898,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="commissionProgramId">commission_program_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateProgramV2</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2> GetCommissionProgramUsingGET_0WithHttpInfo(string commissionProgramId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2> GetCommissionProgramUsingGETWithHttpInfo(string commissionProgramId, int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->GetCommissionProgramUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->GetCommissionProgramUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -3930,7 +3930,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetCommissionProgramUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetCommissionProgramUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -3938,7 +3938,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<AffiliateProgramV2>("/v2/affiliates/commissionPrograms/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCommissionProgramUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCommissionProgramUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3956,9 +3956,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateProgramV2</returns>
-        public async System.Threading.Tasks.Task<AffiliateProgramV2> GetCommissionProgramUsingGET_0Async(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffiliateProgramV2> GetCommissionProgramUsingGETAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2> localVarResponse = await GetCommissionProgramUsingGET_0WithHttpInfoAsync(commissionProgramId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2> localVarResponse = await GetCommissionProgramUsingGETWithHttpInfoAsync(commissionProgramId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3970,12 +3970,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateProgramV2)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2>> GetCommissionProgramUsingGET_0WithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateProgramV2>> GetCommissionProgramUsingGETWithHttpInfoAsync(string commissionProgramId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->GetCommissionProgramUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->GetCommissionProgramUsingGET");
             }
 
 
@@ -4003,7 +4003,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("commission_program_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionProgramId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetCommissionProgramUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetCommissionProgramUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4012,7 +4012,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCommissionProgramUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCommissionProgramUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4029,9 +4029,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateLink</returns>
-        public AffiliateLink GetRedirectLinkUsingGET_0(string redirectId, int operationIndex = 0)
+        public AffiliateLink GetRedirectLinkUsingGET(string redirectId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = GetRedirectLinkUsingGET_0WithHttpInfo(redirectId);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = GetRedirectLinkUsingGETWithHttpInfo(redirectId);
             return localVarResponse.Data;
         }
 
@@ -4042,12 +4042,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="redirectId">redirect_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateLink</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> GetRedirectLinkUsingGET_0WithHttpInfo(string redirectId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> GetRedirectLinkUsingGETWithHttpInfo(string redirectId, int operationIndex = 0)
         {
             // verify the required parameter 'redirectId' is set
             if (redirectId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->GetRedirectLinkUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->GetRedirectLinkUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -4074,7 +4074,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("redirect_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(redirectId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetRedirectLinkUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetRedirectLinkUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4082,7 +4082,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<AffiliateLink>("/v2/affiliates/redirects/{redirect_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRedirectLinkUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRedirectLinkUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4100,9 +4100,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateLink</returns>
-        public async System.Threading.Tasks.Task<AffiliateLink> GetRedirectLinkUsingGET_0Async(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffiliateLink> GetRedirectLinkUsingGETAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = await GetRedirectLinkUsingGET_0WithHttpInfoAsync(redirectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = await GetRedirectLinkUsingGETWithHttpInfoAsync(redirectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4114,12 +4114,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateLink)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateLink>> GetRedirectLinkUsingGET_0WithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateLink>> GetRedirectLinkUsingGETWithHttpInfoAsync(string redirectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'redirectId' is set
             if (redirectId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->GetRedirectLinkUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->GetRedirectLinkUsingGET");
             }
 
 
@@ -4147,7 +4147,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("redirect_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(redirectId)); // path parameter
 
-            localVarRequestOptions.Operation = "AffiliateApi.GetRedirectLinkUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.GetRedirectLinkUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4156,7 +4156,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRedirectLinkUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRedirectLinkUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4176,9 +4176,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateCommissionProgramsResponse</returns>
-        public ListAffiliateCommissionProgramsResponse ListAffiliateCommissionProgramsUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListAffiliateCommissionProgramsResponse ListAffiliateCommissionProgramsUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse> localVarResponse = ListAffiliateCommissionProgramsUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse> localVarResponse = ListAffiliateCommissionProgramsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -4192,7 +4192,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateCommissionProgramsResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -4233,7 +4233,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateCommissionProgramsUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateCommissionProgramsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4241,7 +4241,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListAffiliateCommissionProgramsResponse>("/v2/affiliates/commissionPrograms", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAffiliateCommissionProgramsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListAffiliateCommissionProgramsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4262,9 +4262,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateCommissionProgramsResponse</returns>
-        public async System.Threading.Tasks.Task<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAffiliateCommissionProgramsResponse> ListAffiliateCommissionProgramsUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse> localVarResponse = await ListAffiliateCommissionProgramsUsingGET_0WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse> localVarResponse = await ListAffiliateCommissionProgramsUsingGETWithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4279,7 +4279,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateCommissionProgramsResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse>> ListAffiliateCommissionProgramsUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateCommissionProgramsResponse>> ListAffiliateCommissionProgramsUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -4321,7 +4321,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateCommissionProgramsUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateCommissionProgramsUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4330,7 +4330,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAffiliateCommissionProgramsUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListAffiliateCommissionProgramsUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4350,9 +4350,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateLinksResponse</returns>
-        public ListAffiliateLinksResponse ListAffiliateLinksUsingGET_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListAffiliateLinksResponse ListAffiliateLinksUsingGET(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse> localVarResponse = ListAffiliateLinksUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse> localVarResponse = ListAffiliateLinksUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -4366,7 +4366,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateLinksResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse> ListAffiliateLinksUsingGET_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse> ListAffiliateLinksUsingGETWithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -4407,7 +4407,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateLinksUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateLinksUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4415,7 +4415,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListAffiliateLinksResponse>("/v2/affiliates/redirects", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAffiliateLinksUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListAffiliateLinksUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4436,9 +4436,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateLinksResponse</returns>
-        public async System.Threading.Tasks.Task<ListAffiliateLinksResponse> ListAffiliateLinksUsingGET_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAffiliateLinksResponse> ListAffiliateLinksUsingGETAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse> localVarResponse = await ListAffiliateLinksUsingGET_0WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse> localVarResponse = await ListAffiliateLinksUsingGETWithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4453,7 +4453,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateLinksResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse>> ListAffiliateLinksUsingGET_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateLinksResponse>> ListAffiliateLinksUsingGETWithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -4495,7 +4495,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateLinksUsingGET_0";
+            localVarRequestOptions.Operation = "AffiliateApi.ListAffiliateLinksUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4504,7 +4504,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAffiliateLinksUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListAffiliateLinksUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4524,9 +4524,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAffiliateSummariesResponse</returns>
-        public ListAffiliateSummariesResponse ListSummariesUsingGET1_0(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public ListAffiliateSummariesResponse ListSummariesUsingGET1(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse> localVarResponse = ListSummariesUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse> localVarResponse = ListSummariesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
             return localVarResponse.Data;
         }
 
@@ -4540,7 +4540,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="pageToken">Page token (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAffiliateSummariesResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse> ListSummariesUsingGET1_0WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse> ListSummariesUsingGET1WithHttpInfo(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -4581,7 +4581,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.ListSummariesUsingGET1_0";
+            localVarRequestOptions.Operation = "AffiliateApi.ListSummariesUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4589,7 +4589,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<ListAffiliateSummariesResponse>("/v2/affiliates/summaries", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSummariesUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListSummariesUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4610,9 +4610,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAffiliateSummariesResponse</returns>
-        public async System.Threading.Tasks.Task<ListAffiliateSummariesResponse> ListSummariesUsingGET1_0Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAffiliateSummariesResponse> ListSummariesUsingGET1Async(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse> localVarResponse = await ListSummariesUsingGET1_0WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse> localVarResponse = await ListSummariesUsingGET1WithHttpInfoAsync(filter, orderBy, pageSize, pageToken, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4627,7 +4627,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAffiliateSummariesResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse>> ListSummariesUsingGET1_0WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ListAffiliateSummariesResponse>> ListSummariesUsingGET1WithHttpInfoAsync(string? filter = default(string?), string? orderBy = default(string?), int? pageSize = default(int?), string? pageToken = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -4669,7 +4669,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("", "page_token", pageToken));
             }
 
-            localVarRequestOptions.Operation = "AffiliateApi.ListSummariesUsingGET1_0";
+            localVarRequestOptions.Operation = "AffiliateApi.ListSummariesUsingGET1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4678,7 +4678,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSummariesUsingGET1_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListSummariesUsingGET1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4873,9 +4873,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchDefaultCommissionProgramRequest">Values of the default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetDefaultCommissionProgramResponse</returns>
-        public SetDefaultCommissionProgramResponse PatchDefaultCommissionProgramUsingPATCH_0(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0)
+        public SetDefaultCommissionProgramResponse PatchDefaultCommissionProgramUsingPATCH(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = PatchDefaultCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, updateMask, patchDefaultCommissionProgramRequest);
+            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = PatchDefaultCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, updateMask, patchDefaultCommissionProgramRequest);
             return localVarResponse.Data;
         }
 
@@ -4888,12 +4888,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchDefaultCommissionProgramRequest">Values of the default Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetDefaultCommissionProgramResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCH_0WithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCHWithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchDefaultCommissionProgramUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchDefaultCommissionProgramUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -4926,7 +4926,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = patchDefaultCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.PatchDefaultCommissionProgramUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.PatchDefaultCommissionProgramUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -4934,7 +4934,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<SetDefaultCommissionProgramResponse>("/v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchDefaultCommissionProgramUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchDefaultCommissionProgramUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4954,9 +4954,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetDefaultCommissionProgramResponse</returns>
-        public async System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCH_0Async(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetDefaultCommissionProgramResponse> PatchDefaultCommissionProgramUsingPATCHAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = await PatchDefaultCommissionProgramUsingPATCH_0WithHttpInfoAsync(commissionProgramId, updateMask, patchDefaultCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse> localVarResponse = await PatchDefaultCommissionProgramUsingPATCHWithHttpInfoAsync(commissionProgramId, updateMask, patchDefaultCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4970,12 +4970,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetDefaultCommissionProgramResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse>> PatchDefaultCommissionProgramUsingPATCH_0WithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SetDefaultCommissionProgramResponse>> PatchDefaultCommissionProgramUsingPATCHWithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchDefaultCommissionProgramRequest? patchDefaultCommissionProgramRequest = default(PatchDefaultCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchDefaultCommissionProgramUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchDefaultCommissionProgramUsingPATCH");
             }
 
 
@@ -5009,7 +5009,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = patchDefaultCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.PatchDefaultCommissionProgramUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.PatchDefaultCommissionProgramUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5018,7 +5018,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchDefaultCommissionProgramUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchDefaultCommissionProgramUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5037,9 +5037,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchProductCommissionProgramRequest">Values of the product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCommissionProgram</returns>
-        public ProductCommissionProgram PatchProductCommissionProgramUsingPATCH_0(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0)
+        public ProductCommissionProgram PatchProductCommissionProgramUsingPATCH(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = PatchProductCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, updateMask, patchProductCommissionProgramRequest);
+            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = PatchProductCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, updateMask, patchProductCommissionProgramRequest);
             return localVarResponse.Data;
         }
 
@@ -5052,12 +5052,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchProductCommissionProgramRequest">Values of the product Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCommissionProgram</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCH_0WithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCHWithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchProductCommissionProgramUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchProductCommissionProgramUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -5090,7 +5090,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = patchProductCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.PatchProductCommissionProgramUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.PatchProductCommissionProgramUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5098,7 +5098,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<ProductCommissionProgram>("/v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchProductCommissionProgramUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchProductCommissionProgramUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5118,9 +5118,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCommissionProgram</returns>
-        public async System.Threading.Tasks.Task<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCH_0Async(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCommissionProgram> PatchProductCommissionProgramUsingPATCHAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = await PatchProductCommissionProgramUsingPATCH_0WithHttpInfoAsync(commissionProgramId, updateMask, patchProductCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram> localVarResponse = await PatchProductCommissionProgramUsingPATCHWithHttpInfoAsync(commissionProgramId, updateMask, patchProductCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5134,12 +5134,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCommissionProgram)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram>> PatchProductCommissionProgramUsingPATCH_0WithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ProductCommissionProgram>> PatchProductCommissionProgramUsingPATCHWithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchProductCommissionProgramRequest? patchProductCommissionProgramRequest = default(PatchProductCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchProductCommissionProgramUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchProductCommissionProgramUsingPATCH");
             }
 
 
@@ -5173,7 +5173,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = patchProductCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.PatchProductCommissionProgramUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.PatchProductCommissionProgramUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5182,7 +5182,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchProductCommissionProgramUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchProductCommissionProgramUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5201,9 +5201,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchSubscriptionCommissionProgramRequest">Values of the subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SubscriptionCommissionProgram</returns>
-        public SubscriptionCommissionProgram PatchSubscriptionCommissionProgramUsingPATCH_0(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0)
+        public SubscriptionCommissionProgram PatchSubscriptionCommissionProgramUsingPATCH(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = PatchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfo(commissionProgramId, updateMask, patchSubscriptionCommissionProgramRequest);
+            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = PatchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, updateMask, patchSubscriptionCommissionProgramRequest);
             return localVarResponse.Data;
         }
 
@@ -5216,12 +5216,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="patchSubscriptionCommissionProgramRequest">Values of the subscription Commission Program (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SubscriptionCommissionProgram</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCHWithHttpInfo(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchSubscriptionCommissionProgramUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchSubscriptionCommissionProgramUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -5254,7 +5254,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = patchSubscriptionCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.PatchSubscriptionCommissionProgramUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.PatchSubscriptionCommissionProgramUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5262,7 +5262,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<SubscriptionCommissionProgram>("/v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchSubscriptionCommissionProgramUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchSubscriptionCommissionProgramUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5282,9 +5282,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubscriptionCommissionProgram</returns>
-        public async System.Threading.Tasks.Task<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCH_0Async(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SubscriptionCommissionProgram> PatchSubscriptionCommissionProgramUsingPATCHAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = await PatchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfoAsync(commissionProgramId, updateMask, patchSubscriptionCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram> localVarResponse = await PatchSubscriptionCommissionProgramUsingPATCHWithHttpInfoAsync(commissionProgramId, updateMask, patchSubscriptionCommissionProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5298,12 +5298,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubscriptionCommissionProgram)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram>> PatchSubscriptionCommissionProgramUsingPATCH_0WithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<SubscriptionCommissionProgram>> PatchSubscriptionCommissionProgramUsingPATCHWithHttpInfoAsync(string commissionProgramId, List<string>? updateMask = default(List<string>?), PatchSubscriptionCommissionProgramRequest? patchSubscriptionCommissionProgramRequest = default(PatchSubscriptionCommissionProgramRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionProgramId' is set
             if (commissionProgramId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchSubscriptionCommissionProgramUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionProgramId' when calling AffiliateApi->PatchSubscriptionCommissionProgramUsingPATCH");
             }
 
 
@@ -5337,7 +5337,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = patchSubscriptionCommissionProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.PatchSubscriptionCommissionProgramUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.PatchSubscriptionCommissionProgramUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5346,7 +5346,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchSubscriptionCommissionProgramUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PatchSubscriptionCommissionProgramUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5364,9 +5364,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="removeFromProgramRequest">removeFromProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void RemoveAffiliateFromProgramUsingPOST_0(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0)
+        public void RemoveAffiliateFromProgramUsingPOST(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0)
         {
-            RemoveAffiliateFromProgramUsingPOST_0WithHttpInfo(id, removeFromProgramRequest);
+            RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest);
         }
 
         /// <summary>
@@ -5377,18 +5377,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="removeFromProgramRequest">removeFromProgramRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> RemoveAffiliateFromProgramUsingPOST_0WithHttpInfo(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST");
             }
 
             // verify the required parameter 'removeFromProgramRequest' is set
             if (removeFromProgramRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'removeFromProgramRequest' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'removeFromProgramRequest' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -5417,7 +5417,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = removeFromProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.RemoveAffiliateFromProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.RemoveAffiliateFromProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5425,7 +5425,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Object>("/v2/affiliates/{id}:removeFromProgram", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RemoveAffiliateFromProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RemoveAffiliateFromProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5444,9 +5444,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveAffiliateFromProgramUsingPOST_0Async(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task RemoveAffiliateFromProgramUsingPOSTAsync(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await RemoveAffiliateFromProgramUsingPOST_0WithHttpInfoAsync(id, removeFromProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            await RemoveAffiliateFromProgramUsingPOSTWithHttpInfoAsync(id, removeFromProgramRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -5458,18 +5458,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> RemoveAffiliateFromProgramUsingPOST_0WithHttpInfoAsync(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> RemoveAffiliateFromProgramUsingPOSTWithHttpInfoAsync(string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'id' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST");
             }
 
             // verify the required parameter 'removeFromProgramRequest' is set
             if (removeFromProgramRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'removeFromProgramRequest' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'removeFromProgramRequest' when calling AffiliateApi->RemoveAffiliateFromProgramUsingPOST");
             }
 
 
@@ -5499,7 +5499,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = removeFromProgramRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.RemoveAffiliateFromProgramUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.RemoveAffiliateFromProgramUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5508,7 +5508,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RemoveAffiliateFromProgramUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RemoveAffiliateFromProgramUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5526,9 +5526,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteSubscriptionPlanCommissionRequest">deleteSubscriptionPlanCommissionRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0)
+        public void RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0)
         {
-            RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfo(commissionId, deleteSubscriptionPlanCommissionRequest);
+            RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(commissionId, deleteSubscriptionPlanCommissionRequest);
         }
 
         /// <summary>
@@ -5539,18 +5539,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="deleteSubscriptionPlanCommissionRequest">deleteSubscriptionPlanCommissionRequest</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfo(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0)
         {
             // verify the required parameter 'commissionId' is set
             if (commissionId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionId' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionId' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST");
             }
 
             // verify the required parameter 'deleteSubscriptionPlanCommissionRequest' is set
             if (deleteSubscriptionPlanCommissionRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteSubscriptionPlanCommissionRequest' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteSubscriptionPlanCommissionRequest' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -5579,7 +5579,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionId)); // path parameter
             localVarRequestOptions.Data = deleteSubscriptionPlanCommissionRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5587,7 +5587,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Post<Object>("/v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5606,9 +5606,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0Async(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTAsync(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfoAsync(commissionId, deleteSubscriptionPlanCommissionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            await RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfoAsync(commissionId, deleteSubscriptionPlanCommissionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -5620,18 +5620,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0WithHttpInfoAsync(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> RemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfoAsync(string commissionId, DeleteSubscriptionPlanCommissionRequest deleteSubscriptionPlanCommissionRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'commissionId' is set
             if (commissionId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionId' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'commissionId' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST");
             }
 
             // verify the required parameter 'deleteSubscriptionPlanCommissionRequest' is set
             if (deleteSubscriptionPlanCommissionRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteSubscriptionPlanCommissionRequest' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'deleteSubscriptionPlanCommissionRequest' when calling AffiliateApi->RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST");
             }
 
 
@@ -5661,7 +5661,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("commission_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(commissionId)); // path parameter
             localVarRequestOptions.Data = deleteSubscriptionPlanCommissionRequest;
 
-            localVarRequestOptions.Operation = "AffiliateApi.RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0";
+            localVarRequestOptions.Operation = "AffiliateApi.RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5670,7 +5670,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RemoveSubscriptionPlanCommissionFromCommissionsUsingPOST", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5689,9 +5689,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH_0(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateAffiliateCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             return localVarResponse.Data;
         }
 
@@ -5704,18 +5704,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCH_0WithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -5748,7 +5748,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "AffiliateApi.UpdateAffiliateCustomFieldUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.UpdateAffiliateCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5756,7 +5756,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<CustomFieldMetaData>("/v2/affiliates/model/customFields/{custom_field_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAffiliateCustomFieldUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateAffiliateCustomFieldUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5776,9 +5776,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCH_0Async(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateAffiliateCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateAffiliateCustomFieldUsingPATCH_0WithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateAffiliateCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5792,18 +5792,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateAffiliateCustomFieldUsingPATCH_0WithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateAffiliateCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateAffiliateCustomFieldUsingPATCH");
             }
 
 
@@ -5837,7 +5837,7 @@ namespace Keap.Sdk.Core.Api
             }
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "AffiliateApi.UpdateAffiliateCustomFieldUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.UpdateAffiliateCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -5846,7 +5846,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAffiliateCustomFieldUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateAffiliateCustomFieldUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -6016,9 +6016,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AffiliateLink</returns>
-        public AffiliateLink UpdateRedirectLinkUsingPATCH_0(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
+        public AffiliateLink UpdateRedirectLinkUsingPATCH(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = UpdateRedirectLinkUsingPATCH_0WithHttpInfo(redirectId, request);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = UpdateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request);
             return localVarResponse.Data;
         }
 
@@ -6030,18 +6030,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="request">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AffiliateLink</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> UpdateRedirectLinkUsingPATCH_0WithHttpInfo(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> UpdateRedirectLinkUsingPATCHWithHttpInfo(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0)
         {
             // verify the required parameter 'redirectId' is set
             if (redirectId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -6070,7 +6070,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("redirect_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(redirectId)); // path parameter
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "AffiliateApi.UpdateRedirectLinkUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.UpdateRedirectLinkUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -6078,7 +6078,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Patch<AffiliateLink>("/v2/affiliates/redirects/{redirect_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRedirectLinkUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateRedirectLinkUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -6097,9 +6097,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AffiliateLink</returns>
-        public async System.Threading.Tasks.Task<AffiliateLink> UpdateRedirectLinkUsingPATCH_0Async(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffiliateLink> UpdateRedirectLinkUsingPATCHAsync(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = await UpdateRedirectLinkUsingPATCH_0WithHttpInfoAsync(redirectId, request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<AffiliateLink> localVarResponse = await UpdateRedirectLinkUsingPATCHWithHttpInfoAsync(redirectId, request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6112,18 +6112,18 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AffiliateLink)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateLink>> UpdateRedirectLinkUsingPATCH_0WithHttpInfoAsync(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<AffiliateLink>> UpdateRedirectLinkUsingPATCHWithHttpInfoAsync(string redirectId, CreateOrPatchAffiliateLinkRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'redirectId' is set
             if (redirectId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'redirectId' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH");
             }
 
             // verify the required parameter 'request' is set
             if (request == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling AffiliateApi->UpdateRedirectLinkUsingPATCH");
             }
 
 
@@ -6153,7 +6153,7 @@ namespace Keap.Sdk.Core.Api
             localVarRequestOptions.PathParameters.Add("redirect_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(redirectId)); // path parameter
             localVarRequestOptions.Data = request;
 
-            localVarRequestOptions.Operation = "AffiliateApi.UpdateRedirectLinkUsingPATCH_0";
+            localVarRequestOptions.Operation = "AffiliateApi.UpdateRedirectLinkUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -6162,7 +6162,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRedirectLinkUsingPATCH_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateRedirectLinkUsingPATCH", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -4,16 +4,16 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**listCountriesUsingGET2_0**](LocaleApi.md#listCountriesUsingGET2_0) | **GET** /v2/locales/countries | List Countries |
-| [**listCountriesUsingGET2_0WithHttpInfo**](LocaleApi.md#listCountriesUsingGET2_0WithHttpInfo) | **GET** /v2/locales/countries | List Countries |
-| [**listProvincesForCountryUsingGET_0**](LocaleApi.md#listProvincesForCountryUsingGET_0) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
-| [**listProvincesForCountryUsingGET_0WithHttpInfo**](LocaleApi.md#listProvincesForCountryUsingGET_0WithHttpInfo) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
+| [**listCountriesUsingGET2**](LocaleApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries |
+| [**listCountriesUsingGET2WithHttpInfo**](LocaleApi.md#listCountriesUsingGET2WithHttpInfo) | **GET** /v2/locales/countries | List Countries |
+| [**listProvincesForCountryUsingGET**](LocaleApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
+| [**listProvincesForCountryUsingGETWithHttpInfo**](LocaleApi.md#listProvincesForCountryUsingGETWithHttpInfo) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
 
 
 
-## listCountriesUsingGET2_0
+## listCountriesUsingGET2
 
-> ListCountriesResponse listCountriesUsingGET2_0()
+> ListCountriesResponse listCountriesUsingGET2()
 
 List Countries
 
@@ -21,11 +21,11 @@ List Countries
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LocaleApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -34,10 +34,10 @@ public class Example {
 
         LocaleApi apiInstance = new LocaleApi(defaultClient);
         try {
-            ListCountriesResponse result = apiInstance.listCountriesUsingGET2_0();
+            ListCountriesResponse result = apiInstance.listCountriesUsingGET2();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LocaleApi#listCountriesUsingGET2_0");
+            System.err.println("Exception when calling LocaleApi#listCountriesUsingGET2");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -73,9 +73,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listCountriesUsingGET2_0WithHttpInfo
+## listCountriesUsingGET2WithHttpInfo
 
-> ApiResponse<ListCountriesResponse> listCountriesUsingGET2_0 listCountriesUsingGET2_0WithHttpInfo()
+> ApiResponse<ListCountriesResponse> listCountriesUsingGET2 listCountriesUsingGET2WithHttpInfo()
 
 List Countries
 
@@ -83,12 +83,12 @@ List Countries
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LocaleApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -97,12 +97,12 @@ public class Example {
 
         LocaleApi apiInstance = new LocaleApi(defaultClient);
         try {
-            ApiResponse<ListCountriesResponse> response = apiInstance.listCountriesUsingGET2_0WithHttpInfo();
+            ApiResponse<ListCountriesResponse> response = apiInstance.listCountriesUsingGET2WithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling LocaleApi#listCountriesUsingGET2_0");
+            System.err.println("Exception when calling LocaleApi#listCountriesUsingGET2");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -139,9 +139,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## listProvincesForCountryUsingGET_0
+## listProvincesForCountryUsingGET
 
-> ListProvincesResponse listProvincesForCountryUsingGET_0(countryCode)
+> ListProvincesResponse listProvincesForCountryUsingGET(countryCode)
 
 List a Country&#39;s Provinces
 
@@ -149,11 +149,11 @@ List a Country&#39;s Provinces
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LocaleApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -163,10 +163,10 @@ public class Example {
         LocaleApi apiInstance = new LocaleApi(defaultClient);
         String countryCode = "countryCode_example"; // String | country_code
         try {
-            ListProvincesResponse result = apiInstance.listProvincesForCountryUsingGET_0(countryCode);
+            ListProvincesResponse result = apiInstance.listProvincesForCountryUsingGET(countryCode);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LocaleApi#listProvincesForCountryUsingGET_0");
+            System.err.println("Exception when calling LocaleApi#listProvincesForCountryUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -205,9 +205,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listProvincesForCountryUsingGET_0WithHttpInfo
+## listProvincesForCountryUsingGETWithHttpInfo
 
-> ApiResponse<ListProvincesResponse> listProvincesForCountryUsingGET_0 listProvincesForCountryUsingGET_0WithHttpInfo(countryCode)
+> ApiResponse<ListProvincesResponse> listProvincesForCountryUsingGET listProvincesForCountryUsingGETWithHttpInfo(countryCode)
 
 List a Country&#39;s Provinces
 
@@ -215,12 +215,12 @@ List a Country&#39;s Provinces
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LocaleApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LocaleApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -230,12 +230,12 @@ public class Example {
         LocaleApi apiInstance = new LocaleApi(defaultClient);
         String countryCode = "countryCode_example"; // String | country_code
         try {
-            ApiResponse<ListProvincesResponse> response = apiInstance.listProvincesForCountryUsingGET_0WithHttpInfo(countryCode);
+            ApiResponse<ListProvincesResponse> response = apiInstance.listProvincesForCountryUsingGETWithHttpInfo(countryCode);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling LocaleApi#listProvincesForCountryUsingGET_0");
+            System.err.println("Exception when calling LocaleApi#listProvincesForCountryUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

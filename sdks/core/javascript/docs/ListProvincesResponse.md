@@ -1,4 +1,4 @@
-# KeapRestApi.ListProvincesResponse
+# KeapCoreServiceCoreSdk.ListProvincesResponse
 
 ## Properties
 

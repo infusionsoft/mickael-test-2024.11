@@ -1,4 +1,4 @@
-# KeapRestApi.CreateFunnelIntegrationTriggerEvents
+# KeapCoreServiceCoreSdk.CreateFunnelIntegrationTriggerEvents
 
 ## Properties
 

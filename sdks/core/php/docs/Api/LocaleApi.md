@@ -4,14 +4,14 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listCountriesUsingGET2_0()**](LocaleApi.md#listCountriesUsingGET2_0) | **GET** /v2/locales/countries | List Countries |
-| [**listProvincesForCountryUsingGET_0()**](LocaleApi.md#listProvincesForCountryUsingGET_0) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
+| [**listCountriesUsingGET2()**](LocaleApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries |
+| [**listProvincesForCountryUsingGET()**](LocaleApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
 
 
-## `listCountriesUsingGET2_0()`
+## `listCountriesUsingGET2()`
 
 ```php
-listCountriesUsingGET2_0(): \Com\Keap\Sdk\Core\Model\ListCountriesResponse
+listCountriesUsingGET2(): \Com\Keap\Sdk\Core\Model\ListCountriesResponse
 ```
 
 List Countries
@@ -30,10 +30,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\LocaleApi(
 );
 
 try {
-    $result = $apiInstance->listCountriesUsingGET2_0();
+    $result = $apiInstance->listCountriesUsingGET2();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LocaleApi->listCountriesUsingGET2_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LocaleApi->listCountriesUsingGET2: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -58,10 +58,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listProvincesForCountryUsingGET_0()`
+## `listProvincesForCountryUsingGET()`
 
 ```php
-listProvincesForCountryUsingGET_0($country_code): \Com\Keap\Sdk\Core\Model\ListProvincesResponse
+listProvincesForCountryUsingGET($country_code): \Com\Keap\Sdk\Core\Model\ListProvincesResponse
 ```
 
 List a Country's Provinces
@@ -81,10 +81,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\LocaleApi(
 $country_code = 'country_code_example'; // string | country_code
 
 try {
-    $result = $apiInstance->listProvincesForCountryUsingGET_0($country_code);
+    $result = $apiInstance->listProvincesForCountryUsingGET($country_code);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LocaleApi->listProvincesForCountryUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LocaleApi->listProvincesForCountryUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

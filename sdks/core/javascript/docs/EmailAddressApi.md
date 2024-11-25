@@ -1,4 +1,4 @@
-# KeapRestApi.EmailAddressApi
+# KeapCoreServiceCoreSdk.EmailAddressApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -20,9 +20,9 @@ Retrieves the opt-in status for given Email Address
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailAddressApi();
+let apiInstance = new KeapCoreServiceCoreSdk.EmailAddressApi();
 let email = "email_example"; // String | email
 apiInstance.getEmailAddressStatusUsingGET(email).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -64,11 +64,11 @@ Updates an Email Address opt-in status  You may opt-in or mark an email address 
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.EmailAddressApi();
+let apiInstance = new KeapCoreServiceCoreSdk.EmailAddressApi();
 let email = "email_example"; // String | email
-let updateEmailAddress = new KeapRestApi.UpdateEmailAddress(); // UpdateEmailAddress | updateEmailAddress
+let updateEmailAddress = new KeapCoreServiceCoreSdk.UpdateEmailAddress(); // UpdateEmailAddress | updateEmailAddress
 apiInstance.updateEmailAddressOptStatusUsingPUT(email, updateEmailAddress).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

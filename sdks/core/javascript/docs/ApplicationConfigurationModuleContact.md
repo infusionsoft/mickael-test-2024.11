@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleContact
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleContact
 
 ## Properties
 

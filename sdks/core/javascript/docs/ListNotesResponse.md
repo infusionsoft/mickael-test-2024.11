@@ -1,4 +1,4 @@
-# KeapRestApi.ListNotesResponse
+# KeapCoreServiceCoreSdk.ListNotesResponse
 
 ## Properties
 

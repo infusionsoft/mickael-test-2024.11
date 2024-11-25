@@ -39,7 +39,7 @@ class LandingPagesApi:
 
 
     @validate_call
-    def list_landing_pages_using_get_0(
+    def list_landing_pages_using_get(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. `given_name desc`")] = None,
@@ -92,7 +92,7 @@ class LandingPagesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_landing_pages_using_get_0_serialize(
+        _param = self._list_landing_pages_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -120,7 +120,7 @@ class LandingPagesApi:
 
 
     @validate_call
-    def list_landing_pages_using_get_0_with_http_info(
+    def list_landing_pages_using_get_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. `given_name desc`")] = None,
@@ -173,7 +173,7 @@ class LandingPagesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_landing_pages_using_get_0_serialize(
+        _param = self._list_landing_pages_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -201,7 +201,7 @@ class LandingPagesApi:
 
 
     @validate_call
-    def list_landing_pages_using_get_0_without_preload_content(
+    def list_landing_pages_using_get_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Search filter to apply to results")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items by. E.g. `given_name desc`")] = None,
@@ -254,7 +254,7 @@ class LandingPagesApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_landing_pages_using_get_0_serialize(
+        _param = self._list_landing_pages_using_get_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -277,7 +277,7 @@ class LandingPagesApi:
         return response_data.response
 
 
-    def _list_landing_pages_using_get_0_serialize(
+    def _list_landing_pages_using_get_serialize(
         self,
         filter,
         order_by,

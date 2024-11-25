@@ -1,4 +1,4 @@
-# KeapRestApi.LinkContactsRequest
+# KeapCoreServiceCoreSdk.LinkContactsRequest
 
 ## Properties
 

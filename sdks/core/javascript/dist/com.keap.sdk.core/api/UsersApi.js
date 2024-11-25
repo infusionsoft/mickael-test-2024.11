@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Users service.
 * @module com.keap.sdk.core/api/UsersApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var UsersApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -55,8 +55,8 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
    */
   return _createClass(UsersApi, [{
-    key: "createUserUsingPOST1_0WithHttpInfo",
-    value: function createUserUsingPOST1_0WithHttpInfo(opts) {
+    key: "createUserUsingPOST1WithHttpInfo",
+    value: function createUserUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['user'];
       var pathParams = {};
@@ -78,9 +78,9 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
   }, {
-    key: "createUserUsingPOST1_0",
-    value: function createUserUsingPOST1_0(opts) {
-      return this.createUserUsingPOST1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "createUserUsingPOST1",
+    value: function createUserUsingPOST1(opts) {
+      return this.createUserUsingPOST1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -92,12 +92,12 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
   }, {
-    key: "getUserByIdUsingGET_0WithHttpInfo",
-    value: function getUserByIdUsingGET_0WithHttpInfo(userId) {
+    key: "getUserByIdUsingGETWithHttpInfo",
+    value: function getUserByIdUsingGETWithHttpInfo(userId) {
       var postBody = null;
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new _Error["default"]("Missing the required parameter 'userId' when calling getUserByIdUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'userId' when calling getUserByIdUsingGET");
       }
       var pathParams = {
         'user_id': userId
@@ -119,9 +119,9 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
   }, {
-    key: "getUserByIdUsingGET_0",
-    value: function getUserByIdUsingGET_0(userId) {
-      return this.getUserByIdUsingGET_0WithHttpInfo(userId).then(function (response_and_data) {
+    key: "getUserByIdUsingGET",
+    value: function getUserByIdUsingGET(userId) {
+      return this.getUserByIdUsingGETWithHttpInfo(userId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -132,8 +132,8 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/GetUserInfoResponse} and HTTP response
      */
   }, {
-    key: "getUserInfoUsingGET1_0WithHttpInfo",
-    value: function getUserInfoUsingGET1_0WithHttpInfo() {
+    key: "getUserInfoUsingGET1WithHttpInfo",
+    value: function getUserInfoUsingGET1WithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -152,9 +152,9 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/GetUserInfoResponse}
      */
   }, {
-    key: "getUserInfoUsingGET1_0",
-    value: function getUserInfoUsingGET1_0() {
-      return this.getUserInfoUsingGET1_0WithHttpInfo().then(function (response_and_data) {
+    key: "getUserInfoUsingGET1",
+    value: function getUserInfoUsingGET1() {
+      return this.getUserInfoUsingGET1WithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -166,12 +166,12 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link String} and HTTP response
      */
   }, {
-    key: "getUserSignatureUsingGET1_0WithHttpInfo",
-    value: function getUserSignatureUsingGET1_0WithHttpInfo(userId) {
+    key: "getUserSignatureUsingGET1WithHttpInfo",
+    value: function getUserSignatureUsingGET1WithHttpInfo(userId) {
       var postBody = null;
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new _Error["default"]("Missing the required parameter 'userId' when calling getUserSignatureUsingGET1_0");
+        throw new _Error["default"]("Missing the required parameter 'userId' when calling getUserSignatureUsingGET1");
       }
       var pathParams = {
         'user_id': userId
@@ -193,9 +193,9 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link String}
      */
   }, {
-    key: "getUserSignatureUsingGET1_0",
-    value: function getUserSignatureUsingGET1_0(userId) {
-      return this.getUserSignatureUsingGET1_0WithHttpInfo(userId).then(function (response_and_data) {
+    key: "getUserSignatureUsingGET1",
+    value: function getUserSignatureUsingGET1(userId) {
+      return this.getUserSignatureUsingGET1WithHttpInfo(userId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -209,8 +209,8 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListUserResponse} and HTTP response
      */
   }, {
-    key: "listUsersUsingGET1_0WithHttpInfo",
-    value: function listUsersUsingGET1_0WithHttpInfo(opts) {
+    key: "listUsersUsingGET1WithHttpInfo",
+    value: function listUsersUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -236,9 +236,9 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListUserResponse}
      */
   }, {
-    key: "listUsersUsingGET1_0",
-    value: function listUsersUsingGET1_0(opts) {
-      return this.listUsersUsingGET1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listUsersUsingGET1",
+    value: function listUsersUsingGET1(opts) {
+      return this.listUsersUsingGET1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -253,13 +253,13 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
   }, {
-    key: "patchUserUsingPATCH_0WithHttpInfo",
-    value: function patchUserUsingPATCH_0WithHttpInfo(userId, opts) {
+    key: "patchUserUsingPATCHWithHttpInfo",
+    value: function patchUserUsingPATCHWithHttpInfo(userId, opts) {
       opts = opts || {};
       var postBody = opts['user'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new _Error["default"]("Missing the required parameter 'userId' when calling patchUserUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'userId' when calling patchUserUsingPATCH");
       }
       var pathParams = {
         'user_id': userId
@@ -286,9 +286,9 @@ var UsersApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
   }, {
-    key: "patchUserUsingPATCH_0",
-    value: function patchUserUsingPATCH_0(userId, opts) {
-      return this.patchUserUsingPATCH_0WithHttpInfo(userId, opts).then(function (response_and_data) {
+    key: "patchUserUsingPATCH",
+    value: function patchUserUsingPATCH(userId, opts) {
+      return this.patchUserUsingPATCHWithHttpInfo(userId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

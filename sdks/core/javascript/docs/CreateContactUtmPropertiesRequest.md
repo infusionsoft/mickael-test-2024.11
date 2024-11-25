@@ -1,4 +1,4 @@
-# KeapRestApi.CreateContactUtmPropertiesRequest
+# KeapCoreServiceCoreSdk.CreateContactUtmPropertiesRequest
 
 ## Properties
 

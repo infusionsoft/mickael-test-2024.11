@@ -21,7 +21,7 @@ import ListLeadSourcesResponse from '../model/ListLeadSourcesResponse';
 /**
 * LeadSources service.
 * @module com.keap.sdk.core/api/LeadSourcesApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class LeadSourcesApi {
 
@@ -45,7 +45,7 @@ export default class LeadSourcesApi {
      * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} [leadsource] leadsource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/LeadSource} and HTTP response
      */
-    createLeadSourceUsingPOST_0WithHttpInfo(opts) {
+    createLeadSourceUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['leadsource'];
 
@@ -76,8 +76,8 @@ export default class LeadSourcesApi {
      * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} opts.leadsource leadsource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/LeadSource}
      */
-    createLeadSourceUsingPOST_0(opts) {
-      return this.createLeadSourceUsingPOST_0WithHttpInfo(opts)
+    createLeadSourceUsingPOST(opts) {
+      return this.createLeadSourceUsingPOSTWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -94,7 +94,7 @@ export default class LeadSourcesApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListLeadSourcesResponse} and HTTP response
      */
-    listLeadSourcesUsingGET_0WithHttpInfo(opts) {
+    listLeadSourcesUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -132,8 +132,8 @@ export default class LeadSourcesApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListLeadSourcesResponse}
      */
-    listLeadSourcesUsingGET_0(opts) {
-      return this.listLeadSourcesUsingGET_0WithHttpInfo(opts)
+    listLeadSourcesUsingGET(opts) {
+      return this.listLeadSourcesUsingGETWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

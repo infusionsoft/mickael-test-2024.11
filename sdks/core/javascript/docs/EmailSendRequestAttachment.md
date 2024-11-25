@@ -1,4 +1,4 @@
-# KeapRestApi.EmailSendRequestAttachment
+# KeapCoreServiceCoreSdk.EmailSendRequestAttachment
 
 ## Properties
 

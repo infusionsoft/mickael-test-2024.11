@@ -1,4 +1,4 @@
-# KeapRestApi.ListTagCategoriesResponse
+# KeapCoreServiceCoreSdk.ListTagCategoriesResponse
 
 ## Properties
 

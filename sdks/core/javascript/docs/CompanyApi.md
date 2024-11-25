@@ -1,4 +1,4 @@
-# KeapRestApi.CompanyApi
+# KeapCoreServiceCoreSdk.CompanyApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -23,11 +23,11 @@ Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60;
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CompanyApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let opts = {
-  'company': new KeapRestApi.CreateCompanyRequest() // CreateCompanyRequest | company
+  'company': new KeapCoreServiceCoreSdk.CreateCompanyRequest() // CreateCompanyRequest | company
 };
 apiInstance.createCompanyUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -69,9 +69,9 @@ Deletes the specified Company
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CompanyApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let companyId = "companyId_example"; // String | company_id
 apiInstance.deleteCompanyUsingDELETE(companyId).then(() => {
   console.log('API called successfully.');
@@ -113,9 +113,9 @@ Retrieves a single Company
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CompanyApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let companyId = "companyId_example"; // String | company_id
 let opts = {
   'fields': ["null"] // [String] | Comma-delimited list of Company properties to include in the response. (Available fields are: `company_name`, `address`, `custom_fields`, `email_address`, `fax_number`, `phone_number`, `website`, `notes`)
@@ -161,9 +161,9 @@ Retrieves a list of all Companies
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CompanyApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let opts = {
   'fields': ["null"], // [String] | Comma-delimited list of Company properties to include in the response. (Fields such as `notes`, `fax_number` and `custom_fields` aren't included, by default.)
   'filter': "filter_example", // String | Search filter to apply to results
@@ -215,13 +215,13 @@ Updates a Company with the values provided in the request
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CompanyApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let companyId = "companyId_example"; // String | company_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'company': new KeapRestApi.PatchCompanyRequest() // PatchCompanyRequest | company
+  'company': new KeapCoreServiceCoreSdk.PatchCompanyRequest() // PatchCompanyRequest | company
 };
 apiInstance.patchCompanyUsingPATCH(companyId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

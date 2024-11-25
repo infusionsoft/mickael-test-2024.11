@@ -1,4 +1,4 @@
-# KeapRestApi.GetSettingsResponse
+# KeapCoreServiceCoreSdk.GetSettingsResponse
 
 ## Properties
 

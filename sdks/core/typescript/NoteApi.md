@@ -4,18 +4,18 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createNoteCustomFieldUsingPOST1_0**](NoteApi.md#createNoteCustomFieldUsingPOST1_0) | **POST** /v2/notes/model/customFields | Create a Custom Field
+[**createNoteCustomFieldUsingPOST1**](NoteApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 [**createNoteUsingPOST1**](NoteApi.md#createNoteUsingPOST1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note
 [**deleteNoteUsingDELETE1**](NoteApi.md#deleteNoteUsingDELETE1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note
 [**getNoteUsingGET1**](NoteApi.md#getNoteUsingGET1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
 [**listNotesUsingGET1**](NoteApi.md#listNotesUsingGET1) | **GET** /v2/contacts/{contact_id}/notes | List Notes
-[**retrieveNoteModelUsingGET1_0**](NoteApi.md#retrieveNoteModelUsingGET1_0) | **GET** /v2/notes/model | Retrieve Note Model
+[**retrieveNoteModelUsingGET1**](NoteApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model
 [**updateNoteUsingPATCH**](NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
-[**updateNotesCustomFieldUsingPATCH_0**](NoteApi.md#updateNotesCustomFieldUsingPATCH_0) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
+[**updateNotesCustomFieldUsingPATCH**](NoteApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 
 
-# **createNoteCustomFieldUsingPOST1_0**
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1_0(customField)
+# **createNoteCustomFieldUsingPOST1**
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
 
 Adds a custom field of the specified type and options to the Note object.
 
@@ -24,12 +24,12 @@ Adds a custom field of the specified type and options to the Note object.
 
 ```typescript
 import { createConfiguration, NoteApi } from '';
-import type { NoteApiCreateNoteCustomFieldUsingPOST10Request } from '';
+import type { NoteApiCreateNoteCustomFieldUsingPOST1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new NoteApi(configuration);
 
-const request: NoteApiCreateNoteCustomFieldUsingPOST10Request = {
+const request: NoteApiCreateNoteCustomFieldUsingPOST1Request = {
     // customField
   customField: {
     fieldType: "CURRENCY",
@@ -45,7 +45,7 @@ const request: NoteApiCreateNoteCustomFieldUsingPOST10Request = {
   },
 };
 
-const data = await apiInstance.createNoteCustomFieldUsingPOST1_0(request);
+const data = await apiInstance.createNoteCustomFieldUsingPOST1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -329,8 +329,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **retrieveNoteModelUsingGET1_0**
-> ObjectModel retrieveNoteModelUsingGET1_0()
+# **retrieveNoteModelUsingGET1**
+> ObjectModel retrieveNoteModelUsingGET1()
 
 Gets the custom fields for the Note object
 
@@ -345,7 +345,7 @@ const apiInstance = new NoteApi(configuration);
 
 const request = {};
 
-const data = await apiInstance.retrieveNoteModelUsingGET1_0(request);
+const data = await apiInstance.retrieveNoteModelUsingGET1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -451,8 +451,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateNotesCustomFieldUsingPATCH_0**
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH_0(request)
+# **updateNotesCustomFieldUsingPATCH**
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(request)
 
 Updates a custom field of the specified type and options to the Note object.
 
@@ -461,12 +461,12 @@ Updates a custom field of the specified type and options to the Note object.
 
 ```typescript
 import { createConfiguration, NoteApi } from '';
-import type { NoteApiUpdateNotesCustomFieldUsingPATCH0Request } from '';
+import type { NoteApiUpdateNotesCustomFieldUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new NoteApi(configuration);
 
-const request: NoteApiUpdateNotesCustomFieldUsingPATCH0Request = {
+const request: NoteApiUpdateNotesCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
@@ -487,7 +487,7 @@ const request: NoteApiUpdateNotesCustomFieldUsingPATCH0Request = {
   ],
 };
 
-const data = await apiInstance.updateNotesCustomFieldUsingPATCH_0(request);
+const data = await apiInstance.updateNotesCustomFieldUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

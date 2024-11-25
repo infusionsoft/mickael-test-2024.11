@@ -1,16 +1,16 @@
-# KeapRestApi.SubscriptionPlansApi
+# KeapCoreServiceCoreSdk.SubscriptionPlansApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listSubscriptionPlansUsingGET_0**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0) | **GET** /v2/subscriptionPlans | List Subscription Plans
+[**listSubscriptionPlansUsingGET**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans
 
 
 
-## listSubscriptionPlansUsingGET_0
+## listSubscriptionPlansUsingGET
 
-> ListSubscriptionPlansResponse listSubscriptionPlansUsingGET_0(opts)
+> ListSubscriptionPlansResponse listSubscriptionPlansUsingGET(opts)
 
 List Subscription Plans
 
@@ -19,16 +19,16 @@ Retrieves a list of Subscription Plans
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.SubscriptionPlansApi();
+let apiInstance = new KeapCoreServiceCoreSdk.SubscriptionPlansApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name   
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc
   'pageSize': 0, // Number | Total number of items to return per page
   'pageToken': "pageToken_example" // String | Page token
 };
-apiInstance.listSubscriptionPlansUsingGET_0(opts).then((data) => {
+apiInstance.listSubscriptionPlansUsingGET(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Product service.
 * @module com.keap.sdk.core/api/ProductApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var ProductApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -54,8 +54,8 @@ var ProductApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListProductsResponse} and HTTP response
    */
   return _createClass(ProductApi, [{
-    key: "listProductsUsingGET1_0WithHttpInfo",
-    value: function listProductsUsingGET1_0WithHttpInfo(opts) {
+    key: "listProductsUsingGET1WithHttpInfo",
+    value: function listProductsUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -85,9 +85,9 @@ var ProductApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListProductsResponse}
      */
   }, {
-    key: "listProductsUsingGET1_0",
-    value: function listProductsUsingGET1_0(opts) {
-      return this.listProductsUsingGET1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listProductsUsingGET1",
+    value: function listProductsUsingGET1(opts) {
+      return this.listProductsUsingGET1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

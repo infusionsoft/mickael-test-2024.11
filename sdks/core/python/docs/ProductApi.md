@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_products_using_get1_0**](ProductApi.md#list_products_using_get1_0) | **GET** /v2/products | List Products
+[**list_products_using_get1**](ProductApi.md#list_products_using_get1) | **GET** /v2/products | List Products
 
 
-# **list_products_using_get1_0**
-> ListProductsResponse list_products_using_get1_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_products_using_get1**
+> ListProductsResponse list_products_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Products
 
@@ -40,11 +40,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Products
-        api_response = api_instance.list_products_using_get1_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of ProductApi->list_products_using_get1_0:\n")
+        api_response = api_instance.list_products_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of ProductApi->list_products_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ProductApi->list_products_using_get1_0: %s\n" % e)
+        print("Exception when calling ProductApi->list_products_using_get1: %s\n" % e)
 ```
 
 

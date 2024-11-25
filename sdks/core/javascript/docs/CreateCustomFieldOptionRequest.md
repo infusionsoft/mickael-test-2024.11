@@ -1,4 +1,4 @@
-# KeapRestApi.CreateCustomFieldOptionRequest
+# KeapCoreServiceCoreSdk.CreateCustomFieldOptionRequest
 
 ## Properties
 

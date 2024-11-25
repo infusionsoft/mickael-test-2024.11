@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleEmail
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleEmail
 
 ## Properties
 

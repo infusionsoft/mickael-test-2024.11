@@ -1,4 +1,4 @@
-# KeapRestApi.ListSubscriptionPlansResponse
+# KeapCoreServiceCoreSdk.ListSubscriptionPlansResponse
 
 ## Properties
 

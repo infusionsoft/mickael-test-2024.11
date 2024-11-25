@@ -1,4 +1,4 @@
-# KeapRestApi.ProductCommission
+# KeapCoreServiceCoreSdk.ProductCommission
 
 ## Properties
 

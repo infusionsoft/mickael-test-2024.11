@@ -1,4 +1,4 @@
-# KeapRestApi.FaxNumber
+# KeapCoreServiceCoreSdk.FaxNumber
 
 ## Properties
 

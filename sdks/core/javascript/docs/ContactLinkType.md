@@ -1,4 +1,4 @@
-# KeapRestApi.ContactLinkType
+# KeapCoreServiceCoreSdk.ContactLinkType
 
 ## Properties
 

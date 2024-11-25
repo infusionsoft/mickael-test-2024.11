@@ -4,21 +4,21 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createTaskCustomFieldUsingPOST1_0()**](TaskApi.md#createTaskCustomFieldUsingPOST1_0) | **POST** /v2/tasks/model/customFields | Create a Custom Field |
-| [**createTaskUsingPOST1_0()**](TaskApi.md#createTaskUsingPOST1_0) | **POST** /v2/tasks | Create a Task |
-| [**deleteTaskCustomFieldUsingDELETE_0()**](TaskApi.md#deleteTaskCustomFieldUsingDELETE_0) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
-| [**deleteTaskUsingDELETE1_0()**](TaskApi.md#deleteTaskUsingDELETE1_0) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
-| [**getTaskUsingGET1_0()**](TaskApi.md#getTaskUsingGET1_0) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
-| [**listTasksUsingGET1_0()**](TaskApi.md#listTasksUsingGET1_0) | **GET** /v2/tasks | List Tasks |
-| [**patchTaskUsingPATCH_0()**](TaskApi.md#patchTaskUsingPATCH_0) | **PATCH** /v2/tasks/{task_id} | Update a Task |
-| [**retrieveTaskModelUsingGET1_0()**](TaskApi.md#retrieveTaskModelUsingGET1_0) | **GET** /v2/tasks/model | Retrieve Task Model |
-| [**updateTaskCustomFieldUsingPATCH_0()**](TaskApi.md#updateTaskCustomFieldUsingPATCH_0) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
+| [**createTaskCustomFieldUsingPOST1()**](TaskApi.md#createTaskCustomFieldUsingPOST1) | **POST** /v2/tasks/model/customFields | Create a Custom Field |
+| [**createTaskUsingPOST1()**](TaskApi.md#createTaskUsingPOST1) | **POST** /v2/tasks | Create a Task |
+| [**deleteTaskCustomFieldUsingDELETE()**](TaskApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
+| [**deleteTaskUsingDELETE1()**](TaskApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
+| [**getTaskUsingGET1()**](TaskApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
+| [**listTasksUsingGET1()**](TaskApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks |
+| [**patchTaskUsingPATCH()**](TaskApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task |
+| [**retrieveTaskModelUsingGET1()**](TaskApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model |
+| [**updateTaskCustomFieldUsingPATCH()**](TaskApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
 
 
-## `createTaskCustomFieldUsingPOST1_0()`
+## `createTaskCustomFieldUsingPOST1()`
 
 ```php
-createTaskCustomFieldUsingPOST1_0($custom_field): \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse
+createTaskCustomFieldUsingPOST1($custom_field): \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse
 ```
 
 Create a Custom Field
@@ -40,10 +40,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 $custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createTaskCustomFieldUsingPOST1_0($custom_field);
+    $result = $apiInstance->createTaskCustomFieldUsingPOST1($custom_field);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->createTaskCustomFieldUsingPOST1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->createTaskCustomFieldUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -70,10 +70,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createTaskUsingPOST1_0()`
+## `createTaskUsingPOST1()`
 
 ```php
-createTaskUsingPOST1_0($task): \Com\Keap\Sdk\Core\Model\Task
+createTaskUsingPOST1($task): \Com\Keap\Sdk\Core\Model\Task
 ```
 
 Create a Task
@@ -95,10 +95,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 $task = new \Com\Keap\Sdk\Core\Model\CreateTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreateTaskRequest | task
 
 try {
-    $result = $apiInstance->createTaskUsingPOST1_0($task);
+    $result = $apiInstance->createTaskUsingPOST1($task);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->createTaskUsingPOST1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->createTaskUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -125,10 +125,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteTaskCustomFieldUsingDELETE_0()`
+## `deleteTaskCustomFieldUsingDELETE()`
 
 ```php
-deleteTaskCustomFieldUsingDELETE_0($custom_field_id)
+deleteTaskCustomFieldUsingDELETE($custom_field_id)
 ```
 
 Delete a Custom Field
@@ -150,9 +150,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
 
 try {
-    $apiInstance->deleteTaskCustomFieldUsingDELETE_0($custom_field_id);
+    $apiInstance->deleteTaskCustomFieldUsingDELETE($custom_field_id);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->deleteTaskCustomFieldUsingDELETE_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->deleteTaskCustomFieldUsingDELETE: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -179,10 +179,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteTaskUsingDELETE1_0()`
+## `deleteTaskUsingDELETE1()`
 
 ```php
-deleteTaskUsingDELETE1_0($task_id)
+deleteTaskUsingDELETE1($task_id)
 ```
 
 Delete a Task
@@ -204,9 +204,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 $task_id = 'task_id_example'; // string | task_id
 
 try {
-    $apiInstance->deleteTaskUsingDELETE1_0($task_id);
+    $apiInstance->deleteTaskUsingDELETE1($task_id);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->deleteTaskUsingDELETE1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->deleteTaskUsingDELETE1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -233,10 +233,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getTaskUsingGET1_0()`
+## `getTaskUsingGET1()`
 
 ```php
-getTaskUsingGET1_0($task_id): \Com\Keap\Sdk\Core\Model\Task
+getTaskUsingGET1($task_id): \Com\Keap\Sdk\Core\Model\Task
 ```
 
 Retrieve a Task
@@ -258,10 +258,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 $task_id = 'task_id_example'; // string | task_id
 
 try {
-    $result = $apiInstance->getTaskUsingGET1_0($task_id);
+    $result = $apiInstance->getTaskUsingGET1($task_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->getTaskUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->getTaskUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -288,10 +288,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listTasksUsingGET1_0()`
+## `listTasksUsingGET1()`
 
 ```php
-listTasksUsingGET1_0($end_due_time, $filter, $order_by, $page_size, $page_token, $start_due_time): \Com\Keap\Sdk\Core\Model\ListTasksResponse
+listTasksUsingGET1($end_due_time, $filter, $order_by, $page_size, $page_token, $start_due_time): \Com\Keap\Sdk\Core\Model\ListTasksResponse
 ```
 
 List Tasks
@@ -318,10 +318,10 @@ $page_token = 'page_token_example'; // string | Page token
 $start_due_time = 'start_due_time_example'; // string
 
 try {
-    $result = $apiInstance->listTasksUsingGET1_0($end_due_time, $filter, $order_by, $page_size, $page_token, $start_due_time);
+    $result = $apiInstance->listTasksUsingGET1($end_due_time, $filter, $order_by, $page_size, $page_token, $start_due_time);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->listTasksUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->listTasksUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -353,10 +353,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchTaskUsingPATCH_0()`
+## `patchTaskUsingPATCH()`
 
 ```php
-patchTaskUsingPATCH_0($task_id, $update_mask, $task): \Com\Keap\Sdk\Core\Model\UpdateTaskResponse
+patchTaskUsingPATCH($task_id, $update_mask, $task): \Com\Keap\Sdk\Core\Model\UpdateTaskResponse
 ```
 
 Update a Task
@@ -380,10 +380,10 @@ $update_mask = array('update_mask_example'); // string[] | An optional list of p
 $task = new \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest | task
 
 try {
-    $result = $apiInstance->patchTaskUsingPATCH_0($task_id, $update_mask, $task);
+    $result = $apiInstance->patchTaskUsingPATCH($task_id, $update_mask, $task);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->patchTaskUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->patchTaskUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -412,10 +412,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `retrieveTaskModelUsingGET1_0()`
+## `retrieveTaskModelUsingGET1()`
 
 ```php
-retrieveTaskModelUsingGET1_0(): \Com\Keap\Sdk\Core\Model\ObjectModel
+retrieveTaskModelUsingGET1(): \Com\Keap\Sdk\Core\Model\ObjectModel
 ```
 
 Retrieve Task Model
@@ -436,10 +436,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 );
 
 try {
-    $result = $apiInstance->retrieveTaskModelUsingGET1_0();
+    $result = $apiInstance->retrieveTaskModelUsingGET1();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->retrieveTaskModelUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->retrieveTaskModelUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -464,10 +464,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateTaskCustomFieldUsingPATCH_0()`
+## `updateTaskCustomFieldUsingPATCH()`
 
 ```php
-updateTaskCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Task's Custom Field
@@ -491,10 +491,10 @@ $request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateTaskCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TaskApi->updateTaskCustomFieldUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TaskApi->updateTaskCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

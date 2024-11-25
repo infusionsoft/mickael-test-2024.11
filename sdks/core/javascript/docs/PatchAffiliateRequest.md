@@ -1,4 +1,4 @@
-# KeapRestApi.PatchAffiliateRequest
+# KeapCoreServiceCoreSdk.PatchAffiliateRequest
 
 ## Properties
 

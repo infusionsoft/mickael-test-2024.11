@@ -1,4 +1,4 @@
-# KeapRestApi.PaymentResult
+# KeapCoreServiceCoreSdk.PaymentResult
 
 ## Properties
 

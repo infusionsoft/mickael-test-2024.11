@@ -18,7 +18,7 @@ import Error from '../model/Error';
 /**
 * FreeTrialDiscount service.
 * @module com.keap.sdk.core/api/FreeTrialDiscountApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class FreeTrialDiscountApi {
 
@@ -41,11 +41,11 @@ export default class FreeTrialDiscountApi {
      * @param {String} discountId discount_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteDiscountUsingDELETE1_0WithHttpInfo(discountId) {
+    deleteDiscountUsingDELETE1WithHttpInfo(discountId) {
       let postBody = null;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
-        throw new Error("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE1_0");
+        throw new Error("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE1");
       }
 
       let pathParams = {
@@ -75,8 +75,8 @@ export default class FreeTrialDiscountApi {
      * @param {String} discountId discount_id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteDiscountUsingDELETE1_0(discountId) {
-      return this.deleteDiscountUsingDELETE1_0WithHttpInfo(discountId)
+    deleteDiscountUsingDELETE1(discountId) {
+      return this.deleteDiscountUsingDELETE1WithHttpInfo(discountId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

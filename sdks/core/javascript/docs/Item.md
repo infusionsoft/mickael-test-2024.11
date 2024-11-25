@@ -1,4 +1,4 @@
-# KeapRestApi.Item
+# KeapCoreServiceCoreSdk.Item
 
 ## Properties
 

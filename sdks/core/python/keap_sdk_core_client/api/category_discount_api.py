@@ -38,7 +38,7 @@ class CategoryDiscountApi:
 
 
     @validate_call
-    def delete_discount_using_delete_0(
+    def delete_discount_using_delete(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -82,7 +82,7 @@ class CategoryDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_discount_using_delete_0_serialize(
+        _param = self._delete_discount_using_delete_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -107,7 +107,7 @@ class CategoryDiscountApi:
 
 
     @validate_call
-    def delete_discount_using_delete_0_with_http_info(
+    def delete_discount_using_delete_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -151,7 +151,7 @@ class CategoryDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_discount_using_delete_0_serialize(
+        _param = self._delete_discount_using_delete_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -176,7 +176,7 @@ class CategoryDiscountApi:
 
 
     @validate_call
-    def delete_discount_using_delete_0_without_preload_content(
+    def delete_discount_using_delete_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -220,7 +220,7 @@ class CategoryDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_discount_using_delete_0_serialize(
+        _param = self._delete_discount_using_delete_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -240,7 +240,7 @@ class CategoryDiscountApi:
         return response_data.response
 
 
-    def _delete_discount_using_delete_0_serialize(
+    def _delete_discount_using_delete_serialize(
         self,
         discount_id,
         _request_auth,
@@ -304,7 +304,7 @@ class CategoryDiscountApi:
 
 
     @validate_call
-    def get_discount_using_get_0(
+    def get_discount_using_get(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -348,7 +348,7 @@ class CategoryDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_discount_using_get_0_serialize(
+        _param = self._get_discount_using_get_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -373,7 +373,7 @@ class CategoryDiscountApi:
 
 
     @validate_call
-    def get_discount_using_get_0_with_http_info(
+    def get_discount_using_get_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -417,7 +417,7 @@ class CategoryDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_discount_using_get_0_serialize(
+        _param = self._get_discount_using_get_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -442,7 +442,7 @@ class CategoryDiscountApi:
 
 
     @validate_call
-    def get_discount_using_get_0_without_preload_content(
+    def get_discount_using_get_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
         _request_timeout: Union[
@@ -486,7 +486,7 @@ class CategoryDiscountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_discount_using_get_0_serialize(
+        _param = self._get_discount_using_get_serialize(
             discount_id=discount_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -506,7 +506,7 @@ class CategoryDiscountApi:
         return response_data.response
 
 
-    def _get_discount_using_get_0_serialize(
+    def _get_discount_using_get_serialize(
         self,
         discount_id,
         _request_auth,

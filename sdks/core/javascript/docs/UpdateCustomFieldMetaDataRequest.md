@@ -1,4 +1,4 @@
-# KeapRestApi.UpdateCustomFieldMetaDataRequest
+# KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest
 
 ## Properties
 

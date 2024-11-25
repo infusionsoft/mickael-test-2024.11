@@ -1,4 +1,4 @@
-# KeapRestApi.BusinessProfileAddressResponse
+# KeapCoreServiceCoreSdk.BusinessProfileAddressResponse
 
 ## Properties
 

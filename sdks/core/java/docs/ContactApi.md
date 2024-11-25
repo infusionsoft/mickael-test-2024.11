@@ -12,8 +12,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**deleteContactUsingDELETE1WithHttpInfo**](ContactApi.md#deleteContactUsingDELETE1WithHttpInfo) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact |
 | [**getContactUsingGET1**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact |
 | [**getContactUsingGET1WithHttpInfo**](ContactApi.md#getContactUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact |
-| [**getContactsBySearchTermUsingGET_0**](ContactApi.md#getContactsBySearchTermUsingGET_0) | **GET** /v2/contacts:search | Search for Contacts |
-| [**getContactsBySearchTermUsingGET_0WithHttpInfo**](ContactApi.md#getContactsBySearchTermUsingGET_0WithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts |
+| [**getContactsBySearchTermUsingGET**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts |
+| [**getContactsBySearchTermUsingGETWithHttpInfo**](ContactApi.md#getContactsBySearchTermUsingGETWithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts |
 | [**linkContactsUsingPOST**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts |
 | [**linkContactsUsingPOSTWithHttpInfo**](ContactApi.md#linkContactsUsingPOSTWithHttpInfo) | **POST** /v2/contacts:link | Link Contacts |
 | [**listContactLinkTypesUsingGET**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types |
@@ -45,11 +45,11 @@ Creates a new type of Contact Link.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -112,12 +112,12 @@ Creates a new type of Contact Link.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -183,11 +183,11 @@ Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;e
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -250,12 +250,12 @@ Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;e
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -321,11 +321,11 @@ Deletes the specified Contact.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -388,12 +388,12 @@ Deletes the specified Contact.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -459,11 +459,11 @@ Retrieves a single Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -529,12 +529,12 @@ Retrieves a single Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -591,9 +591,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## getContactsBySearchTermUsingGET_0
+## getContactsBySearchTermUsingGET
 
-> ListBasicContactResponse getContactsBySearchTermUsingGET_0(searchParam)
+> ListBasicContactResponse getContactsBySearchTermUsingGET(searchParam)
 
 Search for Contacts
 
@@ -603,11 +603,11 @@ Get a list of Contacts based search parameters.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -617,10 +617,10 @@ public class Example {
         ContactApi apiInstance = new ContactApi(defaultClient);
         String searchParam = "searchParam_example"; // String | searchParam
         try {
-            ListBasicContactResponse result = apiInstance.getContactsBySearchTermUsingGET_0(searchParam);
+            ListBasicContactResponse result = apiInstance.getContactsBySearchTermUsingGET(searchParam);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ContactApi#getContactsBySearchTermUsingGET_0");
+            System.err.println("Exception when calling ContactApi#getContactsBySearchTermUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -659,9 +659,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## getContactsBySearchTermUsingGET_0WithHttpInfo
+## getContactsBySearchTermUsingGETWithHttpInfo
 
-> ApiResponse<ListBasicContactResponse> getContactsBySearchTermUsingGET_0 getContactsBySearchTermUsingGET_0WithHttpInfo(searchParam)
+> ApiResponse<ListBasicContactResponse> getContactsBySearchTermUsingGET getContactsBySearchTermUsingGETWithHttpInfo(searchParam)
 
 Search for Contacts
 
@@ -671,12 +671,12 @@ Get a list of Contacts based search parameters.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -686,12 +686,12 @@ public class Example {
         ContactApi apiInstance = new ContactApi(defaultClient);
         String searchParam = "searchParam_example"; // String | searchParam
         try {
-            ApiResponse<ListBasicContactResponse> response = apiInstance.getContactsBySearchTermUsingGET_0WithHttpInfo(searchParam);
+            ApiResponse<ListBasicContactResponse> response = apiInstance.getContactsBySearchTermUsingGETWithHttpInfo(searchParam);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling ContactApi#getContactsBySearchTermUsingGET_0");
+            System.err.println("Exception when calling ContactApi#getContactsBySearchTermUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -743,11 +743,11 @@ Links two Contacts together using the provided Link type
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -810,12 +810,12 @@ Links two Contacts together using the provided Link type
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -881,11 +881,11 @@ Retrieves a list of Contact Link types.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -955,12 +955,12 @@ Retrieves a list of Contact Link types.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1033,11 +1033,11 @@ Retrieves a list of Linked Contacts for a given Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1101,12 +1101,12 @@ Retrieves a list of Linked Contacts for a given Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1173,11 +1173,11 @@ Retrieves a list of Contacts
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1249,12 +1249,12 @@ Retrieves a list of Contacts
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1329,11 +1329,11 @@ List all Payment Methods for a Contact.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1397,12 +1397,12 @@ List all Payment Methods for a Contact.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1469,11 +1469,11 @@ Updates a Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1541,12 +1541,12 @@ Updates a Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1617,11 +1617,11 @@ Get the custom fields and optional properties for the Contact object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1681,12 +1681,12 @@ Get the custom fields and optional properties for the Contact object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1749,11 +1749,11 @@ Deletes Link between two Contacts
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1815,12 +1815,12 @@ Deletes Link between two Contacts
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.ContactApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.ContactApi;
 
 public class Example {
     public static void main(String[] args) {

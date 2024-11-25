@@ -1,4 +1,4 @@
-# KeapRestApi.ApplyTagsResponse
+# KeapCoreServiceCoreSdk.ApplyTagsResponse
 
 ## Properties
 

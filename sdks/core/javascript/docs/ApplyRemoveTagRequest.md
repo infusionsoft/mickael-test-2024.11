@@ -1,4 +1,4 @@
-# KeapRestApi.ApplyRemoveTagRequest
+# KeapCoreServiceCoreSdk.ApplyRemoveTagRequest
 
 ## Properties
 

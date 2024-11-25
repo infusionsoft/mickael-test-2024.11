@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleEcommerce
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleEcommerce
 
 ## Properties
 

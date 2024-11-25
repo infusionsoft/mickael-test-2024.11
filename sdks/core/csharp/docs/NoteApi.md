@@ -4,18 +4,18 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateNoteCustomFieldUsingPOST1_0**](NoteApi.md#createnotecustomfieldusingpost1_0) | **POST** /v2/notes/model/customFields | Create a Custom Field |
+| [**CreateNoteCustomFieldUsingPOST1**](NoteApi.md#createnotecustomfieldusingpost1) | **POST** /v2/notes/model/customFields | Create a Custom Field |
 | [**CreateNoteUsingPOST1**](NoteApi.md#createnoteusingpost1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note |
 | [**DeleteNoteUsingDELETE1**](NoteApi.md#deletenoteusingdelete1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note |
 | [**GetNoteUsingGET1**](NoteApi.md#getnoteusingget1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note |
 | [**ListNotesUsingGET1**](NoteApi.md#listnotesusingget1) | **GET** /v2/contacts/{contact_id}/notes | List Notes |
-| [**RetrieveNoteModelUsingGET1_0**](NoteApi.md#retrievenotemodelusingget1_0) | **GET** /v2/notes/model | Retrieve Note Model |
+| [**RetrieveNoteModelUsingGET1**](NoteApi.md#retrievenotemodelusingget1) | **GET** /v2/notes/model | Retrieve Note Model |
 | [**UpdateNoteUsingPATCH**](NoteApi.md#updatenoteusingpatch) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note |
-| [**UpdateNotesCustomFieldUsingPATCH_0**](NoteApi.md#updatenotescustomfieldusingpatch_0) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
+| [**UpdateNotesCustomFieldUsingPATCH**](NoteApi.md#updatenotescustomfieldusingpatch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 
-<a id="createnotecustomfieldusingpost1_0"></a>
-# **CreateNoteCustomFieldUsingPOST1_0**
-> CustomFieldMetaData CreateNoteCustomFieldUsingPOST1_0 (CreateCustomFieldRequest customField)
+<a id="createnotecustomfieldusingpost1"></a>
+# **CreateNoteCustomFieldUsingPOST1**
+> CustomFieldMetaData CreateNoteCustomFieldUsingPOST1 (CreateCustomFieldRequest customField)
 
 Create a Custom Field
 
@@ -31,7 +31,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateNoteCustomFieldUsingPOST1_0Example
+    public class CreateNoteCustomFieldUsingPOST1Example
     {
         public static void Main()
         {
@@ -43,12 +43,12 @@ namespace Example
             try
             {
                 // Create a Custom Field
-                CustomFieldMetaData result = apiInstance.CreateNoteCustomFieldUsingPOST1_0(customField);
+                CustomFieldMetaData result = apiInstance.CreateNoteCustomFieldUsingPOST1(customField);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NoteApi.CreateNoteCustomFieldUsingPOST1_0: " + e.Message);
+                Debug.Print("Exception when calling NoteApi.CreateNoteCustomFieldUsingPOST1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -57,21 +57,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateNoteCustomFieldUsingPOST1_0WithHttpInfo variant
+#### Using the CreateNoteCustomFieldUsingPOST1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateNoteCustomFieldUsingPOST1_0WithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateNoteCustomFieldUsingPOST1WithHttpInfo(customField);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NoteApi.CreateNoteCustomFieldUsingPOST1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NoteApi.CreateNoteCustomFieldUsingPOST1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -491,9 +491,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="retrievenotemodelusingget1_0"></a>
-# **RetrieveNoteModelUsingGET1_0**
-> ObjectModel RetrieveNoteModelUsingGET1_0 ()
+<a id="retrievenotemodelusingget1"></a>
+# **RetrieveNoteModelUsingGET1**
+> ObjectModel RetrieveNoteModelUsingGET1 ()
 
 Retrieve Note Model
 
@@ -509,7 +509,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class RetrieveNoteModelUsingGET1_0Example
+    public class RetrieveNoteModelUsingGET1Example
     {
         public static void Main()
         {
@@ -520,12 +520,12 @@ namespace Example
             try
             {
                 // Retrieve Note Model
-                ObjectModel result = apiInstance.RetrieveNoteModelUsingGET1_0();
+                ObjectModel result = apiInstance.RetrieveNoteModelUsingGET1();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NoteApi.RetrieveNoteModelUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling NoteApi.RetrieveNoteModelUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -534,21 +534,21 @@ namespace Example
 }
 ```
 
-#### Using the RetrieveNoteModelUsingGET1_0WithHttpInfo variant
+#### Using the RetrieveNoteModelUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve Note Model
-    ApiResponse<ObjectModel> response = apiInstance.RetrieveNoteModelUsingGET1_0WithHttpInfo();
+    ApiResponse<ObjectModel> response = apiInstance.RetrieveNoteModelUsingGET1WithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NoteApi.RetrieveNoteModelUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NoteApi.RetrieveNoteModelUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -680,9 +680,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updatenotescustomfieldusingpatch_0"></a>
-# **UpdateNotesCustomFieldUsingPATCH_0**
-> CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH_0 (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+<a id="updatenotescustomfieldusingpatch"></a>
+# **UpdateNotesCustomFieldUsingPATCH**
+> CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
 
 Update a Custom Field
 
@@ -698,7 +698,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class UpdateNotesCustomFieldUsingPATCH_0Example
+    public class UpdateNotesCustomFieldUsingPATCHExample
     {
         public static void Main()
         {
@@ -712,12 +712,12 @@ namespace Example
             try
             {
                 // Update a Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateNotesCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NoteApi.UpdateNotesCustomFieldUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling NoteApi.UpdateNotesCustomFieldUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -726,21 +726,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateNotesCustomFieldUsingPATCH_0WithHttpInfo variant
+#### Using the UpdateNotesCustomFieldUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateNotesCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NoteApi.UpdateNotesCustomFieldUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NoteApi.UpdateNotesCustomFieldUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

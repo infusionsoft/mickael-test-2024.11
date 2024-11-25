@@ -1,4 +1,4 @@
-# KeapRestApi.ListCountriesResponse
+# KeapCoreServiceCoreSdk.ListCountriesResponse
 
 ## Properties
 

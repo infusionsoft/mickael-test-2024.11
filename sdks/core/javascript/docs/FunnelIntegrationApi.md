@@ -1,18 +1,18 @@
-# KeapRestApi.FunnelIntegrationApi
+# KeapCoreServiceCoreSdk.FunnelIntegrationApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-[**createIntegrationTriggerEventUsingPOST_0**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST_0) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-[**deleteFunnelIntegrationUsingPOST_0**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST_0) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+[**createFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
+[**createIntegrationTriggerEventUsingPOST**](FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+[**deleteFunnelIntegrationUsingPOST**](FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 
 
 
-## createFunnelIntegrationUsingPOST_0
+## createFunnelIntegrationUsingPOST
 
-> createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest)
+> createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
 
 Create Funnel Integrations into the app.
 
@@ -21,11 +21,11 @@ Allows a list of both triggers / goals, and actions / sequence items to be insta
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.FunnelIntegrationApi();
-let createFunnelIntegrationRequest = new KeapRestApi.CreateFunnelIntegrationRequest(); // CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
-apiInstance.createFunnelIntegrationUsingPOST_0(createFunnelIntegrationRequest).then(() => {
+let apiInstance = new KeapCoreServiceCoreSdk.FunnelIntegrationApi();
+let createFunnelIntegrationRequest = new KeapCoreServiceCoreSdk.CreateFunnelIntegrationRequest(); // CreateFunnelIntegrationRequest | createFunnelIntegrationRequest
+apiInstance.createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -54,20 +54,20 @@ No authorization required
 - **Accept**: application/json
 
 
-## createIntegrationTriggerEventUsingPOST_0
+## createIntegrationTriggerEventUsingPOST
 
-> [FunnelIntegrationTriggerResultDTO] createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents)
+> [FunnelIntegrationTriggerResultDTO] createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents)
 
 Achieve Funnel Integration Trigger Goal
 
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.FunnelIntegrationApi();
-let createFunnelIntegrationTriggerEvents = new KeapRestApi.CreateFunnelIntegrationTriggerEvents(); // CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
-apiInstance.createIntegrationTriggerEventUsingPOST_0(createFunnelIntegrationTriggerEvents).then((data) => {
+let apiInstance = new KeapCoreServiceCoreSdk.FunnelIntegrationApi();
+let createFunnelIntegrationTriggerEvents = new KeapCoreServiceCoreSdk.CreateFunnelIntegrationTriggerEvents(); // CreateFunnelIntegrationTriggerEvents | createFunnelIntegrationTriggerEvents
+apiInstance.createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -96,9 +96,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## deleteFunnelIntegrationUsingPOST_0
+## deleteFunnelIntegrationUsingPOST
 
-> deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest)
+> deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
 
 Deletes Funnel Integrations from the app.
 
@@ -107,11 +107,11 @@ Deletes all triggers / goals, and actions / sequence items for the given funnel 
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.FunnelIntegrationApi();
-let deleteFunnelIntegrationRequest = new KeapRestApi.DeleteFunnelIntegrationRequest(); // DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
-apiInstance.deleteFunnelIntegrationUsingPOST_0(deleteFunnelIntegrationRequest).then(() => {
+let apiInstance = new KeapCoreServiceCoreSdk.FunnelIntegrationApi();
+let deleteFunnelIntegrationRequest = new KeapCoreServiceCoreSdk.DeleteFunnelIntegrationRequest(); // DeleteFunnelIntegrationRequest | deleteFunnelIntegrationRequest
+apiInstance.deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);

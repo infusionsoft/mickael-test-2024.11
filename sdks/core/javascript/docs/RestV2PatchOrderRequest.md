@@ -1,4 +1,4 @@
-# KeapRestApi.RestV2PatchOrderRequest
+# KeapCoreServiceCoreSdk.RestV2PatchOrderRequest
 
 ## Properties
 

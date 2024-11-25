@@ -1,4 +1,4 @@
-# KeapRestApi.ListLandingPagesResponse
+# KeapCoreServiceCoreSdk.ListLandingPagesResponse
 
 ## Properties
 

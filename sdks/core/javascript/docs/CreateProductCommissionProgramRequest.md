@@ -1,4 +1,4 @@
-# KeapRestApi.CreateProductCommissionProgramRequest
+# KeapCoreServiceCoreSdk.CreateProductCommissionProgramRequest
 
 ## Properties
 

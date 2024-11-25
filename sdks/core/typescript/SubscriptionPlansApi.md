@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listSubscriptionPlansUsingGET_0**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET_0) | **GET** /v2/subscriptionPlans | List Subscription Plans
+[**listSubscriptionPlansUsingGET**](SubscriptionPlansApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans
 
 
-# **listSubscriptionPlansUsingGET_0**
-> ListSubscriptionPlansResponse listSubscriptionPlansUsingGET_0()
+# **listSubscriptionPlansUsingGET**
+> ListSubscriptionPlansResponse listSubscriptionPlansUsingGET()
 
 Retrieves a list of Subscription Plans
 
@@ -17,12 +17,12 @@ Retrieves a list of Subscription Plans
 
 ```typescript
 import { createConfiguration, SubscriptionPlansApi } from '';
-import type { SubscriptionPlansApiListSubscriptionPlansUsingGET0Request } from '';
+import type { SubscriptionPlansApiListSubscriptionPlansUsingGETRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new SubscriptionPlansApi(configuration);
 
-const request: SubscriptionPlansApiListSubscriptionPlansUsingGET0Request = {
+const request: SubscriptionPlansApiListSubscriptionPlansUsingGETRequest = {
     // Filter to apply, allowed fields are:   - (String) name    (optional)
   filter: "filter_example",
     // Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc (optional)
@@ -33,7 +33,7 @@ const request: SubscriptionPlansApiListSubscriptionPlansUsingGET0Request = {
   pageToken: "page_token_example",
 };
 
-const data = await apiInstance.listSubscriptionPlansUsingGET_0(request);
+const data = await apiInstance.listSubscriptionPlansUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

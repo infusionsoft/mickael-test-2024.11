@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationFeaturesEnabled
+# KeapCoreServiceCoreSdk.ApplicationFeaturesEnabled
 
 ## Properties
 

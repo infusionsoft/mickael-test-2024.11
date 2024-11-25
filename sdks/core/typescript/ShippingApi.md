@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listShippingMethodsUsingGET_0**](ShippingApi.md#listShippingMethodsUsingGET_0) | **GET** /v2/shipping | List Shipping methods
+[**listShippingMethodsUsingGET**](ShippingApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods
 
 
-# **listShippingMethodsUsingGET_0**
-> ListRestShippingMethodsResponse listShippingMethodsUsingGET_0()
+# **listShippingMethodsUsingGET**
+> ListRestShippingMethodsResponse listShippingMethodsUsingGET()
 
 Retrieves a list of Shipping methods
 
@@ -23,7 +23,7 @@ const apiInstance = new ShippingApi(configuration);
 
 const request = {};
 
-const data = await apiInstance.listShippingMethodsUsingGET_0(request);
+const data = await apiInstance.listShippingMethodsUsingGET(request);
 console.log('API called successfully. Returned data:', data);
 ```
 

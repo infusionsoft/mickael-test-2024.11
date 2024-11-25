@@ -4,39 +4,39 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_affiliate_to_program_using_post_0**](AffiliateApi.md#add_affiliate_to_program_using_post_0) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
+[**add_affiliate_to_program_using_post**](AffiliateApi.md#add_affiliate_to_program_using_post) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 [**add_affiliate_using_post**](AffiliateApi.md#add_affiliate_using_post) | **POST** /v2/affiliates | Create an Affiliate
-[**add_commission_program_using_post_0**](AffiliateApi.md#add_commission_program_using_post_0) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
-[**assign_product_commission_program_using_post_0**](AffiliateApi.md#assign_product_commission_program_using_post_0) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
-[**assign_subscription_commission_program_using_post_0**](AffiliateApi.md#assign_subscription_commission_program_using_post_0) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
-[**create_affiliate_custom_field_using_post_0**](AffiliateApi.md#create_affiliate_custom_field_using_post_0) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
-[**create_default_commission_program_using_post_0**](AffiliateApi.md#create_default_commission_program_using_post_0) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
-[**create_redirect_link_using_post_0**](AffiliateApi.md#create_redirect_link_using_post_0) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
-[**delete_affiliate_commission_program_using_delete_0**](AffiliateApi.md#delete_affiliate_commission_program_using_delete_0) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
-[**delete_affiliate_using_delete_0**](AffiliateApi.md#delete_affiliate_using_delete_0) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
-[**delete_redirect_link_using_delete_0**](AffiliateApi.md#delete_redirect_link_using_delete_0) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
-[**get_affiliate_commission_total_using_get_0**](AffiliateApi.md#get_affiliate_commission_total_using_get_0) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
-[**get_affiliate_commissions_using_get_0**](AffiliateApi.md#get_affiliate_commissions_using_get_0) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
-[**get_affiliate_custom_fields_using_get_0**](AffiliateApi.md#get_affiliate_custom_fields_using_get_0) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
+[**add_commission_program_using_post**](AffiliateApi.md#add_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
+[**assign_product_commission_program_using_post**](AffiliateApi.md#assign_product_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
+[**assign_subscription_commission_program_using_post**](AffiliateApi.md#assign_subscription_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
+[**create_affiliate_custom_field_using_post**](AffiliateApi.md#create_affiliate_custom_field_using_post) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
+[**create_default_commission_program_using_post**](AffiliateApi.md#create_default_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
+[**create_redirect_link_using_post**](AffiliateApi.md#create_redirect_link_using_post) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
+[**delete_affiliate_commission_program_using_delete**](AffiliateApi.md#delete_affiliate_commission_program_using_delete) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
+[**delete_affiliate_using_delete**](AffiliateApi.md#delete_affiliate_using_delete) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
+[**delete_redirect_link_using_delete**](AffiliateApi.md#delete_redirect_link_using_delete) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
+[**get_affiliate_commission_total_using_get**](AffiliateApi.md#get_affiliate_commission_total_using_get) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
+[**get_affiliate_commissions_using_get**](AffiliateApi.md#get_affiliate_commissions_using_get) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
+[**get_affiliate_custom_fields_using_get**](AffiliateApi.md#get_affiliate_custom_fields_using_get) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
 [**get_affiliate_using_get1**](AffiliateApi.md#get_affiliate_using_get1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
-[**get_commission_program_using_get_0**](AffiliateApi.md#get_commission_program_using_get_0) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
-[**get_redirect_link_using_get_0**](AffiliateApi.md#get_redirect_link_using_get_0) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
-[**list_affiliate_commission_programs_using_get_0**](AffiliateApi.md#list_affiliate_commission_programs_using_get_0) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
-[**list_affiliate_links_using_get_0**](AffiliateApi.md#list_affiliate_links_using_get_0) | **GET** /v2/affiliates/redirects | List Affiliate Links
-[**list_summaries_using_get1_0**](AffiliateApi.md#list_summaries_using_get1_0) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
+[**get_commission_program_using_get**](AffiliateApi.md#get_commission_program_using_get) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
+[**get_redirect_link_using_get**](AffiliateApi.md#get_redirect_link_using_get) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
+[**list_affiliate_commission_programs_using_get**](AffiliateApi.md#list_affiliate_commission_programs_using_get) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
+[**list_affiliate_links_using_get**](AffiliateApi.md#list_affiliate_links_using_get) | **GET** /v2/affiliates/redirects | List Affiliate Links
+[**list_summaries_using_get1**](AffiliateApi.md#list_summaries_using_get1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
 [**patch_commission_program_using_patch**](AffiliateApi.md#patch_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
-[**patch_default_commission_program_using_patch_0**](AffiliateApi.md#patch_default_commission_program_using_patch_0) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
-[**patch_product_commission_program_using_patch_0**](AffiliateApi.md#patch_product_commission_program_using_patch_0) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
-[**patch_subscription_commission_program_using_patch_0**](AffiliateApi.md#patch_subscription_commission_program_using_patch_0) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
-[**remove_affiliate_from_program_using_post_0**](AffiliateApi.md#remove_affiliate_from_program_using_post_0) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
-[**remove_subscription_plan_commission_from_commissions_using_post_0**](AffiliateApi.md#remove_subscription_plan_commission_from_commissions_using_post_0) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
-[**update_affiliate_custom_field_using_patch_0**](AffiliateApi.md#update_affiliate_custom_field_using_patch_0) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
+[**patch_default_commission_program_using_patch**](AffiliateApi.md#patch_default_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
+[**patch_product_commission_program_using_patch**](AffiliateApi.md#patch_product_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
+[**patch_subscription_commission_program_using_patch**](AffiliateApi.md#patch_subscription_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
+[**remove_affiliate_from_program_using_post**](AffiliateApi.md#remove_affiliate_from_program_using_post) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
+[**remove_subscription_plan_commission_from_commissions_using_post**](AffiliateApi.md#remove_subscription_plan_commission_from_commissions_using_post) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
+[**update_affiliate_custom_field_using_patch**](AffiliateApi.md#update_affiliate_custom_field_using_patch) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 [**update_affiliate_using_patch**](AffiliateApi.md#update_affiliate_using_patch) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
-[**update_redirect_link_using_patch_0**](AffiliateApi.md#update_redirect_link_using_patch_0) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
+[**update_redirect_link_using_patch**](AffiliateApi.md#update_redirect_link_using_patch) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 
 
-# **add_affiliate_to_program_using_post_0**
-> add_affiliate_to_program_using_post_0(id, affiliate_add_to_program_request)
+# **add_affiliate_to_program_using_post**
+> add_affiliate_to_program_using_post(id, affiliate_add_to_program_request)
 
 Assign Affiliate to Commission program
 
@@ -66,9 +66,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Assign Affiliate to Commission program
-        api_instance.add_affiliate_to_program_using_post_0(id, affiliate_add_to_program_request)
+        api_instance.add_affiliate_to_program_using_post(id, affiliate_add_to_program_request)
     except Exception as e:
-        print("Exception when calling AffiliateApi->add_affiliate_to_program_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->add_affiliate_to_program_using_post: %s\n" % e)
 ```
 
 
@@ -172,8 +172,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_commission_program_using_post_0**
-> AffiliateCommissionProgramResponse add_commission_program_using_post_0(insert_commission_program=insert_commission_program)
+# **add_commission_program_using_post**
+> AffiliateCommissionProgramResponse add_commission_program_using_post(insert_commission_program=insert_commission_program)
 
 Create an Affiliate Commission Program
 
@@ -203,11 +203,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Affiliate Commission Program
-        api_response = api_instance.add_commission_program_using_post_0(insert_commission_program=insert_commission_program)
-        print("The response of AffiliateApi->add_commission_program_using_post_0:\n")
+        api_response = api_instance.add_commission_program_using_post(insert_commission_program=insert_commission_program)
+        print("The response of AffiliateApi->add_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->add_commission_program_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->add_commission_program_using_post: %s\n" % e)
 ```
 
 
@@ -241,8 +241,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assign_product_commission_program_using_post_0**
-> ProductCommissionProgram assign_product_commission_program_using_post_0(commission_program_id, product_commission_program=product_commission_program)
+# **assign_product_commission_program_using_post**
+> ProductCommissionProgram assign_product_commission_program_using_post(commission_program_id, product_commission_program=product_commission_program)
 
 Assign a Product Commission Program
 
@@ -273,11 +273,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Assign a Product Commission Program
-        api_response = api_instance.assign_product_commission_program_using_post_0(commission_program_id, product_commission_program=product_commission_program)
-        print("The response of AffiliateApi->assign_product_commission_program_using_post_0:\n")
+        api_response = api_instance.assign_product_commission_program_using_post(commission_program_id, product_commission_program=product_commission_program)
+        print("The response of AffiliateApi->assign_product_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->assign_product_commission_program_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->assign_product_commission_program_using_post: %s\n" % e)
 ```
 
 
@@ -312,8 +312,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assign_subscription_commission_program_using_post_0**
-> SubscriptionCommissionProgram assign_subscription_commission_program_using_post_0(commission_program_id, subscription_commission_program=subscription_commission_program)
+# **assign_subscription_commission_program_using_post**
+> SubscriptionCommissionProgram assign_subscription_commission_program_using_post(commission_program_id, subscription_commission_program=subscription_commission_program)
 
 Assign a Subscription Commission Program
 
@@ -344,11 +344,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Assign a Subscription Commission Program
-        api_response = api_instance.assign_subscription_commission_program_using_post_0(commission_program_id, subscription_commission_program=subscription_commission_program)
-        print("The response of AffiliateApi->assign_subscription_commission_program_using_post_0:\n")
+        api_response = api_instance.assign_subscription_commission_program_using_post(commission_program_id, subscription_commission_program=subscription_commission_program)
+        print("The response of AffiliateApi->assign_subscription_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->assign_subscription_commission_program_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->assign_subscription_commission_program_using_post: %s\n" % e)
 ```
 
 
@@ -383,8 +383,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_affiliate_custom_field_using_post_0**
-> CustomFieldMetaData create_affiliate_custom_field_using_post_0(custom_field)
+# **create_affiliate_custom_field_using_post**
+> CustomFieldMetaData create_affiliate_custom_field_using_post(custom_field)
 
 Create an Affiliate Custom Field
 
@@ -414,11 +414,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Affiliate Custom Field
-        api_response = api_instance.create_affiliate_custom_field_using_post_0(custom_field)
-        print("The response of AffiliateApi->create_affiliate_custom_field_using_post_0:\n")
+        api_response = api_instance.create_affiliate_custom_field_using_post(custom_field)
+        print("The response of AffiliateApi->create_affiliate_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->create_affiliate_custom_field_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->create_affiliate_custom_field_using_post: %s\n" % e)
 ```
 
 
@@ -452,8 +452,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_default_commission_program_using_post_0**
-> SetDefaultCommissionProgramResponse create_default_commission_program_using_post_0(commission_program_id, create_default_commission_program_request=create_default_commission_program_request)
+# **create_default_commission_program_using_post**
+> SetDefaultCommissionProgramResponse create_default_commission_program_using_post(commission_program_id, create_default_commission_program_request=create_default_commission_program_request)
 
 Create a Default Commission Program
 
@@ -484,11 +484,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Default Commission Program
-        api_response = api_instance.create_default_commission_program_using_post_0(commission_program_id, create_default_commission_program_request=create_default_commission_program_request)
-        print("The response of AffiliateApi->create_default_commission_program_using_post_0:\n")
+        api_response = api_instance.create_default_commission_program_using_post(commission_program_id, create_default_commission_program_request=create_default_commission_program_request)
+        print("The response of AffiliateApi->create_default_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->create_default_commission_program_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->create_default_commission_program_using_post: %s\n" % e)
 ```
 
 
@@ -523,8 +523,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_redirect_link_using_post_0**
-> AffiliateLink create_redirect_link_using_post_0(request)
+# **create_redirect_link_using_post**
+> AffiliateLink create_redirect_link_using_post(request)
 
 Create an Affiliate Link
 
@@ -554,11 +554,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create an Affiliate Link
-        api_response = api_instance.create_redirect_link_using_post_0(request)
-        print("The response of AffiliateApi->create_redirect_link_using_post_0:\n")
+        api_response = api_instance.create_redirect_link_using_post(request)
+        print("The response of AffiliateApi->create_redirect_link_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->create_redirect_link_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->create_redirect_link_using_post: %s\n" % e)
 ```
 
 
@@ -592,8 +592,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_affiliate_commission_program_using_delete_0**
-> delete_affiliate_commission_program_using_delete_0(commission_program_id)
+# **delete_affiliate_commission_program_using_delete**
+> delete_affiliate_commission_program_using_delete(commission_program_id)
 
 Delete a Commission Program
 
@@ -621,9 +621,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete a Commission Program
-        api_instance.delete_affiliate_commission_program_using_delete_0(commission_program_id)
+        api_instance.delete_affiliate_commission_program_using_delete(commission_program_id)
     except Exception as e:
-        print("Exception when calling AffiliateApi->delete_affiliate_commission_program_using_delete_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->delete_affiliate_commission_program_using_delete: %s\n" % e)
 ```
 
 
@@ -658,8 +658,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_affiliate_using_delete_0**
-> delete_affiliate_using_delete_0(id)
+# **delete_affiliate_using_delete**
+> delete_affiliate_using_delete(id)
 
 Delete Affiliate
 
@@ -687,9 +687,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete Affiliate
-        api_instance.delete_affiliate_using_delete_0(id)
+        api_instance.delete_affiliate_using_delete(id)
     except Exception as e:
-        print("Exception when calling AffiliateApi->delete_affiliate_using_delete_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->delete_affiliate_using_delete: %s\n" % e)
 ```
 
 
@@ -724,8 +724,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_redirect_link_using_delete_0**
-> delete_redirect_link_using_delete_0(redirect_id)
+# **delete_redirect_link_using_delete**
+> delete_redirect_link_using_delete(redirect_id)
 
 Delete an Affiliate Link
 
@@ -753,9 +753,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Delete an Affiliate Link
-        api_instance.delete_redirect_link_using_delete_0(redirect_id)
+        api_instance.delete_redirect_link_using_delete(redirect_id)
     except Exception as e:
-        print("Exception when calling AffiliateApi->delete_redirect_link_using_delete_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->delete_redirect_link_using_delete: %s\n" % e)
 ```
 
 
@@ -790,8 +790,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_affiliate_commission_total_using_get_0**
-> AffiliateCommissionEarned get_affiliate_commission_total_using_get_0(affiliate_id)
+# **get_affiliate_commission_total_using_get**
+> AffiliateCommissionEarned get_affiliate_commission_total_using_get(affiliate_id)
 
 Retrieve Affiliate Commission Earned and View LedgerURl for portal
 
@@ -820,11 +820,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve Affiliate Commission Earned and View LedgerURl for portal
-        api_response = api_instance.get_affiliate_commission_total_using_get_0(affiliate_id)
-        print("The response of AffiliateApi->get_affiliate_commission_total_using_get_0:\n")
+        api_response = api_instance.get_affiliate_commission_total_using_get(affiliate_id)
+        print("The response of AffiliateApi->get_affiliate_commission_total_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->get_affiliate_commission_total_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->get_affiliate_commission_total_using_get: %s\n" % e)
 ```
 
 
@@ -859,8 +859,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_affiliate_commissions_using_get_0**
-> ListAffiliateCommissionResponse get_affiliate_commissions_using_get_0(affiliate_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **get_affiliate_commissions_using_get**
+> ListAffiliateCommissionResponse get_affiliate_commissions_using_get(affiliate_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 Retrieve Affiliate Commission and Clawbacks
 
@@ -893,11 +893,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve Affiliate Commission and Clawbacks
-        api_response = api_instance.get_affiliate_commissions_using_get_0(affiliate_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of AffiliateApi->get_affiliate_commissions_using_get_0:\n")
+        api_response = api_instance.get_affiliate_commissions_using_get(affiliate_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of AffiliateApi->get_affiliate_commissions_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->get_affiliate_commissions_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->get_affiliate_commissions_using_get: %s\n" % e)
 ```
 
 
@@ -936,8 +936,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_affiliate_custom_fields_using_get_0**
-> ObjectModel get_affiliate_custom_fields_using_get_0()
+# **get_affiliate_custom_fields_using_get**
+> ObjectModel get_affiliate_custom_fields_using_get()
 
 Retrieve Affiliate Model
 
@@ -965,11 +965,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve Affiliate Model
-        api_response = api_instance.get_affiliate_custom_fields_using_get_0()
-        print("The response of AffiliateApi->get_affiliate_custom_fields_using_get_0:\n")
+        api_response = api_instance.get_affiliate_custom_fields_using_get()
+        print("The response of AffiliateApi->get_affiliate_custom_fields_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->get_affiliate_custom_fields_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->get_affiliate_custom_fields_using_get: %s\n" % e)
 ```
 
 
@@ -1070,8 +1070,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_commission_program_using_get_0**
-> AffiliateProgramV2 get_commission_program_using_get_0(commission_program_id)
+# **get_commission_program_using_get**
+> AffiliateProgramV2 get_commission_program_using_get(commission_program_id)
 
 Retrieve a Commission Program
 
@@ -1100,11 +1100,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve a Commission Program
-        api_response = api_instance.get_commission_program_using_get_0(commission_program_id)
-        print("The response of AffiliateApi->get_commission_program_using_get_0:\n")
+        api_response = api_instance.get_commission_program_using_get(commission_program_id)
+        print("The response of AffiliateApi->get_commission_program_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->get_commission_program_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->get_commission_program_using_get: %s\n" % e)
 ```
 
 
@@ -1139,8 +1139,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_redirect_link_using_get_0**
-> AffiliateLink get_redirect_link_using_get_0(redirect_id)
+# **get_redirect_link_using_get**
+> AffiliateLink get_redirect_link_using_get(redirect_id)
 
 Retrieve an Affiliate Link
 
@@ -1169,11 +1169,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Retrieve an Affiliate Link
-        api_response = api_instance.get_redirect_link_using_get_0(redirect_id)
-        print("The response of AffiliateApi->get_redirect_link_using_get_0:\n")
+        api_response = api_instance.get_redirect_link_using_get(redirect_id)
+        print("The response of AffiliateApi->get_redirect_link_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->get_redirect_link_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->get_redirect_link_using_get: %s\n" % e)
 ```
 
 
@@ -1208,8 +1208,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_affiliate_commission_programs_using_get_0**
-> ListAffiliateCommissionProgramsResponse list_affiliate_commission_programs_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_affiliate_commission_programs_using_get**
+> ListAffiliateCommissionProgramsResponse list_affiliate_commission_programs_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Affiliate Commission Programs
 
@@ -1241,11 +1241,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Affiliate Commission Programs
-        api_response = api_instance.list_affiliate_commission_programs_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of AffiliateApi->list_affiliate_commission_programs_using_get_0:\n")
+        api_response = api_instance.list_affiliate_commission_programs_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of AffiliateApi->list_affiliate_commission_programs_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->list_affiliate_commission_programs_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->list_affiliate_commission_programs_using_get: %s\n" % e)
 ```
 
 
@@ -1283,8 +1283,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_affiliate_links_using_get_0**
-> ListAffiliateLinksResponse list_affiliate_links_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_affiliate_links_using_get**
+> ListAffiliateLinksResponse list_affiliate_links_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Affiliate Links
 
@@ -1316,11 +1316,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Affiliate Links
-        api_response = api_instance.list_affiliate_links_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of AffiliateApi->list_affiliate_links_using_get_0:\n")
+        api_response = api_instance.list_affiliate_links_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of AffiliateApi->list_affiliate_links_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->list_affiliate_links_using_get_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->list_affiliate_links_using_get: %s\n" % e)
 ```
 
 
@@ -1358,8 +1358,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_summaries_using_get1_0**
-> ListAffiliateSummariesResponse list_summaries_using_get1_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_summaries_using_get1**
+> ListAffiliateSummariesResponse list_summaries_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Affiliate Summaries
 
@@ -1391,11 +1391,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Affiliate Summaries
-        api_response = api_instance.list_summaries_using_get1_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of AffiliateApi->list_summaries_using_get1_0:\n")
+        api_response = api_instance.list_summaries_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of AffiliateApi->list_summaries_using_get1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->list_summaries_using_get1_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->list_summaries_using_get1: %s\n" % e)
 ```
 
 
@@ -1507,8 +1507,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_default_commission_program_using_patch_0**
-> SetDefaultCommissionProgramResponse patch_default_commission_program_using_patch_0(commission_program_id, update_mask=update_mask, patch_default_commission_program_request=patch_default_commission_program_request)
+# **patch_default_commission_program_using_patch**
+> SetDefaultCommissionProgramResponse patch_default_commission_program_using_patch(commission_program_id, update_mask=update_mask, patch_default_commission_program_request=patch_default_commission_program_request)
 
 Update a Default Commission Program
 
@@ -1540,11 +1540,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Default Commission Program
-        api_response = api_instance.patch_default_commission_program_using_patch_0(commission_program_id, update_mask=update_mask, patch_default_commission_program_request=patch_default_commission_program_request)
-        print("The response of AffiliateApi->patch_default_commission_program_using_patch_0:\n")
+        api_response = api_instance.patch_default_commission_program_using_patch(commission_program_id, update_mask=update_mask, patch_default_commission_program_request=patch_default_commission_program_request)
+        print("The response of AffiliateApi->patch_default_commission_program_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->patch_default_commission_program_using_patch_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->patch_default_commission_program_using_patch: %s\n" % e)
 ```
 
 
@@ -1581,8 +1581,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_product_commission_program_using_patch_0**
-> ProductCommissionProgram patch_product_commission_program_using_patch_0(commission_program_id, update_mask=update_mask, patch_product_commission_program_request=patch_product_commission_program_request)
+# **patch_product_commission_program_using_patch**
+> ProductCommissionProgram patch_product_commission_program_using_patch(commission_program_id, update_mask=update_mask, patch_product_commission_program_request=patch_product_commission_program_request)
 
 Update a Product Commission Program
 
@@ -1614,11 +1614,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Product Commission Program
-        api_response = api_instance.patch_product_commission_program_using_patch_0(commission_program_id, update_mask=update_mask, patch_product_commission_program_request=patch_product_commission_program_request)
-        print("The response of AffiliateApi->patch_product_commission_program_using_patch_0:\n")
+        api_response = api_instance.patch_product_commission_program_using_patch(commission_program_id, update_mask=update_mask, patch_product_commission_program_request=patch_product_commission_program_request)
+        print("The response of AffiliateApi->patch_product_commission_program_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->patch_product_commission_program_using_patch_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->patch_product_commission_program_using_patch: %s\n" % e)
 ```
 
 
@@ -1655,8 +1655,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_subscription_commission_program_using_patch_0**
-> SubscriptionCommissionProgram patch_subscription_commission_program_using_patch_0(commission_program_id, update_mask=update_mask, patch_subscription_commission_program_request=patch_subscription_commission_program_request)
+# **patch_subscription_commission_program_using_patch**
+> SubscriptionCommissionProgram patch_subscription_commission_program_using_patch(commission_program_id, update_mask=update_mask, patch_subscription_commission_program_request=patch_subscription_commission_program_request)
 
 Update a Subscription Commission Program
 
@@ -1688,11 +1688,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Subscription Commission Program
-        api_response = api_instance.patch_subscription_commission_program_using_patch_0(commission_program_id, update_mask=update_mask, patch_subscription_commission_program_request=patch_subscription_commission_program_request)
-        print("The response of AffiliateApi->patch_subscription_commission_program_using_patch_0:\n")
+        api_response = api_instance.patch_subscription_commission_program_using_patch(commission_program_id, update_mask=update_mask, patch_subscription_commission_program_request=patch_subscription_commission_program_request)
+        print("The response of AffiliateApi->patch_subscription_commission_program_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->patch_subscription_commission_program_using_patch_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->patch_subscription_commission_program_using_patch: %s\n" % e)
 ```
 
 
@@ -1729,8 +1729,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_affiliate_from_program_using_post_0**
-> remove_affiliate_from_program_using_post_0(id, remove_from_program_request)
+# **remove_affiliate_from_program_using_post**
+> remove_affiliate_from_program_using_post(id, remove_from_program_request)
 
 Remove an Affiliate from a Commission Program
 
@@ -1760,9 +1760,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Remove an Affiliate from a Commission Program
-        api_instance.remove_affiliate_from_program_using_post_0(id, remove_from_program_request)
+        api_instance.remove_affiliate_from_program_using_post(id, remove_from_program_request)
     except Exception as e:
-        print("Exception when calling AffiliateApi->remove_affiliate_from_program_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->remove_affiliate_from_program_using_post: %s\n" % e)
 ```
 
 
@@ -1797,8 +1797,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_subscription_plan_commission_from_commissions_using_post_0**
-> remove_subscription_plan_commission_from_commissions_using_post_0(commission_id, delete_subscription_plan_commission_request)
+# **remove_subscription_plan_commission_from_commissions_using_post**
+> remove_subscription_plan_commission_from_commissions_using_post(commission_id, delete_subscription_plan_commission_request)
 
 Remove a Subscription from a Commission Program
 
@@ -1828,9 +1828,9 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Remove a Subscription from a Commission Program
-        api_instance.remove_subscription_plan_commission_from_commissions_using_post_0(commission_id, delete_subscription_plan_commission_request)
+        api_instance.remove_subscription_plan_commission_from_commissions_using_post(commission_id, delete_subscription_plan_commission_request)
     except Exception as e:
-        print("Exception when calling AffiliateApi->remove_subscription_plan_commission_from_commissions_using_post_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->remove_subscription_plan_commission_from_commissions_using_post: %s\n" % e)
 ```
 
 
@@ -1865,8 +1865,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_affiliate_custom_field_using_patch_0**
-> CustomFieldMetaData update_affiliate_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
+# **update_affiliate_custom_field_using_patch**
+> CustomFieldMetaData update_affiliate_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
 Update a Custom Field
 
@@ -1898,11 +1898,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update a Custom Field
-        api_response = api_instance.update_affiliate_custom_field_using_patch_0(custom_field_id, request, update_mask=update_mask)
-        print("The response of AffiliateApi->update_affiliate_custom_field_using_patch_0:\n")
+        api_response = api_instance.update_affiliate_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        print("The response of AffiliateApi->update_affiliate_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->update_affiliate_custom_field_using_patch_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->update_affiliate_custom_field_using_patch: %s\n" % e)
 ```
 
 
@@ -2011,8 +2011,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_redirect_link_using_patch_0**
-> AffiliateLink update_redirect_link_using_patch_0(redirect_id, request)
+# **update_redirect_link_using_patch**
+> AffiliateLink update_redirect_link_using_patch(redirect_id, request)
 
 Update an Affiliate Link
 
@@ -2043,11 +2043,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Update an Affiliate Link
-        api_response = api_instance.update_redirect_link_using_patch_0(redirect_id, request)
-        print("The response of AffiliateApi->update_redirect_link_using_patch_0:\n")
+        api_response = api_instance.update_redirect_link_using_patch(redirect_id, request)
+        print("The response of AffiliateApi->update_redirect_link_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->update_redirect_link_using_patch_0: %s\n" % e)
+        print("Exception when calling AffiliateApi->update_redirect_link_using_patch: %s\n" % e)
 ```
 
 

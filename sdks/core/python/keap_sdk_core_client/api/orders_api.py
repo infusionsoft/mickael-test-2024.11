@@ -50,7 +50,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_custom_field_using_post_0(
+    def create_order_custom_field_using_post(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -94,7 +94,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_custom_field_using_post_0_serialize(
+        _param = self._create_order_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -118,7 +118,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_custom_field_using_post_0_with_http_info(
+    def create_order_custom_field_using_post_with_http_info(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -162,7 +162,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_custom_field_using_post_0_serialize(
+        _param = self._create_order_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -186,7 +186,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_custom_field_using_post_0_without_preload_content(
+    def create_order_custom_field_using_post_without_preload_content(
         self,
         custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
@@ -230,7 +230,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_custom_field_using_post_0_serialize(
+        _param = self._create_order_custom_field_using_post_serialize(
             custom_field=custom_field,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -249,7 +249,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _create_order_custom_field_using_post_0_serialize(
+    def _create_order_custom_field_using_post_serialize(
         self,
         custom_field,
         _request_auth,
@@ -326,7 +326,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_items_on_order_using_post1_0(
+    def create_order_items_on_order_using_post1(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         create_rest_order_item_request: Annotated[CreateRestOrderItemRequest, Field(description="createRestOrderItemRequest")],
@@ -373,7 +373,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_items_on_order_using_post1_0_serialize(
+        _param = self._create_order_items_on_order_using_post1_serialize(
             order_id=order_id,
             create_rest_order_item_request=create_rest_order_item_request,
             _request_auth=_request_auth,
@@ -398,7 +398,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_items_on_order_using_post1_0_with_http_info(
+    def create_order_items_on_order_using_post1_with_http_info(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         create_rest_order_item_request: Annotated[CreateRestOrderItemRequest, Field(description="createRestOrderItemRequest")],
@@ -445,7 +445,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_items_on_order_using_post1_0_serialize(
+        _param = self._create_order_items_on_order_using_post1_serialize(
             order_id=order_id,
             create_rest_order_item_request=create_rest_order_item_request,
             _request_auth=_request_auth,
@@ -470,7 +470,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_items_on_order_using_post1_0_without_preload_content(
+    def create_order_items_on_order_using_post1_without_preload_content(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         create_rest_order_item_request: Annotated[CreateRestOrderItemRequest, Field(description="createRestOrderItemRequest")],
@@ -517,7 +517,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_items_on_order_using_post1_0_serialize(
+        _param = self._create_order_items_on_order_using_post1_serialize(
             order_id=order_id,
             create_rest_order_item_request=create_rest_order_item_request,
             _request_auth=_request_auth,
@@ -537,7 +537,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _create_order_items_on_order_using_post1_0_serialize(
+    def _create_order_items_on_order_using_post1_serialize(
         self,
         order_id,
         create_rest_order_item_request,
@@ -617,7 +617,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_using_post1_0(
+    def create_order_using_post1(
         self,
         create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
@@ -661,7 +661,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_using_post1_0_serialize(
+        _param = self._create_order_using_post1_serialize(
             create_order_request=create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -685,7 +685,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_using_post1_0_with_http_info(
+    def create_order_using_post1_with_http_info(
         self,
         create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
@@ -729,7 +729,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_using_post1_0_serialize(
+        _param = self._create_order_using_post1_serialize(
             create_order_request=create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -753,7 +753,7 @@ class OrdersApi:
 
 
     @validate_call
-    def create_order_using_post1_0_without_preload_content(
+    def create_order_using_post1_without_preload_content(
         self,
         create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
@@ -797,7 +797,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._create_order_using_post1_0_serialize(
+        _param = self._create_order_using_post1_serialize(
             create_order_request=create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -816,7 +816,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _create_order_using_post1_0_serialize(
+    def _create_order_using_post1_serialize(
         self,
         create_order_request,
         _request_auth,
@@ -1184,7 +1184,7 @@ class OrdersApi:
 
 
     @validate_call
-    def delete_order_using_delete1_0(
+    def delete_order_using_delete1(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         _request_timeout: Union[
@@ -1228,7 +1228,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_order_using_delete1_0_serialize(
+        _param = self._delete_order_using_delete1_serialize(
             order_id=order_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1253,7 +1253,7 @@ class OrdersApi:
 
 
     @validate_call
-    def delete_order_using_delete1_0_with_http_info(
+    def delete_order_using_delete1_with_http_info(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         _request_timeout: Union[
@@ -1297,7 +1297,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_order_using_delete1_0_serialize(
+        _param = self._delete_order_using_delete1_serialize(
             order_id=order_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1322,7 +1322,7 @@ class OrdersApi:
 
 
     @validate_call
-    def delete_order_using_delete1_0_without_preload_content(
+    def delete_order_using_delete1_without_preload_content(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         _request_timeout: Union[
@@ -1366,7 +1366,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._delete_order_using_delete1_0_serialize(
+        _param = self._delete_order_using_delete1_serialize(
             order_id=order_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1386,7 +1386,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _delete_order_using_delete1_0_serialize(
+    def _delete_order_using_delete1_serialize(
         self,
         order_id,
         _request_auth,
@@ -1450,7 +1450,7 @@ class OrdersApi:
 
 
     @validate_call
-    def get_order_using_get1_0(
+    def get_order_using_get1(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         _request_timeout: Union[
@@ -1494,7 +1494,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_order_using_get1_0_serialize(
+        _param = self._get_order_using_get1_serialize(
             order_id=order_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1519,7 +1519,7 @@ class OrdersApi:
 
 
     @validate_call
-    def get_order_using_get1_0_with_http_info(
+    def get_order_using_get1_with_http_info(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         _request_timeout: Union[
@@ -1563,7 +1563,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_order_using_get1_0_serialize(
+        _param = self._get_order_using_get1_serialize(
             order_id=order_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1588,7 +1588,7 @@ class OrdersApi:
 
 
     @validate_call
-    def get_order_using_get1_0_without_preload_content(
+    def get_order_using_get1_without_preload_content(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         _request_timeout: Union[
@@ -1632,7 +1632,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_order_using_get1_0_serialize(
+        _param = self._get_order_using_get1_serialize(
             order_id=order_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1652,7 +1652,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _get_order_using_get1_0_serialize(
+    def _get_order_using_get1_serialize(
         self,
         order_id,
         _request_auth,
@@ -1716,7 +1716,7 @@ class OrdersApi:
 
 
     @validate_call
-    def list_orders_using_get1_0(
+    def list_orders_using_get1(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc")] = None,
@@ -1769,7 +1769,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_orders_using_get1_0_serialize(
+        _param = self._list_orders_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -1797,7 +1797,7 @@ class OrdersApi:
 
 
     @validate_call
-    def list_orders_using_get1_0_with_http_info(
+    def list_orders_using_get1_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc")] = None,
@@ -1850,7 +1850,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_orders_using_get1_0_serialize(
+        _param = self._list_orders_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -1878,7 +1878,7 @@ class OrdersApi:
 
 
     @validate_call
-    def list_orders_using_get1_0_without_preload_content(
+    def list_orders_using_get1_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc")] = None,
@@ -1931,7 +1931,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_orders_using_get1_0_serialize(
+        _param = self._list_orders_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -1954,7 +1954,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _list_orders_using_get1_0_serialize(
+    def _list_orders_using_get1_serialize(
         self,
         filter,
         order_by,
@@ -2035,7 +2035,7 @@ class OrdersApi:
 
 
     @validate_call
-    def patch_order_using_patch_0(
+    def patch_order_using_patch(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
@@ -2085,7 +2085,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_order_using_patch_0_serialize(
+        _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
             order=order,
@@ -2112,7 +2112,7 @@ class OrdersApi:
 
 
     @validate_call
-    def patch_order_using_patch_0_with_http_info(
+    def patch_order_using_patch_with_http_info(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
@@ -2162,7 +2162,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_order_using_patch_0_serialize(
+        _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
             order=order,
@@ -2189,7 +2189,7 @@ class OrdersApi:
 
 
     @validate_call
-    def patch_order_using_patch_0_without_preload_content(
+    def patch_order_using_patch_without_preload_content(
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
@@ -2239,7 +2239,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._patch_order_using_patch_0_serialize(
+        _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
             order=order,
@@ -2261,7 +2261,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _patch_order_using_patch_0_serialize(
+    def _patch_order_using_patch_serialize(
         self,
         order_id,
         update_mask,
@@ -2347,7 +2347,7 @@ class OrdersApi:
 
 
     @validate_call
-    def retrieve_order_custom_field_model_using_get_0(
+    def retrieve_order_custom_field_model_using_get(
         self,
         _request_timeout: Union[
             None,
@@ -2388,7 +2388,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_order_custom_field_model_using_get_0_serialize(
+        _param = self._retrieve_order_custom_field_model_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2412,7 +2412,7 @@ class OrdersApi:
 
 
     @validate_call
-    def retrieve_order_custom_field_model_using_get_0_with_http_info(
+    def retrieve_order_custom_field_model_using_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -2453,7 +2453,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_order_custom_field_model_using_get_0_serialize(
+        _param = self._retrieve_order_custom_field_model_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2477,7 +2477,7 @@ class OrdersApi:
 
 
     @validate_call
-    def retrieve_order_custom_field_model_using_get_0_without_preload_content(
+    def retrieve_order_custom_field_model_using_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -2518,7 +2518,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_order_custom_field_model_using_get_0_serialize(
+        _param = self._retrieve_order_custom_field_model_using_get_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2537,7 +2537,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _retrieve_order_custom_field_model_using_get_0_serialize(
+    def _retrieve_order_custom_field_model_using_get_serialize(
         self,
         _request_auth,
         _content_type,
@@ -2598,7 +2598,7 @@ class OrdersApi:
 
 
     @validate_call
-    def update_order_custom_field_using_patch_0(
+    def update_order_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2648,7 +2648,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_order_custom_field_using_patch_0_serialize(
+        _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2675,7 +2675,7 @@ class OrdersApi:
 
 
     @validate_call
-    def update_order_custom_field_using_patch_0_with_http_info(
+    def update_order_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2725,7 +2725,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_order_custom_field_using_patch_0_serialize(
+        _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2752,7 +2752,7 @@ class OrdersApi:
 
 
     @validate_call
-    def update_order_custom_field_using_patch_0_without_preload_content(
+    def update_order_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
         request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
@@ -2802,7 +2802,7 @@ class OrdersApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._update_order_custom_field_using_patch_0_serialize(
+        _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
             request=request,
             update_mask=update_mask,
@@ -2824,7 +2824,7 @@ class OrdersApi:
         return response_data.response
 
 
-    def _update_order_custom_field_using_patch_0_serialize(
+    def _update_order_custom_field_using_patch_serialize(
         self,
         custom_field_id,
         request,

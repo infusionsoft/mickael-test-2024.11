@@ -19,7 +19,7 @@ import ListRestMerchantResponse from '../model/ListRestMerchantResponse';
 /**
 * Merchant service.
 * @module com.keap.sdk.core/api/MerchantApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 export default class MerchantApi {
 
@@ -46,7 +46,7 @@ export default class MerchantApi {
      * @param {String} [pageToken] Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListRestMerchantResponse} and HTTP response
      */
-    listMerchantsUsingGET_0WithHttpInfo(opts) {
+    listMerchantsUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -84,8 +84,8 @@ export default class MerchantApi {
      * @param {String} opts.pageToken Page token
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListRestMerchantResponse}
      */
-    listMerchantsUsingGET_0(opts) {
-      return this.listMerchantsUsingGET_0WithHttpInfo(opts)
+    listMerchantsUsingGET(opts) {
+      return this.listMerchantsUsingGETWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**listLandingPagesUsingGET_0**](LandingPagesApi.md#listLandingPagesUsingGET_0) | **GET** /v2/landingpages | List Landing Pages |
-| [**listLandingPagesUsingGET_0WithHttpInfo**](LandingPagesApi.md#listLandingPagesUsingGET_0WithHttpInfo) | **GET** /v2/landingpages | List Landing Pages |
+| [**listLandingPagesUsingGET**](LandingPagesApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages |
+| [**listLandingPagesUsingGETWithHttpInfo**](LandingPagesApi.md#listLandingPagesUsingGETWithHttpInfo) | **GET** /v2/landingpages | List Landing Pages |
 
 
 
-## listLandingPagesUsingGET_0
+## listLandingPagesUsingGET
 
-> ListLandingPagesResponse listLandingPagesUsingGET_0(filter, orderBy, pageSize, pageToken)
+> ListLandingPagesResponse listLandingPagesUsingGET(filter, orderBy, pageSize, pageToken)
 
 List Landing Pages
 
@@ -21,11 +21,11 @@ Retrieves a list of all landing pages
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LandingPagesApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LandingPagesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -38,10 +38,10 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ListLandingPagesResponse result = apiInstance.listLandingPagesUsingGET_0(filter, orderBy, pageSize, pageToken);
+            ListLandingPagesResponse result = apiInstance.listLandingPagesUsingGET(filter, orderBy, pageSize, pageToken);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LandingPagesApi#listLandingPagesUsingGET_0");
+            System.err.println("Exception when calling LandingPagesApi#listLandingPagesUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -83,9 +83,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## listLandingPagesUsingGET_0WithHttpInfo
+## listLandingPagesUsingGETWithHttpInfo
 
-> ApiResponse<ListLandingPagesResponse> listLandingPagesUsingGET_0 listLandingPagesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken)
+> ApiResponse<ListLandingPagesResponse> listLandingPagesUsingGET listLandingPagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
 
 List Landing Pages
 
@@ -95,12 +95,12 @@ Retrieves a list of all landing pages
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.LandingPagesApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.LandingPagesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -113,12 +113,12 @@ public class Example {
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
         try {
-            ApiResponse<ListLandingPagesResponse> response = apiInstance.listLandingPagesUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            ApiResponse<ListLandingPagesResponse> response = apiInstance.listLandingPagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling LandingPagesApi#listLandingPagesUsingGET_0");
+            System.err.println("Exception when calling LandingPagesApi#listLandingPagesUsingGET");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

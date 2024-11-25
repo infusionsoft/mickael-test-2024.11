@@ -4,12 +4,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_lead_source_using_post_0**](LeadSourcesApi.md#create_lead_source_using_post_0) | **POST** /v2/leadsources | Create a Lead Source
-[**list_lead_sources_using_get_0**](LeadSourcesApi.md#list_lead_sources_using_get_0) | **GET** /v2/leadsources | List Lead Sources
+[**create_lead_source_using_post**](LeadSourcesApi.md#create_lead_source_using_post) | **POST** /v2/leadsources | Create a Lead Source
+[**list_lead_sources_using_get**](LeadSourcesApi.md#list_lead_sources_using_get) | **GET** /v2/leadsources | List Lead Sources
 
 
-# **create_lead_source_using_post_0**
-> LeadSource create_lead_source_using_post_0(leadsource=leadsource)
+# **create_lead_source_using_post**
+> LeadSource create_lead_source_using_post(leadsource=leadsource)
 
 Create a Lead Source
 
@@ -39,11 +39,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # Create a Lead Source
-        api_response = api_instance.create_lead_source_using_post_0(leadsource=leadsource)
-        print("The response of LeadSourcesApi->create_lead_source_using_post_0:\n")
+        api_response = api_instance.create_lead_source_using_post(leadsource=leadsource)
+        print("The response of LeadSourcesApi->create_lead_source_using_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LeadSourcesApi->create_lead_source_using_post_0: %s\n" % e)
+        print("Exception when calling LeadSourcesApi->create_lead_source_using_post: %s\n" % e)
 ```
 
 
@@ -77,8 +77,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_lead_sources_using_get_0**
-> ListLeadSourcesResponse list_lead_sources_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+# **list_lead_sources_using_get**
+> ListLeadSourcesResponse list_lead_sources_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
 List Lead Sources
 
@@ -110,11 +110,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
     try:
         # List Lead Sources
-        api_response = api_instance.list_lead_sources_using_get_0(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
-        print("The response of LeadSourcesApi->list_lead_sources_using_get_0:\n")
+        api_response = api_instance.list_lead_sources_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of LeadSourcesApi->list_lead_sources_using_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LeadSourcesApi->list_lead_sources_using_get_0: %s\n" % e)
+        print("Exception when calling LeadSourcesApi->list_lead_sources_using_get: %s\n" % e)
 ```
 
 

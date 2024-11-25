@@ -1,4 +1,4 @@
-# KeapRestApi.ReportEntryRecord
+# KeapCoreServiceCoreSdk.ReportEntryRecord
 
 ## Properties
 

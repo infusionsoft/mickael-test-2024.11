@@ -1,4 +1,4 @@
-# KeapRestApi.ObjectModel
+# KeapCoreServiceCoreSdk.ObjectModel
 
 ## Properties
 

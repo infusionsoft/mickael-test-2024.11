@@ -37,7 +37,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteDiscountUsingDELETE_0(string discountId, int operationIndex = 0);
+        void DeleteDiscountUsingDELETE(string discountId, int operationIndex = 0);
 
         /// <summary>
         /// Delete a Category Discount
@@ -49,7 +49,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteDiscountUsingDELETE_0WithHttpInfo(string discountId, int operationIndex = 0);
+        ApiResponse<Object> DeleteDiscountUsingDELETEWithHttpInfo(string discountId, int operationIndex = 0);
         /// <summary>
         /// Retrieve a Category Discount
         /// </summary>
@@ -60,7 +60,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryDiscount</returns>
-        CategoryDiscount GetDiscountUsingGET_0(string discountId, int operationIndex = 0);
+        CategoryDiscount GetDiscountUsingGET(string discountId, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve a Category Discount
@@ -72,7 +72,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryDiscount</returns>
-        ApiResponse<CategoryDiscount> GetDiscountUsingGET_0WithHttpInfo(string discountId, int operationIndex = 0);
+        ApiResponse<CategoryDiscount> GetDiscountUsingGETWithHttpInfo(string discountId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -93,7 +93,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteDiscountUsingDELETE_0Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteDiscountUsingDELETEAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete a Category Discount
@@ -106,7 +106,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDiscountUsingDELETE_0WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDiscountUsingDELETEWithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve a Category Discount
         /// </summary>
@@ -118,7 +118,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryDiscount</returns>
-        System.Threading.Tasks.Task<CategoryDiscount> GetDiscountUsingGET_0Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryDiscount> GetDiscountUsingGETAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve a Category Discount
@@ -131,7 +131,7 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryDiscount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryDiscount>> GetDiscountUsingGET_0WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryDiscount>> GetDiscountUsingGETWithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -259,9 +259,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteDiscountUsingDELETE_0(string discountId, int operationIndex = 0)
+        public void DeleteDiscountUsingDELETE(string discountId, int operationIndex = 0)
         {
-            DeleteDiscountUsingDELETE_0WithHttpInfo(discountId);
+            DeleteDiscountUsingDELETEWithHttpInfo(discountId);
         }
 
         /// <summary>
@@ -271,12 +271,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteDiscountUsingDELETE_0WithHttpInfo(string discountId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Object> DeleteDiscountUsingDELETEWithHttpInfo(string discountId, int operationIndex = 0)
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->DeleteDiscountUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->DeleteDiscountUsingDELETE");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -303,7 +303,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("discount_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(discountId)); // path parameter
 
-            localVarRequestOptions.Operation = "CategoryDiscountApi.DeleteDiscountUsingDELETE_0";
+            localVarRequestOptions.Operation = "CategoryDiscountApi.DeleteDiscountUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -311,7 +311,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Delete<Object>("/v2/discounts/productCategories/{discount_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -329,9 +329,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteDiscountUsingDELETE_0Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteDiscountUsingDELETEAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            await DeleteDiscountUsingDELETE_0WithHttpInfoAsync(discountId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteDiscountUsingDELETEWithHttpInfoAsync(discountId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -342,12 +342,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteDiscountUsingDELETE_0WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Object>> DeleteDiscountUsingDELETEWithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->DeleteDiscountUsingDELETE_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->DeleteDiscountUsingDELETE");
             }
 
 
@@ -375,7 +375,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("discount_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(discountId)); // path parameter
 
-            localVarRequestOptions.Operation = "CategoryDiscountApi.DeleteDiscountUsingDELETE_0";
+            localVarRequestOptions.Operation = "CategoryDiscountApi.DeleteDiscountUsingDELETE";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -384,7 +384,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDiscountUsingDELETE", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -401,9 +401,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CategoryDiscount</returns>
-        public CategoryDiscount GetDiscountUsingGET_0(string discountId, int operationIndex = 0)
+        public CategoryDiscount GetDiscountUsingGET(string discountId, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount> localVarResponse = GetDiscountUsingGET_0WithHttpInfo(discountId);
+            Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount> localVarResponse = GetDiscountUsingGETWithHttpInfo(discountId);
             return localVarResponse.Data;
         }
 
@@ -414,12 +414,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="discountId">discount_id</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CategoryDiscount</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount> GetDiscountUsingGET_0WithHttpInfo(string discountId, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount> GetDiscountUsingGETWithHttpInfo(string discountId, int operationIndex = 0)
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->GetDiscountUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->GetDiscountUsingGET");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -446,7 +446,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("discount_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(discountId)); // path parameter
 
-            localVarRequestOptions.Operation = "CategoryDiscountApi.GetDiscountUsingGET_0";
+            localVarRequestOptions.Operation = "CategoryDiscountApi.GetDiscountUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -454,7 +454,7 @@ namespace Keap.Sdk.Core.Api
             var localVarResponse = this.Client.Get<CategoryDiscount>("/v2/discounts/productCategories/{discount_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetDiscountUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetDiscountUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -472,9 +472,9 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryDiscount</returns>
-        public async System.Threading.Tasks.Task<CategoryDiscount> GetDiscountUsingGET_0Async(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryDiscount> GetDiscountUsingGETAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount> localVarResponse = await GetDiscountUsingGET_0WithHttpInfoAsync(discountId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount> localVarResponse = await GetDiscountUsingGETWithHttpInfoAsync(discountId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -486,12 +486,12 @@ namespace Keap.Sdk.Core.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryDiscount)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount>> GetDiscountUsingGET_0WithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CategoryDiscount>> GetDiscountUsingGETWithHttpInfoAsync(string discountId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->GetDiscountUsingGET_0");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling CategoryDiscountApi->GetDiscountUsingGET");
             }
 
 
@@ -519,7 +519,7 @@ namespace Keap.Sdk.Core.Api
 
             localVarRequestOptions.PathParameters.Add("discount_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(discountId)); // path parameter
 
-            localVarRequestOptions.Operation = "CategoryDiscountApi.GetDiscountUsingGET_0";
+            localVarRequestOptions.Operation = "CategoryDiscountApi.GetDiscountUsingGET";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -528,7 +528,7 @@ namespace Keap.Sdk.Core.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetDiscountUsingGET_0", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetDiscountUsingGET", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

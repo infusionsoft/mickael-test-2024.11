@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Locale service.
 * @module com.keap.sdk.core/api/LocaleApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var LocaleApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -49,8 +49,8 @@ var LocaleApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListCountriesResponse} and HTTP response
    */
   return _createClass(LocaleApi, [{
-    key: "listCountriesUsingGET2_0WithHttpInfo",
-    value: function listCountriesUsingGET2_0WithHttpInfo() {
+    key: "listCountriesUsingGET2WithHttpInfo",
+    value: function listCountriesUsingGET2WithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -68,9 +68,9 @@ var LocaleApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListCountriesResponse}
      */
   }, {
-    key: "listCountriesUsingGET2_0",
-    value: function listCountriesUsingGET2_0() {
-      return this.listCountriesUsingGET2_0WithHttpInfo().then(function (response_and_data) {
+    key: "listCountriesUsingGET2",
+    value: function listCountriesUsingGET2() {
+      return this.listCountriesUsingGET2WithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -81,12 +81,12 @@ var LocaleApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListProvincesResponse} and HTTP response
      */
   }, {
-    key: "listProvincesForCountryUsingGET_0WithHttpInfo",
-    value: function listProvincesForCountryUsingGET_0WithHttpInfo(countryCode) {
+    key: "listProvincesForCountryUsingGETWithHttpInfo",
+    value: function listProvincesForCountryUsingGETWithHttpInfo(countryCode) {
       var postBody = null;
       // verify the required parameter 'countryCode' is set
       if (countryCode === undefined || countryCode === null) {
-        throw new _Error["default"]("Missing the required parameter 'countryCode' when calling listProvincesForCountryUsingGET_0");
+        throw new _Error["default"]("Missing the required parameter 'countryCode' when calling listProvincesForCountryUsingGET");
       }
       var pathParams = {
         'country_code': countryCode
@@ -107,9 +107,9 @@ var LocaleApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListProvincesResponse}
      */
   }, {
-    key: "listProvincesForCountryUsingGET_0",
-    value: function listProvincesForCountryUsingGET_0(countryCode) {
-      return this.listProvincesForCountryUsingGET_0WithHttpInfo(countryCode).then(function (response_and_data) {
+    key: "listProvincesForCountryUsingGET",
+    value: function listProvincesForCountryUsingGET(countryCode) {
+      return this.listProvincesForCountryUsingGETWithHttpInfo(countryCode).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

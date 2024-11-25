@@ -1,4 +1,4 @@
-# KeapRestApi.ListUserResponse
+# KeapCoreServiceCoreSdk.ListUserResponse
 
 ## Properties
 

@@ -6,15 +6,15 @@
     <AssemblyName>Keap.Sdk.Core</AssemblyName>
     <PackageId>Keap.Sdk.Core</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
+    <Authors>Keap Engineering</Authors>
+    <Company>Keap</Company>
+    <AssemblyTitle>Keap.Sdk.Core</AssemblyTitle>
+    <Description>Keap.Sdk.Core SDK</Description>
+    <Copyright>2024</Copyright>
     <RootNamespace>Keap.Sdk.Core</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>0.0.18</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Keap.Sdk.Core.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/infusionsoft/keap-sdk.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
     <Nullable>annotations</Nullable>

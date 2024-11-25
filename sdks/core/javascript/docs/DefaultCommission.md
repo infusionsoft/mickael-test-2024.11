@@ -1,4 +1,4 @@
-# KeapRestApi.DefaultCommission
+# KeapCoreServiceCoreSdk.DefaultCommission
 
 ## Properties
 

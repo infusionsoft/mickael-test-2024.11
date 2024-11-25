@@ -4,15 +4,15 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CancelSubscriptionUsingPOST_0**](SubscriptionsApi.md#cancelsubscriptionusingpost_0) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
-| [**CreateSubscriptionCustomFieldUsingPOST_0**](SubscriptionsApi.md#createsubscriptioncustomfieldusingpost_0) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
+| [**CancelSubscriptionUsingPOST**](SubscriptionsApi.md#cancelsubscriptionusingpost) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
+| [**CreateSubscriptionCustomFieldUsingPOST**](SubscriptionsApi.md#createsubscriptioncustomfieldusingpost) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**CreateSubscriptionV2UsingPOST**](SubscriptionsApi.md#createsubscriptionv2usingpost) | **POST** /v2/subscriptions | Create Subscription |
-| [**RetrieveSubscriptionCustomFieldModelUsingGET_0**](SubscriptionsApi.md#retrievesubscriptioncustomfieldmodelusingget_0) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
-| [**UpdateSubscriptionCustomFieldUsingPATCH_0**](SubscriptionsApi.md#updatesubscriptioncustomfieldusingpatch_0) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
+| [**RetrieveSubscriptionCustomFieldModelUsingGET**](SubscriptionsApi.md#retrievesubscriptioncustomfieldmodelusingget) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
+| [**UpdateSubscriptionCustomFieldUsingPATCH**](SubscriptionsApi.md#updatesubscriptioncustomfieldusingpatch) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 
-<a id="cancelsubscriptionusingpost_0"></a>
-# **CancelSubscriptionUsingPOST_0**
-> void CancelSubscriptionUsingPOST_0 (string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest)
+<a id="cancelsubscriptionusingpost"></a>
+# **CancelSubscriptionUsingPOST**
+> void CancelSubscriptionUsingPOST (string subscriptionId, CancelSubscriptionsRequest cancelSubscriptionsRequest)
 
 Cancel Subscription
 
@@ -28,7 +28,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CancelSubscriptionUsingPOST_0Example
+    public class CancelSubscriptionUsingPOSTExample
     {
         public static void Main()
         {
@@ -41,11 +41,11 @@ namespace Example
             try
             {
                 // Cancel Subscription
-                apiInstance.CancelSubscriptionUsingPOST_0(subscriptionId, cancelSubscriptionsRequest);
+                apiInstance.CancelSubscriptionUsingPOST(subscriptionId, cancelSubscriptionsRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SubscriptionsApi.CancelSubscriptionUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling SubscriptionsApi.CancelSubscriptionUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -54,18 +54,18 @@ namespace Example
 }
 ```
 
-#### Using the CancelSubscriptionUsingPOST_0WithHttpInfo variant
+#### Using the CancelSubscriptionUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Cancel Subscription
-    apiInstance.CancelSubscriptionUsingPOST_0WithHttpInfo(subscriptionId, cancelSubscriptionsRequest);
+    apiInstance.CancelSubscriptionUsingPOSTWithHttpInfo(subscriptionId, cancelSubscriptionsRequest);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling SubscriptionsApi.CancelSubscriptionUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling SubscriptionsApi.CancelSubscriptionUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -101,9 +101,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createsubscriptioncustomfieldusingpost_0"></a>
-# **CreateSubscriptionCustomFieldUsingPOST_0**
-> CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST_0 (CreateCustomFieldRequest customField)
+<a id="createsubscriptioncustomfieldusingpost"></a>
+# **CreateSubscriptionCustomFieldUsingPOST**
+> CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST (CreateCustomFieldRequest customField)
 
 Create a Subscription's Custom Field
 
@@ -119,7 +119,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class CreateSubscriptionCustomFieldUsingPOST_0Example
+    public class CreateSubscriptionCustomFieldUsingPOSTExample
     {
         public static void Main()
         {
@@ -131,12 +131,12 @@ namespace Example
             try
             {
                 // Create a Subscription's Custom Field
-                CustomFieldMetaData result = apiInstance.CreateSubscriptionCustomFieldUsingPOST_0(customField);
+                CustomFieldMetaData result = apiInstance.CreateSubscriptionCustomFieldUsingPOST(customField);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST_0: " + e.Message);
+                Debug.Print("Exception when calling SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -145,21 +145,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfo variant
+#### Using the CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create a Subscription's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOST_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling SubscriptionsApi.CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -287,9 +287,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="retrievesubscriptioncustomfieldmodelusingget_0"></a>
-# **RetrieveSubscriptionCustomFieldModelUsingGET_0**
-> ObjectModel RetrieveSubscriptionCustomFieldModelUsingGET_0 ()
+<a id="retrievesubscriptioncustomfieldmodelusingget"></a>
+# **RetrieveSubscriptionCustomFieldModelUsingGET**
+> ObjectModel RetrieveSubscriptionCustomFieldModelUsingGET ()
 
 Retrieve Subscription's Custom Field Model
 
@@ -305,7 +305,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class RetrieveSubscriptionCustomFieldModelUsingGET_0Example
+    public class RetrieveSubscriptionCustomFieldModelUsingGETExample
     {
         public static void Main()
         {
@@ -316,12 +316,12 @@ namespace Example
             try
             {
                 // Retrieve Subscription's Custom Field Model
-                ObjectModel result = apiInstance.RetrieveSubscriptionCustomFieldModelUsingGET_0();
+                ObjectModel result = apiInstance.RetrieveSubscriptionCustomFieldModelUsingGET();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -330,21 +330,21 @@ namespace Example
 }
 ```
 
-#### Using the RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo variant
+#### Using the RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retrieve Subscription's Custom Field Model
-    ApiResponse<ObjectModel> response = apiInstance.RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo();
+    ApiResponse<ObjectModel> response = apiInstance.RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling SubscriptionsApi.RetrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -376,9 +376,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updatesubscriptioncustomfieldusingpatch_0"></a>
-# **UpdateSubscriptionCustomFieldUsingPATCH_0**
-> CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH_0 (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+<a id="updatesubscriptioncustomfieldusingpatch"></a>
+# **UpdateSubscriptionCustomFieldUsingPATCH**
+> CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
 
 Update a Subscription's Custom Field
 
@@ -394,7 +394,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class UpdateSubscriptionCustomFieldUsingPATCH_0Example
+    public class UpdateSubscriptionCustomFieldUsingPATCHExample
     {
         public static void Main()
         {
@@ -408,12 +408,12 @@ namespace Example
             try
             {
                 // Update a Subscription's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateSubscriptionCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH_0: " + e.Message);
+                Debug.Print("Exception when calling SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -422,21 +422,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo variant
+#### Using the UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update a Subscription's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCH_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling SubscriptionsApi.UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

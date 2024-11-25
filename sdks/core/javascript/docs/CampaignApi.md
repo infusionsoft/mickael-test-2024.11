@@ -1,4 +1,4 @@
-# KeapRestApi.CampaignApi
+# KeapCoreServiceCoreSdk.CampaignApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -22,12 +22,12 @@ Adds a list of contacts to a campaign sequence Response contains a map of the pr
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CampaignApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CampaignApi();
 let campaignId = "campaignId_example"; // String | campaign_id
 let sequenceId = "sequenceId_example"; // String | sequence_id
-let addContactsToSequenceRequest = new KeapRestApi.AddContactsToSequenceRequest(); // AddContactsToSequenceRequest | addContactsToSequenceRequest
+let addContactsToSequenceRequest = new KeapCoreServiceCoreSdk.AddContactsToSequenceRequest(); // AddContactsToSequenceRequest | addContactsToSequenceRequest
 apiInstance.addContactsToCampaignSequenceUsingPOST1(campaignId, sequenceId, addContactsToSequenceRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -70,9 +70,9 @@ Retrieves a single campaign
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CampaignApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CampaignApi();
 let campaignId = "campaignId_example"; // String | campaign_id
 apiInstance.getCampaignUsingGET1(campaignId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -114,9 +114,9 @@ Retrieves all campaigns for the authenticated user
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CampaignApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CampaignApi();
 let opts = {
   'filter': "filter_example", // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the campaign name.   - `filter=name%3D%3DSpring Campaign`  - `filter=name%3D%3DTag New Contacts`  
   'orderBy': "orderBy_example", // String | Attribute and direction to order items.   One of the following fields:   - name   - publisheddate   - id   - completedContactCount   - activeContacts   - datecreated   - lastupdated   One of the following directions:   - asc   - desc
@@ -168,12 +168,12 @@ Removes a list of contacts from a campaign sequence Response contains a map of t
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.CampaignApi();
+let apiInstance = new KeapCoreServiceCoreSdk.CampaignApi();
 let campaignId = "campaignId_example"; // String | campaign_id
 let sequenceId = "sequenceId_example"; // String | sequence_id
-let removeContactsFromSequenceRequest = new KeapRestApi.RemoveContactsFromSequenceRequest(); // RemoveContactsFromSequenceRequest | removeContactsFromSequenceRequest
+let removeContactsFromSequenceRequest = new KeapCoreServiceCoreSdk.RemoveContactsFromSequenceRequest(); // RemoveContactsFromSequenceRequest | removeContactsFromSequenceRequest
 apiInstance.removeContactsFromCampaignSequenceUsingPOST(campaignId, sequenceId, removeContactsFromSequenceRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

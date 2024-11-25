@@ -1,4 +1,4 @@
-# KeapRestApi.ApplicationConfigurationModuleOpportunityStatesActive
+# KeapCoreServiceCoreSdk.ApplicationConfigurationModuleOpportunityStatesActive
 
 ## Properties
 

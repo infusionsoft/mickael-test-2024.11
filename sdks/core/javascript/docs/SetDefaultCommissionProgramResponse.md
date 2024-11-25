@@ -1,4 +1,4 @@
-# KeapRestApi.SetDefaultCommissionProgramResponse
+# KeapCoreServiceCoreSdk.SetDefaultCommissionProgramResponse
 
 ## Properties
 

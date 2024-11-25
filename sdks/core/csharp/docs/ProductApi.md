@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListProductsUsingGET1_0**](ProductApi.md#listproductsusingget1_0) | **GET** /v2/products | List Products |
+| [**ListProductsUsingGET1**](ProductApi.md#listproductsusingget1) | **GET** /v2/products | List Products |
 
-<a id="listproductsusingget1_0"></a>
-# **ListProductsUsingGET1_0**
-> ListProductsResponse ListProductsUsingGET1_0 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listproductsusingget1"></a>
+# **ListProductsUsingGET1**
+> ListProductsResponse ListProductsUsingGET1 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List Products
 
@@ -24,7 +24,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListProductsUsingGET1_0Example
+    public class ListProductsUsingGET1Example
     {
         public static void Main()
         {
@@ -39,12 +39,12 @@ namespace Example
             try
             {
                 // List Products
-                ListProductsResponse result = apiInstance.ListProductsUsingGET1_0(filter, orderBy, pageSize, pageToken);
+                ListProductsResponse result = apiInstance.ListProductsUsingGET1(filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProductApi.ListProductsUsingGET1_0: " + e.Message);
+                Debug.Print("Exception when calling ProductApi.ListProductsUsingGET1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +53,21 @@ namespace Example
 }
 ```
 
-#### Using the ListProductsUsingGET1_0WithHttpInfo variant
+#### Using the ListProductsUsingGET1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Products
-    ApiResponse<ListProductsResponse> response = apiInstance.ListProductsUsingGET1_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListProductsResponse> response = apiInstance.ListProductsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ProductApi.ListProductsUsingGET1_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ProductApi.ListProductsUsingGET1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

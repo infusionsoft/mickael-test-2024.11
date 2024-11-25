@@ -4,22 +4,22 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createOrderCustomFieldUsingPOST_0()**](OrdersApi.md#createOrderCustomFieldUsingPOST_0) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
-| [**createOrderItemsOnOrderUsingPOST1_0()**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1_0) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
-| [**createOrderUsingPOST1_0()**](OrdersApi.md#createOrderUsingPOST1_0) | **POST** /v2/orders | Create an Order |
+| [**createOrderCustomFieldUsingPOST()**](OrdersApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
+| [**createOrderItemsOnOrderUsingPOST1()**](OrdersApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**createOrderUsingPOST1()**](OrdersApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order |
 | [**createPaymentOnOrderUsingPOST1()**](OrdersApi.md#createPaymentOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/payments | Create a Payment |
-| [**deleteOrderUsingDELETE1_0()**](OrdersApi.md#deleteOrderUsingDELETE1_0) | **DELETE** /v2/orders/{order_id} | Delete an Order |
-| [**getOrderUsingGET1_0()**](OrdersApi.md#getOrderUsingGET1_0) | **GET** /v2/orders/{order_id} | Retrieve an Order |
-| [**listOrdersUsingGET1_0()**](OrdersApi.md#listOrdersUsingGET1_0) | **GET** /v2/orders | List orders |
-| [**patchOrderUsingPATCH_0()**](OrdersApi.md#patchOrderUsingPATCH_0) | **PATCH** /v2/orders/{order_id} | Update an Order |
-| [**retrieveOrderCustomFieldModelUsingGET_0()**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET_0) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
-| [**updateOrderCustomFieldUsingPATCH_0()**](OrdersApi.md#updateOrderCustomFieldUsingPATCH_0) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**deleteOrderUsingDELETE1()**](OrdersApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**getOrderUsingGET1()**](OrdersApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**listOrdersUsingGET1()**](OrdersApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders |
+| [**patchOrderUsingPATCH()**](OrdersApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order |
+| [**retrieveOrderCustomFieldModelUsingGET()**](OrdersApi.md#retrieveOrderCustomFieldModelUsingGET) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model |
+| [**updateOrderCustomFieldUsingPATCH()**](OrdersApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
 
 
-## `createOrderCustomFieldUsingPOST_0()`
+## `createOrderCustomFieldUsingPOST()`
 
 ```php
-createOrderCustomFieldUsingPOST_0($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createOrderCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Order's Custom Field
@@ -41,10 +41,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
 $custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createOrderCustomFieldUsingPOST_0($custom_field);
+    $result = $apiInstance->createOrderCustomFieldUsingPOST($custom_field);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->createOrderCustomFieldUsingPOST_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->createOrderCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -71,10 +71,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createOrderItemsOnOrderUsingPOST1_0()`
+## `createOrderItemsOnOrderUsingPOST1()`
 
 ```php
-createOrderItemsOnOrderUsingPOST1_0($order_id, $create_rest_order_item_request): \Com\Keap\Sdk\Core\Model\RestV2OrderItem
+createOrderItemsOnOrderUsingPOST1($order_id, $create_rest_order_item_request): \Com\Keap\Sdk\Core\Model\RestV2OrderItem
 ```
 
 Create an Order Item
@@ -97,10 +97,10 @@ $order_id = 'order_id_example'; // string | order_id
 $create_rest_order_item_request = new \Com\Keap\Sdk\Core\Model\CreateRestOrderItemRequest(); // \Com\Keap\Sdk\Core\Model\CreateRestOrderItemRequest | createRestOrderItemRequest
 
 try {
-    $result = $apiInstance->createOrderItemsOnOrderUsingPOST1_0($order_id, $create_rest_order_item_request);
+    $result = $apiInstance->createOrderItemsOnOrderUsingPOST1($order_id, $create_rest_order_item_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->createOrderItemsOnOrderUsingPOST1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->createOrderItemsOnOrderUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -128,10 +128,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createOrderUsingPOST1_0()`
+## `createOrderUsingPOST1()`
 
 ```php
-createOrderUsingPOST1_0($create_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
+createOrderUsingPOST1($create_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Create an Order
@@ -153,10 +153,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
 $create_order_request = new \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest | createOrderRequest
 
 try {
-    $result = $apiInstance->createOrderUsingPOST1_0($create_order_request);
+    $result = $apiInstance->createOrderUsingPOST1($create_order_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->createOrderUsingPOST1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->createOrderUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -240,10 +240,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteOrderUsingDELETE1_0()`
+## `deleteOrderUsingDELETE1()`
 
 ```php
-deleteOrderUsingDELETE1_0($order_id)
+deleteOrderUsingDELETE1($order_id)
 ```
 
 Delete an Order
@@ -265,9 +265,9 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
 $order_id = 'order_id_example'; // string | order_id
 
 try {
-    $apiInstance->deleteOrderUsingDELETE1_0($order_id);
+    $apiInstance->deleteOrderUsingDELETE1($order_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->deleteOrderUsingDELETE1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->deleteOrderUsingDELETE1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -294,10 +294,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getOrderUsingGET1_0()`
+## `getOrderUsingGET1()`
 
 ```php
-getOrderUsingGET1_0($order_id): \Com\Keap\Sdk\Core\Model\RestV2Order
+getOrderUsingGET1($order_id): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Retrieve an Order
@@ -319,10 +319,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
 $order_id = 'order_id_example'; // string | order_id
 
 try {
-    $result = $apiInstance->getOrderUsingGET1_0($order_id);
+    $result = $apiInstance->getOrderUsingGET1($order_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->getOrderUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->getOrderUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -349,10 +349,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listOrdersUsingGET1_0()`
+## `listOrdersUsingGET1()`
 
 ```php
-listOrdersUsingGET1_0($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOrders
+listOrdersUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOrders
 ```
 
 List orders
@@ -377,10 +377,10 @@ $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
 
 try {
-    $result = $apiInstance->listOrdersUsingGET1_0($filter, $order_by, $page_size, $page_token);
+    $result = $apiInstance->listOrdersUsingGET1($filter, $order_by, $page_size, $page_token);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->listOrdersUsingGET1_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->listOrdersUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -410,10 +410,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchOrderUsingPATCH_0()`
+## `patchOrderUsingPATCH()`
 
 ```php
-patchOrderUsingPATCH_0($order_id, $update_mask, $order): \Com\Keap\Sdk\Core\Model\RestV2Order
+patchOrderUsingPATCH($order_id, $update_mask, $order): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Update an Order
@@ -437,10 +437,10 @@ $update_mask = array('update_mask_example'); // string[] | An optional list of p
 $order = new \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest | order
 
 try {
-    $result = $apiInstance->patchOrderUsingPATCH_0($order_id, $update_mask, $order);
+    $result = $apiInstance->patchOrderUsingPATCH($order_id, $update_mask, $order);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->patchOrderUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->patchOrderUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -469,10 +469,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `retrieveOrderCustomFieldModelUsingGET_0()`
+## `retrieveOrderCustomFieldModelUsingGET()`
 
 ```php
-retrieveOrderCustomFieldModelUsingGET_0(): \Com\Keap\Sdk\Core\Model\ObjectModel
+retrieveOrderCustomFieldModelUsingGET(): \Com\Keap\Sdk\Core\Model\ObjectModel
 ```
 
 Retrieve an Order's Custom Field Model
@@ -493,10 +493,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
 );
 
 try {
-    $result = $apiInstance->retrieveOrderCustomFieldModelUsingGET_0();
+    $result = $apiInstance->retrieveOrderCustomFieldModelUsingGET();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->retrieveOrderCustomFieldModelUsingGET_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->retrieveOrderCustomFieldModelUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -521,10 +521,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateOrderCustomFieldUsingPATCH_0()`
+## `updateOrderCustomFieldUsingPATCH()`
 
 ```php
-updateOrderCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update an Order's Custom Field
@@ -548,10 +548,10 @@ $request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOrderCustomFieldUsingPATCH_0($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->updateOrderCustomFieldUsingPATCH_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->updateOrderCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

@@ -1152,7 +1152,7 @@ class ContactApi:
 
 
     @validate_call
-    def get_contacts_by_search_term_using_get_0(
+    def get_contacts_by_search_term_using_get(
         self,
         search_param: Annotated[StrictStr, Field(description="searchParam")],
         _request_timeout: Union[
@@ -1196,7 +1196,7 @@ class ContactApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_contacts_by_search_term_using_get_0_serialize(
+        _param = self._get_contacts_by_search_term_using_get_serialize(
             search_param=search_param,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1221,7 +1221,7 @@ class ContactApi:
 
 
     @validate_call
-    def get_contacts_by_search_term_using_get_0_with_http_info(
+    def get_contacts_by_search_term_using_get_with_http_info(
         self,
         search_param: Annotated[StrictStr, Field(description="searchParam")],
         _request_timeout: Union[
@@ -1265,7 +1265,7 @@ class ContactApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_contacts_by_search_term_using_get_0_serialize(
+        _param = self._get_contacts_by_search_term_using_get_serialize(
             search_param=search_param,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1290,7 +1290,7 @@ class ContactApi:
 
 
     @validate_call
-    def get_contacts_by_search_term_using_get_0_without_preload_content(
+    def get_contacts_by_search_term_using_get_without_preload_content(
         self,
         search_param: Annotated[StrictStr, Field(description="searchParam")],
         _request_timeout: Union[
@@ -1334,7 +1334,7 @@ class ContactApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_contacts_by_search_term_using_get_0_serialize(
+        _param = self._get_contacts_by_search_term_using_get_serialize(
             search_param=search_param,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1354,7 +1354,7 @@ class ContactApi:
         return response_data.response
 
 
-    def _get_contacts_by_search_term_using_get_0_serialize(
+    def _get_contacts_by_search_term_using_get_serialize(
         self,
         search_param,
         _request_auth,

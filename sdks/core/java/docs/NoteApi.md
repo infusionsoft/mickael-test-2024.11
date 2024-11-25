@@ -4,8 +4,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createNoteCustomFieldUsingPOST1_0**](NoteApi.md#createNoteCustomFieldUsingPOST1_0) | **POST** /v2/notes/model/customFields | Create a Custom Field |
-| [**createNoteCustomFieldUsingPOST1_0WithHttpInfo**](NoteApi.md#createNoteCustomFieldUsingPOST1_0WithHttpInfo) | **POST** /v2/notes/model/customFields | Create a Custom Field |
+| [**createNoteCustomFieldUsingPOST1**](NoteApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field |
+| [**createNoteCustomFieldUsingPOST1WithHttpInfo**](NoteApi.md#createNoteCustomFieldUsingPOST1WithHttpInfo) | **POST** /v2/notes/model/customFields | Create a Custom Field |
 | [**createNoteUsingPOST1**](NoteApi.md#createNoteUsingPOST1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note |
 | [**createNoteUsingPOST1WithHttpInfo**](NoteApi.md#createNoteUsingPOST1WithHttpInfo) | **POST** /v2/contacts/{contact_id}/notes | Create a Note |
 | [**deleteNoteUsingDELETE1**](NoteApi.md#deleteNoteUsingDELETE1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note |
@@ -14,18 +14,18 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**getNoteUsingGET1WithHttpInfo**](NoteApi.md#getNoteUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note |
 | [**listNotesUsingGET1**](NoteApi.md#listNotesUsingGET1) | **GET** /v2/contacts/{contact_id}/notes | List Notes |
 | [**listNotesUsingGET1WithHttpInfo**](NoteApi.md#listNotesUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id}/notes | List Notes |
-| [**retrieveNoteModelUsingGET1_0**](NoteApi.md#retrieveNoteModelUsingGET1_0) | **GET** /v2/notes/model | Retrieve Note Model |
-| [**retrieveNoteModelUsingGET1_0WithHttpInfo**](NoteApi.md#retrieveNoteModelUsingGET1_0WithHttpInfo) | **GET** /v2/notes/model | Retrieve Note Model |
+| [**retrieveNoteModelUsingGET1**](NoteApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model |
+| [**retrieveNoteModelUsingGET1WithHttpInfo**](NoteApi.md#retrieveNoteModelUsingGET1WithHttpInfo) | **GET** /v2/notes/model | Retrieve Note Model |
 | [**updateNoteUsingPATCH**](NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note |
 | [**updateNoteUsingPATCHWithHttpInfo**](NoteApi.md#updateNoteUsingPATCHWithHttpInfo) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note |
-| [**updateNotesCustomFieldUsingPATCH_0**](NoteApi.md#updateNotesCustomFieldUsingPATCH_0) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
-| [**updateNotesCustomFieldUsingPATCH_0WithHttpInfo**](NoteApi.md#updateNotesCustomFieldUsingPATCH_0WithHttpInfo) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
+| [**updateNotesCustomFieldUsingPATCH**](NoteApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
+| [**updateNotesCustomFieldUsingPATCHWithHttpInfo**](NoteApi.md#updateNotesCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 
 
 
-## createNoteCustomFieldUsingPOST1_0
+## createNoteCustomFieldUsingPOST1
 
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1_0(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
 
 Create a Custom Field
 
@@ -35,11 +35,11 @@ Adds a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -49,10 +49,10 @@ public class Example {
         NoteApi apiInstance = new NoteApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST1_0(customField);
+            CustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST1(customField);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling NoteApi#createNoteCustomFieldUsingPOST1_0");
+            System.err.println("Exception when calling NoteApi#createNoteCustomFieldUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -90,9 +90,9 @@ No authorization required
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
-## createNoteCustomFieldUsingPOST1_0WithHttpInfo
+## createNoteCustomFieldUsingPOST1WithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1_0 createNoteCustomFieldUsingPOST1_0WithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1 createNoteCustomFieldUsingPOST1WithHttpInfo(customField)
 
 Create a Custom Field
 
@@ -102,12 +102,12 @@ Adds a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -117,12 +117,12 @@ public class Example {
         NoteApi apiInstance = new NoteApi(defaultClient);
         CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createNoteCustomFieldUsingPOST1_0WithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createNoteCustomFieldUsingPOST1WithHttpInfo(customField);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling NoteApi#createNoteCustomFieldUsingPOST1_0");
+            System.err.println("Exception when calling NoteApi#createNoteCustomFieldUsingPOST1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -173,11 +173,11 @@ Creates a new Note.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -242,12 +242,12 @@ Creates a new Note.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -315,11 +315,11 @@ Deletes the specified Note
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -384,12 +384,12 @@ Deletes the specified Note
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -457,11 +457,11 @@ Retrieves the specified Note
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -527,12 +527,12 @@ Retrieves the specified Note
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -601,11 +601,11 @@ Retrieves a list of Notes
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -677,12 +677,12 @@ Retrieves a list of Notes
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -745,9 +745,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## retrieveNoteModelUsingGET1_0
+## retrieveNoteModelUsingGET1
 
-> ObjectModel retrieveNoteModelUsingGET1_0()
+> ObjectModel retrieveNoteModelUsingGET1()
 
 Retrieve Note Model
 
@@ -757,11 +757,11 @@ Gets the custom fields for the Note object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -770,10 +770,10 @@ public class Example {
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         try {
-            ObjectModel result = apiInstance.retrieveNoteModelUsingGET1_0();
+            ObjectModel result = apiInstance.retrieveNoteModelUsingGET1();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling NoteApi#retrieveNoteModelUsingGET1_0");
+            System.err.println("Exception when calling NoteApi#retrieveNoteModelUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -809,9 +809,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## retrieveNoteModelUsingGET1_0WithHttpInfo
+## retrieveNoteModelUsingGET1WithHttpInfo
 
-> ApiResponse<ObjectModel> retrieveNoteModelUsingGET1_0 retrieveNoteModelUsingGET1_0WithHttpInfo()
+> ApiResponse<ObjectModel> retrieveNoteModelUsingGET1 retrieveNoteModelUsingGET1WithHttpInfo()
 
 Retrieve Note Model
 
@@ -821,12 +821,12 @@ Gets the custom fields for the Note object
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -835,12 +835,12 @@ public class Example {
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         try {
-            ApiResponse<ObjectModel> response = apiInstance.retrieveNoteModelUsingGET1_0WithHttpInfo();
+            ApiResponse<ObjectModel> response = apiInstance.retrieveNoteModelUsingGET1WithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling NoteApi#retrieveNoteModelUsingGET1_0");
+            System.err.println("Exception when calling NoteApi#retrieveNoteModelUsingGET1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -889,11 +889,11 @@ Updates a Note for a Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -963,12 +963,12 @@ Updates a Note for a Contact
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1029,9 +1029,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## updateNotesCustomFieldUsingPATCH_0
+## updateNotesCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH_0(customFieldId, request, updateMask)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask)
 
 Update a Custom Field
 
@@ -1041,11 +1041,11 @@ Updates a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1057,10 +1057,10 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH_0(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling NoteApi#updateNotesCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling NoteApi#updateNotesCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1101,9 +1101,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## updateNotesCustomFieldUsingPATCH_0WithHttpInfo
+## updateNotesCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCH_0 updateNotesCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCH updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
 
 Update a Custom Field
 
@@ -1113,12 +1113,12 @@ Updates a custom field of the specified type and options to the Note object.
 
 ```java
 // Import classes:
-import com.keap.sdk.core.ApiClient;
-import com.keap.sdk.core.ApiException;
-import com.keap.sdk.core.ApiResponse;
-import com.keap.sdk.core.Configuration;
-import com.keap.sdk.core.models.*;
-import com.keap.sdk.core.api.NoteApi;
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.NoteApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -1130,12 +1130,12 @@ public class Example {
         UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling NoteApi#updateNotesCustomFieldUsingPATCH_0");
+            System.err.println("Exception when calling NoteApi#updateNotesCustomFieldUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());

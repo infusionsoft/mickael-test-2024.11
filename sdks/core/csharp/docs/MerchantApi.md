@@ -4,11 +4,11 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListMerchantsUsingGET_0**](MerchantApi.md#listmerchantsusingget_0) | **GET** /v2/merchants | List Merchant accounts |
+| [**ListMerchantsUsingGET**](MerchantApi.md#listmerchantsusingget) | **GET** /v2/merchants | List Merchant accounts |
 
-<a id="listmerchantsusingget_0"></a>
-# **ListMerchantsUsingGET_0**
-> ListRestMerchantResponse ListMerchantsUsingGET_0 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+<a id="listmerchantsusingget"></a>
+# **ListMerchantsUsingGET**
+> ListRestMerchantResponse ListMerchantsUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
 
 List Merchant accounts
 
@@ -24,7 +24,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class ListMerchantsUsingGET_0Example
+    public class ListMerchantsUsingGETExample
     {
         public static void Main()
         {
@@ -39,12 +39,12 @@ namespace Example
             try
             {
                 // List Merchant accounts
-                ListRestMerchantResponse result = apiInstance.ListMerchantsUsingGET_0(filter, orderBy, pageSize, pageToken);
+                ListRestMerchantResponse result = apiInstance.ListMerchantsUsingGET(filter, orderBy, pageSize, pageToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MerchantApi.ListMerchantsUsingGET_0: " + e.Message);
+                Debug.Print("Exception when calling MerchantApi.ListMerchantsUsingGET: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +53,21 @@ namespace Example
 }
 ```
 
-#### Using the ListMerchantsUsingGET_0WithHttpInfo variant
+#### Using the ListMerchantsUsingGETWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Merchant accounts
-    ApiResponse<ListRestMerchantResponse> response = apiInstance.ListMerchantsUsingGET_0WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    ApiResponse<ListRestMerchantResponse> response = apiInstance.ListMerchantsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling MerchantApi.ListMerchantsUsingGET_0WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling MerchantApi.ListMerchantsUsingGETWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

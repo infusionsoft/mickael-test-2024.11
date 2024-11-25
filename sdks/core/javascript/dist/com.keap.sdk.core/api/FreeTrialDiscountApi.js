@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * FreeTrialDiscount service.
 * @module com.keap.sdk.core/api/FreeTrialDiscountApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var FreeTrialDiscountApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -49,12 +49,12 @@ var FreeTrialDiscountApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
   return _createClass(FreeTrialDiscountApi, [{
-    key: "deleteDiscountUsingDELETE1_0WithHttpInfo",
-    value: function deleteDiscountUsingDELETE1_0WithHttpInfo(discountId) {
+    key: "deleteDiscountUsingDELETE1WithHttpInfo",
+    value: function deleteDiscountUsingDELETE1WithHttpInfo(discountId) {
       var postBody = null;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
-        throw new _Error["default"]("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE1_0");
+        throw new _Error["default"]("Missing the required parameter 'discountId' when calling deleteDiscountUsingDELETE1");
       }
       var pathParams = {
         'discount_id': discountId
@@ -76,9 +76,9 @@ var FreeTrialDiscountApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteDiscountUsingDELETE1_0",
-    value: function deleteDiscountUsingDELETE1_0(discountId) {
-      return this.deleteDiscountUsingDELETE1_0WithHttpInfo(discountId).then(function (response_and_data) {
+    key: "deleteDiscountUsingDELETE1",
+    value: function deleteDiscountUsingDELETE1(discountId) {
+      return this.deleteDiscountUsingDELETE1WithHttpInfo(discountId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

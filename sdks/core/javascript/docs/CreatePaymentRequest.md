@@ -1,4 +1,4 @@
-# KeapRestApi.CreatePaymentRequest
+# KeapCoreServiceCoreSdk.CreatePaymentRequest
 
 ## Properties
 

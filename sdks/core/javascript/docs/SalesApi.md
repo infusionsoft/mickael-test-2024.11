@@ -1,4 +1,4 @@
-# KeapRestApi.SalesApi
+# KeapCoreServiceCoreSdk.SalesApi
 
 All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
@@ -19,9 +19,9 @@ Sets the specified Merchant Account as the default Merchant Account.
 ### Example
 
 ```javascript
-import KeapRestApi from 'keap_rest_api';
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
-let apiInstance = new KeapRestApi.SalesApi();
+let apiInstance = new KeapCoreServiceCoreSdk.SalesApi();
 let id = 789; // Number | id
 apiInstance.setMerchantGatewayAsDefaultUsingPOST(id).then(() => {
   console.log('API called successfully.');

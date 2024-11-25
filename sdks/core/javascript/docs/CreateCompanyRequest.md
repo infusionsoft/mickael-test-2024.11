@@ -1,4 +1,4 @@
-# KeapRestApi.CreateCompanyRequest
+# KeapCoreServiceCoreSdk.CreateCompanyRequest
 
 ## Properties
 

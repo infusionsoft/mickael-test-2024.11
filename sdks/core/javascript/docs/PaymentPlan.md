@@ -1,4 +1,4 @@
-# KeapRestApi.PaymentPlan
+# KeapCoreServiceCoreSdk.PaymentPlan
 
 ## Properties
 

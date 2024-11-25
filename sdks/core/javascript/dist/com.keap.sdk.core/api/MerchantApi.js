@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Merchant service.
 * @module com.keap.sdk.core/api/MerchantApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var MerchantApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -54,8 +54,8 @@ var MerchantApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListRestMerchantResponse} and HTTP response
    */
   return _createClass(MerchantApi, [{
-    key: "listMerchantsUsingGET_0WithHttpInfo",
-    value: function listMerchantsUsingGET_0WithHttpInfo(opts) {
+    key: "listMerchantsUsingGETWithHttpInfo",
+    value: function listMerchantsUsingGETWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -85,9 +85,9 @@ var MerchantApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListRestMerchantResponse}
      */
   }, {
-    key: "listMerchantsUsingGET_0",
-    value: function listMerchantsUsingGET_0(opts) {
-      return this.listMerchantsUsingGET_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listMerchantsUsingGET",
+    value: function listMerchantsUsingGET(opts) {
+      return this.listMerchantsUsingGETWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -37,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Task service.
 * @module com.keap.sdk.core/api/TaskApi
-* @version 2.70.0.739356-hf-202411181744
+* @version 0.0.18
 */
 var TaskApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -59,12 +59,12 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CreateCustomFieldResponse} and HTTP response
    */
   return _createClass(TaskApi, [{
-    key: "createTaskCustomFieldUsingPOST1_0WithHttpInfo",
-    value: function createTaskCustomFieldUsingPOST1_0WithHttpInfo(customField) {
+    key: "createTaskCustomFieldUsingPOST1WithHttpInfo",
+    value: function createTaskCustomFieldUsingPOST1WithHttpInfo(customField) {
       var postBody = customField;
       // verify the required parameter 'customField' is set
       if (customField === undefined || customField === null) {
-        throw new _Error["default"]("Missing the required parameter 'customField' when calling createTaskCustomFieldUsingPOST1_0");
+        throw new _Error["default"]("Missing the required parameter 'customField' when calling createTaskCustomFieldUsingPOST1");
       }
       var pathParams = {};
       var queryParams = {};
@@ -84,9 +84,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CreateCustomFieldResponse}
      */
   }, {
-    key: "createTaskCustomFieldUsingPOST1_0",
-    value: function createTaskCustomFieldUsingPOST1_0(customField) {
-      return this.createTaskCustomFieldUsingPOST1_0WithHttpInfo(customField).then(function (response_and_data) {
+    key: "createTaskCustomFieldUsingPOST1",
+    value: function createTaskCustomFieldUsingPOST1(customField) {
+      return this.createTaskCustomFieldUsingPOST1WithHttpInfo(customField).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -99,8 +99,8 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Task} and HTTP response
      */
   }, {
-    key: "createTaskUsingPOST1_0WithHttpInfo",
-    value: function createTaskUsingPOST1_0WithHttpInfo(opts) {
+    key: "createTaskUsingPOST1WithHttpInfo",
+    value: function createTaskUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['task'];
       var pathParams = {};
@@ -122,9 +122,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Task}
      */
   }, {
-    key: "createTaskUsingPOST1_0",
-    value: function createTaskUsingPOST1_0(opts) {
-      return this.createTaskUsingPOST1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "createTaskUsingPOST1",
+    value: function createTaskUsingPOST1(opts) {
+      return this.createTaskUsingPOST1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -136,12 +136,12 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteTaskCustomFieldUsingDELETE_0WithHttpInfo",
-    value: function deleteTaskCustomFieldUsingDELETE_0WithHttpInfo(customFieldId) {
+    key: "deleteTaskCustomFieldUsingDELETEWithHttpInfo",
+    value: function deleteTaskCustomFieldUsingDELETEWithHttpInfo(customFieldId) {
       var postBody = null;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling deleteTaskCustomFieldUsingDELETE_0");
+        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling deleteTaskCustomFieldUsingDELETE");
       }
       var pathParams = {
         'custom_field_id': customFieldId
@@ -163,9 +163,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteTaskCustomFieldUsingDELETE_0",
-    value: function deleteTaskCustomFieldUsingDELETE_0(customFieldId) {
-      return this.deleteTaskCustomFieldUsingDELETE_0WithHttpInfo(customFieldId).then(function (response_and_data) {
+    key: "deleteTaskCustomFieldUsingDELETE",
+    value: function deleteTaskCustomFieldUsingDELETE(customFieldId) {
+      return this.deleteTaskCustomFieldUsingDELETEWithHttpInfo(customFieldId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -177,12 +177,12 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
   }, {
-    key: "deleteTaskUsingDELETE1_0WithHttpInfo",
-    value: function deleteTaskUsingDELETE1_0WithHttpInfo(taskId) {
+    key: "deleteTaskUsingDELETE1WithHttpInfo",
+    value: function deleteTaskUsingDELETE1WithHttpInfo(taskId) {
       var postBody = null;
       // verify the required parameter 'taskId' is set
       if (taskId === undefined || taskId === null) {
-        throw new _Error["default"]("Missing the required parameter 'taskId' when calling deleteTaskUsingDELETE1_0");
+        throw new _Error["default"]("Missing the required parameter 'taskId' when calling deleteTaskUsingDELETE1");
       }
       var pathParams = {
         'task_id': taskId
@@ -204,9 +204,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
   }, {
-    key: "deleteTaskUsingDELETE1_0",
-    value: function deleteTaskUsingDELETE1_0(taskId) {
-      return this.deleteTaskUsingDELETE1_0WithHttpInfo(taskId).then(function (response_and_data) {
+    key: "deleteTaskUsingDELETE1",
+    value: function deleteTaskUsingDELETE1(taskId) {
+      return this.deleteTaskUsingDELETE1WithHttpInfo(taskId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -218,12 +218,12 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Task} and HTTP response
      */
   }, {
-    key: "getTaskUsingGET1_0WithHttpInfo",
-    value: function getTaskUsingGET1_0WithHttpInfo(taskId) {
+    key: "getTaskUsingGET1WithHttpInfo",
+    value: function getTaskUsingGET1WithHttpInfo(taskId) {
       var postBody = null;
       // verify the required parameter 'taskId' is set
       if (taskId === undefined || taskId === null) {
-        throw new _Error["default"]("Missing the required parameter 'taskId' when calling getTaskUsingGET1_0");
+        throw new _Error["default"]("Missing the required parameter 'taskId' when calling getTaskUsingGET1");
       }
       var pathParams = {
         'task_id': taskId
@@ -245,9 +245,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Task}
      */
   }, {
-    key: "getTaskUsingGET1_0",
-    value: function getTaskUsingGET1_0(taskId) {
-      return this.getTaskUsingGET1_0WithHttpInfo(taskId).then(function (response_and_data) {
+    key: "getTaskUsingGET1",
+    value: function getTaskUsingGET1(taskId) {
+      return this.getTaskUsingGET1WithHttpInfo(taskId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -265,8 +265,8 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListTasksResponse} and HTTP response
      */
   }, {
-    key: "listTasksUsingGET1_0WithHttpInfo",
-    value: function listTasksUsingGET1_0WithHttpInfo(opts) {
+    key: "listTasksUsingGET1WithHttpInfo",
+    value: function listTasksUsingGET1WithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -300,9 +300,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListTasksResponse}
      */
   }, {
-    key: "listTasksUsingGET1_0",
-    value: function listTasksUsingGET1_0(opts) {
-      return this.listTasksUsingGET1_0WithHttpInfo(opts).then(function (response_and_data) {
+    key: "listTasksUsingGET1",
+    value: function listTasksUsingGET1(opts) {
+      return this.listTasksUsingGET1WithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -317,13 +317,13 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/UpdateTaskResponse} and HTTP response
      */
   }, {
-    key: "patchTaskUsingPATCH_0WithHttpInfo",
-    value: function patchTaskUsingPATCH_0WithHttpInfo(taskId, opts) {
+    key: "patchTaskUsingPATCHWithHttpInfo",
+    value: function patchTaskUsingPATCHWithHttpInfo(taskId, opts) {
       opts = opts || {};
       var postBody = opts['task'];
       // verify the required parameter 'taskId' is set
       if (taskId === undefined || taskId === null) {
-        throw new _Error["default"]("Missing the required parameter 'taskId' when calling patchTaskUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'taskId' when calling patchTaskUsingPATCH");
       }
       var pathParams = {
         'task_id': taskId
@@ -350,9 +350,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/UpdateTaskResponse}
      */
   }, {
-    key: "patchTaskUsingPATCH_0",
-    value: function patchTaskUsingPATCH_0(taskId, opts) {
-      return this.patchTaskUsingPATCH_0WithHttpInfo(taskId, opts).then(function (response_and_data) {
+    key: "patchTaskUsingPATCH",
+    value: function patchTaskUsingPATCH(taskId, opts) {
+      return this.patchTaskUsingPATCHWithHttpInfo(taskId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -363,8 +363,8 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ObjectModel} and HTTP response
      */
   }, {
-    key: "retrieveTaskModelUsingGET1_0WithHttpInfo",
-    value: function retrieveTaskModelUsingGET1_0WithHttpInfo() {
+    key: "retrieveTaskModelUsingGET1WithHttpInfo",
+    value: function retrieveTaskModelUsingGET1WithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -383,9 +383,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ObjectModel}
      */
   }, {
-    key: "retrieveTaskModelUsingGET1_0",
-    value: function retrieveTaskModelUsingGET1_0() {
-      return this.retrieveTaskModelUsingGET1_0WithHttpInfo().then(function (response_and_data) {
+    key: "retrieveTaskModelUsingGET1",
+    value: function retrieveTaskModelUsingGET1() {
+      return this.retrieveTaskModelUsingGET1WithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -400,17 +400,17 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
   }, {
-    key: "updateTaskCustomFieldUsingPATCH_0WithHttpInfo",
-    value: function updateTaskCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts) {
+    key: "updateTaskCustomFieldUsingPATCHWithHttpInfo",
+    value: function updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
       opts = opts || {};
       var postBody = request;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
-        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateTaskCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'customFieldId' when calling updateTaskCustomFieldUsingPATCH");
       }
       // verify the required parameter 'request' is set
       if (request === undefined || request === null) {
-        throw new _Error["default"]("Missing the required parameter 'request' when calling updateTaskCustomFieldUsingPATCH_0");
+        throw new _Error["default"]("Missing the required parameter 'request' when calling updateTaskCustomFieldUsingPATCH");
       }
       var pathParams = {
         'custom_field_id': customFieldId
@@ -437,9 +437,9 @@ var TaskApi = exports["default"] = /*#__PURE__*/function () {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
   }, {
-    key: "updateTaskCustomFieldUsingPATCH_0",
-    value: function updateTaskCustomFieldUsingPATCH_0(customFieldId, request, opts) {
-      return this.updateTaskCustomFieldUsingPATCH_0WithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
+    key: "updateTaskCustomFieldUsingPATCH",
+    value: function updateTaskCustomFieldUsingPATCH(customFieldId, request, opts) {
+      return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

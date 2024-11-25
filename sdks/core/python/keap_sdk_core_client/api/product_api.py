@@ -39,7 +39,7 @@ class ProductApi:
 
 
     @validate_call
-    def list_products_using_get1_0(
+    def list_products_using_get1(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc")] = None,
@@ -92,7 +92,7 @@ class ProductApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_products_using_get1_0_serialize(
+        _param = self._list_products_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -120,7 +120,7 @@ class ProductApi:
 
 
     @validate_call
-    def list_products_using_get1_0_with_http_info(
+    def list_products_using_get1_with_http_info(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc")] = None,
@@ -173,7 +173,7 @@ class ProductApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_products_using_get1_0_serialize(
+        _param = self._list_products_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -201,7 +201,7 @@ class ProductApi:
 
 
     @validate_call
-    def list_products_using_get1_0_without_preload_content(
+    def list_products_using_get1_without_preload_content(
         self,
         filter: Annotated[Optional[StrictStr], Field(description="Filter to apply, allowed fields are:   - (String) name   ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Attribute and direction to order items.   One of the following fields:   - name   One of the following directions:   - asc   - desc")] = None,
@@ -254,7 +254,7 @@ class ProductApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_products_using_get1_0_serialize(
+        _param = self._list_products_using_get1_serialize(
             filter=filter,
             order_by=order_by,
             page_size=page_size,
@@ -277,7 +277,7 @@ class ProductApi:
         return response_data.response
 
 
-    def _list_products_using_get1_0_serialize(
+    def _list_products_using_get1_serialize(
         self,
         filter,
         order_by,

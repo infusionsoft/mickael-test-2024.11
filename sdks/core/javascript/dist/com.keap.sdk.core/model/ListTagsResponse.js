@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListTagsResponse model module.
  * @module com.keap.sdk.core/model/ListTagsResponse
- * @version 0.0.19
+ * @version 0.0.20
  */
 var ListTagsResponse = /*#__PURE__*/function () {
   /**

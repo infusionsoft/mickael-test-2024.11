@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListAffiliateCommissionProgramsResponse model module.
  * @module com.keap.sdk.core/model/ListAffiliateCommissionProgramsResponse
- * @version 0.0.19
+ * @version 0.0.20
  */
 var ListAffiliateCommissionProgramsResponse = /*#__PURE__*/function () {
   /**

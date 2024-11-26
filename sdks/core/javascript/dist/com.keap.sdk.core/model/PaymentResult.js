@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PaymentResult model module.
  * @module com.keap.sdk.core/model/PaymentResult
- * @version 0.0.19
+ * @version 0.0.20
  */
 var PaymentResult = /*#__PURE__*/function () {
   /**

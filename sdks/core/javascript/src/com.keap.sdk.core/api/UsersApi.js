@@ -23,7 +23,7 @@ import User from '../model/User';
 /**
 * Users service.
 * @module com.keap.sdk.core/api/UsersApi
-* @version 0.0.19
+* @version 0.0.20
 */
 export default class UsersApi {
 

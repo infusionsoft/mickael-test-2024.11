@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Product service.
 * @module com.keap.sdk.core/api/ProductApi
-* @version 0.0.19
+* @version 0.0.20
 */
 var ProductApi = exports["default"] = /*#__PURE__*/function () {
   /**

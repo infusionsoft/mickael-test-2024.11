@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * FreeTrialDiscount service.
 * @module com.keap.sdk.core/api/FreeTrialDiscountApi
-* @version 0.0.19
+* @version 0.0.20
 */
 var FreeTrialDiscountApi = exports["default"] = /*#__PURE__*/function () {
   /**

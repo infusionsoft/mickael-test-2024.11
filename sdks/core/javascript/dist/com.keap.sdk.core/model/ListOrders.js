@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListOrders model module.
  * @module com.keap.sdk.core/model/ListOrders
- * @version 0.0.19
+ * @version 0.0.20
  */
 var ListOrders = /*#__PURE__*/function () {
   /**

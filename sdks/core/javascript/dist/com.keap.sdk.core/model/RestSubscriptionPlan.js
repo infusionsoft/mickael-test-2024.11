@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestSubscriptionPlan model module.
  * @module com.keap.sdk.core/model/RestSubscriptionPlan
- * @version 0.0.19
+ * @version 0.0.20
  */
 var RestSubscriptionPlan = /*#__PURE__*/function () {
   /**

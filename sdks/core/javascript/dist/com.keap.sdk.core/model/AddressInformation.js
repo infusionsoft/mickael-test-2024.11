@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AddressInformation model module.
  * @module com.keap.sdk.core/model/AddressInformation
- * @version 0.0.19
+ * @version 0.0.20
  */
 var AddressInformation = /*#__PURE__*/function () {
   /**

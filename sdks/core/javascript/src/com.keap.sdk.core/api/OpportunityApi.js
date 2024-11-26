@@ -28,7 +28,7 @@ import UpdateCustomFieldMetaDataRequest from '../model/UpdateCustomFieldMetaData
 /**
 * Opportunity service.
 * @module com.keap.sdk.core/api/OpportunityApi
-* @version 0.0.18
+* @version 0.0.19
 */
 export default class OpportunityApi {
 

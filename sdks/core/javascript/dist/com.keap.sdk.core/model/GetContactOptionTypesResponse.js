@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GetContactOptionTypesResponse model module.
  * @module com.keap.sdk.core/model/GetContactOptionTypesResponse
- * @version 0.0.18
+ * @version 0.0.19
  */
 var GetContactOptionTypesResponse = /*#__PURE__*/function () {
   /**

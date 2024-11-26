@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RemoveContactsFromSequenceRequest model module.
  * @module com.keap.sdk.core/model/RemoveContactsFromSequenceRequest
- * @version 0.0.18
+ * @version 0.0.19
  */
 class RemoveContactsFromSequenceRequest {
     /**

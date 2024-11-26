@@ -17,7 +17,7 @@ import StackTraceElement from './StackTraceElement';
 /**
  * The Throwable model module.
  * @module com.keap.sdk.core/model/Throwable
- * @version 0.0.18
+ * @version 0.0.19
  */
 class Throwable {
     /**

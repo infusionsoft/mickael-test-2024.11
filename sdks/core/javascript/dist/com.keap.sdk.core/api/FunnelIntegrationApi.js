@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * FunnelIntegration service.
 * @module com.keap.sdk.core/api/FunnelIntegrationApi
-* @version 0.0.18
+* @version 0.0.19
 */
 var FunnelIntegrationApi = exports["default"] = /*#__PURE__*/function () {
   /**

@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BusinessProfileAddressRequest model module.
  * @module com.keap.sdk.core/model/BusinessProfileAddressRequest
- * @version 0.0.18
+ * @version 0.0.19
  */
 var BusinessProfileAddressRequest = /*#__PURE__*/function () {
   /**

@@ -17,7 +17,7 @@ import Company from './Company';
 /**
  * The TaggedCompany model module.
  * @module com.keap.sdk.core/model/TaggedCompany
- * @version 0.0.18
+ * @version 0.0.19
  */
 class TaggedCompany {
     /**

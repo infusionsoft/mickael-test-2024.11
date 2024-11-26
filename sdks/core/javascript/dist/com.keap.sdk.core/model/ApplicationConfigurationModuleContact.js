@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplicationConfigurationModuleContact model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleContact
- * @version 0.0.18
+ * @version 0.0.19
  */
 var ApplicationConfigurationModuleContact = /*#__PURE__*/function () {
   /**

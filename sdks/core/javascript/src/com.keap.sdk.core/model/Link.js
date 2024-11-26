@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Link model module.
  * @module com.keap.sdk.core/model/Link
- * @version 0.0.18
+ * @version 0.0.19
  */
 class Link {
     /**

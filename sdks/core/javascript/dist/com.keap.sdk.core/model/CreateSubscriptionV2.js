@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateSubscriptionV2 model module.
  * @module com.keap.sdk.core/model/CreateSubscriptionV2
- * @version 0.0.18
+ * @version 0.0.19
  */
 var CreateSubscriptionV2 = /*#__PURE__*/function () {
   /**

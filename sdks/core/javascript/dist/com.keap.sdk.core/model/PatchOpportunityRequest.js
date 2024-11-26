@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PatchOpportunityRequest model module.
  * @module com.keap.sdk.core/model/PatchOpportunityRequest
- * @version 0.0.18
+ * @version 0.0.19
  */
 var PatchOpportunityRequest = /*#__PURE__*/function () {
   /**

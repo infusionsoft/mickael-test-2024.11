@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SetDefaultCommissionProgramResponse model module.
  * @module com.keap.sdk.core/model/SetDefaultCommissionProgramResponse
- * @version 0.0.18
+ * @version 0.0.19
  */
 class SetDefaultCommissionProgramResponse {
     /**

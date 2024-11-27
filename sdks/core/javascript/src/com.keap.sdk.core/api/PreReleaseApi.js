@@ -87,7 +87,7 @@ import User from '../model/User';
 /**
 * PreRelease service.
 * @module com.keap.sdk.core/api/PreReleaseApi
-* @version 0.0.20
+* @version 0.0.21
 */
 export default class PreReleaseApi {
 

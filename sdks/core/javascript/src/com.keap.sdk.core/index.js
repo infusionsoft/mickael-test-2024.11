@@ -310,7 +310,7 @@ import UsersApi from './api/UsersApi';
 * </pre>
 * </p>
 * @module com.keap.sdk.core/index
-* @version 0.0.20
+* @version 0.0.21
 */
 export {
     /**

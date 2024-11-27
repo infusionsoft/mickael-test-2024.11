@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Settings service.
 * @module com.keap.sdk.core/api/SettingsApi
-* @version 0.0.20
+* @version 0.0.21
 */
 var SettingsApi = exports["default"] = /*#__PURE__*/function () {
   /**

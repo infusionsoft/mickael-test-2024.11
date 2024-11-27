@@ -21,7 +21,7 @@ import RestV2Subscription from './RestV2Subscription';
 /**
  * The RestV2OrderItem model module.
  * @module com.keap.sdk.core/model/RestV2OrderItem
- * @version 0.0.20
+ * @version 0.0.21
  */
 class RestV2OrderItem {
     /**

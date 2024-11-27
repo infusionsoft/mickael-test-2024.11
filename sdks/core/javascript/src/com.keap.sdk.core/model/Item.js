@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Item model module.
  * @module com.keap.sdk.core/model/Item
- * @version 0.0.20
+ * @version 0.0.21
  */
 class Item {
     /**

@@ -38,7 +38,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreatePatchContactRequest model module.
  * @module com.keap.sdk.core/model/CreatePatchContactRequest
- * @version 0.0.20
+ * @version 0.0.21
  */
 var CreatePatchContactRequest = /*#__PURE__*/function () {
   /**

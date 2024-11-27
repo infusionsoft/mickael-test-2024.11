@@ -19,7 +19,7 @@ import ListRestMerchantResponse from '../model/ListRestMerchantResponse';
 /**
 * Merchant service.
 * @module com.keap.sdk.core/api/MerchantApi
-* @version 0.0.20
+* @version 0.0.21
 */
 export default class MerchantApi {
 

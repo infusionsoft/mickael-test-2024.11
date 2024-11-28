@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ContactLinkType model module.
  * @module com.keap.sdk.core/model/ContactLinkType
- * @version 0.0.21
+ * @version 0.0.22
  */
 var ContactLinkType = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PhoneNumber model module.
  * @module com.keap.sdk.core/model/PhoneNumber
- * @version 0.0.21
+ * @version 0.0.22
  */
 var PhoneNumber = /*#__PURE__*/function () {
   /**

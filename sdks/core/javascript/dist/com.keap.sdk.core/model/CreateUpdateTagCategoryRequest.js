@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateUpdateTagCategoryRequest model module.
  * @module com.keap.sdk.core/model/CreateUpdateTagCategoryRequest
- * @version 0.0.21
+ * @version 0.0.22
  */
 var CreateUpdateTagCategoryRequest = /*#__PURE__*/function () {
   /**

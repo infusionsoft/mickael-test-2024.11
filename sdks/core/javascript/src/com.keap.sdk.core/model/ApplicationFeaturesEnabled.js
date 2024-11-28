@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationFeaturesEnabled model module.
  * @module com.keap.sdk.core/model/ApplicationFeaturesEnabled
- * @version 0.0.21
+ * @version 0.0.22
  */
 class ApplicationFeaturesEnabled {
     /**

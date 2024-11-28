@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LinkContactsRequest model module.
  * @module com.keap.sdk.core/model/LinkContactsRequest
- * @version 0.0.21
+ * @version 0.0.22
  */
 class LinkContactsRequest {
     /**

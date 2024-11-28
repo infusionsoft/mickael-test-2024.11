@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListContactLinkTypesResponse model module.
  * @module com.keap.sdk.core/model/ListContactLinkTypesResponse
- * @version 0.0.21
+ * @version 0.0.22
  */
 var ListContactLinkTypesResponse = /*#__PURE__*/function () {
   /**

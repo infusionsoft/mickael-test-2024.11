@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateAffiliateRequest model module.
  * @module com.keap.sdk.core/model/CreateAffiliateRequest
- * @version 0.0.21
+ * @version 0.0.22
  */
 var CreateAffiliateRequest = /*#__PURE__*/function () {
   /**

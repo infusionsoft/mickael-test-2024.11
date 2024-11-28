@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FunnelIntegrationHttpRequest model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationHttpRequest
- * @version 0.0.21
+ * @version 0.0.22
  */
 var FunnelIntegrationHttpRequest = /*#__PURE__*/function () {
   /**

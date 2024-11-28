@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Country model module.
  * @module com.keap.sdk.core/model/Country
- * @version 0.0.21
+ * @version 0.0.22
  */
 var Country = /*#__PURE__*/function () {
   /**

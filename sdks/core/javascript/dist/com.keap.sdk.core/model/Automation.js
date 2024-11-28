@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Automation model module.
  * @module com.keap.sdk.core/model/Automation
- * @version 0.0.21
+ * @version 0.0.22
  */
 var Automation = /*#__PURE__*/function () {
   /**

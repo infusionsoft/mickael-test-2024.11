@@ -17,7 +17,7 @@ import Automation from './Automation';
 /**
  * The ListAutomationResponse model module.
  * @module com.keap.sdk.core/model/ListAutomationResponse
- * @version 0.0.21
+ * @version 0.0.22
  */
 class ListAutomationResponse {
     /**

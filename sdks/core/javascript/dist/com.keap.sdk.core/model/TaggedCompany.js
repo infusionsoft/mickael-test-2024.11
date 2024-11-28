@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaggedCompany model module.
  * @module com.keap.sdk.core/model/TaggedCompany
- * @version 0.0.21
+ * @version 0.0.22
  */
 var TaggedCompany = /*#__PURE__*/function () {
   /**

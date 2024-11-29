@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * SubscriptionPlans service.
 * @module com.keap.sdk.core/api/SubscriptionPlansApi
-* @version 0.0.22
+* @version 0.0.23
 */
 var SubscriptionPlansApi = exports["default"] = /*#__PURE__*/function () {
   /**

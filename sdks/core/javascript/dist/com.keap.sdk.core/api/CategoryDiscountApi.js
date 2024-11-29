@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * CategoryDiscount service.
 * @module com.keap.sdk.core/api/CategoryDiscountApi
-* @version 0.0.22
+* @version 0.0.23
 */
 var CategoryDiscountApi = exports["default"] = /*#__PURE__*/function () {
   /**

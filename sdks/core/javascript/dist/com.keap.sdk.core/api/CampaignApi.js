@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Campaign service.
 * @module com.keap.sdk.core/api/CampaignApi
-* @version 0.0.22
+* @version 0.0.23
 */
 var CampaignApi = exports["default"] = /*#__PURE__*/function () {
   /**

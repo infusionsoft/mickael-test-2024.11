@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestProduct model module.
  * @module com.keap.sdk.core/model/RestProduct
- * @version 0.0.22
+ * @version 0.0.23
  */
 class RestProduct {
     /**

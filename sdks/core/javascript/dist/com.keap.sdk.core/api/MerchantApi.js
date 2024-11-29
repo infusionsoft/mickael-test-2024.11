@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Merchant service.
 * @module com.keap.sdk.core/api/MerchantApi
-* @version 0.0.22
+* @version 0.0.23
 */
 var MerchantApi = exports["default"] = /*#__PURE__*/function () {
   /**

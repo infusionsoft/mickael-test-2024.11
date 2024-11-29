@@ -39,7 +39,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GetSettingsResponse model module.
  * @module com.keap.sdk.core/model/GetSettingsResponse
- * @version 0.0.22
+ * @version 0.0.23
  */
 var GetSettingsResponse = /*#__PURE__*/function () {
   /**

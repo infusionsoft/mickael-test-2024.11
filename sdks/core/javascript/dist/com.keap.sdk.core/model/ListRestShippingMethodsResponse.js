@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListRestShippingMethodsResponse model module.
  * @module com.keap.sdk.core/model/ListRestShippingMethodsResponse
- * @version 0.0.22
+ * @version 0.0.23
  */
 var ListRestShippingMethodsResponse = /*#__PURE__*/function () {
   /**

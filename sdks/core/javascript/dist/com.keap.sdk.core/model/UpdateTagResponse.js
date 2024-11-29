@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UpdateTagResponse model module.
  * @module com.keap.sdk.core/model/UpdateTagResponse
- * @version 0.0.22
+ * @version 0.0.23
  */
 var UpdateTagResponse = /*#__PURE__*/function () {
   /**

@@ -28,7 +28,7 @@ import UpdateTaskResponse from '../model/UpdateTaskResponse';
 /**
 * Task service.
 * @module com.keap.sdk.core/api/TaskApi
-* @version 0.0.22
+* @version 0.0.23
 */
 export default class TaskApi {
 

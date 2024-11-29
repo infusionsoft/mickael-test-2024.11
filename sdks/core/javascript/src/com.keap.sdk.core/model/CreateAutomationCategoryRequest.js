@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAutomationCategoryRequest model module.
  * @module com.keap.sdk.core/model/CreateAutomationCategoryRequest
- * @version 0.0.22
+ * @version 0.0.23
  */
 class CreateAutomationCategoryRequest {
     /**

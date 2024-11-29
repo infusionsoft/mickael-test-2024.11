@@ -17,7 +17,7 @@ import AffiliateSummaryRecord from './AffiliateSummaryRecord';
 /**
  * The ListAffiliateSummariesResponse model module.
  * @module com.keap.sdk.core/model/ListAffiliateSummariesResponse
- * @version 0.0.22
+ * @version 0.0.23
  */
 class ListAffiliateSummariesResponse {
     /**

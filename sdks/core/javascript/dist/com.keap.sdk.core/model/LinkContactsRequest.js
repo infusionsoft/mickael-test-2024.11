@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LinkContactsRequest model module.
  * @module com.keap.sdk.core/model/LinkContactsRequest
- * @version 0.0.23
+ * @version 0.0.24
  */
 var LinkContactsRequest = /*#__PURE__*/function () {
   /**

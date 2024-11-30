@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomFieldMetaData model module.
  * @module com.keap.sdk.core/model/CustomFieldMetaData
- * @version 0.0.23
+ * @version 0.0.24
  */
 var CustomFieldMetaData = /*#__PURE__*/function () {
   /**

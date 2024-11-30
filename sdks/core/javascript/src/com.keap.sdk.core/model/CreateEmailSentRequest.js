@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateEmailSentRequest model module.
  * @module com.keap.sdk.core/model/CreateEmailSentRequest
- * @version 0.0.23
+ * @version 0.0.24
  */
 class CreateEmailSentRequest {
     /**

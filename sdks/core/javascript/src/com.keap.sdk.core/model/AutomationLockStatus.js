@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutomationLockStatus model module.
  * @module com.keap.sdk.core/model/AutomationLockStatus
- * @version 0.0.24
+ * @version 0.0.25
  */
 class AutomationLockStatus {
     /**

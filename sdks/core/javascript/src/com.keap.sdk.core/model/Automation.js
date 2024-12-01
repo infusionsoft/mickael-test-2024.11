@@ -17,7 +17,7 @@ import AutomationLockStatus from './AutomationLockStatus';
 /**
  * The Automation model module.
  * @module com.keap.sdk.core/model/Automation
- * @version 0.0.24
+ * @version 0.0.25
  */
 class Automation {
     /**

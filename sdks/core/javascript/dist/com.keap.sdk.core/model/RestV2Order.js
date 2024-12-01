@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestV2Order model module.
  * @module com.keap.sdk.core/model/RestV2Order
- * @version 0.0.24
+ * @version 0.0.25
  */
 var RestV2Order = /*#__PURE__*/function () {
   /**

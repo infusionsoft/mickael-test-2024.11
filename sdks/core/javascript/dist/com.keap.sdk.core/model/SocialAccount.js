@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SocialAccount model module.
  * @module com.keap.sdk.core/model/SocialAccount
- * @version 0.0.24
+ * @version 0.0.25
  */
 var SocialAccount = /*#__PURE__*/function () {
   /**

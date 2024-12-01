@@ -21,7 +21,7 @@ import PhoneNumber from './PhoneNumber';
 /**
  * The PatchCompanyRequest model module.
  * @module com.keap.sdk.core/model/PatchCompanyRequest
- * @version 0.0.24
+ * @version 0.0.25
  */
 class PatchCompanyRequest {
     /**

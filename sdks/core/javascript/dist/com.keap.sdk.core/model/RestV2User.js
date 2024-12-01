@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestV2User model module.
  * @module com.keap.sdk.core/model/RestV2User
- * @version 0.0.24
+ * @version 0.0.25
  */
 var RestV2User = /*#__PURE__*/function () {
   /**

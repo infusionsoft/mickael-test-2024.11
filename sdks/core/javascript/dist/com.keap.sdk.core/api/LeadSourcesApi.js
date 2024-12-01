@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * LeadSources service.
 * @module com.keap.sdk.core/api/LeadSourcesApi
-* @version 0.0.24
+* @version 0.0.25
 */
 var LeadSourcesApi = exports["default"] = /*#__PURE__*/function () {
   /**

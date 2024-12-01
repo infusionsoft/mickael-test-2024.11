@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateUserRequestV2 model module.
  * @module com.keap.sdk.core/model/CreateUserRequestV2
- * @version 0.0.24
+ * @version 0.0.25
  */
 var CreateUserRequestV2 = /*#__PURE__*/function () {
   /**

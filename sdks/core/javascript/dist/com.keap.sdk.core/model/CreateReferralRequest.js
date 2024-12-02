@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateReferralRequest model module.
  * @module com.keap.sdk.core/model/CreateReferralRequest
- * @version 0.0.25
+ * @version 0.0.26
  */
 var CreateReferralRequest = /*#__PURE__*/function () {
   /**

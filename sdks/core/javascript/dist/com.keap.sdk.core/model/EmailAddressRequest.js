@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailAddressRequest model module.
  * @module com.keap.sdk.core/model/EmailAddressRequest
- * @version 0.0.25
+ * @version 0.0.26
  */
 var EmailAddressRequest = /*#__PURE__*/function () {
   /**

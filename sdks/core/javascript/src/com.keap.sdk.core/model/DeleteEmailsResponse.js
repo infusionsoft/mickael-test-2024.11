@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteEmailsResponse model module.
  * @module com.keap.sdk.core/model/DeleteEmailsResponse
- * @version 0.0.25
+ * @version 0.0.26
  */
 class DeleteEmailsResponse {
     /**

@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OpportunityContact model module.
  * @module com.keap.sdk.core/model/OpportunityContact
- * @version 0.0.25
+ * @version 0.0.26
  */
 var OpportunityContact = /*#__PURE__*/function () {
   /**

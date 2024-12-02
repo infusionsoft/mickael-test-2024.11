@@ -19,7 +19,7 @@ import ListSubscriptionPlansResponse from '../model/ListSubscriptionPlansRespons
 /**
 * SubscriptionPlans service.
 * @module com.keap.sdk.core/api/SubscriptionPlansApi
-* @version 0.0.25
+* @version 0.0.26
 */
 export default class SubscriptionPlansApi {
 

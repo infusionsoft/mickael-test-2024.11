@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UpdateNoteResponse model module.
  * @module com.keap.sdk.core/model/UpdateNoteResponse
- * @version 0.0.25
+ * @version 0.0.26
  */
 var UpdateNoteResponse = /*#__PURE__*/function () {
   /**

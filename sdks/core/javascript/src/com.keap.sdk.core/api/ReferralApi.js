@@ -20,7 +20,7 @@ import Referral from '../model/Referral';
 /**
 * Referral service.
 * @module com.keap.sdk.core/api/ReferralApi
-* @version 0.0.25
+* @version 0.0.26
 */
 export default class ReferralApi {
 

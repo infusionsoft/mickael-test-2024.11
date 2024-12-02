@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LeadSourceCategory model module.
  * @module com.keap.sdk.core/model/LeadSourceCategory
- * @version 0.0.25
+ * @version 0.0.26
  */
 var LeadSourceCategory = /*#__PURE__*/function () {
   /**

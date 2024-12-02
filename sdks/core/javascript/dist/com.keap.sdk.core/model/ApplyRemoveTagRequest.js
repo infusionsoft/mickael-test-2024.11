@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplyRemoveTagRequest model module.
  * @module com.keap.sdk.core/model/ApplyRemoveTagRequest
- * @version 0.0.25
+ * @version 0.0.26
  */
 var ApplyRemoveTagRequest = /*#__PURE__*/function () {
   /**

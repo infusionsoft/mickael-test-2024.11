@@ -18,7 +18,7 @@ import Error from '../model/Error';
 /**
 * FreeTrialDiscount service.
 * @module com.keap.sdk.core/api/FreeTrialDiscountApi
-* @version 0.0.25
+* @version 0.0.26
 */
 export default class FreeTrialDiscountApi {
 

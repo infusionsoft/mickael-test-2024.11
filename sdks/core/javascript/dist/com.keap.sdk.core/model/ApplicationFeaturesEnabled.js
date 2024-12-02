@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplicationFeaturesEnabled model module.
  * @module com.keap.sdk.core/model/ApplicationFeaturesEnabled
- * @version 0.0.25
+ * @version 0.0.26
  */
 var ApplicationFeaturesEnabled = /*#__PURE__*/function () {
   /**

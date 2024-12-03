@@ -37,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Task service.
 * @module com.keap.sdk.core/api/TaskApi
-* @version 0.0.26
+* @version 0.0.27
 */
 var TaskApi = exports["default"] = /*#__PURE__*/function () {
   /**

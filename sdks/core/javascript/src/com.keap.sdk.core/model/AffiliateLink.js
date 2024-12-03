@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateLink model module.
  * @module com.keap.sdk.core/model/AffiliateLink
- * @version 0.0.26
+ * @version 0.0.27
  */
 class AffiliateLink {
     /**

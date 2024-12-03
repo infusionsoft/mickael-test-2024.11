@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateProductCommissionProgramRequest model module.
  * @module com.keap.sdk.core/model/CreateProductCommissionProgramRequest
- * @version 0.0.26
+ * @version 0.0.27
  */
 class CreateProductCommissionProgramRequest {
     /**

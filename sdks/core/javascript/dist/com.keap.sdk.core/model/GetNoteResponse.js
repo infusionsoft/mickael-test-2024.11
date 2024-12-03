@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GetNoteResponse model module.
  * @module com.keap.sdk.core/model/GetNoteResponse
- * @version 0.0.26
+ * @version 0.0.27
  */
 var GetNoteResponse = /*#__PURE__*/function () {
   /**

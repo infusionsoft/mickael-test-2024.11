@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Criteria model module.
  * @module com.keap.sdk.core/model/Criteria
- * @version 0.0.26
+ * @version 0.0.27
  */
 var Criteria = /*#__PURE__*/function () {
   /**

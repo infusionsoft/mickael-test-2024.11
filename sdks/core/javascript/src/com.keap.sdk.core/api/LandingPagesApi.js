@@ -19,7 +19,7 @@ import ListLandingPagesResponse from '../model/ListLandingPagesResponse';
 /**
 * LandingPages service.
 * @module com.keap.sdk.core/api/LandingPagesApi
-* @version 0.0.26
+* @version 0.0.27
 */
 export default class LandingPagesApi {
 

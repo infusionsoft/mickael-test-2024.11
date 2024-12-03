@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreatePatchTaskRequest model module.
  * @module com.keap.sdk.core/model/CreatePatchTaskRequest
- * @version 0.0.26
+ * @version 0.0.27
  */
 var CreatePatchTaskRequest = /*#__PURE__*/function () {
   /**

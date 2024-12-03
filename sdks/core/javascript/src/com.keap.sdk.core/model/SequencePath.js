@@ -17,7 +17,7 @@ import Item from './Item';
 /**
  * The SequencePath model module.
  * @module com.keap.sdk.core/model/SequencePath
- * @version 0.0.27
+ * @version 0.0.28
  */
 class SequencePath {
     /**

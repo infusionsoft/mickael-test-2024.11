@@ -37,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Note service.
 * @module com.keap.sdk.core/api/NoteApi
-* @version 0.0.27
+* @version 0.0.28
 */
 var NoteApi = exports["default"] = /*#__PURE__*/function () {
   /**

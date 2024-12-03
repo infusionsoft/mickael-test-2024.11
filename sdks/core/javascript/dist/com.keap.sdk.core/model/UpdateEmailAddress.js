@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UpdateEmailAddress model module.
  * @module com.keap.sdk.core/model/UpdateEmailAddress
- * @version 0.0.27
+ * @version 0.0.28
  */
 var UpdateEmailAddress = /*#__PURE__*/function () {
   /**

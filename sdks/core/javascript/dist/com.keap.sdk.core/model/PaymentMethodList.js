@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PaymentMethodList model module.
  * @module com.keap.sdk.core/model/PaymentMethodList
- * @version 0.0.27
+ * @version 0.0.28
  */
 var PaymentMethodList = /*#__PURE__*/function () {
   /**

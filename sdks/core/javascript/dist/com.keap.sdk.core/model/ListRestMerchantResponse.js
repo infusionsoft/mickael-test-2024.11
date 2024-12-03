@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListRestMerchantResponse model module.
  * @module com.keap.sdk.core/model/ListRestMerchantResponse
- * @version 0.0.27
+ * @version 0.0.28
  */
 var ListRestMerchantResponse = /*#__PURE__*/function () {
   /**

@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PatchUserRequestV2 model module.
  * @module com.keap.sdk.core/model/PatchUserRequestV2
- * @version 0.0.27
+ * @version 0.0.28
  */
 var PatchUserRequestV2 = /*#__PURE__*/function () {
   /**

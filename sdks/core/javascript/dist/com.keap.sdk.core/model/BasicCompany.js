@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BasicCompany model module.
  * @module com.keap.sdk.core/model/BasicCompany
- * @version 0.0.27
+ * @version 0.0.28
  */
 var BasicCompany = /*#__PURE__*/function () {
   /**

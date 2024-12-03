@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplicationConfigurationModuleOpportunityStatesActive model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleOpportunityStatesActive
- * @version 0.0.27
+ * @version 0.0.28
  */
 var ApplicationConfigurationModuleOpportunityStatesActive = /*#__PURE__*/function () {
   /**

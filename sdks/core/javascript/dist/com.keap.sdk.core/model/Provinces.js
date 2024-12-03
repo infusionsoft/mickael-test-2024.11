@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Provinces model module.
  * @module com.keap.sdk.core/model/Provinces
- * @version 0.0.27
+ * @version 0.0.28
  */
 var Provinces = /*#__PURE__*/function () {
   /**

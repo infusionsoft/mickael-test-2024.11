@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateOpportunityRequest model module.
  * @module com.keap.sdk.core/model/CreateOpportunityRequest
- * @version 0.0.29
+ * @version 0.0.30
  */
 var CreateOpportunityRequest = /*#__PURE__*/function () {
   /**

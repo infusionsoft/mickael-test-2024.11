@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SaveAutomationCategoryRequest model module.
  * @module com.keap.sdk.core/model/SaveAutomationCategoryRequest
- * @version 0.0.29
+ * @version 0.0.30
  */
 var SaveAutomationCategoryRequest = /*#__PURE__*/function () {
   /**

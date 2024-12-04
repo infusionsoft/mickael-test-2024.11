@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateTaskRequest model module.
  * @module com.keap.sdk.core/model/CreateTaskRequest
- * @version 0.0.28
+ * @version 0.0.29
  */
 class CreateTaskRequest {
     /**

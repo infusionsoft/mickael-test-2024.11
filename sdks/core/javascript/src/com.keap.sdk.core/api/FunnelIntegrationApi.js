@@ -22,7 +22,7 @@ import FunnelIntegrationTriggerResultDTO from '../model/FunnelIntegrationTrigger
 /**
 * FunnelIntegration service.
 * @module com.keap.sdk.core/api/FunnelIntegrationApi
-* @version 0.0.28
+* @version 0.0.29
 */
 export default class FunnelIntegrationApi {
 

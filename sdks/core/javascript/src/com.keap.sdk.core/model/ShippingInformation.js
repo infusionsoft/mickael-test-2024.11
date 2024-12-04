@@ -19,7 +19,7 @@ import PhoneNumber from './PhoneNumber';
 /**
  * The ShippingInformation model module.
  * @module com.keap.sdk.core/model/ShippingInformation
- * @version 0.0.28
+ * @version 0.0.29
  */
 class ShippingInformation {
     /**

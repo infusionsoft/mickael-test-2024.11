@@ -30,7 +30,7 @@ import UpdateCustomFieldMetaDataRequest from '../model/UpdateCustomFieldMetaData
 /**
 * Orders service.
 * @module com.keap.sdk.core/api/OrdersApi
-* @version 0.0.28
+* @version 0.0.29
 */
 export default class OrdersApi {
 

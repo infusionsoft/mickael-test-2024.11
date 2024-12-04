@@ -17,7 +17,7 @@ import AddressInformation from './AddressInformation';
 /**
  * The RestV2PatchOrderRequest model module.
  * @module com.keap.sdk.core/model/RestV2PatchOrderRequest
- * @version 0.0.28
+ * @version 0.0.29
  */
 class RestV2PatchOrderRequest {
     /**

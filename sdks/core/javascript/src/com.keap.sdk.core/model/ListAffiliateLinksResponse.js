@@ -17,7 +17,7 @@ import AffiliateLink from './AffiliateLink';
 /**
  * The ListAffiliateLinksResponse model module.
  * @module com.keap.sdk.core/model/ListAffiliateLinksResponse
- * @version 0.0.28
+ * @version 0.0.29
  */
 class ListAffiliateLinksResponse {
     /**

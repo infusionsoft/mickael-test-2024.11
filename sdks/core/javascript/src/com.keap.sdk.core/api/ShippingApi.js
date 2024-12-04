@@ -19,7 +19,7 @@ import ListRestShippingMethodsResponse from '../model/ListRestShippingMethodsRes
 /**
 * Shipping service.
 * @module com.keap.sdk.core/api/ShippingApi
-* @version 0.0.28
+* @version 0.0.29
 */
 export default class ShippingApi {
 

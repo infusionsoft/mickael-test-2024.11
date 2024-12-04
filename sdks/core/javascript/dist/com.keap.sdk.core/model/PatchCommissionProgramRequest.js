@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PatchCommissionProgramRequest model module.
  * @module com.keap.sdk.core/model/PatchCommissionProgramRequest
- * @version 0.0.30
+ * @version 0.0.29
  */
 var PatchCommissionProgramRequest = /*#__PURE__*/function () {
   /**

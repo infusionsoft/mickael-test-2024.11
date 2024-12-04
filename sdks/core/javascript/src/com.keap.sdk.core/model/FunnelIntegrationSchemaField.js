@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FunnelIntegrationSchemaField model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationSchemaField
- * @version 0.0.30
+ * @version 0.0.29
  */
 class FunnelIntegrationSchemaField {
     /**

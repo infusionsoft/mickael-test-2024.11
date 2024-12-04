@@ -17,7 +17,7 @@ import Campaign from './Campaign';
 /**
  * The ListCampaignsResponse model module.
  * @module com.keap.sdk.core/model/ListCampaignsResponse
- * @version 0.0.30
+ * @version 0.0.29
  */
 class ListCampaignsResponse {
     /**

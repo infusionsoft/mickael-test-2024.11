@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationCompany model module.
  * @module com.keap.sdk.core/model/ApplicationCompany
- * @version 0.0.30
+ * @version 0.0.29
  */
 class ApplicationCompany {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestEmailAddress model module.
  * @module com.keap.sdk.core/model/RestEmailAddress
- * @version 0.0.30
+ * @version 0.0.29
  */
 class RestEmailAddress {
     /**

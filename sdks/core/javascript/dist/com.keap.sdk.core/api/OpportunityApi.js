@@ -37,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Opportunity service.
 * @module com.keap.sdk.core/api/OpportunityApi
-* @version 0.0.30
+* @version 0.0.29
 */
 var OpportunityApi = exports["default"] = /*#__PURE__*/function () {
   /**

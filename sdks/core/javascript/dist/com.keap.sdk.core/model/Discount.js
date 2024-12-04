@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Discount model module.
  * @module com.keap.sdk.core/model/Discount
- * @version 0.0.30
+ * @version 0.0.29
  */
 var Discount = /*#__PURE__*/function () {
   /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateCustomFieldResponse model module.
  * @module com.keap.sdk.core/model/CreateCustomFieldResponse
- * @version 0.0.30
+ * @version 0.0.29
  */
 var CreateCustomFieldResponse = /*#__PURE__*/function () {
   /**

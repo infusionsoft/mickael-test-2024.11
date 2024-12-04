@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplicationConfigurationModuleTemplate model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleTemplate
- * @version 0.0.30
+ * @version 0.0.29
  */
 var ApplicationConfigurationModuleTemplate = /*#__PURE__*/function () {
   /**

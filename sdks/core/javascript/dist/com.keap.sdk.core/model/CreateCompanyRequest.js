@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateCompanyRequest model module.
  * @module com.keap.sdk.core/model/CreateCompanyRequest
- * @version 0.0.29
+ * @version 0.0.30
  */
 var CreateCompanyRequest = /*#__PURE__*/function () {
   /**

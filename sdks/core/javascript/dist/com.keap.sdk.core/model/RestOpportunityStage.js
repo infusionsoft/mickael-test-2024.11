@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestOpportunityStage model module.
  * @module com.keap.sdk.core/model/RestOpportunityStage
- * @version 0.0.29
+ * @version 0.0.30
  */
 var RestOpportunityStage = /*#__PURE__*/function () {
   /**

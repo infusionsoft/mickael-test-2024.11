@@ -25,7 +25,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
  */
 /**
 * @module com.keap.sdk.core/ApiClient
-* @version 0.0.29
+* @version 0.0.30
 */
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -66,7 +66,7 @@ var ApiClient = /*#__PURE__*/function () {
      * @default {}
      */
     this.defaultHeaders = {
-      'User-Agent': 'core-service-core-javascript/0.0.29'
+      'User-Agent': 'core-service-core-javascript/0.0.30'
     };
 
     /**

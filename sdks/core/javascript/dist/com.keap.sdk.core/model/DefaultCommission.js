@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The DefaultCommission model module.
  * @module com.keap.sdk.core/model/DefaultCommission
- * @version 0.0.30
+ * @version 0.0.31
  */
 var DefaultCommission = /*#__PURE__*/function () {
   /**

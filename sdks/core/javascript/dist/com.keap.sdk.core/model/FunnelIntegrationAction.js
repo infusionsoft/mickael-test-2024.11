@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FunnelIntegrationAction model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationAction
- * @version 0.0.30
+ * @version 0.0.31
  */
 var FunnelIntegrationAction = /*#__PURE__*/function () {
   /**

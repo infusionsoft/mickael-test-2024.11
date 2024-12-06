@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListOpportunitiesResponse model module.
  * @module com.keap.sdk.core/model/ListOpportunitiesResponse
- * @version 0.0.30
+ * @version 0.0.31
  */
 var ListOpportunitiesResponse = /*#__PURE__*/function () {
   /**

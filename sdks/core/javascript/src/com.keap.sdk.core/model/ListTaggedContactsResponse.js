@@ -17,7 +17,7 @@ import BasicContact from './BasicContact';
 /**
  * The ListTaggedContactsResponse model module.
  * @module com.keap.sdk.core/model/ListTaggedContactsResponse
- * @version 0.0.30
+ * @version 0.0.31
  */
 class ListTaggedContactsResponse {
     /**

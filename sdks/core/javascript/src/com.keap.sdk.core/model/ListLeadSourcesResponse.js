@@ -17,7 +17,7 @@ import LeadSource from './LeadSource';
 /**
  * The ListLeadSourcesResponse model module.
  * @module com.keap.sdk.core/model/ListLeadSourcesResponse
- * @version 0.0.30
+ * @version 0.0.31
  */
 class ListLeadSourcesResponse {
     /**

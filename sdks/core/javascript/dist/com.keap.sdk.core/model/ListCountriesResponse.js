@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListCountriesResponse model module.
  * @module com.keap.sdk.core/model/ListCountriesResponse
- * @version 0.0.30
+ * @version 0.0.31
  */
 var ListCountriesResponse = /*#__PURE__*/function () {
   /**

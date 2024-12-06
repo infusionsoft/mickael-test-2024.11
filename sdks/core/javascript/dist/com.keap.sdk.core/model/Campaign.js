@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Campaign model module.
  * @module com.keap.sdk.core/model/Campaign
- * @version 0.0.30
+ * @version 0.0.31
  */
 var Campaign = /*#__PURE__*/function () {
   /**

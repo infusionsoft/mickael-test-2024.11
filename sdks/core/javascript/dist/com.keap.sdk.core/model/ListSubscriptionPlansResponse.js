@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListSubscriptionPlansResponse model module.
  * @module com.keap.sdk.core/model/ListSubscriptionPlansResponse
- * @version 0.0.30
+ * @version 0.0.31
  */
 var ListSubscriptionPlansResponse = /*#__PURE__*/function () {
   /**

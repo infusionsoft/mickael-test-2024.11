@@ -39,7 +39,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Contact service.
 * @module com.keap.sdk.core/api/ContactApi
-* @version 0.0.30
+* @version 0.0.31
 */
 var ContactApi = exports["default"] = /*#__PURE__*/function () {
   /**

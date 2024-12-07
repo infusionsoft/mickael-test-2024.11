@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestProductOptionValue model module.
  * @module com.keap.sdk.core/model/RestProductOptionValue
- * @version 0.0.31
+ * @version 0.0.32
  */
 class RestProductOptionValue {
     /**

@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutomationCategory service.
 * @module com.keap.sdk.core/api/AutomationCategoryApi
-* @version 0.0.31
+* @version 0.0.32
 */
 var AutomationCategoryApi = exports["default"] = /*#__PURE__*/function () {
   /**

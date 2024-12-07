@@ -17,7 +17,7 @@ import Tag from './Tag';
 /**
  * The ListTagCategoriesResponse model module.
  * @module com.keap.sdk.core/model/ListTagCategoriesResponse
- * @version 0.0.31
+ * @version 0.0.32
  */
 class ListTagCategoriesResponse {
     /**

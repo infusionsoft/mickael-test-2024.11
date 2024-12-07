@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BusinessProfileAddressResponse model module.
  * @module com.keap.sdk.core/model/BusinessProfileAddressResponse
- * @version 0.0.31
+ * @version 0.0.32
  */
 class BusinessProfileAddressResponse {
     /**

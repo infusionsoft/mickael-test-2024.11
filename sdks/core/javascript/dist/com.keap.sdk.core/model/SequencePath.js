@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SequencePath model module.
  * @module com.keap.sdk.core/model/SequencePath
- * @version 0.0.31
+ * @version 0.0.32
  */
 var SequencePath = /*#__PURE__*/function () {
   /**

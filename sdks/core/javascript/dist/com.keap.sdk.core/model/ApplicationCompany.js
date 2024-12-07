@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplicationCompany model module.
  * @module com.keap.sdk.core/model/ApplicationCompany
- * @version 0.0.31
+ * @version 0.0.32
  */
 var ApplicationCompany = /*#__PURE__*/function () {
   /**

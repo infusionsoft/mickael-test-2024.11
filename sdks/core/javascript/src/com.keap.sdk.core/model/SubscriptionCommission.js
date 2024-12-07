@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SubscriptionCommission model module.
  * @module com.keap.sdk.core/model/SubscriptionCommission
- * @version 0.0.31
+ * @version 0.0.32
  */
 class SubscriptionCommission {
     /**

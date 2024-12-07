@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomField model module.
  * @module com.keap.sdk.core/model/CustomField
- * @version 0.0.31
+ * @version 0.0.32
  */
 class CustomField {
     /**

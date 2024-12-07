@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FunnelIntegrationTriggerResultDTO model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationTriggerResultDTO
- * @version 0.0.31
+ * @version 0.0.32
  */
 class FunnelIntegrationTriggerResultDTO {
     /**

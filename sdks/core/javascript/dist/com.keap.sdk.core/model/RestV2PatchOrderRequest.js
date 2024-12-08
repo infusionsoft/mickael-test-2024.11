@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestV2PatchOrderRequest model module.
  * @module com.keap.sdk.core/model/RestV2PatchOrderRequest
- * @version 0.0.32
+ * @version 0.0.33
  */
 var RestV2PatchOrderRequest = /*#__PURE__*/function () {
   /**

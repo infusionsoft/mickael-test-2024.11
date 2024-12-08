@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * BusinessProfile service.
 * @module com.keap.sdk.core/api/BusinessProfileApi
-* @version 0.0.32
+* @version 0.0.33
 */
 var BusinessProfileApi = exports["default"] = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BasicUser model module.
  * @module com.keap.sdk.core/model/BasicUser
- * @version 0.0.32
+ * @version 0.0.33
  */
 var BasicUser = /*#__PURE__*/function () {
   /**

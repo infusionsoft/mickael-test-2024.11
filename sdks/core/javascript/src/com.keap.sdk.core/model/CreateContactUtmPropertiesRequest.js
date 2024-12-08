@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateContactUtmPropertiesRequest model module.
  * @module com.keap.sdk.core/model/CreateContactUtmPropertiesRequest
- * @version 0.0.32
+ * @version 0.0.33
  */
 class CreateContactUtmPropertiesRequest {
     /**

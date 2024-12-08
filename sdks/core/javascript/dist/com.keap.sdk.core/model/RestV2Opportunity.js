@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestV2Opportunity model module.
  * @module com.keap.sdk.core/model/RestV2Opportunity
- * @version 0.0.32
+ * @version 0.0.33
  */
 var RestV2Opportunity = /*#__PURE__*/function () {
   /**

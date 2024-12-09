@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailSentCreateError model module.
  * @module com.keap.sdk.core/model/EmailSentCreateError
- * @version 0.0.34
+ * @version 0.0.35
  */
 var EmailSentCreateError = /*#__PURE__*/function () {
   /**

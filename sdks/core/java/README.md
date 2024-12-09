@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.34</version>
+  <version>0.0.35</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.34"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.35"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.34.jar`
+- `target/core-service-core-java-sdk-0.0.35.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

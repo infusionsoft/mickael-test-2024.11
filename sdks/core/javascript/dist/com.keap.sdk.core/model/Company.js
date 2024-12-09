@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Company model module.
  * @module com.keap.sdk.core/model/Company
- * @version 0.0.34
+ * @version 0.0.35
  */
 var Company = /*#__PURE__*/function () {
   /**

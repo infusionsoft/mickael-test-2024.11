@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateUpdateTagCategoryRequest model module.
  * @module com.keap.sdk.core/model/CreateUpdateTagCategoryRequest
- * @version 0.0.34
+ * @version 0.0.35
  */
 class CreateUpdateTagCategoryRequest {
     /**

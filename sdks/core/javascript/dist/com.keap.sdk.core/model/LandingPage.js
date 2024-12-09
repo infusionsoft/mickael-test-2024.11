@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LandingPage model module.
  * @module com.keap.sdk.core/model/LandingPage
- * @version 0.0.34
+ * @version 0.0.35
  */
 var LandingPage = /*#__PURE__*/function () {
   /**

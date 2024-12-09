@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * PaymentMethodConfig service.
 * @module com.keap.sdk.core/api/PaymentMethodConfigApi
-* @version 0.0.34
+* @version 0.0.35
 */
 var PaymentMethodConfigApi = exports["default"] = /*#__PURE__*/function () {
   /**

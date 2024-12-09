@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PaymentMethodConfig model module.
  * @module com.keap.sdk.core/model/PaymentMethodConfig
- * @version 0.0.34
+ * @version 0.0.35
  */
 var PaymentMethodConfig = /*#__PURE__*/function () {
   /**

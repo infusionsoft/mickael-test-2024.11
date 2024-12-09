@@ -17,7 +17,7 @@ import CreateOpportunityStageCheckListItem from './CreateOpportunityStageCheckLi
 /**
  * The CreateOpportunityStageRequest model module.
  * @module com.keap.sdk.core/model/CreateOpportunityStageRequest
- * @version 0.0.35
+ * @version 0.0.36
  */
 class CreateOpportunityStageRequest {
     /**

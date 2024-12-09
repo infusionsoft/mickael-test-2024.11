@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FunnelIntegrationTriggerEventDTO model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationTriggerEventDTO
- * @version 0.0.35
+ * @version 0.0.36
  */
 var FunnelIntegrationTriggerEventDTO = /*#__PURE__*/function () {
   /**

@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListTaggedCompaniesResponse model module.
  * @module com.keap.sdk.core/model/ListTaggedCompaniesResponse
- * @version 0.0.35
+ * @version 0.0.36
  */
 var ListTaggedCompaniesResponse = /*#__PURE__*/function () {
   /**

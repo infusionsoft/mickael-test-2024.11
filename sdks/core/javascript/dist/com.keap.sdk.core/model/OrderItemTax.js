@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderItemTax model module.
  * @module com.keap.sdk.core/model/OrderItemTax
- * @version 0.0.35
+ * @version 0.0.36
  */
 var OrderItemTax = /*#__PURE__*/function () {
   /**

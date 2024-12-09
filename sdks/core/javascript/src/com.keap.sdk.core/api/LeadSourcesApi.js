@@ -21,7 +21,7 @@ import ListLeadSourcesResponse from '../model/ListLeadSourcesResponse';
 /**
 * LeadSources service.
 * @module com.keap.sdk.core/api/LeadSourcesApi
-* @version 0.0.35
+* @version 0.0.36
 */
 export default class LeadSourcesApi {
 

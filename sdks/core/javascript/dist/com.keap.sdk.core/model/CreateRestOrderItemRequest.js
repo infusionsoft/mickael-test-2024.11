@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateRestOrderItemRequest model module.
  * @module com.keap.sdk.core/model/CreateRestOrderItemRequest
- * @version 0.0.35
+ * @version 0.0.36
  */
 var CreateRestOrderItemRequest = /*#__PURE__*/function () {
   /**

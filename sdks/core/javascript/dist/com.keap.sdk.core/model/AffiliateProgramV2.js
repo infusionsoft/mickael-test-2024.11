@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateProgramV2 model module.
  * @module com.keap.sdk.core/model/AffiliateProgramV2
- * @version 0.0.33
+ * @version 0.0.34
  */
 var AffiliateProgramV2 = /*#__PURE__*/function () {
   /**

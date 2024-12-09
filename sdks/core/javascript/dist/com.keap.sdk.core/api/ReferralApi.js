@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Referral service.
 * @module com.keap.sdk.core/api/ReferralApi
-* @version 0.0.33
+* @version 0.0.34
 */
 var ReferralApi = exports["default"] = /*#__PURE__*/function () {
   /**

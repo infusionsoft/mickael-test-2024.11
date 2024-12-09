@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RestProductOptionValue model module.
  * @module com.keap.sdk.core/model/RestProductOptionValue
- * @version 0.0.33
+ * @version 0.0.34
  */
 var RestProductOptionValue = /*#__PURE__*/function () {
   /**

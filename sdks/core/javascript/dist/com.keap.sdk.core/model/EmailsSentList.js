@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailsSentList model module.
  * @module com.keap.sdk.core/model/EmailsSentList
- * @version 0.0.33
+ * @version 0.0.34
  */
 var EmailsSentList = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BasicCompany model module.
  * @module com.keap.sdk.core/model/BasicCompany
- * @version 0.0.39
+ * @version 0.0.40
  */
 class BasicCompany {
     /**

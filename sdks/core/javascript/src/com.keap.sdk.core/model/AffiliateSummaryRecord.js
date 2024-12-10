@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateSummaryRecord model module.
  * @module com.keap.sdk.core/model/AffiliateSummaryRecord
- * @version 0.0.39
+ * @version 0.0.40
  */
 class AffiliateSummaryRecord {
     /**

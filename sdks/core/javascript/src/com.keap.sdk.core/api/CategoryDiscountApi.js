@@ -19,7 +19,7 @@ import Error from '../model/Error';
 /**
 * CategoryDiscount service.
 * @module com.keap.sdk.core/api/CategoryDiscountApi
-* @version 0.0.39
+* @version 0.0.40
 */
 export default class CategoryDiscountApi {
 

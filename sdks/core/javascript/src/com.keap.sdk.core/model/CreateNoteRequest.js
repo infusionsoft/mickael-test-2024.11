@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateNoteRequest model module.
  * @module com.keap.sdk.core/model/CreateNoteRequest
- * @version 0.0.39
+ * @version 0.0.40
  */
 class CreateNoteRequest {
     /**

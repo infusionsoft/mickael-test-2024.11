@@ -12,7 +12,7 @@
     <Description>Keap.Sdk.Core SDK</Description>
     <Copyright>2024</Copyright>
     <RootNamespace>Keap.Sdk.Core</RootNamespace>
-    <Version>0.0.39</Version>
+    <Version>0.0.40</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Keap.Sdk.Core.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/infusionsoft/keap-sdk.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

@@ -18,7 +18,7 @@ import Error from '../model/Error';
 /**
 * Sales service.
 * @module com.keap.sdk.core/api/SalesApi
-* @version 0.0.39
+* @version 0.0.40
 */
 export default class SalesApi {
 

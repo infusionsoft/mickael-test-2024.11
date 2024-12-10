@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentResult model module.
  * @module com.keap.sdk.core/model/PaymentResult
- * @version 0.0.39
+ * @version 0.0.40
  */
 class PaymentResult {
     /**

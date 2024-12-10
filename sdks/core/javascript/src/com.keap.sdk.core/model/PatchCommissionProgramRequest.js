@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PatchCommissionProgramRequest model module.
  * @module com.keap.sdk.core/model/PatchCommissionProgramRequest
- * @version 0.0.40
+ * @version 0.0.41
  */
 class PatchCommissionProgramRequest {
     /**

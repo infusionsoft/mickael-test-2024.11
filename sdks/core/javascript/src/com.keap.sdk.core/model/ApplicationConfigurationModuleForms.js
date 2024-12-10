@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleForms model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleForms
- * @version 0.0.40
+ * @version 0.0.41
  */
 class ApplicationConfigurationModuleForms {
     /**

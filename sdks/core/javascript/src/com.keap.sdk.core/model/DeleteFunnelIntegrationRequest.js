@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteFunnelIntegrationRequest model module.
  * @module com.keap.sdk.core/model/DeleteFunnelIntegrationRequest
- * @version 0.0.40
+ * @version 0.0.41
  */
 class DeleteFunnelIntegrationRequest {
     /**

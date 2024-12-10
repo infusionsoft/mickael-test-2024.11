@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Address model module.
  * @module com.keap.sdk.core/model/Address
- * @version 0.0.40
+ * @version 0.0.41
  */
 class Address {
     /**

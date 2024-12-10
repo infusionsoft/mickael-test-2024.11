@@ -17,7 +17,7 @@ import Task from './Task';
 /**
  * The ListTasksResponse model module.
  * @module com.keap.sdk.core/model/ListTasksResponse
- * @version 0.0.40
+ * @version 0.0.41
  */
 class ListTasksResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSendRequestAttachment model module.
  * @module com.keap.sdk.core/model/EmailSendRequestAttachment
- * @version 0.0.40
+ * @version 0.0.41
  */
 class EmailSendRequestAttachment {
     /**

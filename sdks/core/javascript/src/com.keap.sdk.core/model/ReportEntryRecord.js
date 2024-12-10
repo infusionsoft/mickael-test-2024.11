@@ -17,7 +17,7 @@ import ReportEntryValue from './ReportEntryValue';
 /**
  * The ReportEntryRecord model module.
  * @module com.keap.sdk.core/model/ReportEntryRecord
- * @version 0.0.40
+ * @version 0.0.41
  */
 class ReportEntryRecord {
     /**

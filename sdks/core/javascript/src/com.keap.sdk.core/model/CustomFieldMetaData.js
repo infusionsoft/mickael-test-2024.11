@@ -17,7 +17,7 @@ import CustomFieldOption from './CustomFieldOption';
 /**
  * The CustomFieldMetaData model module.
  * @module com.keap.sdk.core/model/CustomFieldMetaData
- * @version 0.0.36
+ * @version 0.0.37
  */
 class CustomFieldMetaData {
     /**

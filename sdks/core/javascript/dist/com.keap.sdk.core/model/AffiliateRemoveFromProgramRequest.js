@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateRemoveFromProgramRequest model module.
  * @module com.keap.sdk.core/model/AffiliateRemoveFromProgramRequest
- * @version 0.0.36
+ * @version 0.0.37
  */
 var AffiliateRemoveFromProgramRequest = /*#__PURE__*/function () {
   /**

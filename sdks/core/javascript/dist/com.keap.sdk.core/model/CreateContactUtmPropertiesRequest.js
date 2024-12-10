@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateContactUtmPropertiesRequest model module.
  * @module com.keap.sdk.core/model/CreateContactUtmPropertiesRequest
- * @version 0.0.36
+ * @version 0.0.37
  */
 var CreateContactUtmPropertiesRequest = /*#__PURE__*/function () {
   /**

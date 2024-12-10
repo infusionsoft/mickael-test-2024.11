@@ -34,7 +34,7 @@ namespace Keap.Sdk.Core.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.0.36";
+        public const string Version = "0.0.37";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -118,7 +118,7 @@ namespace Keap.Sdk.Core.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.36");
+            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.37");
             BasePath = "https://api.infusionsoft.com/crm/rest/app";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -571,7 +571,7 @@ namespace Keap.Sdk.Core.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.70.0.739356-hf-202411181744\n";
-            report += "    SDK Package Version: 0.0.36\n";
+            report += "    SDK Package Version: 0.0.37\n";
 
             return report;
         }

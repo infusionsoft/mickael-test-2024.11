@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Email service.
 * @module com.keap.sdk.core/api/EmailApi
-* @version 0.0.36
+* @version 0.0.37
 */
 var EmailApi = exports["default"] = /*#__PURE__*/function () {
   /**

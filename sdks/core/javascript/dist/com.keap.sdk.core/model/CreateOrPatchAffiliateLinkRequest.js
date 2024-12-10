@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateOrPatchAffiliateLinkRequest model module.
  * @module com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest
- * @version 0.0.36
+ * @version 0.0.37
  */
 var CreateOrPatchAffiliateLinkRequest = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CancelSubscriptionsRequest model module.
  * @module com.keap.sdk.core/model/CancelSubscriptionsRequest
- * @version 0.0.38
+ * @version 0.0.39
  */
 class CancelSubscriptionsRequest {
     /**

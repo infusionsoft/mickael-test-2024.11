@@ -17,7 +17,7 @@ import Country from './Country';
 /**
  * The ListCountriesResponse model module.
  * @module com.keap.sdk.core/model/ListCountriesResponse
- * @version 0.0.38
+ * @version 0.0.39
  */
 class ListCountriesResponse {
     /**

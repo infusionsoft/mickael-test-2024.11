@@ -17,7 +17,7 @@ import ShippingMethod from './ShippingMethod';
 /**
  * The ListRestShippingMethodsResponse model module.
  * @module com.keap.sdk.core/model/ListRestShippingMethodsResponse
- * @version 0.0.38
+ * @version 0.0.39
  */
 class ListRestShippingMethodsResponse {
     /**

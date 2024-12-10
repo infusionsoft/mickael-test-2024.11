@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreatePaymentMethodConfigRequest model module.
  * @module com.keap.sdk.core/model/CreatePaymentMethodConfigRequest
- * @version 0.0.38
+ * @version 0.0.39
  */
 class CreatePaymentMethodConfigRequest {
     /**

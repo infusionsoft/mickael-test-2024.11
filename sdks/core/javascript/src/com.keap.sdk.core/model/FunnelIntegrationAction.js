@@ -17,7 +17,7 @@ import FunnelIntegrationSchemaField from './FunnelIntegrationSchemaField';
 /**
  * The FunnelIntegrationAction model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationAction
- * @version 0.0.38
+ * @version 0.0.39
  */
 class FunnelIntegrationAction {
     /**

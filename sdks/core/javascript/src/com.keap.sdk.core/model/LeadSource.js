@@ -17,7 +17,7 @@ import LeadSourceCategory from './LeadSourceCategory';
 /**
  * The LeadSource model module.
  * @module com.keap.sdk.core/model/LeadSource
- * @version 0.0.38
+ * @version 0.0.39
  */
 class LeadSource {
     /**

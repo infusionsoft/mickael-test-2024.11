@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CreateEmailSentRequest model module.
  * @module com.keap.sdk.core/model/CreateEmailSentRequest
- * @version 0.0.37
+ * @version 0.0.38
  */
 var CreateEmailSentRequest = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SetDefaultCommissionProgramResponse model module.
  * @module com.keap.sdk.core/model/SetDefaultCommissionProgramResponse
- * @version 0.0.37
+ * @version 0.0.38
  */
 var SetDefaultCommissionProgramResponse = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ListAutomationIdsResponse model module.
  * @module com.keap.sdk.core/model/ListAutomationIdsResponse
- * @version 0.0.37
+ * @version 0.0.38
  */
 var ListAutomationIdsResponse = /*#__PURE__*/function () {
   /**

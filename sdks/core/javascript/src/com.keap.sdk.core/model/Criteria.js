@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Criteria model module.
  * @module com.keap.sdk.core/model/Criteria
- * @version 0.0.37
+ * @version 0.0.38
  */
 class Criteria {
     /**

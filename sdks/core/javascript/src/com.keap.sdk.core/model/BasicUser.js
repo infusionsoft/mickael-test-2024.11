@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BasicUser model module.
  * @module com.keap.sdk.core/model/BasicUser
- * @version 0.0.42
+ * @version 0.0.43
  */
 class BasicUser {
     /**

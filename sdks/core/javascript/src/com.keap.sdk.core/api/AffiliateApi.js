@@ -48,7 +48,7 @@ import UpdateCustomFieldMetaDataRequest from '../model/UpdateCustomFieldMetaData
 /**
 * Affiliate service.
 * @module com.keap.sdk.core/api/AffiliateApi
-* @version 0.0.41
+* @version 0.0.42
 */
 export default class AffiliateApi {
 

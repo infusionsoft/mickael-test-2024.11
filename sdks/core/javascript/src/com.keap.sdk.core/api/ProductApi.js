@@ -19,7 +19,7 @@ import ListProductsResponse from '../model/ListProductsResponse';
 /**
 * Product service.
 * @module com.keap.sdk.core/api/ProductApi
-* @version 0.0.41
+* @version 0.0.42
 */
 export default class ProductApi {
 

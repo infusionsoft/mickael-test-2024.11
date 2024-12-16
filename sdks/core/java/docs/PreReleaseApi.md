@@ -18,6 +18,10 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**createAffiliateCustomFieldUsingPOSTWithHttpInfo**](PreReleaseApi.md#createAffiliateCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field |
 | [**createDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program |
 | [**createDefaultCommissionProgramUsingPOSTWithHttpInfo**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program |
+| [**createDiscountUsingPOST**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount |
+| [**createDiscountUsingPOSTWithHttpInfo**](PreReleaseApi.md#createDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/productCategories | Create a Category Discount |
+| [**createDiscountUsingPOST1**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
+| [**createDiscountUsingPOST1WithHttpInfo**](PreReleaseApi.md#createDiscountUsingPOST1WithHttpInfo) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
 | [**createFunnelIntegrationUsingPOST**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**createFunnelIntegrationUsingPOSTWithHttpInfo**](PreReleaseApi.md#createFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**createIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
@@ -36,8 +40,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**createOrderCustomFieldUsingPOSTWithHttpInfo**](PreReleaseApi.md#createOrderCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
 | [**createOrderItemsOnOrderUsingPOST1**](PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
 | [**createOrderItemsOnOrderUsingPOST1WithHttpInfo**](PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**createOrderTotalDiscountUsingPOST**](PreReleaseApi.md#createOrderTotalDiscountUsingPOST) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount |
+| [**createOrderTotalDiscountUsingPOSTWithHttpInfo**](PreReleaseApi.md#createOrderTotalDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount |
 | [**createOrderUsingPOST1**](PreReleaseApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order |
 | [**createOrderUsingPOST1WithHttpInfo**](PreReleaseApi.md#createOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders | Create an Order |
+| [**createProductUsingPOST1**](PreReleaseApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product |
+| [**createProductUsingPOST1WithHttpInfo**](PreReleaseApi.md#createProductUsingPOST1WithHttpInfo) | **POST** /v2/products | Create a Product |
 | [**createRedirectLinkUsingPOST**](PreReleaseApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link |
 | [**createRedirectLinkUsingPOSTWithHttpInfo**](PreReleaseApi.md#createRedirectLinkUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/redirects | Create an Affiliate Link |
 | [**createReferralUsingPOST**](PreReleaseApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral |
@@ -58,14 +66,22 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**deleteDiscountUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 | [**deleteDiscountUsingDELETE1WithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**deleteDiscountUsingDELETE2**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
+| [**deleteDiscountUsingDELETE2WithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETE2WithHttpInfo) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
 | [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**deleteOpportunityStageUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteOpportunityStageUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
 | [**deleteOpportunityUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteOpportunityUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**deleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field |
+| [**deleteOrderCustomFieldUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETEWithHttpInfo) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field |
+| [**deleteOrderTotalDiscountUsingDELETE**](PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETE) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount |
+| [**deleteOrderTotalDiscountUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount |
 | [**deleteOrderUsingDELETE1**](PreReleaseApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order |
 | [**deleteOrderUsingDELETE1WithHttpInfo**](PreReleaseApi.md#deleteOrderUsingDELETE1WithHttpInfo) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**deleteProductUsingDELETE1**](PreReleaseApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product |
+| [**deleteProductUsingDELETE1WithHttpInfo**](PreReleaseApi.md#deleteProductUsingDELETE1WithHttpInfo) | **DELETE** /v2/products/{product_id} | Delete a Product |
 | [**deleteRedirectLinkUsingDELETE**](PreReleaseApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link |
 | [**deleteRedirectLinkUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteRedirectLinkUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link |
 | [**deleteTaskCustomFieldUsingDELETE**](PreReleaseApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
@@ -84,12 +100,18 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**getContactsBySearchTermUsingGETWithHttpInfo**](PreReleaseApi.md#getContactsBySearchTermUsingGETWithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts |
 | [**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 | [**getDiscountUsingGETWithHttpInfo**](PreReleaseApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**getDiscountUsingGET1**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
+| [**getDiscountUsingGET1WithHttpInfo**](PreReleaseApi.md#getDiscountUsingGET1WithHttpInfo) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
 | [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityStageUsingGETWithHttpInfo**](PreReleaseApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
 | [**getOpportunityUsingGET1WithHttpInfo**](PreReleaseApi.md#getOpportunityUsingGET1WithHttpInfo) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**getOrderTotalDiscountUsingGET**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount |
+| [**getOrderTotalDiscountUsingGETWithHttpInfo**](PreReleaseApi.md#getOrderTotalDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount |
 | [**getOrderUsingGET1**](PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
 | [**getOrderUsingGET1WithHttpInfo**](PreReleaseApi.md#getOrderUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**getProductUsingGET**](PreReleaseApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product |
+| [**getProductUsingGETWithHttpInfo**](PreReleaseApi.md#getProductUsingGETWithHttpInfo) | **GET** /v2/products/{product_id} | Get a Product |
 | [**getRedirectLinkUsingGET**](PreReleaseApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link |
 | [**getRedirectLinkUsingGETWithHttpInfo**](PreReleaseApi.md#getRedirectLinkUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link |
 | [**getTaskUsingGET1**](PreReleaseApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
@@ -106,16 +128,24 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**listAffiliateLinksUsingGETWithHttpInfo**](PreReleaseApi.md#listAffiliateLinksUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects | List Affiliate Links |
 | [**listCountriesUsingGET2**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries |
 | [**listCountriesUsingGET2WithHttpInfo**](PreReleaseApi.md#listCountriesUsingGET2WithHttpInfo) | **GET** /v2/locales/countries | List Countries |
+| [**listDiscountsUsingGET**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
+| [**listDiscountsUsingGETWithHttpInfo**](PreReleaseApi.md#listDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
 | [**listLandingPagesUsingGET**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages |
 | [**listLandingPagesUsingGETWithHttpInfo**](PreReleaseApi.md#listLandingPagesUsingGETWithHttpInfo) | **GET** /v2/landingpages | List Landing Pages |
 | [**listLeadSourcesUsingGET**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources |
 | [**listLeadSourcesUsingGETWithHttpInfo**](PreReleaseApi.md#listLeadSourcesUsingGETWithHttpInfo) | **GET** /v2/leadsources | List Lead Sources |
 | [**listMerchantsUsingGET**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts |
 | [**listMerchantsUsingGETWithHttpInfo**](PreReleaseApi.md#listMerchantsUsingGETWithHttpInfo) | **GET** /v2/merchants | List Merchant accounts |
+| [**listNoteTemplatesUsingGET**](PreReleaseApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates |
+| [**listNoteTemplatesUsingGETWithHttpInfo**](PreReleaseApi.md#listNoteTemplatesUsingGETWithHttpInfo) | **GET** /v2/notes/templates | Retrieve Note Templates |
 | [**listOpportunitiesUsingGET1**](PreReleaseApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities |
 | [**listOpportunitiesUsingGET1WithHttpInfo**](PreReleaseApi.md#listOpportunitiesUsingGET1WithHttpInfo) | **GET** /v2/opportunities | List Opportunities |
 | [**listOpportunityStagesUsingGET**](PreReleaseApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
 | [**listOpportunityStagesUsingGETWithHttpInfo**](PreReleaseApi.md#listOpportunityStagesUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**listOrderPaymentsUsingGET1**](PreReleaseApi.md#listOrderPaymentsUsingGET1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments |
+| [**listOrderPaymentsUsingGET1WithHttpInfo**](PreReleaseApi.md#listOrderPaymentsUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments |
+| [**listOrderTotalDiscountsUsingGET**](PreReleaseApi.md#listOrderTotalDiscountsUsingGET) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts |
+| [**listOrderTotalDiscountsUsingGETWithHttpInfo**](PreReleaseApi.md#listOrderTotalDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts |
 | [**listOrdersUsingGET1**](PreReleaseApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders |
 | [**listOrdersUsingGET1WithHttpInfo**](PreReleaseApi.md#listOrdersUsingGET1WithHttpInfo) | **GET** /v2/orders | List orders |
 | [**listProductsUsingGET1**](PreReleaseApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products |
@@ -126,6 +156,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**listShippingMethodsUsingGETWithHttpInfo**](PreReleaseApi.md#listShippingMethodsUsingGETWithHttpInfo) | **GET** /v2/shipping | List Shipping methods |
 | [**listSubscriptionPlansUsingGET**](PreReleaseApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans |
 | [**listSubscriptionPlansUsingGETWithHttpInfo**](PreReleaseApi.md#listSubscriptionPlansUsingGETWithHttpInfo) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**listSubscriptionsUsingGET1**](PreReleaseApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions |
+| [**listSubscriptionsUsingGET1WithHttpInfo**](PreReleaseApi.md#listSubscriptionsUsingGET1WithHttpInfo) | **GET** /v2/subscriptions | List Subscriptions |
 | [**listSummariesUsingGET1**](PreReleaseApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries |
 | [**listSummariesUsingGET1WithHttpInfo**](PreReleaseApi.md#listSummariesUsingGET1WithHttpInfo) | **GET** /v2/affiliates/summaries | List Affiliate Summaries |
 | [**listTasksUsingGET1**](PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks |
@@ -158,14 +190,22 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**retrieveTaskModelUsingGET1WithHttpInfo**](PreReleaseApi.md#retrieveTaskModelUsingGET1WithHttpInfo) | **GET** /v2/tasks/model | Retrieve Task Model |
 | [**updateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateAffiliateCustomFieldUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field |
+| [**updateDiscountUsingPATCH**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
+| [**updateDiscountUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
+| [**updateDiscountUsingPATCH1**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
+| [**updateDiscountUsingPATCH1WithHttpInfo**](PreReleaseApi.md#updateDiscountUsingPATCH1WithHttpInfo) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
 | [**updateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateNotesCustomFieldUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
 | [**updateOpportunityCustomFieldUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**updateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
+| [**updateOpportunityStageUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateOpportunityStageUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
 | [**updateOpportunityUsingPATCH**](PreReleaseApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 | [**updateOpportunityUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateOpportunityUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 | [**updateOrderCustomFieldUsingPATCH**](PreReleaseApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
 | [**updateOrderCustomFieldUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateOrderCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**updateOrderTotalDiscountUsingPATCH**](PreReleaseApi.md#updateOrderTotalDiscountUsingPATCH) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount |
+| [**updateOrderTotalDiscountUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateOrderTotalDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount |
 | [**updateRedirectLinkUsingPATCH**](PreReleaseApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link |
 | [**updateRedirectLinkUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateRedirectLinkUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link |
 | [**updateSubscriptionCustomFieldUsingPATCH**](PreReleaseApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
@@ -1138,6 +1178,282 @@ public class Example {
 ### Return type
 
 ApiResponse<[**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
+## createDiscountUsingPOST
+
+> CategoryDiscount createDiscountUsingPOST(request)
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        try {
+            CategoryDiscount result = apiInstance.createDiscountUsingPOST(request);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createDiscountUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createDiscountUsingPOSTWithHttpInfo
+
+> ApiResponse<CategoryDiscount> createDiscountUsingPOST createDiscountUsingPOSTWithHttpInfo(request)
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        try {
+            ApiResponse<CategoryDiscount> response = apiInstance.createDiscountUsingPOSTWithHttpInfo(request);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createDiscountUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+
+### Return type
+
+ApiResponse<[**CategoryDiscount**](CategoryDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
+## createDiscountUsingPOST1
+
+> ShippingDiscount createDiscountUsingPOST1(request)
+
+Create a Shipping Discount
+
+Creates a Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateShippingDiscountRequest request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+        try {
+            ShippingDiscount result = apiInstance.createDiscountUsingPOST1(request);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createDiscountUsingPOST1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createDiscountUsingPOST1WithHttpInfo
+
+> ApiResponse<ShippingDiscount> createDiscountUsingPOST1 createDiscountUsingPOST1WithHttpInfo(request)
+
+Create a Shipping Discount
+
+Creates a Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateShippingDiscountRequest request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+        try {
+            ApiResponse<ShippingDiscount> response = apiInstance.createDiscountUsingPOST1WithHttpInfo(request);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createDiscountUsingPOST1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
+
+### Return type
+
+ApiResponse<[**ShippingDiscount**](ShippingDiscount.md)>
 
 
 ### Authorization
@@ -2397,6 +2713,144 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
+## createOrderTotalDiscountUsingPOST
+
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+
+Create an Order Total Discount
+
+Creates an Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateOrderTotalDiscountRequest request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+        try {
+            OrderTotalDiscount result = apiInstance.createOrderTotalDiscountUsingPOST(request);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createOrderTotalDiscountUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createOrderTotalDiscountUsingPOSTWithHttpInfo
+
+> ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOST createOrderTotalDiscountUsingPOSTWithHttpInfo(request)
+
+Create an Order Total Discount
+
+Creates an Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateOrderTotalDiscountRequest request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+        try {
+            ApiResponse<OrderTotalDiscount> response = apiInstance.createOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createOrderTotalDiscountUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
+
+### Return type
+
+ApiResponse<[**OrderTotalDiscount**](OrderTotalDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
 ## createOrderUsingPOST1
 
 > RestV2Order createOrderUsingPOST1(createOrderRequest)
@@ -2516,6 +2970,144 @@ public class Example {
 ### Return type
 
 ApiResponse<[**RestV2Order**](RestV2Order.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
+## createProductUsingPOST1
+
+> RestV2Product createProductUsingPOST1(createProductRequest)
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateProductRequest createProductRequest = new CreateProductRequest(); // CreateProductRequest | createProductRequest
+        try {
+            RestV2Product result = apiInstance.createProductUsingPOST1(createProductRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createProductUsingPOST1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createProductRequest** | [**CreateProductRequest**](CreateProductRequest.md)| createProductRequest | |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createProductUsingPOST1WithHttpInfo
+
+> ApiResponse<RestV2Product> createProductUsingPOST1 createProductUsingPOST1WithHttpInfo(createProductRequest)
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateProductRequest createProductRequest = new CreateProductRequest(); // CreateProductRequest | createProductRequest
+        try {
+            ApiResponse<RestV2Product> response = apiInstance.createProductUsingPOST1WithHttpInfo(createProductRequest);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createProductUsingPOST1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createProductRequest** | [**CreateProductRequest**](CreateProductRequest.md)| createProductRequest | |
+
+### Return type
+
+ApiResponse<[**RestV2Product**](RestV2Product.md)>
 
 
 ### Authorization
@@ -3915,6 +4507,144 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## deleteDiscountUsingDELETE2
+
+> void deleteDiscountUsingDELETE2(discountId)
+
+Delete a Shipping Discount
+
+Deletes a specified Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            apiInstance.deleteDiscountUsingDELETE2(discountId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteDiscountUsingDELETE2");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteDiscountUsingDELETE2WithHttpInfo
+
+> ApiResponse<Void> deleteDiscountUsingDELETE2 deleteDiscountUsingDELETE2WithHttpInfo(discountId)
+
+Delete a Shipping Discount
+
+Deletes a specified Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteDiscountUsingDELETE2WithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteDiscountUsingDELETE2");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## deleteFunnelIntegrationUsingPOST
 
 > void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
@@ -4327,6 +5057,282 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## deleteOrderCustomFieldUsingDELETE
+
+> void deleteOrderCustomFieldUsingDELETE(customFieldId)
+
+Delete an Order&#39;s Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String customFieldId = "customFieldId_example"; // String | custom_field_id
+        try {
+            apiInstance.deleteOrderCustomFieldUsingDELETE(customFieldId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteOrderCustomFieldUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **customFieldId** | **String**| custom_field_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteOrderCustomFieldUsingDELETEWithHttpInfo
+
+> ApiResponse<Void> deleteOrderCustomFieldUsingDELETE deleteOrderCustomFieldUsingDELETEWithHttpInfo(customFieldId)
+
+Delete an Order&#39;s Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String customFieldId = "customFieldId_example"; // String | custom_field_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteOrderCustomFieldUsingDELETEWithHttpInfo(customFieldId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteOrderCustomFieldUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **customFieldId** | **String**| custom_field_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## deleteOrderTotalDiscountUsingDELETE
+
+> void deleteOrderTotalDiscountUsingDELETE(discountId)
+
+Delete an Order Total Discount
+
+Deletes a specified Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            apiInstance.deleteOrderTotalDiscountUsingDELETE(discountId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteOrderTotalDiscountUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteOrderTotalDiscountUsingDELETEWithHttpInfo
+
+> ApiResponse<Void> deleteOrderTotalDiscountUsingDELETE deleteOrderTotalDiscountUsingDELETEWithHttpInfo(discountId)
+
+Delete an Order Total Discount
+
+Deletes a specified Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteOrderTotalDiscountUsingDELETEWithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteOrderTotalDiscountUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## deleteOrderUsingDELETE1
 
 > void deleteOrderUsingDELETE1(orderId)
@@ -4441,6 +5447,144 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **orderId** | **String**| order_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## deleteProductUsingDELETE1
+
+> void deleteProductUsingDELETE1(productId)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String productId = "productId_example"; // String | product_id
+        try {
+            apiInstance.deleteProductUsingDELETE1(productId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteProductUsingDELETE1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **productId** | **String**| product_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteProductUsingDELETE1WithHttpInfo
+
+> ApiResponse<Void> deleteProductUsingDELETE1 deleteProductUsingDELETE1WithHttpInfo(productId)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String productId = "productId_example"; // String | product_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteProductUsingDELETE1WithHttpInfo(productId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteProductUsingDELETE1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **productId** | **String**| product_id | |
 
 ### Return type
 
@@ -5727,6 +6871,146 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## getDiscountUsingGET1
+
+> ShippingDiscount getDiscountUsingGET1(discountId)
+
+Retrieve a Shipping Discount
+
+Retrieves a Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ShippingDiscount result = apiInstance.getDiscountUsingGET1(discountId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getDiscountUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getDiscountUsingGET1WithHttpInfo
+
+> ApiResponse<ShippingDiscount> getDiscountUsingGET1 getDiscountUsingGET1WithHttpInfo(discountId)
+
+Retrieve a Shipping Discount
+
+Retrieves a Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<ShippingDiscount> response = apiInstance.getDiscountUsingGET1WithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getDiscountUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+ApiResponse<[**ShippingDiscount**](ShippingDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## getOpportunityStageUsingGET
 
 > RestOpportunityStage getOpportunityStageUsingGET(stageId)
@@ -6007,6 +7291,146 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## getOrderTotalDiscountUsingGET
+
+> OrderTotalDiscount getOrderTotalDiscountUsingGET(discountId)
+
+Retrieve an Order Total Discount
+
+Retrieves an Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            OrderTotalDiscount result = apiInstance.getOrderTotalDiscountUsingGET(discountId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getOrderTotalDiscountUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getOrderTotalDiscountUsingGETWithHttpInfo
+
+> ApiResponse<OrderTotalDiscount> getOrderTotalDiscountUsingGET getOrderTotalDiscountUsingGETWithHttpInfo(discountId)
+
+Retrieve an Order Total Discount
+
+Retrieves an Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        try {
+            ApiResponse<OrderTotalDiscount> response = apiInstance.getOrderTotalDiscountUsingGETWithHttpInfo(discountId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getOrderTotalDiscountUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+
+### Return type
+
+ApiResponse<[**OrderTotalDiscount**](OrderTotalDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## getOrderUsingGET1
 
 > RestV2Order getOrderUsingGET1(orderId)
@@ -6127,6 +7551,146 @@ public class Example {
 ### Return type
 
 ApiResponse<[**RestV2Order**](RestV2Order.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## getProductUsingGET
+
+> RestV2Product getProductUsingGET(productId)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String productId = "productId_example"; // String | product_id
+        try {
+            RestV2Product result = apiInstance.getProductUsingGET(productId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getProductUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **productId** | **String**| product_id | |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getProductUsingGETWithHttpInfo
+
+> ApiResponse<RestV2Product> getProductUsingGET getProductUsingGETWithHttpInfo(productId)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String productId = "productId_example"; // String | product_id
+        try {
+            ApiResponse<RestV2Product> response = apiInstance.getProductUsingGETWithHttpInfo(productId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getProductUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **productId** | **String**| product_id | |
+
+### Return type
+
+ApiResponse<[**RestV2Product**](RestV2Product.md)>
 
 
 ### Authorization
@@ -7271,6 +8835,162 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## listDiscountsUsingGET
+
+> ListShippingDiscountsResponse listDiscountsUsingGET(fields, filter, orderBy, pageSize, pageToken)
+
+List all Shipping Discounts
+
+Retrieves all Shipping Discounts
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        List<String> fields = Arrays.asList(); // List<String> | TODO: PAPI-1449
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. `given_name desc`
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListShippingDiscountsResponse result = apiInstance.listDiscountsUsingGET(fields, filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listDiscountsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fields** | [**List&lt;String&gt;**](String.md)| TODO: PAPI-1449 | [optional] |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listDiscountsUsingGETWithHttpInfo
+
+> ApiResponse<ListShippingDiscountsResponse> listDiscountsUsingGET listDiscountsUsingGETWithHttpInfo(fields, filter, orderBy, pageSize, pageToken)
+
+List all Shipping Discounts
+
+Retrieves all Shipping Discounts
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        List<String> fields = Arrays.asList(); // List<String> | TODO: PAPI-1449
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. `given_name desc`
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListShippingDiscountsResponse> response = apiInstance.listDiscountsUsingGETWithHttpInfo(fields, filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listDiscountsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fields** | [**List&lt;String&gt;**](String.md)| TODO: PAPI-1449 | [optional] |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## listLandingPagesUsingGET
 
 > ListLandingPagesResponse listLandingPagesUsingGET(filter, orderBy, pageSize, pageToken)
@@ -7599,7 +9319,7 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc`
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
@@ -7622,7 +9342,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **String**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | [optional] |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | [optional] |
 | **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | [optional] |
 | **pageSize** | **Integer**| Total number of items to return per page | [optional] |
 | **pageToken** | **String**| Page token | [optional] |
@@ -7674,7 +9394,7 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc`
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
@@ -7699,7 +9419,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **String**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | [optional] |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | [optional] |
 | **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | [optional] |
 | **pageSize** | **Integer**| Total number of items to return per page | [optional] |
 | **pageToken** | **String**| Page token | [optional] |
@@ -7707,6 +9427,158 @@ public class Example {
 ### Return type
 
 ApiResponse<[**ListRestMerchantResponse**](ListRestMerchantResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## listNoteTemplatesUsingGET
+
+> ListNoteTemplateResponse listNoteTemplatesUsingGET(filter, orderBy, pageSize, pageToken)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Search filter to apply to results
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. `given_name desc`
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListNoteTemplateResponse result = apiInstance.listNoteTemplatesUsingGET(filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listNoteTemplatesUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Search filter to apply to results | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listNoteTemplatesUsingGETWithHttpInfo
+
+> ApiResponse<ListNoteTemplateResponse> listNoteTemplatesUsingGET listNoteTemplatesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Search filter to apply to results
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. `given_name desc`
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListNoteTemplateResponse> response = apiInstance.listNoteTemplatesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listNoteTemplatesUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Search filter to apply to results | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)>
 
 
 ### Authorization
@@ -8035,6 +9907,314 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## listOrderPaymentsUsingGET1
+
+> ListOrderPaymentsResponse listOrderPaymentsUsingGET1(orderId, filter, orderBy, pageSize, pageToken)
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String orderId = "orderId_example"; // String | order_id
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListOrderPaymentsResponse result = apiInstance.listOrderPaymentsUsingGET1(orderId, filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listOrderPaymentsUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orderId** | **String**| order_id | |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListOrderPaymentsResponse**](ListOrderPaymentsResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listOrderPaymentsUsingGET1WithHttpInfo
+
+> ApiResponse<ListOrderPaymentsResponse> listOrderPaymentsUsingGET1 listOrderPaymentsUsingGET1WithHttpInfo(orderId, filter, orderBy, pageSize, pageToken)
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String orderId = "orderId_example"; // String | order_id
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListOrderPaymentsResponse> response = apiInstance.listOrderPaymentsUsingGET1WithHttpInfo(orderId, filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listOrderPaymentsUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orderId** | **String**| order_id | |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListOrderPaymentsResponse**](ListOrderPaymentsResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## listOrderTotalDiscountsUsingGET
+
+> ListOrderTotalDiscountsResponse listOrderTotalDiscountsUsingGET(filter, orderBy, pageSize, pageToken)
+
+List all Order Total Discounts
+
+Retrieves all Order Total Discounts
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. `given_name desc`
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListOrderTotalDiscountsResponse result = apiInstance.listOrderTotalDiscountsUsingGET(filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listOrderTotalDiscountsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListOrderTotalDiscountsResponse**](ListOrderTotalDiscountsResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listOrderTotalDiscountsUsingGETWithHttpInfo
+
+> ApiResponse<ListOrderTotalDiscountsResponse> listOrderTotalDiscountsUsingGET listOrderTotalDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
+
+List all Order Total Discounts
+
+Retrieves all Order Total Discounts
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items by. E.g. `given_name desc`
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListOrderTotalDiscountsResponse> response = apiInstance.listOrderTotalDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listOrderTotalDiscountsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListOrderTotalDiscountsResponse**](ListOrderTotalDiscountsResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## listOrdersUsingGET1
 
 > ListOrders listOrdersUsingGET1(filter, orderBy, pageSize, pageToken)
@@ -8059,7 +10239,7 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567`
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
@@ -8082,7 +10262,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **String**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional] |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional] |
 | **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional] |
 | **pageSize** | **Integer**| Total number of items to return per page | [optional] |
 | **pageToken** | **String**| Page token | [optional] |
@@ -8134,7 +10314,7 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567`
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
         Integer pageSize = 0; // Integer | Total number of items to return per page
         String pageToken = "pageToken_example"; // String | Page token
@@ -8159,7 +10339,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **filter** | **String**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional] |
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional] |
 | **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional] |
 | **pageSize** | **Integer**| Total number of items to return per page | [optional] |
 | **pageToken** | **String**| Page token | [optional] |
@@ -8739,6 +10919,158 @@ public class Example {
 ### Return type
 
 ApiResponse<[**ListSubscriptionPlansResponse**](ListSubscriptionPlansResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## listSubscriptionsUsingGET1
+
+> ListSubscriptionsResponse listSubscriptionsUsingGET1(filter, orderBy, pageSize, pageToken)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListSubscriptionsResponse result = apiInstance.listSubscriptionsUsingGET1(filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listSubscriptionsUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listSubscriptionsUsingGET1WithHttpInfo
+
+> ApiResponse<ListSubscriptionsResponse> listSubscriptionsUsingGET1 listSubscriptionsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListSubscriptionsResponse> response = apiInstance.listSubscriptionsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listSubscriptionsUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)>
 
 
 ### Authorization
@@ -9980,7 +12312,7 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String userId = "userId_example"; // String | user_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
             User result = apiInstance.patchUserUsingPATCH(userId, updateMask, user);
@@ -10002,7 +12334,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
 | **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
@@ -10053,7 +12385,7 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String userId = "userId_example"; // String | user_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
             ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
@@ -10077,7 +12409,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
 | **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
@@ -11059,6 +13391,302 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## updateDiscountUsingPATCH
+
+> CategoryDiscount updateDiscountUsingPATCH(discountId, request, updateMask)
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            CategoryDiscount result = apiInstance.updateDiscountUsingPATCH(discountId, request, updateMask);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateDiscountUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateDiscountUsingPATCHWithHttpInfo
+
+> ApiResponse<CategoryDiscount> updateDiscountUsingPATCH updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask)
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            ApiResponse<CategoryDiscount> response = apiInstance.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateDiscountUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
+
+### Return type
+
+ApiResponse<[**CategoryDiscount**](CategoryDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## updateDiscountUsingPATCH1
+
+> ShippingDiscount updateDiscountUsingPATCH1(discountId, request, updateMask)
+
+Update a Shipping Discount
+
+Updates a Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        UpdateShippingDiscountRequest request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            ShippingDiscount result = apiInstance.updateDiscountUsingPATCH1(discountId, request, updateMask);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateDiscountUsingPATCH1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: TODO: PAPI-1452] |
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateDiscountUsingPATCH1WithHttpInfo
+
+> ApiResponse<ShippingDiscount> updateDiscountUsingPATCH1 updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask)
+
+Update a Shipping Discount
+
+Updates a Shipping Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        UpdateShippingDiscountRequest request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            ApiResponse<ShippingDiscount> response = apiInstance.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateDiscountUsingPATCH1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: TODO: PAPI-1452] |
+
+### Return type
+
+ApiResponse<[**ShippingDiscount**](ShippingDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## updateNotesCustomFieldUsingPATCH
 
 > CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask)
@@ -11355,6 +13983,154 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## updateOpportunityStageUsingPATCH
+
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, updateMask)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String stageId = "stageId_example"; // String | stage_id
+        UpdateOpportunityStageRequest request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            RestOpportunityStage result = apiInstance.updateOpportunityStageUsingPATCH(stageId, request, updateMask);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateOpportunityStageUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **stageId** | **String**| stage_id | |
+| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, order, target_number_days, probability, checklist_items] |
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateOpportunityStageUsingPATCHWithHttpInfo
+
+> ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCH updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String stageId = "stageId_example"; // String | stage_id
+        UpdateOpportunityStageRequest request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            ApiResponse<RestOpportunityStage> response = apiInstance.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateOpportunityStageUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **stageId** | **String**| stage_id | |
+| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, order, target_number_days, probability, checklist_items] |
+
+### Return type
+
+ApiResponse<[**RestOpportunityStage**](RestOpportunityStage.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## updateOpportunityUsingPATCH
 
 > RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, updateMask)
@@ -11631,6 +14407,154 @@ public class Example {
 ### Return type
 
 ApiResponse<[**CustomFieldMetaData**](CustomFieldMetaData.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## updateOrderTotalDiscountUsingPATCH
+
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask)
+
+Update an Order Total Discount
+
+Updates an Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        UpdateOrderTotalDiscountRequest request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            OrderTotalDiscount result = apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateOrderTotalDiscountUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, apply_to_commissions, discount_type, discount_value, discount_strategy, criteria] |
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateOrderTotalDiscountUsingPATCHWithHttpInfo
+
+> ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCH updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask)
+
+Update an Order Total Discount
+
+Updates an Order Total Discount
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String discountId = "discountId_example"; // String | discount_id
+        UpdateOrderTotalDiscountRequest request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            ApiResponse<OrderTotalDiscount> response = apiInstance.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateOrderTotalDiscountUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discountId** | **String**| discount_id | |
+| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, apply_to_commissions, discount_type, discount_value, discount_strategy, criteria] |
+
+### Return type
+
+ApiResponse<[**OrderTotalDiscount**](OrderTotalDiscount.md)>
 
 
 ### Authorization

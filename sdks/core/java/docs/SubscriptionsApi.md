@@ -10,6 +10,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**createSubscriptionCustomFieldUsingPOSTWithHttpInfo**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**createSubscriptionV2UsingPOST**](SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription |
 | [**createSubscriptionV2UsingPOSTWithHttpInfo**](SubscriptionsApi.md#createSubscriptionV2UsingPOSTWithHttpInfo) | **POST** /v2/subscriptions | Create Subscription |
+| [**listSubscriptionsUsingGET1**](SubscriptionsApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions |
+| [**listSubscriptionsUsingGET1WithHttpInfo**](SubscriptionsApi.md#listSubscriptionsUsingGET1WithHttpInfo) | **GET** /v2/subscriptions | List Subscriptions |
 | [**retrieveSubscriptionCustomFieldModelUsingGET**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**updateSubscriptionCustomFieldUsingPATCH**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
@@ -431,6 +433,158 @@ No authorization required
 | **201** | Created |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
+
+
+## listSubscriptionsUsingGET1
+
+> ListSubscriptionsResponse listSubscriptionsUsingGET1(filter, orderBy, pageSize, pageToken)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListSubscriptionsResponse result = apiInstance.listSubscriptionsUsingGET1(filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscriptionsApi#listSubscriptionsUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listSubscriptionsUsingGET1WithHttpInfo
+
+> ApiResponse<ListSubscriptionsResponse> listSubscriptionsUsingGET1 listSubscriptionsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.SubscriptionsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListSubscriptionsResponse> response = apiInstance.listSubscriptionsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscriptionsApi#listSubscriptionsUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
 
 
 ## retrieveSubscriptionCustomFieldModelUsingGET

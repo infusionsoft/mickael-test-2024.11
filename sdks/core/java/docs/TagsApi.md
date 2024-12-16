@@ -1650,7 +1650,7 @@ public class Example {
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         CreateUpdateTagCategoryRequest tagCategory = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
         try {
             UpdateTagCategoryResponse result = apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, tagCategory);
@@ -1672,7 +1672,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tagCategoryId** | **String**| tag_category_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, description] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
 | **tagCategory** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
@@ -1723,7 +1723,7 @@ public class Example {
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         CreateUpdateTagCategoryRequest tagCategory = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
         try {
             ApiResponse<UpdateTagCategoryResponse> response = apiInstance.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory);
@@ -1747,7 +1747,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tagCategoryId** | **String**| tag_category_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, description] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
 | **tagCategory** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
@@ -1798,7 +1798,7 @@ public class Example {
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         CreateUpdateTagRequest tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
         try {
             UpdateTagResponse result = apiInstance.patchTagUsingPATCH(tagId, updateMask, tag);
@@ -1820,7 +1820,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **String**| tag_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, description, category] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
 | **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type
@@ -1871,7 +1871,7 @@ public class Example {
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         CreateUpdateTagRequest tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
         try {
             ApiResponse<UpdateTagResponse> response = apiInstance.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag);
@@ -1895,7 +1895,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **String**| tag_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, description, category] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
 | **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type

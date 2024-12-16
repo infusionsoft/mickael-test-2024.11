@@ -26,12 +26,16 @@ import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
 import { CreateOpportunityRequest } from '../models/CreateOpportunityRequest';
 import { CreateOpportunityStageRequest } from '../models/CreateOpportunityStageRequest';
 import { CreateOrPatchAffiliateLinkRequest } from '../models/CreateOrPatchAffiliateLinkRequest';
+import { CreateOrderTotalDiscountRequest } from '../models/CreateOrderTotalDiscountRequest';
 import { CreatePatchTaskRequest } from '../models/CreatePatchTaskRequest';
 import { CreateProductCommissionProgramRequest } from '../models/CreateProductCommissionProgramRequest';
+import { CreateProductRequest } from '../models/CreateProductRequest';
 import { CreateReferralRequest } from '../models/CreateReferralRequest';
 import { CreateRestOrderItemRequest } from '../models/CreateRestOrderItemRequest';
+import { CreateShippingDiscountRequest } from '../models/CreateShippingDiscountRequest';
 import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubscriptionCommissionProgramRequest';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
+import { CreateUpdateDiscountRequest } from '../models/CreateUpdateDiscountRequest';
 import { CreateUserRequestV2 } from '../models/CreateUserRequestV2';
 import { CustomFieldMetaData } from '../models/CustomFieldMetaData';
 import { DeleteFunnelIntegrationRequest } from '../models/DeleteFunnelIntegrationRequest';
@@ -47,17 +51,23 @@ import { ListBasicContactResponse } from '../models/ListBasicContactResponse';
 import { ListCountriesResponse } from '../models/ListCountriesResponse';
 import { ListLandingPagesResponse } from '../models/ListLandingPagesResponse';
 import { ListLeadSourcesResponse } from '../models/ListLeadSourcesResponse';
+import { ListNoteTemplateResponse } from '../models/ListNoteTemplateResponse';
 import { ListOpportunitiesResponse } from '../models/ListOpportunitiesResponse';
 import { ListOpportunityStagesResponse } from '../models/ListOpportunityStagesResponse';
+import { ListOrderPaymentsResponse } from '../models/ListOrderPaymentsResponse';
+import { ListOrderTotalDiscountsResponse } from '../models/ListOrderTotalDiscountsResponse';
 import { ListOrders } from '../models/ListOrders';
 import { ListProductsResponse } from '../models/ListProductsResponse';
 import { ListProvincesResponse } from '../models/ListProvincesResponse';
 import { ListRestMerchantResponse } from '../models/ListRestMerchantResponse';
 import { ListRestShippingMethodsResponse } from '../models/ListRestShippingMethodsResponse';
+import { ListShippingDiscountsResponse } from '../models/ListShippingDiscountsResponse';
 import { ListSubscriptionPlansResponse } from '../models/ListSubscriptionPlansResponse';
+import { ListSubscriptionsResponse } from '../models/ListSubscriptionsResponse';
 import { ListTasksResponse } from '../models/ListTasksResponse';
 import { ListUserResponse } from '../models/ListUserResponse';
 import { ObjectModel } from '../models/ObjectModel';
+import { OrderTotalDiscount } from '../models/OrderTotalDiscount';
 import { PatchDefaultCommissionProgramRequest } from '../models/PatchDefaultCommissionProgramRequest';
 import { PatchOpportunityRequest } from '../models/PatchOpportunityRequest';
 import { PatchProductCommissionProgramRequest } from '../models/PatchProductCommissionProgramRequest';
@@ -71,10 +81,15 @@ import { RestV2Opportunity } from '../models/RestV2Opportunity';
 import { RestV2Order } from '../models/RestV2Order';
 import { RestV2OrderItem } from '../models/RestV2OrderItem';
 import { RestV2PatchOrderRequest } from '../models/RestV2PatchOrderRequest';
+import { RestV2Product } from '../models/RestV2Product';
 import { SetDefaultCommissionProgramResponse } from '../models/SetDefaultCommissionProgramResponse';
+import { ShippingDiscount } from '../models/ShippingDiscount';
 import { SubscriptionCommissionProgram } from '../models/SubscriptionCommissionProgram';
 import { Task } from '../models/Task';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
+import { UpdateOpportunityStageRequest } from '../models/UpdateOpportunityStageRequest';
+import { UpdateOrderTotalDiscountRequest } from '../models/UpdateOrderTotalDiscountRequest';
+import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateTaskResponse } from '../models/UpdateTaskResponse';
 import { User } from '../models/User';
 
@@ -384,6 +399,90 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
             ObjectSerializer.serialize(createDefaultCommissionProgramRequest, "CreateDefaultCommissionProgramRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Create a Category Discount.
+     * Create a Category Discount
+     * @param request request
+     */
+    public async createDiscountUsingPOST(request: CreateUpdateDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "createDiscountUsingPOST", "request");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/productCategories';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "CreateUpdateDiscountRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Creates a Shipping Discount
+     * Create a Shipping Discount
+     * @param request request
+     */
+    public async createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "createDiscountUsingPOST1", "request");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/shipping';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "CreateShippingDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -768,6 +867,48 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Creates an Order Total Discount
+     * Create an Order Total Discount
+     * @param request request
+     */
+    public async createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "createOrderTotalDiscountUsingPOST", "request");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/orderTotals';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "CreateOrderTotalDiscountRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Create a one time Order with Order items.
      * Create an Order
      * @param createOrderRequest createOrderRequest
@@ -796,6 +937,48 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
             ObjectSerializer.serialize(createOrderRequest, "RestCreateOrderRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Creates a new product
+     * Create a Product
+     * @param createProductRequest createProductRequest
+     */
+    public async createProductUsingPOST1(createProductRequest: CreateProductRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'createProductRequest' is not null or undefined
+        if (createProductRequest === null || createProductRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createProductUsingPOST1", "createProductRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/products';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(createProductRequest, "CreateProductRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1180,6 +1363,38 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Deletes a specified Shipping Discount
+     * Delete a Shipping Discount
+     * @param discountId discount_id
+     */
+    public async deleteDiscountUsingDELETE2(discountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "deleteDiscountUsingDELETE2", "discountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/shipping/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Deletes all triggers / goals, and actions / sequence items for the given funnel integration
      * Deletes Funnel Integrations from the app.
      * @param deleteFunnelIntegrationRequest deleteFunnelIntegrationRequest
@@ -1286,6 +1501,70 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Deletes a Custom Field from Order.
+     * Delete an Order\'s Custom Field
+     * @param customFieldId custom_field_id
+     */
+    public async deleteOrderCustomFieldUsingDELETE(customFieldId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'customFieldId' is not null or undefined
+        if (customFieldId === null || customFieldId === undefined) {
+            throw new RequiredError("PreReleaseApi", "deleteOrderCustomFieldUsingDELETE", "customFieldId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/orders/model/customFields/{custom_field_id}'
+            .replace('{' + 'custom_field_id' + '}', encodeURIComponent(String(customFieldId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Deletes a specified Order Total Discount
+     * Delete an Order Total Discount
+     * @param discountId discount_id
+     */
+    public async deleteOrderTotalDiscountUsingDELETE(discountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "deleteOrderTotalDiscountUsingDELETE", "discountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/orderTotals/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      *   Deletes an Order<br/>   Note: The Order must not have any transactions recorded to be subject to deletion. 
      * Delete an Order
      * @param orderId order_id
@@ -1302,6 +1581,38 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         // Path Params
         const localVarPath = '/v2/orders/{order_id}'
             .replace('{' + 'order_id' + '}', encodeURIComponent(String(orderId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Deletes a single product
+     * Delete a Product
+     * @param productId product_id
+     */
+    public async deleteProductUsingDELETE1(productId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'productId' is not null or undefined
+        if (productId === null || productId === undefined) {
+            throw new RequiredError("PreReleaseApi", "deleteProductUsingDELETE1", "productId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/products/{product_id}'
+            .replace('{' + 'product_id' + '}', encodeURIComponent(String(productId)));
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.DELETE);
@@ -1630,6 +1941,38 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Retrieves a Shipping Discount
+     * Retrieve a Shipping Discount
+     * @param discountId discount_id
+     */
+    public async getDiscountUsingGET1(discountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "getDiscountUsingGET1", "discountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/shipping/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Retrieves the specified Opportunity Stage
      * Retrieve an Opportunity Stage
      * @param stageId stage_id
@@ -1694,6 +2037,38 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Retrieves an Order Total Discount
+     * Retrieve an Order Total Discount
+     * @param discountId discount_id
+     */
+    public async getOrderTotalDiscountUsingGET(discountId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "getOrderTotalDiscountUsingGET", "discountId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/orderTotals/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Retrieves a single Order for a given order id
      * Retrieve an Order
      * @param orderId order_id
@@ -1710,6 +2085,38 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         // Path Params
         const localVarPath = '/v2/orders/{order_id}'
             .replace('{' + 'order_id' + '}', encodeURIComponent(String(orderId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Gets a single Product
+     * Get a Product
+     * @param productId product_id
+     */
+    public async getProductUsingGET(productId: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'productId' is not null or undefined
+        if (productId === null || productId === undefined) {
+            throw new RequiredError("PreReleaseApi", "getProductUsingGET", "productId");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/products/{product_id}'
+            .replace('{' + 'product_id' + '}', encodeURIComponent(String(productId)));
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -2005,6 +2412,68 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Retrieves all Shipping Discounts
+     * List all Shipping Discounts
+     * @param fields TODO: PAPI-1449
+     * @param filter Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60; 
+     * @param orderBy Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
+     * @param pageSize Total number of items to return per page
+     * @param pageToken Page token
+     */
+    public async listDiscountsUsingGET(fields?: Array<string>, filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/shipping';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (fields !== undefined) {
+            const serializedParams = ObjectSerializer.serialize(fields, "Array<string>", "");
+            for (const serializedParam of serializedParams) {
+                requestContext.appendQueryParam("fields", serializedParam);
+            }
+        }
+
+        // Query Params
+        if (filter !== undefined) {
+            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "string", ""));
+        }
+
+        // Query Params
+        if (orderBy !== undefined) {
+            requestContext.setQueryParam("order_by", ObjectSerializer.serialize(orderBy, "string", ""));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int32"));
+        }
+
+        // Query Params
+        if (pageToken !== undefined) {
+            requestContext.setQueryParam("page_token", ObjectSerializer.serialize(pageToken, "string", ""));
+        }
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Retrieves a list of all landing pages
      * List Landing Pages
      * @param filter Search filter to apply to results
@@ -2111,7 +2580,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Retrieves a list of Merchant accounts
      * List Merchant accounts
-     * @param filter Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60;
+     * @param filter Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60;
      * @param orderBy Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc
      * @param pageSize Total number of items to return per page
      * @param pageToken Page token
@@ -2125,6 +2594,58 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
 
         // Path Params
         const localVarPath = '/v2/merchants';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (filter !== undefined) {
+            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "string", ""));
+        }
+
+        // Query Params
+        if (orderBy !== undefined) {
+            requestContext.setQueryParam("order_by", ObjectSerializer.serialize(orderBy, "string", ""));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int32"));
+        }
+
+        // Query Params
+        if (pageToken !== undefined) {
+            requestContext.setQueryParam("page_token", ObjectSerializer.serialize(pageToken, "string", ""));
+        }
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Retrieves a list of Note Templates
+     * Retrieve Note Templates
+     * @param filter Search filter to apply to results
+     * @param orderBy Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
+     * @param pageSize Total number of items to return per page
+     * @param pageToken Page token
+     */
+    public async listNoteTemplatesUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/v2/notes/templates';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -2275,9 +2796,121 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+     * Retrieve Order Payments
+     * @param orderId order_id
+     * @param filter Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60; 
+     * @param orderBy Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc 
+     * @param pageSize Total number of items to return per page
+     * @param pageToken Page token
+     */
+    public async listOrderPaymentsUsingGET1(orderId: string, filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'orderId' is not null or undefined
+        if (orderId === null || orderId === undefined) {
+            throw new RequiredError("PreReleaseApi", "listOrderPaymentsUsingGET1", "orderId");
+        }
+
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/v2/orders/{order_id}/payments'
+            .replace('{' + 'order_id' + '}', encodeURIComponent(String(orderId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (filter !== undefined) {
+            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "string", ""));
+        }
+
+        // Query Params
+        if (orderBy !== undefined) {
+            requestContext.setQueryParam("order_by", ObjectSerializer.serialize(orderBy, "string", ""));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int32"));
+        }
+
+        // Query Params
+        if (pageToken !== undefined) {
+            requestContext.setQueryParam("page_token", ObjectSerializer.serialize(pageToken, "string", ""));
+        }
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Retrieves all Order Total Discounts
+     * List all Order Total Discounts
+     * @param filter Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60; 
+     * @param orderBy Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
+     * @param pageSize Total number of items to return per page
+     * @param pageToken Page token
+     */
+    public async listOrderTotalDiscountsUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/orderTotals';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (filter !== undefined) {
+            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "string", ""));
+        }
+
+        // Query Params
+        if (orderBy !== undefined) {
+            requestContext.setQueryParam("order_by", ObjectSerializer.serialize(orderBy, "string", ""));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int32"));
+        }
+
+        // Query Params
+        if (pageToken !== undefined) {
+            requestContext.setQueryParam("page_token", ObjectSerializer.serialize(pageToken, "string", ""));
+        }
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Retrieves a list of orders
      * List orders
-     * @param filter Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60;
+     * @param filter Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60;
      * @param orderBy Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
      * @param pageSize Total number of items to return per page
      * @param pageToken Page token
@@ -2450,6 +3083,58 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
 
         // Path Params
         const localVarPath = '/v2/subscriptionPlans';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (filter !== undefined) {
+            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "string", ""));
+        }
+
+        // Query Params
+        if (orderBy !== undefined) {
+            requestContext.setQueryParam("order_by", ObjectSerializer.serialize(orderBy, "string", ""));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int32"));
+        }
+
+        // Query Params
+        if (pageToken !== undefined) {
+            requestContext.setQueryParam("page_token", ObjectSerializer.serialize(pageToken, "string", ""));
+        }
+
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Retrieves a list of subscriptions using the specified search criteria.
+     * List Subscriptions
+     * @param filter Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+     * @param orderBy Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+     * @param pageSize Total number of items to return per page
+     * @param pageToken Page token
+     */
+    public async listSubscriptionsUsingGET1(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/v2/subscriptions';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -2920,7 +3605,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates information on a specific User
      * Update User
      * @param userId user_id
-     * @param updateMask An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param user user
      */
     public async patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<RequestContext> {
@@ -3228,6 +3913,126 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Update a Category Discount.
+     * Update a Category Discount
+     * @param discountId discount_id
+     * @param request request
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public async updateDiscountUsingPATCH(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH", "discountId");
+        }
+
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH", "request");
+        }
+
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/productCategories/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (updateMask !== undefined) {
+            const serializedParams = ObjectSerializer.serialize(updateMask, "Array<string>", "");
+            for (const serializedParam of serializedParams) {
+                requestContext.appendQueryParam("update_mask", serializedParam);
+            }
+        }
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "CreateUpdateDiscountRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Updates a Shipping Discount
+     * Update a Shipping Discount
+     * @param discountId discount_id
+     * @param request request
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public async updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH1", "discountId");
+        }
+
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH1", "request");
+        }
+
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/shipping/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (updateMask !== undefined) {
+            const serializedParams = ObjectSerializer.serialize(updateMask, "Array<string>", "");
+            for (const serializedParam of serializedParams) {
+                requestContext.appendQueryParam("update_mask", serializedParam);
+            }
+        }
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "UpdateShippingDiscountRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
@@ -3348,6 +4153,66 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
+     * Updates specified values of a given Opportunity Stage
+     * Update an Opportunity Stage
+     * @param stageId stage_id
+     * @param request request
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public async updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'stageId' is not null or undefined
+        if (stageId === null || stageId === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOpportunityStageUsingPATCH", "stageId");
+        }
+
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOpportunityStageUsingPATCH", "request");
+        }
+
+
+
+        // Path Params
+        const localVarPath = '/v2/opportunities/stages/{stage_id}'
+            .replace('{' + 'stage_id' + '}', encodeURIComponent(String(stageId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (updateMask !== undefined) {
+            const serializedParams = ObjectSerializer.serialize(updateMask, "Array<string>", "");
+            for (const serializedParam of serializedParams) {
+                requestContext.appendQueryParam("update_mask", serializedParam);
+            }
+        }
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "UpdateOpportunityStageRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
@@ -3454,6 +4319,66 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
             ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Updates an Order Total Discount
+     * Update an Order Total Discount
+     * @param discountId discount_id
+     * @param request request
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public async updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'discountId' is not null or undefined
+        if (discountId === null || discountId === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOrderTotalDiscountUsingPATCH", "discountId");
+        }
+
+
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOrderTotalDiscountUsingPATCH", "request");
+        }
+
+
+
+        // Path Params
+        const localVarPath = '/v2/discounts/orderTotals/{discount_id}'
+            .replace('{' + 'discount_id' + '}', encodeURIComponent(String(discountId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.PATCH);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (updateMask !== undefined) {
+            const serializedParams = ObjectSerializer.serialize(updateMask, "Array<string>", "");
+            for (const serializedParam of serializedParams) {
+                requestContext.appendQueryParam("update_mask", serializedParam);
+            }
+        }
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(request, "UpdateOrderTotalDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3938,6 +4863,92 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to createDiscountUsingPOST
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async createDiscountUsingPOSTWithHttpInfo(response: ResponseContext): Promise<HttpInfo<CategoryDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("201", response.httpStatusCode)) {
+            const body: CategoryDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "CategoryDiscount", ""
+            ) as CategoryDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: CategoryDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "CategoryDiscount", ""
+            ) as CategoryDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to createDiscountUsingPOST1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async createDiscountUsingPOST1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ShippingDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("201", response.httpStatusCode)) {
+            const body: ShippingDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ShippingDiscount", ""
+            ) as ShippingDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ShippingDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ShippingDiscount", ""
+            ) as ShippingDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to createFunnelIntegrationUsingPOST
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -4321,6 +5332,49 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to createOrderTotalDiscountUsingPOST
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async createOrderTotalDiscountUsingPOSTWithHttpInfo(response: ResponseContext): Promise<HttpInfo<OrderTotalDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("201", response.httpStatusCode)) {
+            const body: OrderTotalDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "OrderTotalDiscount", ""
+            ) as OrderTotalDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: OrderTotalDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "OrderTotalDiscount", ""
+            ) as OrderTotalDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to createOrderUsingPOST1
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -4354,6 +5408,49 @@ export class PreReleaseApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "RestV2Order", ""
             ) as RestV2Order;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to createProductUsingPOST1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async createProductUsingPOST1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<RestV2Product >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("201", response.httpStatusCode)) {
+            const body: RestV2Product = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestV2Product", ""
+            ) as RestV2Product;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: RestV2Product = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestV2Product", ""
+            ) as RestV2Product;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -4806,6 +5903,52 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to deleteDiscountUsingDELETE2
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async deleteDiscountUsingDELETE2WithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("204", response.httpStatusCode)) {
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: void = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "void", ""
+            ) as void;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to deleteFunnelIntegrationUsingPOST
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -4937,10 +6080,148 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to deleteOrderCustomFieldUsingDELETE
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async deleteOrderCustomFieldUsingDELETEWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("204", response.httpStatusCode)) {
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: void = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "void", ""
+            ) as void;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to deleteOrderTotalDiscountUsingDELETE
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async deleteOrderTotalDiscountUsingDELETEWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("204", response.httpStatusCode)) {
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: void = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "void", ""
+            ) as void;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to deleteOrderUsingDELETE1
      * @throws ApiException if the response code was not in [200, 299]
      */
      public async deleteOrderUsingDELETE1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("204", response.httpStatusCode)) {
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: void = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "void", ""
+            ) as void;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to deleteProductUsingDELETE1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async deleteProductUsingDELETE1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("204", response.httpStatusCode)) {
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
@@ -5421,6 +6702,56 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to getDiscountUsingGET1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async getDiscountUsingGET1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ShippingDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ShippingDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ShippingDiscount", ""
+            ) as ShippingDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ShippingDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ShippingDiscount", ""
+            ) as ShippingDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to getOpportunityStageUsingGET
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -5521,6 +6852,56 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to getOrderTotalDiscountUsingGET
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async getOrderTotalDiscountUsingGETWithHttpInfo(response: ResponseContext): Promise<HttpInfo<OrderTotalDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: OrderTotalDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "OrderTotalDiscount", ""
+            ) as OrderTotalDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: OrderTotalDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "OrderTotalDiscount", ""
+            ) as OrderTotalDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to getOrderUsingGET1
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -5561,6 +6942,56 @@ export class PreReleaseApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "RestV2Order", ""
             ) as RestV2Order;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to getProductUsingGET
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async getProductUsingGETWithHttpInfo(response: ResponseContext): Promise<HttpInfo<RestV2Product >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: RestV2Product = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestV2Product", ""
+            ) as RestV2Product;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: RestV2Product = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestV2Product", ""
+            ) as RestV2Product;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -5971,6 +7402,56 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to listDiscountsUsingGET
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async listDiscountsUsingGETWithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListShippingDiscountsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ListShippingDiscountsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListShippingDiscountsResponse", ""
+            ) as ListShippingDiscountsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ListShippingDiscountsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListShippingDiscountsResponse", ""
+            ) as ListShippingDiscountsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to listLandingPagesUsingGET
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -6121,6 +7602,56 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to listNoteTemplatesUsingGET
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async listNoteTemplatesUsingGETWithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListNoteTemplateResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ListNoteTemplateResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListNoteTemplateResponse", ""
+            ) as ListNoteTemplateResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ListNoteTemplateResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListNoteTemplateResponse", ""
+            ) as ListNoteTemplateResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to listOpportunitiesUsingGET1
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -6211,6 +7742,106 @@ export class PreReleaseApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "ListOpportunityStagesResponse", ""
             ) as ListOpportunityStagesResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to listOrderPaymentsUsingGET1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async listOrderPaymentsUsingGET1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListOrderPaymentsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ListOrderPaymentsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListOrderPaymentsResponse", ""
+            ) as ListOrderPaymentsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ListOrderPaymentsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListOrderPaymentsResponse", ""
+            ) as ListOrderPaymentsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to listOrderTotalDiscountsUsingGET
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async listOrderTotalDiscountsUsingGETWithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListOrderTotalDiscountsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ListOrderTotalDiscountsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListOrderTotalDiscountsResponse", ""
+            ) as ListOrderTotalDiscountsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ListOrderTotalDiscountsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListOrderTotalDiscountsResponse", ""
+            ) as ListOrderTotalDiscountsResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -6461,6 +8092,56 @@ export class PreReleaseApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "ListSubscriptionPlansResponse", ""
             ) as ListSubscriptionPlansResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to listSubscriptionsUsingGET1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async listSubscriptionsUsingGET1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListSubscriptionsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ListSubscriptionsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListSubscriptionsResponse", ""
+            ) as ListSubscriptionsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ListSubscriptionsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListSubscriptionsResponse", ""
+            ) as ListSubscriptionsResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
@@ -7249,6 +8930,106 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to updateDiscountUsingPATCH
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async updateDiscountUsingPATCHWithHttpInfo(response: ResponseContext): Promise<HttpInfo<CategoryDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: CategoryDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "CategoryDiscount", ""
+            ) as CategoryDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: CategoryDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "CategoryDiscount", ""
+            ) as CategoryDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to updateDiscountUsingPATCH1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async updateDiscountUsingPATCH1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ShippingDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ShippingDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ShippingDiscount", ""
+            ) as ShippingDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ShippingDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ShippingDiscount", ""
+            ) as ShippingDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to updateNotesCustomFieldUsingPATCH
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -7349,6 +9130,56 @@ export class PreReleaseApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to updateOpportunityStageUsingPATCH
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async updateOpportunityStageUsingPATCHWithHttpInfo(response: ResponseContext): Promise<HttpInfo<RestOpportunityStage >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: RestOpportunityStage = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestOpportunityStage", ""
+            ) as RestOpportunityStage;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: RestOpportunityStage = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestOpportunityStage", ""
+            ) as RestOpportunityStage;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to updateOpportunityUsingPATCH
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -7439,6 +9270,56 @@ export class PreReleaseApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "CustomFieldMetaData", ""
             ) as CustomFieldMetaData;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to updateOrderTotalDiscountUsingPATCH
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async updateOrderTotalDiscountUsingPATCHWithHttpInfo(response: ResponseContext): Promise<HttpInfo<OrderTotalDiscount >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: OrderTotalDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "OrderTotalDiscount", ""
+            ) as OrderTotalDiscount;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: OrderTotalDiscount = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "OrderTotalDiscount", ""
+            ) as OrderTotalDiscount;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

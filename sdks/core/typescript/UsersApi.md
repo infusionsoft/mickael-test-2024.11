@@ -314,7 +314,7 @@ const apiInstance = new UsersApi(configuration);
 const request: UsersApiPatchUserUsingPATCHRequest = {
     // user_id
   userId: "user_id_example",
-    // An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "address",
   ],
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **PatchUserRequestV2**| user |
  **userId** | [**string**] | user_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type

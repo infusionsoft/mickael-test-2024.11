@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **AssignedToUser** | [**BasicUser**](BasicUser.md) |  | [optional] 
 **ContactId** | **string** |  | [optional] 
 **CreateTime** | **string** |  | [optional] 
+**CreatedByUserId** | **string** |  | [optional] 
 **Id** | **string** |  | [optional] 
 **LastUpdatedByUserId** | **string** |  | [optional] 
 **Text** | **string** |  | [optional] 

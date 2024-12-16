@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**applyToCommissions** | **Integer** |  |  [optional] |
+|**applyToCommissions** | **Boolean** |  |  [optional] |
 |**categoryId** | **String** |  |  [optional] |
-|**criteria** | [**List&lt;Criteria&gt;**](Criteria.md) |  |  [optional] |
+|**criteria** | [**List&lt;DiscountCriteria&gt;**](DiscountCriteria.md) |  |  [optional] |
 |**description** | **String** |  |  [optional] |
 |**discountPercent** | **Double** |  |  [optional] |
 |**name** | **String** |  |  [optional] |

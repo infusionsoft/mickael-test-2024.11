@@ -251,7 +251,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.UsersApi();
 let userId = "userId_example"; // String | user_id
 let opts = {
-  'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
   'user': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
 };
 apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
@@ -268,7 +268,7 @@ apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| user_id | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type

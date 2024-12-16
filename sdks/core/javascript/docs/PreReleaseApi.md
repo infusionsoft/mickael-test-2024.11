@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**cancelSubscriptionUsingPOST**](PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 [**createAffiliateCustomFieldUsingPOST**](PreReleaseApi.md#createAffiliateCustomFieldUsingPOST) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
 [**createDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
+[**createDiscountUsingPOST**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
+[**createDiscountUsingPOST1**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
 [**createFunnelIntegrationUsingPOST**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 [**createIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
 [**createLeadSourceUsingPOST**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
@@ -20,7 +22,9 @@ Method | HTTP request | Description
 [**createOpportunityUsingPOST1**](PreReleaseApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity
 [**createOrderCustomFieldUsingPOST**](PreReleaseApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
 [**createOrderItemsOnOrderUsingPOST1**](PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
+[**createOrderTotalDiscountUsingPOST**](PreReleaseApi.md#createOrderTotalDiscountUsingPOST) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
 [**createOrderUsingPOST1**](PreReleaseApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order
+[**createProductUsingPOST1**](PreReleaseApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
 [**createRedirectLinkUsingPOST**](PreReleaseApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
 [**createReferralUsingPOST**](PreReleaseApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral
 [**createSubscriptionCustomFieldUsingPOST**](PreReleaseApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
@@ -31,10 +35,14 @@ Method | HTTP request | Description
 [**deleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
 [**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+[**deleteDiscountUsingDELETE2**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
 [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
+[**deleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
+[**deleteOrderTotalDiscountUsingDELETE**](PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETE) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
 [**deleteOrderUsingDELETE1**](PreReleaseApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order
+[**deleteProductUsingDELETE1**](PreReleaseApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
 [**deleteRedirectLinkUsingDELETE**](PreReleaseApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
 [**deleteTaskCustomFieldUsingDELETE**](PreReleaseApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
 [**deleteTaskUsingDELETE1**](PreReleaseApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
@@ -44,9 +52,12 @@ Method | HTTP request | Description
 [**getCommissionProgramUsingGET**](PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**getDiscountUsingGET1**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
 [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
+[**getOrderTotalDiscountUsingGET**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
 [**getOrderUsingGET1**](PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**getProductUsingGET**](PreReleaseApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
 [**getRedirectLinkUsingGET**](PreReleaseApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
 [**getTaskUsingGET1**](PreReleaseApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
 [**getUserByIdUsingGET**](PreReleaseApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User
@@ -55,16 +66,21 @@ Method | HTTP request | Description
 [**listAffiliateCommissionProgramsUsingGET**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 [**listAffiliateLinksUsingGET**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
 [**listCountriesUsingGET2**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
+[**listDiscountsUsingGET**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts
 [**listLandingPagesUsingGET**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
 [**listLeadSourcesUsingGET**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
 [**listMerchantsUsingGET**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts
+[**listNoteTemplatesUsingGET**](PreReleaseApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates
 [**listOpportunitiesUsingGET1**](PreReleaseApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
 [**listOpportunityStagesUsingGET**](PreReleaseApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
+[**listOrderPaymentsUsingGET1**](PreReleaseApi.md#listOrderPaymentsUsingGET1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
+[**listOrderTotalDiscountsUsingGET**](PreReleaseApi.md#listOrderTotalDiscountsUsingGET) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
 [**listOrdersUsingGET1**](PreReleaseApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders
 [**listProductsUsingGET1**](PreReleaseApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
 [**listProvincesForCountryUsingGET**](PreReleaseApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
 [**listShippingMethodsUsingGET**](PreReleaseApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods
 [**listSubscriptionPlansUsingGET**](PreReleaseApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans
+[**listSubscriptionsUsingGET1**](PreReleaseApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions
 [**listSummariesUsingGET1**](PreReleaseApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
 [**listTasksUsingGET1**](PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
 [**listUsersUsingGET1**](PreReleaseApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users
@@ -81,10 +97,14 @@ Method | HTTP request | Description
 [**retrieveSubscriptionCustomFieldModelUsingGET**](PreReleaseApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
 [**retrieveTaskModelUsingGET1**](PreReleaseApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model
 [**updateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
+[**updateDiscountUsingPATCH**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
+[**updateDiscountUsingPATCH1**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
 [**updateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
+[**updateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
 [**updateOpportunityUsingPATCH**](PreReleaseApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 [**updateOrderCustomFieldUsingPATCH**](PreReleaseApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
+[**updateOrderTotalDiscountUsingPATCH**](PreReleaseApi.md#updateOrderTotalDiscountUsingPATCH) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
 [**updateRedirectLinkUsingPATCH**](PreReleaseApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 [**updateSubscriptionCustomFieldUsingPATCH**](PreReleaseApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 [**updateTaskCustomFieldUsingPATCH**](PreReleaseApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
@@ -406,6 +426,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createDiscountUsingPOST
+
+> CategoryDiscount createDiscountUsingPOST(request)
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let request = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+apiInstance.createDiscountUsingPOST(request).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createDiscountUsingPOST1
+
+> ShippingDiscount createDiscountUsingPOST1(request)
+
+Create a Shipping Discount
+
+Creates a Shipping Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let request = new KeapCoreServiceCoreSdk.CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+apiInstance.createDiscountUsingPOST1(request).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
 
 ### Authorization
 
@@ -819,6 +927,50 @@ No authorization required
 - **Accept**: application/json
 
 
+## createOrderTotalDiscountUsingPOST
+
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+
+Create an Order Total Discount
+
+Creates an Order Total Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let request = new KeapCoreServiceCoreSdk.CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+apiInstance.createOrderTotalDiscountUsingPOST(request).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## createOrderUsingPOST1
 
 > RestV2Order createOrderUsingPOST1(createOrderRequest)
@@ -852,6 +1004,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createProductUsingPOST1
+
+> RestV2Product createProductUsingPOST1(createProductRequest)
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let createProductRequest = new KeapCoreServiceCoreSdk.CreateProductRequest(); // CreateProductRequest | createProductRequest
+apiInstance.createProductUsingPOST1(createProductRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createProductRequest** | [**CreateProductRequest**](CreateProductRequest.md)| createProductRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -1307,6 +1503,50 @@ No authorization required
 - **Accept**: application/json
 
 
+## deleteDiscountUsingDELETE2
+
+> deleteDiscountUsingDELETE2(discountId)
+
+Delete a Shipping Discount
+
+Deletes a specified Shipping Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.deleteDiscountUsingDELETE2(discountId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## deleteFunnelIntegrationUsingPOST
 
 > deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
@@ -1439,6 +1679,94 @@ No authorization required
 - **Accept**: application/json
 
 
+## deleteOrderCustomFieldUsingDELETE
+
+> deleteOrderCustomFieldUsingDELETE(customFieldId)
+
+Delete an Order&#39;s Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let customFieldId = "customFieldId_example"; // String | custom_field_id
+apiInstance.deleteOrderCustomFieldUsingDELETE(customFieldId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customFieldId** | **String**| custom_field_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteOrderTotalDiscountUsingDELETE
+
+> deleteOrderTotalDiscountUsingDELETE(discountId)
+
+Delete an Order Total Discount
+
+Deletes a specified Order Total Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.deleteOrderTotalDiscountUsingDELETE(discountId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## deleteOrderUsingDELETE1
 
 > deleteOrderUsingDELETE1(orderId)
@@ -1468,6 +1796,50 @@ apiInstance.deleteOrderUsingDELETE1(orderId).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **String**| order_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteProductUsingDELETE1
+
+> deleteProductUsingDELETE1(productId)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let productId = "productId_example"; // String | product_id
+apiInstance.deleteProductUsingDELETE1(productId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | **String**| product_id | 
 
 ### Return type
 
@@ -1885,6 +2257,50 @@ No authorization required
 - **Accept**: application/json
 
 
+## getDiscountUsingGET1
+
+> ShippingDiscount getDiscountUsingGET1(discountId)
+
+Retrieve a Shipping Discount
+
+Retrieves a Shipping Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.getDiscountUsingGET1(discountId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getOpportunityStageUsingGET
 
 > RestOpportunityStage getOpportunityStageUsingGET(stageId)
@@ -1973,6 +2389,50 @@ No authorization required
 - **Accept**: application/json
 
 
+## getOrderTotalDiscountUsingGET
+
+> OrderTotalDiscount getOrderTotalDiscountUsingGET(discountId)
+
+Retrieve an Order Total Discount
+
+Retrieves an Order Total Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+apiInstance.getOrderTotalDiscountUsingGET(discountId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getOrderUsingGET1
 
 > RestV2Order getOrderUsingGET1(orderId)
@@ -2006,6 +2466,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getProductUsingGET
+
+> RestV2Product getProductUsingGET(productId)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let productId = "productId_example"; // String | product_id
+apiInstance.getProductUsingGET(productId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | **String**| product_id | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -2375,6 +2879,60 @@ No authorization required
 - **Accept**: application/json
 
 
+## listDiscountsUsingGET
+
+> ListShippingDiscountsResponse listDiscountsUsingGET(opts)
+
+List all Shipping Discounts
+
+Retrieves all Shipping Discounts
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'fields': ["null"], // [String] | TODO: PAPI-1449
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld` 
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listDiscountsUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fields** | [**[String]**](String.md)| TODO: PAPI-1449 | [optional] 
+ **filter** | **String**| Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60;  | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listLandingPagesUsingGET
 
 > ListLandingPagesResponse listLandingPagesUsingGET(opts)
@@ -2494,7 +3052,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc`
   'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc
   'pageSize': 0, // Number | Total number of items to return per page
   'pageToken': "pageToken_example" // String | Page token
@@ -2512,7 +3070,7 @@ apiInstance.listMerchantsUsingGET(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | [optional] 
+ **filter** | **String**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | [optional] 
  **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | [optional] 
  **pageSize** | **Number**| Total number of items to return per page | [optional] 
  **pageToken** | **String**| Page token | [optional] 
@@ -2520,6 +3078,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListRestMerchantResponse**](ListRestMerchantResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listNoteTemplatesUsingGET
+
+> ListNoteTemplateResponse listNoteTemplatesUsingGET(opts)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'filter': "filter_example", // String | Search filter to apply to results
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listNoteTemplatesUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Search filter to apply to results | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)
 
 ### Authorization
 
@@ -2637,6 +3247,112 @@ No authorization required
 - **Accept**: application/json
 
 
+## listOrderPaymentsUsingGET1
+
+> ListOrderPaymentsResponse listOrderPaymentsUsingGET1(orderId, opts)
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let orderId = "orderId_example"; // String | order_id
+let opts = {
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true` 
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc 
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listOrderPaymentsUsingGET1(orderId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **String**| order_id | 
+ **filter** | **String**| Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListOrderPaymentsResponse**](ListOrderPaymentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listOrderTotalDiscountsUsingGET
+
+> ListOrderTotalDiscountsResponse listOrderTotalDiscountsUsingGET(opts)
+
+List all Order Total Discounts
+
+Retrieves all Order Total Discounts
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET` 
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listOrderTotalDiscountsUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60;  | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListOrderTotalDiscountsResponse**](ListOrderTotalDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listOrdersUsingGET1
 
 > ListOrders listOrdersUsingGET1(opts)
@@ -2652,7 +3368,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567`
   'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
   'pageSize': 0, // Number | Total number of items to return per page
   'pageToken': "pageToken_example" // String | Page token
@@ -2670,7 +3386,7 @@ apiInstance.listOrdersUsingGET1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional] 
+ **filter** | **String**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional] 
  **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional] 
  **pageSize** | **Number**| Total number of items to return per page | [optional] 
  **pageToken** | **String**| Page token | [optional] 
@@ -2864,6 +3580,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListSubscriptionPlansResponse**](ListSubscriptionPlansResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSubscriptionsUsingGET1
+
+> ListSubscriptionsResponse listSubscriptionsUsingGET1(opts)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listSubscriptionsUsingGET1(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)
 
 ### Authorization
 
@@ -3297,7 +4065,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let userId = "userId_example"; // String | user_id
 let opts = {
-  'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
   'user': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
 };
 apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
@@ -3314,7 +4082,7 @@ apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| user_id | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type
@@ -3633,6 +4401,106 @@ No authorization required
 - **Accept**: application/json
 
 
+## updateDiscountUsingPATCH
+
+> CategoryDiscount updateDiscountUsingPATCH(discountId, request, opts)
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+let request = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+let opts = {
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+};
+apiInstance.updateDiscountUsingPATCH(discountId, request, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+ **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateDiscountUsingPATCH1
+
+> ShippingDiscount updateDiscountUsingPATCH1(discountId, request, opts)
+
+Update a Shipping Discount
+
+Updates a Shipping Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+let request = new KeapCoreServiceCoreSdk.UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+let opts = {
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+};
+apiInstance.updateDiscountUsingPATCH1(discountId, request, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+ **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## updateNotesCustomFieldUsingPATCH
 
 > CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, opts)
@@ -3733,6 +4601,56 @@ No authorization required
 - **Accept**: application/json
 
 
+## updateOpportunityStageUsingPATCH
+
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, opts)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let stageId = "stageId_example"; // String | stage_id
+let request = new KeapCoreServiceCoreSdk.UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+let opts = {
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+};
+apiInstance.updateOpportunityStageUsingPATCH(stageId, request, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **stageId** | **String**| stage_id | 
+ **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## updateOpportunityUsingPATCH
 
 > RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, opts)
@@ -3822,6 +4740,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateOrderTotalDiscountUsingPATCH
+
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, request, opts)
+
+Update an Order Total Discount
+
+Updates an Order Total Discount
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let discountId = "discountId_example"; // String | discount_id
+let request = new KeapCoreServiceCoreSdk.UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+let opts = {
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+};
+apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | **String**| discount_id | 
+ **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
 
 ### Authorization
 

@@ -11,6 +11,8 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**cancelSubscriptionUsingPOST()**](PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
 | [**createAffiliateCustomFieldUsingPOST()**](PreReleaseApi.md#createAffiliateCustomFieldUsingPOST) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field |
 | [**createDefaultCommissionProgramUsingPOST()**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program |
+| [**createDiscountUsingPOST()**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount |
+| [**createDiscountUsingPOST1()**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
 | [**createFunnelIntegrationUsingPOST()**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**createIntegrationTriggerEventUsingPOST()**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
 | [**createLeadSourceUsingPOST()**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source |
@@ -20,7 +22,9 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**createOpportunityUsingPOST1()**](PreReleaseApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity |
 | [**createOrderCustomFieldUsingPOST()**](PreReleaseApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
 | [**createOrderItemsOnOrderUsingPOST1()**](PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**createOrderTotalDiscountUsingPOST()**](PreReleaseApi.md#createOrderTotalDiscountUsingPOST) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount |
 | [**createOrderUsingPOST1()**](PreReleaseApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order |
+| [**createProductUsingPOST1()**](PreReleaseApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product |
 | [**createRedirectLinkUsingPOST()**](PreReleaseApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link |
 | [**createReferralUsingPOST()**](PreReleaseApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral |
 | [**createSubscriptionCustomFieldUsingPOST()**](PreReleaseApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
@@ -31,10 +35,14 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**deleteAffiliateUsingDELETE()**](PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate |
 | [**deleteDiscountUsingDELETE()**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**deleteDiscountUsingDELETE1()**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**deleteDiscountUsingDELETE2()**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
 | [**deleteFunnelIntegrationUsingPOST()**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**deleteOpportunityStageUsingDELETE()**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**deleteOpportunityUsingDELETE()**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**deleteOrderCustomFieldUsingDELETE()**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field |
+| [**deleteOrderTotalDiscountUsingDELETE()**](PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETE) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount |
 | [**deleteOrderUsingDELETE1()**](PreReleaseApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**deleteProductUsingDELETE1()**](PreReleaseApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product |
 | [**deleteRedirectLinkUsingDELETE()**](PreReleaseApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link |
 | [**deleteTaskCustomFieldUsingDELETE()**](PreReleaseApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
 | [**deleteTaskUsingDELETE1()**](PreReleaseApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
@@ -44,9 +52,12 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**getCommissionProgramUsingGET()**](PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program |
 | [**getContactsBySearchTermUsingGET()**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts |
 | [**getDiscountUsingGET()**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**getDiscountUsingGET1()**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
 | [**getOpportunityStageUsingGET()**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityUsingGET1()**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**getOrderTotalDiscountUsingGET()**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount |
 | [**getOrderUsingGET1()**](PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**getProductUsingGET()**](PreReleaseApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product |
 | [**getRedirectLinkUsingGET()**](PreReleaseApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link |
 | [**getTaskUsingGET1()**](PreReleaseApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
 | [**getUserByIdUsingGET()**](PreReleaseApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User |
@@ -55,16 +66,21 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**listAffiliateCommissionProgramsUsingGET()**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs |
 | [**listAffiliateLinksUsingGET()**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links |
 | [**listCountriesUsingGET2()**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries |
+| [**listDiscountsUsingGET()**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
 | [**listLandingPagesUsingGET()**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages |
 | [**listLeadSourcesUsingGET()**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources |
 | [**listMerchantsUsingGET()**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts |
+| [**listNoteTemplatesUsingGET()**](PreReleaseApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates |
 | [**listOpportunitiesUsingGET1()**](PreReleaseApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities |
 | [**listOpportunityStagesUsingGET()**](PreReleaseApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**listOrderPaymentsUsingGET1()**](PreReleaseApi.md#listOrderPaymentsUsingGET1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments |
+| [**listOrderTotalDiscountsUsingGET()**](PreReleaseApi.md#listOrderTotalDiscountsUsingGET) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts |
 | [**listOrdersUsingGET1()**](PreReleaseApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders |
 | [**listProductsUsingGET1()**](PreReleaseApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products |
 | [**listProvincesForCountryUsingGET()**](PreReleaseApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
 | [**listShippingMethodsUsingGET()**](PreReleaseApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods |
 | [**listSubscriptionPlansUsingGET()**](PreReleaseApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**listSubscriptionsUsingGET1()**](PreReleaseApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions |
 | [**listSummariesUsingGET1()**](PreReleaseApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries |
 | [**listTasksUsingGET1()**](PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks |
 | [**listUsersUsingGET1()**](PreReleaseApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users |
@@ -81,10 +97,14 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**retrieveSubscriptionCustomFieldModelUsingGET()**](PreReleaseApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**retrieveTaskModelUsingGET1()**](PreReleaseApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model |
 | [**updateAffiliateCustomFieldUsingPATCH()**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field |
+| [**updateDiscountUsingPATCH()**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
+| [**updateDiscountUsingPATCH1()**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
 | [**updateNotesCustomFieldUsingPATCH()**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateOpportunityCustomFieldUsingPATCH()**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**updateOpportunityStageUsingPATCH()**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
 | [**updateOpportunityUsingPATCH()**](PreReleaseApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 | [**updateOrderCustomFieldUsingPATCH()**](PreReleaseApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**updateOrderTotalDiscountUsingPATCH()**](PreReleaseApi.md#updateOrderTotalDiscountUsingPATCH) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount |
 | [**updateRedirectLinkUsingPATCH()**](PreReleaseApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link |
 | [**updateSubscriptionCustomFieldUsingPATCH()**](PreReleaseApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 | [**updateTaskCustomFieldUsingPATCH()**](PreReleaseApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
@@ -469,6 +489,116 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\SetDefaultCommissionProgramResponse**](../Model/SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createDiscountUsingPOST()`
+
+```php
+createDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+```
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+
+try {
+    $result = $apiInstance->createDiscountUsingPOST($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->createDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\CategoryDiscount**](../Model/CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createDiscountUsingPOST1()`
+
+```php
+createDiscountUsingPOST1($request): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+```
+
+Create a Shipping Discount
+
+Creates a Shipping Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$request = new \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest | request
+
+try {
+    $result = $apiInstance->createDiscountUsingPOST1($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->createDiscountUsingPOST1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **request** | [**\Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest**](../Model/CreateShippingDiscountRequest.md)| request | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ShippingDiscount**](../Model/ShippingDiscount.md)
 
 ### Authorization
 
@@ -977,6 +1107,61 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createOrderTotalDiscountUsingPOST()`
+
+```php
+createOrderTotalDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+```
+
+Create an Order Total Discount
+
+Creates an Order Total Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$request = new \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest | request
+
+try {
+    $result = $apiInstance->createOrderTotalDiscountUsingPOST($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->createOrderTotalDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest**](../Model/CreateOrderTotalDiscountRequest.md)| request | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\OrderTotalDiscount**](../Model/OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `createOrderUsingPOST1()`
 
 ```php
@@ -1018,6 +1203,61 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\RestV2Order**](../Model/RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createProductUsingPOST1()`
+
+```php
+createProductUsingPOST1($create_product_request): \Com\Keap\Sdk\Core\Model\RestV2Product
+```
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$create_product_request = new \Com\Keap\Sdk\Core\Model\CreateProductRequest(); // \Com\Keap\Sdk\Core\Model\CreateProductRequest | createProductRequest
+
+try {
+    $result = $apiInstance->createProductUsingPOST1($create_product_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->createProductUsingPOST1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_product_request** | [**\Com\Keap\Sdk\Core\Model\CreateProductRequest**](../Model/CreateProductRequest.md)| createProductRequest | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestV2Product**](../Model/RestV2Product.md)
 
 ### Authorization
 
@@ -1578,6 +1818,60 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteDiscountUsingDELETE2()`
+
+```php
+deleteDiscountUsingDELETE2($discount_id)
+```
+
+Delete a Shipping Discount
+
+Deletes a specified Shipping Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+
+try {
+    $apiInstance->deleteDiscountUsingDELETE2($discount_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->deleteDiscountUsingDELETE2: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `deleteFunnelIntegrationUsingPOST()`
 
 ```php
@@ -1740,6 +2034,114 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteOrderCustomFieldUsingDELETE()`
+
+```php
+deleteOrderCustomFieldUsingDELETE($custom_field_id)
+```
+
+Delete an Order's Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$custom_field_id = 'custom_field_id_example'; // string | custom_field_id
+
+try {
+    $apiInstance->deleteOrderCustomFieldUsingDELETE($custom_field_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->deleteOrderCustomFieldUsingDELETE: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **custom_field_id** | **string**| custom_field_id | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteOrderTotalDiscountUsingDELETE()`
+
+```php
+deleteOrderTotalDiscountUsingDELETE($discount_id)
+```
+
+Delete an Order Total Discount
+
+Deletes a specified Order Total Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+
+try {
+    $apiInstance->deleteOrderTotalDiscountUsingDELETE($discount_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->deleteOrderTotalDiscountUsingDELETE: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `deleteOrderUsingDELETE1()`
 
 ```php
@@ -1776,6 +2178,60 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **order_id** | **string**| order_id | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteProductUsingDELETE1()`
+
+```php
+deleteProductUsingDELETE1($product_id)
+```
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$product_id = 'product_id_example'; // string | product_id
+
+try {
+    $apiInstance->deleteProductUsingDELETE1($product_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->deleteProductUsingDELETE1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **product_id** | **string**| product_id | |
 
 ### Return type
 
@@ -2291,6 +2747,61 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getDiscountUsingGET1()`
+
+```php
+getDiscountUsingGET1($discount_id): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+```
+
+Retrieve a Shipping Discount
+
+Retrieves a Shipping Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+
+try {
+    $result = $apiInstance->getDiscountUsingGET1($discount_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getDiscountUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ShippingDiscount**](../Model/ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getOpportunityStageUsingGET()`
 
 ```php
@@ -2401,6 +2912,61 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getOrderTotalDiscountUsingGET()`
+
+```php
+getOrderTotalDiscountUsingGET($discount_id): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+```
+
+Retrieve an Order Total Discount
+
+Retrieves an Order Total Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+
+try {
+    $result = $apiInstance->getOrderTotalDiscountUsingGET($discount_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getOrderTotalDiscountUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\OrderTotalDiscount**](../Model/OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getOrderUsingGET1()`
 
 ```php
@@ -2442,6 +3008,61 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\RestV2Order**](../Model/RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getProductUsingGET()`
+
+```php
+getProductUsingGET($product_id): \Com\Keap\Sdk\Core\Model\RestV2Product
+```
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$product_id = 'product_id_example'; // string | product_id
+
+try {
+    $result = $apiInstance->getProductUsingGET($product_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getProductUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **product_id** | **string**| product_id | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestV2Product**](../Model/RestV2Product.md)
 
 ### Authorization
 
@@ -2900,6 +3521,69 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listDiscountsUsingGET()`
+
+```php
+listDiscountsUsingGET($fields, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListShippingDiscountsResponse
+```
+
+List all Shipping Discounts
+
+Retrieves all Shipping Discounts
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$fields = array('fields_example'); // string[] | TODO: PAPI-1449
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld`
+$order_by = 'order_by_example'; // string | Attribute and direction to order items by. E.g. `given_name desc`
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listDiscountsUsingGET($fields, $filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listDiscountsUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fields** | [**string[]**](../Model/string.md)| TODO: PAPI-1449 | [optional] |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60; | [optional] |
+| **order_by** | **string**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListShippingDiscountsResponse**](../Model/ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `listLandingPagesUsingGET()`
 
 ```php
@@ -3044,7 +3728,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc`
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc`
 $order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc
 $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
@@ -3061,7 +3745,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter** | **string**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | [optional] |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | [optional] |
 | **order_by** | **string**| Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | [optional] |
 | **page_size** | **int**| Total number of items to return per page | [optional] |
 | **page_token** | **string**| Page token | [optional] |
@@ -3069,6 +3753,67 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\ListRestMerchantResponse**](../Model/ListRestMerchantResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listNoteTemplatesUsingGET()`
+
+```php
+listNoteTemplatesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListNoteTemplateResponse
+```
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Search filter to apply to results
+$order_by = 'order_by_example'; // string | Attribute and direction to order items by. E.g. `given_name desc`
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listNoteTemplatesUsingGET($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listNoteTemplatesUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Search filter to apply to results | [optional] |
+| **order_by** | **string**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListNoteTemplateResponse**](../Model/ListNoteTemplateResponse.md)
 
 ### Authorization
 
@@ -3207,6 +3952,130 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listOrderPaymentsUsingGET1()`
+
+```php
+listOrderPaymentsUsingGET1($order_id, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOrderPaymentsResponse
+```
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$order_id = 'order_id_example'; // string | order_id
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true`
+$order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listOrderPaymentsUsingGET1($order_id, $filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listOrderPaymentsUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_id** | **string**| order_id | |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60; | [optional] |
+| **order_by** | **string**| Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListOrderPaymentsResponse**](../Model/ListOrderPaymentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listOrderTotalDiscountsUsingGET()`
+
+```php
+listOrderTotalDiscountsUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListOrderTotalDiscountsResponse
+```
+
+List all Order Total Discounts
+
+Retrieves all Order Total Discounts
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET`
+$order_by = 'order_by_example'; // string | Attribute and direction to order items by. E.g. `given_name desc`
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listOrderTotalDiscountsUsingGET($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listOrderTotalDiscountsUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60; | [optional] |
+| **order_by** | **string**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListOrderTotalDiscountsResponse**](../Model/ListOrderTotalDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `listOrdersUsingGET1()`
 
 ```php
@@ -3229,7 +4098,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567`
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567`
 $order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc
 $page_size = 0; // int | Total number of items to return per page
 $page_token = 'page_token_example'; // string | Page token
@@ -3246,7 +4115,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter** | **string**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional] |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional] |
 | **order_by** | **string**| Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional] |
 | **page_size** | **int**| Total number of items to return per page | [optional] |
 | **page_token** | **string**| Page token | [optional] |
@@ -3481,6 +4350,67 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\ListSubscriptionPlansResponse**](../Model/ListSubscriptionPlansResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listSubscriptionsUsingGET1()`
+
+```php
+listSubscriptionsUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListSubscriptionsResponse
+```
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id
+$order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listSubscriptionsUsingGET1($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listSubscriptionsUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id | [optional] |
+| **order_by** | **string**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListSubscriptionsResponse**](../Model/ListSubscriptionsResponse.md)
 
 ### Authorization
 
@@ -3996,7 +4926,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $user_id = 'user_id_example'; // string | user_id
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 $user = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
 
 try {
@@ -4012,7 +4942,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **user_id** | **string**| user_id | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 | **user** | [**\Com\Keap\Sdk\Core\Model\PatchUserRequestV2**](../Model/PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
@@ -4411,6 +5341,124 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateDiscountUsingPATCH()`
+
+```php
+updateDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+```
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateDiscountUsingPATCH($discount_id, $request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->updateDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\CategoryDiscount**](../Model/CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateDiscountUsingPATCH1()`
+
+```php
+updateDiscountUsingPATCH1($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+```
+
+Update a Shipping Discount
+
+Updates a Shipping Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+$request = new \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateDiscountUsingPATCH1($discount_id, $request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->updateDiscountUsingPATCH1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest**](../Model/UpdateShippingDiscountRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ShippingDiscount**](../Model/ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `updateNotesCustomFieldUsingPATCH()`
 
 ```php
@@ -4529,6 +5577,65 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateOpportunityStageUsingPATCH()`
+
+```php
+updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+```
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$stage_id = 'stage_id_example'; // string | stage_id
+$request = new \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->updateOpportunityStageUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stage_id** | **string**| stage_id | |
+| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest**](../Model/UpdateOpportunityStageRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestOpportunityStage**](../Model/RestOpportunityStage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `updateOpportunityUsingPATCH()`
 
 ```php
@@ -4633,6 +5740,65 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\CustomFieldMetaData**](../Model/CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateOrderTotalDiscountUsingPATCH()`
+
+```php
+updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+```
+
+Update an Order Total Discount
+
+Updates an Order Total Discount
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+$request = new \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->updateOrderTotalDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest**](../Model/UpdateOrderTotalDiscountRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\OrderTotalDiscount**](../Model/OrderTotalDiscount.md)
 
 ### Authorization
 

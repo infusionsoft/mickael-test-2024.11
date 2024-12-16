@@ -4,9 +4,66 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**createDiscountUsingPOST()**](CategoryDiscountApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount |
 | [**deleteDiscountUsingDELETE()**](CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**getDiscountUsingGET()**](CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**updateDiscountUsingPATCH()**](CategoryDiscountApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
 
+
+## `createDiscountUsingPOST()`
+
+```php
+createDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+```
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\CategoryDiscountApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+
+try {
+    $result = $apiInstance->createDiscountUsingPOST($request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoryDiscountApi->createDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\CategoryDiscount**](../Model/CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `deleteDiscountUsingDELETE()`
 
@@ -111,6 +168,65 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateDiscountUsingPATCH()`
+
+```php
+updateDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+```
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\CategoryDiscountApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$discount_id = 'discount_id_example'; // string | discount_id
+$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateDiscountUsingPATCH($discount_id, $request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoryDiscountApi->updateDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **discount_id** | **string**| discount_id | |
+| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\CategoryDiscount**](../Model/CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

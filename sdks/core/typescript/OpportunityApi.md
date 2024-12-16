@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**listOpportunitiesUsingGET1**](OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
 [**listOpportunityStagesUsingGET**](OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
 [**updateOpportunityCustomFieldUsingPATCH**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity\&#39;s Custom Field
+[**updateOpportunityStageUsingPATCH**](OpportunityApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
 [**updateOpportunityUsingPATCH**](OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 
 
@@ -101,7 +102,7 @@ const apiInstance = new OpportunityApi(configuration);
 const request: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {
     // opportunity (optional)
   opportunityStage: {
-    checkListItems: [
+    checklistItems: [
       {
         description: "description_example",
         order: 1,
@@ -636,6 +637,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 **CustomFieldMetaData**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateOpportunityStageUsingPATCH**
+> RestOpportunityStage updateOpportunityStageUsingPATCH(request)
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+
+```typescript
+import { createConfiguration, OpportunityApi } from '';
+import type { OpportunityApiUpdateOpportunityStageUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new OpportunityApi(configuration);
+
+const request: OpportunityApiUpdateOpportunityStageUsingPATCHRequest = {
+    // stage_id
+  stageId: "stage_id_example",
+    // request
+  request: {
+    checklistItems: [
+      {
+        description: "description_example",
+        id: "id_example",
+        order: 1,
+        required: true,
+      },
+    ],
+    name: "Qualified",
+    order: 1,
+    probability: 2,
+    targetNumberDays: 1,
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "name",
+  ],
+};
+
+const data = await apiInstance.updateOpportunityStageUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **UpdateOpportunityStageRequest**| request |
+ **stageId** | [**string**] | stage_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**RestOpportunityStage**
 
 ### Authorization
 

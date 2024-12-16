@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CheckListItems** | [**List&lt;CheckListItemDetails&gt;**](CheckListItemDetails.md) |  | [optional] 
+**ChecklistItems** | [**List&lt;CheckListItemDetails&gt;**](CheckListItemDetails.md) |  | [optional] 
 **Probability** | **int** |  | [optional] 
 **StageOrder** | **int** |  | [optional] 
 **TargetNumDays** | **int** |  | [optional] 

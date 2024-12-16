@@ -1,11 +1,18 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2.70.0.739356-hf-202411181744",
+    "description": "Keap REST Core Service",
+    "version": "2.70.0.751586-hf-202412120145",
     "title": "Keap REST API",
     "termsOfService": "https://keap.com/legal",
     "contact": {
-      "name": "https://developer.keap.com/get-support/"
+      "name": "Keap",
+      "url": "https://developer.keap.com/get-support/",
+      "email": "api@keap.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   },
   "host": "api.infusionsoft.com",
@@ -84,6 +91,10 @@
       "description": "Rest Opportunity Controller"
     },
     {
+      "name": "Order Total Discount",
+      "description": "Rest Order Total Discount Controller"
+    },
+    {
       "name": "Orders",
       "description": "Rest Order Controller"
     },
@@ -116,6 +127,10 @@
       "description": "Rest Shipping Methods Controller"
     },
     {
+      "name": "Shipping Discount",
+      "description": "Rest Shipping Discount Controller"
+    },
+    {
       "name": "Subscription Plans",
       "description": "Rest Subscription Plan Controller"
     },
@@ -125,7 +140,7 @@
     },
     {
       "name": "Tags",
-      "description": "Tags-V2-Endpoint"
+      "description": "Rest Tag Controller"
     },
     {
       "name": "Task",
@@ -2895,7 +2910,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Filter to apply, allowed fields are:  \n- (String) email  \n- (String) given_name  \n- (String) family_name  \n- (String) company_id  \n- (Set[String]) contact_ids  \n- (String) start_update_time  \n- (String) end_update_time \n\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched \nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: \n - `filter=given_name%3D%3DMary` \n- `filter=company_id%3D%3D123` \n- `filter=company_id%3D%3D123;family_name=Smith` \n",
+            "description": "Filter to apply, allowed fields are:  \n- (String) email  \n- (String) given_name  \n- (String) family_name  \n- (String) company_id  \n- (Set[String]) contact_ids  \n- (String) start_update_time  \n- (String) end_update_time \n\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched \nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: \n - `filter=given_name%3D%3DMary` \n- `filter=company_id%3D%3D123` \n- `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith` \n",
             "required": false,
             "type": "string"
           },
@@ -3908,6 +3923,328 @@
         "deprecated": false
       }
     },
+    "/v2/discounts/orderTotals": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Order Total Discount"
+        ],
+        "summary": "List all Order Total Discounts",
+        "description": "Retrieves all Order Total Discounts",
+        "operationId": "listOrderTotalDiscountsUsingGET",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter to apply, allowed fields are:\n- (String) name\n- (String) description\n- (Boolean) apply_to_commissions\n- (DiscountType) discount_type: AMOUNT or PERCENT\n- (DiscountStrategy) discount_strategy: GROSS or NET\n\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=name%3D%3DMary`\n- `filter=applyToCommissions%3D%3DTrue`\n- `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET`\n",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute and direction to order items by. E.g. `given_name desc`",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Total number of items to return per page",
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "exclusiveMaximum": false,
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32",
+            "x-example": 0
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "Page token",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ListOrderTotalDiscountsResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Pre-Release",
+          "Order Total Discount"
+        ],
+        "summary": "Create an Order Total Discount",
+        "description": "Creates an Order Total Discount",
+        "operationId": "createOrderTotalDiscountUsingPOST",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateOrderTotalDiscountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/OrderTotalDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v2/discounts/orderTotals/{discount_id}": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Order Total Discount"
+        ],
+        "summary": "Retrieve an Order Total Discount",
+        "description": "Retrieves an Order Total Discount",
+        "operationId": "getOrderTotalDiscountUsingGET",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/OrderTotalDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Pre-Release",
+          "Order Total Discount"
+        ],
+        "summary": "Delete an Order Total Discount",
+        "description": "Deletes a specified Order Total Discount",
+        "operationId": "deleteOrderTotalDiscountUsingDELETE",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "Pre-Release",
+          "Order Total Discount"
+        ],
+        "summary": "Update an Order Total Discount",
+        "description": "Updates an Order Total Discount",
+        "operationId": "updateOrderTotalDiscountUsingPATCH",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateOrderTotalDiscountRequest"
+            }
+          },
+          {
+            "name": "update_mask",
+            "in": "query",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi",
+            "allowEmptyValue": false,
+            "enum": [
+              "name",
+              "description",
+              "apply_to_commissions",
+              "discount_type",
+              "discount_value",
+              "discount_strategy",
+              "criteria"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/OrderTotalDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v2/discounts/productCategories": {
+      "post": {
+        "tags": [
+          "Pre-Release",
+          "Category Discount"
+        ],
+        "summary": "Create a Category Discount",
+        "description": "Create a Category Discount.",
+        "operationId": "createDiscountUsingPOST",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateUpdateDiscountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/CategoryDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/v2/discounts/productCategories/{discount_id}": {
       "get": {
         "tags": [
@@ -3974,6 +4311,367 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "Pre-Release",
+          "Category Discount"
+        ],
+        "summary": "Update a Category Discount",
+        "description": "Update a Category Discount.",
+        "operationId": "updateDiscountUsingPATCH",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateUpdateDiscountRequest"
+            }
+          },
+          {
+            "name": "update_mask",
+            "in": "query",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi",
+            "allowEmptyValue": false,
+            "enum": [
+              "contact_id",
+              "order_items",
+              "order_title",
+              "order_time",
+              "order_type",
+              "promo_codes",
+              "lead_affiliate_id",
+              "sales_affiliate_id",
+              "shipping_address"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CategoryDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v2/discounts/shipping": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Shipping Discount"
+        ],
+        "summary": "List all Shipping Discounts",
+        "description": "Retrieves all Shipping Discounts",
+        "operationId": "listDiscountsUsingGET",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "TODO: PAPI-1449",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter to apply, allowed fields are:\n- (String) name\n- (String) description\n- (DiscountType) discount_type: AMOUNT or PERCENT\n\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=name%3D%3DMary`\n- `filter=description%3D%3DHello+World`\n- `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld`\n",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute and direction to order items by. E.g. `given_name desc`",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Total number of items to return per page",
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "exclusiveMaximum": false,
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32",
+            "x-example": 0
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "Page token",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ListShippingDiscountsResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Pre-Release",
+          "Shipping Discount"
+        ],
+        "summary": "Create a Shipping Discount",
+        "description": "Creates a Shipping Discount",
+        "operationId": "createDiscountUsingPOST_1",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateShippingDiscountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/ShippingDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v2/discounts/shipping/{discount_id}": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Shipping Discount"
+        ],
+        "summary": "Retrieve a Shipping Discount",
+        "description": "Retrieves a Shipping Discount",
+        "operationId": "getDiscountUsingGET_1",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ShippingDiscount"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Pre-Release",
+          "Shipping Discount"
+        ],
+        "summary": "Delete a Shipping Discount",
+        "description": "Deletes a specified Shipping Discount",
+        "operationId": "deleteDiscountUsingDELETE_2",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "Pre-Release",
+          "Shipping Discount"
+        ],
+        "summary": "Update a Shipping Discount",
+        "description": "Updates a Shipping Discount",
+        "operationId": "updateDiscountUsingPATCH_1",
+        "parameters": [
+          {
+            "name": "discount_id",
+            "in": "path",
+            "description": "discount_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateShippingDiscountRequest"
+            }
+          },
+          {
+            "name": "update_mask",
+            "in": "query",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi",
+            "allowEmptyValue": false,
+            "enum": [
+              "TODO: PAPI-1452"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ShippingDiscount"
+            }
           },
           "401": {
             "description": "Unauthorized",
@@ -4758,7 +5456,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Filter to apply, allowed fields are:\n- (String) id\n- (String) account_name\n- (String) type\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=id%3D%3D123`\n- `filter=account_name%3D%3Dabc`\n- `filter=id%3D%3D123;account_name=abc`",
+            "description": "Filter to apply, allowed fields are:\n- (String) id\n- (String) account_name\n- (String) type\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=id%3D%3D123`\n- `filter=account_name%3D%3Dabc`\n- `filter=id%3D%3D123%3Baccount_name=abc`",
             "required": false,
             "type": "string"
           },
@@ -4949,6 +5647,80 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/CustomFieldMetaData"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v2/notes/templates": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Note"
+        ],
+        "summary": "Retrieve Note Templates",
+        "description": "Retrieves a list of Note Templates",
+        "operationId": "listNoteTemplatesUsingGET",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Search filter to apply to results",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute and direction to order items by. E.g. `given_name desc`",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Total number of items to return per page",
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "exclusiveMaximum": false,
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32",
+            "x-example": 0
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "Page token",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ListNoteTemplateResponse"
             }
           },
           "401": {
@@ -5455,6 +6227,79 @@
           }
         },
         "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "Pre-Release",
+          "Opportunity"
+        ],
+        "summary": "Update an Opportunity Stage",
+        "description": "Updates specified values of a given Opportunity Stage",
+        "operationId": "updateOpportunityStageUsingPATCH",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateOpportunityStageRequest"
+            }
+          },
+          {
+            "name": "stage_id",
+            "in": "path",
+            "description": "stage_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "update_mask",
+            "in": "query",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi",
+            "allowEmptyValue": false,
+            "enum": [
+              "name",
+              "order",
+              "target_number_days",
+              "probability",
+              "checklist_items"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestOpportunityStage"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
       }
     },
     "/v2/opportunities/{opportunity_id}": {
@@ -5638,7 +6483,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Filter to apply, allowed fields are:\n- (String) product_id\n- (String) contact_id\n- (Boolean) paid\n- (String) created_since_time\n- (String) created_until_time\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=product_id%3D%3D123`\n- `filter=contact_id%3D%3D567`\n- `filter=product_id%3D%3D123;contact_id%3D%3D567`",
+            "description": "Filter to apply, allowed fields are:\n- (String) product_id\n- (String) contact_id\n- (Boolean) paid\n- (String) created_since_time\n- (String) created_until_time\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\nword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=product_id%3D%3D123`\n- `filter=contact_id%3D%3D567`\n- `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567`",
             "required": false,
             "type": "string"
           },
@@ -5822,6 +6667,48 @@
       }
     },
     "/v2/orders/model/customFields/{custom_field_id}": {
+      "delete": {
+        "tags": [
+          "Pre-Release",
+          "Orders"
+        ],
+        "summary": "Delete an Order's Custom Field",
+        "description": "Deletes a Custom Field from Order.",
+        "operationId": "deleteOrderCustomFieldUsingDELETE",
+        "parameters": [
+          {
+            "name": "custom_field_id",
+            "in": "path",
+            "description": "custom_field_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
       "patch": {
         "tags": [
           "Pre-Release",
@@ -6111,6 +6998,85 @@
       }
     },
     "/v2/orders/{order_id}/payments": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Orders"
+        ],
+        "summary": "Retrieve Order Payments",
+        "description": "Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.",
+        "operationId": "listOrderPaymentsUsingGET_1",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter to apply, allowed fields are:\n- (String) invoice_id\n- (String) payment_id\n- (String) amount\n- (String) pay_status\n- (Boolean) skip_commission\n\nYou will need to apply the `==` operator to check the equality of one of the filters with your searched\n word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:\n- `filter=payment_id%3D%3D123`\n- `filter=pay_status%3D%3DAPPROVED`\n- `filter=invoice_id%3D%3D456%3Bskip_commission=true`\n",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute and direction to order items.\nOne of the following fields:\n- invoice_id\n- payment_id\n- amount\n- pay_time\n- pay_status\n- skip_commission\n- last_updated_time\nOne of the following directions:\n- asc\n- desc\n",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order_id",
+            "in": "path",
+            "description": "order_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Total number of items to return per page",
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "exclusiveMaximum": false,
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32",
+            "x-example": 0
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "Page token",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ListOrderPaymentsResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
       "post": {
         "tags": [
           "Orders"
@@ -6252,6 +7218,136 @@
             "schema": {
               "$ref": "#/definitions/ListProductsResponse"
             }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Pre-Release",
+          "Product"
+        ],
+        "summary": "Create a Product",
+        "description": "Creates a new product",
+        "operationId": "createProductUsingPOST_1",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "createProductRequest",
+            "description": "createProductRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateProductRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/RestV2Product"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v2/products/{product_id}": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Product"
+        ],
+        "summary": "Get a Product",
+        "description": "Gets a single Product",
+        "operationId": "getProductUsingGET",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "description": "product_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestV2Product"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Pre-Release",
+          "Product"
+        ],
+        "summary": "Delete a Product",
+        "description": "Deletes a single product",
+        "operationId": "deleteProductUsingDELETE_1",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "description": "product_id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
           },
           "401": {
             "description": "Unauthorized",
@@ -6697,6 +7793,78 @@
       }
     },
     "/v2/subscriptions": {
+      "get": {
+        "tags": [
+          "Pre-Release",
+          "Subscriptions"
+        ],
+        "summary": "List Subscriptions",
+        "description": "Retrieves a list of subscriptions using the specified search criteria.",
+        "operationId": "listSubscriptionsUsingGET_1",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter to apply, allowed fields are:\n- (String) contact_id\n- (String) subscription_plan_id\n",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute and direction to order items.\nOne of the following fields:\n- id\n- contact_id\n- subscription_plan_id\nOne of the following directions:\n- ASC\n- DESC\n",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Total number of items to return per page",
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "exclusiveMaximum": false,
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32",
+            "x-example": 0
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "Page token",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ListSubscriptionsResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "deprecated": false
+      },
       "post": {
         "tags": [
           "Subscriptions"
@@ -7278,7 +8446,7 @@
           {
             "name": "update_mask",
             "in": "query",
-            "description": "An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
             "required": false,
             "type": "array",
             "items": {
@@ -7434,7 +8602,7 @@
           {
             "name": "update_mask",
             "in": "query",
-            "description": "An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
             "required": false,
             "type": "array",
             "items": {
@@ -8379,7 +9547,7 @@
           {
             "name": "update_mask",
             "in": "query",
-            "description": "An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.",
+            "description": "An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.",
             "required": false,
             "type": "array",
             "items": {
@@ -9531,8 +10699,7 @@
       "type": "object",
       "properties": {
         "apply_to_commissions": {
-          "type": "integer",
-          "format": "int32"
+          "type": "boolean"
         },
         "category_id": {
           "type": "string"
@@ -9540,7 +10707,7 @@
         "criteria": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/criteria"
+            "$ref": "#/definitions/DiscountCriteria"
           }
         },
         "description": {
@@ -9571,25 +10738,6 @@
       },
       "title": "CategoryReference"
     },
-    "CheckListItem": {
-      "type": "object",
-      "properties": {
-        "description": {
-          "type": "string"
-        },
-        "id": {
-          "type": "string"
-        },
-        "order": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "required": {
-          "type": "boolean"
-        }
-      },
-      "title": "CheckListItem"
-    },
     "CheckListItemDetails": {
       "type": "object",
       "properties": {
@@ -9617,6 +10765,25 @@
         }
       },
       "title": "CheckListItemDetails"
+    },
+    "ChecklistItem": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "required": {
+          "type": "boolean"
+        }
+      },
+      "title": "ChecklistItem"
     },
     "Company": {
       "type": "object",
@@ -10388,7 +11555,7 @@
       },
       "title": "CreateOpportunityRequest"
     },
-    "CreateOpportunityStageCheckListItem": {
+    "CreateOpportunityStageChecklistItem": {
       "type": "object",
       "required": [
         "description",
@@ -10409,7 +11576,7 @@
           "example": false
         }
       },
-      "title": "CreateOpportunityStageCheckListItem"
+      "title": "CreateOpportunityStageChecklistItem"
     },
     "CreateOpportunityStageRequest": {
       "type": "object",
@@ -10420,10 +11587,10 @@
         "target_number_days"
       ],
       "properties": {
-        "check_list_items": {
+        "checklist_items": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CreateOpportunityStageCheckListItem"
+            "$ref": "#/definitions/CreateOpportunityStageChecklistItem"
           }
         },
         "name": {
@@ -10479,6 +11646,50 @@
         }
       },
       "title": "CreateOrPatchAffiliateLinkRequest"
+    },
+    "CreateOrderTotalDiscountRequest": {
+      "type": "object",
+      "required": [
+        "discount_type",
+        "discount_value",
+        "name"
+      ],
+      "properties": {
+        "apply_to_commissions": {
+          "type": "boolean"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_strategy": {
+          "type": "string",
+          "enum": [
+            "GROSS",
+            "NET"
+          ]
+        },
+        "discount_type": {
+          "type": "string",
+          "enum": [
+            "AMOUNT",
+            "PERCENT"
+          ]
+        },
+        "discount_value": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "CreateOrderTotalDiscountRequest"
     },
     "CreatePatchContactRequest": {
       "type": "object",
@@ -10704,6 +11915,66 @@
       },
       "title": "CreateProductCommissionProgramRequest"
     },
+    "CreateProductRequest": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "True means active, False means inactive"
+        },
+        "city_taxable": {
+          "type": "boolean",
+          "description": "If city-based taxes should be applied to this product"
+        },
+        "country_taxable": {
+          "type": "boolean",
+          "description": "If country-based taxes should be applied to this product"
+        },
+        "description": {
+          "type": "string",
+          "description": "Product long description"
+        },
+        "name": {
+          "type": "string",
+          "description": "Product name"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int64",
+          "description": "The product price. The value is in the currency’s smallest unit. e.g. $12.50 is 1250."
+        },
+        "short_description": {
+          "type": "string",
+          "description": "Product short description"
+        },
+        "sku": {
+          "type": "string",
+          "description": "Product SKU"
+        },
+        "state_taxable": {
+          "type": "boolean",
+          "description": "If state-based taxes should be applied to this product"
+        },
+        "storefront_hidden": {
+          "type": "boolean",
+          "description": "If the product should not be shown in the storefront"
+        },
+        "subscription_only": {
+          "type": "boolean",
+          "description": "If the product is a subscription-only product"
+        },
+        "taxable": {
+          "type": "boolean",
+          "description": "Whether or not the product should be taxed"
+        },
+        "weight": {
+          "type": "number",
+          "format": "double",
+          "description": "Product weight"
+        }
+      },
+      "title": "CreateProductRequest"
+    },
     "CreateReferralRequest": {
       "type": "object",
       "properties": {
@@ -10772,6 +12043,40 @@
         }
       },
       "title": "CreateRestOrderItemRequest"
+    },
+    "CreateShippingDiscountRequest": {
+      "type": "object",
+      "required": [
+        "discount_type",
+        "discount_value",
+        "name"
+      ],
+      "properties": {
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_type": {
+          "type": "string",
+          "enum": [
+            "AMOUNT",
+            "PERCENT"
+          ]
+        },
+        "discount_value": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "CreateShippingDiscountRequest"
     },
     "CreateSubscriptionCommissionProgramRequest": {
       "type": "object",
@@ -10892,6 +12197,37 @@
       },
       "title": "CreateTaskRequest"
     },
+    "CreateUpdateDiscountRequest": {
+      "type": "object",
+      "properties": {
+        "apply_to_commissions": {
+          "type": "boolean"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_percent": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        },
+        "product_category_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "CreateUpdateDiscountRequest"
+    },
     "CreateUpdateTagCategoryRequest": {
       "type": "object",
       "properties": {
@@ -10940,6 +12276,25 @@
         }
       },
       "title": "CreateUserRequestV2"
+    },
+    "CurrencyValue": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "The price amount in the smallest currency unit"
+        },
+        "currency_code": {
+          "type": "string",
+          "description": "Three-letter ISO currency code"
+        },
+        "formatted_amount": {
+          "type": "string",
+          "description": "The product amount formatted using the tenant's currency locale"
+        }
+      },
+      "title": "CurrencyValue"
     },
     "CustomField": {
       "type": "object",
@@ -11155,6 +12510,63 @@
         }
       },
       "title": "Discount"
+    },
+    "DiscountCriteria": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "criteria_id": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string",
+          "enum": [
+            "LESS_THAN",
+            "GREATER_THAN"
+          ]
+        },
+        "plan_id": {
+          "type": "string"
+        },
+        "product_id": {
+          "type": "string"
+        },
+        "product_quantity_max": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "product_quantity_min": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "range_end_time": {
+          "type": "string"
+        },
+        "range_start_time": {
+          "type": "string"
+        },
+        "subscription_quantity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "total_amount": {
+          "type": "number",
+          "format": "double"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "DATE_RANGE",
+            "PROMO_CODE",
+            "PRODUCT",
+            "SUBSCRIPTION_PLAN",
+            "ORDER_TOTAL"
+          ]
+        }
+      },
+      "title": "DiscountCriteria"
     },
     "EmailAddress": {
       "type": "object",
@@ -11659,6 +13071,9 @@
         "create_time": {
           "type": "string"
         },
+        "created_by_user_id": {
+          "type": "string"
+        },
         "id": {
           "type": "string"
         },
@@ -11844,6 +13259,52 @@
         }
       },
       "title": "HistoricalCounts"
+    },
+    "InvoiceOrderPayment": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "id": {
+          "type": "string"
+        },
+        "invoice_id": {
+          "type": "string"
+        },
+        "last_updated_time": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "pay_status": {
+          "type": "string",
+          "enum": [
+            "MANUAL_PAID",
+            "REFUNDED",
+            "VOIDED",
+            "PAYPAL_PAID",
+            "APPROVED",
+            "FAILED",
+            "ERROR",
+            "PENDING"
+          ]
+        },
+        "pay_time": {
+          "type": "string"
+        },
+        "payment_id": {
+          "type": "string"
+        },
+        "refund_invoice_payment_id": {
+          "type": "string"
+        },
+        "skip_commission": {
+          "type": "boolean"
+        }
+      },
+      "title": "InvoiceOrderPayment"
     },
     "Item": {
       "type": "object",
@@ -12270,6 +13731,21 @@
       },
       "title": "ListLeadSourcesResponse"
     },
+    "ListNoteTemplateResponse": {
+      "type": "object",
+      "properties": {
+        "next_page_token": {
+          "type": "string"
+        },
+        "note_templates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NoteTemplate"
+          }
+        }
+      },
+      "title": "ListNoteTemplateResponse"
+    },
     "ListNotesResponse": {
       "type": "object",
       "properties": {
@@ -12314,6 +13790,36 @@
         }
       },
       "title": "ListOpportunityStagesResponse"
+    },
+    "ListOrderPaymentsResponse": {
+      "type": "object",
+      "properties": {
+        "invoice_order_payments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InvoiceOrderPayment"
+          }
+        },
+        "next_page_token": {
+          "type": "string"
+        }
+      },
+      "title": "ListOrderPaymentsResponse"
+    },
+    "ListOrderTotalDiscountsResponse": {
+      "type": "object",
+      "properties": {
+        "next_page_token": {
+          "type": "string"
+        },
+        "order_total_discounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OrderTotalDiscount"
+          }
+        }
+      },
+      "title": "ListOrderTotalDiscountsResponse"
     },
     "ListOrders": {
       "type": "object",
@@ -12442,6 +13948,21 @@
       },
       "title": "ListRestShippingMethodsResponse"
     },
+    "ListShippingDiscountsResponse": {
+      "type": "object",
+      "properties": {
+        "next_page_token": {
+          "type": "string"
+        },
+        "shipping_discounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShippingDiscount"
+          }
+        }
+      },
+      "title": "ListShippingDiscountsResponse"
+    },
     "ListSubscriptionPlansResponse": {
       "type": "object",
       "properties": {
@@ -12456,6 +13977,21 @@
         }
       },
       "title": "ListSubscriptionPlansResponse"
+    },
+    "ListSubscriptionsResponse": {
+      "type": "object",
+      "properties": {
+        "next_page_token": {
+          "type": "string"
+        },
+        "subscriptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RestSubscriptionV2"
+          }
+        }
+      },
+      "title": "ListSubscriptionsResponse"
     },
     "ListTagCategoriesResponse": {
       "type": "object",
@@ -12556,6 +14092,9 @@
         "create_time": {
           "type": "string"
         },
+        "created_by_user_id": {
+          "type": "string"
+        },
         "id": {
           "type": "string"
         },
@@ -12576,6 +14115,42 @@
         }
       },
       "title": "Note"
+    },
+    "NoteTemplate": {
+      "type": "object",
+      "properties": {
+        "action_type": {
+          "type": "string",
+          "enum": [
+            "APPOINTMENT",
+            "CALL",
+            "EMAIL",
+            "FAX",
+            "LETTER",
+            "OTHER"
+          ]
+        },
+        "assignment_user_id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "notify_users": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "title": "NoteTemplate"
     },
     "ObjectModel": {
       "type": "object",
@@ -12680,6 +14255,48 @@
         }
       },
       "title": "OrderItemTax"
+    },
+    "OrderTotalDiscount": {
+      "type": "object",
+      "properties": {
+        "apply_to_commissions": {
+          "type": "boolean"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_id": {
+          "type": "string"
+        },
+        "discount_strategy": {
+          "type": "string",
+          "enum": [
+            "GROSS",
+            "NET"
+          ]
+        },
+        "discount_type": {
+          "type": "string",
+          "enum": [
+            "AMOUNT",
+            "PERCENT"
+          ]
+        },
+        "discount_value": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "OrderTotalDiscount"
     },
     "Origin": {
       "type": "object",
@@ -13122,6 +14739,94 @@
       },
       "title": "ProductCommissionProgram"
     },
+    "ProductFixedOption": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "An internal code to reference the option value"
+        },
+        "price_adjustment": {
+          "type": "number",
+          "format": "double",
+          "description": "Positive value indicates additional amount added to the original price. Negative value indicates subtraction from the original price."
+        },
+        "value": {
+          "type": "string",
+          "description": "The displayable label given to the option"
+        }
+      },
+      "title": "ProductFixedOption"
+    },
+    "ProductOptions": {
+      "type": "object",
+      "properties": {
+        "fixed_options": {
+          "type": "array",
+          "description": "List of option values for the fixed option",
+          "items": {
+            "$ref": "#/definitions/ProductFixedOption"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "The option name"
+        },
+        "required": {
+          "type": "boolean",
+          "description": "If the user is required to select/fill in an option for the product"
+        },
+        "type": {
+          "type": "string",
+          "description": "Can be FIXED or VARIABLE. If FIXED, then fixed_options will be returned. If VARIABLE, then variable_setting will be returned.",
+          "enum": [
+            "FIXED",
+            "VARIABLE"
+          ]
+        },
+        "variable_setting": {
+          "description": "The option is a user-defined free-form field. The settings define the restrictions on what can be entered.",
+          "$ref": "#/definitions/ProductVariableSetting"
+        }
+      },
+      "title": "ProductOptions"
+    },
+    "ProductVariableSetting": {
+      "type": "object",
+      "properties": {
+        "contain_spaces": {
+          "type": "boolean",
+          "description": "If spaces are allowed for the option"
+        },
+        "contains": {
+          "type": "string",
+          "description": "Requires the value (excluding start and end) to contain given type. Can be LETTER, NUMBER, or BOTH."
+        },
+        "end_with": {
+          "type": "string",
+          "description": "Requires the value to end with the given type. Can be LETTER, NUMBER, or BOTH."
+        },
+        "max_chars": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Max allowable chars. Its value must be greater than min_chars"
+        },
+        "min_chars": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Minimum allowable characters"
+        },
+        "start_with": {
+          "type": "string",
+          "description": "Requires the value to start with the given type. Can be LETTER, NUMBER, or BOTH."
+        },
+        "validation_msg": {
+          "type": "string",
+          "description": "Customized validation message to display when option criteria aren’t met"
+        }
+      },
+      "title": "ProductVariableSetting"
+    },
     "Provinces": {
       "type": "object",
       "properties": {
@@ -13368,10 +15073,10 @@
     "RestOpportunityStage": {
       "type": "object",
       "properties": {
-        "check_list_items": {
+        "checklist_items": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CheckListItem"
+            "$ref": "#/definitions/ChecklistItem"
           }
         },
         "created_time": {
@@ -13512,7 +15217,7 @@
         "type": {
           "type": "string",
           "enum": [
-            "FIXED_LIST",
+            "FIXED",
             "VARIABLE"
           ]
         },
@@ -13820,13 +15525,13 @@
         },
         "cycle": {
           "type": "string",
-          "example": "YEAR",
+          "example": "YEARLY",
           "description": "The interval at which the customer is charged for the subscription.",
           "enum": [
-            "YEAR",
-            "MONTH",
-            "WEEK",
-            "DAY_OF_YEAR"
+            "DAILY",
+            "WEEKLY",
+            "MONTHLY",
+            "YEARLY"
           ]
         },
         "description": {
@@ -13950,6 +15655,90 @@
       },
       "title": "RestV2PatchOrderRequest"
     },
+    "RestV2Product": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "True means active, False means inactive"
+        },
+        "categories": {
+          "type": "array",
+          "description": "List of category ids to indicate which categories this product will belong to. Can be empty.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "city_taxable": {
+          "type": "boolean",
+          "description": "If city-based taxes should be applied to this product"
+        },
+        "country_taxable": {
+          "type": "boolean",
+          "description": "If country-based taxes should be applied to this product"
+        },
+        "description": {
+          "type": "string",
+          "description": "Product long description"
+        },
+        "id": {
+          "type": "string",
+          "description": "The product ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Product name"
+        },
+        "options": {
+          "type": "array",
+          "description": "List of product options. Can be empty.",
+          "items": {
+            "$ref": "#/definitions/ProductOptions"
+          }
+        },
+        "price": {
+          "description": "The product price",
+          "$ref": "#/definitions/CurrencyValue"
+        },
+        "short_description": {
+          "type": "string",
+          "description": "Product short description"
+        },
+        "sku": {
+          "type": "string",
+          "description": "Product SKU"
+        },
+        "state_taxable": {
+          "type": "boolean",
+          "description": "If state-based taxes should be applied to this product"
+        },
+        "storefront_hidden": {
+          "type": "boolean",
+          "description": "If the product should not be shown in the storefront"
+        },
+        "subscription_only": {
+          "type": "boolean",
+          "description": "If the product is a subscription-only product"
+        },
+        "subscription_plans": {
+          "type": "array",
+          "description": "List of subscription plans associated with the product. Can be empty.",
+          "items": {
+            "$ref": "#/definitions/SubscriptionPlan"
+          }
+        },
+        "taxable": {
+          "type": "boolean",
+          "description": "Whether or not the product should be taxed"
+        },
+        "weight": {
+          "type": "number",
+          "format": "double",
+          "description": "Product weight"
+        }
+      },
+      "title": "RestV2Product"
+    },
     "RestV2Subscription": {
       "type": "object",
       "properties": {
@@ -14058,6 +15847,38 @@
         }
       },
       "title": "SetDefaultCommissionProgramResponse"
+    },
+    "ShippingDiscount": {
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_id": {
+          "type": "string"
+        },
+        "discount_type": {
+          "type": "string",
+          "enum": [
+            "AMOUNT",
+            "PERCENT"
+          ]
+        },
+        "discount_value": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "ShippingDiscount"
     },
     "ShippingInformation": {
       "type": "object",
@@ -14182,7 +16003,7 @@
     "StageDetails": {
       "type": "object",
       "properties": {
-        "check_list_items": {
+        "checklist_items": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/CheckListItemDetails"
@@ -14238,6 +16059,47 @@
         }
       },
       "title": "SubscriptionCommissionProgram"
+    },
+    "SubscriptionPlan": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "If the subscription plan should be active/available for purchase"
+        },
+        "billing_cycle": {
+          "type": "string",
+          "description": "How frequent to bill. Can be: DAILY, WEEKLY, MONTHLY, or YEARLY"
+        },
+        "billing_frequency": {
+          "type": "integer",
+          "format": "int32",
+          "description": "How many times per billing cycle to bill"
+        },
+        "id": {
+          "type": "string",
+          "description": "The subscription plan id"
+        },
+        "number_of_cycles": {
+          "type": "integer",
+          "format": "int32",
+          "description": "How many billing cycles to bill. Optional field i.e. can be no value or 0."
+        },
+        "order_index": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Determines the order in which the plan will be displayed"
+        },
+        "plan_price": {
+          "description": "The price of the subscription plan",
+          "$ref": "#/definitions/CurrencyValue"
+        },
+        "prorate": {
+          "type": "boolean",
+          "description": "If the subscription plan should allow prorating"
+        }
+      },
+      "title": "SubscriptionPlan"
     },
     "Tag": {
       "type": "object",
@@ -14454,6 +16316,9 @@
         "create_time": {
           "type": "string"
         },
+        "created_by_user_id": {
+          "type": "string"
+        },
         "id": {
           "type": "string"
         },
@@ -14474,6 +16339,124 @@
         }
       },
       "title": "UpdateNoteResponse"
+    },
+    "UpdateOpportunityStageChecklistItem": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "required": {
+          "type": "boolean"
+        }
+      },
+      "title": "UpdateOpportunityStageChecklistItem"
+    },
+    "UpdateOpportunityStageRequest": {
+      "type": "object",
+      "properties": {
+        "checklist_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UpdateOpportunityStageChecklistItem"
+          }
+        },
+        "name": {
+          "type": "string",
+          "example": "Qualified"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "probability": {
+          "type": "integer",
+          "format": "int32",
+          "example": 2,
+          "description": "must be an integer between 0 and 100."
+        },
+        "target_number_days": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Value should be >=0."
+        }
+      },
+      "title": "UpdateOpportunityStageRequest"
+    },
+    "UpdateOrderTotalDiscountRequest": {
+      "type": "object",
+      "properties": {
+        "apply_to_commissions": {
+          "type": "boolean"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_strategy": {
+          "type": "string",
+          "enum": [
+            "GROSS",
+            "NET"
+          ]
+        },
+        "discount_type": {
+          "type": "string",
+          "enum": [
+            "AMOUNT",
+            "PERCENT"
+          ]
+        },
+        "discount_value": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "UpdateOrderTotalDiscountRequest"
+    },
+    "UpdateShippingDiscountRequest": {
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiscountCriteria"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "discount_type": {
+          "type": "string",
+          "enum": [
+            "AMOUNT",
+            "PERCENT"
+          ]
+        },
+        "discount_value": {
+          "type": "number",
+          "format": "double"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "UpdateShippingDiscountRequest"
     },
     "UpdateTagCategoryResponse": {
       "type": "object",
@@ -14661,31 +16644,6 @@
         }
       },
       "title": "User"
-    },
-    "criteria": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "string"
-        },
-        "criteria_id": {
-          "type": "string"
-        },
-        "end_range_date": {
-          "type": "string"
-        },
-        "start_range_date": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "date range",
-            "promo code"
-          ]
-        }
-      },
-      "title": "criteria"
     }
   }
 }

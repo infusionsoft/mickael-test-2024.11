@@ -676,7 +676,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
     new GuzzleHttp\Client()
 );
 $tag_category_id = 'tag_category_id_example'; // string | tag_category_id
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 $tag_category = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
 
 try {
@@ -692,7 +692,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_category_id** | **string**| tag_category_id | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 | **tag_category** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
@@ -735,7 +735,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
     new GuzzleHttp\Client()
 );
 $tag_id = 'tag_id_example'; // string | tag_id
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 $tag = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
 
 try {
@@ -751,7 +751,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_id** | **string**| tag_id | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 | **tag** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type

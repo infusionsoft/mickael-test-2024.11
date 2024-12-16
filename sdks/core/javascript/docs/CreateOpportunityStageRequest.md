@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**checkListItems** | [**[CreateOpportunityStageCheckListItem]**](CreateOpportunityStageCheckListItem.md) |  | [optional] 
+**checklistItems** | [**[CreateOpportunityStageChecklistItem]**](CreateOpportunityStageChecklistItem.md) |  | [optional] 
 **name** | **String** |  | 
 **order** | **Number** |  | 
 **probability** | **Number** |  | 

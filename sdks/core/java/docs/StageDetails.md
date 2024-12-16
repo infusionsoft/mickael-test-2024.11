@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**checkListItems** | [**List&lt;CheckListItemDetails&gt;**](CheckListItemDetails.md) |  |  [optional] |
+|**checklistItems** | [**List&lt;CheckListItemDetails&gt;**](CheckListItemDetails.md) |  |  [optional] |
 |**probability** | **Integer** |  |  [optional] |
 |**stageOrder** | **Integer** |  |  [optional] |
 |**targetNumDays** | **Integer** |  |  [optional] |

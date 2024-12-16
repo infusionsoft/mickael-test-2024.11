@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**check_list_items** | [**\Com\Keap\Sdk\Core\Model\CheckListItem[]**](CheckListItem.md) |  | [optional]
+**checklist_items** | [**\Com\Keap\Sdk\Core\Model\ChecklistItem[]**](ChecklistItem.md) |  | [optional]
 **created_time** | **string** |  | [optional]
 **id** | **string** |  | [optional]
 **name** | **string** |  | [optional]

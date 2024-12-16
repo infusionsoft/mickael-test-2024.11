@@ -11,6 +11,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CancelSubscriptionUsingPOST**](PreReleaseApi.md#cancelsubscriptionusingpost) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
 | [**CreateAffiliateCustomFieldUsingPOST**](PreReleaseApi.md#createaffiliatecustomfieldusingpost) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field |
 | [**CreateDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createdefaultcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program |
+| [**CreateDiscountUsingPOST**](PreReleaseApi.md#creatediscountusingpost) | **POST** /v2/discounts/productCategories | Create a Category Discount |
+| [**CreateDiscountUsingPOST1**](PreReleaseApi.md#creatediscountusingpost1) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
 | [**CreateFunnelIntegrationUsingPOST**](PreReleaseApi.md#createfunnelintegrationusingpost) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**CreateIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createintegrationtriggereventusingpost) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
 | [**CreateLeadSourceUsingPOST**](PreReleaseApi.md#createleadsourceusingpost) | **POST** /v2/leadsources | Create a Lead Source |
@@ -20,7 +22,9 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateOpportunityUsingPOST1**](PreReleaseApi.md#createopportunityusingpost1) | **POST** /v2/opportunities | Create an Opportunity |
 | [**CreateOrderCustomFieldUsingPOST**](PreReleaseApi.md#createordercustomfieldusingpost) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field |
 | [**CreateOrderItemsOnOrderUsingPOST1**](PreReleaseApi.md#createorderitemsonorderusingpost1) | **POST** /v2/orders/{order_id}/items | Create an Order Item |
+| [**CreateOrderTotalDiscountUsingPOST**](PreReleaseApi.md#createordertotaldiscountusingpost) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount |
 | [**CreateOrderUsingPOST1**](PreReleaseApi.md#createorderusingpost1) | **POST** /v2/orders | Create an Order |
+| [**CreateProductUsingPOST1**](PreReleaseApi.md#createproductusingpost1) | **POST** /v2/products | Create a Product |
 | [**CreateRedirectLinkUsingPOST**](PreReleaseApi.md#createredirectlinkusingpost) | **POST** /v2/affiliates/redirects | Create an Affiliate Link |
 | [**CreateReferralUsingPOST**](PreReleaseApi.md#createreferralusingpost) | **POST** /v2/referrals | Create a Referral |
 | [**CreateSubscriptionCustomFieldUsingPOST**](PreReleaseApi.md#createsubscriptioncustomfieldusingpost) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
@@ -31,10 +35,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**DeleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteaffiliateusingdelete) | **DELETE** /v2/affiliates/{id} | Delete Affiliate |
 | [**DeleteDiscountUsingDELETE**](PreReleaseApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**DeleteDiscountUsingDELETE1**](PreReleaseApi.md#deletediscountusingdelete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
+| [**DeleteDiscountUsingDELETE2**](PreReleaseApi.md#deletediscountusingdelete2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
 | [**DeleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**DeleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteopportunitystageusingdelete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**DeleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteopportunityusingdelete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
+| [**DeleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteordercustomfieldusingdelete) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field |
+| [**DeleteOrderTotalDiscountUsingDELETE**](PreReleaseApi.md#deleteordertotaldiscountusingdelete) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount |
 | [**DeleteOrderUsingDELETE1**](PreReleaseApi.md#deleteorderusingdelete1) | **DELETE** /v2/orders/{order_id} | Delete an Order |
+| [**DeleteProductUsingDELETE1**](PreReleaseApi.md#deleteproductusingdelete1) | **DELETE** /v2/products/{product_id} | Delete a Product |
 | [**DeleteRedirectLinkUsingDELETE**](PreReleaseApi.md#deleteredirectlinkusingdelete) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link |
 | [**DeleteTaskCustomFieldUsingDELETE**](PreReleaseApi.md#deletetaskcustomfieldusingdelete) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field |
 | [**DeleteTaskUsingDELETE1**](PreReleaseApi.md#deletetaskusingdelete1) | **DELETE** /v2/tasks/{task_id} | Delete a Task |
@@ -44,9 +52,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**GetCommissionProgramUsingGET**](PreReleaseApi.md#getcommissionprogramusingget) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program |
 | [**GetContactsBySearchTermUsingGET**](PreReleaseApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts |
 | [**GetDiscountUsingGET**](PreReleaseApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**GetDiscountUsingGET1**](PreReleaseApi.md#getdiscountusingget1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
 | [**GetOpportunityStageUsingGET**](PreReleaseApi.md#getopportunitystageusingget) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**GetOpportunityUsingGET1**](PreReleaseApi.md#getopportunityusingget1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
+| [**GetOrderTotalDiscountUsingGET**](PreReleaseApi.md#getordertotaldiscountusingget) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount |
 | [**GetOrderUsingGET1**](PreReleaseApi.md#getorderusingget1) | **GET** /v2/orders/{order_id} | Retrieve an Order |
+| [**GetProductUsingGET**](PreReleaseApi.md#getproductusingget) | **GET** /v2/products/{product_id} | Get a Product |
 | [**GetRedirectLinkUsingGET**](PreReleaseApi.md#getredirectlinkusingget) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link |
 | [**GetTaskUsingGET1**](PreReleaseApi.md#gettaskusingget1) | **GET** /v2/tasks/{task_id} | Retrieve a Task |
 | [**GetUserByIdUsingGET**](PreReleaseApi.md#getuserbyidusingget) | **GET** /v2/users/{user_id} | Get User |
@@ -55,16 +66,21 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**ListAffiliateCommissionProgramsUsingGET**](PreReleaseApi.md#listaffiliatecommissionprogramsusingget) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs |
 | [**ListAffiliateLinksUsingGET**](PreReleaseApi.md#listaffiliatelinksusingget) | **GET** /v2/affiliates/redirects | List Affiliate Links |
 | [**ListCountriesUsingGET2**](PreReleaseApi.md#listcountriesusingget2) | **GET** /v2/locales/countries | List Countries |
+| [**ListDiscountsUsingGET**](PreReleaseApi.md#listdiscountsusingget) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
 | [**ListLandingPagesUsingGET**](PreReleaseApi.md#listlandingpagesusingget) | **GET** /v2/landingpages | List Landing Pages |
 | [**ListLeadSourcesUsingGET**](PreReleaseApi.md#listleadsourcesusingget) | **GET** /v2/leadsources | List Lead Sources |
 | [**ListMerchantsUsingGET**](PreReleaseApi.md#listmerchantsusingget) | **GET** /v2/merchants | List Merchant accounts |
+| [**ListNoteTemplatesUsingGET**](PreReleaseApi.md#listnotetemplatesusingget) | **GET** /v2/notes/templates | Retrieve Note Templates |
 | [**ListOpportunitiesUsingGET1**](PreReleaseApi.md#listopportunitiesusingget1) | **GET** /v2/opportunities | List Opportunities |
 | [**ListOpportunityStagesUsingGET**](PreReleaseApi.md#listopportunitystagesusingget) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
+| [**ListOrderPaymentsUsingGET1**](PreReleaseApi.md#listorderpaymentsusingget1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments |
+| [**ListOrderTotalDiscountsUsingGET**](PreReleaseApi.md#listordertotaldiscountsusingget) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts |
 | [**ListOrdersUsingGET1**](PreReleaseApi.md#listordersusingget1) | **GET** /v2/orders | List orders |
 | [**ListProductsUsingGET1**](PreReleaseApi.md#listproductsusingget1) | **GET** /v2/products | List Products |
 | [**ListProvincesForCountryUsingGET**](PreReleaseApi.md#listprovincesforcountryusingget) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces |
 | [**ListShippingMethodsUsingGET**](PreReleaseApi.md#listshippingmethodsusingget) | **GET** /v2/shipping | List Shipping methods |
 | [**ListSubscriptionPlansUsingGET**](PreReleaseApi.md#listsubscriptionplansusingget) | **GET** /v2/subscriptionPlans | List Subscription Plans |
+| [**ListSubscriptionsUsingGET1**](PreReleaseApi.md#listsubscriptionsusingget1) | **GET** /v2/subscriptions | List Subscriptions |
 | [**ListSummariesUsingGET1**](PreReleaseApi.md#listsummariesusingget1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries |
 | [**ListTasksUsingGET1**](PreReleaseApi.md#listtasksusingget1) | **GET** /v2/tasks | List Tasks |
 | [**ListUsersUsingGET1**](PreReleaseApi.md#listusersusingget1) | **GET** /v2/users | List Users |
@@ -81,10 +97,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**RetrieveSubscriptionCustomFieldModelUsingGET**](PreReleaseApi.md#retrievesubscriptioncustomfieldmodelusingget) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**RetrieveTaskModelUsingGET1**](PreReleaseApi.md#retrievetaskmodelusingget1) | **GET** /v2/tasks/model | Retrieve Task Model |
 | [**UpdateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateaffiliatecustomfieldusingpatch) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field |
+| [**UpdateDiscountUsingPATCH**](PreReleaseApi.md#updatediscountusingpatch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
+| [**UpdateDiscountUsingPATCH1**](PreReleaseApi.md#updatediscountusingpatch1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
 | [**UpdateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updatenotescustomfieldusingpatch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**UpdateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateopportunitycustomfieldusingpatch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**UpdateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateopportunitystageusingpatch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
 | [**UpdateOpportunityUsingPATCH**](PreReleaseApi.md#updateopportunityusingpatch) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 | [**UpdateOrderCustomFieldUsingPATCH**](PreReleaseApi.md#updateordercustomfieldusingpatch) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field |
+| [**UpdateOrderTotalDiscountUsingPATCH**](PreReleaseApi.md#updateordertotaldiscountusingpatch) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount |
 | [**UpdateRedirectLinkUsingPATCH**](PreReleaseApi.md#updateredirectlinkusingpatch) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link |
 | [**UpdateSubscriptionCustomFieldUsingPATCH**](PreReleaseApi.md#updatesubscriptioncustomfieldusingpatch) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 | [**UpdateTaskCustomFieldUsingPATCH**](PreReleaseApi.md#updatetaskcustomfieldusingpatch) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field |
@@ -722,6 +742,192 @@ catch (ApiException e)
 ### Return type
 
 [**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="creatediscountusingpost"></a>
+# **CreateDiscountUsingPOST**
+> CategoryDiscount CreateDiscountUsingPOST (CreateUpdateDiscountRequest request)
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateDiscountUsingPOSTExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+
+            try
+            {
+                // Create a Category Discount
+                CategoryDiscount result = apiInstance.CreateDiscountUsingPOST(request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.CreateDiscountUsingPOST: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateDiscountUsingPOSTWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a Category Discount
+    ApiResponse<CategoryDiscount> response = apiInstance.CreateDiscountUsingPOSTWithHttpInfo(request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.CreateDiscountUsingPOSTWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md) | request |  |
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="creatediscountusingpost1"></a>
+# **CreateDiscountUsingPOST1**
+> ShippingDiscount CreateDiscountUsingPOST1 (CreateShippingDiscountRequest request)
+
+Create a Shipping Discount
+
+Creates a Shipping Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateDiscountUsingPOST1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+
+            try
+            {
+                // Create a Shipping Discount
+                ShippingDiscount result = apiInstance.CreateDiscountUsingPOST1(request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.CreateDiscountUsingPOST1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateDiscountUsingPOST1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a Shipping Discount
+    ApiResponse<ShippingDiscount> response = apiInstance.CreateDiscountUsingPOST1WithHttpInfo(request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.CreateDiscountUsingPOST1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md) | request |  |
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
 
 ### Authorization
 
@@ -1575,6 +1781,99 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="createordertotaldiscountusingpost"></a>
+# **CreateOrderTotalDiscountUsingPOST**
+> OrderTotalDiscount CreateOrderTotalDiscountUsingPOST (CreateOrderTotalDiscountRequest request)
+
+Create an Order Total Discount
+
+Creates an Order Total Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateOrderTotalDiscountUsingPOSTExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+
+            try
+            {
+                // Create an Order Total Discount
+                OrderTotalDiscount result = apiInstance.CreateOrderTotalDiscountUsingPOST(request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.CreateOrderTotalDiscountUsingPOST: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateOrderTotalDiscountUsingPOSTWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create an Order Total Discount
+    ApiResponse<OrderTotalDiscount> response = apiInstance.CreateOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.CreateOrderTotalDiscountUsingPOSTWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md) | request |  |
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="createorderusingpost1"></a>
 # **CreateOrderUsingPOST1**
 > RestV2Order CreateOrderUsingPOST1 (RestCreateOrderRequest createOrderRequest)
@@ -1648,6 +1947,99 @@ catch (ApiException e)
 ### Return type
 
 [**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="createproductusingpost1"></a>
+# **CreateProductUsingPOST1**
+> RestV2Product CreateProductUsingPOST1 (CreateProductRequest createProductRequest)
+
+Create a Product
+
+Creates a new product
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateProductUsingPOST1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var createProductRequest = new CreateProductRequest(); // CreateProductRequest | createProductRequest
+
+            try
+            {
+                // Create a Product
+                RestV2Product result = apiInstance.CreateProductUsingPOST1(createProductRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.CreateProductUsingPOST1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateProductUsingPOST1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a Product
+    ApiResponse<RestV2Product> response = apiInstance.CreateProductUsingPOST1WithHttpInfo(createProductRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.CreateProductUsingPOST1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createProductRequest** | [**CreateProductRequest**](CreateProductRequest.md) | createProductRequest |  |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -2586,6 +2978,96 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="deletediscountusingdelete2"></a>
+# **DeleteDiscountUsingDELETE2**
+> void DeleteDiscountUsingDELETE2 (string discountId)
+
+Delete a Shipping Discount
+
+Deletes a specified Shipping Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteDiscountUsingDELETE2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Delete a Shipping Discount
+                apiInstance.DeleteDiscountUsingDELETE2(discountId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteDiscountUsingDELETE2: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteDiscountUsingDELETE2WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete a Shipping Discount
+    apiInstance.DeleteDiscountUsingDELETE2WithHttpInfo(discountId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteDiscountUsingDELETE2WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="deletefunnelintegrationusingpost"></a>
 # **DeleteFunnelIntegrationUsingPOST**
 > void DeleteFunnelIntegrationUsingPOST (DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest)
@@ -2855,6 +3337,186 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="deleteordercustomfieldusingdelete"></a>
+# **DeleteOrderCustomFieldUsingDELETE**
+> void DeleteOrderCustomFieldUsingDELETE (string customFieldId)
+
+Delete an Order's Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteOrderCustomFieldUsingDELETEExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var customFieldId = "customFieldId_example";  // string | custom_field_id
+
+            try
+            {
+                // Delete an Order's Custom Field
+                apiInstance.DeleteOrderCustomFieldUsingDELETE(customFieldId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteOrderCustomFieldUsingDELETE: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteOrderCustomFieldUsingDELETEWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete an Order's Custom Field
+    apiInstance.DeleteOrderCustomFieldUsingDELETEWithHttpInfo(customFieldId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteOrderCustomFieldUsingDELETEWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **customFieldId** | **string** | custom_field_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="deleteordertotaldiscountusingdelete"></a>
+# **DeleteOrderTotalDiscountUsingDELETE**
+> void DeleteOrderTotalDiscountUsingDELETE (string discountId)
+
+Delete an Order Total Discount
+
+Deletes a specified Order Total Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteOrderTotalDiscountUsingDELETEExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Delete an Order Total Discount
+                apiInstance.DeleteOrderTotalDiscountUsingDELETE(discountId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteOrderTotalDiscountUsingDELETE: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteOrderTotalDiscountUsingDELETEWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete an Order Total Discount
+    apiInstance.DeleteOrderTotalDiscountUsingDELETEWithHttpInfo(discountId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteOrderTotalDiscountUsingDELETEWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="deleteorderusingdelete1"></a>
 # **DeleteOrderUsingDELETE1**
 > void DeleteOrderUsingDELETE1 (string orderId)
@@ -2920,6 +3582,96 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **orderId** | **string** | order_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="deleteproductusingdelete1"></a>
+# **DeleteProductUsingDELETE1**
+> void DeleteProductUsingDELETE1 (string productId)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteProductUsingDELETE1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var productId = "productId_example";  // string | product_id
+
+            try
+            {
+                // Delete a Product
+                apiInstance.DeleteProductUsingDELETE1(productId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteProductUsingDELETE1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteProductUsingDELETE1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete a Product
+    apiInstance.DeleteProductUsingDELETE1WithHttpInfo(productId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteProductUsingDELETE1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **productId** | **string** | product_id |  |
 
 ### Return type
 
@@ -3782,6 +4534,100 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="getdiscountusingget1"></a>
+# **GetDiscountUsingGET1**
+> ShippingDiscount GetDiscountUsingGET1 (string discountId)
+
+Retrieve a Shipping Discount
+
+Retrieves a Shipping Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetDiscountUsingGET1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Retrieve a Shipping Discount
+                ShippingDiscount result = apiInstance.GetDiscountUsingGET1(discountId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetDiscountUsingGET1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetDiscountUsingGET1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve a Shipping Discount
+    ApiResponse<ShippingDiscount> response = apiInstance.GetDiscountUsingGET1WithHttpInfo(discountId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetDiscountUsingGET1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="getopportunitystageusingget"></a>
 # **GetOpportunityStageUsingGET**
 > RestOpportunityStage GetOpportunityStageUsingGET (string stageId)
@@ -3970,6 +4816,100 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="getordertotaldiscountusingget"></a>
+# **GetOrderTotalDiscountUsingGET**
+> OrderTotalDiscount GetOrderTotalDiscountUsingGET (string discountId)
+
+Retrieve an Order Total Discount
+
+Retrieves an Order Total Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetOrderTotalDiscountUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+
+            try
+            {
+                // Retrieve an Order Total Discount
+                OrderTotalDiscount result = apiInstance.GetOrderTotalDiscountUsingGET(discountId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetOrderTotalDiscountUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetOrderTotalDiscountUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an Order Total Discount
+    ApiResponse<OrderTotalDiscount> response = apiInstance.GetOrderTotalDiscountUsingGETWithHttpInfo(discountId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetOrderTotalDiscountUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="getorderusingget1"></a>
 # **GetOrderUsingGET1**
 > RestV2Order GetOrderUsingGET1 (string orderId)
@@ -4043,6 +4983,100 @@ catch (ApiException e)
 ### Return type
 
 [**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getproductusingget"></a>
+# **GetProductUsingGET**
+> RestV2Product GetProductUsingGET (string productId)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetProductUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var productId = "productId_example";  // string | product_id
+
+            try
+            {
+                // Get a Product
+                RestV2Product result = apiInstance.GetProductUsingGET(productId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetProductUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetProductUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get a Product
+    ApiResponse<RestV2Product> response = apiInstance.GetProductUsingGETWithHttpInfo(productId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetProductUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **productId** | **string** | product_id |  |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -4816,6 +5850,108 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="listdiscountsusingget"></a>
+# **ListDiscountsUsingGET**
+> ListShippingDiscountsResponse ListDiscountsUsingGET (List<string>? fields = null, string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List all Shipping Discounts
+
+Retrieves all Shipping Discounts
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListDiscountsUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var fields = new List<string>?(); // List<string>? | TODO: PAPI-1449 (optional) 
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld`  (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items by. E.g. `given_name desc` (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List all Shipping Discounts
+                ListShippingDiscountsResponse result = apiInstance.ListDiscountsUsingGET(fields, filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListDiscountsUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListDiscountsUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List all Shipping Discounts
+    ApiResponse<ListShippingDiscountsResponse> response = apiInstance.ListDiscountsUsingGETWithHttpInfo(fields, filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListDiscountsUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fields** | [**List&lt;string&gt;?**](string.md) | TODO: PAPI-1449 | [optional]  |
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60;  | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="listlandingpagesusingget"></a>
 # **ListLandingPagesUsingGET**
 > ListLandingPagesResponse ListLandingPagesUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
@@ -5041,7 +6177,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc` (optional) 
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc` (optional) 
             var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc (optional) 
             var pageSize = 0;  // int? | Total number of items to return per page (optional) 
             var pageToken = "pageToken_example";  // string? | Page token (optional) 
@@ -5087,7 +6223,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **filter** | **string?** | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | [optional]  |
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | [optional]  |
 | **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | [optional]  |
 | **pageSize** | **int?** | Total number of items to return per page | [optional]  |
 | **pageToken** | **string?** | Page token | [optional]  |
@@ -5095,6 +6231,106 @@ catch (ApiException e)
 ### Return type
 
 [**ListRestMerchantResponse**](ListRestMerchantResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listnotetemplatesusingget"></a>
+# **ListNoteTemplatesUsingGET**
+> ListNoteTemplateResponse ListNoteTemplatesUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListNoteTemplatesUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items by. E.g. `given_name desc` (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // Retrieve Note Templates
+                ListNoteTemplateResponse result = apiInstance.ListNoteTemplatesUsingGET(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListNoteTemplatesUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListNoteTemplatesUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Note Templates
+    ApiResponse<ListNoteTemplateResponse> response = apiInstance.ListNoteTemplatesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListNoteTemplatesUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Search filter to apply to results | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)
 
 ### Authorization
 
@@ -5318,6 +6554,208 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="listorderpaymentsusingget1"></a>
+# **ListOrderPaymentsUsingGET1**
+> ListOrderPaymentsResponse ListOrderPaymentsUsingGET1 (string orderId, string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListOrderPaymentsUsingGET1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var orderId = "orderId_example";  // string | order_id
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true`  (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // Retrieve Order Payments
+                ListOrderPaymentsResponse result = apiInstance.ListOrderPaymentsUsingGET1(orderId, filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListOrderPaymentsUsingGET1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListOrderPaymentsUsingGET1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Order Payments
+    ApiResponse<ListOrderPaymentsResponse> response = apiInstance.ListOrderPaymentsUsingGET1WithHttpInfo(orderId, filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListOrderPaymentsUsingGET1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **orderId** | **string** | order_id |  |
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListOrderPaymentsResponse**](ListOrderPaymentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listordertotaldiscountsusingget"></a>
+# **ListOrderTotalDiscountsUsingGET**
+> ListOrderTotalDiscountsResponse ListOrderTotalDiscountsUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List all Order Total Discounts
+
+Retrieves all Order Total Discounts
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListOrderTotalDiscountsUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET`  (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items by. E.g. `given_name desc` (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List all Order Total Discounts
+                ListOrderTotalDiscountsResponse result = apiInstance.ListOrderTotalDiscountsUsingGET(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListOrderTotalDiscountsUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListOrderTotalDiscountsUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List all Order Total Discounts
+    ApiResponse<ListOrderTotalDiscountsResponse> response = apiInstance.ListOrderTotalDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListOrderTotalDiscountsUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60;  | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListOrderTotalDiscountsResponse**](ListOrderTotalDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="listordersusingget1"></a>
 # **ListOrdersUsingGET1**
 > ListOrders ListOrdersUsingGET1 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
@@ -5343,7 +6781,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567` (optional) 
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567` (optional) 
             var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc (optional) 
             var pageSize = 0;  // int? | Total number of items to return per page (optional) 
             var pageToken = "pageToken_example";  // string? | Page token (optional) 
@@ -5389,7 +6827,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **filter** | **string?** | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional]  |
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional]  |
 | **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional]  |
 | **pageSize** | **int?** | Total number of items to return per page | [optional]  |
 | **pageToken** | **string?** | Page token | [optional]  |
@@ -5778,6 +7216,106 @@ catch (ApiException e)
 ### Return type
 
 [**ListSubscriptionPlansResponse**](ListSubscriptionPlansResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listsubscriptionsusingget1"></a>
+# **ListSubscriptionsUsingGET1**
+> ListSubscriptionsResponse ListSubscriptionsUsingGET1 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListSubscriptionsUsingGET1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List Subscriptions
+                ListSubscriptionsResponse result = apiInstance.ListSubscriptionsUsingGET1(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListSubscriptionsUsingGET1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListSubscriptionsUsingGET1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Subscriptions
+    ApiResponse<ListSubscriptionsResponse> response = apiInstance.ListSubscriptionsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListSubscriptionsUsingGET1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)
 
 ### Authorization
 
@@ -6615,7 +8153,7 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var userId = "userId_example";  // string | user_id
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
             var user = new PatchUserRequestV2?(); // PatchUserRequestV2? | user (optional) 
 
             try
@@ -6660,7 +8198,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **userId** | **string** | user_id |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 | **user** | [**PatchUserRequestV2?**](PatchUserRequestV2?.md) | user | [optional]  |
 
 ### Return type
@@ -7323,6 +8861,202 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="updatediscountusingpatch"></a>
+# **UpdateDiscountUsingPATCH**
+> CategoryDiscount UpdateDiscountUsingPATCH (string discountId, CreateUpdateDiscountRequest request, List<string>? updateMask = null)
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateDiscountUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+            var request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update a Category Discount
+                CategoryDiscount result = apiInstance.UpdateDiscountUsingPATCH(discountId, request, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.UpdateDiscountUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateDiscountUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a Category Discount
+    ApiResponse<CategoryDiscount> response = apiInstance.UpdateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.UpdateDiscountUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md) | request |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="updatediscountusingpatch1"></a>
+# **UpdateDiscountUsingPATCH1**
+> ShippingDiscount UpdateDiscountUsingPATCH1 (string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = null)
+
+Update a Shipping Discount
+
+Updates a Shipping Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateDiscountUsingPATCH1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+            var request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update a Shipping Discount
+                ShippingDiscount result = apiInstance.UpdateDiscountUsingPATCH1(discountId, request, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.UpdateDiscountUsingPATCH1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateDiscountUsingPATCH1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a Shipping Discount
+    ApiResponse<ShippingDiscount> response = apiInstance.UpdateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.UpdateDiscountUsingPATCH1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md) | request |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="updatenotescustomfieldusingpatch"></a>
 # **UpdateNotesCustomFieldUsingPATCH**
 > CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
@@ -7519,6 +9253,104 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="updateopportunitystageusingpatch"></a>
+# **UpdateOpportunityStageUsingPATCH**
+> RestOpportunityStage UpdateOpportunityStageUsingPATCH (string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = null)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateOpportunityStageUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var stageId = "stageId_example";  // string | stage_id
+            var request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update an Opportunity Stage
+                RestOpportunityStage result = apiInstance.UpdateOpportunityStageUsingPATCH(stageId, request, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.UpdateOpportunityStageUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateOpportunityStageUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update an Opportunity Stage
+    ApiResponse<RestOpportunityStage> response = apiInstance.UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.UpdateOpportunityStageUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **stageId** | **string** | stage_id |  |
+| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md) | request |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="updateopportunityusingpatch"></a>
 # **UpdateOpportunityUsingPATCH**
 > RestV2Opportunity UpdateOpportunityUsingPATCH (string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = null)
@@ -7694,6 +9526,104 @@ catch (ApiException e)
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="updateordertotaldiscountusingpatch"></a>
+# **UpdateOrderTotalDiscountUsingPATCH**
+> OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH (string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = null)
+
+Update an Order Total Discount
+
+Updates an Order Total Discount
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateOrderTotalDiscountUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var discountId = "discountId_example";  // string | discount_id
+            var request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update an Order Total Discount
+                OrderTotalDiscount result = apiInstance.UpdateOrderTotalDiscountUsingPATCH(discountId, request, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.UpdateOrderTotalDiscountUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateOrderTotalDiscountUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update an Order Total Discount
+    ApiResponse<OrderTotalDiscount> response = apiInstance.UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.UpdateOrderTotalDiscountUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **discountId** | **string** | discount_id |  |
+| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md) | request |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
 
 ### Authorization
 

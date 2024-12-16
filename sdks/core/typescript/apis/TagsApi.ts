@@ -516,7 +516,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a Tag Category with only the values provided in the request
      * Update a Tag Category
      * @param tagCategoryId tag_category_id
-     * @param updateMask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param tagCategory tagCategory
      */
     public async patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, tagCategory?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<RequestContext> {
@@ -571,7 +571,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a Tag with only the values provided in the request
      * Update a Tag
      * @param tagId tag_id
-     * @param updateMask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param tag tag
      */
     public async patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, tag?: CreateUpdateTagRequest, _options?: Configuration): Promise<RequestContext> {

@@ -831,7 +831,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TagsApi(api_client)
     tag_category_id = 'tag_category_id_example' # str | tag_category_id
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
     tag_category = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | tagCategory (optional)
 
     try:
@@ -850,7 +850,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag_category_id** | **str**| tag_category_id | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **tag_category** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
 
 ### Return type
@@ -905,7 +905,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TagsApi(api_client)
     tag_id = 'tag_id_example' # str | tag_id
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
     tag = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag (optional)
 
     try:
@@ -924,7 +924,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag_id** | **str**| tag_id | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
 
 ### Return type

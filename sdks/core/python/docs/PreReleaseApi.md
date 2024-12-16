@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**cancel_subscription_using_post**](PreReleaseApi.md#cancel_subscription_using_post) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 [**create_affiliate_custom_field_using_post**](PreReleaseApi.md#create_affiliate_custom_field_using_post) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
 [**create_default_commission_program_using_post**](PreReleaseApi.md#create_default_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
+[**create_discount_using_post**](PreReleaseApi.md#create_discount_using_post) | **POST** /v2/discounts/productCategories | Create a Category Discount
+[**create_discount_using_post1**](PreReleaseApi.md#create_discount_using_post1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
 [**create_funnel_integration_using_post**](PreReleaseApi.md#create_funnel_integration_using_post) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 [**create_integration_trigger_event_using_post**](PreReleaseApi.md#create_integration_trigger_event_using_post) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
 [**create_lead_source_using_post**](PreReleaseApi.md#create_lead_source_using_post) | **POST** /v2/leadsources | Create a Lead Source
@@ -20,7 +22,9 @@ Method | HTTP request | Description
 [**create_opportunity_using_post1**](PreReleaseApi.md#create_opportunity_using_post1) | **POST** /v2/opportunities | Create an Opportunity
 [**create_order_custom_field_using_post**](PreReleaseApi.md#create_order_custom_field_using_post) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
 [**create_order_items_on_order_using_post1**](PreReleaseApi.md#create_order_items_on_order_using_post1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
+[**create_order_total_discount_using_post**](PreReleaseApi.md#create_order_total_discount_using_post) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
 [**create_order_using_post1**](PreReleaseApi.md#create_order_using_post1) | **POST** /v2/orders | Create an Order
+[**create_product_using_post1**](PreReleaseApi.md#create_product_using_post1) | **POST** /v2/products | Create a Product
 [**create_redirect_link_using_post**](PreReleaseApi.md#create_redirect_link_using_post) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
 [**create_referral_using_post**](PreReleaseApi.md#create_referral_using_post) | **POST** /v2/referrals | Create a Referral
 [**create_subscription_custom_field_using_post**](PreReleaseApi.md#create_subscription_custom_field_using_post) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
@@ -31,10 +35,14 @@ Method | HTTP request | Description
 [**delete_affiliate_using_delete**](PreReleaseApi.md#delete_affiliate_using_delete) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
 [**delete_discount_using_delete**](PreReleaseApi.md#delete_discount_using_delete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**delete_discount_using_delete1**](PreReleaseApi.md#delete_discount_using_delete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+[**delete_discount_using_delete2**](PreReleaseApi.md#delete_discount_using_delete2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
 [**delete_funnel_integration_using_post**](PreReleaseApi.md#delete_funnel_integration_using_post) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 [**delete_opportunity_stage_using_delete**](PreReleaseApi.md#delete_opportunity_stage_using_delete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**delete_opportunity_using_delete**](PreReleaseApi.md#delete_opportunity_using_delete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
+[**delete_order_custom_field_using_delete**](PreReleaseApi.md#delete_order_custom_field_using_delete) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
+[**delete_order_total_discount_using_delete**](PreReleaseApi.md#delete_order_total_discount_using_delete) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
 [**delete_order_using_delete1**](PreReleaseApi.md#delete_order_using_delete1) | **DELETE** /v2/orders/{order_id} | Delete an Order
+[**delete_product_using_delete1**](PreReleaseApi.md#delete_product_using_delete1) | **DELETE** /v2/products/{product_id} | Delete a Product
 [**delete_redirect_link_using_delete**](PreReleaseApi.md#delete_redirect_link_using_delete) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
 [**delete_task_custom_field_using_delete**](PreReleaseApi.md#delete_task_custom_field_using_delete) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
 [**delete_task_using_delete1**](PreReleaseApi.md#delete_task_using_delete1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
@@ -44,9 +52,12 @@ Method | HTTP request | Description
 [**get_commission_program_using_get**](PreReleaseApi.md#get_commission_program_using_get) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 [**get_contacts_by_search_term_using_get**](PreReleaseApi.md#get_contacts_by_search_term_using_get) | **GET** /v2/contacts:search | Search for Contacts
 [**get_discount_using_get**](PreReleaseApi.md#get_discount_using_get) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**get_discount_using_get1**](PreReleaseApi.md#get_discount_using_get1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
 [**get_opportunity_stage_using_get**](PreReleaseApi.md#get_opportunity_stage_using_get) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**get_opportunity_using_get1**](PreReleaseApi.md#get_opportunity_using_get1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
+[**get_order_total_discount_using_get**](PreReleaseApi.md#get_order_total_discount_using_get) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
 [**get_order_using_get1**](PreReleaseApi.md#get_order_using_get1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**get_product_using_get**](PreReleaseApi.md#get_product_using_get) | **GET** /v2/products/{product_id} | Get a Product
 [**get_redirect_link_using_get**](PreReleaseApi.md#get_redirect_link_using_get) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
 [**get_task_using_get1**](PreReleaseApi.md#get_task_using_get1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
 [**get_user_by_id_using_get**](PreReleaseApi.md#get_user_by_id_using_get) | **GET** /v2/users/{user_id} | Get User
@@ -55,16 +66,21 @@ Method | HTTP request | Description
 [**list_affiliate_commission_programs_using_get**](PreReleaseApi.md#list_affiliate_commission_programs_using_get) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 [**list_affiliate_links_using_get**](PreReleaseApi.md#list_affiliate_links_using_get) | **GET** /v2/affiliates/redirects | List Affiliate Links
 [**list_countries_using_get2**](PreReleaseApi.md#list_countries_using_get2) | **GET** /v2/locales/countries | List Countries
+[**list_discounts_using_get**](PreReleaseApi.md#list_discounts_using_get) | **GET** /v2/discounts/shipping | List all Shipping Discounts
 [**list_landing_pages_using_get**](PreReleaseApi.md#list_landing_pages_using_get) | **GET** /v2/landingpages | List Landing Pages
 [**list_lead_sources_using_get**](PreReleaseApi.md#list_lead_sources_using_get) | **GET** /v2/leadsources | List Lead Sources
 [**list_merchants_using_get**](PreReleaseApi.md#list_merchants_using_get) | **GET** /v2/merchants | List Merchant accounts
+[**list_note_templates_using_get**](PreReleaseApi.md#list_note_templates_using_get) | **GET** /v2/notes/templates | Retrieve Note Templates
 [**list_opportunities_using_get1**](PreReleaseApi.md#list_opportunities_using_get1) | **GET** /v2/opportunities | List Opportunities
 [**list_opportunity_stages_using_get**](PreReleaseApi.md#list_opportunity_stages_using_get) | **GET** /v2/opportunities/stages | List of Opportunity Stages
+[**list_order_payments_using_get1**](PreReleaseApi.md#list_order_payments_using_get1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
+[**list_order_total_discounts_using_get**](PreReleaseApi.md#list_order_total_discounts_using_get) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
 [**list_orders_using_get1**](PreReleaseApi.md#list_orders_using_get1) | **GET** /v2/orders | List orders
 [**list_products_using_get1**](PreReleaseApi.md#list_products_using_get1) | **GET** /v2/products | List Products
 [**list_provinces_for_country_using_get**](PreReleaseApi.md#list_provinces_for_country_using_get) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
 [**list_shipping_methods_using_get**](PreReleaseApi.md#list_shipping_methods_using_get) | **GET** /v2/shipping | List Shipping methods
 [**list_subscription_plans_using_get**](PreReleaseApi.md#list_subscription_plans_using_get) | **GET** /v2/subscriptionPlans | List Subscription Plans
+[**list_subscriptions_using_get1**](PreReleaseApi.md#list_subscriptions_using_get1) | **GET** /v2/subscriptions | List Subscriptions
 [**list_summaries_using_get1**](PreReleaseApi.md#list_summaries_using_get1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
 [**list_tasks_using_get1**](PreReleaseApi.md#list_tasks_using_get1) | **GET** /v2/tasks | List Tasks
 [**list_users_using_get1**](PreReleaseApi.md#list_users_using_get1) | **GET** /v2/users | List Users
@@ -81,10 +97,14 @@ Method | HTTP request | Description
 [**retrieve_subscription_custom_field_model_using_get**](PreReleaseApi.md#retrieve_subscription_custom_field_model_using_get) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
 [**retrieve_task_model_using_get1**](PreReleaseApi.md#retrieve_task_model_using_get1) | **GET** /v2/tasks/model | Retrieve Task Model
 [**update_affiliate_custom_field_using_patch**](PreReleaseApi.md#update_affiliate_custom_field_using_patch) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
+[**update_discount_using_patch**](PreReleaseApi.md#update_discount_using_patch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
+[**update_discount_using_patch1**](PreReleaseApi.md#update_discount_using_patch1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
 [**update_notes_custom_field_using_patch**](PreReleaseApi.md#update_notes_custom_field_using_patch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 [**update_opportunity_custom_field_using_patch**](PreReleaseApi.md#update_opportunity_custom_field_using_patch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
+[**update_opportunity_stage_using_patch**](PreReleaseApi.md#update_opportunity_stage_using_patch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
 [**update_opportunity_using_patch**](PreReleaseApi.md#update_opportunity_using_patch) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 [**update_order_custom_field_using_patch**](PreReleaseApi.md#update_order_custom_field_using_patch) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
+[**update_order_total_discount_using_patch**](PreReleaseApi.md#update_order_total_discount_using_patch) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
 [**update_redirect_link_using_patch**](PreReleaseApi.md#update_redirect_link_using_patch) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 [**update_subscription_custom_field_using_patch**](PreReleaseApi.md#update_subscription_custom_field_using_patch) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 [**update_task_custom_field_using_patch**](PreReleaseApi.md#update_task_custom_field_using_patch) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
@@ -557,6 +577,144 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SetDefaultCommissionProgramResponse**](SetDefaultCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_discount_using_post**
+> CategoryDiscount create_discount_using_post(request)
+
+Create a Category Discount
+
+Create a Category Discount.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.category_discount import CategoryDiscount
+from keap_sdk_core_client.models.create_update_discount_request import CreateUpdateDiscountRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    request = keap_sdk_core_client.CreateUpdateDiscountRequest() # CreateUpdateDiscountRequest | request
+
+    try:
+        # Create a Category Discount
+        api_response = api_instance.create_discount_using_post(request)
+        print("The response of PreReleaseApi->create_discount_using_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->create_discount_using_post: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_discount_using_post1**
+> ShippingDiscount create_discount_using_post1(request)
+
+Create a Shipping Discount
+
+Creates a Shipping Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_shipping_discount_request import CreateShippingDiscountRequest
+from keap_sdk_core_client.models.shipping_discount import ShippingDiscount
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    request = keap_sdk_core_client.CreateShippingDiscountRequest() # CreateShippingDiscountRequest | request
+
+    try:
+        # Create a Shipping Discount
+        api_response = api_instance.create_discount_using_post1(request)
+        print("The response of PreReleaseApi->create_discount_using_post1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->create_discount_using_post1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
 
 ### Authorization
 
@@ -1195,6 +1353,75 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_order_total_discount_using_post**
+> OrderTotalDiscount create_order_total_discount_using_post(request)
+
+Create an Order Total Discount
+
+Creates an Order Total Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_order_total_discount_request import CreateOrderTotalDiscountRequest
+from keap_sdk_core_client.models.order_total_discount import OrderTotalDiscount
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    request = keap_sdk_core_client.CreateOrderTotalDiscountRequest() # CreateOrderTotalDiscountRequest | request
+
+    try:
+        # Create an Order Total Discount
+        api_response = api_instance.create_order_total_discount_using_post(request)
+        print("The response of PreReleaseApi->create_order_total_discount_using_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->create_order_total_discount_using_post: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_order_using_post1**
 > RestV2Order create_order_using_post1(create_order_request)
 
@@ -1244,6 +1471,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_product_using_post1**
+> RestV2Product create_product_using_post1(create_product_request)
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_product_request import CreateProductRequest
+from keap_sdk_core_client.models.rest_v2_product import RestV2Product
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    create_product_request = keap_sdk_core_client.CreateProductRequest() # CreateProductRequest | createProductRequest
+
+    try:
+        # Create a Product
+        api_response = api_instance.create_product_using_post1(create_product_request)
+        print("The response of PreReleaseApi->create_product_using_post1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->create_product_using_post1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_product_request** | [**CreateProductRequest**](CreateProductRequest.md)| createProductRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -1942,6 +2238,72 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_discount_using_delete2**
+> delete_discount_using_delete2(discount_id)
+
+Delete a Shipping Discount
+
+Deletes a specified Shipping Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Delete a Shipping Discount
+        api_instance.delete_discount_using_delete2(discount_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_discount_using_delete2: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_funnel_integration_using_post**
 > delete_funnel_integration_using_post(delete_funnel_integration_request)
 
@@ -2140,6 +2502,138 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_order_custom_field_using_delete**
+> delete_order_custom_field_using_delete(custom_field_id)
+
+Delete an Order's Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    custom_field_id = 'custom_field_id_example' # str | custom_field_id
+
+    try:
+        # Delete an Order's Custom Field
+        api_instance.delete_order_custom_field_using_delete(custom_field_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_order_custom_field_using_delete: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **custom_field_id** | **str**| custom_field_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_order_total_discount_using_delete**
+> delete_order_total_discount_using_delete(discount_id)
+
+Delete an Order Total Discount
+
+Deletes a specified Order Total Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Delete an Order Total Discount
+        api_instance.delete_order_total_discount_using_delete(discount_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_order_total_discount_using_delete: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_order_using_delete1**
 > delete_order_using_delete1(order_id)
 
@@ -2181,6 +2675,72 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **str**| order_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_product_using_delete1**
+> delete_product_using_delete1(product_id)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    product_id = 'product_id_example' # str | product_id
+
+    try:
+        # Delete a Product
+        api_instance.delete_product_using_delete1(product_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_product_using_delete1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**| product_id | 
 
 ### Return type
 
@@ -2822,6 +3382,75 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_discount_using_get1**
+> ShippingDiscount get_discount_using_get1(discount_id)
+
+Retrieve a Shipping Discount
+
+Retrieves a Shipping Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.shipping_discount import ShippingDiscount
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Retrieve a Shipping Discount
+        api_response = api_instance.get_discount_using_get1(discount_id)
+        print("The response of PreReleaseApi->get_discount_using_get1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_discount_using_get1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_opportunity_stage_using_get**
 > RestOpportunityStage get_opportunity_stage_using_get(stage_id)
 
@@ -2960,6 +3589,75 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_order_total_discount_using_get**
+> OrderTotalDiscount get_order_total_discount_using_get(discount_id)
+
+Retrieve an Order Total Discount
+
+Retrieves an Order Total Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.order_total_discount import OrderTotalDiscount
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+
+    try:
+        # Retrieve an Order Total Discount
+        api_response = api_instance.get_order_total_discount_using_get(discount_id)
+        print("The response of PreReleaseApi->get_order_total_discount_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_order_total_discount_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_order_using_get1**
 > RestV2Order get_order_using_get1(order_id)
 
@@ -3008,6 +3706,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestV2Order**](RestV2Order.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_product_using_get**
+> RestV2Product get_product_using_get(product_id)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.rest_v2_product import RestV2Product
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    product_id = 'product_id_example' # str | product_id
+
+    try:
+        # Get a Product
+        api_response = api_instance.get_product_using_get(product_id)
+        print("The response of PreReleaseApi->get_product_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_product_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**| product_id | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -3582,6 +4349,83 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_discounts_using_get**
+> ListShippingDiscountsResponse list_discounts_using_get(fields=fields, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+List all Shipping Discounts
+
+Retrieves all Shipping Discounts
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_shipping_discounts_response import ListShippingDiscountsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    fields = ['fields_example'] # List[str] | TODO: PAPI-1449 (optional)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld`  (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items by. E.g. `given_name desc` (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # List all Shipping Discounts
+        api_response = api_instance.list_discounts_using_get(fields=fields, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_discounts_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_discounts_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fields** | [**List[str]**](str.md)| TODO: PAPI-1449 | [optional] 
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60;  | [optional] 
+ **order_by** | **str**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_landing_pages_using_get**
 > ListLandingPagesResponse list_landing_pages_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
@@ -3758,7 +4602,7 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc` (optional)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc` (optional)
     order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc (optional)
     page_size = 0 # int | Total number of items to return per page (optional)
     page_token = 'page_token_example' # str | Page token (optional)
@@ -3778,7 +4622,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **str**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | [optional] 
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | [optional] 
  **order_by** | **str**| Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | [optional] 
  **page_size** | **int**| Total number of items to return per page | [optional] 
  **page_token** | **str**| Page token | [optional] 
@@ -3786,6 +4630,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListRestMerchantResponse**](ListRestMerchantResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_note_templates_using_get**
+> ListNoteTemplateResponse list_note_templates_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_note_template_response import ListNoteTemplateResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    filter = 'filter_example' # str | Search filter to apply to results (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items by. E.g. `given_name desc` (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # Retrieve Note Templates
+        api_response = api_instance.list_note_templates_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_note_templates_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_note_templates_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **str**| Search filter to apply to results | [optional] 
+ **order_by** | **str**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)
 
 ### Authorization
 
@@ -3959,6 +4878,158 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_order_payments_using_get1**
+> ListOrderPaymentsResponse list_order_payments_using_get1(order_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_order_payments_response import ListOrderPaymentsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    order_id = 'order_id_example' # str | order_id
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true`  (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # Retrieve Order Payments
+        api_response = api_instance.list_order_payments_using_get1(order_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_order_payments_using_get1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_order_payments_using_get1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **str**| order_id | 
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | [optional] 
+ **order_by** | **str**| Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListOrderPaymentsResponse**](ListOrderPaymentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_order_total_discounts_using_get**
+> ListOrderTotalDiscountsResponse list_order_total_discounts_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+List all Order Total Discounts
+
+Retrieves all Order Total Discounts
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_order_total_discounts_response import ListOrderTotalDiscountsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET`  (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items by. E.g. `given_name desc` (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # List all Order Total Discounts
+        api_response = api_instance.list_order_total_discounts_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_order_total_discounts_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_order_total_discounts_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60;  | [optional] 
+ **order_by** | **str**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListOrderTotalDiscountsResponse**](ListOrderTotalDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_orders_using_get1**
 > ListOrders list_orders_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
@@ -3985,7 +5056,7 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567` (optional)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567` (optional)
     order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc (optional)
     page_size = 0 # int | Total number of items to return per page (optional)
     page_token = 'page_token_example' # str | Page token (optional)
@@ -4005,7 +5076,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **str**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional] 
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional] 
  **order_by** | **str**| Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional] 
  **page_size** | **int**| Total number of items to return per page | [optional] 
  **page_token** | **str**| Page token | [optional] 
@@ -4295,6 +5366,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListSubscriptionPlansResponse**](ListSubscriptionPlansResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_subscriptions_using_get1**
+> ListSubscriptionsResponse list_subscriptions_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_subscriptions_response import ListSubscriptionsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # List Subscriptions
+        api_response = api_instance.list_subscriptions_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_subscriptions_using_get1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_subscriptions_using_get1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional] 
+ **order_by** | **str**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)
 
 ### Authorization
 
@@ -4939,7 +6085,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     user_id = 'user_id_example' # str | user_id
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
     user = keap_sdk_core_client.PatchUserRequestV2() # PatchUserRequestV2 | user (optional)
 
     try:
@@ -4958,7 +6104,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| user_id | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type
@@ -5455,6 +6601,154 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_discount_using_patch**
+> CategoryDiscount update_discount_using_patch(discount_id, request, update_mask=update_mask)
+
+Update a Category Discount
+
+Update a Category Discount.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.category_discount import CategoryDiscount
+from keap_sdk_core_client.models.create_update_discount_request import CreateUpdateDiscountRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+    request = keap_sdk_core_client.CreateUpdateDiscountRequest() # CreateUpdateDiscountRequest | request
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+
+    try:
+        # Update a Category Discount
+        api_response = api_instance.update_discount_using_patch(discount_id, request, update_mask=update_mask)
+        print("The response of PreReleaseApi->update_discount_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->update_discount_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+ **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_discount_using_patch1**
+> ShippingDiscount update_discount_using_patch1(discount_id, request, update_mask=update_mask)
+
+Update a Shipping Discount
+
+Updates a Shipping Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.shipping_discount import ShippingDiscount
+from keap_sdk_core_client.models.update_shipping_discount_request import UpdateShippingDiscountRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+    request = keap_sdk_core_client.UpdateShippingDiscountRequest() # UpdateShippingDiscountRequest | request
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+
+    try:
+        # Update a Shipping Discount
+        api_response = api_instance.update_discount_using_patch1(discount_id, request, update_mask=update_mask)
+        print("The response of PreReleaseApi->update_discount_using_patch1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->update_discount_using_patch1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+ **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_notes_custom_field_using_patch**
 > CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
 
@@ -5603,6 +6897,80 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_opportunity_stage_using_patch**
+> RestOpportunityStage update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.rest_opportunity_stage import RestOpportunityStage
+from keap_sdk_core_client.models.update_opportunity_stage_request import UpdateOpportunityStageRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    stage_id = 'stage_id_example' # str | stage_id
+    request = keap_sdk_core_client.UpdateOpportunityStageRequest() # UpdateOpportunityStageRequest | request
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+
+    try:
+        # Update an Opportunity Stage
+        api_response = api_instance.update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+        print("The response of PreReleaseApi->update_opportunity_stage_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->update_opportunity_stage_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **stage_id** | **str**| stage_id | 
+ **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_opportunity_using_patch**
 > RestV2Opportunity update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
 
@@ -5730,6 +7098,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_order_total_discount_using_patch**
+> OrderTotalDiscount update_order_total_discount_using_patch(discount_id, request, update_mask=update_mask)
+
+Update an Order Total Discount
+
+Updates an Order Total Discount
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.order_total_discount import OrderTotalDiscount
+from keap_sdk_core_client.models.update_order_total_discount_request import UpdateOrderTotalDiscountRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    discount_id = 'discount_id_example' # str | discount_id
+    request = keap_sdk_core_client.UpdateOrderTotalDiscountRequest() # UpdateOrderTotalDiscountRequest | request
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+
+    try:
+        # Update an Order Total Discount
+        api_response = api_instance.update_order_total_discount_using_patch(discount_id, request, update_mask=update_mask)
+        print("The response of PreReleaseApi->update_order_total_discount_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->update_order_total_discount_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discount_id** | **str**| discount_id | 
+ **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**OrderTotalDiscount**](OrderTotalDiscount.md)
 
 ### Authorization
 

@@ -4,8 +4,143 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createProductUsingPOST1**](ProductApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
+[**deleteProductUsingDELETE1**](ProductApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
+[**getProductUsingGET**](ProductApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
 [**listProductsUsingGET1**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
 
+
+
+## createProductUsingPOST1
+
+> RestV2Product createProductUsingPOST1(createProductRequest)
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.ProductApi();
+let createProductRequest = new KeapCoreServiceCoreSdk.CreateProductRequest(); // CreateProductRequest | createProductRequest
+apiInstance.createProductUsingPOST1(createProductRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createProductRequest** | [**CreateProductRequest**](CreateProductRequest.md)| createProductRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## deleteProductUsingDELETE1
+
+> deleteProductUsingDELETE1(productId)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.ProductApi();
+let productId = "productId_example"; // String | product_id
+apiInstance.deleteProductUsingDELETE1(productId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | **String**| product_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getProductUsingGET
+
+> RestV2Product getProductUsingGET(productId)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.ProductApi();
+let productId = "productId_example"; // String | product_id
+apiInstance.getProductUsingGET(productId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | **String**| product_id | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## listProductsUsingGET1

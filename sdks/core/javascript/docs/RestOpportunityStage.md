@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**checkListItems** | [**[CheckListItem]**](CheckListItem.md) |  | [optional] 
+**checklistItems** | [**[ChecklistItem]**](ChecklistItem.md) |  | [optional] 
 **createdTime** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 

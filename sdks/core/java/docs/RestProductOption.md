@@ -31,7 +31,7 @@
 
 | Name | Value |
 |---- | -----|
-| FIXED_LIST | &quot;FIXED_LIST&quot; |
+| FIXED | &quot;FIXED&quot; |
 | VARIABLE | &quot;VARIABLE&quot; |
 | UNKNOWN_COULD_NOT_DESERIALIZE | &quot;unknown_default_open_api&quot; |
 

@@ -1098,7 +1098,7 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TagsApi(config);
             var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
             var tagCategory = new CreateUpdateTagCategoryRequest?(); // CreateUpdateTagCategoryRequest? | tagCategory (optional) 
 
             try
@@ -1143,7 +1143,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **tagCategoryId** | **string** | tag_category_id |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 | **tagCategory** | [**CreateUpdateTagCategoryRequest?**](CreateUpdateTagCategoryRequest?.md) | tagCategory | [optional]  |
 
 ### Return type
@@ -1196,7 +1196,7 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
             var tag = new CreateUpdateTagRequest?(); // CreateUpdateTagRequest? | tag (optional) 
 
             try
@@ -1241,7 +1241,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **tagId** | **string** | tag_id |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 | **tag** | [**CreateUpdateTagRequest?**](CreateUpdateTagRequest?.md) | tag | [optional]  |
 
 ### Return type

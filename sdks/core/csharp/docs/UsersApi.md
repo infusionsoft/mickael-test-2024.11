@@ -503,7 +503,7 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new UsersApi(config);
             var userId = "userId_example";  // string | user_id
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
             var user = new PatchUserRequestV2?(); // PatchUserRequestV2? | user (optional) 
 
             try
@@ -548,7 +548,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **userId** | **string** | user_id |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 | **user** | [**PatchUserRequestV2?**](PatchUserRequestV2?.md) | user | [optional]  |
 
 ### Return type

@@ -12,6 +12,7 @@ import { CancelSubscriptionsRequest } from '../models/CancelSubscriptionsRequest
 import { CreateCustomFieldRequest } from '../models/CreateCustomFieldRequest';
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CustomFieldMetaData } from '../models/CustomFieldMetaData';
+import { ListSubscriptionsResponse } from '../models/ListSubscriptionsResponse';
 import { ObjectModel } from '../models/ObjectModel';
 import { RestSubscriptionV2 } from '../models/RestSubscriptionV2';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
@@ -145,6 +146,58 @@ export class SubscriptionsApiRequestFactory extends BaseAPIRequestFactory {
             contentType
         );
         requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
+
+    /**
+     * Retrieves a list of subscriptions using the specified search criteria.
+     * List Subscriptions
+     * @param filter Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id 
+     * @param orderBy Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC 
+     * @param pageSize Total number of items to return per page
+     * @param pageToken Page token
+     */
+    public async listSubscriptionsUsingGET1(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+
+
+
+
+        // Path Params
+        const localVarPath = '/v2/subscriptions';
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+        // Query Params
+        if (filter !== undefined) {
+            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "string", ""));
+        }
+
+        // Query Params
+        if (orderBy !== undefined) {
+            requestContext.setQueryParam("order_by", ObjectSerializer.serialize(orderBy, "string", ""));
+        }
+
+        // Query Params
+        if (pageSize !== undefined) {
+            requestContext.setQueryParam("page_size", ObjectSerializer.serialize(pageSize, "number", "int32"));
+        }
+
+        // Query Params
+        if (pageToken !== undefined) {
+            requestContext.setQueryParam("page_token", ObjectSerializer.serialize(pageToken, "string", ""));
+        }
+
 
         
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
@@ -362,6 +415,56 @@ export class SubscriptionsApiResponseProcessor {
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "RestSubscriptionV2", ""
             ) as RestSubscriptionV2;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
+     * @params response Response returned by the server for a request to listSubscriptionsUsingGET1
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async listSubscriptionsUsingGET1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListSubscriptionsResponse >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: ListSubscriptionsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListSubscriptionsResponse", ""
+            ) as ListSubscriptionsResponse;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+        if (isCodeInRange("404", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Not Found", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: ListSubscriptionsResponse = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "ListSubscriptionsResponse", ""
+            ) as ListSubscriptionsResponse;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

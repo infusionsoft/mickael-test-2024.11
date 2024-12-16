@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **assigned_to_user** | [**BasicUser**](BasicUser.md) |  | [optional] 
 **contact_id** | **str** |  | [optional] 
 **create_time** | **str** |  | [optional] 
+**created_by_user_id** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **last_updated_by_user_id** | **str** |  | [optional] 
 **text** | **str** |  | [optional] 

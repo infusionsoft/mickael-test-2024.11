@@ -382,7 +382,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.UsersApi(api_client)
     user_id = 'user_id_example' # str | user_id
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
     user = keap_sdk_core_client.PatchUserRequestV2() # PatchUserRequestV2 | user (optional)
 
     try:
@@ -401,7 +401,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| user_id | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type

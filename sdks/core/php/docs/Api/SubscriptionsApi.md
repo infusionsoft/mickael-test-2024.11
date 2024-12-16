@@ -7,6 +7,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**cancelSubscriptionUsingPOST()**](SubscriptionsApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
 | [**createSubscriptionCustomFieldUsingPOST()**](SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**createSubscriptionV2UsingPOST()**](SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription |
+| [**listSubscriptionsUsingGET1()**](SubscriptionsApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions |
 | [**retrieveSubscriptionCustomFieldModelUsingGET()**](SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**updateSubscriptionCustomFieldUsingPATCH()**](SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 
@@ -171,6 +172,67 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listSubscriptionsUsingGET1()`
+
+```php
+listSubscriptionsUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListSubscriptionsResponse
+```
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\SubscriptionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id
+$order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listSubscriptionsUsingGET1($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionsApi->listSubscriptionsUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id | [optional] |
+| **order_by** | **string**| Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListSubscriptionsResponse**](../Model/ListSubscriptionsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

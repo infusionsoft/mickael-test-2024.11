@@ -19,6 +19,7 @@ from keap_sdk_core_client.api.locale_api import LocaleApi
 from keap_sdk_core_client.api.merchant_api import MerchantApi
 from keap_sdk_core_client.api.note_api import NoteApi
 from keap_sdk_core_client.api.opportunity_api import OpportunityApi
+from keap_sdk_core_client.api.order_total_discount_api import OrderTotalDiscountApi
 from keap_sdk_core_client.api.orders_api import OrdersApi
 from keap_sdk_core_client.api.payment_method_config_api import PaymentMethodConfigApi
 from keap_sdk_core_client.api.pre_release_api import PreReleaseApi
@@ -28,6 +29,7 @@ from keap_sdk_core_client.api.reporting_api import ReportingApi
 from keap_sdk_core_client.api.sales_api import SalesApi
 from keap_sdk_core_client.api.settings_api import SettingsApi
 from keap_sdk_core_client.api.shipping_api import ShippingApi
+from keap_sdk_core_client.api.shipping_discount_api import ShippingDiscountApi
 from keap_sdk_core_client.api.subscription_plans_api import SubscriptionPlansApi
 from keap_sdk_core_client.api.subscriptions_api import SubscriptionsApi
 from keap_sdk_core_client.api.tags_api import TagsApi

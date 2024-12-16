@@ -4,8 +4,215 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**create_product_using_post1**](ProductApi.md#create_product_using_post1) | **POST** /v2/products | Create a Product
+[**delete_product_using_delete1**](ProductApi.md#delete_product_using_delete1) | **DELETE** /v2/products/{product_id} | Delete a Product
+[**get_product_using_get**](ProductApi.md#get_product_using_get) | **GET** /v2/products/{product_id} | Get a Product
 [**list_products_using_get1**](ProductApi.md#list_products_using_get1) | **GET** /v2/products | List Products
 
+
+# **create_product_using_post1**
+> RestV2Product create_product_using_post1(create_product_request)
+
+Create a Product
+
+Creates a new product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_product_request import CreateProductRequest
+from keap_sdk_core_client.models.rest_v2_product import RestV2Product
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.ProductApi(api_client)
+    create_product_request = keap_sdk_core_client.CreateProductRequest() # CreateProductRequest | createProductRequest
+
+    try:
+        # Create a Product
+        api_response = api_instance.create_product_using_post1(create_product_request)
+        print("The response of ProductApi->create_product_using_post1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProductApi->create_product_using_post1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_product_request** | [**CreateProductRequest**](CreateProductRequest.md)| createProductRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_product_using_delete1**
+> delete_product_using_delete1(product_id)
+
+Delete a Product
+
+Deletes a single product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.ProductApi(api_client)
+    product_id = 'product_id_example' # str | product_id
+
+    try:
+        # Delete a Product
+        api_instance.delete_product_using_delete1(product_id)
+    except Exception as e:
+        print("Exception when calling ProductApi->delete_product_using_delete1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**| product_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_product_using_get**
+> RestV2Product get_product_using_get(product_id)
+
+Get a Product
+
+Gets a single Product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.rest_v2_product import RestV2Product
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.ProductApi(api_client)
+    product_id = 'product_id_example' # str | product_id
+
+    try:
+        # Get a Product
+        api_response = api_instance.get_product_using_get(product_id)
+        print("The response of ProductApi->get_product_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProductApi->get_product_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**| product_id | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_products_using_get1**
 > ListProductsResponse list_products_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)

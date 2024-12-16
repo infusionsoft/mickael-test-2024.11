@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `FIXED_LIST` (value: `"FIXED_LIST"`)
+* `FIXED` (value: `"FIXED"`)
 
 * `VARIABLE` (value: `"VARIABLE"`)
 

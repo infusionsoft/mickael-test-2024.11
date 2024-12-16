@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**applyToCommissions** | **Number** |  | [optional] 
+**applyToCommissions** | **Boolean** |  | [optional] 
 **categoryId** | **String** |  | [optional] 
-**criteria** | [**[Criteria]**](Criteria.md) |  | [optional] 
+**criteria** | [**[DiscountCriteria]**](DiscountCriteria.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **discountPercent** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 

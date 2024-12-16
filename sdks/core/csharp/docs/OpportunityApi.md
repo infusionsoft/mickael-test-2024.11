@@ -14,6 +14,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**ListOpportunitiesUsingGET1**](OpportunityApi.md#listopportunitiesusingget1) | **GET** /v2/opportunities | List Opportunities |
 | [**ListOpportunityStagesUsingGET**](OpportunityApi.md#listopportunitystagesusingget) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
 | [**UpdateOpportunityCustomFieldUsingPATCH**](OpportunityApi.md#updateopportunitycustomfieldusingpatch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**UpdateOpportunityStageUsingPATCH**](OpportunityApi.md#updateopportunitystageusingpatch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
 | [**UpdateOpportunityUsingPATCH**](OpportunityApi.md#updateopportunityusingpatch) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 
 <a id="createopportunitycustomfieldsusingpost"></a>
@@ -942,6 +943,104 @@ catch (ApiException e)
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="updateopportunitystageusingpatch"></a>
+# **UpdateOpportunityStageUsingPATCH**
+> RestOpportunityStage UpdateOpportunityStageUsingPATCH (string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = null)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateOpportunityStageUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new OpportunityApi(config);
+            var stageId = "stageId_example";  // string | stage_id
+            var request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update an Opportunity Stage
+                RestOpportunityStage result = apiInstance.UpdateOpportunityStageUsingPATCH(stageId, request, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityStageUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateOpportunityStageUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update an Opportunity Stage
+    ApiResponse<RestOpportunityStage> response = apiInstance.UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OpportunityApi.UpdateOpportunityStageUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **stageId** | **string** | stage_id |  |
+| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md) | request |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
 
 ### Authorization
 

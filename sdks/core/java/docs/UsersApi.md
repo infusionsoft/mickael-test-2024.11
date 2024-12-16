@@ -738,7 +738,7 @@ public class Example {
 
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
             User result = apiInstance.patchUserUsingPATCH(userId, updateMask, user);
@@ -760,7 +760,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
 | **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
@@ -811,7 +811,7 @@ public class Example {
 
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
             ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
@@ -835,7 +835,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
 | **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type

@@ -7,6 +7,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CancelSubscriptionUsingPOST**](SubscriptionsApi.md#cancelsubscriptionusingpost) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
 | [**CreateSubscriptionCustomFieldUsingPOST**](SubscriptionsApi.md#createsubscriptioncustomfieldusingpost) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field |
 | [**CreateSubscriptionV2UsingPOST**](SubscriptionsApi.md#createsubscriptionv2usingpost) | **POST** /v2/subscriptions | Create Subscription |
+| [**ListSubscriptionsUsingGET1**](SubscriptionsApi.md#listsubscriptionsusingget1) | **GET** /v2/subscriptions | List Subscriptions |
 | [**RetrieveSubscriptionCustomFieldModelUsingGET**](SubscriptionsApi.md#retrievesubscriptioncustomfieldmodelusingget) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model |
 | [**UpdateSubscriptionCustomFieldUsingPATCH**](SubscriptionsApi.md#updatesubscriptioncustomfieldusingpatch) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field |
 
@@ -284,6 +285,106 @@ No authorization required
 | **201** | Created |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listsubscriptionsusingget1"></a>
+# **ListSubscriptionsUsingGET1**
+> ListSubscriptionsResponse ListSubscriptionsUsingGET1 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List Subscriptions
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListSubscriptionsUsingGET1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new SubscriptionsApi(config);
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List Subscriptions
+                ListSubscriptionsResponse result = apiInstance.ListSubscriptionsUsingGET1(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling SubscriptionsApi.ListSubscriptionsUsingGET1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListSubscriptionsUsingGET1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Subscriptions
+    ApiResponse<ListSubscriptionsResponse> response = apiInstance.ListSubscriptionsUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SubscriptionsApi.ListSubscriptionsUsingGET1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListSubscriptionsResponse**](ListSubscriptionsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

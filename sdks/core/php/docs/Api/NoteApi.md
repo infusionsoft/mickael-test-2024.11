@@ -8,6 +8,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**createNoteUsingPOST1()**](NoteApi.md#createNoteUsingPOST1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note |
 | [**deleteNoteUsingDELETE1()**](NoteApi.md#deleteNoteUsingDELETE1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note |
 | [**getNoteUsingGET1()**](NoteApi.md#getNoteUsingGET1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note |
+| [**listNoteTemplatesUsingGET()**](NoteApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates |
 | [**listNotesUsingGET1()**](NoteApi.md#listNotesUsingGET1) | **GET** /v2/contacts/{contact_id}/notes | List Notes |
 | [**retrieveNoteModelUsingGET1()**](NoteApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model |
 | [**updateNoteUsingPATCH()**](NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note |
@@ -225,6 +226,67 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\GetNoteResponse**](../Model/GetNoteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listNoteTemplatesUsingGET()`
+
+```php
+listNoteTemplatesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListNoteTemplateResponse
+```
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Search filter to apply to results
+$order_by = 'order_by_example'; // string | Attribute and direction to order items by. E.g. `given_name desc`
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listNoteTemplatesUsingGET($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NoteApi->listNoteTemplatesUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Search filter to apply to results | [optional] |
+| **order_by** | **string**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListNoteTemplateResponse**](../Model/ListNoteTemplateResponse.md)
 
 ### Authorization
 

@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**cancelSubscriptionUsingPOST**](PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
 [**createAffiliateCustomFieldUsingPOST**](PreReleaseApi.md#createAffiliateCustomFieldUsingPOST) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
 [**createDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
+[**createDiscountUsingPOST**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
+[**createDiscountUsingPOST1**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
 [**createFunnelIntegrationUsingPOST**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 [**createIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
 [**createLeadSourceUsingPOST**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
@@ -20,7 +22,9 @@ Method | HTTP request | Description
 [**createOpportunityUsingPOST1**](PreReleaseApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity
 [**createOrderCustomFieldUsingPOST**](PreReleaseApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order\&#39;s Custom Field
 [**createOrderItemsOnOrderUsingPOST1**](PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
+[**createOrderTotalDiscountUsingPOST**](PreReleaseApi.md#createOrderTotalDiscountUsingPOST) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
 [**createOrderUsingPOST1**](PreReleaseApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order
+[**createProductUsingPOST1**](PreReleaseApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
 [**createRedirectLinkUsingPOST**](PreReleaseApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
 [**createReferralUsingPOST**](PreReleaseApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral
 [**createSubscriptionCustomFieldUsingPOST**](PreReleaseApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription\&#39;s Custom Field
@@ -31,10 +35,14 @@ Method | HTTP request | Description
 [**deleteAffiliateUsingDELETE**](PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
 [**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
+[**deleteDiscountUsingDELETE2**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
 [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
+[**deleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order\&#39;s Custom Field
+[**deleteOrderTotalDiscountUsingDELETE**](PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETE) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
 [**deleteOrderUsingDELETE1**](PreReleaseApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order
+[**deleteProductUsingDELETE1**](PreReleaseApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
 [**deleteRedirectLinkUsingDELETE**](PreReleaseApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
 [**deleteTaskCustomFieldUsingDELETE**](PreReleaseApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
 [**deleteTaskUsingDELETE1**](PreReleaseApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
@@ -44,9 +52,12 @@ Method | HTTP request | Description
 [**getCommissionProgramUsingGET**](PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
 [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**getDiscountUsingGET1**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
 [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
+[**getOrderTotalDiscountUsingGET**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
 [**getOrderUsingGET1**](PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**getProductUsingGET**](PreReleaseApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
 [**getRedirectLinkUsingGET**](PreReleaseApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
 [**getTaskUsingGET1**](PreReleaseApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
 [**getUserByIdUsingGET**](PreReleaseApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User
@@ -55,16 +66,21 @@ Method | HTTP request | Description
 [**listAffiliateCommissionProgramsUsingGET**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 [**listAffiliateLinksUsingGET**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
 [**listCountriesUsingGET2**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
+[**listDiscountsUsingGET**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts
 [**listLandingPagesUsingGET**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
 [**listLeadSourcesUsingGET**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
 [**listMerchantsUsingGET**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts
+[**listNoteTemplatesUsingGET**](PreReleaseApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates
 [**listOpportunitiesUsingGET1**](PreReleaseApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
 [**listOpportunityStagesUsingGET**](PreReleaseApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
+[**listOrderPaymentsUsingGET1**](PreReleaseApi.md#listOrderPaymentsUsingGET1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
+[**listOrderTotalDiscountsUsingGET**](PreReleaseApi.md#listOrderTotalDiscountsUsingGET) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
 [**listOrdersUsingGET1**](PreReleaseApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders
 [**listProductsUsingGET1**](PreReleaseApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
 [**listProvincesForCountryUsingGET**](PreReleaseApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country\&#39;s Provinces
 [**listShippingMethodsUsingGET**](PreReleaseApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods
 [**listSubscriptionPlansUsingGET**](PreReleaseApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans
+[**listSubscriptionsUsingGET1**](PreReleaseApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions
 [**listSummariesUsingGET1**](PreReleaseApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
 [**listTasksUsingGET1**](PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
 [**listUsersUsingGET1**](PreReleaseApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users
@@ -81,10 +97,14 @@ Method | HTTP request | Description
 [**retrieveSubscriptionCustomFieldModelUsingGET**](PreReleaseApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription\&#39;s Custom Field Model
 [**retrieveTaskModelUsingGET1**](PreReleaseApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model
 [**updateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
+[**updateDiscountUsingPATCH**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
+[**updateDiscountUsingPATCH1**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
 [**updateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity\&#39;s Custom Field
+[**updateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
 [**updateOpportunityUsingPATCH**](PreReleaseApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 [**updateOrderCustomFieldUsingPATCH**](PreReleaseApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order\&#39;s Custom Field
+[**updateOrderTotalDiscountUsingPATCH**](PreReleaseApi.md#updateOrderTotalDiscountUsingPATCH) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
 [**updateRedirectLinkUsingPATCH**](PreReleaseApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 [**updateSubscriptionCustomFieldUsingPATCH**](PreReleaseApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription\&#39;s Custom Field
 [**updateTaskCustomFieldUsingPATCH**](PreReleaseApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task\&#39;s Custom Field
@@ -520,6 +540,161 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **createDiscountUsingPOST**
+> CategoryDiscount createDiscountUsingPOST(request)
+
+Create a Category Discount.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiCreateDiscountUsingPOSTRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiCreateDiscountUsingPOSTRequest = {
+    // request
+  request: {
+    applyToCommissions: true,
+    criteria: [
+      {
+        code: "code_example",
+        criteriaId: "criteriaId_example",
+        operator: "LESS_THAN",
+        planId: "planId_example",
+        productId: "productId_example",
+        productQuantityMax: 1,
+        productQuantityMin: 1,
+        rangeEndTime: "rangeEndTime_example",
+        rangeStartTime: "rangeStartTime_example",
+        subscriptionQuantity: 1,
+        totalAmount: 3.14,
+        type: "DATE_RANGE",
+      },
+    ],
+    description: "description_example",
+    discountPercent: 3.14,
+    name: "name_example",
+    productCategoryIds: [
+      "productCategoryIds_example",
+    ],
+  },
+};
+
+const data = await apiInstance.createDiscountUsingPOST(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **CreateUpdateDiscountRequest**| request |
+
+
+### Return type
+
+**CategoryDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **createDiscountUsingPOST1**
+> ShippingDiscount createDiscountUsingPOST1(request)
+
+Creates a Shipping Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiCreateDiscountUsingPOST1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiCreateDiscountUsingPOST1Request = {
+    // request
+  request: {
+    criteria: [
+      {
+        code: "code_example",
+        criteriaId: "criteriaId_example",
+        operator: "LESS_THAN",
+        planId: "planId_example",
+        productId: "productId_example",
+        productQuantityMax: 1,
+        productQuantityMin: 1,
+        rangeEndTime: "rangeEndTime_example",
+        rangeStartTime: "rangeStartTime_example",
+        subscriptionQuantity: 1,
+        totalAmount: 3.14,
+        type: "DATE_RANGE",
+      },
+    ],
+    description: "description_example",
+    discountType: "AMOUNT",
+    discountValue: 3.14,
+    name: "name_example",
+  },
+};
+
+const data = await apiInstance.createDiscountUsingPOST1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **CreateShippingDiscountRequest**| request |
+
+
+### Return type
+
+**ShippingDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **createFunnelIntegrationUsingPOST**
 > void createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
 
@@ -892,7 +1067,7 @@ const apiInstance = new PreReleaseApi(configuration);
 const request: PreReleaseApiCreateOpportunityStageUsingPOSTRequest = {
     // opportunity (optional)
   opportunityStage: {
-    checkListItems: [
+    checklistItems: [
       {
         description: "description_example",
         order: 1,
@@ -1145,6 +1320,84 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **createOrderTotalDiscountUsingPOST**
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+
+Creates an Order Total Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiCreateOrderTotalDiscountUsingPOSTRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiCreateOrderTotalDiscountUsingPOSTRequest = {
+    // request
+  request: {
+    applyToCommissions: true,
+    criteria: [
+      {
+        code: "code_example",
+        criteriaId: "criteriaId_example",
+        operator: "LESS_THAN",
+        planId: "planId_example",
+        productId: "productId_example",
+        productQuantityMax: 1,
+        productQuantityMin: 1,
+        rangeEndTime: "rangeEndTime_example",
+        rangeStartTime: "rangeStartTime_example",
+        subscriptionQuantity: 1,
+        totalAmount: 3.14,
+        type: "DATE_RANGE",
+      },
+    ],
+    description: "description_example",
+    discountStrategy: "GROSS",
+    discountType: "AMOUNT",
+    discountValue: 3.14,
+    name: "name_example",
+  },
+};
+
+const data = await apiInstance.createOrderTotalDiscountUsingPOST(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **CreateOrderTotalDiscountRequest**| request |
+
+
+### Return type
+
+**OrderTotalDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **createOrderUsingPOST1**
 > RestV2Order createOrderUsingPOST1(createOrderRequest)
 
@@ -1214,6 +1467,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 **RestV2Order**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **createProductUsingPOST1**
+> RestV2Product createProductUsingPOST1(createProductRequest)
+
+Creates a new product
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiCreateProductUsingPOST1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiCreateProductUsingPOST1Request = {
+    // createProductRequest
+  createProductRequest: {
+    active: true,
+    cityTaxable: true,
+    countryTaxable: true,
+    description: "description_example",
+    name: "name_example",
+    price: 1,
+    shortDescription: "shortDescription_example",
+    sku: "sku_example",
+    stateTaxable: true,
+    storefrontHidden: true,
+    subscriptionOnly: true,
+    taxable: true,
+    weight: 3.14,
+  },
+};
+
+const data = await apiInstance.createProductUsingPOST1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createProductRequest** | **CreateProductRequest**| createProductRequest |
+
+
+### Return type
+
+**RestV2Product**
 
 ### Authorization
 
@@ -1847,6 +2169,62 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **deleteDiscountUsingDELETE2**
+> void deleteDiscountUsingDELETE2()
+
+Deletes a specified Shipping Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteDiscountUsingDELETE2Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteDiscountUsingDELETE2Request = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.deleteDiscountUsingDELETE2(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **deleteFunnelIntegrationUsingPOST**
 > void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
 
@@ -2024,6 +2402,118 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **deleteOrderCustomFieldUsingDELETE**
+> void deleteOrderCustomFieldUsingDELETE()
+
+Deletes a Custom Field from Order.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteOrderCustomFieldUsingDELETERequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteOrderCustomFieldUsingDELETERequest = {
+    // custom_field_id
+  customFieldId: "custom_field_id_example",
+};
+
+const data = await apiInstance.deleteOrderCustomFieldUsingDELETE(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customFieldId** | [**string**] | custom_field_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **deleteOrderTotalDiscountUsingDELETE**
+> void deleteOrderTotalDiscountUsingDELETE()
+
+Deletes a specified Order Total Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteOrderTotalDiscountUsingDELETERequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteOrderTotalDiscountUsingDELETERequest = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.deleteOrderTotalDiscountUsingDELETE(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **deleteOrderUsingDELETE1**
 > void deleteOrderUsingDELETE1()
 
@@ -2054,6 +2544,62 @@ console.log('API called successfully. Returned data:', data);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | [**string**] | order_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **deleteProductUsingDELETE1**
+> void deleteProductUsingDELETE1()
+
+Deletes a single product
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteProductUsingDELETE1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteProductUsingDELETE1Request = {
+    // product_id
+  productId: "product_id_example",
+};
+
+const data = await apiInstance.deleteProductUsingDELETE1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | [**string**] | product_id | defaults to undefined
 
 
 ### Return type
@@ -2589,6 +3135,62 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **getDiscountUsingGET1**
+> ShippingDiscount getDiscountUsingGET1()
+
+Retrieves a Shipping Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetDiscountUsingGET1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetDiscountUsingGET1Request = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.getDiscountUsingGET1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**ShippingDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **getOpportunityStageUsingGET**
 > RestOpportunityStage getOpportunityStageUsingGET()
 
@@ -2701,6 +3303,62 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **getOrderTotalDiscountUsingGET**
+> OrderTotalDiscount getOrderTotalDiscountUsingGET()
+
+Retrieves an Order Total Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetOrderTotalDiscountUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetOrderTotalDiscountUsingGETRequest = {
+    // discount_id
+  discountId: "discount_id_example",
+};
+
+const data = await apiInstance.getOrderTotalDiscountUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discountId** | [**string**] | discount_id | defaults to undefined
+
+
+### Return type
+
+**OrderTotalDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **getOrderUsingGET1**
 > RestV2Order getOrderUsingGET1()
 
@@ -2736,6 +3394,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 **RestV2Order**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getProductUsingGET**
+> RestV2Product getProductUsingGET()
+
+Gets a single Product
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetProductUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetProductUsingGETRequest = {
+    // product_id
+  productId: "product_id_example",
+};
+
+const data = await apiInstance.getProductUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | [**string**] | product_id | defaults to undefined
+
+
+### Return type
+
+**RestV2Product**
 
 ### Authorization
 
@@ -3208,6 +3922,76 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **listDiscountsUsingGET**
+> ListShippingDiscountsResponse listDiscountsUsingGET()
+
+Retrieves all Shipping Discounts
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListDiscountsUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListDiscountsUsingGETRequest = {
+    // TODO: PAPI-1449 (optional)
+  fields: [
+    "fields_example",
+  ],
+    // Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=description%3D%3DHello+World` - `filter=discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld`  (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items by. E.g. `given_name desc` (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listDiscountsUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fields** | **Array&lt;string&gt;** | TODO: PAPI-1449 | (optional) defaults to undefined
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (String) name - (String) description - (DiscountType) discount_type: AMOUNT or PERCENT  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;description%3D%3DHello+World&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdescription%3D%3DHello%2BWorld&#x60;  | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListShippingDiscountsResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **listLandingPagesUsingGET**
 > ListLandingPagesResponse listLandingPagesUsingGET()
 
@@ -3354,7 +4138,7 @@ const configuration = createConfiguration();
 const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiListMerchantsUsingGETRequest = {
-    // Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123;account_name=abc` (optional)
+    // Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=id%3D%3D123` - `filter=account_name%3D%3Dabc` - `filter=id%3D%3D123%3Baccount_name=abc` (optional)
   filter: "filter_example",
     // Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc (optional)
   orderBy: "order_by_example",
@@ -3373,7 +4157,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**string**] | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123;account_name&#x3D;abc&#x60; | (optional) defaults to undefined
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (String) id - (String) account_name - (String) type You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;id%3D%3D123&#x60; - &#x60;filter&#x3D;account_name%3D%3Dabc&#x60; - &#x60;filter&#x3D;id%3D%3D123%3Baccount_name&#x3D;abc&#x60; | (optional) defaults to undefined
  **orderBy** | [**string**] | Attribute and direction to order items. One of the following fields: - id - account_name - type One of the following directions: - asc - desc | (optional) defaults to undefined
  **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
  **pageToken** | [**string**] | Page token | (optional) defaults to undefined
@@ -3382,6 +4166,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 **ListRestMerchantResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **listNoteTemplatesUsingGET**
+> ListNoteTemplateResponse listNoteTemplatesUsingGET()
+
+Retrieves a list of Note Templates
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListNoteTemplatesUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListNoteTemplatesUsingGETRequest = {
+    // Search filter to apply to results (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items by. E.g. `given_name desc` (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listNoteTemplatesUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**string**] | Search filter to apply to results | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListNoteTemplateResponse**
 
 ### Authorization
 
@@ -3538,6 +4387,139 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **listOrderPaymentsUsingGET1**
+> ListOrderPaymentsResponse listOrderPaymentsUsingGET1()
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListOrderPaymentsUsingGET1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListOrderPaymentsUsingGET1Request = {
+    // order_id
+  orderId: "order_id_example",
+    // Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true`  (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listOrderPaymentsUsingGET1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | [**string**] | order_id | defaults to undefined
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListOrderPaymentsResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **listOrderTotalDiscountsUsingGET**
+> ListOrderTotalDiscountsResponse listOrderTotalDiscountsUsingGET()
+
+Retrieves all Order Total Discounts
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListOrderTotalDiscountsUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListOrderTotalDiscountsUsingGETRequest = {
+    // Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=name%3D%3DMary` - `filter=applyToCommissions%3D%3DTrue` - `filter=discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET`  (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items by. E.g. `given_name desc` (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listOrderTotalDiscountsUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (String) name - (String) description - (Boolean) apply_to_commissions - (DiscountType) discount_type: AMOUNT or PERCENT - (DiscountStrategy) discount_strategy: GROSS or NET  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;name%3D%3DMary&#x60; - &#x60;filter&#x3D;applyToCommissions%3D%3DTrue&#x60; - &#x60;filter&#x3D;discount_type%3D%3DAMOUNT%3Bdiscount_strategy%3D%3DNET&#x60;  | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListOrderTotalDiscountsResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **listOrdersUsingGET1**
 > ListOrders listOrdersUsingGET1()
 
@@ -3554,7 +4536,7 @@ const configuration = createConfiguration();
 const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiListOrdersUsingGET1Request = {
-    // Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567` (optional)
+    // Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567` (optional)
   filter: "filter_example",
     // Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc (optional)
   orderBy: "order_by_example",
@@ -3573,7 +4555,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**string**] | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | (optional) defaults to undefined
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | (optional) defaults to undefined
  **orderBy** | [**string**] | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | (optional) defaults to undefined
  **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
  **pageToken** | [**string**] | Page token | (optional) defaults to undefined
@@ -3816,6 +4798,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 **ListSubscriptionPlansResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **listSubscriptionsUsingGET1**
+> ListSubscriptionsResponse listSubscriptionsUsingGET1()
+
+Retrieves a list of subscriptions using the specified search criteria.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListSubscriptionsUsingGET1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListSubscriptionsUsingGET1Request = {
+    // Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listSubscriptionsUsingGET1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (String) contact_id - (String) subscription_plan_id  | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items. One of the following fields: - id - contact_id - subscription_plan_id One of the following directions: - ASC - DESC  | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListSubscriptionsResponse**
 
 ### Authorization
 
@@ -4417,7 +5464,7 @@ const apiInstance = new PreReleaseApi(configuration);
 const request: PreReleaseApiPatchUserUsingPATCHRequest = {
     // user_id
   userId: "user_id_example",
-    // An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "address",
   ],
@@ -4476,7 +5523,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **PatchUserRequestV2**| user |
  **userId** | [**string**] | user_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4894,6 +5941,179 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **updateDiscountUsingPATCH**
+> CategoryDiscount updateDiscountUsingPATCH(request)
+
+Update a Category Discount.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiUpdateDiscountUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiUpdateDiscountUsingPATCHRequest = {
+    // discount_id
+  discountId: "discount_id_example",
+    // request
+  request: {
+    applyToCommissions: true,
+    criteria: [
+      {
+        code: "code_example",
+        criteriaId: "criteriaId_example",
+        operator: "LESS_THAN",
+        planId: "planId_example",
+        productId: "productId_example",
+        productQuantityMax: 1,
+        productQuantityMin: 1,
+        rangeEndTime: "rangeEndTime_example",
+        rangeStartTime: "rangeStartTime_example",
+        subscriptionQuantity: 1,
+        totalAmount: 3.14,
+        type: "DATE_RANGE",
+      },
+    ],
+    description: "description_example",
+    discountPercent: 3.14,
+    name: "name_example",
+    productCategoryIds: [
+      "productCategoryIds_example",
+    ],
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "contact_id",
+  ],
+};
+
+const data = await apiInstance.updateDiscountUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **CreateUpdateDiscountRequest**| request |
+ **discountId** | [**string**] | discount_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**CategoryDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateDiscountUsingPATCH1**
+> ShippingDiscount updateDiscountUsingPATCH1(request)
+
+Updates a Shipping Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiUpdateDiscountUsingPATCH1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiUpdateDiscountUsingPATCH1Request = {
+    // discount_id
+  discountId: "discount_id_example",
+    // request
+  request: {
+    criteria: [
+      {
+        code: "code_example",
+        criteriaId: "criteriaId_example",
+        operator: "LESS_THAN",
+        planId: "planId_example",
+        productId: "productId_example",
+        productQuantityMax: 1,
+        productQuantityMin: 1,
+        rangeEndTime: "rangeEndTime_example",
+        rangeStartTime: "rangeStartTime_example",
+        subscriptionQuantity: 1,
+        totalAmount: 3.14,
+        type: "DATE_RANGE",
+      },
+    ],
+    description: "description_example",
+    discountType: "AMOUNT",
+    discountValue: 3.14,
+    name: "name_example",
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "TODO: PAPI-1452",
+  ],
+};
+
+const data = await apiInstance.updateDiscountUsingPATCH1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **UpdateShippingDiscountRequest**| request |
+ **discountId** | [**string**] | discount_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**ShippingDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **updateNotesCustomFieldUsingPATCH**
 > CustomFieldMetaData updateNotesCustomFieldUsingPATCH(request)
 
@@ -5021,6 +6241,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 **CustomFieldMetaData**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateOpportunityStageUsingPATCH**
+> RestOpportunityStage updateOpportunityStageUsingPATCH(request)
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiUpdateOpportunityStageUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiUpdateOpportunityStageUsingPATCHRequest = {
+    // stage_id
+  stageId: "stage_id_example",
+    // request
+  request: {
+    checklistItems: [
+      {
+        description: "description_example",
+        id: "id_example",
+        order: 1,
+        required: true,
+      },
+    ],
+    name: "Qualified",
+    order: 1,
+    probability: 2,
+    targetNumberDays: 1,
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "name",
+  ],
+};
+
+const data = await apiInstance.updateOpportunityStageUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **UpdateOpportunityStageRequest**| request |
+ **stageId** | [**string**] | stage_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**RestOpportunityStage**
 
 ### Authorization
 
@@ -5178,6 +6475,93 @@ Name | Type | Description  | Notes
 ### Return type
 
 **CustomFieldMetaData**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateOrderTotalDiscountUsingPATCH**
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(request)
+
+Updates an Order Total Discount
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiUpdateOrderTotalDiscountUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiUpdateOrderTotalDiscountUsingPATCHRequest = {
+    // discount_id
+  discountId: "discount_id_example",
+    // request
+  request: {
+    applyToCommissions: true,
+    criteria: [
+      {
+        code: "code_example",
+        criteriaId: "criteriaId_example",
+        operator: "LESS_THAN",
+        planId: "planId_example",
+        productId: "productId_example",
+        productQuantityMax: 1,
+        productQuantityMin: 1,
+        rangeEndTime: "rangeEndTime_example",
+        rangeStartTime: "rangeStartTime_example",
+        subscriptionQuantity: 1,
+        totalAmount: 3.14,
+        type: "DATE_RANGE",
+      },
+    ],
+    description: "description_example",
+    discountStrategy: "GROSS",
+    discountType: "AMOUNT",
+    discountValue: 3.14,
+    name: "name_example",
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "name",
+  ],
+};
+
+const data = await apiInstance.updateOrderTotalDiscountUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | **UpdateOrderTotalDiscountRequest**| request |
+ **discountId** | [**string**] | discount_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**OrderTotalDiscount**
 
 ### Authorization
 

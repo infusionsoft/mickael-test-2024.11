@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "keap_sdk_core_client"
-version = "0.0.43"
+version = "0.0.44"
 description = "Keap REST API"
-authors = ["https://developer.keap.com/get-support/ <team@openapitools.org>"]
-license = "NoLicense"
+authors = ["Keap <api@keap.com>"]
+license = "Apache 2.0"
 readme = "README.md"
 repository = "https://github.com/infusionsoft/keap-sdk"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Keap REST API"]

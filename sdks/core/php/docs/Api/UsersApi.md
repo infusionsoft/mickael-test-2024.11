@@ -309,7 +309,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
     new GuzzleHttp\Client()
 );
 $user_id = 'user_id_example'; // string | user_id
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 $user = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
 
 try {
@@ -325,7 +325,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **user_id** | **string**| user_id | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 | **user** | [**\Com\Keap\Sdk\Core\Model\PatchUserRequestV2**](../Model/PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type

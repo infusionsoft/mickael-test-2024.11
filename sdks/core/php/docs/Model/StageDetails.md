@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**check_list_items** | [**\Com\Keap\Sdk\Core\Model\CheckListItemDetails[]**](CheckListItemDetails.md) |  | [optional]
+**checklist_items** | [**\Com\Keap\Sdk\Core\Model\CheckListItemDetails[]**](CheckListItemDetails.md) |  | [optional]
 **probability** | **int** |  | [optional]
 **stage_order** | **int** |  | [optional]
 **target_num_days** | **int** |  | [optional]

@@ -559,7 +559,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
 let opts = {
-  'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
   'tagCategory': new KeapCoreServiceCoreSdk.CreateUpdateTagCategoryRequest() // CreateUpdateTagCategoryRequest | tagCategory
 };
 apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, opts).then((data) => {
@@ -576,7 +576,7 @@ apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tagCategoryId** | **String**| tag_category_id | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **tagCategory** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
 
 ### Return type
@@ -609,7 +609,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
 let tagId = "tagId_example"; // String | tag_id
 let opts = {
-  'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
   'tag': new KeapCoreServiceCoreSdk.CreateUpdateTagRequest() // CreateUpdateTagRequest | tag
 };
 apiInstance.patchTagUsingPATCH(tagId, opts).then((data) => {
@@ -626,7 +626,7 @@ apiInstance.patchTagUsingPATCH(tagId, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tagId** | **String**| tag_id | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
 
 ### Return type

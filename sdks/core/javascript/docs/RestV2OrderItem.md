@@ -30,13 +30,13 @@ Name | Type | Description | Notes
 ## Enum: CycleEnum
 
 
-* `YEAR` (value: `"YEAR"`)
+* `DAILY` (value: `"DAILY"`)
 
-* `MONTH` (value: `"MONTH"`)
+* `WEEKLY` (value: `"WEEKLY"`)
 
-* `WEEK` (value: `"WEEK"`)
+* `MONTHLY` (value: `"MONTHLY"`)
 
-* `DAY_OF_YEAR` (value: `"DAY_OF_YEAR"`)
+* `YEARLY` (value: `"YEARLY"`)
 
 * `unknown_default_open_api` (value: `"unknown_default_open_api"`)
 

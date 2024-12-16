@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**list_opportunities_using_get1**](OpportunityApi.md#list_opportunities_using_get1) | **GET** /v2/opportunities | List Opportunities
 [**list_opportunity_stages_using_get**](OpportunityApi.md#list_opportunity_stages_using_get) | **GET** /v2/opportunities/stages | List of Opportunity Stages
 [**update_opportunity_custom_field_using_patch**](OpportunityApi.md#update_opportunity_custom_field_using_patch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
+[**update_opportunity_stage_using_patch**](OpportunityApi.md#update_opportunity_stage_using_patch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
 [**update_opportunity_using_patch**](OpportunityApi.md#update_opportunity_using_patch) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 
 
@@ -699,6 +700,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_opportunity_stage_using_patch**
+> RestOpportunityStage update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.rest_opportunity_stage import RestOpportunityStage
+from keap_sdk_core_client.models.update_opportunity_stage_request import UpdateOpportunityStageRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.OpportunityApi(api_client)
+    stage_id = 'stage_id_example' # str | stage_id
+    request = keap_sdk_core_client.UpdateOpportunityStageRequest() # UpdateOpportunityStageRequest | request
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+
+    try:
+        # Update an Opportunity Stage
+        api_response = api_instance.update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+        print("The response of OpportunityApi->update_opportunity_stage_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OpportunityApi->update_opportunity_stage_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **stage_id** | **str**| stage_id | 
+ **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
 
 ### Authorization
 

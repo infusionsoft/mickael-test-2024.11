@@ -34,10 +34,10 @@
 
 | Name | Value |
 |---- | -----|
-| YEAR | &quot;YEAR&quot; |
-| MONTH | &quot;MONTH&quot; |
-| WEEK | &quot;WEEK&quot; |
-| DAY_OF_YEAR | &quot;DAY_OF_YEAR&quot; |
+| DAILY | &quot;DAILY&quot; |
+| WEEKLY | &quot;WEEKLY&quot; |
+| MONTHLY | &quot;MONTHLY&quot; |
+| YEARLY | &quot;YEARLY&quot; |
 | UNKNOWN_COULD_NOT_DESERIALIZE | &quot;unknown_default_open_api&quot; |
 
 

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**createNoteUsingPOST1**](NoteApi.md#createNoteUsingPOST1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note
 [**deleteNoteUsingDELETE1**](NoteApi.md#deleteNoteUsingDELETE1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note
 [**getNoteUsingGET1**](NoteApi.md#getNoteUsingGET1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
+[**listNoteTemplatesUsingGET**](NoteApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates
 [**listNotesUsingGET1**](NoteApi.md#listNotesUsingGET1) | **GET** /v2/contacts/{contact_id}/notes | List Notes
 [**retrieveNoteModelUsingGET1**](NoteApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model
 [**updateNoteUsingPATCH**](NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
@@ -186,6 +187,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetNoteResponse**](GetNoteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listNoteTemplatesUsingGET
+
+> ListNoteTemplateResponse listNoteTemplatesUsingGET(opts)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
+let opts = {
+  'filter': "filter_example", // String | Search filter to apply to results
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items by. E.g. `given_name desc`
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listNoteTemplatesUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Search filter to apply to results | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)
 
 ### Authorization
 

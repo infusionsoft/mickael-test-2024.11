@@ -8,6 +8,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateNoteUsingPOST1**](NoteApi.md#createnoteusingpost1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note |
 | [**DeleteNoteUsingDELETE1**](NoteApi.md#deletenoteusingdelete1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note |
 | [**GetNoteUsingGET1**](NoteApi.md#getnoteusingget1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note |
+| [**ListNoteTemplatesUsingGET**](NoteApi.md#listnotetemplatesusingget) | **GET** /v2/notes/templates | Retrieve Note Templates |
 | [**ListNotesUsingGET1**](NoteApi.md#listnotesusingget1) | **GET** /v2/contacts/{contact_id}/notes | List Notes |
 | [**RetrieveNoteModelUsingGET1**](NoteApi.md#retrievenotemodelusingget1) | **GET** /v2/notes/model | Retrieve Note Model |
 | [**UpdateNoteUsingPATCH**](NoteApi.md#updatenoteusingpatch) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note |
@@ -368,6 +369,106 @@ catch (ApiException e)
 ### Return type
 
 [**GetNoteResponse**](GetNoteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listnotetemplatesusingget"></a>
+# **ListNoteTemplatesUsingGET**
+> ListNoteTemplateResponse ListNoteTemplatesUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+Retrieve Note Templates
+
+Retrieves a list of Note Templates
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListNoteTemplatesUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new NoteApi(config);
+            var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items by. E.g. `given_name desc` (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // Retrieve Note Templates
+                ListNoteTemplateResponse result = apiInstance.ListNoteTemplatesUsingGET(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling NoteApi.ListNoteTemplatesUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListNoteTemplatesUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Note Templates
+    ApiResponse<ListNoteTemplateResponse> response = apiInstance.ListNoteTemplatesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling NoteApi.ListNoteTemplatesUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Search filter to apply to results | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60; | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListNoteTemplateResponse**](ListNoteTemplateResponse.md)
 
 ### Authorization
 

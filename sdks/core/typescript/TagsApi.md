@@ -709,7 +709,7 @@ const apiInstance = new TagsApi(configuration);
 const request: TagsApiPatchTagCategoryUsingPATCHRequest = {
     // tag_category_id
   tagCategoryId: "tag_category_id_example",
-    // An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "name",
   ],
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tagCategory** | **CreateUpdateTagCategoryRequest**| tagCategory |
  **tagCategoryId** | [**string**] | tag_category_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type
@@ -776,7 +776,7 @@ const apiInstance = new TagsApi(configuration);
 const request: TagsApiPatchTagUsingPATCHRequest = {
     // tag_id
   tagId: "tag_id_example",
-    // An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "name",
   ],
@@ -801,7 +801,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag** | **CreateUpdateTagRequest**| tag |
  **tagId** | [**string**] | tag_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type

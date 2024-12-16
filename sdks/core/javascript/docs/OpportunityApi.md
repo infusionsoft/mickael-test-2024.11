@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**listOpportunitiesUsingGET1**](OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
 [**listOpportunityStagesUsingGET**](OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
 [**updateOpportunityCustomFieldUsingPATCH**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
+[**updateOpportunityStageUsingPATCH**](OpportunityApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
 [**updateOpportunityUsingPATCH**](OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
 
 
@@ -475,6 +476,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomFieldMetaData**](CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateOpportunityStageUsingPATCH
+
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, opts)
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
+let stageId = "stageId_example"; // String | stage_id
+let request = new KeapCoreServiceCoreSdk.UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+let opts = {
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+};
+apiInstance.updateOpportunityStageUsingPATCH(stageId, request, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **stageId** | **String**| stage_id | 
+ **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**RestOpportunityStage**](RestOpportunityStage.md)
 
 ### Authorization
 

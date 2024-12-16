@@ -14,6 +14,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**listOpportunitiesUsingGET1()**](OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities |
 | [**listOpportunityStagesUsingGET()**](OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages |
 | [**updateOpportunityCustomFieldUsingPATCH()**](OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
+| [**updateOpportunityStageUsingPATCH()**](OpportunityApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
 | [**updateOpportunityUsingPATCH()**](OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity |
 
 
@@ -569,6 +570,65 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\CustomFieldMetaData**](../Model/CustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateOpportunityStageUsingPATCH()`
+
+```php
+updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+```
+
+Update an Opportunity Stage
+
+Updates specified values of a given Opportunity Stage
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$stage_id = 'stage_id_example'; // string | stage_id
+$request = new \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OpportunityApi->updateOpportunityStageUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stage_id** | **string**| stage_id | |
+| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest**](../Model/UpdateOpportunityStageRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestOpportunityStage**](../Model/RestOpportunityStage.md)
 
 ### Authorization
 

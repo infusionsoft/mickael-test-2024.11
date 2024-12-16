@@ -8,8 +8,10 @@ Method | HTTP request | Description
 [**create_order_items_on_order_using_post1**](OrdersApi.md#create_order_items_on_order_using_post1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
 [**create_order_using_post1**](OrdersApi.md#create_order_using_post1) | **POST** /v2/orders | Create an Order
 [**create_payment_on_order_using_post1**](OrdersApi.md#create_payment_on_order_using_post1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
+[**delete_order_custom_field_using_delete**](OrdersApi.md#delete_order_custom_field_using_delete) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
 [**delete_order_using_delete1**](OrdersApi.md#delete_order_using_delete1) | **DELETE** /v2/orders/{order_id} | Delete an Order
 [**get_order_using_get1**](OrdersApi.md#get_order_using_get1) | **GET** /v2/orders/{order_id} | Retrieve an Order
+[**list_order_payments_using_get1**](OrdersApi.md#list_order_payments_using_get1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
 [**list_orders_using_get1**](OrdersApi.md#list_orders_using_get1) | **GET** /v2/orders | List orders
 [**patch_order_using_patch**](OrdersApi.md#patch_order_using_patch) | **PATCH** /v2/orders/{order_id} | Update an Order
 [**retrieve_order_custom_field_model_using_get**](OrdersApi.md#retrieve_order_custom_field_model_using_get) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
@@ -296,6 +298,72 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_order_custom_field_using_delete**
+> delete_order_custom_field_using_delete(custom_field_id)
+
+Delete an Order's Custom Field
+
+Deletes a Custom Field from Order.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.OrdersApi(api_client)
+    custom_field_id = 'custom_field_id_example' # str | custom_field_id
+
+    try:
+        # Delete an Order's Custom Field
+        api_instance.delete_order_custom_field_using_delete(custom_field_id)
+    except Exception as e:
+        print("Exception when calling OrdersApi->delete_order_custom_field_using_delete: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **custom_field_id** | **str**| custom_field_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_order_using_delete1**
 > delete_order_using_delete1(order_id)
 
@@ -431,6 +499,83 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_order_payments_using_get1**
+> ListOrderPaymentsResponse list_order_payments_using_get1(order_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+Retrieve Order Payments
+
+Retrieves a list of payments made against a given order, including historical or external payments of cash or credit card.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_order_payments_response import ListOrderPaymentsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.OrdersApi(api_client)
+    order_id = 'order_id_example' # str | order_id
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=payment_id%3D%3D123` - `filter=pay_status%3D%3DAPPROVED` - `filter=invoice_id%3D%3D456%3Bskip_commission=true`  (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # Retrieve Order Payments
+        api_response = api_instance.list_order_payments_using_get1(order_id, filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of OrdersApi->list_order_payments_using_get1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrdersApi->list_order_payments_using_get1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **str**| order_id | 
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) invoice_id - (String) payment_id - (String) amount - (String) pay_status - (Boolean) skip_commission  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;payment_id%3D%3D123&#x60; - &#x60;filter&#x3D;pay_status%3D%3DAPPROVED&#x60; - &#x60;filter&#x3D;invoice_id%3D%3D456%3Bskip_commission&#x3D;true&#x60;  | [optional] 
+ **order_by** | **str**| Attribute and direction to order items. One of the following fields: - invoice_id - payment_id - amount - pay_time - pay_status - skip_commission - last_updated_time One of the following directions: - asc - desc  | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListOrderPaymentsResponse**](ListOrderPaymentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_orders_using_get1**
 > ListOrders list_orders_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
 
@@ -457,7 +602,7 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OrdersApi(api_client)
-    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123;contact_id%3D%3D567` (optional)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_id%3D%3D123` - `filter=contact_id%3D%3D567` - `filter=product_id%3D%3D123%3Bcontact_id%3D%3D567` (optional)
     order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc (optional)
     page_size = 0 # int | Total number of items to return per page (optional)
     page_token = 'page_token_example' # str | Page token (optional)
@@ -477,7 +622,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **str**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123;contact_id%3D%3D567&#x60; | [optional] 
+ **filter** | **str**| Filter to apply, allowed fields are: - (String) product_id - (String) contact_id - (Boolean) paid - (String) created_since_time - (String) created_until_time You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_id%3D%3D123&#x60; - &#x60;filter&#x3D;contact_id%3D%3D567&#x60; - &#x60;filter&#x3D;product_id%3D%3D123%3Bcontact_id%3D%3D567&#x60; | [optional] 
  **order_by** | **str**| Attribute and direction to order items. One of the following fields: - id - product_id - contact_id - due_date One of the following directions: - asc - desc | [optional] 
  **page_size** | **int**| Total number of items to return per page | [optional] 
  **page_token** | **str**| Page token | [optional] 

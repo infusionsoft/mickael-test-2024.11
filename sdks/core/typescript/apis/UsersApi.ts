@@ -186,7 +186,7 @@ export class UsersApiRequestFactory extends BaseAPIRequestFactory {
      * Updates information on a specific User
      * Update User
      * @param userId user_id
-     * @param updateMask An optional list of fields to be updated. If set, only the provided fields will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param user user
      */
     public async patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<RequestContext> {

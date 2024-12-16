@@ -17,7 +17,7 @@ import DiscountCriteria from './DiscountCriteria';
 /**
  * The UpdateOrderTotalDiscountRequest model module.
  * @module com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest
- * @version 0.0.44
+ * @version 0.0.45
  */
 class UpdateOrderTotalDiscountRequest {
     /**

@@ -20,7 +20,7 @@ import ListProvincesResponse from '../model/ListProvincesResponse';
 /**
 * Locale service.
 * @module com.keap.sdk.core/api/LocaleApi
-* @version 0.0.44
+* @version 0.0.45
 */
 export default class LocaleApi {
 

@@ -19,7 +19,7 @@ import SubscriptionPlan from './SubscriptionPlan';
 /**
  * The RestV2Product model module.
  * @module com.keap.sdk.core/model/RestV2Product
- * @version 0.0.44
+ * @version 0.0.45
  */
 class RestV2Product {
     /**

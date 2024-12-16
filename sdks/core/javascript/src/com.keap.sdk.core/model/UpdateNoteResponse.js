@@ -17,7 +17,7 @@ import BasicUser from './BasicUser';
 /**
  * The UpdateNoteResponse model module.
  * @module com.keap.sdk.core/model/UpdateNoteResponse
- * @version 0.0.44
+ * @version 0.0.45
  */
 class UpdateNoteResponse {
     /**

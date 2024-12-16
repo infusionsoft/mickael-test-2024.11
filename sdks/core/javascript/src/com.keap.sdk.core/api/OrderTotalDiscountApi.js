@@ -22,7 +22,7 @@ import UpdateOrderTotalDiscountRequest from '../model/UpdateOrderTotalDiscountRe
 /**
 * OrderTotalDiscount service.
 * @module com.keap.sdk.core/api/OrderTotalDiscountApi
-* @version 0.0.44
+* @version 0.0.45
 */
 export default class OrderTotalDiscountApi {
 

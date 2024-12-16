@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleInvoice model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleInvoice
- * @version 0.0.44
+ * @version 0.0.45
  */
 class ApplicationConfigurationModuleInvoice {
     /**

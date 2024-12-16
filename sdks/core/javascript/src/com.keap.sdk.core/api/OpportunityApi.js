@@ -29,7 +29,7 @@ import UpdateOpportunityStageRequest from '../model/UpdateOpportunityStageReques
 /**
 * Opportunity service.
 * @module com.keap.sdk.core/api/OpportunityApi
-* @version 0.0.44
+* @version 0.0.45
 */
 export default class OpportunityApi {
 

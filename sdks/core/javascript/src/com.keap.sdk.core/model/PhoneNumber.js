@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PhoneNumber model module.
  * @module com.keap.sdk.core/model/PhoneNumber
- * @version 0.0.44
+ * @version 0.0.45
  */
 class PhoneNumber {
     /**

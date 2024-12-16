@@ -17,7 +17,7 @@ import RestOpportunityStage from './RestOpportunityStage';
 /**
  * The ListOpportunityStagesResponse model module.
  * @module com.keap.sdk.core/model/ListOpportunityStagesResponse
- * @version 0.0.44
+ * @version 0.0.45
  */
 class ListOpportunityStagesResponse {
     /**

@@ -21,7 +21,7 @@ import RestV2Product from '../model/RestV2Product';
 /**
 * Product service.
 * @module com.keap.sdk.core/api/ProductApi
-* @version 0.0.45
+* @version 0.0.46
 */
 export default class ProductApi {
 

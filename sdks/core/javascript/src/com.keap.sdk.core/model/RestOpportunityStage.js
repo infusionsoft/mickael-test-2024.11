@@ -17,7 +17,7 @@ import ChecklistItem from './ChecklistItem';
 /**
  * The RestOpportunityStage model module.
  * @module com.keap.sdk.core/model/RestOpportunityStage
- * @version 0.0.45
+ * @version 0.0.46
  */
 class RestOpportunityStage {
     /**

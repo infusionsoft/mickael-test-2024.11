@@ -26,7 +26,7 @@ import UpdateCustomFieldMetaDataRequest from '../model/UpdateCustomFieldMetaData
 /**
 * Subscriptions service.
 * @module com.keap.sdk.core/api/SubscriptionsApi
-* @version 0.0.45
+* @version 0.0.46
 */
 export default class SubscriptionsApi {
 

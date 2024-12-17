@@ -17,7 +17,7 @@ import AffiliateCommission from './AffiliateCommission';
 /**
  * The ListAffiliateCommissionResponse model module.
  * @module com.keap.sdk.core/model/ListAffiliateCommissionResponse
- * @version 0.0.45
+ * @version 0.0.46
  */
 class ListAffiliateCommissionResponse {
     /**

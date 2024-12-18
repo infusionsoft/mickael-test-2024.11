@@ -18,7 +18,7 @@ import ProductVariableSetting from './ProductVariableSetting';
 /**
  * The ProductOptions model module.
  * @module com.keap.sdk.core/model/ProductOptions
- * @version 0.0.46
+ * @version 0.0.47
  */
 class ProductOptions {
     /**

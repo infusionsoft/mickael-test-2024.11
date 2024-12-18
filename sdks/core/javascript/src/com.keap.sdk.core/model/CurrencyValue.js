@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CurrencyValue model module.
  * @module com.keap.sdk.core/model/CurrencyValue
- * @version 0.0.46
+ * @version 0.0.47
  */
 class CurrencyValue {
     /**

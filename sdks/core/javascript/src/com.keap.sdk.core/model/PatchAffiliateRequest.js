@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PatchAffiliateRequest model module.
  * @module com.keap.sdk.core/model/PatchAffiliateRequest
- * @version 0.0.46
+ * @version 0.0.47
  */
 class PatchAffiliateRequest {
     /**

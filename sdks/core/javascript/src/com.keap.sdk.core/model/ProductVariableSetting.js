@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ProductVariableSetting model module.
  * @module com.keap.sdk.core/model/ProductVariableSetting
- * @version 0.0.46
+ * @version 0.0.47
  */
 class ProductVariableSetting {
     /**

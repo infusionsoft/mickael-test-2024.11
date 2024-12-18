@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StackTraceElement model module.
  * @module com.keap.sdk.core/model/StackTraceElement
- * @version 0.0.46
+ * @version 0.0.47
  */
 class StackTraceElement {
     /**

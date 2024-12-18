@@ -8,7 +8,6 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateContactUsingPOST1**](ContactApi.md#createcontactusingpost1) | **POST** /v2/contacts | Create a Contact |
 | [**DeleteContactUsingDELETE1**](ContactApi.md#deletecontactusingdelete1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact |
 | [**GetContactUsingGET1**](ContactApi.md#getcontactusingget1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact |
-| [**GetContactsBySearchTermUsingGET**](ContactApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts |
 | [**LinkContactsUsingPOST**](ContactApi.md#linkcontactsusingpost) | **POST** /v2/contacts:link | Link Contacts |
 | [**ListContactLinkTypesUsingGET**](ContactApi.md#listcontactlinktypesusingget) | **GET** /v2/contacts/links/types | List Contact Link types |
 | [**ListContactLinksUsingGET**](ContactApi.md#listcontactlinksusingget) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts |
@@ -369,100 +368,6 @@ catch (ApiException e)
 ### Return type
 
 [**Contact**](Contact.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="getcontactsbysearchtermusingget"></a>
-# **GetContactsBySearchTermUsingGET**
-> ListBasicContactResponse GetContactsBySearchTermUsingGET (string searchParam)
-
-Search for Contacts
-
-Get a list of Contacts based search parameters.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Keap.Sdk.Core.Api;
-using Keap.Sdk.Core.Client;
-using Keap.Sdk.Core.Model;
-
-namespace Example
-{
-    public class GetContactsBySearchTermUsingGETExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
-            var apiInstance = new ContactApi(config);
-            var searchParam = "searchParam_example";  // string | searchParam
-
-            try
-            {
-                // Search for Contacts
-                ListBasicContactResponse result = apiInstance.GetContactsBySearchTermUsingGET(searchParam);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ContactApi.GetContactsBySearchTermUsingGET: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the GetContactsBySearchTermUsingGETWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Search for Contacts
-    ApiResponse<ListBasicContactResponse> response = apiInstance.GetContactsBySearchTermUsingGETWithHttpInfo(searchParam);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ContactApi.GetContactsBySearchTermUsingGETWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **searchParam** | **string** | searchParam |  |
-
-### Return type
-
-[**ListBasicContactResponse**](ListBasicContactResponse.md)
 
 ### Authorization
 

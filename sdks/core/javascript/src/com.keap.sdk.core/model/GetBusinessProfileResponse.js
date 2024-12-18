@@ -17,7 +17,7 @@ import BusinessProfileAddressResponse from './BusinessProfileAddressResponse';
 /**
  * The GetBusinessProfileResponse model module.
  * @module com.keap.sdk.core/model/GetBusinessProfileResponse
- * @version 0.0.48
+ * @version 0.0.49
  */
 class GetBusinessProfileResponse {
     /**

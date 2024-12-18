@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.48</version>
+  <version>0.0.49</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.48"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.49"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.48.jar`
+- `target/core-service-core-java-sdk-0.0.49.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -86,12 +86,12 @@ public class AffiliateApiExample {
         // Configure clients using the `defaultClient` object, such as
         // overriding the host and port, timeout, etc.
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        String id = "id_example"; // String | id
-        AffiliateAddToProgramRequest affiliateAddToProgramRequest = new AffiliateAddToProgramRequest(); // AffiliateAddToProgramRequest | affiliateAddToProgramRequest
+        CreateAffiliateRequest createAffiliateRequest = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
         try {
-            apiInstance.addAffiliateToProgramUsingPOST(id, affiliateAddToProgramRequest);
+            RestAffiliate result = apiInstance.addAffiliateUsingPOST(createAffiliateRequest);
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AffiliateApi#addAffiliateToProgramUsingPOST");
+            System.err.println("Exception when calling AffiliateApi#addAffiliateUsingPOST");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -108,64 +108,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AffiliateApi* | [**addAffiliateToProgramUsingPOST**](docs/AffiliateApi.md#addAffiliateToProgramUsingPOST) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
-*AffiliateApi* | [**addAffiliateToProgramUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#addAffiliateToProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 *AffiliateApi* | [**addAffiliateUsingPOST**](docs/AffiliateApi.md#addAffiliateUsingPOST) | **POST** /v2/affiliates | Create an Affiliate
 *AffiliateApi* | [**addAffiliateUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#addAffiliateUsingPOSTWithHttpInfo) | **POST** /v2/affiliates | Create an Affiliate
-*AffiliateApi* | [**addCommissionProgramUsingPOST**](docs/AffiliateApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
-*AffiliateApi* | [**addCommissionProgramUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#addCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
-*AffiliateApi* | [**assignProductCommissionProgramUsingPOST**](docs/AffiliateApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
-*AffiliateApi* | [**assignProductCommissionProgramUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#assignProductCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
-*AffiliateApi* | [**assignSubscriptionCommissionProgramUsingPOST**](docs/AffiliateApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
-*AffiliateApi* | [**assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
-*AffiliateApi* | [**createAffiliateCustomFieldUsingPOST**](docs/AffiliateApi.md#createAffiliateCustomFieldUsingPOST) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
-*AffiliateApi* | [**createAffiliateCustomFieldUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#createAffiliateCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
-*AffiliateApi* | [**createDefaultCommissionProgramUsingPOST**](docs/AffiliateApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
-*AffiliateApi* | [**createDefaultCommissionProgramUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#createDefaultCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
-*AffiliateApi* | [**createRedirectLinkUsingPOST**](docs/AffiliateApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
-*AffiliateApi* | [**createRedirectLinkUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#createRedirectLinkUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
-*AffiliateApi* | [**deleteAffiliateCommissionProgramUsingDELETE**](docs/AffiliateApi.md#deleteAffiliateCommissionProgramUsingDELETE) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
-*AffiliateApi* | [**deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo**](docs/AffiliateApi.md#deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
-*AffiliateApi* | [**deleteAffiliateUsingDELETE**](docs/AffiliateApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
-*AffiliateApi* | [**deleteAffiliateUsingDELETEWithHttpInfo**](docs/AffiliateApi.md#deleteAffiliateUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
-*AffiliateApi* | [**deleteRedirectLinkUsingDELETE**](docs/AffiliateApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
-*AffiliateApi* | [**deleteRedirectLinkUsingDELETEWithHttpInfo**](docs/AffiliateApi.md#deleteRedirectLinkUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
-*AffiliateApi* | [**getAffiliateCommissionTotalUsingGET**](docs/AffiliateApi.md#getAffiliateCommissionTotalUsingGET) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
-*AffiliateApi* | [**getAffiliateCommissionTotalUsingGETWithHttpInfo**](docs/AffiliateApi.md#getAffiliateCommissionTotalUsingGETWithHttpInfo) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
-*AffiliateApi* | [**getAffiliateCommissionsUsingGET**](docs/AffiliateApi.md#getAffiliateCommissionsUsingGET) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
-*AffiliateApi* | [**getAffiliateCommissionsUsingGETWithHttpInfo**](docs/AffiliateApi.md#getAffiliateCommissionsUsingGETWithHttpInfo) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
-*AffiliateApi* | [**getAffiliateCustomFieldsUsingGET**](docs/AffiliateApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-*AffiliateApi* | [**getAffiliateCustomFieldsUsingGETWithHttpInfo**](docs/AffiliateApi.md#getAffiliateCustomFieldsUsingGETWithHttpInfo) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
 *AffiliateApi* | [**getAffiliateUsingGET1**](docs/AffiliateApi.md#getAffiliateUsingGET1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
 *AffiliateApi* | [**getAffiliateUsingGET1WithHttpInfo**](docs/AffiliateApi.md#getAffiliateUsingGET1WithHttpInfo) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
-*AffiliateApi* | [**getCommissionProgramUsingGET**](docs/AffiliateApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
-*AffiliateApi* | [**getCommissionProgramUsingGETWithHttpInfo**](docs/AffiliateApi.md#getCommissionProgramUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
-*AffiliateApi* | [**getRedirectLinkUsingGET**](docs/AffiliateApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
-*AffiliateApi* | [**getRedirectLinkUsingGETWithHttpInfo**](docs/AffiliateApi.md#getRedirectLinkUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
-*AffiliateApi* | [**listAffiliateCommissionProgramsUsingGET**](docs/AffiliateApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
-*AffiliateApi* | [**listAffiliateCommissionProgramsUsingGETWithHttpInfo**](docs/AffiliateApi.md#listAffiliateCommissionProgramsUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
-*AffiliateApi* | [**listAffiliateLinksUsingGET**](docs/AffiliateApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
-*AffiliateApi* | [**listAffiliateLinksUsingGETWithHttpInfo**](docs/AffiliateApi.md#listAffiliateLinksUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects | List Affiliate Links
-*AffiliateApi* | [**listSummariesUsingGET1**](docs/AffiliateApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
-*AffiliateApi* | [**listSummariesUsingGET1WithHttpInfo**](docs/AffiliateApi.md#listSummariesUsingGET1WithHttpInfo) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
 *AffiliateApi* | [**patchCommissionProgramUsingPATCH**](docs/AffiliateApi.md#patchCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 *AffiliateApi* | [**patchCommissionProgramUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#patchCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
-*AffiliateApi* | [**patchDefaultCommissionProgramUsingPATCH**](docs/AffiliateApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
-*AffiliateApi* | [**patchDefaultCommissionProgramUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#patchDefaultCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
-*AffiliateApi* | [**patchProductCommissionProgramUsingPATCH**](docs/AffiliateApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
-*AffiliateApi* | [**patchProductCommissionProgramUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#patchProductCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
-*AffiliateApi* | [**patchSubscriptionCommissionProgramUsingPATCH**](docs/AffiliateApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
-*AffiliateApi* | [**patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
-*AffiliateApi* | [**removeAffiliateFromProgramUsingPOST**](docs/AffiliateApi.md#removeAffiliateFromProgramUsingPOST) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
-*AffiliateApi* | [**removeAffiliateFromProgramUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#removeAffiliateFromProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
-*AffiliateApi* | [**removeSubscriptionPlanCommissionFromCommissionsUsingPOST**](docs/AffiliateApi.md#removeSubscriptionPlanCommissionFromCommissionsUsingPOST) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
-*AffiliateApi* | [**removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
-*AffiliateApi* | [**updateAffiliateCustomFieldUsingPATCH**](docs/AffiliateApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
-*AffiliateApi* | [**updateAffiliateCustomFieldUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#updateAffiliateCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 *AffiliateApi* | [**updateAffiliateUsingPATCH**](docs/AffiliateApi.md#updateAffiliateUsingPATCH) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
 *AffiliateApi* | [**updateAffiliateUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#updateAffiliateUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
-*AffiliateApi* | [**updateRedirectLinkUsingPATCH**](docs/AffiliateApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
-*AffiliateApi* | [**updateRedirectLinkUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#updateRedirectLinkUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 *AutomationApi* | [**addContactsToAutomationSequenceUsingPOST**](docs/AutomationApi.md#addContactsToAutomationSequenceUsingPOST) | **POST** /v2/automations/{automation_id}/sequences/{sequence_id}:addContacts | Add Contacts to an Automation Sequence
 *AutomationApi* | [**addContactsToAutomationSequenceUsingPOSTWithHttpInfo**](docs/AutomationApi.md#addContactsToAutomationSequenceUsingPOSTWithHttpInfo) | **POST** /v2/automations/{automation_id}/sequences/{sequence_id}:addContacts | Add Contacts to an Automation Sequence
 *AutomationApi* | [**deleteAutomationUsingDELETE**](docs/AutomationApi.md#deleteAutomationUsingDELETE) | **DELETE** /v2/automations | Delete an Automation
@@ -198,16 +148,6 @@ Class | Method | HTTP request | Description
 *CampaignApi* | [**listCampaignsUsingGET1WithHttpInfo**](docs/CampaignApi.md#listCampaignsUsingGET1WithHttpInfo) | **GET** /v2/campaigns | List Campaigns
 *CampaignApi* | [**removeContactsFromCampaignSequenceUsingPOST**](docs/CampaignApi.md#removeContactsFromCampaignSequenceUsingPOST) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:removeContacts | Remove Contacts from Campaign Sequence
 *CampaignApi* | [**removeContactsFromCampaignSequenceUsingPOSTWithHttpInfo**](docs/CampaignApi.md#removeContactsFromCampaignSequenceUsingPOSTWithHttpInfo) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:removeContacts | Remove Contacts from Campaign Sequence
-*CategoryDiscountApi* | [**createDiscountUsingPOST**](docs/CategoryDiscountApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
-*CategoryDiscountApi* | [**createDiscountUsingPOSTWithHttpInfo**](docs/CategoryDiscountApi.md#createDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/productCategories | Create a Category Discount
-*CategoryDiscountApi* | [**deleteDiscountUsingDELETE**](docs/CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-*CategoryDiscountApi* | [**deleteDiscountUsingDELETEWithHttpInfo**](docs/CategoryDiscountApi.md#deleteDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-*CategoryDiscountApi* | [**getDiscountUsingGET**](docs/CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
-*CategoryDiscountApi* | [**getDiscountUsingGETWithHttpInfo**](docs/CategoryDiscountApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
-*CategoryDiscountApi* | [**listCategoryDiscountsUsingGET**](docs/CategoryDiscountApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts
-*CategoryDiscountApi* | [**listCategoryDiscountsUsingGETWithHttpInfo**](docs/CategoryDiscountApi.md#listCategoryDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories | List Category Discounts
-*CategoryDiscountApi* | [**updateDiscountUsingPATCH**](docs/CategoryDiscountApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
-*CategoryDiscountApi* | [**updateDiscountUsingPATCHWithHttpInfo**](docs/CategoryDiscountApi.md#updateDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 *CompanyApi* | [**createCompanyUsingPOST1**](docs/CompanyApi.md#createCompanyUsingPOST1) | **POST** /v2/companies | Create a Company
 *CompanyApi* | [**createCompanyUsingPOST1WithHttpInfo**](docs/CompanyApi.md#createCompanyUsingPOST1WithHttpInfo) | **POST** /v2/companies | Create a Company
 *CompanyApi* | [**deleteCompanyUsingDELETE**](docs/CompanyApi.md#deleteCompanyUsingDELETE) | **DELETE** /v2/companies/{company_id} | Delete a Company
@@ -226,8 +166,6 @@ Class | Method | HTTP request | Description
 *ContactApi* | [**deleteContactUsingDELETE1WithHttpInfo**](docs/ContactApi.md#deleteContactUsingDELETE1WithHttpInfo) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 *ContactApi* | [**getContactUsingGET1**](docs/ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
 *ContactApi* | [**getContactUsingGET1WithHttpInfo**](docs/ContactApi.md#getContactUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-*ContactApi* | [**getContactsBySearchTermUsingGET**](docs/ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
-*ContactApi* | [**getContactsBySearchTermUsingGETWithHttpInfo**](docs/ContactApi.md#getContactsBySearchTermUsingGETWithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts
 *ContactApi* | [**linkContactsUsingPOST**](docs/ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts
 *ContactApi* | [**linkContactsUsingPOSTWithHttpInfo**](docs/ContactApi.md#linkContactsUsingPOSTWithHttpInfo) | **POST** /v2/contacts:link | Link Contacts
 *ContactApi* | [**listContactLinkTypesUsingGET**](docs/ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types
@@ -260,368 +198,20 @@ Class | Method | HTTP request | Description
 *EmailAddressApi* | [**getEmailAddressStatusUsingGETWithHttpInfo**](docs/EmailAddressApi.md#getEmailAddressStatusUsingGETWithHttpInfo) | **GET** /v2/emailAddresses/{email} | Retrieve an Email Address status
 *EmailAddressApi* | [**updateEmailAddressOptStatusUsingPUT**](docs/EmailAddressApi.md#updateEmailAddressOptStatusUsingPUT) | **PUT** /v2/emailAddresses/{email} | Update an Email Address opt-in status
 *EmailAddressApi* | [**updateEmailAddressOptStatusUsingPUTWithHttpInfo**](docs/EmailAddressApi.md#updateEmailAddressOptStatusUsingPUTWithHttpInfo) | **PUT** /v2/emailAddresses/{email} | Update an Email Address opt-in status
-*FilesApi* | [**createFileUsingPOST1**](docs/FilesApi.md#createFileUsingPOST1) | **POST** /v2/files | Create a file
-*FilesApi* | [**createFileUsingPOST1WithHttpInfo**](docs/FilesApi.md#createFileUsingPOST1WithHttpInfo) | **POST** /v2/files | Create a file
-*FilesApi* | [**deleteFileUsingDELETE1**](docs/FilesApi.md#deleteFileUsingDELETE1) | **DELETE** /v2/files/{file_id} | Delete a file
-*FilesApi* | [**deleteFileUsingDELETE1WithHttpInfo**](docs/FilesApi.md#deleteFileUsingDELETE1WithHttpInfo) | **DELETE** /v2/files/{file_id} | Delete a file
-*FilesApi* | [**getFileDataUsingGET**](docs/FilesApi.md#getFileDataUsingGET) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
-*FilesApi* | [**getFileDataUsingGETWithHttpInfo**](docs/FilesApi.md#getFileDataUsingGETWithHttpInfo) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
-*FilesApi* | [**getFileUsingGET1**](docs/FilesApi.md#getFileUsingGET1) | **GET** /v2/files/{file_id} | Retrieve a file
-*FilesApi* | [**getFileUsingGET1WithHttpInfo**](docs/FilesApi.md#getFileUsingGET1WithHttpInfo) | **GET** /v2/files/{file_id} | Retrieve a file
-*FilesApi* | [**listFilesUsingGET1**](docs/FilesApi.md#listFilesUsingGET1) | **GET** /v2/files | List all files
-*FilesApi* | [**listFilesUsingGET1WithHttpInfo**](docs/FilesApi.md#listFilesUsingGET1WithHttpInfo) | **GET** /v2/files | List all files
-*FilesApi* | [**updateFileUsingPATCH**](docs/FilesApi.md#updateFileUsingPATCH) | **PATCH** /v2/files/{file_id} | Update a file
-*FilesApi* | [**updateFileUsingPATCHWithHttpInfo**](docs/FilesApi.md#updateFileUsingPATCHWithHttpInfo) | **PATCH** /v2/files/{file_id} | Update a file
-*FreeTrialDiscountApi* | [**deleteDiscountUsingDELETE1**](docs/FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
-*FreeTrialDiscountApi* | [**deleteDiscountUsingDELETE1WithHttpInfo**](docs/FreeTrialDiscountApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
-*FunnelIntegrationApi* | [**createFunnelIntegrationUsingPOST**](docs/FunnelIntegrationApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-*FunnelIntegrationApi* | [**createFunnelIntegrationUsingPOSTWithHttpInfo**](docs/FunnelIntegrationApi.md#createFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-*FunnelIntegrationApi* | [**createIntegrationTriggerEventUsingPOST**](docs/FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-*FunnelIntegrationApi* | [**createIntegrationTriggerEventUsingPOSTWithHttpInfo**](docs/FunnelIntegrationApi.md#createIntegrationTriggerEventUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-*FunnelIntegrationApi* | [**deleteFunnelIntegrationUsingPOST**](docs/FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
-*FunnelIntegrationApi* | [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](docs/FunnelIntegrationApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
-*LandingPagesApi* | [**listLandingPagesUsingGET**](docs/LandingPagesApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
-*LandingPagesApi* | [**listLandingPagesUsingGETWithHttpInfo**](docs/LandingPagesApi.md#listLandingPagesUsingGETWithHttpInfo) | **GET** /v2/landingpages | List Landing Pages
-*LeadScoreApi* | [**getLeadScoreDetailsUsingGET**](docs/LeadScoreApi.md#getLeadScoreDetailsUsingGET) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
-*LeadScoreApi* | [**getLeadScoreDetailsUsingGETWithHttpInfo**](docs/LeadScoreApi.md#getLeadScoreDetailsUsingGETWithHttpInfo) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
-*LeadSourceCategoriesApi* | [**createLeadSourceCategoryUsingPOST**](docs/LeadSourceCategoriesApi.md#createLeadSourceCategoryUsingPOST) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
-*LeadSourceCategoriesApi* | [**createLeadSourceCategoryUsingPOSTWithHttpInfo**](docs/LeadSourceCategoriesApi.md#createLeadSourceCategoryUsingPOSTWithHttpInfo) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
-*LeadSourceCategoriesApi* | [**deleteLeadSourceCategoryUsingDELETE**](docs/LeadSourceCategoriesApi.md#deleteLeadSourceCategoryUsingDELETE) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
-*LeadSourceCategoriesApi* | [**deleteLeadSourceCategoryUsingDELETEWithHttpInfo**](docs/LeadSourceCategoriesApi.md#deleteLeadSourceCategoryUsingDELETEWithHttpInfo) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
-*LeadSourceCategoriesApi* | [**getLeadSourceCategoryUsingGET**](docs/LeadSourceCategoriesApi.md#getLeadSourceCategoryUsingGET) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
-*LeadSourceCategoriesApi* | [**getLeadSourceCategoryUsingGETWithHttpInfo**](docs/LeadSourceCategoriesApi.md#getLeadSourceCategoryUsingGETWithHttpInfo) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
-*LeadSourcesApi* | [**createLeadSourceUsingPOST**](docs/LeadSourcesApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
-*LeadSourcesApi* | [**createLeadSourceUsingPOSTWithHttpInfo**](docs/LeadSourcesApi.md#createLeadSourceUsingPOSTWithHttpInfo) | **POST** /v2/leadsources | Create a Lead Source
-*LeadSourcesApi* | [**listLeadSourcesUsingGET**](docs/LeadSourcesApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
-*LeadSourcesApi* | [**listLeadSourcesUsingGETWithHttpInfo**](docs/LeadSourcesApi.md#listLeadSourcesUsingGETWithHttpInfo) | **GET** /v2/leadsources | List Lead Sources
-*LocaleApi* | [**listCountriesUsingGET2**](docs/LocaleApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
-*LocaleApi* | [**listCountriesUsingGET2WithHttpInfo**](docs/LocaleApi.md#listCountriesUsingGET2WithHttpInfo) | **GET** /v2/locales/countries | List Countries
-*LocaleApi* | [**listProvincesForCountryUsingGET**](docs/LocaleApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
-*LocaleApi* | [**listProvincesForCountryUsingGETWithHttpInfo**](docs/LocaleApi.md#listProvincesForCountryUsingGETWithHttpInfo) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
-*MerchantApi* | [**listMerchantsUsingGET**](docs/MerchantApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts
-*MerchantApi* | [**listMerchantsUsingGETWithHttpInfo**](docs/MerchantApi.md#listMerchantsUsingGETWithHttpInfo) | **GET** /v2/merchants | List Merchant accounts
-*NoteApi* | [**createNoteCustomFieldUsingPOST1**](docs/NoteApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field
-*NoteApi* | [**createNoteCustomFieldUsingPOST1WithHttpInfo**](docs/NoteApi.md#createNoteCustomFieldUsingPOST1WithHttpInfo) | **POST** /v2/notes/model/customFields | Create a Custom Field
 *NoteApi* | [**createNoteUsingPOST1**](docs/NoteApi.md#createNoteUsingPOST1) | **POST** /v2/contacts/{contact_id}/notes | Create a Note
 *NoteApi* | [**createNoteUsingPOST1WithHttpInfo**](docs/NoteApi.md#createNoteUsingPOST1WithHttpInfo) | **POST** /v2/contacts/{contact_id}/notes | Create a Note
 *NoteApi* | [**deleteNoteUsingDELETE1**](docs/NoteApi.md#deleteNoteUsingDELETE1) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note
 *NoteApi* | [**deleteNoteUsingDELETE1WithHttpInfo**](docs/NoteApi.md#deleteNoteUsingDELETE1WithHttpInfo) | **DELETE** /v2/contacts/{contact_id}/notes/{note_id} | Delete a Note
 *NoteApi* | [**getNoteUsingGET1**](docs/NoteApi.md#getNoteUsingGET1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
 *NoteApi* | [**getNoteUsingGET1WithHttpInfo**](docs/NoteApi.md#getNoteUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
-*NoteApi* | [**listNoteTemplatesUsingGET**](docs/NoteApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates
-*NoteApi* | [**listNoteTemplatesUsingGETWithHttpInfo**](docs/NoteApi.md#listNoteTemplatesUsingGETWithHttpInfo) | **GET** /v2/notes/templates | Retrieve Note Templates
 *NoteApi* | [**listNotesUsingGET1**](docs/NoteApi.md#listNotesUsingGET1) | **GET** /v2/contacts/{contact_id}/notes | List Notes
 *NoteApi* | [**listNotesUsingGET1WithHttpInfo**](docs/NoteApi.md#listNotesUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id}/notes | List Notes
-*NoteApi* | [**retrieveNoteModelUsingGET1**](docs/NoteApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model
-*NoteApi* | [**retrieveNoteModelUsingGET1WithHttpInfo**](docs/NoteApi.md#retrieveNoteModelUsingGET1WithHttpInfo) | **GET** /v2/notes/model | Retrieve Note Model
 *NoteApi* | [**updateNoteUsingPATCH**](docs/NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
 *NoteApi* | [**updateNoteUsingPATCHWithHttpInfo**](docs/NoteApi.md#updateNoteUsingPATCHWithHttpInfo) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
-*NoteApi* | [**updateNotesCustomFieldUsingPATCH**](docs/NoteApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
-*NoteApi* | [**updateNotesCustomFieldUsingPATCHWithHttpInfo**](docs/NoteApi.md#updateNotesCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
-*OpportunityApi* | [**createOpportunityCustomFieldsUsingPOST**](docs/OpportunityApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
-*OpportunityApi* | [**createOpportunityCustomFieldsUsingPOSTWithHttpInfo**](docs/OpportunityApi.md#createOpportunityCustomFieldsUsingPOSTWithHttpInfo) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
-*OpportunityApi* | [**createOpportunityStageUsingPOST**](docs/OpportunityApi.md#createOpportunityStageUsingPOST) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
-*OpportunityApi* | [**createOpportunityStageUsingPOSTWithHttpInfo**](docs/OpportunityApi.md#createOpportunityStageUsingPOSTWithHttpInfo) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
-*OpportunityApi* | [**createOpportunityUsingPOST1**](docs/OpportunityApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity
-*OpportunityApi* | [**createOpportunityUsingPOST1WithHttpInfo**](docs/OpportunityApi.md#createOpportunityUsingPOST1WithHttpInfo) | **POST** /v2/opportunities | Create an Opportunity
-*OpportunityApi* | [**deleteOpportunityStageUsingDELETE**](docs/OpportunityApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
-*OpportunityApi* | [**deleteOpportunityStageUsingDELETEWithHttpInfo**](docs/OpportunityApi.md#deleteOpportunityStageUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
-*OpportunityApi* | [**deleteOpportunityUsingDELETE**](docs/OpportunityApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
-*OpportunityApi* | [**deleteOpportunityUsingDELETEWithHttpInfo**](docs/OpportunityApi.md#deleteOpportunityUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
-*OpportunityApi* | [**getOpportunityStageUsingGET**](docs/OpportunityApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
-*OpportunityApi* | [**getOpportunityStageUsingGETWithHttpInfo**](docs/OpportunityApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
-*OpportunityApi* | [**getOpportunityUsingGET1**](docs/OpportunityApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
-*OpportunityApi* | [**getOpportunityUsingGET1WithHttpInfo**](docs/OpportunityApi.md#getOpportunityUsingGET1WithHttpInfo) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
-*OpportunityApi* | [**listOpportunitiesUsingGET1**](docs/OpportunityApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
-*OpportunityApi* | [**listOpportunitiesUsingGET1WithHttpInfo**](docs/OpportunityApi.md#listOpportunitiesUsingGET1WithHttpInfo) | **GET** /v2/opportunities | List Opportunities
-*OpportunityApi* | [**listOpportunityStagesUsingGET**](docs/OpportunityApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
-*OpportunityApi* | [**listOpportunityStagesUsingGETWithHttpInfo**](docs/OpportunityApi.md#listOpportunityStagesUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages | List of Opportunity Stages
-*OpportunityApi* | [**updateOpportunityCustomFieldUsingPATCH**](docs/OpportunityApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
-*OpportunityApi* | [**updateOpportunityCustomFieldUsingPATCHWithHttpInfo**](docs/OpportunityApi.md#updateOpportunityCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
-*OpportunityApi* | [**updateOpportunityStageUsingPATCH**](docs/OpportunityApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
-*OpportunityApi* | [**updateOpportunityStageUsingPATCHWithHttpInfo**](docs/OpportunityApi.md#updateOpportunityStageUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
-*OpportunityApi* | [**updateOpportunityUsingPATCH**](docs/OpportunityApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
-*OpportunityApi* | [**updateOpportunityUsingPATCHWithHttpInfo**](docs/OpportunityApi.md#updateOpportunityUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
-*OrderTotalDiscountApi* | [**createOrderTotalDiscountUsingPOST**](docs/OrderTotalDiscountApi.md#createOrderTotalDiscountUsingPOST) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
-*OrderTotalDiscountApi* | [**createOrderTotalDiscountUsingPOSTWithHttpInfo**](docs/OrderTotalDiscountApi.md#createOrderTotalDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
-*OrderTotalDiscountApi* | [**deleteOrderTotalDiscountUsingDELETE**](docs/OrderTotalDiscountApi.md#deleteOrderTotalDiscountUsingDELETE) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
-*OrderTotalDiscountApi* | [**deleteOrderTotalDiscountUsingDELETEWithHttpInfo**](docs/OrderTotalDiscountApi.md#deleteOrderTotalDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
-*OrderTotalDiscountApi* | [**getOrderTotalDiscountUsingGET**](docs/OrderTotalDiscountApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
-*OrderTotalDiscountApi* | [**getOrderTotalDiscountUsingGETWithHttpInfo**](docs/OrderTotalDiscountApi.md#getOrderTotalDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
-*OrderTotalDiscountApi* | [**listOrderTotalDiscountsUsingGET**](docs/OrderTotalDiscountApi.md#listOrderTotalDiscountsUsingGET) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
-*OrderTotalDiscountApi* | [**listOrderTotalDiscountsUsingGETWithHttpInfo**](docs/OrderTotalDiscountApi.md#listOrderTotalDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
-*OrderTotalDiscountApi* | [**updateOrderTotalDiscountUsingPATCH**](docs/OrderTotalDiscountApi.md#updateOrderTotalDiscountUsingPATCH) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
-*OrderTotalDiscountApi* | [**updateOrderTotalDiscountUsingPATCHWithHttpInfo**](docs/OrderTotalDiscountApi.md#updateOrderTotalDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
-*OrdersApi* | [**createOrderCustomFieldUsingPOST**](docs/OrdersApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
-*OrdersApi* | [**createOrderCustomFieldUsingPOSTWithHttpInfo**](docs/OrdersApi.md#createOrderCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
-*OrdersApi* | [**createOrderItemsOnOrderUsingPOST1**](docs/OrdersApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-*OrdersApi* | [**createOrderItemsOnOrderUsingPOST1WithHttpInfo**](docs/OrdersApi.md#createOrderItemsOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-*OrdersApi* | [**createOrderUsingPOST1**](docs/OrdersApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order
-*OrdersApi* | [**createOrderUsingPOST1WithHttpInfo**](docs/OrdersApi.md#createOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders | Create an Order
 *OrdersApi* | [**createPaymentOnOrderUsingPOST1**](docs/OrdersApi.md#createPaymentOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
 *OrdersApi* | [**createPaymentOnOrderUsingPOST1WithHttpInfo**](docs/OrdersApi.md#createPaymentOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/payments | Create a Payment
-*OrdersApi* | [**deleteOrderCustomFieldUsingDELETE**](docs/OrdersApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
-*OrdersApi* | [**deleteOrderCustomFieldUsingDELETEWithHttpInfo**](docs/OrdersApi.md#deleteOrderCustomFieldUsingDELETEWithHttpInfo) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
-*OrdersApi* | [**deleteOrderUsingDELETE1**](docs/OrdersApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order
-*OrdersApi* | [**deleteOrderUsingDELETE1WithHttpInfo**](docs/OrdersApi.md#deleteOrderUsingDELETE1WithHttpInfo) | **DELETE** /v2/orders/{order_id} | Delete an Order
-*OrdersApi* | [**getOrderUsingGET1**](docs/OrdersApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
-*OrdersApi* | [**getOrderUsingGET1WithHttpInfo**](docs/OrdersApi.md#getOrderUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id} | Retrieve an Order
-*OrdersApi* | [**listOrderPaymentsUsingGET1**](docs/OrdersApi.md#listOrderPaymentsUsingGET1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
-*OrdersApi* | [**listOrderPaymentsUsingGET1WithHttpInfo**](docs/OrdersApi.md#listOrderPaymentsUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
-*OrdersApi* | [**listOrdersUsingGET1**](docs/OrdersApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders
-*OrdersApi* | [**listOrdersUsingGET1WithHttpInfo**](docs/OrdersApi.md#listOrdersUsingGET1WithHttpInfo) | **GET** /v2/orders | List orders
-*OrdersApi* | [**patchOrderUsingPATCH**](docs/OrdersApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
-*OrdersApi* | [**patchOrderUsingPATCHWithHttpInfo**](docs/OrdersApi.md#patchOrderUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order
-*OrdersApi* | [**retrieveOrderCustomFieldModelUsingGET**](docs/OrdersApi.md#retrieveOrderCustomFieldModelUsingGET) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
-*OrdersApi* | [**retrieveOrderCustomFieldModelUsingGETWithHttpInfo**](docs/OrdersApi.md#retrieveOrderCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
-*OrdersApi* | [**updateOrderCustomFieldUsingPATCH**](docs/OrdersApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
-*OrdersApi* | [**updateOrderCustomFieldUsingPATCHWithHttpInfo**](docs/OrdersApi.md#updateOrderCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOST**](docs/PaymentMethodConfigApi.md#createPaymentMethodConfigUsingPOST) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOSTWithHttpInfo**](docs/PaymentMethodConfigApi.md#createPaymentMethodConfigUsingPOSTWithHttpInfo) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
-*PreReleaseApi* | [**addAffiliateToProgramUsingPOST**](docs/PreReleaseApi.md#addAffiliateToProgramUsingPOST) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
-*PreReleaseApi* | [**addAffiliateToProgramUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#addAffiliateToProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
-*PreReleaseApi* | [**addCommissionProgramUsingPOST**](docs/PreReleaseApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
-*PreReleaseApi* | [**addCommissionProgramUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#addCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
-*PreReleaseApi* | [**adjustInventoryUsingPOST**](docs/PreReleaseApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
-*PreReleaseApi* | [**adjustInventoryUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#adjustInventoryUsingPOSTWithHttpInfo) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
-*PreReleaseApi* | [**assignProductCommissionProgramUsingPOST**](docs/PreReleaseApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
-*PreReleaseApi* | [**assignProductCommissionProgramUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#assignProductCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
-*PreReleaseApi* | [**assignSubscriptionCommissionProgramUsingPOST**](docs/PreReleaseApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
-*PreReleaseApi* | [**assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
-*PreReleaseApi* | [**cancelSubscriptionUsingPOST**](docs/PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
-*PreReleaseApi* | [**cancelSubscriptionUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#cancelSubscriptionUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
-*PreReleaseApi* | [**createAffiliateCustomFieldUsingPOST**](docs/PreReleaseApi.md#createAffiliateCustomFieldUsingPOST) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
-*PreReleaseApi* | [**createAffiliateCustomFieldUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createAffiliateCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/model/customFields | Create an Affiliate Custom Field
-*PreReleaseApi* | [**createDefaultCommissionProgramUsingPOST**](docs/PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
-*PreReleaseApi* | [**createDefaultCommissionProgramUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createDefaultCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
-*PreReleaseApi* | [**createDiscountUsingPOST**](docs/PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
-*PreReleaseApi* | [**createDiscountUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/productCategories | Create a Category Discount
-*PreReleaseApi* | [**createDiscountUsingPOST1**](docs/PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
-*PreReleaseApi* | [**createDiscountUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createDiscountUsingPOST1WithHttpInfo) | **POST** /v2/discounts/shipping | Create a Shipping Discount
-*PreReleaseApi* | [**createFileUsingPOST1**](docs/PreReleaseApi.md#createFileUsingPOST1) | **POST** /v2/files | Create a file
-*PreReleaseApi* | [**createFileUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createFileUsingPOST1WithHttpInfo) | **POST** /v2/files | Create a file
-*PreReleaseApi* | [**createFunnelIntegrationUsingPOST**](docs/PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-*PreReleaseApi* | [**createFunnelIntegrationUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
-*PreReleaseApi* | [**createIntegrationTriggerEventUsingPOST**](docs/PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-*PreReleaseApi* | [**createIntegrationTriggerEventUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createIntegrationTriggerEventUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
-*PreReleaseApi* | [**createLeadSourceCategoryUsingPOST**](docs/PreReleaseApi.md#createLeadSourceCategoryUsingPOST) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
-*PreReleaseApi* | [**createLeadSourceCategoryUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createLeadSourceCategoryUsingPOSTWithHttpInfo) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
-*PreReleaseApi* | [**createLeadSourceUsingPOST**](docs/PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
-*PreReleaseApi* | [**createLeadSourceUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createLeadSourceUsingPOSTWithHttpInfo) | **POST** /v2/leadsources | Create a Lead Source
-*PreReleaseApi* | [**createNoteCustomFieldUsingPOST1**](docs/PreReleaseApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field
-*PreReleaseApi* | [**createNoteCustomFieldUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createNoteCustomFieldUsingPOST1WithHttpInfo) | **POST** /v2/notes/model/customFields | Create a Custom Field
-*PreReleaseApi* | [**createOpportunityCustomFieldsUsingPOST**](docs/PreReleaseApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
-*PreReleaseApi* | [**createOpportunityCustomFieldsUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createOpportunityCustomFieldsUsingPOSTWithHttpInfo) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
-*PreReleaseApi* | [**createOpportunityStageUsingPOST**](docs/PreReleaseApi.md#createOpportunityStageUsingPOST) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
-*PreReleaseApi* | [**createOpportunityStageUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createOpportunityStageUsingPOSTWithHttpInfo) | **POST** /v2/opportunities/stages | Create an Opportunity Stage
-*PreReleaseApi* | [**createOpportunityUsingPOST1**](docs/PreReleaseApi.md#createOpportunityUsingPOST1) | **POST** /v2/opportunities | Create an Opportunity
-*PreReleaseApi* | [**createOpportunityUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createOpportunityUsingPOST1WithHttpInfo) | **POST** /v2/opportunities | Create an Opportunity
-*PreReleaseApi* | [**createOrderCustomFieldUsingPOST**](docs/PreReleaseApi.md#createOrderCustomFieldUsingPOST) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
-*PreReleaseApi* | [**createOrderCustomFieldUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createOrderCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/orders/model/customFields | Create an Order&#39;s Custom Field
-*PreReleaseApi* | [**createOrderItemsOnOrderUsingPOST1**](docs/PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-*PreReleaseApi* | [**createOrderItemsOnOrderUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createOrderItemsOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/items | Create an Order Item
-*PreReleaseApi* | [**createOrderTotalDiscountUsingPOST**](docs/PreReleaseApi.md#createOrderTotalDiscountUsingPOST) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
-*PreReleaseApi* | [**createOrderTotalDiscountUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createOrderTotalDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/orderTotals | Create an Order Total Discount
-*PreReleaseApi* | [**createOrderUsingPOST1**](docs/PreReleaseApi.md#createOrderUsingPOST1) | **POST** /v2/orders | Create an Order
-*PreReleaseApi* | [**createOrderUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders | Create an Order
-*PreReleaseApi* | [**createProductUsingPOST1**](docs/PreReleaseApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
-*PreReleaseApi* | [**createProductUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createProductUsingPOST1WithHttpInfo) | **POST** /v2/products | Create a Product
-*PreReleaseApi* | [**createRedirectLinkUsingPOST**](docs/PreReleaseApi.md#createRedirectLinkUsingPOST) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
-*PreReleaseApi* | [**createRedirectLinkUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createRedirectLinkUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/redirects | Create an Affiliate Link
-*PreReleaseApi* | [**createReferralUsingPOST**](docs/PreReleaseApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral
-*PreReleaseApi* | [**createReferralUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createReferralUsingPOSTWithHttpInfo) | **POST** /v2/referrals | Create a Referral
-*PreReleaseApi* | [**createSubscriptionCustomFieldUsingPOST**](docs/PreReleaseApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
-*PreReleaseApi* | [**createSubscriptionCustomFieldUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#createSubscriptionCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
-*PreReleaseApi* | [**createTaskCustomFieldUsingPOST1**](docs/PreReleaseApi.md#createTaskCustomFieldUsingPOST1) | **POST** /v2/tasks/model/customFields | Create a Custom Field
-*PreReleaseApi* | [**createTaskCustomFieldUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createTaskCustomFieldUsingPOST1WithHttpInfo) | **POST** /v2/tasks/model/customFields | Create a Custom Field
-*PreReleaseApi* | [**createTaskUsingPOST1**](docs/PreReleaseApi.md#createTaskUsingPOST1) | **POST** /v2/tasks | Create a Task
-*PreReleaseApi* | [**createTaskUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createTaskUsingPOST1WithHttpInfo) | **POST** /v2/tasks | Create a Task
-*PreReleaseApi* | [**createUserUsingPOST1**](docs/PreReleaseApi.md#createUserUsingPOST1) | **POST** /v2/users | Create a User
-*PreReleaseApi* | [**createUserUsingPOST1WithHttpInfo**](docs/PreReleaseApi.md#createUserUsingPOST1WithHttpInfo) | **POST** /v2/users | Create a User
-*PreReleaseApi* | [**deleteAffiliateCommissionProgramUsingDELETE**](docs/PreReleaseApi.md#deleteAffiliateCommissionProgramUsingDELETE) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
-*PreReleaseApi* | [**deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/commissionPrograms/{commission_program_id} | Delete a Commission Program
-*PreReleaseApi* | [**deleteAffiliateUsingDELETE**](docs/PreReleaseApi.md#deleteAffiliateUsingDELETE) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
-*PreReleaseApi* | [**deleteAffiliateUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteAffiliateUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/{id} | Delete Affiliate
-*PreReleaseApi* | [**deleteDiscountUsingDELETE**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-*PreReleaseApi* | [**deleteDiscountUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
-*PreReleaseApi* | [**deleteDiscountUsingDELETE1**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
-*PreReleaseApi* | [**deleteDiscountUsingDELETE1WithHttpInfo**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
-*PreReleaseApi* | [**deleteDiscountUsingDELETE2**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
-*PreReleaseApi* | [**deleteDiscountUsingDELETE2WithHttpInfo**](docs/PreReleaseApi.md#deleteDiscountUsingDELETE2WithHttpInfo) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
-*PreReleaseApi* | [**deleteFileUsingDELETE1**](docs/PreReleaseApi.md#deleteFileUsingDELETE1) | **DELETE** /v2/files/{file_id} | Delete a file
-*PreReleaseApi* | [**deleteFileUsingDELETE1WithHttpInfo**](docs/PreReleaseApi.md#deleteFileUsingDELETE1WithHttpInfo) | **DELETE** /v2/files/{file_id} | Delete a file
-*PreReleaseApi* | [**deleteFunnelIntegrationUsingPOST**](docs/PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
-*PreReleaseApi* | [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
-*PreReleaseApi* | [**deleteLeadSourceCategoryUsingDELETE**](docs/PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETE) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
-*PreReleaseApi* | [**deleteLeadSourceCategoryUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETEWithHttpInfo) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
-*PreReleaseApi* | [**deleteOpportunityStageUsingDELETE**](docs/PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
-*PreReleaseApi* | [**deleteOpportunityStageUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteOpportunityStageUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
-*PreReleaseApi* | [**deleteOpportunityUsingDELETE**](docs/PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
-*PreReleaseApi* | [**deleteOpportunityUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteOpportunityUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
-*PreReleaseApi* | [**deleteOrderCustomFieldUsingDELETE**](docs/PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
-*PreReleaseApi* | [**deleteOrderCustomFieldUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteOrderCustomFieldUsingDELETEWithHttpInfo) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
-*PreReleaseApi* | [**deleteOrderTotalDiscountUsingDELETE**](docs/PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETE) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
-*PreReleaseApi* | [**deleteOrderTotalDiscountUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteOrderTotalDiscountUsingDELETEWithHttpInfo) | **DELETE** /v2/discounts/orderTotals/{discount_id} | Delete an Order Total Discount
-*PreReleaseApi* | [**deleteOrderUsingDELETE1**](docs/PreReleaseApi.md#deleteOrderUsingDELETE1) | **DELETE** /v2/orders/{order_id} | Delete an Order
-*PreReleaseApi* | [**deleteOrderUsingDELETE1WithHttpInfo**](docs/PreReleaseApi.md#deleteOrderUsingDELETE1WithHttpInfo) | **DELETE** /v2/orders/{order_id} | Delete an Order
-*PreReleaseApi* | [**deleteProductUsingDELETE1**](docs/PreReleaseApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
-*PreReleaseApi* | [**deleteProductUsingDELETE1WithHttpInfo**](docs/PreReleaseApi.md#deleteProductUsingDELETE1WithHttpInfo) | **DELETE** /v2/products/{product_id} | Delete a Product
-*PreReleaseApi* | [**deleteRedirectLinkUsingDELETE**](docs/PreReleaseApi.md#deleteRedirectLinkUsingDELETE) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
-*PreReleaseApi* | [**deleteRedirectLinkUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteRedirectLinkUsingDELETEWithHttpInfo) | **DELETE** /v2/affiliates/redirects/{redirect_id} | Delete an Affiliate Link
-*PreReleaseApi* | [**deleteTaskCustomFieldUsingDELETE**](docs/PreReleaseApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
-*PreReleaseApi* | [**deleteTaskCustomFieldUsingDELETEWithHttpInfo**](docs/PreReleaseApi.md#deleteTaskCustomFieldUsingDELETEWithHttpInfo) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
-*PreReleaseApi* | [**deleteTaskUsingDELETE1**](docs/PreReleaseApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
-*PreReleaseApi* | [**deleteTaskUsingDELETE1WithHttpInfo**](docs/PreReleaseApi.md#deleteTaskUsingDELETE1WithHttpInfo) | **DELETE** /v2/tasks/{task_id} | Delete a Task
-*PreReleaseApi* | [**getAffiliateCommissionTotalUsingGET**](docs/PreReleaseApi.md#getAffiliateCommissionTotalUsingGET) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
-*PreReleaseApi* | [**getAffiliateCommissionTotalUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getAffiliateCommissionTotalUsingGETWithHttpInfo) | **GET** /v2/affiliates/{affiliate_id}/commissionTotal | Retrieve Affiliate Commission Earned and View LedgerURl for portal
-*PreReleaseApi* | [**getAffiliateCommissionsUsingGET**](docs/PreReleaseApi.md#getAffiliateCommissionsUsingGET) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
-*PreReleaseApi* | [**getAffiliateCommissionsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getAffiliateCommissionsUsingGETWithHttpInfo) | **GET** /v2/affiliates/{affiliate_id}:commissions | Retrieve Affiliate Commission and Clawbacks
-*PreReleaseApi* | [**getAffiliateCustomFieldsUsingGET**](docs/PreReleaseApi.md#getAffiliateCustomFieldsUsingGET) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-*PreReleaseApi* | [**getAffiliateCustomFieldsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getAffiliateCustomFieldsUsingGETWithHttpInfo) | **GET** /v2/affiliates/model | Retrieve Affiliate Model
-*PreReleaseApi* | [**getCommissionProgramUsingGET**](docs/PreReleaseApi.md#getCommissionProgramUsingGET) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
-*PreReleaseApi* | [**getCommissionProgramUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getCommissionProgramUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms/{commission_program_id} | Retrieve a Commission Program
-*PreReleaseApi* | [**getContactsBySearchTermUsingGET**](docs/PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
-*PreReleaseApi* | [**getContactsBySearchTermUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getContactsBySearchTermUsingGETWithHttpInfo) | **GET** /v2/contacts:search | Search for Contacts
-*PreReleaseApi* | [**getDiscountUsingGET**](docs/PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
-*PreReleaseApi* | [**getDiscountUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
-*PreReleaseApi* | [**getDiscountUsingGET1**](docs/PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
-*PreReleaseApi* | [**getDiscountUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getDiscountUsingGET1WithHttpInfo) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
-*PreReleaseApi* | [**getFileDataUsingGET**](docs/PreReleaseApi.md#getFileDataUsingGET) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
-*PreReleaseApi* | [**getFileDataUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getFileDataUsingGETWithHttpInfo) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
-*PreReleaseApi* | [**getFileUsingGET1**](docs/PreReleaseApi.md#getFileUsingGET1) | **GET** /v2/files/{file_id} | Retrieve a file
-*PreReleaseApi* | [**getFileUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getFileUsingGET1WithHttpInfo) | **GET** /v2/files/{file_id} | Retrieve a file
-*PreReleaseApi* | [**getLeadScoreDetailsUsingGET**](docs/PreReleaseApi.md#getLeadScoreDetailsUsingGET) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
-*PreReleaseApi* | [**getLeadScoreDetailsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getLeadScoreDetailsUsingGETWithHttpInfo) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
-*PreReleaseApi* | [**getLeadSourceCategoryUsingGET**](docs/PreReleaseApi.md#getLeadSourceCategoryUsingGET) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
-*PreReleaseApi* | [**getLeadSourceCategoryUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getLeadSourceCategoryUsingGETWithHttpInfo) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
-*PreReleaseApi* | [**getOpportunityStageUsingGET**](docs/PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
-*PreReleaseApi* | [**getOpportunityStageUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
-*PreReleaseApi* | [**getOpportunityUsingGET1**](docs/PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
-*PreReleaseApi* | [**getOpportunityUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getOpportunityUsingGET1WithHttpInfo) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
-*PreReleaseApi* | [**getOrderTotalDiscountUsingGET**](docs/PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
-*PreReleaseApi* | [**getOrderTotalDiscountUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getOrderTotalDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
-*PreReleaseApi* | [**getOrderUsingGET1**](docs/PreReleaseApi.md#getOrderUsingGET1) | **GET** /v2/orders/{order_id} | Retrieve an Order
-*PreReleaseApi* | [**getOrderUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getOrderUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id} | Retrieve an Order
-*PreReleaseApi* | [**getProductUsingGET**](docs/PreReleaseApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
-*PreReleaseApi* | [**getProductUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getProductUsingGETWithHttpInfo) | **GET** /v2/products/{product_id} | Get a Product
-*PreReleaseApi* | [**getRedirectLinkUsingGET**](docs/PreReleaseApi.md#getRedirectLinkUsingGET) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
-*PreReleaseApi* | [**getRedirectLinkUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getRedirectLinkUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects/{redirect_id} | Retrieve an Affiliate Link
-*PreReleaseApi* | [**getTaskUsingGET1**](docs/PreReleaseApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
-*PreReleaseApi* | [**getTaskUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getTaskUsingGET1WithHttpInfo) | **GET** /v2/tasks/{task_id} | Retrieve a Task
-*PreReleaseApi* | [**getUserByIdUsingGET**](docs/PreReleaseApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User
-*PreReleaseApi* | [**getUserByIdUsingGETWithHttpInfo**](docs/PreReleaseApi.md#getUserByIdUsingGETWithHttpInfo) | **GET** /v2/users/{user_id} | Get User
-*PreReleaseApi* | [**getUserInfoUsingGET1**](docs/PreReleaseApi.md#getUserInfoUsingGET1) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info
-*PreReleaseApi* | [**getUserInfoUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getUserInfoUsingGET1WithHttpInfo) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info
-*PreReleaseApi* | [**getUserSignatureUsingGET1**](docs/PreReleaseApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature
-*PreReleaseApi* | [**getUserSignatureUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#getUserSignatureUsingGET1WithHttpInfo) | **GET** /v2/users/{user_id}/signature | Get User email signature
-*PreReleaseApi* | [**listAffiliateCommissionProgramsUsingGET**](docs/PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
-*PreReleaseApi* | [**listAffiliateCommissionProgramsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listAffiliateCommissionProgramsUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
-*PreReleaseApi* | [**listAffiliateLinksUsingGET**](docs/PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
-*PreReleaseApi* | [**listAffiliateLinksUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listAffiliateLinksUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects | List Affiliate Links
-*PreReleaseApi* | [**listCategoryDiscountsUsingGET**](docs/PreReleaseApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts
-*PreReleaseApi* | [**listCategoryDiscountsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listCategoryDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories | List Category Discounts
-*PreReleaseApi* | [**listCountriesUsingGET2**](docs/PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
-*PreReleaseApi* | [**listCountriesUsingGET2WithHttpInfo**](docs/PreReleaseApi.md#listCountriesUsingGET2WithHttpInfo) | **GET** /v2/locales/countries | List Countries
-*PreReleaseApi* | [**listDiscountsUsingGET**](docs/PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts
-*PreReleaseApi* | [**listDiscountsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/shipping | List all Shipping Discounts
-*PreReleaseApi* | [**listFilesUsingGET1**](docs/PreReleaseApi.md#listFilesUsingGET1) | **GET** /v2/files | List all files
-*PreReleaseApi* | [**listFilesUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listFilesUsingGET1WithHttpInfo) | **GET** /v2/files | List all files
-*PreReleaseApi* | [**listLandingPagesUsingGET**](docs/PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
-*PreReleaseApi* | [**listLandingPagesUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listLandingPagesUsingGETWithHttpInfo) | **GET** /v2/landingpages | List Landing Pages
-*PreReleaseApi* | [**listLeadSourcesUsingGET**](docs/PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
-*PreReleaseApi* | [**listLeadSourcesUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listLeadSourcesUsingGETWithHttpInfo) | **GET** /v2/leadsources | List Lead Sources
-*PreReleaseApi* | [**listMerchantsUsingGET**](docs/PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts
-*PreReleaseApi* | [**listMerchantsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listMerchantsUsingGETWithHttpInfo) | **GET** /v2/merchants | List Merchant accounts
-*PreReleaseApi* | [**listNoteTemplatesUsingGET**](docs/PreReleaseApi.md#listNoteTemplatesUsingGET) | **GET** /v2/notes/templates | Retrieve Note Templates
-*PreReleaseApi* | [**listNoteTemplatesUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listNoteTemplatesUsingGETWithHttpInfo) | **GET** /v2/notes/templates | Retrieve Note Templates
-*PreReleaseApi* | [**listOpportunitiesUsingGET1**](docs/PreReleaseApi.md#listOpportunitiesUsingGET1) | **GET** /v2/opportunities | List Opportunities
-*PreReleaseApi* | [**listOpportunitiesUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listOpportunitiesUsingGET1WithHttpInfo) | **GET** /v2/opportunities | List Opportunities
-*PreReleaseApi* | [**listOpportunityStagesUsingGET**](docs/PreReleaseApi.md#listOpportunityStagesUsingGET) | **GET** /v2/opportunities/stages | List of Opportunity Stages
-*PreReleaseApi* | [**listOpportunityStagesUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listOpportunityStagesUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages | List of Opportunity Stages
-*PreReleaseApi* | [**listOrderPaymentsUsingGET1**](docs/PreReleaseApi.md#listOrderPaymentsUsingGET1) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
-*PreReleaseApi* | [**listOrderPaymentsUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listOrderPaymentsUsingGET1WithHttpInfo) | **GET** /v2/orders/{order_id}/payments | Retrieve Order Payments
-*PreReleaseApi* | [**listOrderTotalDiscountsUsingGET**](docs/PreReleaseApi.md#listOrderTotalDiscountsUsingGET) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
-*PreReleaseApi* | [**listOrderTotalDiscountsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listOrderTotalDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/orderTotals | List all Order Total Discounts
-*PreReleaseApi* | [**listOrdersUsingGET1**](docs/PreReleaseApi.md#listOrdersUsingGET1) | **GET** /v2/orders | List orders
-*PreReleaseApi* | [**listOrdersUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listOrdersUsingGET1WithHttpInfo) | **GET** /v2/orders | List orders
-*PreReleaseApi* | [**listProductsUsingGET1**](docs/PreReleaseApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
-*PreReleaseApi* | [**listProductsUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listProductsUsingGET1WithHttpInfo) | **GET** /v2/products | List Products
-*PreReleaseApi* | [**listProvincesForCountryUsingGET**](docs/PreReleaseApi.md#listProvincesForCountryUsingGET) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
-*PreReleaseApi* | [**listProvincesForCountryUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listProvincesForCountryUsingGETWithHttpInfo) | **GET** /v2/locales/countries/{country_code}/provinces | List a Country&#39;s Provinces
-*PreReleaseApi* | [**listShippingMethodsUsingGET**](docs/PreReleaseApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods
-*PreReleaseApi* | [**listShippingMethodsUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listShippingMethodsUsingGETWithHttpInfo) | **GET** /v2/shipping | List Shipping methods
-*PreReleaseApi* | [**listSubscriptionPlansUsingGET**](docs/PreReleaseApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans
-*PreReleaseApi* | [**listSubscriptionPlansUsingGETWithHttpInfo**](docs/PreReleaseApi.md#listSubscriptionPlansUsingGETWithHttpInfo) | **GET** /v2/subscriptionPlans | List Subscription Plans
-*PreReleaseApi* | [**listSubscriptionsUsingGET1**](docs/PreReleaseApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions
-*PreReleaseApi* | [**listSubscriptionsUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listSubscriptionsUsingGET1WithHttpInfo) | **GET** /v2/subscriptions | List Subscriptions
-*PreReleaseApi* | [**listSummariesUsingGET1**](docs/PreReleaseApi.md#listSummariesUsingGET1) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
-*PreReleaseApi* | [**listSummariesUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listSummariesUsingGET1WithHttpInfo) | **GET** /v2/affiliates/summaries | List Affiliate Summaries
-*PreReleaseApi* | [**listTasksUsingGET1**](docs/PreReleaseApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
-*PreReleaseApi* | [**listTasksUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listTasksUsingGET1WithHttpInfo) | **GET** /v2/tasks | List Tasks
-*PreReleaseApi* | [**listUsersUsingGET1**](docs/PreReleaseApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users
-*PreReleaseApi* | [**listUsersUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#listUsersUsingGET1WithHttpInfo) | **GET** /v2/users | List Users
-*PreReleaseApi* | [**patchDefaultCommissionProgramUsingPATCH**](docs/PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
-*PreReleaseApi* | [**patchDefaultCommissionProgramUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchDefaultCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/defaultCommissionPrograms/{commission_program_id} | Update a Default Commission Program
-*PreReleaseApi* | [**patchOrderUsingPATCH**](docs/PreReleaseApi.md#patchOrderUsingPATCH) | **PATCH** /v2/orders/{order_id} | Update an Order
-*PreReleaseApi* | [**patchOrderUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchOrderUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/{order_id} | Update an Order
-*PreReleaseApi* | [**patchProductCommissionProgramUsingPATCH**](docs/PreReleaseApi.md#patchProductCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
-*PreReleaseApi* | [**patchProductCommissionProgramUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchProductCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/productCommissionPrograms/{commission_program_id} | Update a Product Commission Program
-*PreReleaseApi* | [**patchSubscriptionCommissionProgramUsingPATCH**](docs/PreReleaseApi.md#patchSubscriptionCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
-*PreReleaseApi* | [**patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchSubscriptionCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/subscriptionCommissionPrograms/{commission_program_id} | Update a Subscription Commission Program
-*PreReleaseApi* | [**patchTaskUsingPATCH**](docs/PreReleaseApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task
-*PreReleaseApi* | [**patchTaskUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchTaskUsingPATCHWithHttpInfo) | **PATCH** /v2/tasks/{task_id} | Update a Task
-*PreReleaseApi* | [**patchUserUsingPATCH**](docs/PreReleaseApi.md#patchUserUsingPATCH) | **PATCH** /v2/users/{user_id} | Update User
-*PreReleaseApi* | [**patchUserUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#patchUserUsingPATCHWithHttpInfo) | **PATCH** /v2/users/{user_id} | Update User
-*PreReleaseApi* | [**removeAffiliateFromProgramUsingPOST**](docs/PreReleaseApi.md#removeAffiliateFromProgramUsingPOST) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
-*PreReleaseApi* | [**removeAffiliateFromProgramUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#removeAffiliateFromProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/{id}:removeFromProgram | Remove an Affiliate from a Commission Program
-*PreReleaseApi* | [**removeSubscriptionPlanCommissionFromCommissionsUsingPOST**](docs/PreReleaseApi.md#removeSubscriptionPlanCommissionFromCommissionsUsingPOST) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
-*PreReleaseApi* | [**removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo**](docs/PreReleaseApi.md#removeSubscriptionPlanCommissionFromCommissionsUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/{commission_id}:removeSubscriptionCommission | Remove a Subscription from a Commission Program
-*PreReleaseApi* | [**retrieveNoteModelUsingGET1**](docs/PreReleaseApi.md#retrieveNoteModelUsingGET1) | **GET** /v2/notes/model | Retrieve Note Model
-*PreReleaseApi* | [**retrieveNoteModelUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#retrieveNoteModelUsingGET1WithHttpInfo) | **GET** /v2/notes/model | Retrieve Note Model
-*PreReleaseApi* | [**retrieveOrderCustomFieldModelUsingGET**](docs/PreReleaseApi.md#retrieveOrderCustomFieldModelUsingGET) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
-*PreReleaseApi* | [**retrieveOrderCustomFieldModelUsingGETWithHttpInfo**](docs/PreReleaseApi.md#retrieveOrderCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/orders/model | Retrieve an Order&#39;s Custom Field Model
-*PreReleaseApi* | [**retrieveSubscriptionCustomFieldModelUsingGET**](docs/PreReleaseApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
-*PreReleaseApi* | [**retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo**](docs/PreReleaseApi.md#retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
-*PreReleaseApi* | [**retrieveTaskModelUsingGET1**](docs/PreReleaseApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model
-*PreReleaseApi* | [**retrieveTaskModelUsingGET1WithHttpInfo**](docs/PreReleaseApi.md#retrieveTaskModelUsingGET1WithHttpInfo) | **GET** /v2/tasks/model | Retrieve Task Model
-*PreReleaseApi* | [**updateAffiliateCustomFieldUsingPATCH**](docs/PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
-*PreReleaseApi* | [**updateAffiliateCustomFieldUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
-*PreReleaseApi* | [**updateDiscountUsingPATCH**](docs/PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
-*PreReleaseApi* | [**updateDiscountUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
-*PreReleaseApi* | [**updateDiscountUsingPATCH1**](docs/PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
-*PreReleaseApi* | [**updateDiscountUsingPATCH1WithHttpInfo**](docs/PreReleaseApi.md#updateDiscountUsingPATCH1WithHttpInfo) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
-*PreReleaseApi* | [**updateFileUsingPATCH**](docs/PreReleaseApi.md#updateFileUsingPATCH) | **PATCH** /v2/files/{file_id} | Update a file
-*PreReleaseApi* | [**updateFileUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateFileUsingPATCHWithHttpInfo) | **PATCH** /v2/files/{file_id} | Update a file
-*PreReleaseApi* | [**updateNotesCustomFieldUsingPATCH**](docs/PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
-*PreReleaseApi* | [**updateNotesCustomFieldUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateNotesCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
-*PreReleaseApi* | [**updateOpportunityCustomFieldUsingPATCH**](docs/PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
-*PreReleaseApi* | [**updateOpportunityCustomFieldUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
-*PreReleaseApi* | [**updateOpportunityStageUsingPATCH**](docs/PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
-*PreReleaseApi* | [**updateOpportunityStageUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateOpportunityStageUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
-*PreReleaseApi* | [**updateOpportunityUsingPATCH**](docs/PreReleaseApi.md#updateOpportunityUsingPATCH) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
-*PreReleaseApi* | [**updateOpportunityUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateOpportunityUsingPATCHWithHttpInfo) | **PATCH** /v2/opportunities/{opportunity_id} | Update an opportunity
-*PreReleaseApi* | [**updateOrderCustomFieldUsingPATCH**](docs/PreReleaseApi.md#updateOrderCustomFieldUsingPATCH) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
-*PreReleaseApi* | [**updateOrderCustomFieldUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateOrderCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/orders/model/customFields/{custom_field_id} | Update an Order&#39;s Custom Field
-*PreReleaseApi* | [**updateOrderTotalDiscountUsingPATCH**](docs/PreReleaseApi.md#updateOrderTotalDiscountUsingPATCH) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
-*PreReleaseApi* | [**updateOrderTotalDiscountUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateOrderTotalDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/orderTotals/{discount_id} | Update an Order Total Discount
-*PreReleaseApi* | [**updateRedirectLinkUsingPATCH**](docs/PreReleaseApi.md#updateRedirectLinkUsingPATCH) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
-*PreReleaseApi* | [**updateRedirectLinkUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateRedirectLinkUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
-*PreReleaseApi* | [**updateSubscriptionCustomFieldUsingPATCH**](docs/PreReleaseApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
-*PreReleaseApi* | [**updateSubscriptionCustomFieldUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateSubscriptionCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
-*PreReleaseApi* | [**updateTaskCustomFieldUsingPATCH**](docs/PreReleaseApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
-*PreReleaseApi* | [**updateTaskCustomFieldUsingPATCHWithHttpInfo**](docs/PreReleaseApi.md#updateTaskCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
-*ProductApi* | [**adjustInventoryUsingPOST**](docs/ProductApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
-*ProductApi* | [**adjustInventoryUsingPOSTWithHttpInfo**](docs/ProductApi.md#adjustInventoryUsingPOSTWithHttpInfo) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
-*ProductApi* | [**createProductUsingPOST1**](docs/ProductApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
-*ProductApi* | [**createProductUsingPOST1WithHttpInfo**](docs/ProductApi.md#createProductUsingPOST1WithHttpInfo) | **POST** /v2/products | Create a Product
-*ProductApi* | [**deleteProductUsingDELETE1**](docs/ProductApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
-*ProductApi* | [**deleteProductUsingDELETE1WithHttpInfo**](docs/ProductApi.md#deleteProductUsingDELETE1WithHttpInfo) | **DELETE** /v2/products/{product_id} | Delete a Product
-*ProductApi* | [**getProductUsingGET**](docs/ProductApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
-*ProductApi* | [**getProductUsingGETWithHttpInfo**](docs/ProductApi.md#getProductUsingGETWithHttpInfo) | **GET** /v2/products/{product_id} | Get a Product
-*ProductApi* | [**listProductsUsingGET1**](docs/ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
-*ProductApi* | [**listProductsUsingGET1WithHttpInfo**](docs/ProductApi.md#listProductsUsingGET1WithHttpInfo) | **GET** /v2/products | List Products
-*ReferralApi* | [**createReferralUsingPOST**](docs/ReferralApi.md#createReferralUsingPOST) | **POST** /v2/referrals | Create a Referral
-*ReferralApi* | [**createReferralUsingPOSTWithHttpInfo**](docs/ReferralApi.md#createReferralUsingPOSTWithHttpInfo) | **POST** /v2/referrals | Create a Referral
 *ReportingApi* | [**runReportUsingPOST**](docs/ReportingApi.md#runReportUsingPOST) | **POST** /v2/reporting/reports/{report_id}:run | Run a Report
 *ReportingApi* | [**runReportUsingPOSTWithHttpInfo**](docs/ReportingApi.md#runReportUsingPOSTWithHttpInfo) | **POST** /v2/reporting/reports/{report_id}:run | Run a Report
 *SalesApi* | [**setMerchantGatewayAsDefaultUsingPOST**](docs/SalesApi.md#setMerchantGatewayAsDefaultUsingPOST) | **POST** /v2/sales/merchants/{id}:setDefault | Set default Merchant Account
@@ -632,32 +222,8 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**getContactOptionTypesUsingGET1WithHttpInfo**](docs/SettingsApi.md#getContactOptionTypesUsingGET1WithHttpInfo) | **GET** /v2/settings/contactOptionTypes | Get Contact Option types
 *SettingsApi* | [**isApplicationEnabledUsingGET**](docs/SettingsApi.md#isApplicationEnabledUsingGET) | **GET** /v2/settings/applications:isEnabled | Get Application Status
 *SettingsApi* | [**isApplicationEnabledUsingGETWithHttpInfo**](docs/SettingsApi.md#isApplicationEnabledUsingGETWithHttpInfo) | **GET** /v2/settings/applications:isEnabled | Get Application Status
-*ShippingApi* | [**listShippingMethodsUsingGET**](docs/ShippingApi.md#listShippingMethodsUsingGET) | **GET** /v2/shipping | List Shipping methods
-*ShippingApi* | [**listShippingMethodsUsingGETWithHttpInfo**](docs/ShippingApi.md#listShippingMethodsUsingGETWithHttpInfo) | **GET** /v2/shipping | List Shipping methods
-*ShippingDiscountApi* | [**createDiscountUsingPOST1**](docs/ShippingDiscountApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
-*ShippingDiscountApi* | [**createDiscountUsingPOST1WithHttpInfo**](docs/ShippingDiscountApi.md#createDiscountUsingPOST1WithHttpInfo) | **POST** /v2/discounts/shipping | Create a Shipping Discount
-*ShippingDiscountApi* | [**deleteDiscountUsingDELETE2**](docs/ShippingDiscountApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
-*ShippingDiscountApi* | [**deleteDiscountUsingDELETE2WithHttpInfo**](docs/ShippingDiscountApi.md#deleteDiscountUsingDELETE2WithHttpInfo) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
-*ShippingDiscountApi* | [**getDiscountUsingGET1**](docs/ShippingDiscountApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
-*ShippingDiscountApi* | [**getDiscountUsingGET1WithHttpInfo**](docs/ShippingDiscountApi.md#getDiscountUsingGET1WithHttpInfo) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
-*ShippingDiscountApi* | [**listDiscountsUsingGET**](docs/ShippingDiscountApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts
-*ShippingDiscountApi* | [**listDiscountsUsingGETWithHttpInfo**](docs/ShippingDiscountApi.md#listDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/shipping | List all Shipping Discounts
-*ShippingDiscountApi* | [**updateDiscountUsingPATCH1**](docs/ShippingDiscountApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
-*ShippingDiscountApi* | [**updateDiscountUsingPATCH1WithHttpInfo**](docs/ShippingDiscountApi.md#updateDiscountUsingPATCH1WithHttpInfo) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
-*SubscriptionPlansApi* | [**listSubscriptionPlansUsingGET**](docs/SubscriptionPlansApi.md#listSubscriptionPlansUsingGET) | **GET** /v2/subscriptionPlans | List Subscription Plans
-*SubscriptionPlansApi* | [**listSubscriptionPlansUsingGETWithHttpInfo**](docs/SubscriptionPlansApi.md#listSubscriptionPlansUsingGETWithHttpInfo) | **GET** /v2/subscriptionPlans | List Subscription Plans
-*SubscriptionsApi* | [**cancelSubscriptionUsingPOST**](docs/SubscriptionsApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
-*SubscriptionsApi* | [**cancelSubscriptionUsingPOSTWithHttpInfo**](docs/SubscriptionsApi.md#cancelSubscriptionUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
-*SubscriptionsApi* | [**createSubscriptionCustomFieldUsingPOST**](docs/SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOST) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
-*SubscriptionsApi* | [**createSubscriptionCustomFieldUsingPOSTWithHttpInfo**](docs/SubscriptionsApi.md#createSubscriptionCustomFieldUsingPOSTWithHttpInfo) | **POST** /v2/subscriptions/model/customFields | Create a Subscription&#39;s Custom Field
 *SubscriptionsApi* | [**createSubscriptionV2UsingPOST**](docs/SubscriptionsApi.md#createSubscriptionV2UsingPOST) | **POST** /v2/subscriptions | Create Subscription
 *SubscriptionsApi* | [**createSubscriptionV2UsingPOSTWithHttpInfo**](docs/SubscriptionsApi.md#createSubscriptionV2UsingPOSTWithHttpInfo) | **POST** /v2/subscriptions | Create Subscription
-*SubscriptionsApi* | [**listSubscriptionsUsingGET1**](docs/SubscriptionsApi.md#listSubscriptionsUsingGET1) | **GET** /v2/subscriptions | List Subscriptions
-*SubscriptionsApi* | [**listSubscriptionsUsingGET1WithHttpInfo**](docs/SubscriptionsApi.md#listSubscriptionsUsingGET1WithHttpInfo) | **GET** /v2/subscriptions | List Subscriptions
-*SubscriptionsApi* | [**retrieveSubscriptionCustomFieldModelUsingGET**](docs/SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGET) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
-*SubscriptionsApi* | [**retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo**](docs/SubscriptionsApi.md#retrieveSubscriptionCustomFieldModelUsingGETWithHttpInfo) | **GET** /v2/subscriptions/model | Retrieve Subscription&#39;s Custom Field Model
-*SubscriptionsApi* | [**updateSubscriptionCustomFieldUsingPATCH**](docs/SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCH) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
-*SubscriptionsApi* | [**updateSubscriptionCustomFieldUsingPATCHWithHttpInfo**](docs/SubscriptionsApi.md#updateSubscriptionCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 *TagsApi* | [**applyTagsUsingPOST**](docs/TagsApi.md#applyTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:applyTags | Apply Tag
 *TagsApi* | [**applyTagsUsingPOSTWithHttpInfo**](docs/TagsApi.md#applyTagsUsingPOSTWithHttpInfo) | **POST** /v2/tags/{tag_id}/contacts:applyTags | Apply Tag
 *TagsApi* | [**createTagCategoryUsingPOST1**](docs/TagsApi.md#createTagCategoryUsingPOST1) | **POST** /v2/tags/categories | Create Tag Category
@@ -686,36 +252,6 @@ Class | Method | HTTP request | Description
 *TagsApi* | [**patchTagUsingPATCHWithHttpInfo**](docs/TagsApi.md#patchTagUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 *TagsApi* | [**removeTagsUsingPOST**](docs/TagsApi.md#removeTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
 *TagsApi* | [**removeTagsUsingPOSTWithHttpInfo**](docs/TagsApi.md#removeTagsUsingPOSTWithHttpInfo) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
-*TaskApi* | [**createTaskCustomFieldUsingPOST1**](docs/TaskApi.md#createTaskCustomFieldUsingPOST1) | **POST** /v2/tasks/model/customFields | Create a Custom Field
-*TaskApi* | [**createTaskCustomFieldUsingPOST1WithHttpInfo**](docs/TaskApi.md#createTaskCustomFieldUsingPOST1WithHttpInfo) | **POST** /v2/tasks/model/customFields | Create a Custom Field
-*TaskApi* | [**createTaskUsingPOST1**](docs/TaskApi.md#createTaskUsingPOST1) | **POST** /v2/tasks | Create a Task
-*TaskApi* | [**createTaskUsingPOST1WithHttpInfo**](docs/TaskApi.md#createTaskUsingPOST1WithHttpInfo) | **POST** /v2/tasks | Create a Task
-*TaskApi* | [**deleteTaskCustomFieldUsingDELETE**](docs/TaskApi.md#deleteTaskCustomFieldUsingDELETE) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
-*TaskApi* | [**deleteTaskCustomFieldUsingDELETEWithHttpInfo**](docs/TaskApi.md#deleteTaskCustomFieldUsingDELETEWithHttpInfo) | **DELETE** /v2/tasks/model/customFields/{custom_field_id} | Delete a Custom Field
-*TaskApi* | [**deleteTaskUsingDELETE1**](docs/TaskApi.md#deleteTaskUsingDELETE1) | **DELETE** /v2/tasks/{task_id} | Delete a Task
-*TaskApi* | [**deleteTaskUsingDELETE1WithHttpInfo**](docs/TaskApi.md#deleteTaskUsingDELETE1WithHttpInfo) | **DELETE** /v2/tasks/{task_id} | Delete a Task
-*TaskApi* | [**getTaskUsingGET1**](docs/TaskApi.md#getTaskUsingGET1) | **GET** /v2/tasks/{task_id} | Retrieve a Task
-*TaskApi* | [**getTaskUsingGET1WithHttpInfo**](docs/TaskApi.md#getTaskUsingGET1WithHttpInfo) | **GET** /v2/tasks/{task_id} | Retrieve a Task
-*TaskApi* | [**listTasksUsingGET1**](docs/TaskApi.md#listTasksUsingGET1) | **GET** /v2/tasks | List Tasks
-*TaskApi* | [**listTasksUsingGET1WithHttpInfo**](docs/TaskApi.md#listTasksUsingGET1WithHttpInfo) | **GET** /v2/tasks | List Tasks
-*TaskApi* | [**patchTaskUsingPATCH**](docs/TaskApi.md#patchTaskUsingPATCH) | **PATCH** /v2/tasks/{task_id} | Update a Task
-*TaskApi* | [**patchTaskUsingPATCHWithHttpInfo**](docs/TaskApi.md#patchTaskUsingPATCHWithHttpInfo) | **PATCH** /v2/tasks/{task_id} | Update a Task
-*TaskApi* | [**retrieveTaskModelUsingGET1**](docs/TaskApi.md#retrieveTaskModelUsingGET1) | **GET** /v2/tasks/model | Retrieve Task Model
-*TaskApi* | [**retrieveTaskModelUsingGET1WithHttpInfo**](docs/TaskApi.md#retrieveTaskModelUsingGET1WithHttpInfo) | **GET** /v2/tasks/model | Retrieve Task Model
-*TaskApi* | [**updateTaskCustomFieldUsingPATCH**](docs/TaskApi.md#updateTaskCustomFieldUsingPATCH) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
-*TaskApi* | [**updateTaskCustomFieldUsingPATCHWithHttpInfo**](docs/TaskApi.md#updateTaskCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
-*UsersApi* | [**createUserUsingPOST1**](docs/UsersApi.md#createUserUsingPOST1) | **POST** /v2/users | Create a User
-*UsersApi* | [**createUserUsingPOST1WithHttpInfo**](docs/UsersApi.md#createUserUsingPOST1WithHttpInfo) | **POST** /v2/users | Create a User
-*UsersApi* | [**getUserByIdUsingGET**](docs/UsersApi.md#getUserByIdUsingGET) | **GET** /v2/users/{user_id} | Get User
-*UsersApi* | [**getUserByIdUsingGETWithHttpInfo**](docs/UsersApi.md#getUserByIdUsingGETWithHttpInfo) | **GET** /v2/users/{user_id} | Get User
-*UsersApi* | [**getUserInfoUsingGET1**](docs/UsersApi.md#getUserInfoUsingGET1) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info
-*UsersApi* | [**getUserInfoUsingGET1WithHttpInfo**](docs/UsersApi.md#getUserInfoUsingGET1WithHttpInfo) | **GET** /v2/oauth/connect/userinfo | Retrieve User Info
-*UsersApi* | [**getUserSignatureUsingGET1**](docs/UsersApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature
-*UsersApi* | [**getUserSignatureUsingGET1WithHttpInfo**](docs/UsersApi.md#getUserSignatureUsingGET1WithHttpInfo) | **GET** /v2/users/{user_id}/signature | Get User email signature
-*UsersApi* | [**listUsersUsingGET1**](docs/UsersApi.md#listUsersUsingGET1) | **GET** /v2/users | List Users
-*UsersApi* | [**listUsersUsingGET1WithHttpInfo**](docs/UsersApi.md#listUsersUsingGET1WithHttpInfo) | **GET** /v2/users | List Users
-*UsersApi* | [**patchUserUsingPATCH**](docs/UsersApi.md#patchUserUsingPATCH) | **PATCH** /v2/users/{user_id} | Update User
-*UsersApi* | [**patchUserUsingPATCHWithHttpInfo**](docs/UsersApi.md#patchUserUsingPATCHWithHttpInfo) | **PATCH** /v2/users/{user_id} | Update User
 
 
 ## Documentation for Models

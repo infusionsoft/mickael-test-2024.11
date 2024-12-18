@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**create_contact_using_post1**](ContactApi.md#create_contact_using_post1) | **POST** /v2/contacts | Create a Contact
 [**delete_contact_using_delete1**](ContactApi.md#delete_contact_using_delete1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 [**get_contact_using_get1**](ContactApi.md#get_contact_using_get1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-[**get_contacts_by_search_term_using_get**](ContactApi.md#get_contacts_by_search_term_using_get) | **GET** /v2/contacts:search | Search for Contacts
 [**link_contacts_using_post**](ContactApi.md#link_contacts_using_post) | **POST** /v2/contacts:link | Link Contacts
 [**list_contact_link_types_using_get**](ContactApi.md#list_contact_link_types_using_get) | **GET** /v2/contacts/links/types | List Contact Link types
 [**list_contact_links_using_get**](ContactApi.md#list_contact_links_using_get) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts
@@ -273,75 +272,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Contact**](Contact.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_contacts_by_search_term_using_get**
-> ListBasicContactResponse get_contacts_by_search_term_using_get(search_param)
-
-Search for Contacts
-
-Get a list of Contacts based search parameters.
-
-### Example
-
-
-```python
-import keap_sdk_core_client
-from keap_sdk_core_client.models.list_basic_contact_response import ListBasicContactResponse
-from keap_sdk_core_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
-# See configuration.py for a list of all supported configuration parameters.
-configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
-)
-
-# Enter a context with an instance of the API client
-with keap_sdk_core_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = keap_sdk_core_client.ContactApi(api_client)
-    search_param = 'search_param_example' # str | searchParam
-
-    try:
-        # Search for Contacts
-        api_response = api_instance.get_contacts_by_search_term_using_get(search_param)
-        print("The response of ContactApi->get_contacts_by_search_term_using_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ContactApi->get_contacts_by_search_term_using_get: %s\n" % e)
-```
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **search_param** | **str**| searchParam | 
-
-### Return type
-
-[**ListBasicContactResponse**](ListBasicContactResponse.md)
 
 ### Authorization
 

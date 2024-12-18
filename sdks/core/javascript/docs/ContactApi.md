@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**createContactUsingPOST1**](ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact
 [**deleteContactUsingDELETE1**](ContactApi.md#deleteContactUsingDELETE1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 [**getContactUsingGET1**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-[**getContactsBySearchTermUsingGET**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**linkContactsUsingPOST**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts
 [**listContactLinkTypesUsingGET**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types
 [**listContactLinksUsingGET**](ContactApi.md#listContactLinksUsingGET) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts
@@ -191,50 +190,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Contact**](Contact.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getContactsBySearchTermUsingGET
-
-> ListBasicContactResponse getContactsBySearchTermUsingGET(searchParam)
-
-Search for Contacts
-
-Get a list of Contacts based search parameters.
-
-### Example
-
-```javascript
-import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
-
-let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
-let searchParam = "searchParam_example"; // String | searchParam
-apiInstance.getContactsBySearchTermUsingGET(searchParam).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchParam** | **String**| searchParam | 
-
-### Return type
-
-[**ListBasicContactResponse**](ListBasicContactResponse.md)
 
 ### Authorization
 

@@ -21,7 +21,7 @@ import PhoneNumber from './PhoneNumber';
 /**
  * The Company model module.
  * @module com.keap.sdk.core/model/Company
- * @version 0.0.48
+ * @version 0.0.49
  */
 class Company {
     /**

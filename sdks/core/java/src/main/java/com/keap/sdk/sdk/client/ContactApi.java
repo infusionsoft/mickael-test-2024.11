@@ -24,7 +24,6 @@ import com.keap.sdk.sdk.model.CreateContactLinkTypeRequest;
 import com.keap.sdk.sdk.model.CreatePatchContactRequest;
 import com.keap.sdk.sdk.model.Error;
 import com.keap.sdk.sdk.model.LinkContactsRequest;
-import com.keap.sdk.sdk.model.ListBasicContactResponse;
 import com.keap.sdk.sdk.model.ListContactLinkTypesResponse;
 import com.keap.sdk.sdk.model.ListContactLinksResponse;
 import com.keap.sdk.sdk.model.ListContactsResponse;
@@ -449,106 +448,6 @@ import io.github.resilience4j.retry.Retry;
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "fields";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "fields", fields));
-
-    if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
-      localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
-      if (localVarQueryStringJoiner.length() != 0) {
-        queryJoiner.add(localVarQueryStringJoiner.toString());
-      }
-      localVarRequestBuilder.uri(URI.create(memberVarBaseUri + localVarPath + '?' + queryJoiner.toString()));
-    } else {
-      localVarRequestBuilder.uri(URI.create(memberVarBaseUri + localVarPath));
-    }
-
-    localVarRequestBuilder.header("Accept", "application/json");
-    localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
-
-    localVarRequestBuilder.method("GET", HttpRequest.BodyPublishers.noBody());
-    if (memberVarReadTimeout != null) {
-      localVarRequestBuilder.timeout(memberVarReadTimeout);
-    }
-    if (memberVarInterceptor != null) {
-      memberVarInterceptor.accept(localVarRequestBuilder);
-    }
-    return localVarRequestBuilder;
-  }
-
-  /**
-   * Search for Contacts
-   * Get a list of Contacts based search parameters.
-   * @param searchParam searchParam (required)
-   * @return ListBasicContactResponse
-   * @throws ApiException if fails to make API call
-   */
-  public ListBasicContactResponse getContactsBySearchTermUsingGET(String searchParam) throws ApiException {
-    ApiResponse<ListBasicContactResponse> localVarResponse = getContactsBySearchTermUsingGETWithHttpInfo(searchParam);
-    return localVarResponse.getData();
-  }
-
-  /**
-   * Search for Contacts
-   * Get a list of Contacts based search parameters.
-   * @param searchParam searchParam (required)
-   * @return ApiResponse&lt;ListBasicContactResponse&gt;
-   * @throws ApiException if fails to make API call
-   */
-  public ApiResponse<ListBasicContactResponse> getContactsBySearchTermUsingGETWithHttpInfo(String searchParam) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = getContactsBySearchTermUsingGETRequestBuilder(searchParam);
-
-    CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
-      memberVarHttpClient.send(
-        localVarRequestBuilder.build(),
-        HttpResponse.BodyHandlers.ofInputStream());
-
-    try {
-      HttpResponse<InputStream> localVarResponse =
-          Retry.decorateCheckedSupplier(ApiClient.getRetry(), responseSupplier)
-              .get();
-      if (memberVarResponseInterceptor != null) {
-        memberVarResponseInterceptor.accept(localVarResponse);
-      }
-      try {
-        if (localVarResponse.statusCode()/ 100 != 2) {
-          throw getApiException("getContactsBySearchTermUsingGET", localVarResponse);
-        }
-        return new ApiResponse<ListBasicContactResponse>(
-          localVarResponse.statusCode(),
-          localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<ListBasicContactResponse>() {}) // closes the InputStream
-        );
-      } finally {
-      }
-    } catch (IOException e) {
-      throw new ApiException(e);
-    }
-    catch (InterruptedException e) {
-      Thread.currentThread().interrupt();
-      throw new ApiException(e);
-    } catch (Throwable e) {
-      if (e instanceof ApiException) {
-        throw (ApiException) e;
-      }
-      // Not collapsing exceptions so we can see this in the stack trace.
-      throw new ApiException(e);
-    }
-  }
-
-  private HttpRequest.Builder getContactsBySearchTermUsingGETRequestBuilder(String searchParam) throws ApiException {
-    // verify the required parameter 'searchParam' is set
-    if (searchParam == null) {
-      throw new ApiException(400, "Missing the required parameter 'searchParam' when calling getContactsBySearchTermUsingGET");
-    }
-
-    HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
-
-    String localVarPath = "/v2/contacts:search";
-
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
-    String localVarQueryParameterBaseName;
-    localVarQueryParameterBaseName = "searchParam";
-    localVarQueryParams.addAll(ApiClient.parameterToPairs("searchParam", searchParam));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
       StringJoiner queryJoiner = new StringJoiner("&");

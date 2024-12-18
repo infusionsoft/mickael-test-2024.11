@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**createContactUsingPOST1**](ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact
 [**deleteContactUsingDELETE1**](ContactApi.md#deleteContactUsingDELETE1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact
 [**getContactUsingGET1**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact
-[**getContactsBySearchTermUsingGET**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**linkContactsUsingPOST**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts
 [**listContactLinkTypesUsingGET**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types
 [**listContactLinksUsingGET**](ContactApi.md#listContactLinksUsingGET) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts
@@ -311,62 +310,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Contact**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **getContactsBySearchTermUsingGET**
-> ListBasicContactResponse getContactsBySearchTermUsingGET()
-
-Get a list of Contacts based search parameters.
-
-### Example
-
-
-```typescript
-import { createConfiguration, ContactApi } from '';
-import type { ContactApiGetContactsBySearchTermUsingGETRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new ContactApi(configuration);
-
-const request: ContactApiGetContactsBySearchTermUsingGETRequest = {
-    // searchParam
-  searchParam: "searchParam_example",
-};
-
-const data = await apiInstance.getContactsBySearchTermUsingGET(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **searchParam** | [**string**] | searchParam | defaults to undefined
-
-
-### Return type
-
-**ListBasicContactResponse**
 
 ### Authorization
 

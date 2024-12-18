@@ -13,23 +13,18 @@
 
 
 import ApiClient from "../ApiClient";
-import CreateCustomFieldRequest from '../model/CreateCustomFieldRequest';
 import CreateNoteRequest from '../model/CreateNoteRequest';
-import CustomFieldMetaData from '../model/CustomFieldMetaData';
 import Error from '../model/Error';
 import GetNoteResponse from '../model/GetNoteResponse';
-import ListNoteTemplateResponse from '../model/ListNoteTemplateResponse';
 import ListNotesResponse from '../model/ListNotesResponse';
 import Note from '../model/Note';
-import ObjectModel from '../model/ObjectModel';
-import UpdateCustomFieldMetaDataRequest from '../model/UpdateCustomFieldMetaDataRequest';
 import UpdateNoteRequest from '../model/UpdateNoteRequest';
 import UpdateNoteResponse from '../model/UpdateNoteResponse';
 
 /**
 * Note service.
 * @module com.keap.sdk.core/api/NoteApi
-* @version 0.0.48
+* @version 0.0.49
 */
 export default class NoteApi {
 
@@ -44,53 +39,6 @@ export default class NoteApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
-    /**
-     * Create a Custom Field
-     * Adds a custom field of the specified type and options to the Note object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
-     */
-    createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest) {
-      let postBody = createCustomFieldRequest;
-      // verify the required parameter 'createCustomFieldRequest' is set
-      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
-        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createNoteCustomFieldUsingPOST1");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = CustomFieldMetaData;
-      return this.apiClient.callApi(
-        '/v2/notes/model/customFields', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Create a Custom Field
-     * Adds a custom field of the specified type and options to the Note object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
-     */
-    createNoteCustomFieldUsingPOST1(createCustomFieldRequest) {
-      return this.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
 
 
     /**
@@ -258,62 +206,6 @@ export default class NoteApi {
 
 
     /**
-     * Retrieve Note Templates
-     * Retrieves a list of Note Templates
-     * @param {Object} opts Optional parameters
-     * @param {String} [filter] Search filter to apply to results
-     * @param {String} [orderBy] Attribute and direction to order items by. E.g. `given_name desc`
-     * @param {Number} [pageSize] Total number of items to return per page
-     * @param {String} [pageToken] Page token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListNoteTemplateResponse} and HTTP response
-     */
-    listNoteTemplatesUsingGETWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'filter': opts['filter'],
-        'order_by': opts['orderBy'],
-        'page_size': opts['pageSize'],
-        'page_token': opts['pageToken']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListNoteTemplateResponse;
-      return this.apiClient.callApi(
-        '/v2/notes/templates', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Retrieve Note Templates
-     * Retrieves a list of Note Templates
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.filter Search filter to apply to results
-     * @param {String} opts.orderBy Attribute and direction to order items by. E.g. `given_name desc`
-     * @param {Number} opts.pageSize Total number of items to return per page
-     * @param {String} opts.pageToken Page token
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListNoteTemplateResponse}
-     */
-    listNoteTemplatesUsingGET(opts) {
-      return this.listNoteTemplatesUsingGETWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * List Notes
      * Retrieves a list of Notes
      * @param {String} contactId contact_id
@@ -370,47 +262,6 @@ export default class NoteApi {
      */
     listNotesUsingGET1(contactId, opts) {
       return this.listNotesUsingGET1WithHttpInfo(contactId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Retrieve Note Model
-     * Gets the custom fields for the Note object
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ObjectModel} and HTTP response
-     */
-    retrieveNoteModelUsingGET1WithHttpInfo() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ObjectModel;
-      return this.apiClient.callApi(
-        '/v2/notes/model', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Retrieve Note Model
-     * Gets the custom fields for the Note object
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ObjectModel}
-     */
-    retrieveNoteModelUsingGET1() {
-      return this.retrieveNoteModelUsingGET1WithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -478,66 +329,6 @@ export default class NoteApi {
      */
     updateNoteUsingPATCH(contactId, noteId, updateNoteRequest, opts) {
       return this.updateNoteUsingPATCHWithHttpInfo(contactId, noteId, updateNoteRequest, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Update a Custom Field
-     * Updates a custom field of the specified type and options to the Note object.
-     * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
-     * @param {Object} opts Optional parameters
-     * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
-     */
-    updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
-      opts = opts || {};
-      let postBody = updateCustomFieldMetaDataRequest;
-      // verify the required parameter 'customFieldId' is set
-      if (customFieldId === undefined || customFieldId === null) {
-        throw new Error("Missing the required parameter 'customFieldId' when calling updateNotesCustomFieldUsingPATCH");
-      }
-      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
-      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
-        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateNotesCustomFieldUsingPATCH");
-      }
-
-      let pathParams = {
-        'custom_field_id': customFieldId
-      };
-      let queryParams = {
-        'update_mask': this.apiClient.buildCollectionParam(opts['updateMask'], 'multi')
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = CustomFieldMetaData;
-      return this.apiClient.callApi(
-        '/v2/notes/model/customFields/{custom_field_id}', 'PATCH',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update a Custom Field
-     * Updates a custom field of the specified type and options to the Note object.
-     * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
-     * @param {Object} opts Optional parameters
-     * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
-     */
-    updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
-      return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

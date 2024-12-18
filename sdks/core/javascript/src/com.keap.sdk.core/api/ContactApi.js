@@ -20,7 +20,6 @@ import CreateContactLinkTypeRequest from '../model/CreateContactLinkTypeRequest'
 import CreatePatchContactRequest from '../model/CreatePatchContactRequest';
 import Error from '../model/Error';
 import LinkContactsRequest from '../model/LinkContactsRequest';
-import ListBasicContactResponse from '../model/ListBasicContactResponse';
 import ListContactLinkTypesResponse from '../model/ListContactLinkTypesResponse';
 import ListContactLinksResponse from '../model/ListContactLinksResponse';
 import ListContactsResponse from '../model/ListContactsResponse';
@@ -30,7 +29,7 @@ import PaymentMethodList from '../model/PaymentMethodList';
 /**
 * Contact service.
 * @module com.keap.sdk.core/api/ContactApi
-* @version 0.0.48
+* @version 0.0.49
 */
 export default class ContactApi {
 
@@ -236,54 +235,6 @@ export default class ContactApi {
      */
     getContactUsingGET1(contactId, opts) {
       return this.getContactUsingGET1WithHttpInfo(contactId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Search for Contacts
-     * Get a list of Contacts based search parameters.
-     * @param {String} searchParam searchParam
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ListBasicContactResponse} and HTTP response
-     */
-    getContactsBySearchTermUsingGETWithHttpInfo(searchParam) {
-      let postBody = null;
-      // verify the required parameter 'searchParam' is set
-      if (searchParam === undefined || searchParam === null) {
-        throw new Error("Missing the required parameter 'searchParam' when calling getContactsBySearchTermUsingGET");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'searchParam': searchParam
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListBasicContactResponse;
-      return this.apiClient.callApi(
-        '/v2/contacts:search', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Search for Contacts
-     * Get a list of Contacts based search parameters.
-     * @param {String} searchParam searchParam
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ListBasicContactResponse}
-     */
-    getContactsBySearchTermUsingGET(searchParam) {
-      return this.getContactsBySearchTermUsingGETWithHttpInfo(searchParam)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

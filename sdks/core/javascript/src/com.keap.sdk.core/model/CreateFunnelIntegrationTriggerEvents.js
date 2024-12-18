@@ -17,7 +17,7 @@ import FunnelIntegrationTriggerEventDTO from './FunnelIntegrationTriggerEventDTO
 /**
  * The CreateFunnelIntegrationTriggerEvents model module.
  * @module com.keap.sdk.core/model/CreateFunnelIntegrationTriggerEvents
- * @version 0.0.48
+ * @version 0.0.49
  */
 class CreateFunnelIntegrationTriggerEvents {
     /**

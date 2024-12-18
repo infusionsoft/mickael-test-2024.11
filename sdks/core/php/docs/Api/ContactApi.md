@@ -8,7 +8,6 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**createContactUsingPOST1()**](ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact |
 | [**deleteContactUsingDELETE1()**](ContactApi.md#deleteContactUsingDELETE1) | **DELETE** /v2/contacts/{contact_id} | Delete a Contact |
 | [**getContactUsingGET1()**](ContactApi.md#getContactUsingGET1) | **GET** /v2/contacts/{contact_id} | Retrieve a Contact |
-| [**getContactsBySearchTermUsingGET()**](ContactApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts |
 | [**linkContactsUsingPOST()**](ContactApi.md#linkContactsUsingPOST) | **POST** /v2/contacts:link | Link Contacts |
 | [**listContactLinkTypesUsingGET()**](ContactApi.md#listContactLinkTypesUsingGET) | **GET** /v2/contacts/links/types | List Contact Link types |
 | [**listContactLinksUsingGET()**](ContactApi.md#listContactLinksUsingGET) | **GET** /v2/contacts/{contact_id}/links | List Linked Contacts |
@@ -226,61 +225,6 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getContactsBySearchTermUsingGET()`
-
-```php
-getContactsBySearchTermUsingGET($search_param): \Com\Keap\Sdk\Core\Model\ListBasicContactResponse
-```
-
-Search for Contacts
-
-Get a list of Contacts based search parameters.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$search_param = 'search_param_example'; // string | searchParam
-
-try {
-    $result = $apiInstance->getContactsBySearchTermUsingGET($search_param);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ContactApi->getContactsBySearchTermUsingGET: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **search_param** | **string**| searchParam | |
-
-### Return type
-
-[**\Com\Keap\Sdk\Core\Model\ListBasicContactResponse**](../Model/ListBasicContactResponse.md)
 
 ### Authorization
 

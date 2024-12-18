@@ -17,7 +17,7 @@ import ListRestMerchantAccountResponse from './ListRestMerchantAccountResponse';
 /**
  * The ListRestMerchantResponse model module.
  * @module com.keap.sdk.core/model/ListRestMerchantResponse
- * @version 0.0.48
+ * @version 0.0.49
  */
 class ListRestMerchantResponse {
     /**

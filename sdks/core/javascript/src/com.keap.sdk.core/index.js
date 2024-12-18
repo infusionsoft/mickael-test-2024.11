@@ -284,38 +284,18 @@ import AutomationApi from './api/AutomationApi';
 import AutomationCategoryApi from './api/AutomationCategoryApi';
 import BusinessProfileApi from './api/BusinessProfileApi';
 import CampaignApi from './api/CampaignApi';
-import CategoryDiscountApi from './api/CategoryDiscountApi';
 import CompanyApi from './api/CompanyApi';
 import ContactApi from './api/ContactApi';
 import EmailApi from './api/EmailApi';
 import EmailAddressApi from './api/EmailAddressApi';
-import FilesApi from './api/FilesApi';
-import FreeTrialDiscountApi from './api/FreeTrialDiscountApi';
-import FunnelIntegrationApi from './api/FunnelIntegrationApi';
-import LandingPagesApi from './api/LandingPagesApi';
-import LeadScoreApi from './api/LeadScoreApi';
-import LeadSourceCategoriesApi from './api/LeadSourceCategoriesApi';
-import LeadSourcesApi from './api/LeadSourcesApi';
-import LocaleApi from './api/LocaleApi';
-import MerchantApi from './api/MerchantApi';
 import NoteApi from './api/NoteApi';
-import OpportunityApi from './api/OpportunityApi';
-import OrderTotalDiscountApi from './api/OrderTotalDiscountApi';
 import OrdersApi from './api/OrdersApi';
 import PaymentMethodConfigApi from './api/PaymentMethodConfigApi';
-import PreReleaseApi from './api/PreReleaseApi';
-import ProductApi from './api/ProductApi';
-import ReferralApi from './api/ReferralApi';
 import ReportingApi from './api/ReportingApi';
 import SalesApi from './api/SalesApi';
 import SettingsApi from './api/SettingsApi';
-import ShippingApi from './api/ShippingApi';
-import ShippingDiscountApi from './api/ShippingDiscountApi';
-import SubscriptionPlansApi from './api/SubscriptionPlansApi';
 import SubscriptionsApi from './api/SubscriptionsApi';
 import TagsApi from './api/TagsApi';
-import TaskApi from './api/TaskApi';
-import UsersApi from './api/UsersApi';
 
 
 /**
@@ -347,7 +327,7 @@ import UsersApi from './api/UsersApi';
 * </pre>
 * </p>
 * @module com.keap.sdk.core/index
-* @version 0.0.48
+* @version 0.0.49
 */
 export {
     /**
@@ -1983,12 +1963,6 @@ export {
     CampaignApi,
 
     /**
-    * The CategoryDiscountApi service constructor.
-    * @property {module:com.keap.sdk.core/api/CategoryDiscountApi}
-    */
-    CategoryDiscountApi,
-
-    /**
     * The CompanyApi service constructor.
     * @property {module:com.keap.sdk.core/api/CompanyApi}
     */
@@ -2013,76 +1987,10 @@ export {
     EmailAddressApi,
 
     /**
-    * The FilesApi service constructor.
-    * @property {module:com.keap.sdk.core/api/FilesApi}
-    */
-    FilesApi,
-
-    /**
-    * The FreeTrialDiscountApi service constructor.
-    * @property {module:com.keap.sdk.core/api/FreeTrialDiscountApi}
-    */
-    FreeTrialDiscountApi,
-
-    /**
-    * The FunnelIntegrationApi service constructor.
-    * @property {module:com.keap.sdk.core/api/FunnelIntegrationApi}
-    */
-    FunnelIntegrationApi,
-
-    /**
-    * The LandingPagesApi service constructor.
-    * @property {module:com.keap.sdk.core/api/LandingPagesApi}
-    */
-    LandingPagesApi,
-
-    /**
-    * The LeadScoreApi service constructor.
-    * @property {module:com.keap.sdk.core/api/LeadScoreApi}
-    */
-    LeadScoreApi,
-
-    /**
-    * The LeadSourceCategoriesApi service constructor.
-    * @property {module:com.keap.sdk.core/api/LeadSourceCategoriesApi}
-    */
-    LeadSourceCategoriesApi,
-
-    /**
-    * The LeadSourcesApi service constructor.
-    * @property {module:com.keap.sdk.core/api/LeadSourcesApi}
-    */
-    LeadSourcesApi,
-
-    /**
-    * The LocaleApi service constructor.
-    * @property {module:com.keap.sdk.core/api/LocaleApi}
-    */
-    LocaleApi,
-
-    /**
-    * The MerchantApi service constructor.
-    * @property {module:com.keap.sdk.core/api/MerchantApi}
-    */
-    MerchantApi,
-
-    /**
     * The NoteApi service constructor.
     * @property {module:com.keap.sdk.core/api/NoteApi}
     */
     NoteApi,
-
-    /**
-    * The OpportunityApi service constructor.
-    * @property {module:com.keap.sdk.core/api/OpportunityApi}
-    */
-    OpportunityApi,
-
-    /**
-    * The OrderTotalDiscountApi service constructor.
-    * @property {module:com.keap.sdk.core/api/OrderTotalDiscountApi}
-    */
-    OrderTotalDiscountApi,
 
     /**
     * The OrdersApi service constructor.
@@ -2095,24 +2003,6 @@ export {
     * @property {module:com.keap.sdk.core/api/PaymentMethodConfigApi}
     */
     PaymentMethodConfigApi,
-
-    /**
-    * The PreReleaseApi service constructor.
-    * @property {module:com.keap.sdk.core/api/PreReleaseApi}
-    */
-    PreReleaseApi,
-
-    /**
-    * The ProductApi service constructor.
-    * @property {module:com.keap.sdk.core/api/ProductApi}
-    */
-    ProductApi,
-
-    /**
-    * The ReferralApi service constructor.
-    * @property {module:com.keap.sdk.core/api/ReferralApi}
-    */
-    ReferralApi,
 
     /**
     * The ReportingApi service constructor.
@@ -2133,24 +2023,6 @@ export {
     SettingsApi,
 
     /**
-    * The ShippingApi service constructor.
-    * @property {module:com.keap.sdk.core/api/ShippingApi}
-    */
-    ShippingApi,
-
-    /**
-    * The ShippingDiscountApi service constructor.
-    * @property {module:com.keap.sdk.core/api/ShippingDiscountApi}
-    */
-    ShippingDiscountApi,
-
-    /**
-    * The SubscriptionPlansApi service constructor.
-    * @property {module:com.keap.sdk.core/api/SubscriptionPlansApi}
-    */
-    SubscriptionPlansApi,
-
-    /**
     * The SubscriptionsApi service constructor.
     * @property {module:com.keap.sdk.core/api/SubscriptionsApi}
     */
@@ -2160,17 +2032,5 @@ export {
     * The TagsApi service constructor.
     * @property {module:com.keap.sdk.core/api/TagsApi}
     */
-    TagsApi,
-
-    /**
-    * The TaskApi service constructor.
-    * @property {module:com.keap.sdk.core/api/TaskApi}
-    */
-    TaskApi,
-
-    /**
-    * The UsersApi service constructor.
-    * @property {module:com.keap.sdk.core/api/UsersApi}
-    */
-    UsersApi
+    TagsApi
 };

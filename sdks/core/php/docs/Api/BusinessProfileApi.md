@@ -63,7 +63,7 @@ No authorization required
 ## `patchBusinessProfileUsingPATCH()`
 
 ```php
-patchBusinessProfileUsingPATCH($update_mask, $business_profile): \Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse
+patchBusinessProfileUsingPATCH($update_mask, $patch_business_profile_request): \Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse
 ```
 
 Update Business Profile
@@ -83,10 +83,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\BusinessProfileApi(
     new GuzzleHttp\Client()
 );
 $update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-$business_profile = new \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest(); // \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest | businessProfile
+$patch_business_profile_request = new \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest(); // \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest | businessProfile
 
 try {
-    $result = $apiInstance->patchBusinessProfileUsingPATCH($update_mask, $business_profile);
+    $result = $apiInstance->patchBusinessProfileUsingPATCH($update_mask, $patch_business_profile_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessProfileApi->patchBusinessProfileUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -98,7 +98,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] |
-| **business_profile** | [**\Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest**](../Model/PatchBusinessProfileRequest.md)| businessProfile | [optional] |
+| **patch_business_profile_request** | [**\Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest**](../Model/PatchBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
 

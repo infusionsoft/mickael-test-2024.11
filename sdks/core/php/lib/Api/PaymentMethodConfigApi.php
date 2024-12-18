@@ -127,16 +127,16 @@ class PaymentMethodConfigApi
      *
      * Create Payment Method Configuration
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $create_payment_method_config_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPaymentMethodConfigUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\PaymentMethodConfig|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createPaymentMethodConfigUsingPOST($request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
+    public function createPaymentMethodConfigUsingPOST($create_payment_method_config_request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
     {
-        list($response) = $this->createPaymentMethodConfigUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createPaymentMethodConfigUsingPOSTWithHttpInfo($create_payment_method_config_request, $contentType);
         return $response;
     }
 
@@ -145,16 +145,16 @@ class PaymentMethodConfigApi
      *
      * Create Payment Method Configuration
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $create_payment_method_config_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPaymentMethodConfigUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\PaymentMethodConfig|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPaymentMethodConfigUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
+    public function createPaymentMethodConfigUsingPOSTWithHttpInfo($create_payment_method_config_request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
     {
-        $request = $this->createPaymentMethodConfigUsingPOSTRequest($request, $contentType);
+        $request = $this->createPaymentMethodConfigUsingPOSTRequest($create_payment_method_config_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -340,15 +340,15 @@ class PaymentMethodConfigApi
      *
      * Create Payment Method Configuration
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $create_payment_method_config_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPaymentMethodConfigUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPaymentMethodConfigUsingPOSTAsync($request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
+    public function createPaymentMethodConfigUsingPOSTAsync($create_payment_method_config_request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
     {
-        return $this->createPaymentMethodConfigUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createPaymentMethodConfigUsingPOSTAsyncWithHttpInfo($create_payment_method_config_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -361,16 +361,16 @@ class PaymentMethodConfigApi
      *
      * Create Payment Method Configuration
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $create_payment_method_config_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPaymentMethodConfigUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPaymentMethodConfigUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
+    public function createPaymentMethodConfigUsingPOSTAsyncWithHttpInfo($create_payment_method_config_request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\PaymentMethodConfig';
-        $request = $this->createPaymentMethodConfigUsingPOSTRequest($request, $contentType);
+        $request = $this->createPaymentMethodConfigUsingPOSTRequest($create_payment_method_config_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -411,19 +411,19 @@ class PaymentMethodConfigApi
     /**
      * Create request for operation 'createPaymentMethodConfigUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest $create_payment_method_config_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPaymentMethodConfigUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createPaymentMethodConfigUsingPOSTRequest($request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
+    public function createPaymentMethodConfigUsingPOSTRequest($create_payment_method_config_request, string $contentType = self::contentTypes['createPaymentMethodConfigUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_payment_method_config_request' is set
+        if ($create_payment_method_config_request === null || (is_array($create_payment_method_config_request) && count($create_payment_method_config_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createPaymentMethodConfigUsingPOST'
+                'Missing the required parameter $create_payment_method_config_request when calling createPaymentMethodConfigUsingPOST'
             );
         }
 
@@ -446,12 +446,12 @@ class PaymentMethodConfigApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_payment_method_config_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_payment_method_config_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_payment_method_config_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -21,14 +21,14 @@ export class ShippingDiscountApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public async createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createDiscountUsingPOST1(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("ShippingDiscountApi", "createDiscountUsingPOST1", "request");
+        // verify required parameter 'createShippingDiscountRequest' is not null or undefined
+        if (createShippingDiscountRequest === null || createShippingDiscountRequest === undefined) {
+            throw new RequiredError("ShippingDiscountApi", "createDiscountUsingPOST1", "createShippingDiscountRequest");
         }
 
 
@@ -46,7 +46,7 @@ export class ShippingDiscountApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateShippingDiscountRequest", ""),
+            ObjectSerializer.serialize(createShippingDiscountRequest, "CreateShippingDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -190,10 +190,10 @@ export class ShippingDiscountApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateDiscountUsingPATCH1(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'discountId' is not null or undefined
@@ -202,9 +202,9 @@ export class ShippingDiscountApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("ShippingDiscountApi", "updateDiscountUsingPATCH1", "request");
+        // verify required parameter 'updateShippingDiscountRequest' is not null or undefined
+        if (updateShippingDiscountRequest === null || updateShippingDiscountRequest === undefined) {
+            throw new RequiredError("ShippingDiscountApi", "updateDiscountUsingPATCH1", "updateShippingDiscountRequest");
         }
 
 
@@ -232,7 +232,7 @@ export class ShippingDiscountApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateShippingDiscountRequest", ""),
+            ObjectSerializer.serialize(updateShippingDiscountRequest, "UpdateShippingDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

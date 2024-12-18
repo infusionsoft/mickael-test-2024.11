@@ -314,10 +314,10 @@ export class ObservableAffiliateApi {
     /**
      * Creates a single Affiliate
      * Create an Affiliate
-     * @param [insertAffiliate] Affiliate request to insert
+     * @param [createAffiliateRequest] Affiliate request to insert
      */
-    public addAffiliateUsingPOSTWithHttpInfo(insertAffiliate?: CreateAffiliateRequest, _options?: Configuration): Observable<HttpInfo<RestAffiliate>> {
-        const requestContextPromise = this.requestFactory.addAffiliateUsingPOST(insertAffiliate, _options);
+    public addAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest?: CreateAffiliateRequest, _options?: Configuration): Observable<HttpInfo<RestAffiliate>> {
+        const requestContextPromise = this.requestFactory.addAffiliateUsingPOST(createAffiliateRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -338,19 +338,19 @@ export class ObservableAffiliateApi {
     /**
      * Creates a single Affiliate
      * Create an Affiliate
-     * @param [insertAffiliate] Affiliate request to insert
+     * @param [createAffiliateRequest] Affiliate request to insert
      */
-    public addAffiliateUsingPOST(insertAffiliate?: CreateAffiliateRequest, _options?: Configuration): Observable<RestAffiliate> {
-        return this.addAffiliateUsingPOSTWithHttpInfo(insertAffiliate, _options).pipe(map((apiResponse: HttpInfo<RestAffiliate>) => apiResponse.data));
+    public addAffiliateUsingPOST(createAffiliateRequest?: CreateAffiliateRequest, _options?: Configuration): Observable<RestAffiliate> {
+        return this.addAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest, _options).pipe(map((apiResponse: HttpInfo<RestAffiliate>) => apiResponse.data));
     }
 
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<AffiliateCommissionProgramResponse>> {
-        const requestContextPromise = this.requestFactory.addCommissionProgramUsingPOST(insertCommissionProgram, _options);
+    public addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<AffiliateCommissionProgramResponse>> {
+        const requestContextPromise = this.requestFactory.addCommissionProgramUsingPOST(createCommissionProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -371,20 +371,20 @@ export class ObservableAffiliateApi {
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOST(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Observable<AffiliateCommissionProgramResponse> {
-        return this.addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram, _options).pipe(map((apiResponse: HttpInfo<AffiliateCommissionProgramResponse>) => apiResponse.data));
+    public addCommissionProgramUsingPOST(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Observable<AffiliateCommissionProgramResponse> {
+        return this.addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<AffiliateCommissionProgramResponse>) => apiResponse.data));
     }
 
     /**
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<ProductCommissionProgram>> {
-        const requestContextPromise = this.requestFactory.assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram, _options);
+    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<ProductCommissionProgram>> {
+        const requestContextPromise = this.requestFactory.assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -406,20 +406,20 @@ export class ObservableAffiliateApi {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<ProductCommissionProgram> {
-        return this.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram, _options).pipe(map((apiResponse: HttpInfo<ProductCommissionProgram>) => apiResponse.data));
+    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<ProductCommissionProgram> {
+        return this.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<ProductCommissionProgram>) => apiResponse.data));
     }
 
     /**
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<SubscriptionCommissionProgram>> {
-        const requestContextPromise = this.requestFactory.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram, _options);
+    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<SubscriptionCommissionProgram>> {
+        const requestContextPromise = this.requestFactory.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -441,19 +441,19 @@ export class ObservableAffiliateApi {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<SubscriptionCommissionProgram> {
-        return this.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram, _options).pipe(map((apiResponse: HttpInfo<SubscriptionCommissionProgram>) => apiResponse.data));
+    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<SubscriptionCommissionProgram> {
+        return this.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<SubscriptionCommissionProgram>) => apiResponse.data));
     }
 
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createAffiliateCustomFieldUsingPOST(customField, _options);
+    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -474,10 +474,10 @@ export class ObservableAffiliateApi {
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createAffiliateCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
@@ -518,10 +518,10 @@ export class ObservableAffiliateApi {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOSTWithHttpInfo(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
-        const requestContextPromise = this.requestFactory.createRedirectLinkUsingPOST(request, _options);
+    public createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
+        const requestContextPromise = this.requestFactory.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -542,10 +542,10 @@ export class ObservableAffiliateApi {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOST(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
-        return this.createRedirectLinkUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
+    public createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
+        return this.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
     }
 
     /**
@@ -1120,10 +1120,10 @@ export class ObservableAffiliateApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<HttpInfo<void>> {
-        const requestContextPromise = this.requestFactory.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest, _options);
+    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -1145,10 +1145,10 @@ export class ObservableAffiliateApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOST(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<void> {
-        return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    public removeAffiliateFromProgramUsingPOST(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<void> {
+        return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
     }
 
     /**
@@ -1190,11 +1190,11 @@ export class ObservableAffiliateApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -1216,21 +1216,21 @@ export class ObservableAffiliateApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Updates a single Affiliate
      * Update an Affiliate
      * @param id id
-     * @param [patchAffiliate] Affiliate request to patch
+     * @param [patchAffiliateRequest] Affiliate request to patch
      */
-    public updateAffiliateUsingPATCHWithHttpInfo(id: string, patchAffiliate?: PatchAffiliateRequest, _options?: Configuration): Observable<HttpInfo<RestAffiliate>> {
-        const requestContextPromise = this.requestFactory.updateAffiliateUsingPATCH(id, patchAffiliate, _options);
+    public updateAffiliateUsingPATCHWithHttpInfo(id: string, patchAffiliateRequest?: PatchAffiliateRequest, _options?: Configuration): Observable<HttpInfo<RestAffiliate>> {
+        const requestContextPromise = this.requestFactory.updateAffiliateUsingPATCH(id, patchAffiliateRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -1252,20 +1252,20 @@ export class ObservableAffiliateApi {
      * Updates a single Affiliate
      * Update an Affiliate
      * @param id id
-     * @param [patchAffiliate] Affiliate request to patch
+     * @param [patchAffiliateRequest] Affiliate request to patch
      */
-    public updateAffiliateUsingPATCH(id: string, patchAffiliate?: PatchAffiliateRequest, _options?: Configuration): Observable<RestAffiliate> {
-        return this.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliate, _options).pipe(map((apiResponse: HttpInfo<RestAffiliate>) => apiResponse.data));
+    public updateAffiliateUsingPATCH(id: string, patchAffiliateRequest?: PatchAffiliateRequest, _options?: Configuration): Observable<RestAffiliate> {
+        return this.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest, _options).pipe(map((apiResponse: HttpInfo<RestAffiliate>) => apiResponse.data));
     }
 
     /**
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
-        const requestContextPromise = this.requestFactory.updateRedirectLinkUsingPATCH(redirectId, request, _options);
+    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
+        const requestContextPromise = this.requestFactory.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -1287,10 +1287,10 @@ export class ObservableAffiliateApi {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCH(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
-        return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
+    public updateRedirectLinkUsingPATCH(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
+        return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
     }
 
 }
@@ -1730,10 +1730,10 @@ export class ObservableBusinessProfileApi {
      * Updates Business Profile information.
      * Update Business Profile
      * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-     * @param [businessProfile] businessProfile
+     * @param [patchBusinessProfileRequest] businessProfile
      */
-    public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, businessProfile?: PatchBusinessProfileRequest, _options?: Configuration): Observable<HttpInfo<GetBusinessProfileResponse>> {
-        const requestContextPromise = this.requestFactory.patchBusinessProfileUsingPATCH(updateMask, businessProfile, _options);
+    public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Observable<HttpInfo<GetBusinessProfileResponse>> {
+        const requestContextPromise = this.requestFactory.patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -1755,10 +1755,10 @@ export class ObservableBusinessProfileApi {
      * Updates Business Profile information.
      * Update Business Profile
      * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-     * @param [businessProfile] businessProfile
+     * @param [patchBusinessProfileRequest] businessProfile
      */
-    public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, businessProfile?: PatchBusinessProfileRequest, _options?: Configuration): Observable<GetBusinessProfileResponse> {
-        return this.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile, _options).pipe(map((apiResponse: HttpInfo<GetBusinessProfileResponse>) => apiResponse.data));
+    public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Observable<GetBusinessProfileResponse> {
+        return this.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest, _options).pipe(map((apiResponse: HttpInfo<GetBusinessProfileResponse>) => apiResponse.data));
     }
 
 }
@@ -1948,10 +1948,10 @@ export class ObservableCategoryDiscountApi {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOSTWithHttpInfo(request: CreateUpdateDiscountRequest, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
-        const requestContextPromise = this.requestFactory.createDiscountUsingPOST(request, _options);
+    public createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
+        const requestContextPromise = this.requestFactory.createDiscountUsingPOST(createUpdateDiscountRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -1972,10 +1972,10 @@ export class ObservableCategoryDiscountApi {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOST(request: CreateUpdateDiscountRequest, _options?: Configuration): Observable<CategoryDiscount> {
-        return this.createDiscountUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
+    public createDiscountUsingPOST(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Observable<CategoryDiscount> {
+        return this.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
     }
 
     /**
@@ -2048,11 +2048,11 @@ export class ObservableCategoryDiscountApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
-        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
+        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2074,11 +2074,11 @@ export class ObservableCategoryDiscountApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CategoryDiscount> {
-        return this.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
+    public updateDiscountUsingPATCH(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CategoryDiscount> {
+        return this.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
     }
 
 }
@@ -2102,10 +2102,10 @@ export class ObservableCompanyApi {
     /**
      * Creates a new Company.`country_code` is required if `region` is specified.
      * Create a Company
-     * @param [company] company
+     * @param [createCompanyRequest] company
      */
-    public createCompanyUsingPOST1WithHttpInfo(company?: CreateCompanyRequest, _options?: Configuration): Observable<HttpInfo<Company>> {
-        const requestContextPromise = this.requestFactory.createCompanyUsingPOST1(company, _options);
+    public createCompanyUsingPOST1WithHttpInfo(createCompanyRequest?: CreateCompanyRequest, _options?: Configuration): Observable<HttpInfo<Company>> {
+        const requestContextPromise = this.requestFactory.createCompanyUsingPOST1(createCompanyRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2126,10 +2126,10 @@ export class ObservableCompanyApi {
     /**
      * Creates a new Company.`country_code` is required if `region` is specified.
      * Create a Company
-     * @param [company] company
+     * @param [createCompanyRequest] company
      */
-    public createCompanyUsingPOST1(company?: CreateCompanyRequest, _options?: Configuration): Observable<Company> {
-        return this.createCompanyUsingPOST1WithHttpInfo(company, _options).pipe(map((apiResponse: HttpInfo<Company>) => apiResponse.data));
+    public createCompanyUsingPOST1(createCompanyRequest?: CreateCompanyRequest, _options?: Configuration): Observable<Company> {
+        return this.createCompanyUsingPOST1WithHttpInfo(createCompanyRequest, _options).pipe(map((apiResponse: HttpInfo<Company>) => apiResponse.data));
     }
 
     /**
@@ -2246,10 +2246,10 @@ export class ObservableCompanyApi {
      * Update a Company
      * @param companyId company_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [company] company
+     * @param [patchCompanyRequest] company
      */
-    public patchCompanyUsingPATCHWithHttpInfo(companyId: string, updateMask?: Array<string>, company?: PatchCompanyRequest, _options?: Configuration): Observable<HttpInfo<Company>> {
-        const requestContextPromise = this.requestFactory.patchCompanyUsingPATCH(companyId, updateMask, company, _options);
+    public patchCompanyUsingPATCHWithHttpInfo(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Observable<HttpInfo<Company>> {
+        const requestContextPromise = this.requestFactory.patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2272,10 +2272,10 @@ export class ObservableCompanyApi {
      * Update a Company
      * @param companyId company_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [company] company
+     * @param [patchCompanyRequest] company
      */
-    public patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, company?: PatchCompanyRequest, _options?: Configuration): Observable<Company> {
-        return this.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company, _options).pipe(map((apiResponse: HttpInfo<Company>) => apiResponse.data));
+    public patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Observable<Company> {
+        return this.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest, _options).pipe(map((apiResponse: HttpInfo<Company>) => apiResponse.data));
     }
 
 }
@@ -2299,10 +2299,10 @@ export class ObservableContactApi {
     /**
      * Creates a new type of Contact Link.
      * Create a Contact Link type
-     * @param request request
+     * @param createContactLinkTypeRequest request
      */
-    public createContactLinkTypeUsingPOSTWithHttpInfo(request: CreateContactLinkTypeRequest, _options?: Configuration): Observable<HttpInfo<ContactLinkType>> {
-        const requestContextPromise = this.requestFactory.createContactLinkTypeUsingPOST(request, _options);
+    public createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest: CreateContactLinkTypeRequest, _options?: Configuration): Observable<HttpInfo<ContactLinkType>> {
+        const requestContextPromise = this.requestFactory.createContactLinkTypeUsingPOST(createContactLinkTypeRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2323,19 +2323,19 @@ export class ObservableContactApi {
     /**
      * Creates a new type of Contact Link.
      * Create a Contact Link type
-     * @param request request
+     * @param createContactLinkTypeRequest request
      */
-    public createContactLinkTypeUsingPOST(request: CreateContactLinkTypeRequest, _options?: Configuration): Observable<ContactLinkType> {
-        return this.createContactLinkTypeUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<ContactLinkType>) => apiResponse.data));
+    public createContactLinkTypeUsingPOST(createContactLinkTypeRequest: CreateContactLinkTypeRequest, _options?: Configuration): Observable<ContactLinkType> {
+        return this.createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest, _options).pipe(map((apiResponse: HttpInfo<ContactLinkType>) => apiResponse.data));
     }
 
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public createContactUsingPOST1WithHttpInfo(contact?: CreatePatchContactRequest, _options?: Configuration): Observable<HttpInfo<Contact>> {
-        const requestContextPromise = this.requestFactory.createContactUsingPOST1(contact, _options);
+    public createContactUsingPOST1WithHttpInfo(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Observable<HttpInfo<Contact>> {
+        const requestContextPromise = this.requestFactory.createContactUsingPOST1(createPatchContactRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2356,10 +2356,10 @@ export class ObservableContactApi {
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public createContactUsingPOST1(contact?: CreatePatchContactRequest, _options?: Configuration): Observable<Contact> {
-        return this.createContactUsingPOST1WithHttpInfo(contact, _options).pipe(map((apiResponse: HttpInfo<Contact>) => apiResponse.data));
+    public createContactUsingPOST1(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Observable<Contact> {
+        return this.createContactUsingPOST1WithHttpInfo(createPatchContactRequest, _options).pipe(map((apiResponse: HttpInfo<Contact>) => apiResponse.data));
     }
 
     /**
@@ -2647,10 +2647,10 @@ export class ObservableContactApi {
      * Update a Contact
      * @param contactId contact_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public patchContactUsingPATCHWithHttpInfo(contactId: string, updateMask?: Array<string>, contact?: CreatePatchContactRequest, _options?: Configuration): Observable<HttpInfo<Contact>> {
-        const requestContextPromise = this.requestFactory.patchContactUsingPATCH(contactId, updateMask, contact, _options);
+    public patchContactUsingPATCHWithHttpInfo(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Observable<HttpInfo<Contact>> {
+        const requestContextPromise = this.requestFactory.patchContactUsingPATCH(contactId, updateMask, createPatchContactRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2673,10 +2673,10 @@ export class ObservableContactApi {
      * Update a Contact
      * @param contactId contact_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, contact?: CreatePatchContactRequest, _options?: Configuration): Observable<Contact> {
-        return this.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact, _options).pipe(map((apiResponse: HttpInfo<Contact>) => apiResponse.data));
+    public patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Observable<Contact> {
+        return this.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest, _options).pipe(map((apiResponse: HttpInfo<Contact>) => apiResponse.data));
     }
 
     /**
@@ -2764,10 +2764,10 @@ export class ObservableEmailApi {
     /**
      * Creates a Record of an Email sent to a Contact
      * Create an Email Record
-     * @param emailWithContent emailWithContent
+     * @param createEmailSentRequest emailWithContent
      */
-    public createEmailUsingPOST1WithHttpInfo(emailWithContent: CreateEmailSentRequest, _options?: Configuration): Observable<HttpInfo<EmailSentWithContent>> {
-        const requestContextPromise = this.requestFactory.createEmailUsingPOST1(emailWithContent, _options);
+    public createEmailUsingPOST1WithHttpInfo(createEmailSentRequest: CreateEmailSentRequest, _options?: Configuration): Observable<HttpInfo<EmailSentWithContent>> {
+        const requestContextPromise = this.requestFactory.createEmailUsingPOST1(createEmailSentRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -2788,10 +2788,10 @@ export class ObservableEmailApi {
     /**
      * Creates a Record of an Email sent to a Contact
      * Create an Email Record
-     * @param emailWithContent emailWithContent
+     * @param createEmailSentRequest emailWithContent
      */
-    public createEmailUsingPOST1(emailWithContent: CreateEmailSentRequest, _options?: Configuration): Observable<EmailSentWithContent> {
-        return this.createEmailUsingPOST1WithHttpInfo(emailWithContent, _options).pipe(map((apiResponse: HttpInfo<EmailSentWithContent>) => apiResponse.data));
+    public createEmailUsingPOST1(createEmailSentRequest: CreateEmailSentRequest, _options?: Configuration): Observable<EmailSentWithContent> {
+        return this.createEmailUsingPOST1WithHttpInfo(createEmailSentRequest, _options).pipe(map((apiResponse: HttpInfo<EmailSentWithContent>) => apiResponse.data));
     }
 
     /**
@@ -3289,10 +3289,10 @@ export class ObservableLeadSourcesApi {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOSTWithHttpInfo(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Observable<HttpInfo<LeadSource>> {
-        const requestContextPromise = this.requestFactory.createLeadSourceUsingPOST(leadsource, _options);
+    public createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Observable<HttpInfo<LeadSource>> {
+        const requestContextPromise = this.requestFactory.createLeadSourceUsingPOST(createLeadSourceRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3313,10 +3313,10 @@ export class ObservableLeadSourcesApi {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOST(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Observable<LeadSource> {
-        return this.createLeadSourceUsingPOSTWithHttpInfo(leadsource, _options).pipe(map((apiResponse: HttpInfo<LeadSource>) => apiResponse.data));
+    public createLeadSourceUsingPOST(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Observable<LeadSource> {
+        return this.createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest, _options).pipe(map((apiResponse: HttpInfo<LeadSource>) => apiResponse.data));
     }
 
     /**
@@ -3514,10 +3514,10 @@ export class ObservableNoteApi {
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createNoteCustomFieldUsingPOST1(customField, _options);
+    public createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createNoteCustomFieldUsingPOST1(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3538,20 +3538,20 @@ export class ObservableNoteApi {
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createNoteCustomFieldUsingPOST1WithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createNoteCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Creates a new Note.
      * Create a Note
      * @param contactId contact_id
-     * @param request request
+     * @param createNoteRequest request
      */
-    public createNoteUsingPOST1WithHttpInfo(contactId: string, request: CreateNoteRequest, _options?: Configuration): Observable<HttpInfo<Note>> {
-        const requestContextPromise = this.requestFactory.createNoteUsingPOST1(contactId, request, _options);
+    public createNoteUsingPOST1WithHttpInfo(contactId: string, createNoteRequest: CreateNoteRequest, _options?: Configuration): Observable<HttpInfo<Note>> {
+        const requestContextPromise = this.requestFactory.createNoteUsingPOST1(contactId, createNoteRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3573,10 +3573,10 @@ export class ObservableNoteApi {
      * Creates a new Note.
      * Create a Note
      * @param contactId contact_id
-     * @param request request
+     * @param createNoteRequest request
      */
-    public createNoteUsingPOST1(contactId: string, request: CreateNoteRequest, _options?: Configuration): Observable<Note> {
-        return this.createNoteUsingPOST1WithHttpInfo(contactId, request, _options).pipe(map((apiResponse: HttpInfo<Note>) => apiResponse.data));
+    public createNoteUsingPOST1(contactId: string, createNoteRequest: CreateNoteRequest, _options?: Configuration): Observable<Note> {
+        return this.createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest, _options).pipe(map((apiResponse: HttpInfo<Note>) => apiResponse.data));
     }
 
     /**
@@ -3803,11 +3803,11 @@ export class ObservableNoteApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3829,11 +3829,11 @@ export class ObservableNoteApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
 }
@@ -3857,10 +3857,10 @@ export class ObservableOpportunityApi {
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createOpportunityCustomFieldsUsingPOST(customField, _options);
+    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3881,19 +3881,19 @@ export class ObservableOpportunityApi {
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
-        const requestContextPromise = this.requestFactory.createOpportunityStageUsingPOST(opportunityStage, _options);
+    public createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
+        const requestContextPromise = this.requestFactory.createOpportunityStageUsingPOST(createOpportunityStageRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3914,19 +3914,19 @@ export class ObservableOpportunityApi {
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOST(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Observable<RestOpportunityStage> {
-        return this.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
+    public createOpportunityStageUsingPOST(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Observable<RestOpportunityStage> {
+        return this.createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
     }
 
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1WithHttpInfo(opportunity?: CreateOpportunityRequest, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
-        const requestContextPromise = this.requestFactory.createOpportunityUsingPOST1(opportunity, _options);
+    public createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
+        const requestContextPromise = this.requestFactory.createOpportunityUsingPOST1(createOpportunityRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -3947,10 +3947,10 @@ export class ObservableOpportunityApi {
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1(opportunity?: CreateOpportunityRequest, _options?: Configuration): Observable<RestV2Opportunity> {
-        return this.createOpportunityUsingPOST1WithHttpInfo(opportunity, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
+    public createOpportunityUsingPOST1(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Observable<RestV2Opportunity> {
+        return this.createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
     }
 
     /**
@@ -4169,11 +4169,11 @@ export class ObservableOpportunityApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4195,22 +4195,22 @@ export class ObservableOpportunityApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
-        const requestContextPromise = this.requestFactory.updateOpportunityStageUsingPATCH(stageId, request, updateMask, _options);
+    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
+        const requestContextPromise = this.requestFactory.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4232,22 +4232,22 @@ export class ObservableOpportunityApi {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestOpportunityStage> {
-        return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
+    public updateOpportunityStageUsingPATCH(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestOpportunityStage> {
+        return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
     }
 
     /**
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
-        const requestContextPromise = this.requestFactory.updateOpportunityUsingPATCH(opportunityId, request, updateMask, _options);
+    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
+        const requestContextPromise = this.requestFactory.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4269,11 +4269,11 @@ export class ObservableOpportunityApi {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCH(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestV2Opportunity> {
-        return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
+    public updateOpportunityUsingPATCH(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestV2Opportunity> {
+        return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
     }
 
 }
@@ -4297,10 +4297,10 @@ export class ObservableOrderTotalDiscountApi {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOSTWithHttpInfo(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
-        const requestContextPromise = this.requestFactory.createOrderTotalDiscountUsingPOST(request, _options);
+    public createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
+        const requestContextPromise = this.requestFactory.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4321,10 +4321,10 @@ export class ObservableOrderTotalDiscountApi {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<OrderTotalDiscount> {
-        return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
+    public createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<OrderTotalDiscount> {
+        return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
     }
 
     /**
@@ -4436,11 +4436,11 @@ export class ObservableOrderTotalDiscountApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
-        const requestContextPromise = this.requestFactory.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
+        const requestContextPromise = this.requestFactory.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4462,11 +4462,11 @@ export class ObservableOrderTotalDiscountApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<OrderTotalDiscount> {
-        return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
+    public updateOrderTotalDiscountUsingPATCH(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<OrderTotalDiscount> {
+        return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
     }
 
 }
@@ -4490,10 +4490,10 @@ export class ObservableOrdersApi {
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createOrderCustomFieldUsingPOST(customField, _options);
+    public createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createOrderCustomFieldUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4514,10 +4514,10 @@ export class ObservableOrdersApi {
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createOrderCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createOrderCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
@@ -4558,10 +4558,10 @@ export class ObservableOrdersApi {
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1WithHttpInfo(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
-        const requestContextPromise = this.requestFactory.createOrderUsingPOST1(createOrderRequest, _options);
+    public createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
+        const requestContextPromise = this.requestFactory.createOrderUsingPOST1(restCreateOrderRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4582,10 +4582,10 @@ export class ObservableOrdersApi {
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<RestV2Order> {
-        return this.createOrderUsingPOST1WithHttpInfo(createOrderRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
+    public createOrderUsingPOST1(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<RestV2Order> {
+        return this.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
     }
 
     /**
@@ -4807,10 +4807,10 @@ export class ObservableOrdersApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
-        const requestContextPromise = this.requestFactory.patchOrderUsingPATCH(orderId, updateMask, order, _options);
+    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
+        const requestContextPromise = this.requestFactory.patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4833,10 +4833,10 @@ export class ObservableOrdersApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<RestV2Order> {
-        return this.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
+    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Observable<RestV2Order> {
+        return this.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
     }
 
     /**
@@ -4874,11 +4874,11 @@ export class ObservableOrdersApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4900,11 +4900,11 @@ export class ObservableOrdersApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateOrderCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
 }
@@ -4928,10 +4928,10 @@ export class ObservablePaymentMethodConfigApi {
     /**
      * Creates configuration details for rendering payment method components
      * Create Payment Method Configuration
-     * @param request request
+     * @param createPaymentMethodConfigRequest request
      */
-    public createPaymentMethodConfigUsingPOSTWithHttpInfo(request: CreatePaymentMethodConfigRequest, _options?: Configuration): Observable<HttpInfo<PaymentMethodConfig>> {
-        const requestContextPromise = this.requestFactory.createPaymentMethodConfigUsingPOST(request, _options);
+    public createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest: CreatePaymentMethodConfigRequest, _options?: Configuration): Observable<HttpInfo<PaymentMethodConfig>> {
+        const requestContextPromise = this.requestFactory.createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -4952,10 +4952,10 @@ export class ObservablePaymentMethodConfigApi {
     /**
      * Creates configuration details for rendering payment method components
      * Create Payment Method Configuration
-     * @param request request
+     * @param createPaymentMethodConfigRequest request
      */
-    public createPaymentMethodConfigUsingPOST(request: CreatePaymentMethodConfigRequest, _options?: Configuration): Observable<PaymentMethodConfig> {
-        return this.createPaymentMethodConfigUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<PaymentMethodConfig>) => apiResponse.data));
+    public createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest: CreatePaymentMethodConfigRequest, _options?: Configuration): Observable<PaymentMethodConfig> {
+        return this.createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest, _options).pipe(map((apiResponse: HttpInfo<PaymentMethodConfig>) => apiResponse.data));
     }
 
 }
@@ -5014,10 +5014,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<AffiliateCommissionProgramResponse>> {
-        const requestContextPromise = this.requestFactory.addCommissionProgramUsingPOST(insertCommissionProgram, _options);
+    public addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<AffiliateCommissionProgramResponse>> {
+        const requestContextPromise = this.requestFactory.addCommissionProgramUsingPOST(createCommissionProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5038,20 +5038,20 @@ export class ObservablePreReleaseApi {
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOST(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Observable<AffiliateCommissionProgramResponse> {
-        return this.addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram, _options).pipe(map((apiResponse: HttpInfo<AffiliateCommissionProgramResponse>) => apiResponse.data));
+    public addCommissionProgramUsingPOST(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Observable<AffiliateCommissionProgramResponse> {
+        return this.addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<AffiliateCommissionProgramResponse>) => apiResponse.data));
     }
 
     /**
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<ProductCommissionProgram>> {
-        const requestContextPromise = this.requestFactory.assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram, _options);
+    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<ProductCommissionProgram>> {
+        const requestContextPromise = this.requestFactory.assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5073,20 +5073,20 @@ export class ObservablePreReleaseApi {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<ProductCommissionProgram> {
-        return this.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram, _options).pipe(map((apiResponse: HttpInfo<ProductCommissionProgram>) => apiResponse.data));
+    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Observable<ProductCommissionProgram> {
+        return this.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<ProductCommissionProgram>) => apiResponse.data));
     }
 
     /**
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<SubscriptionCommissionProgram>> {
-        const requestContextPromise = this.requestFactory.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram, _options);
+    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<HttpInfo<SubscriptionCommissionProgram>> {
+        const requestContextPromise = this.requestFactory.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5108,10 +5108,10 @@ export class ObservablePreReleaseApi {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<SubscriptionCommissionProgram> {
-        return this.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram, _options).pipe(map((apiResponse: HttpInfo<SubscriptionCommissionProgram>) => apiResponse.data));
+    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Observable<SubscriptionCommissionProgram> {
+        return this.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest, _options).pipe(map((apiResponse: HttpInfo<SubscriptionCommissionProgram>) => apiResponse.data));
     }
 
     /**
@@ -5152,10 +5152,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createAffiliateCustomFieldUsingPOST(customField, _options);
+    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5176,10 +5176,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createAffiliateCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
@@ -5220,10 +5220,10 @@ export class ObservablePreReleaseApi {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOSTWithHttpInfo(request: CreateUpdateDiscountRequest, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
-        const requestContextPromise = this.requestFactory.createDiscountUsingPOST(request, _options);
+    public createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
+        const requestContextPromise = this.requestFactory.createDiscountUsingPOST(createUpdateDiscountRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5244,19 +5244,19 @@ export class ObservablePreReleaseApi {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOST(request: CreateUpdateDiscountRequest, _options?: Configuration): Observable<CategoryDiscount> {
-        return this.createDiscountUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
+    public createDiscountUsingPOST(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Observable<CategoryDiscount> {
+        return this.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
     }
 
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1WithHttpInfo(request: CreateShippingDiscountRequest, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
-        const requestContextPromise = this.requestFactory.createDiscountUsingPOST1(request, _options);
+    public createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
+        const requestContextPromise = this.requestFactory.createDiscountUsingPOST1(createShippingDiscountRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5277,10 +5277,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Observable<ShippingDiscount> {
-        return this.createDiscountUsingPOST1WithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
+    public createDiscountUsingPOST1(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Observable<ShippingDiscount> {
+        return this.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
     }
 
     /**
@@ -5350,10 +5350,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOSTWithHttpInfo(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Observable<HttpInfo<LeadSource>> {
-        const requestContextPromise = this.requestFactory.createLeadSourceUsingPOST(leadsource, _options);
+    public createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Observable<HttpInfo<LeadSource>> {
+        const requestContextPromise = this.requestFactory.createLeadSourceUsingPOST(createLeadSourceRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5374,19 +5374,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOST(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Observable<LeadSource> {
-        return this.createLeadSourceUsingPOSTWithHttpInfo(leadsource, _options).pipe(map((apiResponse: HttpInfo<LeadSource>) => apiResponse.data));
+    public createLeadSourceUsingPOST(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Observable<LeadSource> {
+        return this.createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest, _options).pipe(map((apiResponse: HttpInfo<LeadSource>) => apiResponse.data));
     }
 
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createNoteCustomFieldUsingPOST1(customField, _options);
+    public createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createNoteCustomFieldUsingPOST1(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5407,19 +5407,19 @@ export class ObservablePreReleaseApi {
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createNoteCustomFieldUsingPOST1WithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createNoteCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createOpportunityCustomFieldsUsingPOST(customField, _options);
+    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5440,19 +5440,19 @@ export class ObservablePreReleaseApi {
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
-        const requestContextPromise = this.requestFactory.createOpportunityStageUsingPOST(opportunityStage, _options);
+    public createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
+        const requestContextPromise = this.requestFactory.createOpportunityStageUsingPOST(createOpportunityStageRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5473,19 +5473,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOST(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Observable<RestOpportunityStage> {
-        return this.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
+    public createOpportunityStageUsingPOST(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Observable<RestOpportunityStage> {
+        return this.createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
     }
 
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1WithHttpInfo(opportunity?: CreateOpportunityRequest, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
-        const requestContextPromise = this.requestFactory.createOpportunityUsingPOST1(opportunity, _options);
+    public createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
+        const requestContextPromise = this.requestFactory.createOpportunityUsingPOST1(createOpportunityRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5506,19 +5506,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1(opportunity?: CreateOpportunityRequest, _options?: Configuration): Observable<RestV2Opportunity> {
-        return this.createOpportunityUsingPOST1WithHttpInfo(opportunity, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
+    public createOpportunityUsingPOST1(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Observable<RestV2Opportunity> {
+        return this.createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
     }
 
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createOrderCustomFieldUsingPOST(customField, _options);
+    public createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createOrderCustomFieldUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5539,10 +5539,10 @@ export class ObservablePreReleaseApi {
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createOrderCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createOrderCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
@@ -5583,10 +5583,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOSTWithHttpInfo(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
-        const requestContextPromise = this.requestFactory.createOrderTotalDiscountUsingPOST(request, _options);
+    public createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
+        const requestContextPromise = this.requestFactory.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5607,19 +5607,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<OrderTotalDiscount> {
-        return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
+    public createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Observable<OrderTotalDiscount> {
+        return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
     }
 
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1WithHttpInfo(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
-        const requestContextPromise = this.requestFactory.createOrderUsingPOST1(createOrderRequest, _options);
+    public createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
+        const requestContextPromise = this.requestFactory.createOrderUsingPOST1(restCreateOrderRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5640,10 +5640,10 @@ export class ObservablePreReleaseApi {
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<RestV2Order> {
-        return this.createOrderUsingPOST1WithHttpInfo(createOrderRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
+    public createOrderUsingPOST1(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Observable<RestV2Order> {
+        return this.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
     }
 
     /**
@@ -5682,10 +5682,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOSTWithHttpInfo(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
-        const requestContextPromise = this.requestFactory.createRedirectLinkUsingPOST(request, _options);
+    public createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
+        const requestContextPromise = this.requestFactory.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5706,19 +5706,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOST(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
-        return this.createRedirectLinkUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
+    public createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
+        return this.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
     }
 
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOSTWithHttpInfo(request: CreateReferralRequest, _options?: Configuration): Observable<HttpInfo<Referral>> {
-        const requestContextPromise = this.requestFactory.createReferralUsingPOST(request, _options);
+    public createReferralUsingPOSTWithHttpInfo(createReferralRequest: CreateReferralRequest, _options?: Configuration): Observable<HttpInfo<Referral>> {
+        const requestContextPromise = this.requestFactory.createReferralUsingPOST(createReferralRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5739,19 +5739,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOST(request: CreateReferralRequest, _options?: Configuration): Observable<Referral> {
-        return this.createReferralUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<Referral>) => apiResponse.data));
+    public createReferralUsingPOST(createReferralRequest: CreateReferralRequest, _options?: Configuration): Observable<Referral> {
+        return this.createReferralUsingPOSTWithHttpInfo(createReferralRequest, _options).pipe(map((apiResponse: HttpInfo<Referral>) => apiResponse.data));
     }
 
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createSubscriptionCustomFieldUsingPOST(customField, _options);
+    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5772,19 +5772,19 @@ export class ObservablePreReleaseApi {
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CreateCustomFieldResponse>> {
-        const requestContextPromise = this.requestFactory.createTaskCustomFieldUsingPOST1(customField, _options);
+    public createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CreateCustomFieldResponse>> {
+        const requestContextPromise = this.requestFactory.createTaskCustomFieldUsingPOST1(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5805,19 +5805,19 @@ export class ObservablePreReleaseApi {
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CreateCustomFieldResponse> {
-        return this.createTaskCustomFieldUsingPOST1WithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CreateCustomFieldResponse>) => apiResponse.data));
+    public createTaskCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CreateCustomFieldResponse> {
+        return this.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CreateCustomFieldResponse>) => apiResponse.data));
     }
 
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1WithHttpInfo(task?: CreateTaskRequest, _options?: Configuration): Observable<HttpInfo<Task>> {
-        const requestContextPromise = this.requestFactory.createTaskUsingPOST1(task, _options);
+    public createTaskUsingPOST1WithHttpInfo(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Observable<HttpInfo<Task>> {
+        const requestContextPromise = this.requestFactory.createTaskUsingPOST1(createTaskRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5838,19 +5838,19 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1(task?: CreateTaskRequest, _options?: Configuration): Observable<Task> {
-        return this.createTaskUsingPOST1WithHttpInfo(task, _options).pipe(map((apiResponse: HttpInfo<Task>) => apiResponse.data));
+    public createTaskUsingPOST1(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Observable<Task> {
+        return this.createTaskUsingPOST1WithHttpInfo(createTaskRequest, _options).pipe(map((apiResponse: HttpInfo<Task>) => apiResponse.data));
     }
 
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1WithHttpInfo(user?: CreateUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
-        const requestContextPromise = this.requestFactory.createUserUsingPOST1(user, _options);
+    public createUserUsingPOST1WithHttpInfo(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
+        const requestContextPromise = this.requestFactory.createUserUsingPOST1(createUserRequestV2, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -5871,10 +5871,10 @@ export class ObservablePreReleaseApi {
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1(user?: CreateUserRequestV2, _options?: Configuration): Observable<User> {
-        return this.createUserUsingPOST1WithHttpInfo(user, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
+    public createUserUsingPOST1(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Observable<User> {
+        return this.createUserUsingPOST1WithHttpInfo(createUserRequestV2, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
     }
 
     /**
@@ -7778,10 +7778,10 @@ export class ObservablePreReleaseApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
-        const requestContextPromise = this.requestFactory.patchOrderUsingPATCH(orderId, updateMask, order, _options);
+    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Observable<HttpInfo<RestV2Order>> {
+        const requestContextPromise = this.requestFactory.patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -7804,10 +7804,10 @@ export class ObservablePreReleaseApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Observable<RestV2Order> {
-        return this.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
+    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Observable<RestV2Order> {
+        return this.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Order>) => apiResponse.data));
     }
 
     /**
@@ -7889,10 +7889,10 @@ export class ObservablePreReleaseApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Observable<HttpInfo<UpdateTaskResponse>> {
-        const requestContextPromise = this.requestFactory.patchTaskUsingPATCH(taskId, updateMask, task, _options);
+    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Observable<HttpInfo<UpdateTaskResponse>> {
+        const requestContextPromise = this.requestFactory.patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -7915,10 +7915,10 @@ export class ObservablePreReleaseApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Observable<UpdateTaskResponse> {
-        return this.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task, _options).pipe(map((apiResponse: HttpInfo<UpdateTaskResponse>) => apiResponse.data));
+    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Observable<UpdateTaskResponse> {
+        return this.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest, _options).pipe(map((apiResponse: HttpInfo<UpdateTaskResponse>) => apiResponse.data));
     }
 
     /**
@@ -7926,10 +7926,10 @@ export class ObservablePreReleaseApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
-        const requestContextPromise = this.requestFactory.patchUserUsingPATCH(userId, updateMask, user, _options);
+    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
+        const requestContextPromise = this.requestFactory.patchUserUsingPATCH(userId, updateMask, patchUserRequestV2, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -7952,20 +7952,20 @@ export class ObservablePreReleaseApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Observable<User> {
-        return this.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
+    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Observable<User> {
+        return this.patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
     }
 
     /**
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<HttpInfo<void>> {
-        const requestContextPromise = this.requestFactory.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest, _options);
+    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -7987,10 +7987,10 @@ export class ObservablePreReleaseApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOST(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<void> {
-        return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    public removeAffiliateFromProgramUsingPOST(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Observable<void> {
+        return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
     }
 
     /**
@@ -8156,11 +8156,11 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8182,22 +8182,22 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
-        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CategoryDiscount>> {
+        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8219,22 +8219,22 @@ export class ObservablePreReleaseApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CategoryDiscount> {
-        return this.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
+    public updateDiscountUsingPATCH(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CategoryDiscount> {
+        return this.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
     }
 
     /**
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
-        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH1(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
+        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8256,22 +8256,22 @@ export class ObservablePreReleaseApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<ShippingDiscount> {
-        return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
+    public updateDiscountUsingPATCH1(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<ShippingDiscount> {
+        return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
     }
 
     /**
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8293,22 +8293,22 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8330,22 +8330,22 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
-        const requestContextPromise = this.requestFactory.updateOpportunityStageUsingPATCH(stageId, request, updateMask, _options);
+    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestOpportunityStage>> {
+        const requestContextPromise = this.requestFactory.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8367,22 +8367,22 @@ export class ObservablePreReleaseApi {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestOpportunityStage> {
-        return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
+    public updateOpportunityStageUsingPATCH(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestOpportunityStage> {
+        return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestOpportunityStage>) => apiResponse.data));
     }
 
     /**
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
-        const requestContextPromise = this.requestFactory.updateOpportunityUsingPATCH(opportunityId, request, updateMask, _options);
+    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<RestV2Opportunity>> {
+        const requestContextPromise = this.requestFactory.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8404,22 +8404,22 @@ export class ObservablePreReleaseApi {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCH(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestV2Opportunity> {
-        return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
+    public updateOpportunityUsingPATCH(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Observable<RestV2Opportunity> {
+        return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<RestV2Opportunity>) => apiResponse.data));
     }
 
     /**
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8441,22 +8441,22 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateOrderCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
-        const requestContextPromise = this.requestFactory.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<OrderTotalDiscount>> {
+        const requestContextPromise = this.requestFactory.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8478,21 +8478,21 @@ export class ObservablePreReleaseApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<OrderTotalDiscount> {
-        return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
+    public updateOrderTotalDiscountUsingPATCH(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<OrderTotalDiscount> {
+        return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<OrderTotalDiscount>) => apiResponse.data));
     }
 
     /**
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
-        const requestContextPromise = this.requestFactory.updateRedirectLinkUsingPATCH(redirectId, request, _options);
+    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<HttpInfo<AffiliateLink>> {
+        const requestContextPromise = this.requestFactory.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8514,21 +8514,21 @@ export class ObservablePreReleaseApi {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCH(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
-        return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
+    public updateRedirectLinkUsingPATCH(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Observable<AffiliateLink> {
+        return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest, _options).pipe(map((apiResponse: HttpInfo<AffiliateLink>) => apiResponse.data));
     }
 
     /**
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8550,22 +8550,22 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8587,11 +8587,11 @@ export class ObservablePreReleaseApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateTaskCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
 }
@@ -8771,10 +8771,10 @@ export class ObservableReferralApi {
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOSTWithHttpInfo(request: CreateReferralRequest, _options?: Configuration): Observable<HttpInfo<Referral>> {
-        const requestContextPromise = this.requestFactory.createReferralUsingPOST(request, _options);
+    public createReferralUsingPOSTWithHttpInfo(createReferralRequest: CreateReferralRequest, _options?: Configuration): Observable<HttpInfo<Referral>> {
+        const requestContextPromise = this.requestFactory.createReferralUsingPOST(createReferralRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -8795,10 +8795,10 @@ export class ObservableReferralApi {
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOST(request: CreateReferralRequest, _options?: Configuration): Observable<Referral> {
-        return this.createReferralUsingPOSTWithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<Referral>) => apiResponse.data));
+    public createReferralUsingPOST(createReferralRequest: CreateReferralRequest, _options?: Configuration): Observable<Referral> {
+        return this.createReferralUsingPOSTWithHttpInfo(createReferralRequest, _options).pipe(map((apiResponse: HttpInfo<Referral>) => apiResponse.data));
     }
 
 }
@@ -9094,10 +9094,10 @@ export class ObservableShippingDiscountApi {
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1WithHttpInfo(request: CreateShippingDiscountRequest, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
-        const requestContextPromise = this.requestFactory.createDiscountUsingPOST1(request, _options);
+    public createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
+        const requestContextPromise = this.requestFactory.createDiscountUsingPOST1(createShippingDiscountRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9118,10 +9118,10 @@ export class ObservableShippingDiscountApi {
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Observable<ShippingDiscount> {
-        return this.createDiscountUsingPOST1WithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
+    public createDiscountUsingPOST1(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Observable<ShippingDiscount> {
+        return this.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
     }
 
     /**
@@ -9235,11 +9235,11 @@ export class ObservableShippingDiscountApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
-        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH1(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<ShippingDiscount>> {
+        const requestContextPromise = this.requestFactory.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9261,11 +9261,11 @@ export class ObservableShippingDiscountApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<ShippingDiscount> {
-        return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
+    public updateDiscountUsingPATCH1(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Observable<ShippingDiscount> {
+        return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<ShippingDiscount>) => apiResponse.data));
     }
 
 }
@@ -9381,10 +9381,10 @@ export class ObservableSubscriptionsApi {
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.createSubscriptionCustomFieldUsingPOST(customField, _options);
+    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9405,10 +9405,10 @@ export class ObservableSubscriptionsApi {
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
     /**
@@ -9518,11 +9518,11 @@ export class ObservableSubscriptionsApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9544,11 +9544,11 @@ export class ObservableSubscriptionsApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
 }
@@ -9607,10 +9607,10 @@ export class ObservableTagsApi {
     /**
      * Creates a new Tag Category.
      * Create Tag Category
-     * @param request request
+     * @param createUpdateTagCategoryRequest request
      */
-    public createTagCategoryUsingPOST1WithHttpInfo(request: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<HttpInfo<Tag>> {
-        const requestContextPromise = this.requestFactory.createTagCategoryUsingPOST1(request, _options);
+    public createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<HttpInfo<Tag>> {
+        const requestContextPromise = this.requestFactory.createTagCategoryUsingPOST1(createUpdateTagCategoryRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9631,19 +9631,19 @@ export class ObservableTagsApi {
     /**
      * Creates a new Tag Category.
      * Create Tag Category
-     * @param request request
+     * @param createUpdateTagCategoryRequest request
      */
-    public createTagCategoryUsingPOST1(request: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<Tag> {
-        return this.createTagCategoryUsingPOST1WithHttpInfo(request, _options).pipe(map((apiResponse: HttpInfo<Tag>) => apiResponse.data));
+    public createTagCategoryUsingPOST1(createUpdateTagCategoryRequest: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<Tag> {
+        return this.createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest, _options).pipe(map((apiResponse: HttpInfo<Tag>) => apiResponse.data));
     }
 
     /**
      * Creates a new Tag
      * Create Tag
-     * @param tag tag
+     * @param createUpdateTagRequest tag
      */
-    public createTagUsingPOST1WithHttpInfo(tag: CreateUpdateTagRequest, _options?: Configuration): Observable<HttpInfo<Tag>> {
-        const requestContextPromise = this.requestFactory.createTagUsingPOST1(tag, _options);
+    public createTagUsingPOST1WithHttpInfo(createUpdateTagRequest: CreateUpdateTagRequest, _options?: Configuration): Observable<HttpInfo<Tag>> {
+        const requestContextPromise = this.requestFactory.createTagUsingPOST1(createUpdateTagRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9664,10 +9664,10 @@ export class ObservableTagsApi {
     /**
      * Creates a new Tag
      * Create Tag
-     * @param tag tag
+     * @param createUpdateTagRequest tag
      */
-    public createTagUsingPOST1(tag: CreateUpdateTagRequest, _options?: Configuration): Observable<Tag> {
-        return this.createTagUsingPOST1WithHttpInfo(tag, _options).pipe(map((apiResponse: HttpInfo<Tag>) => apiResponse.data));
+    public createTagUsingPOST1(createUpdateTagRequest: CreateUpdateTagRequest, _options?: Configuration): Observable<Tag> {
+        return this.createTagUsingPOST1WithHttpInfo(createUpdateTagRequest, _options).pipe(map((apiResponse: HttpInfo<Tag>) => apiResponse.data));
     }
 
     /**
@@ -9967,10 +9967,10 @@ export class ObservableTagsApi {
      * Update a Tag Category
      * @param tagCategoryId tag_category_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tagCategory] tagCategory
+     * @param [createUpdateTagCategoryRequest] tagCategory
      */
-    public patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId: string, updateMask?: Array<string>, tagCategory?: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<HttpInfo<UpdateTagCategoryResponse>> {
-        const requestContextPromise = this.requestFactory.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, tagCategory, _options);
+    public patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<HttpInfo<UpdateTagCategoryResponse>> {
+        const requestContextPromise = this.requestFactory.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -9993,10 +9993,10 @@ export class ObservableTagsApi {
      * Update a Tag Category
      * @param tagCategoryId tag_category_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tagCategory] tagCategory
+     * @param [createUpdateTagCategoryRequest] tagCategory
      */
-    public patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, tagCategory?: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<UpdateTagCategoryResponse> {
-        return this.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory, _options).pipe(map((apiResponse: HttpInfo<UpdateTagCategoryResponse>) => apiResponse.data));
+    public patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Observable<UpdateTagCategoryResponse> {
+        return this.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options).pipe(map((apiResponse: HttpInfo<UpdateTagCategoryResponse>) => apiResponse.data));
     }
 
     /**
@@ -10004,10 +10004,10 @@ export class ObservableTagsApi {
      * Update a Tag
      * @param tagId tag_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tag] tag
+     * @param [createUpdateTagRequest] tag
      */
-    public patchTagUsingPATCHWithHttpInfo(tagId: string, updateMask?: Array<string>, tag?: CreateUpdateTagRequest, _options?: Configuration): Observable<HttpInfo<UpdateTagResponse>> {
-        const requestContextPromise = this.requestFactory.patchTagUsingPATCH(tagId, updateMask, tag, _options);
+    public patchTagUsingPATCHWithHttpInfo(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Observable<HttpInfo<UpdateTagResponse>> {
+        const requestContextPromise = this.requestFactory.patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10030,10 +10030,10 @@ export class ObservableTagsApi {
      * Update a Tag
      * @param tagId tag_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tag] tag
+     * @param [createUpdateTagRequest] tag
      */
-    public patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, tag?: CreateUpdateTagRequest, _options?: Configuration): Observable<UpdateTagResponse> {
-        return this.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag, _options).pipe(map((apiResponse: HttpInfo<UpdateTagResponse>) => apiResponse.data));
+    public patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Observable<UpdateTagResponse> {
+        return this.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest, _options).pipe(map((apiResponse: HttpInfo<UpdateTagResponse>) => apiResponse.data));
     }
 
     /**
@@ -10092,10 +10092,10 @@ export class ObservableTaskApi {
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CreateCustomFieldResponse>> {
-        const requestContextPromise = this.requestFactory.createTaskCustomFieldUsingPOST1(customField, _options);
+    public createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<HttpInfo<CreateCustomFieldResponse>> {
+        const requestContextPromise = this.requestFactory.createTaskCustomFieldUsingPOST1(createCustomFieldRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10116,19 +10116,19 @@ export class ObservableTaskApi {
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Observable<CreateCustomFieldResponse> {
-        return this.createTaskCustomFieldUsingPOST1WithHttpInfo(customField, _options).pipe(map((apiResponse: HttpInfo<CreateCustomFieldResponse>) => apiResponse.data));
+    public createTaskCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Observable<CreateCustomFieldResponse> {
+        return this.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options).pipe(map((apiResponse: HttpInfo<CreateCustomFieldResponse>) => apiResponse.data));
     }
 
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1WithHttpInfo(task?: CreateTaskRequest, _options?: Configuration): Observable<HttpInfo<Task>> {
-        const requestContextPromise = this.requestFactory.createTaskUsingPOST1(task, _options);
+    public createTaskUsingPOST1WithHttpInfo(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Observable<HttpInfo<Task>> {
+        const requestContextPromise = this.requestFactory.createTaskUsingPOST1(createTaskRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10149,10 +10149,10 @@ export class ObservableTaskApi {
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1(task?: CreateTaskRequest, _options?: Configuration): Observable<Task> {
-        return this.createTaskUsingPOST1WithHttpInfo(task, _options).pipe(map((apiResponse: HttpInfo<Task>) => apiResponse.data));
+    public createTaskUsingPOST1(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Observable<Task> {
+        return this.createTaskUsingPOST1WithHttpInfo(createTaskRequest, _options).pipe(map((apiResponse: HttpInfo<Task>) => apiResponse.data));
     }
 
     /**
@@ -10302,10 +10302,10 @@ export class ObservableTaskApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Observable<HttpInfo<UpdateTaskResponse>> {
-        const requestContextPromise = this.requestFactory.patchTaskUsingPATCH(taskId, updateMask, task, _options);
+    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Observable<HttpInfo<UpdateTaskResponse>> {
+        const requestContextPromise = this.requestFactory.patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10328,10 +10328,10 @@ export class ObservableTaskApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Observable<UpdateTaskResponse> {
-        return this.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task, _options).pipe(map((apiResponse: HttpInfo<UpdateTaskResponse>) => apiResponse.data));
+    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Observable<UpdateTaskResponse> {
+        return this.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest, _options).pipe(map((apiResponse: HttpInfo<UpdateTaskResponse>) => apiResponse.data));
     }
 
     /**
@@ -10369,11 +10369,11 @@ export class ObservableTaskApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
-        const requestContextPromise = this.requestFactory.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
+        const requestContextPromise = this.requestFactory.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10395,11 +10395,11 @@ export class ObservableTaskApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
-        return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
+    public updateTaskCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
+        return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
     }
 
 }
@@ -10423,10 +10423,10 @@ export class ObservableUsersApi {
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1WithHttpInfo(user?: CreateUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
-        const requestContextPromise = this.requestFactory.createUserUsingPOST1(user, _options);
+    public createUserUsingPOST1WithHttpInfo(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
+        const requestContextPromise = this.requestFactory.createUserUsingPOST1(createUserRequestV2, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10447,10 +10447,10 @@ export class ObservableUsersApi {
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1(user?: CreateUserRequestV2, _options?: Configuration): Observable<User> {
-        return this.createUserUsingPOST1WithHttpInfo(user, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
+    public createUserUsingPOST1(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Observable<User> {
+        return this.createUserUsingPOST1WithHttpInfo(createUserRequestV2, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
     }
 
     /**
@@ -10590,10 +10590,10 @@ export class ObservableUsersApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
-        const requestContextPromise = this.requestFactory.patchUserUsingPATCH(userId, updateMask, user, _options);
+    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Observable<HttpInfo<User>> {
+        const requestContextPromise = this.requestFactory.patchUserUsingPATCH(userId, updateMask, patchUserRequestV2, _options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -10616,10 +10616,10 @@ export class ObservableUsersApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Observable<User> {
-        return this.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
+    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Observable<User> {
+        return this.patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2, _options).pipe(map((apiResponse: HttpInfo<User>) => apiResponse.data));
     }
 
 }

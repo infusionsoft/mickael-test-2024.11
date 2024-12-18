@@ -12,7 +12,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createcompanyusingpost1"></a>
 # **CreateCompanyUsingPOST1**
-> Company CreateCompanyUsingPOST1 (CreateCompanyRequest? company = null)
+> Company CreateCompanyUsingPOST1 (CreateCompanyRequest? createCompanyRequest = null)
 
 Create a Company
 
@@ -35,12 +35,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new CompanyApi(config);
-            var company = new CreateCompanyRequest?(); // CreateCompanyRequest? | company (optional) 
+            var createCompanyRequest = new CreateCompanyRequest?(); // CreateCompanyRequest? | company (optional) 
 
             try
             {
                 // Create a Company
-                Company result = apiInstance.CreateCompanyUsingPOST1(company);
+                Company result = apiInstance.CreateCompanyUsingPOST1(createCompanyRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Company
-    ApiResponse<Company> response = apiInstance.CreateCompanyUsingPOST1WithHttpInfo(company);
+    ApiResponse<Company> response = apiInstance.CreateCompanyUsingPOST1WithHttpInfo(createCompanyRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,7 +78,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **company** | [**CreateCompanyRequest?**](CreateCompanyRequest?.md) | company | [optional]  |
+| **createCompanyRequest** | [**CreateCompanyRequest?**](CreateCompanyRequest?.md) | company | [optional]  |
 
 ### Return type
 
@@ -393,7 +393,7 @@ No authorization required
 
 <a id="patchcompanyusingpatch"></a>
 # **PatchCompanyUsingPATCH**
-> Company PatchCompanyUsingPATCH (string companyId, List<string>? updateMask = null, PatchCompanyRequest? company = null)
+> Company PatchCompanyUsingPATCH (string companyId, List<string>? updateMask = null, PatchCompanyRequest? patchCompanyRequest = null)
 
 Update a Company
 
@@ -418,12 +418,12 @@ namespace Example
             var apiInstance = new CompanyApi(config);
             var companyId = "companyId_example";  // string | company_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var company = new PatchCompanyRequest?(); // PatchCompanyRequest? | company (optional) 
+            var patchCompanyRequest = new PatchCompanyRequest?(); // PatchCompanyRequest? | company (optional) 
 
             try
             {
                 // Update a Company
-                Company result = apiInstance.PatchCompanyUsingPATCH(companyId, updateMask, company);
+                Company result = apiInstance.PatchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -444,7 +444,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Company
-    ApiResponse<Company> response = apiInstance.PatchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company);
+    ApiResponse<Company> response = apiInstance.PatchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -463,7 +463,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **companyId** | **string** | company_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **company** | [**PatchCompanyRequest?**](PatchCompanyRequest?.md) | company | [optional]  |
+| **patchCompanyRequest** | [**PatchCompanyRequest?**](PatchCompanyRequest?.md) | company | [optional]  |
 
 ### Return type
 

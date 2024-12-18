@@ -145,7 +145,7 @@ No authorization required
 
 ## patchBusinessProfileUsingPATCH
 
-> GetBusinessProfileResponse patchBusinessProfileUsingPATCH(updateMask, businessProfile)
+> GetBusinessProfileResponse patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest)
 
 Update Business Profile
 
@@ -168,9 +168,9 @@ public class Example {
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-        PatchBusinessProfileRequest businessProfile = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
+        PatchBusinessProfileRequest patchBusinessProfileRequest = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
         try {
-            GetBusinessProfileResponse result = apiInstance.patchBusinessProfileUsingPATCH(updateMask, businessProfile);
+            GetBusinessProfileResponse result = apiInstance.patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling BusinessProfileApi#patchBusinessProfileUsingPATCH");
@@ -189,7 +189,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
-| **businessProfile** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
+| **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
 
@@ -215,7 +215,7 @@ No authorization required
 
 ## patchBusinessProfileUsingPATCHWithHttpInfo
 
-> ApiResponse<GetBusinessProfileResponse> patchBusinessProfileUsingPATCH patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile)
+> ApiResponse<GetBusinessProfileResponse> patchBusinessProfileUsingPATCH patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest)
 
 Update Business Profile
 
@@ -239,9 +239,9 @@ public class Example {
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-        PatchBusinessProfileRequest businessProfile = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
+        PatchBusinessProfileRequest patchBusinessProfileRequest = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
         try {
-            ApiResponse<GetBusinessProfileResponse> response = apiInstance.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile);
+            ApiResponse<GetBusinessProfileResponse> response = apiInstance.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -262,7 +262,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
-| **businessProfile** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
+| **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
 

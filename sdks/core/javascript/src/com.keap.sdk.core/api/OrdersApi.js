@@ -51,14 +51,14 @@ export default class OrdersApi {
     /**
      * Create an Order's Custom Field
      * Adds a custom field of the specified type and options to the Order object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createOrderCustomFieldUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createOrderCustomFieldUsingPOST");
+    createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createOrderCustomFieldUsingPOST");
       }
 
       let pathParams = {
@@ -84,11 +84,11 @@ export default class OrdersApi {
     /**
      * Create an Order's Custom Field
      * Adds a custom field of the specified type and options to the Order object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createOrderCustomFieldUsingPOST(customField) {
-      return this.createOrderCustomFieldUsingPOSTWithHttpInfo(customField)
+    createOrderCustomFieldUsingPOST(createCustomFieldRequest) {
+      return this.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -152,14 +152,14 @@ export default class OrdersApi {
     /**
      * Create an Order
      * Create a one time Order with Order items.
-     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} createOrderRequest createOrderRequest
+     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} restCreateOrderRequest createOrderRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
-    createOrderUsingPOST1WithHttpInfo(createOrderRequest) {
-      let postBody = createOrderRequest;
-      // verify the required parameter 'createOrderRequest' is set
-      if (createOrderRequest === undefined || createOrderRequest === null) {
-        throw new Error("Missing the required parameter 'createOrderRequest' when calling createOrderUsingPOST1");
+    createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest) {
+      let postBody = restCreateOrderRequest;
+      // verify the required parameter 'restCreateOrderRequest' is set
+      if (restCreateOrderRequest === undefined || restCreateOrderRequest === null) {
+        throw new Error("Missing the required parameter 'restCreateOrderRequest' when calling createOrderUsingPOST1");
       }
 
       let pathParams = {
@@ -185,11 +185,11 @@ export default class OrdersApi {
     /**
      * Create an Order
      * Create a one time Order with Order items.
-     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} createOrderRequest createOrderRequest
+     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} restCreateOrderRequest createOrderRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
-    createOrderUsingPOST1(createOrderRequest) {
-      return this.createOrderUsingPOST1WithHttpInfo(createOrderRequest)
+    createOrderUsingPOST1(restCreateOrderRequest) {
+      return this.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -519,12 +519,12 @@ export default class OrdersApi {
      * @param {String} orderId order_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} [order] order
+     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} [restV2PatchOrderRequest] order
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
     patchOrderUsingPATCHWithHttpInfo(orderId, opts) {
       opts = opts || {};
-      let postBody = opts['order'];
+      let postBody = opts['restV2PatchOrderRequest'];
       // verify the required parameter 'orderId' is set
       if (orderId === undefined || orderId === null) {
         throw new Error("Missing the required parameter 'orderId' when calling patchOrderUsingPATCH");
@@ -558,7 +558,7 @@ export default class OrdersApi {
      * @param {String} orderId order_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} opts.order order
+     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} opts.restV2PatchOrderRequest order
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
     patchOrderUsingPATCH(orderId, opts) {
@@ -614,21 +614,21 @@ export default class OrdersApi {
      * Update an Order's Custom Field
      * Updates a custom field of the specified type and options to the Order object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateOrderCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOrderCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateOrderCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -657,13 +657,13 @@ export default class OrdersApi {
      * Update an Order's Custom Field
      * Updates a custom field of the specified type and options to the Order object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateOrderCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -179,7 +179,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_commission_program_using_post**
-> AffiliateCommissionProgramResponse add_commission_program_using_post(insert_commission_program=insert_commission_program)
+> AffiliateCommissionProgramResponse add_commission_program_using_post(create_commission_program_request=create_commission_program_request)
 
 Create an Affiliate Commission Program
 
@@ -205,11 +205,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    insert_commission_program = keap_sdk_core_client.CreateCommissionProgramRequest() # CreateCommissionProgramRequest | Commission Program to insert (optional)
+    create_commission_program_request = keap_sdk_core_client.CreateCommissionProgramRequest() # CreateCommissionProgramRequest | Commission Program to insert (optional)
 
     try:
         # Create an Affiliate Commission Program
-        api_response = api_instance.add_commission_program_using_post(insert_commission_program=insert_commission_program)
+        api_response = api_instance.add_commission_program_using_post(create_commission_program_request=create_commission_program_request)
         print("The response of PreReleaseApi->add_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -222,7 +222,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insert_commission_program** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
+ **create_commission_program_request** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
 
 ### Return type
 
@@ -248,7 +248,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assign_product_commission_program_using_post**
-> ProductCommissionProgram assign_product_commission_program_using_post(commission_program_id, product_commission_program=product_commission_program)
+> ProductCommissionProgram assign_product_commission_program_using_post(commission_program_id, create_product_commission_program_request=create_product_commission_program_request)
 
 Assign a Product Commission Program
 
@@ -275,11 +275,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     commission_program_id = 'commission_program_id_example' # str | commission_program_id
-    product_commission_program = keap_sdk_core_client.CreateProductCommissionProgramRequest() # CreateProductCommissionProgramRequest | Product Commission Program (optional)
+    create_product_commission_program_request = keap_sdk_core_client.CreateProductCommissionProgramRequest() # CreateProductCommissionProgramRequest | Product Commission Program (optional)
 
     try:
         # Assign a Product Commission Program
-        api_response = api_instance.assign_product_commission_program_using_post(commission_program_id, product_commission_program=product_commission_program)
+        api_response = api_instance.assign_product_commission_program_using_post(commission_program_id, create_product_commission_program_request=create_product_commission_program_request)
         print("The response of PreReleaseApi->assign_product_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -293,7 +293,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commission_program_id** | **str**| commission_program_id | 
- **product_commission_program** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
+ **create_product_commission_program_request** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
 
 ### Return type
 
@@ -319,7 +319,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assign_subscription_commission_program_using_post**
-> SubscriptionCommissionProgram assign_subscription_commission_program_using_post(commission_program_id, subscription_commission_program=subscription_commission_program)
+> SubscriptionCommissionProgram assign_subscription_commission_program_using_post(commission_program_id, create_subscription_commission_program_request=create_subscription_commission_program_request)
 
 Assign a Subscription Commission Program
 
@@ -346,11 +346,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     commission_program_id = 'commission_program_id_example' # str | commission_program_id
-    subscription_commission_program = keap_sdk_core_client.CreateSubscriptionCommissionProgramRequest() # CreateSubscriptionCommissionProgramRequest | Subscription Commission Program (optional)
+    create_subscription_commission_program_request = keap_sdk_core_client.CreateSubscriptionCommissionProgramRequest() # CreateSubscriptionCommissionProgramRequest | Subscription Commission Program (optional)
 
     try:
         # Assign a Subscription Commission Program
-        api_response = api_instance.assign_subscription_commission_program_using_post(commission_program_id, subscription_commission_program=subscription_commission_program)
+        api_response = api_instance.assign_subscription_commission_program_using_post(commission_program_id, create_subscription_commission_program_request=create_subscription_commission_program_request)
         print("The response of PreReleaseApi->assign_subscription_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -364,7 +364,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commission_program_id** | **str**| commission_program_id | 
- **subscription_commission_program** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
+ **create_subscription_commission_program_request** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
 
 ### Return type
 
@@ -458,7 +458,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_affiliate_custom_field_using_post**
-> CustomFieldMetaData create_affiliate_custom_field_using_post(custom_field)
+> CustomFieldMetaData create_affiliate_custom_field_using_post(create_custom_field_request)
 
 Create an Affiliate Custom Field
 
@@ -484,11 +484,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create an Affiliate Custom Field
-        api_response = api_instance.create_affiliate_custom_field_using_post(custom_field)
+        api_response = api_instance.create_affiliate_custom_field_using_post(create_custom_field_request)
         print("The response of PreReleaseApi->create_affiliate_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -501,7 +501,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -598,7 +598,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_discount_using_post**
-> CategoryDiscount create_discount_using_post(request)
+> CategoryDiscount create_discount_using_post(create_update_discount_request)
 
 Create a Category Discount
 
@@ -624,11 +624,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    request = keap_sdk_core_client.CreateUpdateDiscountRequest() # CreateUpdateDiscountRequest | request
+    create_update_discount_request = keap_sdk_core_client.CreateUpdateDiscountRequest() # CreateUpdateDiscountRequest | request
 
     try:
         # Create a Category Discount
-        api_response = api_instance.create_discount_using_post(request)
+        api_response = api_instance.create_discount_using_post(create_update_discount_request)
         print("The response of PreReleaseApi->create_discount_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -641,7 +641,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **create_update_discount_request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -667,7 +667,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_discount_using_post1**
-> ShippingDiscount create_discount_using_post1(request)
+> ShippingDiscount create_discount_using_post1(create_shipping_discount_request)
 
 Create a Shipping Discount
 
@@ -693,11 +693,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    request = keap_sdk_core_client.CreateShippingDiscountRequest() # CreateShippingDiscountRequest | request
+    create_shipping_discount_request = keap_sdk_core_client.CreateShippingDiscountRequest() # CreateShippingDiscountRequest | request
 
     try:
         # Create a Shipping Discount
-        api_response = api_instance.create_discount_using_post1(request)
+        api_response = api_instance.create_discount_using_post1(create_shipping_discount_request)
         print("The response of PreReleaseApi->create_discount_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -710,7 +710,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
+ **create_shipping_discount_request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -869,7 +869,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_lead_source_using_post**
-> LeadSource create_lead_source_using_post(leadsource=leadsource)
+> LeadSource create_lead_source_using_post(create_lead_source_request=create_lead_source_request)
 
 Create a Lead Source
 
@@ -895,11 +895,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    leadsource = keap_sdk_core_client.CreateLeadSourceRequest() # CreateLeadSourceRequest | leadsource (optional)
+    create_lead_source_request = keap_sdk_core_client.CreateLeadSourceRequest() # CreateLeadSourceRequest | leadsource (optional)
 
     try:
         # Create a Lead Source
-        api_response = api_instance.create_lead_source_using_post(leadsource=leadsource)
+        api_response = api_instance.create_lead_source_using_post(create_lead_source_request=create_lead_source_request)
         print("The response of PreReleaseApi->create_lead_source_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -912,7 +912,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
+ **create_lead_source_request** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
 
 ### Return type
 
@@ -938,7 +938,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_note_custom_field_using_post1**
-> CustomFieldMetaData create_note_custom_field_using_post1(custom_field)
+> CustomFieldMetaData create_note_custom_field_using_post1(create_custom_field_request)
 
 Create a Custom Field
 
@@ -964,11 +964,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create a Custom Field
-        api_response = api_instance.create_note_custom_field_using_post1(custom_field)
+        api_response = api_instance.create_note_custom_field_using_post1(create_custom_field_request)
         print("The response of PreReleaseApi->create_note_custom_field_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -981,7 +981,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1007,7 +1007,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_opportunity_custom_fields_using_post**
-> CustomFieldMetaData create_opportunity_custom_fields_using_post(custom_field)
+> CustomFieldMetaData create_opportunity_custom_fields_using_post(create_custom_field_request)
 
 Create an Opportunity Custom Field
 
@@ -1033,11 +1033,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create an Opportunity Custom Field
-        api_response = api_instance.create_opportunity_custom_fields_using_post(custom_field)
+        api_response = api_instance.create_opportunity_custom_fields_using_post(create_custom_field_request)
         print("The response of PreReleaseApi->create_opportunity_custom_fields_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1050,7 +1050,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1076,7 +1076,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_opportunity_stage_using_post**
-> RestOpportunityStage create_opportunity_stage_using_post(opportunity_stage=opportunity_stage)
+> RestOpportunityStage create_opportunity_stage_using_post(create_opportunity_stage_request=create_opportunity_stage_request)
 
 Create an Opportunity Stage
 
@@ -1102,11 +1102,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    opportunity_stage = keap_sdk_core_client.CreateOpportunityStageRequest() # CreateOpportunityStageRequest | opportunity (optional)
+    create_opportunity_stage_request = keap_sdk_core_client.CreateOpportunityStageRequest() # CreateOpportunityStageRequest | opportunity (optional)
 
     try:
         # Create an Opportunity Stage
-        api_response = api_instance.create_opportunity_stage_using_post(opportunity_stage=opportunity_stage)
+        api_response = api_instance.create_opportunity_stage_using_post(create_opportunity_stage_request=create_opportunity_stage_request)
         print("The response of PreReleaseApi->create_opportunity_stage_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1119,7 +1119,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity_stage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
+ **create_opportunity_stage_request** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -1145,7 +1145,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_opportunity_using_post1**
-> RestV2Opportunity create_opportunity_using_post1(opportunity=opportunity)
+> RestV2Opportunity create_opportunity_using_post1(create_opportunity_request=create_opportunity_request)
 
 Create an Opportunity
 
@@ -1171,11 +1171,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    opportunity = keap_sdk_core_client.CreateOpportunityRequest() # CreateOpportunityRequest | opportunity (optional)
+    create_opportunity_request = keap_sdk_core_client.CreateOpportunityRequest() # CreateOpportunityRequest | opportunity (optional)
 
     try:
         # Create an Opportunity
-        api_response = api_instance.create_opportunity_using_post1(opportunity=opportunity)
+        api_response = api_instance.create_opportunity_using_post1(create_opportunity_request=create_opportunity_request)
         print("The response of PreReleaseApi->create_opportunity_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -1188,7 +1188,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
+ **create_opportunity_request** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -1214,7 +1214,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_order_custom_field_using_post**
-> CustomFieldMetaData create_order_custom_field_using_post(custom_field)
+> CustomFieldMetaData create_order_custom_field_using_post(create_custom_field_request)
 
 Create an Order's Custom Field
 
@@ -1240,11 +1240,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create an Order's Custom Field
-        api_response = api_instance.create_order_custom_field_using_post(custom_field)
+        api_response = api_instance.create_order_custom_field_using_post(create_custom_field_request)
         print("The response of PreReleaseApi->create_order_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1257,7 +1257,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1354,7 +1354,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_order_total_discount_using_post**
-> OrderTotalDiscount create_order_total_discount_using_post(request)
+> OrderTotalDiscount create_order_total_discount_using_post(create_order_total_discount_request)
 
 Create an Order Total Discount
 
@@ -1380,11 +1380,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    request = keap_sdk_core_client.CreateOrderTotalDiscountRequest() # CreateOrderTotalDiscountRequest | request
+    create_order_total_discount_request = keap_sdk_core_client.CreateOrderTotalDiscountRequest() # CreateOrderTotalDiscountRequest | request
 
     try:
         # Create an Order Total Discount
-        api_response = api_instance.create_order_total_discount_using_post(request)
+        api_response = api_instance.create_order_total_discount_using_post(create_order_total_discount_request)
         print("The response of PreReleaseApi->create_order_total_discount_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1397,7 +1397,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
+ **create_order_total_discount_request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -1423,7 +1423,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_order_using_post1**
-> RestV2Order create_order_using_post1(create_order_request)
+> RestV2Order create_order_using_post1(rest_create_order_request)
 
 Create an Order
 
@@ -1449,11 +1449,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    create_order_request = keap_sdk_core_client.RestCreateOrderRequest() # RestCreateOrderRequest | createOrderRequest
+    rest_create_order_request = keap_sdk_core_client.RestCreateOrderRequest() # RestCreateOrderRequest | createOrderRequest
 
     try:
         # Create an Order
-        api_response = api_instance.create_order_using_post1(create_order_request)
+        api_response = api_instance.create_order_using_post1(rest_create_order_request)
         print("The response of PreReleaseApi->create_order_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -1466,7 +1466,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_order_request** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | 
+ **rest_create_order_request** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | 
 
 ### Return type
 
@@ -1561,7 +1561,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_redirect_link_using_post**
-> AffiliateLink create_redirect_link_using_post(request)
+> AffiliateLink create_redirect_link_using_post(create_or_patch_affiliate_link_request)
 
 Create an Affiliate Link
 
@@ -1587,11 +1587,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
+    create_or_patch_affiliate_link_request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
 
     try:
         # Create an Affiliate Link
-        api_response = api_instance.create_redirect_link_using_post(request)
+        api_response = api_instance.create_redirect_link_using_post(create_or_patch_affiliate_link_request)
         print("The response of PreReleaseApi->create_redirect_link_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1604,7 +1604,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **create_or_patch_affiliate_link_request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 
@@ -1630,7 +1630,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_referral_using_post**
-> Referral create_referral_using_post(request)
+> Referral create_referral_using_post(create_referral_request)
 
 Create a Referral
 
@@ -1656,11 +1656,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    request = keap_sdk_core_client.CreateReferralRequest() # CreateReferralRequest | request
+    create_referral_request = keap_sdk_core_client.CreateReferralRequest() # CreateReferralRequest | request
 
     try:
         # Create a Referral
-        api_response = api_instance.create_referral_using_post(request)
+        api_response = api_instance.create_referral_using_post(create_referral_request)
         print("The response of PreReleaseApi->create_referral_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1673,7 +1673,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
+ **create_referral_request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
 
 ### Return type
 
@@ -1699,7 +1699,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_subscription_custom_field_using_post**
-> CustomFieldMetaData create_subscription_custom_field_using_post(custom_field)
+> CustomFieldMetaData create_subscription_custom_field_using_post(create_custom_field_request)
 
 Create a Subscription's Custom Field
 
@@ -1725,11 +1725,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create a Subscription's Custom Field
-        api_response = api_instance.create_subscription_custom_field_using_post(custom_field)
+        api_response = api_instance.create_subscription_custom_field_using_post(create_custom_field_request)
         print("The response of PreReleaseApi->create_subscription_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1742,7 +1742,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1768,7 +1768,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_task_custom_field_using_post1**
-> CreateCustomFieldResponse create_task_custom_field_using_post1(custom_field)
+> CreateCustomFieldResponse create_task_custom_field_using_post1(create_custom_field_request)
 
 Create a Custom Field
 
@@ -1794,11 +1794,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create a Custom Field
-        api_response = api_instance.create_task_custom_field_using_post1(custom_field)
+        api_response = api_instance.create_task_custom_field_using_post1(create_custom_field_request)
         print("The response of PreReleaseApi->create_task_custom_field_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -1811,7 +1811,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1837,7 +1837,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_task_using_post1**
-> Task create_task_using_post1(task=task)
+> Task create_task_using_post1(create_task_request=create_task_request)
 
 Create a Task
 
@@ -1863,11 +1863,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    task = keap_sdk_core_client.CreateTaskRequest() # CreateTaskRequest | task (optional)
+    create_task_request = keap_sdk_core_client.CreateTaskRequest() # CreateTaskRequest | task (optional)
 
     try:
         # Create a Task
-        api_response = api_instance.create_task_using_post1(task=task)
+        api_response = api_instance.create_task_using_post1(create_task_request=create_task_request)
         print("The response of PreReleaseApi->create_task_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -1880,7 +1880,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
+ **create_task_request** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -1906,7 +1906,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_user_using_post1**
-> User create_user_using_post1(user=user)
+> User create_user_using_post1(create_user_request_v2=create_user_request_v2)
 
 Create a User
 
@@ -1932,11 +1932,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
-    user = keap_sdk_core_client.CreateUserRequestV2() # CreateUserRequestV2 | user (optional)
+    create_user_request_v2 = keap_sdk_core_client.CreateUserRequestV2() # CreateUserRequestV2 | user (optional)
 
     try:
         # Create a User
-        api_response = api_instance.create_user_using_post1(user=user)
+        api_response = api_instance.create_user_using_post1(create_user_request_v2=create_user_request_v2)
         print("The response of PreReleaseApi->create_user_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -1949,7 +1949,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
+ **create_user_request_v2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
 
 ### Return type
 
@@ -5762,7 +5762,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_order_using_patch**
-> RestV2Order patch_order_using_patch(order_id, update_mask=update_mask, order=order)
+> RestV2Order patch_order_using_patch(order_id, update_mask=update_mask, rest_v2_patch_order_request=rest_v2_patch_order_request)
 
 Update an Order
 
@@ -5790,11 +5790,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     order_id = 'order_id_example' # str | order_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    order = keap_sdk_core_client.RestV2PatchOrderRequest() # RestV2PatchOrderRequest | order (optional)
+    rest_v2_patch_order_request = keap_sdk_core_client.RestV2PatchOrderRequest() # RestV2PatchOrderRequest | order (optional)
 
     try:
         # Update an Order
-        api_response = api_instance.patch_order_using_patch(order_id, update_mask=update_mask, order=order)
+        api_response = api_instance.patch_order_using_patch(order_id, update_mask=update_mask, rest_v2_patch_order_request=rest_v2_patch_order_request)
         print("The response of PreReleaseApi->patch_order_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -5809,7 +5809,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **str**| order_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
+ **rest_v2_patch_order_request** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
 
 ### Return type
 
@@ -5984,7 +5984,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_task_using_patch**
-> UpdateTaskResponse patch_task_using_patch(task_id, update_mask=update_mask, task=task)
+> UpdateTaskResponse patch_task_using_patch(task_id, update_mask=update_mask, create_patch_task_request=create_patch_task_request)
 
 Update a Task
 
@@ -6012,11 +6012,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     task_id = 'task_id_example' # str | task_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    task = keap_sdk_core_client.CreatePatchTaskRequest() # CreatePatchTaskRequest | task (optional)
+    create_patch_task_request = keap_sdk_core_client.CreatePatchTaskRequest() # CreatePatchTaskRequest | task (optional)
 
     try:
         # Update a Task
-        api_response = api_instance.patch_task_using_patch(task_id, update_mask=update_mask, task=task)
+        api_response = api_instance.patch_task_using_patch(task_id, update_mask=update_mask, create_patch_task_request=create_patch_task_request)
         print("The response of PreReleaseApi->patch_task_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6031,7 +6031,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **str**| task_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
+ **create_patch_task_request** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -6058,7 +6058,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_user_using_patch**
-> User patch_user_using_patch(user_id, update_mask=update_mask, user=user)
+> User patch_user_using_patch(user_id, update_mask=update_mask, patch_user_request_v2=patch_user_request_v2)
 
 Update User
 
@@ -6086,11 +6086,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     user_id = 'user_id_example' # str | user_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    user = keap_sdk_core_client.PatchUserRequestV2() # PatchUserRequestV2 | user (optional)
+    patch_user_request_v2 = keap_sdk_core_client.PatchUserRequestV2() # PatchUserRequestV2 | user (optional)
 
     try:
         # Update User
-        api_response = api_instance.patch_user_using_patch(user_id, update_mask=update_mask, user=user)
+        api_response = api_instance.patch_user_using_patch(user_id, update_mask=update_mask, patch_user_request_v2=patch_user_request_v2)
         print("The response of PreReleaseApi->patch_user_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6105,7 +6105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| user_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
+ **patch_user_request_v2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type
 
@@ -6132,7 +6132,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_affiliate_from_program_using_post**
-> remove_affiliate_from_program_using_post(id, remove_from_program_request)
+> remove_affiliate_from_program_using_post(id, affiliate_remove_from_program_request)
 
 Remove an Affiliate from a Commission Program
 
@@ -6158,11 +6158,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     id = 'id_example' # str | id
-    remove_from_program_request = keap_sdk_core_client.AffiliateRemoveFromProgramRequest() # AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+    affiliate_remove_from_program_request = keap_sdk_core_client.AffiliateRemoveFromProgramRequest() # AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 
     try:
         # Remove an Affiliate from a Commission Program
-        api_instance.remove_affiliate_from_program_using_post(id, remove_from_program_request)
+        api_instance.remove_affiliate_from_program_using_post(id, affiliate_remove_from_program_request)
     except Exception as e:
         print("Exception when calling PreReleaseApi->remove_affiliate_from_program_using_post: %s\n" % e)
 ```
@@ -6174,7 +6174,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| id | 
- **remove_from_program_request** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
+ **affiliate_remove_from_program_request** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
 
 ### Return type
 
@@ -6528,7 +6528,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_affiliate_custom_field_using_patch**
-> CustomFieldMetaData update_affiliate_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_affiliate_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Custom Field
 
@@ -6555,12 +6555,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
-        api_response = api_instance.update_affiliate_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_affiliate_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_affiliate_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6574,7 +6574,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -6602,7 +6602,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_discount_using_patch**
-> CategoryDiscount update_discount_using_patch(discount_id, request, update_mask=update_mask)
+> CategoryDiscount update_discount_using_patch(discount_id, create_update_discount_request, update_mask=update_mask)
 
 Update a Category Discount
 
@@ -6629,12 +6629,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     discount_id = 'discount_id_example' # str | discount_id
-    request = keap_sdk_core_client.CreateUpdateDiscountRequest() # CreateUpdateDiscountRequest | request
+    create_update_discount_request = keap_sdk_core_client.CreateUpdateDiscountRequest() # CreateUpdateDiscountRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Category Discount
-        api_response = api_instance.update_discount_using_patch(discount_id, request, update_mask=update_mask)
+        api_response = api_instance.update_discount_using_patch(discount_id, create_update_discount_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_discount_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6648,7 +6648,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discount_id** | **str**| discount_id | 
- **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **create_update_discount_request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -6676,7 +6676,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_discount_using_patch1**
-> ShippingDiscount update_discount_using_patch1(discount_id, request, update_mask=update_mask)
+> ShippingDiscount update_discount_using_patch1(discount_id, update_shipping_discount_request, update_mask=update_mask)
 
 Update a Shipping Discount
 
@@ -6703,12 +6703,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     discount_id = 'discount_id_example' # str | discount_id
-    request = keap_sdk_core_client.UpdateShippingDiscountRequest() # UpdateShippingDiscountRequest | request
+    update_shipping_discount_request = keap_sdk_core_client.UpdateShippingDiscountRequest() # UpdateShippingDiscountRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Shipping Discount
-        api_response = api_instance.update_discount_using_patch1(discount_id, request, update_mask=update_mask)
+        api_response = api_instance.update_discount_using_patch1(discount_id, update_shipping_discount_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_discount_using_patch1:\n")
         pprint(api_response)
     except Exception as e:
@@ -6722,7 +6722,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discount_id** | **str**| discount_id | 
- **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
+ **update_shipping_discount_request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -6750,7 +6750,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_notes_custom_field_using_patch**
-> CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Custom Field
 
@@ -6777,12 +6777,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
-        api_response = api_instance.update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_notes_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_notes_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6796,7 +6796,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -6824,7 +6824,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_opportunity_custom_field_using_patch**
-> CustomFieldMetaData update_opportunity_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_opportunity_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Opportunity's Custom Field
 
@@ -6851,12 +6851,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Opportunity's Custom Field
-        api_response = api_instance.update_opportunity_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_opportunity_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_opportunity_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6870,7 +6870,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -6898,7 +6898,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_opportunity_stage_using_patch**
-> RestOpportunityStage update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+> RestOpportunityStage update_opportunity_stage_using_patch(stage_id, update_opportunity_stage_request, update_mask=update_mask)
 
 Update an Opportunity Stage
 
@@ -6925,12 +6925,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     stage_id = 'stage_id_example' # str | stage_id
-    request = keap_sdk_core_client.UpdateOpportunityStageRequest() # UpdateOpportunityStageRequest | request
+    update_opportunity_stage_request = keap_sdk_core_client.UpdateOpportunityStageRequest() # UpdateOpportunityStageRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an Opportunity Stage
-        api_response = api_instance.update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+        api_response = api_instance.update_opportunity_stage_using_patch(stage_id, update_opportunity_stage_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_opportunity_stage_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -6944,7 +6944,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stage_id** | **str**| stage_id | 
- **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **update_opportunity_stage_request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -6972,7 +6972,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_opportunity_using_patch**
-> RestV2Opportunity update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
+> RestV2Opportunity update_opportunity_using_patch(opportunity_id, patch_opportunity_request, update_mask=update_mask)
 
 Update an opportunity
 
@@ -6999,12 +6999,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     opportunity_id = 'opportunity_id_example' # str | opportunity_id
-    request = keap_sdk_core_client.PatchOpportunityRequest() # PatchOpportunityRequest | request
+    patch_opportunity_request = keap_sdk_core_client.PatchOpportunityRequest() # PatchOpportunityRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an opportunity
-        api_response = api_instance.update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
+        api_response = api_instance.update_opportunity_using_patch(opportunity_id, patch_opportunity_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_opportunity_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -7018,7 +7018,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **opportunity_id** | **str**| opportunity_id | 
- **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
+ **patch_opportunity_request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -7046,7 +7046,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_order_custom_field_using_patch**
-> CustomFieldMetaData update_order_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_order_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update an Order's Custom Field
 
@@ -7073,12 +7073,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an Order's Custom Field
-        api_response = api_instance.update_order_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_order_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_order_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -7092,7 +7092,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -7120,7 +7120,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_order_total_discount_using_patch**
-> OrderTotalDiscount update_order_total_discount_using_patch(discount_id, request, update_mask=update_mask)
+> OrderTotalDiscount update_order_total_discount_using_patch(discount_id, update_order_total_discount_request, update_mask=update_mask)
 
 Update an Order Total Discount
 
@@ -7147,12 +7147,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     discount_id = 'discount_id_example' # str | discount_id
-    request = keap_sdk_core_client.UpdateOrderTotalDiscountRequest() # UpdateOrderTotalDiscountRequest | request
+    update_order_total_discount_request = keap_sdk_core_client.UpdateOrderTotalDiscountRequest() # UpdateOrderTotalDiscountRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an Order Total Discount
-        api_response = api_instance.update_order_total_discount_using_patch(discount_id, request, update_mask=update_mask)
+        api_response = api_instance.update_order_total_discount_using_patch(discount_id, update_order_total_discount_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_order_total_discount_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -7166,7 +7166,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discount_id** | **str**| discount_id | 
- **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
+ **update_order_total_discount_request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -7194,7 +7194,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_redirect_link_using_patch**
-> AffiliateLink update_redirect_link_using_patch(redirect_id, request)
+> AffiliateLink update_redirect_link_using_patch(redirect_id, create_or_patch_affiliate_link_request)
 
 Update an Affiliate Link
 
@@ -7221,11 +7221,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     redirect_id = 'redirect_id_example' # str | redirect_id
-    request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
+    create_or_patch_affiliate_link_request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
 
     try:
         # Update an Affiliate Link
-        api_response = api_instance.update_redirect_link_using_patch(redirect_id, request)
+        api_response = api_instance.update_redirect_link_using_patch(redirect_id, create_or_patch_affiliate_link_request)
         print("The response of PreReleaseApi->update_redirect_link_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -7239,7 +7239,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **redirect_id** | **str**| redirect_id | 
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **create_or_patch_affiliate_link_request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 
@@ -7266,7 +7266,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_subscription_custom_field_using_patch**
-> CustomFieldMetaData update_subscription_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_subscription_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Subscription's Custom Field
 
@@ -7293,12 +7293,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Subscription's Custom Field
-        api_response = api_instance.update_subscription_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_subscription_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_subscription_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -7312,7 +7312,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -7340,7 +7340,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_task_custom_field_using_patch**
-> CustomFieldMetaData update_task_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_task_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Task's Custom Field
 
@@ -7367,12 +7367,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Task's Custom Field
-        api_response = api_instance.update_task_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_task_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of PreReleaseApi->update_task_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -7386,7 +7386,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

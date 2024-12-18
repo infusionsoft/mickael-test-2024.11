@@ -98,24 +98,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Lead Source
    * Creates a new Lead Source
-   * @param leadsource leadsource (optional)
+   * @param createLeadSourceRequest leadsource (optional)
    * @return LeadSource
    * @throws ApiException if fails to make API call
    */
-  public LeadSource createLeadSourceUsingPOST(CreateLeadSourceRequest leadsource) throws ApiException {
-    ApiResponse<LeadSource> localVarResponse = createLeadSourceUsingPOSTWithHttpInfo(leadsource);
+  public LeadSource createLeadSourceUsingPOST(CreateLeadSourceRequest createLeadSourceRequest) throws ApiException {
+    ApiResponse<LeadSource> localVarResponse = createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Lead Source
    * Creates a new Lead Source
-   * @param leadsource leadsource (optional)
+   * @param createLeadSourceRequest leadsource (optional)
    * @return ApiResponse&lt;LeadSource&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<LeadSource> createLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest leadsource) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createLeadSourceUsingPOSTRequestBuilder(leadsource);
+  public ApiResponse<LeadSource> createLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest createLeadSourceRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createLeadSourceUsingPOSTRequestBuilder(createLeadSourceRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -155,7 +155,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createLeadSourceUsingPOSTRequestBuilder(CreateLeadSourceRequest leadsource) throws ApiException {
+  private HttpRequest.Builder createLeadSourceUsingPOSTRequestBuilder(CreateLeadSourceRequest createLeadSourceRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -168,7 +168,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(leadsource);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createLeadSourceRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

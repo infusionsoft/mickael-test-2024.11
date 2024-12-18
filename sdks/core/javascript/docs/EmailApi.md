@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createEmailUsingPOST1
 
-> EmailSentWithContent createEmailUsingPOST1(emailWithContent)
+> EmailSentWithContent createEmailUsingPOST1(createEmailSentRequest)
 
 Create an Email Record
 
@@ -27,8 +27,8 @@ Creates a Record of an Email sent to a Contact
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.EmailApi();
-let emailWithContent = new KeapCoreServiceCoreSdk.CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
-apiInstance.createEmailUsingPOST1(emailWithContent).then((data) => {
+let createEmailSentRequest = new KeapCoreServiceCoreSdk.CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
+apiInstance.createEmailUsingPOST1(createEmailSentRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -41,7 +41,7 @@ apiInstance.createEmailUsingPOST1(emailWithContent).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailWithContent** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | 
+ **createEmailSentRequest** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | 
 
 ### Return type
 

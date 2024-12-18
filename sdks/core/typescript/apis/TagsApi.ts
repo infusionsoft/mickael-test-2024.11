@@ -79,14 +79,14 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Tag Category.
      * Create Tag Category
-     * @param request request
+     * @param createUpdateTagCategoryRequest request
      */
-    public async createTagCategoryUsingPOST1(request: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createTagCategoryUsingPOST1(createUpdateTagCategoryRequest: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("TagsApi", "createTagCategoryUsingPOST1", "request");
+        // verify required parameter 'createUpdateTagCategoryRequest' is not null or undefined
+        if (createUpdateTagCategoryRequest === null || createUpdateTagCategoryRequest === undefined) {
+            throw new RequiredError("TagsApi", "createTagCategoryUsingPOST1", "createUpdateTagCategoryRequest");
         }
 
 
@@ -104,7 +104,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateUpdateTagCategoryRequest", ""),
+            ObjectSerializer.serialize(createUpdateTagCategoryRequest, "CreateUpdateTagCategoryRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -121,14 +121,14 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Tag
      * Create Tag
-     * @param tag tag
+     * @param createUpdateTagRequest tag
      */
-    public async createTagUsingPOST1(tag: CreateUpdateTagRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createTagUsingPOST1(createUpdateTagRequest: CreateUpdateTagRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'tag' is not null or undefined
-        if (tag === null || tag === undefined) {
-            throw new RequiredError("TagsApi", "createTagUsingPOST1", "tag");
+        // verify required parameter 'createUpdateTagRequest' is not null or undefined
+        if (createUpdateTagRequest === null || createUpdateTagRequest === undefined) {
+            throw new RequiredError("TagsApi", "createTagUsingPOST1", "createUpdateTagRequest");
         }
 
 
@@ -146,7 +146,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(tag, "CreateUpdateTagRequest", ""),
+            ObjectSerializer.serialize(createUpdateTagRequest, "CreateUpdateTagRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -517,9 +517,9 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Tag Category
      * @param tagCategoryId tag_category_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param tagCategory tagCategory
+     * @param createUpdateTagCategoryRequest tagCategory
      */
-    public async patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, tagCategory?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'tagCategoryId' is not null or undefined
@@ -553,7 +553,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(tagCategory, "CreateUpdateTagCategoryRequest", ""),
+            ObjectSerializer.serialize(createUpdateTagCategoryRequest, "CreateUpdateTagCategoryRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -572,9 +572,9 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Tag
      * @param tagId tag_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param tag tag
+     * @param createUpdateTagRequest tag
      */
-    public async patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, tag?: CreateUpdateTagRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'tagId' is not null or undefined
@@ -608,7 +608,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(tag, "CreateUpdateTagRequest", ""),
+            ObjectSerializer.serialize(createUpdateTagRequest, "CreateUpdateTagRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

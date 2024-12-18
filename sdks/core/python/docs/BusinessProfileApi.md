@@ -74,7 +74,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_business_profile_using_patch**
-> GetBusinessProfileResponse patch_business_profile_using_patch(update_mask=update_mask, business_profile=business_profile)
+> GetBusinessProfileResponse patch_business_profile_using_patch(update_mask=update_mask, patch_business_profile_request=patch_business_profile_request)
 
 Update Business Profile
 
@@ -101,11 +101,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.BusinessProfileApi(api_client)
     update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-    business_profile = keap_sdk_core_client.PatchBusinessProfileRequest() # PatchBusinessProfileRequest | businessProfile (optional)
+    patch_business_profile_request = keap_sdk_core_client.PatchBusinessProfileRequest() # PatchBusinessProfileRequest | businessProfile (optional)
 
     try:
         # Update Business Profile
-        api_response = api_instance.patch_business_profile_using_patch(update_mask=update_mask, business_profile=business_profile)
+        api_response = api_instance.patch_business_profile_using_patch(update_mask=update_mask, patch_business_profile_request=patch_business_profile_request)
         print("The response of BusinessProfileApi->patch_business_profile_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -119,7 +119,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
- **business_profile** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] 
+ **patch_business_profile_request** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] 
 
 ### Return type
 

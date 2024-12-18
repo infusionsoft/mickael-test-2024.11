@@ -10,7 +10,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createPaymentMethodConfigUsingPOST()`
 
 ```php
-createPaymentMethodConfigUsingPOST($request): \Com\Keap\Sdk\Core\Model\PaymentMethodConfig
+createPaymentMethodConfigUsingPOST($create_payment_method_config_request): \Com\Keap\Sdk\Core\Model\PaymentMethodConfig
 ```
 
 Create Payment Method Configuration
@@ -29,10 +29,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PaymentMethodConfigApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest(); // \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest | request
+$create_payment_method_config_request = new \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest(); // \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest | request
 
 try {
-    $result = $apiInstance->createPaymentMethodConfigUsingPOST($request);
+    $result = $apiInstance->createPaymentMethodConfigUsingPOST($create_payment_method_config_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentMethodConfigApi->createPaymentMethodConfigUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -43,7 +43,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest**](../Model/CreatePaymentMethodConfigRequest.md)| request | |
+| **create_payment_method_config_request** | [**\Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest**](../Model/CreatePaymentMethodConfigRequest.md)| request | |
 
 ### Return type
 

@@ -102,24 +102,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Email Record
    * Creates a Record of an Email sent to a Contact
-   * @param emailWithContent emailWithContent (required)
+   * @param createEmailSentRequest emailWithContent (required)
    * @return EmailSentWithContent
    * @throws ApiException if fails to make API call
    */
-  public EmailSentWithContent createEmailUsingPOST1(CreateEmailSentRequest emailWithContent) throws ApiException {
-    ApiResponse<EmailSentWithContent> localVarResponse = createEmailUsingPOST1WithHttpInfo(emailWithContent);
+  public EmailSentWithContent createEmailUsingPOST1(CreateEmailSentRequest createEmailSentRequest) throws ApiException {
+    ApiResponse<EmailSentWithContent> localVarResponse = createEmailUsingPOST1WithHttpInfo(createEmailSentRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Email Record
    * Creates a Record of an Email sent to a Contact
-   * @param emailWithContent emailWithContent (required)
+   * @param createEmailSentRequest emailWithContent (required)
    * @return ApiResponse&lt;EmailSentWithContent&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<EmailSentWithContent> createEmailUsingPOST1WithHttpInfo(CreateEmailSentRequest emailWithContent) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createEmailUsingPOST1RequestBuilder(emailWithContent);
+  public ApiResponse<EmailSentWithContent> createEmailUsingPOST1WithHttpInfo(CreateEmailSentRequest createEmailSentRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createEmailUsingPOST1RequestBuilder(createEmailSentRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -159,10 +159,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createEmailUsingPOST1RequestBuilder(CreateEmailSentRequest emailWithContent) throws ApiException {
-    // verify the required parameter 'emailWithContent' is set
-    if (emailWithContent == null) {
-      throw new ApiException(400, "Missing the required parameter 'emailWithContent' when calling createEmailUsingPOST1");
+  private HttpRequest.Builder createEmailUsingPOST1RequestBuilder(CreateEmailSentRequest createEmailSentRequest) throws ApiException {
+    // verify the required parameter 'createEmailSentRequest' is set
+    if (createEmailSentRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createEmailSentRequest' when calling createEmailUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -176,7 +176,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(emailWithContent);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createEmailSentRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

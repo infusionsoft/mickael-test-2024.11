@@ -127,16 +127,16 @@ class ReferralApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Referral|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createReferralUsingPOST($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOST($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
-        list($response) = $this->createReferralUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createReferralUsingPOSTWithHttpInfo($create_referral_request, $contentType);
         return $response;
     }
 
@@ -145,16 +145,16 @@ class ReferralApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Referral|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createReferralUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTWithHttpInfo($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
-        $request = $this->createReferralUsingPOSTRequest($request, $contentType);
+        $request = $this->createReferralUsingPOSTRequest($create_referral_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -340,15 +340,15 @@ class ReferralApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createReferralUsingPOSTAsync($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTAsync($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
-        return $this->createReferralUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createReferralUsingPOSTAsyncWithHttpInfo($create_referral_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -361,16 +361,16 @@ class ReferralApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createReferralUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTAsyncWithHttpInfo($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Referral';
-        $request = $this->createReferralUsingPOSTRequest($request, $contentType);
+        $request = $this->createReferralUsingPOSTRequest($create_referral_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -411,19 +411,19 @@ class ReferralApi
     /**
      * Create request for operation 'createReferralUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createReferralUsingPOSTRequest($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTRequest($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_referral_request' is set
+        if ($create_referral_request === null || (is_array($create_referral_request) && count($create_referral_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createReferralUsingPOST'
+                'Missing the required parameter $create_referral_request when calling createReferralUsingPOST'
             );
         }
 
@@ -446,12 +446,12 @@ class ReferralApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_referral_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_referral_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_referral_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

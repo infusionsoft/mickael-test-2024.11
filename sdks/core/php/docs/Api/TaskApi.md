@@ -18,7 +18,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createTaskCustomFieldUsingPOST1()`
 
 ```php
-createTaskCustomFieldUsingPOST1($custom_field): \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse
+createTaskCustomFieldUsingPOST1($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse
 ```
 
 Create a Custom Field
@@ -37,10 +37,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createTaskCustomFieldUsingPOST1($custom_field);
+    $result = $apiInstance->createTaskCustomFieldUsingPOST1($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TaskApi->createTaskCustomFieldUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -51,7 +51,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -73,7 +73,7 @@ No authorization required
 ## `createTaskUsingPOST1()`
 
 ```php
-createTaskUsingPOST1($task): \Com\Keap\Sdk\Core\Model\Task
+createTaskUsingPOST1($create_task_request): \Com\Keap\Sdk\Core\Model\Task
 ```
 
 Create a Task
@@ -92,10 +92,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$task = new \Com\Keap\Sdk\Core\Model\CreateTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreateTaskRequest | task
+$create_task_request = new \Com\Keap\Sdk\Core\Model\CreateTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreateTaskRequest | task
 
 try {
-    $result = $apiInstance->createTaskUsingPOST1($task);
+    $result = $apiInstance->createTaskUsingPOST1($create_task_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TaskApi->createTaskUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -106,7 +106,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **task** | [**\Com\Keap\Sdk\Core\Model\CreateTaskRequest**](../Model/CreateTaskRequest.md)| task | [optional] |
+| **create_task_request** | [**\Com\Keap\Sdk\Core\Model\CreateTaskRequest**](../Model/CreateTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -356,7 +356,7 @@ No authorization required
 ## `patchTaskUsingPATCH()`
 
 ```php
-patchTaskUsingPATCH($task_id, $update_mask, $task): \Com\Keap\Sdk\Core\Model\UpdateTaskResponse
+patchTaskUsingPATCH($task_id, $update_mask, $create_patch_task_request): \Com\Keap\Sdk\Core\Model\UpdateTaskResponse
 ```
 
 Update a Task
@@ -377,10 +377,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
 );
 $task_id = 'task_id_example'; // string | task_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$task = new \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest | task
+$create_patch_task_request = new \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest | task
 
 try {
-    $result = $apiInstance->patchTaskUsingPATCH($task_id, $update_mask, $task);
+    $result = $apiInstance->patchTaskUsingPATCH($task_id, $update_mask, $create_patch_task_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TaskApi->patchTaskUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -393,7 +393,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **task_id** | **string**| task_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **task** | [**\Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest**](../Model/CreatePatchTaskRequest.md)| task | [optional] |
+| **create_patch_task_request** | [**\Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest**](../Model/CreatePatchTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -467,7 +467,7 @@ No authorization required
 ## `updateTaskCustomFieldUsingPATCH()`
 
 ```php
-updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateTaskCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Task's Custom Field
@@ -487,11 +487,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TaskApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateTaskCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TaskApi->updateTaskCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -503,7 +503,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

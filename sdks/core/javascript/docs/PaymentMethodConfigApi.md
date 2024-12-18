@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## createPaymentMethodConfigUsingPOST
 
-> PaymentMethodConfig createPaymentMethodConfigUsingPOST(request)
+> PaymentMethodConfig createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest)
 
 Create Payment Method Configuration
 
@@ -22,8 +22,8 @@ Creates configuration details for rendering payment method components
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PaymentMethodConfigApi();
-let request = new KeapCoreServiceCoreSdk.CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
-apiInstance.createPaymentMethodConfigUsingPOST(request).then((data) => {
+let createPaymentMethodConfigRequest = new KeapCoreServiceCoreSdk.CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
+apiInstance.createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -36,7 +36,7 @@ apiInstance.createPaymentMethodConfigUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | 
+ **createPaymentMethodConfigRequest** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | 
 
 ### Return type
 

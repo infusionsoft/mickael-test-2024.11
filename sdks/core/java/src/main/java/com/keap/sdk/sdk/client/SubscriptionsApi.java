@@ -204,24 +204,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Subscription&#39;s Custom Field
    * Adds a custom field of the specified type and options to the Subscription object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(CreateCustomFieldRequest customField) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField);
+  public CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Subscription&#39;s Custom Field
    * Adds a custom field of the specified type and options to the Subscription object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> createSubscriptionCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createSubscriptionCustomFieldUsingPOSTRequestBuilder(customField);
+  public ApiResponse<CustomFieldMetaData> createSubscriptionCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createSubscriptionCustomFieldUsingPOSTRequestBuilder(createCustomFieldRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -261,10 +261,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createSubscriptionCustomFieldUsingPOSTRequestBuilder(CreateCustomFieldRequest customField) throws ApiException {
-    // verify the required parameter 'customField' is set
-    if (customField == null) {
-      throw new ApiException(400, "Missing the required parameter 'customField' when calling createSubscriptionCustomFieldUsingPOST");
+  private HttpRequest.Builder createSubscriptionCustomFieldUsingPOSTRequestBuilder(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    // verify the required parameter 'createCustomFieldRequest' is set
+    if (createCustomFieldRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createCustomFieldRequest' when calling createSubscriptionCustomFieldUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -278,7 +278,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(customField);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createCustomFieldRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -574,13 +574,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Subscription&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Subscription object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+  public CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -588,13 +588,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Subscription&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Subscription object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateSubscriptionCustomFieldUsingPATCHRequestBuilder(customFieldId, request, updateMask);
+  public ApiResponse<CustomFieldMetaData> updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateSubscriptionCustomFieldUsingPATCHRequestBuilder(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -634,14 +634,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateSubscriptionCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateSubscriptionCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
       throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling updateSubscriptionCustomFieldUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateSubscriptionCustomFieldUsingPATCH");
+    // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+    if (updateCustomFieldMetaDataRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateSubscriptionCustomFieldUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -671,7 +671,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateCustomFieldMetaDataRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

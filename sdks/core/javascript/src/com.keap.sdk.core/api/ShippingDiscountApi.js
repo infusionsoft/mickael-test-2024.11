@@ -42,14 +42,14 @@ export default class ShippingDiscountApi {
     /**
      * Create a Shipping Discount
      * Creates a Shipping Discount
-     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} createShippingDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ShippingDiscount} and HTTP response
      */
-    createDiscountUsingPOST1WithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createDiscountUsingPOST1");
+    createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest) {
+      let postBody = createShippingDiscountRequest;
+      // verify the required parameter 'createShippingDiscountRequest' is set
+      if (createShippingDiscountRequest === undefined || createShippingDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createShippingDiscountRequest' when calling createDiscountUsingPOST1");
       }
 
       let pathParams = {
@@ -75,11 +75,11 @@ export default class ShippingDiscountApi {
     /**
      * Create a Shipping Discount
      * Creates a Shipping Discount
-     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} createShippingDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ShippingDiscount}
      */
-    createDiscountUsingPOST1(request) {
-      return this.createDiscountUsingPOST1WithHttpInfo(request)
+    createDiscountUsingPOST1(createShippingDiscountRequest) {
+      return this.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -245,21 +245,21 @@ export default class ShippingDiscountApi {
      * Update a Shipping Discount
      * Updates a Shipping Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} updateShippingDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ShippingDiscount} and HTTP response
      */
-    updateDiscountUsingPATCH1WithHttpInfo(discountId, request, opts) {
+    updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateShippingDiscountRequest;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
         throw new Error("Missing the required parameter 'discountId' when calling updateDiscountUsingPATCH1");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateDiscountUsingPATCH1");
+      // verify the required parameter 'updateShippingDiscountRequest' is set
+      if (updateShippingDiscountRequest === undefined || updateShippingDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'updateShippingDiscountRequest' when calling updateDiscountUsingPATCH1");
       }
 
       let pathParams = {
@@ -288,13 +288,13 @@ export default class ShippingDiscountApi {
      * Update a Shipping Discount
      * Updates a Shipping Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} updateShippingDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ShippingDiscount}
      */
-    updateDiscountUsingPATCH1(discountId, request, opts) {
-      return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, opts)
+    updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, opts) {
+      return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

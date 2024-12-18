@@ -100,24 +100,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a User
    * Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
-   * @param user user (optional)
+   * @param createUserRequestV2 user (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User createUserUsingPOST1(CreateUserRequestV2 user) throws ApiException {
-    ApiResponse<User> localVarResponse = createUserUsingPOST1WithHttpInfo(user);
+  public User createUserUsingPOST1(CreateUserRequestV2 createUserRequestV2) throws ApiException {
+    ApiResponse<User> localVarResponse = createUserUsingPOST1WithHttpInfo(createUserRequestV2);
     return localVarResponse.getData();
   }
 
   /**
    * Create a User
    * Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
-   * @param user user (optional)
+   * @param createUserRequestV2 user (optional)
    * @return ApiResponse&lt;User&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<User> createUserUsingPOST1WithHttpInfo(CreateUserRequestV2 user) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createUserUsingPOST1RequestBuilder(user);
+  public ApiResponse<User> createUserUsingPOST1WithHttpInfo(CreateUserRequestV2 createUserRequestV2) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createUserUsingPOST1RequestBuilder(createUserRequestV2);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -157,7 +157,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createUserUsingPOST1RequestBuilder(CreateUserRequestV2 user) throws ApiException {
+  private HttpRequest.Builder createUserUsingPOST1RequestBuilder(CreateUserRequestV2 createUserRequestV2) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -170,7 +170,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(user);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUserRequestV2);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -540,12 +540,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates information on a specific User
    * @param userId user_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param user user (optional)
+   * @param patchUserRequestV2 user (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User patchUserUsingPATCH(String userId, List<String> updateMask, PatchUserRequestV2 user) throws ApiException {
-    ApiResponse<User> localVarResponse = patchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
+  public User patchUserUsingPATCH(String userId, List<String> updateMask, PatchUserRequestV2 patchUserRequestV2) throws ApiException {
+    ApiResponse<User> localVarResponse = patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2);
     return localVarResponse.getData();
   }
 
@@ -554,12 +554,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates information on a specific User
    * @param userId user_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param user user (optional)
+   * @param patchUserRequestV2 user (optional)
    * @return ApiResponse&lt;User&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<User> patchUserUsingPATCHWithHttpInfo(String userId, List<String> updateMask, PatchUserRequestV2 user) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchUserUsingPATCHRequestBuilder(userId, updateMask, user);
+  public ApiResponse<User> patchUserUsingPATCHWithHttpInfo(String userId, List<String> updateMask, PatchUserRequestV2 patchUserRequestV2) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchUserUsingPATCHRequestBuilder(userId, updateMask, patchUserRequestV2);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -599,7 +599,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchUserUsingPATCHRequestBuilder(String userId, List<String> updateMask, PatchUserRequestV2 user) throws ApiException {
+  private HttpRequest.Builder patchUserUsingPATCHRequestBuilder(String userId, List<String> updateMask, PatchUserRequestV2 patchUserRequestV2) throws ApiException {
     // verify the required parameter 'userId' is set
     if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling patchUserUsingPATCH");
@@ -632,7 +632,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(user);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(patchUserRequestV2);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

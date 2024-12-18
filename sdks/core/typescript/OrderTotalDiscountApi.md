@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createOrderTotalDiscountUsingPOST**
-> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest)
 
 Creates an Order Total Discount
 
@@ -28,7 +28,7 @@ const apiInstance = new OrderTotalDiscountApi(configuration);
 
 const request: OrderTotalDiscountApiCreateOrderTotalDiscountUsingPOSTRequest = {
     // request
-  request: {
+  createOrderTotalDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -63,7 +63,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateOrderTotalDiscountRequest**| request |
+ **createOrderTotalDiscountRequest** | **CreateOrderTotalDiscountRequest**| request |
 
 
 ### Return type
@@ -267,7 +267,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOrderTotalDiscountUsingPATCH**
-> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(request)
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(updateOrderTotalDiscountRequest)
 
 Updates an Order Total Discount
 
@@ -285,7 +285,7 @@ const request: OrderTotalDiscountApiUpdateOrderTotalDiscountUsingPATCHRequest = 
     // discount_id
   discountId: "discount_id_example",
     // request
-  request: {
+  updateOrderTotalDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -324,7 +324,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateOrderTotalDiscountRequest**| request |
+ **updateOrderTotalDiscountRequest** | **UpdateOrderTotalDiscountRequest**| request |
  **discountId** | [**string**] | discount_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

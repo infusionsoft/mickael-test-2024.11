@@ -19,7 +19,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createCompanyUsingPOST1
 
-> Company createCompanyUsingPOST1(company)
+> Company createCompanyUsingPOST1(createCompanyRequest)
 
 Create a Company
 
@@ -41,9 +41,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
-        CreateCompanyRequest company = new CreateCompanyRequest(); // CreateCompanyRequest | company
+        CreateCompanyRequest createCompanyRequest = new CreateCompanyRequest(); // CreateCompanyRequest | company
         try {
-            Company result = apiInstance.createCompanyUsingPOST1(company);
+            Company result = apiInstance.createCompanyUsingPOST1(createCompanyRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CompanyApi#createCompanyUsingPOST1");
@@ -61,7 +61,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **company** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] |
+| **createCompanyRequest** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
@@ -86,7 +86,7 @@ No authorization required
 
 ## createCompanyUsingPOST1WithHttpInfo
 
-> ApiResponse<Company> createCompanyUsingPOST1 createCompanyUsingPOST1WithHttpInfo(company)
+> ApiResponse<Company> createCompanyUsingPOST1 createCompanyUsingPOST1WithHttpInfo(createCompanyRequest)
 
 Create a Company
 
@@ -109,9 +109,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
-        CreateCompanyRequest company = new CreateCompanyRequest(); // CreateCompanyRequest | company
+        CreateCompanyRequest createCompanyRequest = new CreateCompanyRequest(); // CreateCompanyRequest | company
         try {
-            ApiResponse<Company> response = apiInstance.createCompanyUsingPOST1WithHttpInfo(company);
+            ApiResponse<Company> response = apiInstance.createCompanyUsingPOST1WithHttpInfo(createCompanyRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -131,7 +131,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **company** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] |
+| **createCompanyRequest** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
@@ -595,7 +595,7 @@ No authorization required
 
 ## patchCompanyUsingPATCH
 
-> Company patchCompanyUsingPATCH(companyId, updateMask, company)
+> Company patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest)
 
 Update a Company
 
@@ -619,9 +619,9 @@ public class Example {
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchCompanyRequest company = new PatchCompanyRequest(); // PatchCompanyRequest | company
+        PatchCompanyRequest patchCompanyRequest = new PatchCompanyRequest(); // PatchCompanyRequest | company
         try {
-            Company result = apiInstance.patchCompanyUsingPATCH(companyId, updateMask, company);
+            Company result = apiInstance.patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CompanyApi#patchCompanyUsingPATCH");
@@ -641,7 +641,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **companyId** | **String**| company_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, company_name, address, phone_number, fax_number, email_address, notes, website, custom_fields, create_time, update_time] |
-| **company** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] |
+| **patchCompanyRequest** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
@@ -667,7 +667,7 @@ No authorization required
 
 ## patchCompanyUsingPATCHWithHttpInfo
 
-> ApiResponse<Company> patchCompanyUsingPATCH patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company)
+> ApiResponse<Company> patchCompanyUsingPATCH patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest)
 
 Update a Company
 
@@ -692,9 +692,9 @@ public class Example {
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchCompanyRequest company = new PatchCompanyRequest(); // PatchCompanyRequest | company
+        PatchCompanyRequest patchCompanyRequest = new PatchCompanyRequest(); // PatchCompanyRequest | company
         try {
-            ApiResponse<Company> response = apiInstance.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company);
+            ApiResponse<Company> response = apiInstance.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -716,7 +716,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **companyId** | **String**| company_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, company_name, address, phone_number, fax_number, email_address, notes, website, custom_fields, create_time, update_time] |
-| **company** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] |
+| **patchCompanyRequest** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] |
 
 ### Return type
 

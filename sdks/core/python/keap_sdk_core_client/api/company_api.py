@@ -45,7 +45,7 @@ class CompanyApi:
     @validate_call
     def create_company_using_post1(
         self,
-        company: Annotated[Optional[CreateCompanyRequest], Field(description="company")] = None,
+        create_company_request: Annotated[Optional[CreateCompanyRequest], Field(description="company")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -63,8 +63,8 @@ class CompanyApi:
 
         Creates a new Company.`country_code` is required if `region` is specified.
 
-        :param company: company
-        :type company: CreateCompanyRequest
+        :param create_company_request: company
+        :type create_company_request: CreateCompanyRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -88,7 +88,7 @@ class CompanyApi:
         """ # noqa: E501
 
         _param = self._create_company_using_post1_serialize(
-            company=company,
+            create_company_request=create_company_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -113,7 +113,7 @@ class CompanyApi:
     @validate_call
     def create_company_using_post1_with_http_info(
         self,
-        company: Annotated[Optional[CreateCompanyRequest], Field(description="company")] = None,
+        create_company_request: Annotated[Optional[CreateCompanyRequest], Field(description="company")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -131,8 +131,8 @@ class CompanyApi:
 
         Creates a new Company.`country_code` is required if `region` is specified.
 
-        :param company: company
-        :type company: CreateCompanyRequest
+        :param create_company_request: company
+        :type create_company_request: CreateCompanyRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -156,7 +156,7 @@ class CompanyApi:
         """ # noqa: E501
 
         _param = self._create_company_using_post1_serialize(
-            company=company,
+            create_company_request=create_company_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -181,7 +181,7 @@ class CompanyApi:
     @validate_call
     def create_company_using_post1_without_preload_content(
         self,
-        company: Annotated[Optional[CreateCompanyRequest], Field(description="company")] = None,
+        create_company_request: Annotated[Optional[CreateCompanyRequest], Field(description="company")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -199,8 +199,8 @@ class CompanyApi:
 
         Creates a new Company.`country_code` is required if `region` is specified.
 
-        :param company: company
-        :type company: CreateCompanyRequest
+        :param create_company_request: company
+        :type create_company_request: CreateCompanyRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -224,7 +224,7 @@ class CompanyApi:
         """ # noqa: E501
 
         _param = self._create_company_using_post1_serialize(
-            company=company,
+            create_company_request=create_company_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -244,7 +244,7 @@ class CompanyApi:
 
     def _create_company_using_post1_serialize(
         self,
-        company,
+        create_company_request,
         _request_auth,
         _content_type,
         _headers,
@@ -270,8 +270,8 @@ class CompanyApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if company is not None:
-            _body_params = company
+        if create_company_request is not None:
+            _body_params = create_company_request
 
 
         # set the HTTP header `Accept`
@@ -1210,7 +1210,7 @@ class CompanyApi:
         self,
         company_id: Annotated[StrictStr, Field(description="company_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        company: Annotated[Optional[PatchCompanyRequest], Field(description="company")] = None,
+        patch_company_request: Annotated[Optional[PatchCompanyRequest], Field(description="company")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1232,8 +1232,8 @@ class CompanyApi:
         :type company_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param company: company
-        :type company: PatchCompanyRequest
+        :param patch_company_request: company
+        :type patch_company_request: PatchCompanyRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1259,7 +1259,7 @@ class CompanyApi:
         _param = self._patch_company_using_patch_serialize(
             company_id=company_id,
             update_mask=update_mask,
-            company=company,
+            patch_company_request=patch_company_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1287,7 +1287,7 @@ class CompanyApi:
         self,
         company_id: Annotated[StrictStr, Field(description="company_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        company: Annotated[Optional[PatchCompanyRequest], Field(description="company")] = None,
+        patch_company_request: Annotated[Optional[PatchCompanyRequest], Field(description="company")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1309,8 +1309,8 @@ class CompanyApi:
         :type company_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param company: company
-        :type company: PatchCompanyRequest
+        :param patch_company_request: company
+        :type patch_company_request: PatchCompanyRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1336,7 +1336,7 @@ class CompanyApi:
         _param = self._patch_company_using_patch_serialize(
             company_id=company_id,
             update_mask=update_mask,
-            company=company,
+            patch_company_request=patch_company_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1364,7 +1364,7 @@ class CompanyApi:
         self,
         company_id: Annotated[StrictStr, Field(description="company_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        company: Annotated[Optional[PatchCompanyRequest], Field(description="company")] = None,
+        patch_company_request: Annotated[Optional[PatchCompanyRequest], Field(description="company")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1386,8 +1386,8 @@ class CompanyApi:
         :type company_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param company: company
-        :type company: PatchCompanyRequest
+        :param patch_company_request: company
+        :type patch_company_request: PatchCompanyRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1413,7 +1413,7 @@ class CompanyApi:
         _param = self._patch_company_using_patch_serialize(
             company_id=company_id,
             update_mask=update_mask,
-            company=company,
+            patch_company_request=patch_company_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1436,7 +1436,7 @@ class CompanyApi:
         self,
         company_id,
         update_mask,
-        company,
+        patch_company_request,
         _request_auth,
         _content_type,
         _headers,
@@ -1469,8 +1469,8 @@ class CompanyApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if company is not None:
-            _body_params = company
+        if patch_company_request is not None:
+            _body_params = patch_company_request
 
 
         # set the HTTP header `Accept`

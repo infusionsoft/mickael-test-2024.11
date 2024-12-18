@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **createContactLinkTypeUsingPOST**
-> ContactLinkType createContactLinkTypeUsingPOST(request)
+> ContactLinkType createContactLinkTypeUsingPOST(createContactLinkTypeRequest)
 
 Creates a new type of Contact Link.
 
@@ -36,7 +36,7 @@ const apiInstance = new ContactApi(configuration);
 
 const request: ContactApiCreateContactLinkTypeUsingPOSTRequest = {
     // request
-  request: {
+  createContactLinkTypeRequest: {
     maxLinks: 1,
     name: "name_example",
   },
@@ -51,7 +51,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateContactLinkTypeRequest**| request |
+ **createContactLinkTypeRequest** | **CreateContactLinkTypeRequest**| request |
 
 
 ### Return type
@@ -94,7 +94,7 @@ const apiInstance = new ContactApi(configuration);
 
 const request: ContactApiCreateContactUsingPOST1Request = {
     // contact (optional)
-  contact: {
+  createPatchContactRequest: {
     addresses: [
       {
         country: "United States of America",
@@ -189,7 +189,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | **CreatePatchContactRequest**| contact |
+ **createPatchContactRequest** | **CreatePatchContactRequest**| contact |
 
 
 ### Return type
@@ -717,7 +717,7 @@ const request: ContactApiPatchContactUsingPATCHRequest = {
     "addresses",
   ],
     // contact (optional)
-  contact: {
+  createPatchContactRequest: {
     addresses: [
       {
         country: "United States of America",
@@ -812,7 +812,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | **CreatePatchContactRequest**| contact |
+ **createPatchContactRequest** | **CreatePatchContactRequest**| contact |
  **contactId** | [**string**] | contact_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

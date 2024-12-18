@@ -10,7 +10,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createReferralUsingPOST()`
 
 ```php
-createReferralUsingPOST($request): \Com\Keap\Sdk\Core\Model\Referral
+createReferralUsingPOST($create_referral_request): \Com\Keap\Sdk\Core\Model\Referral
 ```
 
 Create a Referral
@@ -29,10 +29,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ReferralApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateReferralRequest(); // \Com\Keap\Sdk\Core\Model\CreateReferralRequest | request
+$create_referral_request = new \Com\Keap\Sdk\Core\Model\CreateReferralRequest(); // \Com\Keap\Sdk\Core\Model\CreateReferralRequest | request
 
 try {
-    $result = $apiInstance->createReferralUsingPOST($request);
+    $result = $apiInstance->createReferralUsingPOST($create_referral_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReferralApi->createReferralUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -43,7 +43,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateReferralRequest**](../Model/CreateReferralRequest.md)| request | |
+| **create_referral_request** | [**\Com\Keap\Sdk\Core\Model\CreateReferralRequest**](../Model/CreateReferralRequest.md)| request | |
 
 ### Return type
 

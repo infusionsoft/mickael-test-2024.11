@@ -172,7 +172,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'insertCommissionProgram': new KeapCoreServiceCoreSdk.CreateCommissionProgramRequest() // CreateCommissionProgramRequest | Commission Program to insert
+  'createCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateCommissionProgramRequest() // CreateCommissionProgramRequest | Commission Program to insert
 };
 apiInstance.addCommissionProgramUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -187,7 +187,7 @@ apiInstance.addCommissionProgramUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insertCommissionProgram** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
+ **createCommissionProgramRequest** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
 
 ### Return type
 
@@ -219,7 +219,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'productCommissionProgram': new KeapCoreServiceCoreSdk.CreateProductCommissionProgramRequest() // CreateProductCommissionProgramRequest | Product Commission Program
+  'createProductCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateProductCommissionProgramRequest() // CreateProductCommissionProgramRequest | Product Commission Program
 };
 apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -235,7 +235,7 @@ apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, opts).t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commissionProgramId** | **String**| commission_program_id | 
- **productCommissionProgram** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
+ **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
 
 ### Return type
 
@@ -267,7 +267,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'subscriptionCommissionProgram': new KeapCoreServiceCoreSdk.CreateSubscriptionCommissionProgramRequest() // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+  'createSubscriptionCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateSubscriptionCommissionProgramRequest() // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
 };
 apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -283,7 +283,7 @@ apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, op
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commissionProgramId** | **String**| commission_program_id | 
- **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
+ **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
 
 ### Return type
 
@@ -347,7 +347,7 @@ No authorization required
 
 ## createAffiliateCustomFieldUsingPOST
 
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -359,8 +359,8 @@ Creates a single Affiliate Custom Field
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createAffiliateCustomFieldUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -373,7 +373,7 @@ apiInstance.createAffiliateCustomFieldUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -439,7 +439,7 @@ No authorization required
 
 ## createDiscountUsingPOST
 
-> CategoryDiscount createDiscountUsingPOST(request)
+> CategoryDiscount createDiscountUsingPOST(createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -451,8 +451,8 @@ Create a Category Discount.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let request = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
-apiInstance.createDiscountUsingPOST(request).then((data) => {
+let createUpdateDiscountRequest = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+apiInstance.createDiscountUsingPOST(createUpdateDiscountRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -465,7 +465,7 @@ apiInstance.createDiscountUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -483,7 +483,7 @@ No authorization required
 
 ## createDiscountUsingPOST1
 
-> ShippingDiscount createDiscountUsingPOST1(request)
+> ShippingDiscount createDiscountUsingPOST1(createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -495,8 +495,8 @@ Creates a Shipping Discount
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let request = new KeapCoreServiceCoreSdk.CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
-apiInstance.createDiscountUsingPOST1(request).then((data) => {
+let createShippingDiscountRequest = new KeapCoreServiceCoreSdk.CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+apiInstance.createDiscountUsingPOST1(createShippingDiscountRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -509,7 +509,7 @@ apiInstance.createDiscountUsingPOST1(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
+ **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -626,7 +626,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'leadsource': new KeapCoreServiceCoreSdk.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
+  'createLeadSourceRequest': new KeapCoreServiceCoreSdk.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
 };
 apiInstance.createLeadSourceUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -641,7 +641,7 @@ apiInstance.createLeadSourceUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
+ **createLeadSourceRequest** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
 
 ### Return type
 
@@ -659,7 +659,7 @@ No authorization required
 
 ## createNoteCustomFieldUsingPOST1
 
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -671,8 +671,8 @@ Adds a custom field of the specified type and options to the Note object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createNoteCustomFieldUsingPOST1(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createNoteCustomFieldUsingPOST1(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -685,7 +685,7 @@ apiInstance.createNoteCustomFieldUsingPOST1(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -703,7 +703,7 @@ No authorization required
 
 ## createOpportunityCustomFieldsUsingPOST
 
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -715,8 +715,8 @@ Adds a custom field of the specified type and options to the Opportunity object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createOpportunityCustomFieldsUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -729,7 +729,7 @@ apiInstance.createOpportunityCustomFieldsUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -760,7 +760,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'opportunityStage': new KeapCoreServiceCoreSdk.CreateOpportunityStageRequest() // CreateOpportunityStageRequest | opportunity
+  'createOpportunityStageRequest': new KeapCoreServiceCoreSdk.CreateOpportunityStageRequest() // CreateOpportunityStageRequest | opportunity
 };
 apiInstance.createOpportunityStageUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -775,7 +775,7 @@ apiInstance.createOpportunityStageUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunityStage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
+ **createOpportunityStageRequest** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -806,7 +806,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'opportunity': new KeapCoreServiceCoreSdk.CreateOpportunityRequest() // CreateOpportunityRequest | opportunity
+  'createOpportunityRequest': new KeapCoreServiceCoreSdk.CreateOpportunityRequest() // CreateOpportunityRequest | opportunity
 };
 apiInstance.createOpportunityUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -821,7 +821,7 @@ apiInstance.createOpportunityUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
+ **createOpportunityRequest** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -839,7 +839,7 @@ No authorization required
 
 ## createOrderCustomFieldUsingPOST
 
-> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Order&#39;s Custom Field
 
@@ -851,8 +851,8 @@ Adds a custom field of the specified type and options to the Order object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createOrderCustomFieldUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createOrderCustomFieldUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -865,7 +865,7 @@ apiInstance.createOrderCustomFieldUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -929,7 +929,7 @@ No authorization required
 
 ## createOrderTotalDiscountUsingPOST
 
-> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -941,8 +941,8 @@ Creates an Order Total Discount
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let request = new KeapCoreServiceCoreSdk.CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
-apiInstance.createOrderTotalDiscountUsingPOST(request).then((data) => {
+let createOrderTotalDiscountRequest = new KeapCoreServiceCoreSdk.CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+apiInstance.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -955,7 +955,7 @@ apiInstance.createOrderTotalDiscountUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
+ **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -973,7 +973,7 @@ No authorization required
 
 ## createOrderUsingPOST1
 
-> RestV2Order createOrderUsingPOST1(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(restCreateOrderRequest)
 
 Create an Order
 
@@ -985,8 +985,8 @@ Create a one time Order with Order items.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let createOrderRequest = new KeapCoreServiceCoreSdk.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
-apiInstance.createOrderUsingPOST1(createOrderRequest).then((data) => {
+let restCreateOrderRequest = new KeapCoreServiceCoreSdk.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+apiInstance.createOrderUsingPOST1(restCreateOrderRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -999,7 +999,7 @@ apiInstance.createOrderUsingPOST1(createOrderRequest).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | 
+ **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | 
 
 ### Return type
 
@@ -1061,7 +1061,7 @@ No authorization required
 
 ## createRedirectLinkUsingPOST
 
-> AffiliateLink createRedirectLinkUsingPOST(request)
+> AffiliateLink createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -1073,8 +1073,8 @@ Creates a single Affiliate Link
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let request = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
-apiInstance.createRedirectLinkUsingPOST(request).then((data) => {
+let createOrPatchAffiliateLinkRequest = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+apiInstance.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1087,7 +1087,7 @@ apiInstance.createRedirectLinkUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 
@@ -1105,7 +1105,7 @@ No authorization required
 
 ## createReferralUsingPOST
 
-> Referral createReferralUsingPOST(request)
+> Referral createReferralUsingPOST(createReferralRequest)
 
 Create a Referral
 
@@ -1117,8 +1117,8 @@ Creates a new referral partner referral on the provided contact
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let request = new KeapCoreServiceCoreSdk.CreateReferralRequest(); // CreateReferralRequest | request
-apiInstance.createReferralUsingPOST(request).then((data) => {
+let createReferralRequest = new KeapCoreServiceCoreSdk.CreateReferralRequest(); // CreateReferralRequest | request
+apiInstance.createReferralUsingPOST(createReferralRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1131,7 +1131,7 @@ apiInstance.createReferralUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
+ **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
 
 ### Return type
 
@@ -1149,7 +1149,7 @@ No authorization required
 
 ## createSubscriptionCustomFieldUsingPOST
 
-> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create a Subscription&#39;s Custom Field
 
@@ -1161,8 +1161,8 @@ Adds a custom field of the specified type and options to the Subscription object
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createSubscriptionCustomFieldUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1175,7 +1175,7 @@ apiInstance.createSubscriptionCustomFieldUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1193,7 +1193,7 @@ No authorization required
 
 ## createTaskCustomFieldUsingPOST1
 
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -1205,8 +1205,8 @@ Adds a custom field of the specified type and options to the Task object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createTaskCustomFieldUsingPOST1(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createTaskCustomFieldUsingPOST1(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1219,7 +1219,7 @@ apiInstance.createTaskCustomFieldUsingPOST1(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -1250,7 +1250,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'task': new KeapCoreServiceCoreSdk.CreateTaskRequest() // CreateTaskRequest | task
+  'createTaskRequest': new KeapCoreServiceCoreSdk.CreateTaskRequest() // CreateTaskRequest | task
 };
 apiInstance.createTaskUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1265,7 +1265,7 @@ apiInstance.createTaskUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
+ **createTaskRequest** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -1296,7 +1296,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opts = {
-  'user': new KeapCoreServiceCoreSdk.CreateUserRequestV2() // CreateUserRequestV2 | user
+  'createUserRequestV2': new KeapCoreServiceCoreSdk.CreateUserRequestV2() // CreateUserRequestV2 | user
 };
 apiInstance.createUserUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1311,7 +1311,7 @@ apiInstance.createUserUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
+ **createUserRequestV2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
 
 ### Return type
 
@@ -3866,7 +3866,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let orderId = "orderId_example"; // String | order_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'order': new KeapCoreServiceCoreSdk.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
+  'restV2PatchOrderRequest': new KeapCoreServiceCoreSdk.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
 };
 apiInstance.patchOrderUsingPATCH(orderId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -3883,7 +3883,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **String**| order_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
+ **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
 
 ### Return type
 
@@ -4016,7 +4016,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let taskId = "taskId_example"; // String | task_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'task': new KeapCoreServiceCoreSdk.CreatePatchTaskRequest() // CreatePatchTaskRequest | task
+  'createPatchTaskRequest': new KeapCoreServiceCoreSdk.CreatePatchTaskRequest() // CreatePatchTaskRequest | task
 };
 apiInstance.patchTaskUsingPATCH(taskId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -4033,7 +4033,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **String**| task_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
+ **createPatchTaskRequest** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -4066,7 +4066,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let userId = "userId_example"; // String | user_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'user': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
+  'patchUserRequestV2': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
 };
 apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -4083,7 +4083,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| user_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
+ **patchUserRequestV2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type
 
@@ -4101,7 +4101,7 @@ No authorization required
 
 ## removeAffiliateFromProgramUsingPOST
 
-> removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest)
+> removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -4114,8 +4114,8 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let id = "id_example"; // String | id
-let removeFromProgramRequest = new KeapCoreServiceCoreSdk.AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
-apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest).then(() => {
+let affiliateRemoveFromProgramRequest = new KeapCoreServiceCoreSdk.AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+apiInstance.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -4129,7 +4129,7 @@ apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest).th
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id | 
- **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
+ **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
 
 ### Return type
 
@@ -4353,7 +4353,7 @@ No authorization required
 
 ## updateAffiliateCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Custom Field
 
@@ -4366,11 +4366,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4384,7 +4384,7 @@ apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts).t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4403,7 +4403,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH
 
-> CategoryDiscount updateDiscountUsingPATCH(discountId, request, opts)
+> CategoryDiscount updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, opts)
 
 Update a Category Discount
 
@@ -4416,11 +4416,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let discountId = "discountId_example"; // String | discount_id
-let request = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+let createUpdateDiscountRequest = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateDiscountUsingPATCH(discountId, request, opts).then((data) => {
+apiInstance.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4434,7 +4434,7 @@ apiInstance.updateDiscountUsingPATCH(discountId, request, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discountId** | **String**| discount_id | 
- **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4453,7 +4453,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH1
 
-> ShippingDiscount updateDiscountUsingPATCH1(discountId, request, opts)
+> ShippingDiscount updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, opts)
 
 Update a Shipping Discount
 
@@ -4466,11 +4466,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let discountId = "discountId_example"; // String | discount_id
-let request = new KeapCoreServiceCoreSdk.UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+let updateShippingDiscountRequest = new KeapCoreServiceCoreSdk.UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateDiscountUsingPATCH1(discountId, request, opts).then((data) => {
+apiInstance.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4484,7 +4484,7 @@ apiInstance.updateDiscountUsingPATCH1(discountId, request, opts).then((data) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discountId** | **String**| discount_id | 
- **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
+ **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4503,7 +4503,7 @@ No authorization required
 
 ## updateNotesCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Custom Field
 
@@ -4516,11 +4516,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4534,7 +4534,7 @@ apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, opts).then(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4553,7 +4553,7 @@ No authorization required
 
 ## updateOpportunityCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -4566,11 +4566,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4584,7 +4584,7 @@ apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4603,7 +4603,7 @@ No authorization required
 
 ## updateOpportunityStageUsingPATCH
 
-> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, opts)
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, opts)
 
 Update an Opportunity Stage
 
@@ -4616,11 +4616,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let stageId = "stageId_example"; // String | stage_id
-let request = new KeapCoreServiceCoreSdk.UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+let updateOpportunityStageRequest = new KeapCoreServiceCoreSdk.UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOpportunityStageUsingPATCH(stageId, request, opts).then((data) => {
+apiInstance.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4634,7 +4634,7 @@ apiInstance.updateOpportunityStageUsingPATCH(stageId, request, opts).then((data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stageId** | **String**| stage_id | 
- **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4653,7 +4653,7 @@ No authorization required
 
 ## updateOpportunityUsingPATCH
 
-> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, opts)
+> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, opts)
 
 Update an opportunity
 
@@ -4666,11 +4666,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let opportunityId = "opportunityId_example"; // String | opportunity_id
-let request = new KeapCoreServiceCoreSdk.PatchOpportunityRequest(); // PatchOpportunityRequest | request
+let patchOpportunityRequest = new KeapCoreServiceCoreSdk.PatchOpportunityRequest(); // PatchOpportunityRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOpportunityUsingPATCH(opportunityId, request, opts).then((data) => {
+apiInstance.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4684,7 +4684,7 @@ apiInstance.updateOpportunityUsingPATCH(opportunityId, request, opts).then((data
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **opportunityId** | **String**| opportunity_id | 
- **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
+ **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4703,7 +4703,7 @@ No authorization required
 
 ## updateOrderCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update an Order&#39;s Custom Field
 
@@ -4716,11 +4716,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4734,7 +4734,7 @@ apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, opts).then(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4753,7 +4753,7 @@ No authorization required
 
 ## updateOrderTotalDiscountUsingPATCH
 
-> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, request, opts)
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, opts)
 
 Update an Order Total Discount
 
@@ -4766,11 +4766,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let discountId = "discountId_example"; // String | discount_id
-let request = new KeapCoreServiceCoreSdk.UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+let updateOrderTotalDiscountRequest = new KeapCoreServiceCoreSdk.UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, opts).then((data) => {
+apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4784,7 +4784,7 @@ apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, opts).then((
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discountId** | **String**| discount_id | 
- **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
+ **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4803,7 +4803,7 @@ No authorization required
 
 ## updateRedirectLinkUsingPATCH
 
-> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, request)
+> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -4816,8 +4816,8 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let redirectId = "redirectId_example"; // String | redirect_id
-let request = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
-apiInstance.updateRedirectLinkUsingPATCH(redirectId, request).then((data) => {
+let createOrPatchAffiliateLinkRequest = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+apiInstance.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4831,7 +4831,7 @@ apiInstance.updateRedirectLinkUsingPATCH(redirectId, request).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **redirectId** | **String**| redirect_id | 
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 
@@ -4849,7 +4849,7 @@ No authorization required
 
 ## updateSubscriptionCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Subscription&#39;s Custom Field
 
@@ -4862,11 +4862,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4880,7 +4880,7 @@ apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -4899,7 +4899,7 @@ No authorization required
 
 ## updateTaskCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Task&#39;s Custom Field
 
@@ -4912,11 +4912,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -4930,7 +4930,7 @@ apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, opts).then((
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

@@ -14,7 +14,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createDiscountUsingPOST1()`
 
 ```php
-createDiscountUsingPOST1($request): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+createDiscountUsingPOST1($create_shipping_discount_request): \Com\Keap\Sdk\Core\Model\ShippingDiscount
 ```
 
 Create a Shipping Discount
@@ -33,10 +33,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ShippingDiscountApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest | request
+$create_shipping_discount_request = new \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest | request
 
 try {
-    $result = $apiInstance->createDiscountUsingPOST1($request);
+    $result = $apiInstance->createDiscountUsingPOST1($create_shipping_discount_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShippingDiscountApi->createDiscountUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest**](../Model/CreateShippingDiscountRequest.md)| request | |
+| **create_shipping_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest**](../Model/CreateShippingDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -241,7 +241,7 @@ No authorization required
 ## `updateDiscountUsingPATCH1()`
 
 ```php
-updateDiscountUsingPATCH1($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+updateDiscountUsingPATCH1($discount_id, $update_shipping_discount_request, $update_mask): \Com\Keap\Sdk\Core\Model\ShippingDiscount
 ```
 
 Update a Shipping Discount
@@ -261,11 +261,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ShippingDiscountApi(
     new GuzzleHttp\Client()
 );
 $discount_id = 'discount_id_example'; // string | discount_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest | request
+$update_shipping_discount_request = new \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateDiscountUsingPATCH1($discount_id, $request, $update_mask);
+    $result = $apiInstance->updateDiscountUsingPATCH1($discount_id, $update_shipping_discount_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShippingDiscountApi->updateDiscountUsingPATCH1: ', $e->getMessage(), PHP_EOL;
@@ -277,7 +277,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **discount_id** | **string**| discount_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest**](../Model/UpdateShippingDiscountRequest.md)| request | |
+| **update_shipping_discount_request** | [**\Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest**](../Model/UpdateShippingDiscountRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

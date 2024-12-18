@@ -71,7 +71,7 @@ No authorization required
 ## `createSubscriptionCustomFieldUsingPOST()`
 
 ```php
-createSubscriptionCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createSubscriptionCustomFieldUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create a Subscription's Custom Field
@@ -90,10 +90,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\SubscriptionsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createSubscriptionCustomFieldUsingPOST($custom_field);
+    $result = $apiInstance->createSubscriptionCustomFieldUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->createSubscriptionCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -104,7 +104,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -294,7 +294,7 @@ No authorization required
 ## `updateSubscriptionCustomFieldUsingPATCH()`
 
 ```php
-updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Subscription's Custom Field
@@ -314,11 +314,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\SubscriptionsApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->updateSubscriptionCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -330,7 +330,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

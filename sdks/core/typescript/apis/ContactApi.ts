@@ -29,14 +29,14 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new type of Contact Link.
      * Create a Contact Link type
-     * @param request request
+     * @param createContactLinkTypeRequest request
      */
-    public async createContactLinkTypeUsingPOST(request: CreateContactLinkTypeRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createContactLinkTypeUsingPOST(createContactLinkTypeRequest: CreateContactLinkTypeRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("ContactApi", "createContactLinkTypeUsingPOST", "request");
+        // verify required parameter 'createContactLinkTypeRequest' is not null or undefined
+        if (createContactLinkTypeRequest === null || createContactLinkTypeRequest === undefined) {
+            throw new RequiredError("ContactApi", "createContactLinkTypeUsingPOST", "createContactLinkTypeRequest");
         }
 
 
@@ -54,7 +54,7 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateContactLinkTypeRequest", ""),
+            ObjectSerializer.serialize(createContactLinkTypeRequest, "CreateContactLinkTypeRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -71,9 +71,9 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param contact contact
+     * @param createPatchContactRequest contact
      */
-    public async createContactUsingPOST1(contact?: CreatePatchContactRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createContactUsingPOST1(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -91,7 +91,7 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(contact, "CreatePatchContactRequest", ""),
+            ObjectSerializer.serialize(createPatchContactRequest, "CreatePatchContactRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -440,9 +440,9 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Contact
      * @param contactId contact_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param contact contact
+     * @param createPatchContactRequest contact
      */
-    public async patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, contact?: CreatePatchContactRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'contactId' is not null or undefined
@@ -476,7 +476,7 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(contact, "CreatePatchContactRequest", ""),
+            ObjectSerializer.serialize(createPatchContactRequest, "CreatePatchContactRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

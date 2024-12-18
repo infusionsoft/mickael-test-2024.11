@@ -27,7 +27,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let opts = {
-  'company': new KeapCoreServiceCoreSdk.CreateCompanyRequest() // CreateCompanyRequest | company
+  'createCompanyRequest': new KeapCoreServiceCoreSdk.CreateCompanyRequest() // CreateCompanyRequest | company
 };
 apiInstance.createCompanyUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,7 +42,7 @@ apiInstance.createCompanyUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] 
+ **createCompanyRequest** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] 
 
 ### Return type
 
@@ -221,7 +221,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let companyId = "companyId_example"; // String | company_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'company': new KeapCoreServiceCoreSdk.PatchCompanyRequest() // PatchCompanyRequest | company
+  'patchCompanyRequest': new KeapCoreServiceCoreSdk.PatchCompanyRequest() // PatchCompanyRequest | company
 };
 apiInstance.patchCompanyUsingPATCH(companyId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**| company_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **company** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] 
+ **patchCompanyRequest** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] 
 
 ### Return type
 

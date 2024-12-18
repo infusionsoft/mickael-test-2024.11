@@ -83,12 +83,12 @@ export default class BusinessProfileApi {
      * Updates Business Profile information.
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchBusinessProfileRequest} [businessProfile] businessProfile
+     * @param {module:com.keap.sdk.core/model/PatchBusinessProfileRequest} [patchBusinessProfileRequest] businessProfile
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/GetBusinessProfileResponse} and HTTP response
      */
     patchBusinessProfileUsingPATCHWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['businessProfile'];
+      let postBody = opts['patchBusinessProfileRequest'];
 
       let pathParams = {
       };
@@ -116,7 +116,7 @@ export default class BusinessProfileApi {
      * Updates Business Profile information.
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchBusinessProfileRequest} opts.businessProfile businessProfile
+     * @param {module:com.keap.sdk.core/model/PatchBusinessProfileRequest} opts.patchBusinessProfileRequest businessProfile
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/GetBusinessProfileResponse}
      */
     patchBusinessProfileUsingPATCH(opts) {

@@ -179,7 +179,7 @@ No authorization required
 
 ## createTagCategoryUsingPOST1
 
-> Tag createTagCategoryUsingPOST1(request)
+> Tag createTagCategoryUsingPOST1(createUpdateTagCategoryRequest)
 
 Create Tag Category
 
@@ -201,9 +201,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
-        CreateUpdateTagCategoryRequest request = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
+        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
         try {
-            Tag result = apiInstance.createTagCategoryUsingPOST1(request);
+            Tag result = apiInstance.createTagCategoryUsingPOST1(createUpdateTagCategoryRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TagsApi#createTagCategoryUsingPOST1");
@@ -221,7 +221,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| request | |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| request | |
 
 ### Return type
 
@@ -246,7 +246,7 @@ No authorization required
 
 ## createTagCategoryUsingPOST1WithHttpInfo
 
-> ApiResponse<Tag> createTagCategoryUsingPOST1 createTagCategoryUsingPOST1WithHttpInfo(request)
+> ApiResponse<Tag> createTagCategoryUsingPOST1 createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest)
 
 Create Tag Category
 
@@ -269,9 +269,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
-        CreateUpdateTagCategoryRequest request = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
+        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
         try {
-            ApiResponse<Tag> response = apiInstance.createTagCategoryUsingPOST1WithHttpInfo(request);
+            ApiResponse<Tag> response = apiInstance.createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -291,7 +291,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| request | |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| request | |
 
 ### Return type
 
@@ -317,7 +317,7 @@ No authorization required
 
 ## createTagUsingPOST1
 
-> Tag createTagUsingPOST1(tag)
+> Tag createTagUsingPOST1(createUpdateTagRequest)
 
 Create Tag
 
@@ -339,9 +339,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
-        CreateUpdateTagRequest tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
         try {
-            Tag result = apiInstance.createTagUsingPOST1(tag);
+            Tag result = apiInstance.createTagUsingPOST1(createUpdateTagRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TagsApi#createTagUsingPOST1");
@@ -359,7 +359,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | |
 
 ### Return type
 
@@ -384,7 +384,7 @@ No authorization required
 
 ## createTagUsingPOST1WithHttpInfo
 
-> ApiResponse<Tag> createTagUsingPOST1 createTagUsingPOST1WithHttpInfo(tag)
+> ApiResponse<Tag> createTagUsingPOST1 createTagUsingPOST1WithHttpInfo(createUpdateTagRequest)
 
 Create Tag
 
@@ -407,9 +407,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
-        CreateUpdateTagRequest tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
         try {
-            ApiResponse<Tag> response = apiInstance.createTagUsingPOST1WithHttpInfo(tag);
+            ApiResponse<Tag> response = apiInstance.createTagUsingPOST1WithHttpInfo(createUpdateTagRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -429,7 +429,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | |
 
 ### Return type
 
@@ -1627,7 +1627,7 @@ No authorization required
 
 ## patchTagCategoryUsingPATCH
 
-> UpdateTagCategoryResponse patchTagCategoryUsingPATCH(tagCategoryId, updateMask, tagCategory)
+> UpdateTagCategoryResponse patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest)
 
 Update a Tag Category
 
@@ -1651,9 +1651,9 @@ public class Example {
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagCategoryRequest tagCategory = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
+        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
         try {
-            UpdateTagCategoryResponse result = apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, tagCategory);
+            UpdateTagCategoryResponse result = apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TagsApi#patchTagCategoryUsingPATCH");
@@ -1673,7 +1673,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **tagCategoryId** | **String**| tag_category_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
-| **tagCategory** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
 
@@ -1699,7 +1699,7 @@ No authorization required
 
 ## patchTagCategoryUsingPATCHWithHttpInfo
 
-> ApiResponse<UpdateTagCategoryResponse> patchTagCategoryUsingPATCH patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory)
+> ApiResponse<UpdateTagCategoryResponse> patchTagCategoryUsingPATCH patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest)
 
 Update a Tag Category
 
@@ -1724,9 +1724,9 @@ public class Example {
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagCategoryRequest tagCategory = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
+        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
         try {
-            ApiResponse<UpdateTagCategoryResponse> response = apiInstance.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory);
+            ApiResponse<UpdateTagCategoryResponse> response = apiInstance.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1748,7 +1748,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **tagCategoryId** | **String**| tag_category_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
-| **tagCategory** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
 
@@ -1775,7 +1775,7 @@ No authorization required
 
 ## patchTagUsingPATCH
 
-> UpdateTagResponse patchTagUsingPATCH(tagId, updateMask, tag)
+> UpdateTagResponse patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest)
 
 Update a Tag
 
@@ -1799,9 +1799,9 @@ public class Example {
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagRequest tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
         try {
-            UpdateTagResponse result = apiInstance.patchTagUsingPATCH(tagId, updateMask, tag);
+            UpdateTagResponse result = apiInstance.patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TagsApi#patchTagUsingPATCH");
@@ -1821,7 +1821,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **String**| tag_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
-| **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type
 
@@ -1847,7 +1847,7 @@ No authorization required
 
 ## patchTagUsingPATCHWithHttpInfo
 
-> ApiResponse<UpdateTagResponse> patchTagUsingPATCH patchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag)
+> ApiResponse<UpdateTagResponse> patchTagUsingPATCH patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest)
 
 Update a Tag
 
@@ -1872,9 +1872,9 @@ public class Example {
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagRequest tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
         try {
-            ApiResponse<UpdateTagResponse> response = apiInstance.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag);
+            ApiResponse<UpdateTagResponse> response = apiInstance.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1896,7 +1896,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **String**| tag_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
-| **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type
 

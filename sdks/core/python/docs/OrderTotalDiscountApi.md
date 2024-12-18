@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_order_total_discount_using_post**
-> OrderTotalDiscount create_order_total_discount_using_post(request)
+> OrderTotalDiscount create_order_total_discount_using_post(create_order_total_discount_request)
 
 Create an Order Total Discount
 
@@ -38,11 +38,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OrderTotalDiscountApi(api_client)
-    request = keap_sdk_core_client.CreateOrderTotalDiscountRequest() # CreateOrderTotalDiscountRequest | request
+    create_order_total_discount_request = keap_sdk_core_client.CreateOrderTotalDiscountRequest() # CreateOrderTotalDiscountRequest | request
 
     try:
         # Create an Order Total Discount
-        api_response = api_instance.create_order_total_discount_using_post(request)
+        api_response = api_instance.create_order_total_discount_using_post(create_order_total_discount_request)
         print("The response of OrderTotalDiscountApi->create_order_total_discount_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -55,7 +55,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
+ **create_order_total_discount_request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -291,7 +291,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_order_total_discount_using_patch**
-> OrderTotalDiscount update_order_total_discount_using_patch(discount_id, request, update_mask=update_mask)
+> OrderTotalDiscount update_order_total_discount_using_patch(discount_id, update_order_total_discount_request, update_mask=update_mask)
 
 Update an Order Total Discount
 
@@ -318,12 +318,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OrderTotalDiscountApi(api_client)
     discount_id = 'discount_id_example' # str | discount_id
-    request = keap_sdk_core_client.UpdateOrderTotalDiscountRequest() # UpdateOrderTotalDiscountRequest | request
+    update_order_total_discount_request = keap_sdk_core_client.UpdateOrderTotalDiscountRequest() # UpdateOrderTotalDiscountRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an Order Total Discount
-        api_response = api_instance.update_order_total_discount_using_patch(discount_id, request, update_mask=update_mask)
+        api_response = api_instance.update_order_total_discount_using_patch(discount_id, update_order_total_discount_request, update_mask=update_mask)
         print("The response of OrderTotalDiscountApi->update_order_total_discount_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -337,7 +337,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discount_id** | **str**| discount_id | 
- **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
+ **update_order_total_discount_request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

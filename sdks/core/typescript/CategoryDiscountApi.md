@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **createDiscountUsingPOST**
-> CategoryDiscount createDiscountUsingPOST(request)
+> CategoryDiscount createDiscountUsingPOST(createUpdateDiscountRequest)
 
 Create a Category Discount.
 
@@ -27,7 +27,7 @@ const apiInstance = new CategoryDiscountApi(configuration);
 
 const request: CategoryDiscountApiCreateDiscountUsingPOSTRequest = {
     // request
-  request: {
+  createUpdateDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -63,7 +63,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateUpdateDiscountRequest**| request |
+ **createUpdateDiscountRequest** | **CreateUpdateDiscountRequest**| request |
 
 
 ### Return type
@@ -202,7 +202,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateDiscountUsingPATCH**
-> CategoryDiscount updateDiscountUsingPATCH(request)
+> CategoryDiscount updateDiscountUsingPATCH(createUpdateDiscountRequest)
 
 Update a Category Discount.
 
@@ -220,7 +220,7 @@ const request: CategoryDiscountApiUpdateDiscountUsingPATCHRequest = {
     // discount_id
   discountId: "discount_id_example",
     // request
-  request: {
+  createUpdateDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -260,7 +260,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateUpdateDiscountRequest**| request |
+ **createUpdateDiscountRequest** | **CreateUpdateDiscountRequest**| request |
  **discountId** | [**string**] | discount_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

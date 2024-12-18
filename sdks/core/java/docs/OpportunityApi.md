@@ -33,7 +33,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createOpportunityCustomFieldsUsingPOST
 
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -55,9 +55,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createOpportunityCustomFieldsUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OpportunityApi#createOpportunityCustomFieldsUsingPOST");
@@ -75,7 +75,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -100,7 +100,7 @@ No authorization required
 
 ## createOpportunityCustomFieldsUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOST createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOST createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -123,9 +123,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -145,7 +145,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -171,7 +171,7 @@ No authorization required
 
 ## createOpportunityStageUsingPOST
 
-> RestOpportunityStage createOpportunityStageUsingPOST(opportunityStage)
+> RestOpportunityStage createOpportunityStageUsingPOST(createOpportunityStageRequest)
 
 Create an Opportunity Stage
 
@@ -193,9 +193,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
-        CreateOpportunityStageRequest opportunityStage = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
+        CreateOpportunityStageRequest createOpportunityStageRequest = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
         try {
-            RestOpportunityStage result = apiInstance.createOpportunityStageUsingPOST(opportunityStage);
+            RestOpportunityStage result = apiInstance.createOpportunityStageUsingPOST(createOpportunityStageRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OpportunityApi#createOpportunityStageUsingPOST");
@@ -213,7 +213,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunityStage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
+| **createOpportunityStageRequest** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -238,7 +238,7 @@ No authorization required
 
 ## createOpportunityStageUsingPOSTWithHttpInfo
 
-> ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOST createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage)
+> ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOST createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest)
 
 Create an Opportunity Stage
 
@@ -261,9 +261,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
-        CreateOpportunityStageRequest opportunityStage = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
+        CreateOpportunityStageRequest createOpportunityStageRequest = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
         try {
-            ApiResponse<RestOpportunityStage> response = apiInstance.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
+            ApiResponse<RestOpportunityStage> response = apiInstance.createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -283,7 +283,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunityStage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
+| **createOpportunityStageRequest** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -309,7 +309,7 @@ No authorization required
 
 ## createOpportunityUsingPOST1
 
-> RestV2Opportunity createOpportunityUsingPOST1(opportunity)
+> RestV2Opportunity createOpportunityUsingPOST1(createOpportunityRequest)
 
 Create an Opportunity
 
@@ -331,9 +331,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
-        CreateOpportunityRequest opportunity = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
+        CreateOpportunityRequest createOpportunityRequest = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
         try {
-            RestV2Opportunity result = apiInstance.createOpportunityUsingPOST1(opportunity);
+            RestV2Opportunity result = apiInstance.createOpportunityUsingPOST1(createOpportunityRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OpportunityApi#createOpportunityUsingPOST1");
@@ -351,7 +351,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
+| **createOpportunityRequest** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -376,7 +376,7 @@ No authorization required
 
 ## createOpportunityUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1 createOpportunityUsingPOST1WithHttpInfo(opportunity)
+> ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1 createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest)
 
 Create an Opportunity
 
@@ -399,9 +399,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
-        CreateOpportunityRequest opportunity = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
+        CreateOpportunityRequest createOpportunityRequest = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.createOpportunityUsingPOST1WithHttpInfo(opportunity);
+            ApiResponse<RestV2Opportunity> response = apiInstance.createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -421,7 +421,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
+| **createOpportunityRequest** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -1311,7 +1311,7 @@ No authorization required
 
 ## updateOpportunityCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -1334,10 +1334,10 @@ public class Example {
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OpportunityApi#updateOpportunityCustomFieldUsingPATCH");
@@ -1356,7 +1356,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -1383,7 +1383,7 @@ No authorization required
 
 ## updateOpportunityCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCH updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCH updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -1407,10 +1407,10 @@ public class Example {
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1431,7 +1431,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -1459,7 +1459,7 @@ No authorization required
 
 ## updateOpportunityStageUsingPATCH
 
-> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, updateMask)
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask)
 
 Update an Opportunity Stage
 
@@ -1482,10 +1482,10 @@ public class Example {
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
-        UpdateOpportunityStageRequest request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+        UpdateOpportunityStageRequest updateOpportunityStageRequest = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            RestOpportunityStage result = apiInstance.updateOpportunityStageUsingPATCH(stageId, request, updateMask);
+            RestOpportunityStage result = apiInstance.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OpportunityApi#updateOpportunityStageUsingPATCH");
@@ -1504,7 +1504,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **stageId** | **String**| stage_id | |
-| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
+| **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, order, target_number_days, probability, checklist_items] |
 
 ### Return type
@@ -1531,7 +1531,7 @@ No authorization required
 
 ## updateOpportunityStageUsingPATCHWithHttpInfo
 
-> ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCH updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask)
+> ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCH updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask)
 
 Update an Opportunity Stage
 
@@ -1555,10 +1555,10 @@ public class Example {
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
-        UpdateOpportunityStageRequest request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+        UpdateOpportunityStageRequest updateOpportunityStageRequest = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<RestOpportunityStage> response = apiInstance.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+            ApiResponse<RestOpportunityStage> response = apiInstance.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1579,7 +1579,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **stageId** | **String**| stage_id | |
-| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
+| **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, order, target_number_days, probability, checklist_items] |
 
 ### Return type
@@ -1607,7 +1607,7 @@ No authorization required
 
 ## updateOpportunityUsingPATCH
 
-> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, updateMask)
+> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask)
 
 Update an opportunity
 
@@ -1630,10 +1630,10 @@ public class Example {
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
-        PatchOpportunityRequest request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
+        PatchOpportunityRequest patchOpportunityRequest = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            RestV2Opportunity result = apiInstance.updateOpportunityUsingPATCH(opportunityId, request, updateMask);
+            RestV2Opportunity result = apiInstance.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OpportunityApi#updateOpportunityUsingPATCH");
@@ -1652,7 +1652,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **opportunityId** | **String**| opportunity_id | |
-| **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
+| **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: opportunity_title, next_action_time, next_action_notes, opportunity_notesestimated_close_time, include_in_forecast, projected_revenue_low, projected_revenue_highcontact_id, stage_id, user_id, custom_fields, affiliate_id] |
 
 ### Return type
@@ -1679,7 +1679,7 @@ No authorization required
 
 ## updateOpportunityUsingPATCHWithHttpInfo
 
-> ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCH updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask)
+> ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCH updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask)
 
 Update an opportunity
 
@@ -1703,10 +1703,10 @@ public class Example {
 
         OpportunityApi apiInstance = new OpportunityApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
-        PatchOpportunityRequest request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
+        PatchOpportunityRequest patchOpportunityRequest = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
+            ApiResponse<RestV2Opportunity> response = apiInstance.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1727,7 +1727,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **opportunityId** | **String**| opportunity_id | |
-| **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
+| **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: opportunity_title, next_action_time, next_action_notes, opportunity_notesestimated_close_time, include_in_forecast, projected_revenue_low, projected_revenue_highcontact_id, stage_id, user_id, custom_fields, affiliate_id] |
 
 ### Return type

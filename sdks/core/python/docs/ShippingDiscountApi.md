@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_discount_using_post1**
-> ShippingDiscount create_discount_using_post1(request)
+> ShippingDiscount create_discount_using_post1(create_shipping_discount_request)
 
 Create a Shipping Discount
 
@@ -38,11 +38,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.ShippingDiscountApi(api_client)
-    request = keap_sdk_core_client.CreateShippingDiscountRequest() # CreateShippingDiscountRequest | request
+    create_shipping_discount_request = keap_sdk_core_client.CreateShippingDiscountRequest() # CreateShippingDiscountRequest | request
 
     try:
         # Create a Shipping Discount
-        api_response = api_instance.create_discount_using_post1(request)
+        api_response = api_instance.create_discount_using_post1(create_shipping_discount_request)
         print("The response of ShippingDiscountApi->create_discount_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -55,7 +55,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
+ **create_shipping_discount_request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -293,7 +293,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_discount_using_patch1**
-> ShippingDiscount update_discount_using_patch1(discount_id, request, update_mask=update_mask)
+> ShippingDiscount update_discount_using_patch1(discount_id, update_shipping_discount_request, update_mask=update_mask)
 
 Update a Shipping Discount
 
@@ -320,12 +320,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.ShippingDiscountApi(api_client)
     discount_id = 'discount_id_example' # str | discount_id
-    request = keap_sdk_core_client.UpdateShippingDiscountRequest() # UpdateShippingDiscountRequest | request
+    update_shipping_discount_request = keap_sdk_core_client.UpdateShippingDiscountRequest() # UpdateShippingDiscountRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Shipping Discount
-        api_response = api_instance.update_discount_using_patch1(discount_id, request, update_mask=update_mask)
+        api_response = api_instance.update_discount_using_patch1(discount_id, update_shipping_discount_request, update_mask=update_mask)
         print("The response of ShippingDiscountApi->update_discount_using_patch1:\n")
         pprint(api_response)
     except Exception as e:
@@ -339,7 +339,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discount_id** | **str**| discount_id | 
- **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
+ **update_shipping_discount_request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

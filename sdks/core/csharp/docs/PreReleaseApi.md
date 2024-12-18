@@ -202,7 +202,7 @@ No authorization required
 
 <a id="addcommissionprogramusingpost"></a>
 # **AddCommissionProgramUsingPOST**
-> AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST (CreateCommissionProgramRequest? insertCommissionProgram = null)
+> AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST (CreateCommissionProgramRequest? createCommissionProgramRequest = null)
 
 Create an Affiliate Commission Program
 
@@ -225,12 +225,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var insertCommissionProgram = new CreateCommissionProgramRequest?(); // CreateCommissionProgramRequest? | Commission Program to insert (optional) 
+            var createCommissionProgramRequest = new CreateCommissionProgramRequest?(); // CreateCommissionProgramRequest? | Commission Program to insert (optional) 
 
             try
             {
                 // Create an Affiliate Commission Program
-                AffiliateCommissionProgramResponse result = apiInstance.AddCommissionProgramUsingPOST(insertCommissionProgram);
+                AffiliateCommissionProgramResponse result = apiInstance.AddCommissionProgramUsingPOST(createCommissionProgramRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -251,7 +251,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate Commission Program
-    ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.AddCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram);
+    ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.AddCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -268,7 +268,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **insertCommissionProgram** | [**CreateCommissionProgramRequest?**](CreateCommissionProgramRequest?.md) | Commission Program to insert | [optional]  |
+| **createCommissionProgramRequest** | [**CreateCommissionProgramRequest?**](CreateCommissionProgramRequest?.md) | Commission Program to insert | [optional]  |
 
 ### Return type
 
@@ -295,7 +295,7 @@ No authorization required
 
 <a id="assignproductcommissionprogramusingpost"></a>
 # **AssignProductCommissionProgramUsingPOST**
-> ProductCommissionProgram AssignProductCommissionProgramUsingPOST (string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = null)
+> ProductCommissionProgram AssignProductCommissionProgramUsingPOST (string commissionProgramId, CreateProductCommissionProgramRequest? createProductCommissionProgramRequest = null)
 
 Assign a Product Commission Program
 
@@ -319,12 +319,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
-            var productCommissionProgram = new CreateProductCommissionProgramRequest?(); // CreateProductCommissionProgramRequest? | Product Commission Program (optional) 
+            var createProductCommissionProgramRequest = new CreateProductCommissionProgramRequest?(); // CreateProductCommissionProgramRequest? | Product Commission Program (optional) 
 
             try
             {
                 // Assign a Product Commission Program
-                ProductCommissionProgram result = apiInstance.AssignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram);
+                ProductCommissionProgram result = apiInstance.AssignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -345,7 +345,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Assign a Product Commission Program
-    ApiResponse<ProductCommissionProgram> response = apiInstance.AssignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram);
+    ApiResponse<ProductCommissionProgram> response = apiInstance.AssignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -363,7 +363,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **commissionProgramId** | **string** | commission_program_id |  |
-| **productCommissionProgram** | [**CreateProductCommissionProgramRequest?**](CreateProductCommissionProgramRequest?.md) | Product Commission Program | [optional]  |
+| **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest?**](CreateProductCommissionProgramRequest?.md) | Product Commission Program | [optional]  |
 
 ### Return type
 
@@ -390,7 +390,7 @@ No authorization required
 
 <a id="assignsubscriptioncommissionprogramusingpost"></a>
 # **AssignSubscriptionCommissionProgramUsingPOST**
-> SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST (string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = null)
+> SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST (string commissionProgramId, CreateSubscriptionCommissionProgramRequest? createSubscriptionCommissionProgramRequest = null)
 
 Assign a Subscription Commission Program
 
@@ -414,12 +414,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
-            var subscriptionCommissionProgram = new CreateSubscriptionCommissionProgramRequest?(); // CreateSubscriptionCommissionProgramRequest? | Subscription Commission Program (optional) 
+            var createSubscriptionCommissionProgramRequest = new CreateSubscriptionCommissionProgramRequest?(); // CreateSubscriptionCommissionProgramRequest? | Subscription Commission Program (optional) 
 
             try
             {
                 // Assign a Subscription Commission Program
-                SubscriptionCommissionProgram result = apiInstance.AssignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram);
+                SubscriptionCommissionProgram result = apiInstance.AssignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -440,7 +440,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Assign a Subscription Commission Program
-    ApiResponse<SubscriptionCommissionProgram> response = apiInstance.AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram);
+    ApiResponse<SubscriptionCommissionProgram> response = apiInstance.AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -458,7 +458,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **commissionProgramId** | **string** | commission_program_id |  |
-| **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest?**](CreateSubscriptionCommissionProgramRequest?.md) | Subscription Commission Program | [optional]  |
+| **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest?**](CreateSubscriptionCommissionProgramRequest?.md) | Subscription Commission Program | [optional]  |
 
 ### Return type
 
@@ -576,7 +576,7 @@ No authorization required
 
 <a id="createaffiliatecustomfieldusingpost"></a>
 # **CreateAffiliateCustomFieldUsingPOST**
-> CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -599,12 +599,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create an Affiliate Custom Field
-                CustomFieldMetaData result = apiInstance.CreateAffiliateCustomFieldUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateAffiliateCustomFieldUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -625,7 +625,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -642,7 +642,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -764,7 +764,7 @@ No authorization required
 
 <a id="creatediscountusingpost"></a>
 # **CreateDiscountUsingPOST**
-> CategoryDiscount CreateDiscountUsingPOST (CreateUpdateDiscountRequest request)
+> CategoryDiscount CreateDiscountUsingPOST (CreateUpdateDiscountRequest createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -787,12 +787,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+            var createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
 
             try
             {
                 // Create a Category Discount
-                CategoryDiscount result = apiInstance.CreateDiscountUsingPOST(request);
+                CategoryDiscount result = apiInstance.CreateDiscountUsingPOST(createUpdateDiscountRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -813,7 +813,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Category Discount
-    ApiResponse<CategoryDiscount> response = apiInstance.CreateDiscountUsingPOSTWithHttpInfo(request);
+    ApiResponse<CategoryDiscount> response = apiInstance.CreateDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -830,7 +830,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md) | request |  |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md) | request |  |
 
 ### Return type
 
@@ -857,7 +857,7 @@ No authorization required
 
 <a id="creatediscountusingpost1"></a>
 # **CreateDiscountUsingPOST1**
-> ShippingDiscount CreateDiscountUsingPOST1 (CreateShippingDiscountRequest request)
+> ShippingDiscount CreateDiscountUsingPOST1 (CreateShippingDiscountRequest createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -880,12 +880,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+            var createShippingDiscountRequest = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
 
             try
             {
                 // Create a Shipping Discount
-                ShippingDiscount result = apiInstance.CreateDiscountUsingPOST1(request);
+                ShippingDiscount result = apiInstance.CreateDiscountUsingPOST1(createShippingDiscountRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -906,7 +906,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Shipping Discount
-    ApiResponse<ShippingDiscount> response = apiInstance.CreateDiscountUsingPOST1WithHttpInfo(request);
+    ApiResponse<ShippingDiscount> response = apiInstance.CreateDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -923,7 +923,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md) | request |  |
+| **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md) | request |  |
 
 ### Return type
 
@@ -1130,7 +1130,7 @@ No authorization required
 
 <a id="createleadsourceusingpost"></a>
 # **CreateLeadSourceUsingPOST**
-> LeadSource CreateLeadSourceUsingPOST (CreateLeadSourceRequest? leadsource = null)
+> LeadSource CreateLeadSourceUsingPOST (CreateLeadSourceRequest? createLeadSourceRequest = null)
 
 Create a Lead Source
 
@@ -1153,12 +1153,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var leadsource = new CreateLeadSourceRequest?(); // CreateLeadSourceRequest? | leadsource (optional) 
+            var createLeadSourceRequest = new CreateLeadSourceRequest?(); // CreateLeadSourceRequest? | leadsource (optional) 
 
             try
             {
                 // Create a Lead Source
-                LeadSource result = apiInstance.CreateLeadSourceUsingPOST(leadsource);
+                LeadSource result = apiInstance.CreateLeadSourceUsingPOST(createLeadSourceRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1179,7 +1179,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Lead Source
-    ApiResponse<LeadSource> response = apiInstance.CreateLeadSourceUsingPOSTWithHttpInfo(leadsource);
+    ApiResponse<LeadSource> response = apiInstance.CreateLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1196,7 +1196,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **leadsource** | [**CreateLeadSourceRequest?**](CreateLeadSourceRequest?.md) | leadsource | [optional]  |
+| **createLeadSourceRequest** | [**CreateLeadSourceRequest?**](CreateLeadSourceRequest?.md) | leadsource | [optional]  |
 
 ### Return type
 
@@ -1223,7 +1223,7 @@ No authorization required
 
 <a id="createnotecustomfieldusingpost1"></a>
 # **CreateNoteCustomFieldUsingPOST1**
-> CustomFieldMetaData CreateNoteCustomFieldUsingPOST1 (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateNoteCustomFieldUsingPOST1 (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -1246,12 +1246,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create a Custom Field
-                CustomFieldMetaData result = apiInstance.CreateNoteCustomFieldUsingPOST1(customField);
+                CustomFieldMetaData result = apiInstance.CreateNoteCustomFieldUsingPOST1(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1272,7 +1272,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateNoteCustomFieldUsingPOST1WithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1289,7 +1289,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -1316,7 +1316,7 @@ No authorization required
 
 <a id="createopportunitycustomfieldsusingpost"></a>
 # **CreateOpportunityCustomFieldsUsingPOST**
-> CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -1339,12 +1339,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create an Opportunity Custom Field
-                CustomFieldMetaData result = apiInstance.CreateOpportunityCustomFieldsUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateOpportunityCustomFieldsUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1365,7 +1365,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Opportunity Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1382,7 +1382,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -1409,7 +1409,7 @@ No authorization required
 
 <a id="createopportunitystageusingpost"></a>
 # **CreateOpportunityStageUsingPOST**
-> RestOpportunityStage CreateOpportunityStageUsingPOST (CreateOpportunityStageRequest? opportunityStage = null)
+> RestOpportunityStage CreateOpportunityStageUsingPOST (CreateOpportunityStageRequest? createOpportunityStageRequest = null)
 
 Create an Opportunity Stage
 
@@ -1432,12 +1432,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var opportunityStage = new CreateOpportunityStageRequest?(); // CreateOpportunityStageRequest? | opportunity (optional) 
+            var createOpportunityStageRequest = new CreateOpportunityStageRequest?(); // CreateOpportunityStageRequest? | opportunity (optional) 
 
             try
             {
                 // Create an Opportunity Stage
-                RestOpportunityStage result = apiInstance.CreateOpportunityStageUsingPOST(opportunityStage);
+                RestOpportunityStage result = apiInstance.CreateOpportunityStageUsingPOST(createOpportunityStageRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1458,7 +1458,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Opportunity Stage
-    ApiResponse<RestOpportunityStage> response = apiInstance.CreateOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
+    ApiResponse<RestOpportunityStage> response = apiInstance.CreateOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1475,7 +1475,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **opportunityStage** | [**CreateOpportunityStageRequest?**](CreateOpportunityStageRequest?.md) | opportunity | [optional]  |
+| **createOpportunityStageRequest** | [**CreateOpportunityStageRequest?**](CreateOpportunityStageRequest?.md) | opportunity | [optional]  |
 
 ### Return type
 
@@ -1502,7 +1502,7 @@ No authorization required
 
 <a id="createopportunityusingpost1"></a>
 # **CreateOpportunityUsingPOST1**
-> RestV2Opportunity CreateOpportunityUsingPOST1 (CreateOpportunityRequest? opportunity = null)
+> RestV2Opportunity CreateOpportunityUsingPOST1 (CreateOpportunityRequest? createOpportunityRequest = null)
 
 Create an Opportunity
 
@@ -1525,12 +1525,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var opportunity = new CreateOpportunityRequest?(); // CreateOpportunityRequest? | opportunity (optional) 
+            var createOpportunityRequest = new CreateOpportunityRequest?(); // CreateOpportunityRequest? | opportunity (optional) 
 
             try
             {
                 // Create an Opportunity
-                RestV2Opportunity result = apiInstance.CreateOpportunityUsingPOST1(opportunity);
+                RestV2Opportunity result = apiInstance.CreateOpportunityUsingPOST1(createOpportunityRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1551,7 +1551,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.CreateOpportunityUsingPOST1WithHttpInfo(opportunity);
+    ApiResponse<RestV2Opportunity> response = apiInstance.CreateOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1568,7 +1568,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **opportunity** | [**CreateOpportunityRequest?**](CreateOpportunityRequest?.md) | opportunity | [optional]  |
+| **createOpportunityRequest** | [**CreateOpportunityRequest?**](CreateOpportunityRequest?.md) | opportunity | [optional]  |
 
 ### Return type
 
@@ -1595,7 +1595,7 @@ No authorization required
 
 <a id="createordercustomfieldusingpost"></a>
 # **CreateOrderCustomFieldUsingPOST**
-> CustomFieldMetaData CreateOrderCustomFieldUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateOrderCustomFieldUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create an Order's Custom Field
 
@@ -1618,12 +1618,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create an Order's Custom Field
-                CustomFieldMetaData result = apiInstance.CreateOrderCustomFieldUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateOrderCustomFieldUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1644,7 +1644,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Order's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOrderCustomFieldUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1661,7 +1661,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -1783,7 +1783,7 @@ No authorization required
 
 <a id="createordertotaldiscountusingpost"></a>
 # **CreateOrderTotalDiscountUsingPOST**
-> OrderTotalDiscount CreateOrderTotalDiscountUsingPOST (CreateOrderTotalDiscountRequest request)
+> OrderTotalDiscount CreateOrderTotalDiscountUsingPOST (CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -1806,12 +1806,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+            var createOrderTotalDiscountRequest = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
 
             try
             {
                 // Create an Order Total Discount
-                OrderTotalDiscount result = apiInstance.CreateOrderTotalDiscountUsingPOST(request);
+                OrderTotalDiscount result = apiInstance.CreateOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1832,7 +1832,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Order Total Discount
-    ApiResponse<OrderTotalDiscount> response = apiInstance.CreateOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+    ApiResponse<OrderTotalDiscount> response = apiInstance.CreateOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1849,7 +1849,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md) | request |  |
+| **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md) | request |  |
 
 ### Return type
 
@@ -1876,7 +1876,7 @@ No authorization required
 
 <a id="createorderusingpost1"></a>
 # **CreateOrderUsingPOST1**
-> RestV2Order CreateOrderUsingPOST1 (RestCreateOrderRequest createOrderRequest)
+> RestV2Order CreateOrderUsingPOST1 (RestCreateOrderRequest restCreateOrderRequest)
 
 Create an Order
 
@@ -1899,12 +1899,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+            var restCreateOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
 
             try
             {
                 // Create an Order
-                RestV2Order result = apiInstance.CreateOrderUsingPOST1(createOrderRequest);
+                RestV2Order result = apiInstance.CreateOrderUsingPOST1(restCreateOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1925,7 +1925,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Order
-    ApiResponse<RestV2Order> response = apiInstance.CreateOrderUsingPOST1WithHttpInfo(createOrderRequest);
+    ApiResponse<RestV2Order> response = apiInstance.CreateOrderUsingPOST1WithHttpInfo(restCreateOrderRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1942,7 +1942,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md) | createOrderRequest |  |
+| **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md) | createOrderRequest |  |
 
 ### Return type
 
@@ -2062,7 +2062,7 @@ No authorization required
 
 <a id="createredirectlinkusingpost"></a>
 # **CreateRedirectLinkUsingPOST**
-> AffiliateLink CreateRedirectLinkUsingPOST (CreateOrPatchAffiliateLinkRequest request)
+> AffiliateLink CreateRedirectLinkUsingPOST (CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -2085,12 +2085,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+            var createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
 
             try
             {
                 // Create an Affiliate Link
-                AffiliateLink result = apiInstance.CreateRedirectLinkUsingPOST(request);
+                AffiliateLink result = apiInstance.CreateRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2111,7 +2111,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate Link
-    ApiResponse<AffiliateLink> response = apiInstance.CreateRedirectLinkUsingPOSTWithHttpInfo(request);
+    ApiResponse<AffiliateLink> response = apiInstance.CreateRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2128,7 +2128,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
 
 ### Return type
 
@@ -2155,7 +2155,7 @@ No authorization required
 
 <a id="createreferralusingpost"></a>
 # **CreateReferralUsingPOST**
-> Referral CreateReferralUsingPOST (CreateReferralRequest request)
+> Referral CreateReferralUsingPOST (CreateReferralRequest createReferralRequest)
 
 Create a Referral
 
@@ -2178,12 +2178,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var request = new CreateReferralRequest(); // CreateReferralRequest | request
+            var createReferralRequest = new CreateReferralRequest(); // CreateReferralRequest | request
 
             try
             {
                 // Create a Referral
-                Referral result = apiInstance.CreateReferralUsingPOST(request);
+                Referral result = apiInstance.CreateReferralUsingPOST(createReferralRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2204,7 +2204,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Referral
-    ApiResponse<Referral> response = apiInstance.CreateReferralUsingPOSTWithHttpInfo(request);
+    ApiResponse<Referral> response = apiInstance.CreateReferralUsingPOSTWithHttpInfo(createReferralRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2221,7 +2221,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateReferralRequest**](CreateReferralRequest.md) | request |  |
+| **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md) | request |  |
 
 ### Return type
 
@@ -2248,7 +2248,7 @@ No authorization required
 
 <a id="createsubscriptioncustomfieldusingpost"></a>
 # **CreateSubscriptionCustomFieldUsingPOST**
-> CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateSubscriptionCustomFieldUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create a Subscription's Custom Field
 
@@ -2271,12 +2271,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create a Subscription's Custom Field
-                CustomFieldMetaData result = apiInstance.CreateSubscriptionCustomFieldUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateSubscriptionCustomFieldUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2297,7 +2297,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Subscription's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2314,7 +2314,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -2341,7 +2341,7 @@ No authorization required
 
 <a id="createtaskcustomfieldusingpost1"></a>
 # **CreateTaskCustomFieldUsingPOST1**
-> CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1 (CreateCustomFieldRequest customField)
+> CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1 (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -2364,12 +2364,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create a Custom Field
-                CreateCustomFieldResponse result = apiInstance.CreateTaskCustomFieldUsingPOST1(customField);
+                CreateCustomFieldResponse result = apiInstance.CreateTaskCustomFieldUsingPOST1(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2390,7 +2390,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Custom Field
-    ApiResponse<CreateCustomFieldResponse> response = apiInstance.CreateTaskCustomFieldUsingPOST1WithHttpInfo(customField);
+    ApiResponse<CreateCustomFieldResponse> response = apiInstance.CreateTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2407,7 +2407,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -2434,7 +2434,7 @@ No authorization required
 
 <a id="createtaskusingpost1"></a>
 # **CreateTaskUsingPOST1**
-> Task CreateTaskUsingPOST1 (CreateTaskRequest? task = null)
+> Task CreateTaskUsingPOST1 (CreateTaskRequest? createTaskRequest = null)
 
 Create a Task
 
@@ -2457,12 +2457,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var task = new CreateTaskRequest?(); // CreateTaskRequest? | task (optional) 
+            var createTaskRequest = new CreateTaskRequest?(); // CreateTaskRequest? | task (optional) 
 
             try
             {
                 // Create a Task
-                Task result = apiInstance.CreateTaskUsingPOST1(task);
+                Task result = apiInstance.CreateTaskUsingPOST1(createTaskRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2483,7 +2483,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Task
-    ApiResponse<Task> response = apiInstance.CreateTaskUsingPOST1WithHttpInfo(task);
+    ApiResponse<Task> response = apiInstance.CreateTaskUsingPOST1WithHttpInfo(createTaskRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2500,7 +2500,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **task** | [**CreateTaskRequest?**](CreateTaskRequest?.md) | task | [optional]  |
+| **createTaskRequest** | [**CreateTaskRequest?**](CreateTaskRequest?.md) | task | [optional]  |
 
 ### Return type
 
@@ -2527,7 +2527,7 @@ No authorization required
 
 <a id="createuserusingpost1"></a>
 # **CreateUserUsingPOST1**
-> User CreateUserUsingPOST1 (CreateUserRequestV2? user = null)
+> User CreateUserUsingPOST1 (CreateUserRequestV2? createUserRequestV2 = null)
 
 Create a User
 
@@ -2550,12 +2550,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
-            var user = new CreateUserRequestV2?(); // CreateUserRequestV2? | user (optional) 
+            var createUserRequestV2 = new CreateUserRequestV2?(); // CreateUserRequestV2? | user (optional) 
 
             try
             {
                 // Create a User
-                User result = apiInstance.CreateUserUsingPOST1(user);
+                User result = apiInstance.CreateUserUsingPOST1(createUserRequestV2);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2576,7 +2576,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a User
-    ApiResponse<User> response = apiInstance.CreateUserUsingPOST1WithHttpInfo(user);
+    ApiResponse<User> response = apiInstance.CreateUserUsingPOST1WithHttpInfo(createUserRequestV2);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2593,7 +2593,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **user** | [**CreateUserRequestV2?**](CreateUserRequestV2?.md) | user | [optional]  |
+| **createUserRequestV2** | [**CreateUserRequestV2?**](CreateUserRequestV2?.md) | user | [optional]  |
 
 ### Return type
 
@@ -7737,7 +7737,7 @@ No authorization required
 
 <a id="patchorderusingpatch"></a>
 # **PatchOrderUsingPATCH**
-> RestV2Order PatchOrderUsingPATCH (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? order = null)
+> RestV2Order PatchOrderUsingPATCH (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? restV2PatchOrderRequest = null)
 
 Update an Order
 
@@ -7762,12 +7762,12 @@ namespace Example
             var apiInstance = new PreReleaseApi(config);
             var orderId = "orderId_example";  // string | order_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var order = new RestV2PatchOrderRequest?(); // RestV2PatchOrderRequest? | order (optional) 
+            var restV2PatchOrderRequest = new RestV2PatchOrderRequest?(); // RestV2PatchOrderRequest? | order (optional) 
 
             try
             {
                 // Update an Order
-                RestV2Order result = apiInstance.PatchOrderUsingPATCH(orderId, updateMask, order);
+                RestV2Order result = apiInstance.PatchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7788,7 +7788,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Order
-    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7807,7 +7807,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **orderId** | **string** | order_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **order** | [**RestV2PatchOrderRequest?**](RestV2PatchOrderRequest?.md) | order | [optional]  |
+| **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest?**](RestV2PatchOrderRequest?.md) | order | [optional]  |
 
 ### Return type
 
@@ -8031,7 +8031,7 @@ No authorization required
 
 <a id="patchtaskusingpatch"></a>
 # **PatchTaskUsingPATCH**
-> UpdateTaskResponse PatchTaskUsingPATCH (string taskId, List<string>? updateMask = null, CreatePatchTaskRequest? task = null)
+> UpdateTaskResponse PatchTaskUsingPATCH (string taskId, List<string>? updateMask = null, CreatePatchTaskRequest? createPatchTaskRequest = null)
 
 Update a Task
 
@@ -8056,12 +8056,12 @@ namespace Example
             var apiInstance = new PreReleaseApi(config);
             var taskId = "taskId_example";  // string | task_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var task = new CreatePatchTaskRequest?(); // CreatePatchTaskRequest? | task (optional) 
+            var createPatchTaskRequest = new CreatePatchTaskRequest?(); // CreatePatchTaskRequest? | task (optional) 
 
             try
             {
                 // Update a Task
-                UpdateTaskResponse result = apiInstance.PatchTaskUsingPATCH(taskId, updateMask, task);
+                UpdateTaskResponse result = apiInstance.PatchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -8082,7 +8082,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Task
-    ApiResponse<UpdateTaskResponse> response = apiInstance.PatchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
+    ApiResponse<UpdateTaskResponse> response = apiInstance.PatchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8101,7 +8101,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **taskId** | **string** | task_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **task** | [**CreatePatchTaskRequest?**](CreatePatchTaskRequest?.md) | task | [optional]  |
+| **createPatchTaskRequest** | [**CreatePatchTaskRequest?**](CreatePatchTaskRequest?.md) | task | [optional]  |
 
 ### Return type
 
@@ -8129,7 +8129,7 @@ No authorization required
 
 <a id="patchuserusingpatch"></a>
 # **PatchUserUsingPATCH**
-> User PatchUserUsingPATCH (string userId, List<string>? updateMask = null, PatchUserRequestV2? user = null)
+> User PatchUserUsingPATCH (string userId, List<string>? updateMask = null, PatchUserRequestV2? patchUserRequestV2 = null)
 
 Update User
 
@@ -8154,12 +8154,12 @@ namespace Example
             var apiInstance = new PreReleaseApi(config);
             var userId = "userId_example";  // string | user_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var user = new PatchUserRequestV2?(); // PatchUserRequestV2? | user (optional) 
+            var patchUserRequestV2 = new PatchUserRequestV2?(); // PatchUserRequestV2? | user (optional) 
 
             try
             {
                 // Update User
-                User result = apiInstance.PatchUserUsingPATCH(userId, updateMask, user);
+                User result = apiInstance.PatchUserUsingPATCH(userId, updateMask, patchUserRequestV2);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -8180,7 +8180,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update User
-    ApiResponse<User> response = apiInstance.PatchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
+    ApiResponse<User> response = apiInstance.PatchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8199,7 +8199,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **userId** | **string** | user_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **user** | [**PatchUserRequestV2?**](PatchUserRequestV2?.md) | user | [optional]  |
+| **patchUserRequestV2** | [**PatchUserRequestV2?**](PatchUserRequestV2?.md) | user | [optional]  |
 
 ### Return type
 
@@ -8227,7 +8227,7 @@ No authorization required
 
 <a id="removeaffiliatefromprogramusingpost"></a>
 # **RemoveAffiliateFromProgramUsingPOST**
-> void RemoveAffiliateFromProgramUsingPOST (string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest)
+> void RemoveAffiliateFromProgramUsingPOST (string id, AffiliateRemoveFromProgramRequest affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -8251,12 +8251,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var id = "id_example";  // string | id
-            var removeFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+            var affiliateRemoveFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 
             try
             {
                 // Remove an Affiliate from a Commission Program
-                apiInstance.RemoveAffiliateFromProgramUsingPOST(id, removeFromProgramRequest);
+                apiInstance.RemoveAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest);
             }
             catch (ApiException  e)
             {
@@ -8276,7 +8276,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Remove an Affiliate from a Commission Program
-    apiInstance.RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest);
+    apiInstance.RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest);
 }
 catch (ApiException e)
 {
@@ -8291,7 +8291,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | id |  |
-| **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md) | removeFromProgramRequest |  |
+| **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md) | removeFromProgramRequest |  |
 
 ### Return type
 
@@ -8765,7 +8765,7 @@ No authorization required
 
 <a id="updateaffiliatecustomfieldusingpatch"></a>
 # **UpdateAffiliateCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Custom Field
 
@@ -8789,13 +8789,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -8816,7 +8816,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8834,7 +8834,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -8863,7 +8863,7 @@ No authorization required
 
 <a id="updatediscountusingpatch"></a>
 # **UpdateDiscountUsingPATCH**
-> CategoryDiscount UpdateDiscountUsingPATCH (string discountId, CreateUpdateDiscountRequest request, List<string>? updateMask = null)
+> CategoryDiscount UpdateDiscountUsingPATCH (string discountId, CreateUpdateDiscountRequest createUpdateDiscountRequest, List<string>? updateMask = null)
 
 Update a Category Discount
 
@@ -8887,13 +8887,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var discountId = "discountId_example";  // string | discount_id
-            var request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+            var createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Category Discount
-                CategoryDiscount result = apiInstance.UpdateDiscountUsingPATCH(discountId, request, updateMask);
+                CategoryDiscount result = apiInstance.UpdateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -8914,7 +8914,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Category Discount
-    ApiResponse<CategoryDiscount> response = apiInstance.UpdateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+    ApiResponse<CategoryDiscount> response = apiInstance.UpdateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8932,7 +8932,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **discountId** | **string** | discount_id |  |
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md) | request |  |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -8961,7 +8961,7 @@ No authorization required
 
 <a id="updatediscountusingpatch1"></a>
 # **UpdateDiscountUsingPATCH1**
-> ShippingDiscount UpdateDiscountUsingPATCH1 (string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = null)
+> ShippingDiscount UpdateDiscountUsingPATCH1 (string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = null)
 
 Update a Shipping Discount
 
@@ -8985,13 +8985,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var discountId = "discountId_example";  // string | discount_id
-            var request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+            var updateShippingDiscountRequest = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Shipping Discount
-                ShippingDiscount result = apiInstance.UpdateDiscountUsingPATCH1(discountId, request, updateMask);
+                ShippingDiscount result = apiInstance.UpdateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9012,7 +9012,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Shipping Discount
-    ApiResponse<ShippingDiscount> response = apiInstance.UpdateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+    ApiResponse<ShippingDiscount> response = apiInstance.UpdateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9030,7 +9030,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **discountId** | **string** | discount_id |  |
-| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md) | request |  |
+| **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9059,7 +9059,7 @@ No authorization required
 
 <a id="updatenotescustomfieldusingpatch"></a>
 # **UpdateNotesCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Custom Field
 
@@ -9083,13 +9083,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9110,7 +9110,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9128,7 +9128,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9157,7 +9157,7 @@ No authorization required
 
 <a id="updateopportunitycustomfieldusingpatch"></a>
 # **UpdateOpportunityCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Opportunity's Custom Field
 
@@ -9181,13 +9181,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Opportunity's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9208,7 +9208,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Opportunity's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9226,7 +9226,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9255,7 +9255,7 @@ No authorization required
 
 <a id="updateopportunitystageusingpatch"></a>
 # **UpdateOpportunityStageUsingPATCH**
-> RestOpportunityStage UpdateOpportunityStageUsingPATCH (string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = null)
+> RestOpportunityStage UpdateOpportunityStageUsingPATCH (string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = null)
 
 Update an Opportunity Stage
 
@@ -9279,13 +9279,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var stageId = "stageId_example";  // string | stage_id
-            var request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+            var updateOpportunityStageRequest = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an Opportunity Stage
-                RestOpportunityStage result = apiInstance.UpdateOpportunityStageUsingPATCH(stageId, request, updateMask);
+                RestOpportunityStage result = apiInstance.UpdateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9306,7 +9306,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Opportunity Stage
-    ApiResponse<RestOpportunityStage> response = apiInstance.UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+    ApiResponse<RestOpportunityStage> response = apiInstance.UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9324,7 +9324,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **stageId** | **string** | stage_id |  |
-| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md) | request |  |
+| **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9353,7 +9353,7 @@ No authorization required
 
 <a id="updateopportunityusingpatch"></a>
 # **UpdateOpportunityUsingPATCH**
-> RestV2Opportunity UpdateOpportunityUsingPATCH (string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = null)
+> RestV2Opportunity UpdateOpportunityUsingPATCH (string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = null)
 
 Update an opportunity
 
@@ -9377,13 +9377,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var opportunityId = "opportunityId_example";  // string | opportunity_id
-            var request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
+            var patchOpportunityRequest = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an opportunity
-                RestV2Opportunity result = apiInstance.UpdateOpportunityUsingPATCH(opportunityId, request, updateMask);
+                RestV2Opportunity result = apiInstance.UpdateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9404,7 +9404,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
+    ApiResponse<RestV2Opportunity> response = apiInstance.UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9422,7 +9422,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **opportunityId** | **string** | opportunity_id |  |
-| **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md) | request |  |
+| **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9451,7 +9451,7 @@ No authorization required
 
 <a id="updateordercustomfieldusingpatch"></a>
 # **UpdateOrderCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateOrderCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateOrderCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update an Order's Custom Field
 
@@ -9475,13 +9475,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an Order's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9502,7 +9502,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Order's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9520,7 +9520,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9549,7 +9549,7 @@ No authorization required
 
 <a id="updateordertotaldiscountusingpatch"></a>
 # **UpdateOrderTotalDiscountUsingPATCH**
-> OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH (string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = null)
+> OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH (string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = null)
 
 Update an Order Total Discount
 
@@ -9573,13 +9573,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var discountId = "discountId_example";  // string | discount_id
-            var request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+            var updateOrderTotalDiscountRequest = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an Order Total Discount
-                OrderTotalDiscount result = apiInstance.UpdateOrderTotalDiscountUsingPATCH(discountId, request, updateMask);
+                OrderTotalDiscount result = apiInstance.UpdateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9600,7 +9600,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Order Total Discount
-    ApiResponse<OrderTotalDiscount> response = apiInstance.UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+    ApiResponse<OrderTotalDiscount> response = apiInstance.UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9618,7 +9618,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **discountId** | **string** | discount_id |  |
-| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md) | request |  |
+| **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9647,7 +9647,7 @@ No authorization required
 
 <a id="updateredirectlinkusingpatch"></a>
 # **UpdateRedirectLinkUsingPATCH**
-> AffiliateLink UpdateRedirectLinkUsingPATCH (string redirectId, CreateOrPatchAffiliateLinkRequest request)
+> AffiliateLink UpdateRedirectLinkUsingPATCH (string redirectId, CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -9671,12 +9671,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var redirectId = "redirectId_example";  // string | redirect_id
-            var request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+            var createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
 
             try
             {
                 // Update an Affiliate Link
-                AffiliateLink result = apiInstance.UpdateRedirectLinkUsingPATCH(redirectId, request);
+                AffiliateLink result = apiInstance.UpdateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9697,7 +9697,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Affiliate Link
-    ApiResponse<AffiliateLink> response = apiInstance.UpdateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request);
+    ApiResponse<AffiliateLink> response = apiInstance.UpdateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9715,7 +9715,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **redirectId** | **string** | redirect_id |  |
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
 
 ### Return type
 
@@ -9743,7 +9743,7 @@ No authorization required
 
 <a id="updatesubscriptioncustomfieldusingpatch"></a>
 # **UpdateSubscriptionCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateSubscriptionCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Subscription's Custom Field
 
@@ -9767,13 +9767,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Subscription's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9794,7 +9794,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Subscription's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9812,7 +9812,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -9841,7 +9841,7 @@ No authorization required
 
 <a id="updatetaskcustomfieldusingpatch"></a>
 # **UpdateTaskCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Task's Custom Field
 
@@ -9865,13 +9865,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Task's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -9892,7 +9892,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Task's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9910,7 +9910,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type

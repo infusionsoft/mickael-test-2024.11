@@ -29,7 +29,7 @@ const apiInstance = new UsersApi(configuration);
 
 const request: UsersApiCreateUserUsingPOST1Request = {
     // user (optional)
-  user: {
+  createUserRequestV2: {
     admin: true,
     emailAddress: {
       email: "email_example",
@@ -50,7 +50,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **CreateUserRequestV2**| user |
+ **createUserRequestV2** | **CreateUserRequestV2**| user |
 
 
 ### Return type
@@ -319,7 +319,7 @@ const request: UsersApiPatchUserUsingPATCHRequest = {
     "address",
   ],
     // user (optional)
-  user: {
+  patchUserRequestV2: {
     address: {
       country: "United States of America",
       countryCode: "USA",
@@ -371,7 +371,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **PatchUserRequestV2**| user |
+ **patchUserRequestV2** | **PatchUserRequestV2**| user |
  **userId** | [**string**] | user_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

@@ -78,7 +78,7 @@ const request: BusinessProfileApiPatchBusinessProfileUsingPATCHRequest = {
     "name",
   ],
     // businessProfile (optional)
-  businessProfile: {
+  patchBusinessProfileRequest: {
     address: {
       countryCode: "USA",
       line1: "line1_example",
@@ -109,7 +109,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **businessProfile** | **PatchBusinessProfileRequest**| businessProfile |
+ **patchBusinessProfileRequest** | **PatchBusinessProfileRequest**| businessProfile |
  **updateMask** |  | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | (optional) defaults to undefined
 
 

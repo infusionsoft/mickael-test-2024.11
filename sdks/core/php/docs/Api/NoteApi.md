@@ -18,7 +18,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createNoteCustomFieldUsingPOST1()`
 
 ```php
-createNoteCustomFieldUsingPOST1($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createNoteCustomFieldUsingPOST1($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create a Custom Field
@@ -37,10 +37,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createNoteCustomFieldUsingPOST1($custom_field);
+    $result = $apiInstance->createNoteCustomFieldUsingPOST1($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NoteApi->createNoteCustomFieldUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -51,7 +51,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -73,7 +73,7 @@ No authorization required
 ## `createNoteUsingPOST1()`
 
 ```php
-createNoteUsingPOST1($contact_id, $request): \Com\Keap\Sdk\Core\Model\Note
+createNoteUsingPOST1($contact_id, $create_note_request): \Com\Keap\Sdk\Core\Model\Note
 ```
 
 Create a Note
@@ -93,10 +93,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
     new GuzzleHttp\Client()
 );
 $contact_id = 'contact_id_example'; // string | contact_id
-$request = new \Com\Keap\Sdk\Core\Model\CreateNoteRequest(); // \Com\Keap\Sdk\Core\Model\CreateNoteRequest | request
+$create_note_request = new \Com\Keap\Sdk\Core\Model\CreateNoteRequest(); // \Com\Keap\Sdk\Core\Model\CreateNoteRequest | request
 
 try {
-    $result = $apiInstance->createNoteUsingPOST1($contact_id, $request);
+    $result = $apiInstance->createNoteUsingPOST1($contact_id, $create_note_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NoteApi->createNoteUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -108,7 +108,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **string**| contact_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateNoteRequest**](../Model/CreateNoteRequest.md)| request | |
+| **create_note_request** | [**\Com\Keap\Sdk\Core\Model\CreateNoteRequest**](../Model/CreateNoteRequest.md)| request | |
 
 ### Return type
 
@@ -480,7 +480,7 @@ No authorization required
 ## `updateNotesCustomFieldUsingPATCH()`
 
 ```php
-updateNotesCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Custom Field
@@ -500,11 +500,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateNotesCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NoteApi->updateNotesCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -516,7 +516,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

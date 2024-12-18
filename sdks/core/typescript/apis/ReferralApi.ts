@@ -19,14 +19,14 @@ export class ReferralApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public async createReferralUsingPOST(request: CreateReferralRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createReferralUsingPOST(createReferralRequest: CreateReferralRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("ReferralApi", "createReferralUsingPOST", "request");
+        // verify required parameter 'createReferralRequest' is not null or undefined
+        if (createReferralRequest === null || createReferralRequest === undefined) {
+            throw new RequiredError("ReferralApi", "createReferralUsingPOST", "createReferralRequest");
         }
 
 
@@ -44,7 +44,7 @@ export class ReferralApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateReferralRequest", ""),
+            ObjectSerializer.serialize(createReferralRequest, "CreateReferralRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

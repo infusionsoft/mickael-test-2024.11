@@ -24,7 +24,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.LeadSourcesApi();
 let opts = {
-  'leadsource': new KeapCoreServiceCoreSdk.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
+  'createLeadSourceRequest': new KeapCoreServiceCoreSdk.CreateLeadSourceRequest() // CreateLeadSourceRequest | leadsource
 };
 apiInstance.createLeadSourceUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -39,7 +39,7 @@ apiInstance.createLeadSourceUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
+ **createLeadSourceRequest** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
 
 ### Return type
 

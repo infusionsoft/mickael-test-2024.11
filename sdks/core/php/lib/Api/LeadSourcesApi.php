@@ -130,16 +130,16 @@ class LeadSourcesApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\LeadSource|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createLeadSourceUsingPOST($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOST($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
-        list($response) = $this->createLeadSourceUsingPOSTWithHttpInfo($leadsource, $contentType);
+        list($response) = $this->createLeadSourceUsingPOSTWithHttpInfo($create_lead_source_request, $contentType);
         return $response;
     }
 
@@ -148,16 +148,16 @@ class LeadSourcesApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\LeadSource|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createLeadSourceUsingPOSTWithHttpInfo($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTWithHttpInfo($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
-        $request = $this->createLeadSourceUsingPOSTRequest($leadsource, $contentType);
+        $request = $this->createLeadSourceUsingPOSTRequest($create_lead_source_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -343,15 +343,15 @@ class LeadSourcesApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLeadSourceUsingPOSTAsync($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTAsync($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
-        return $this->createLeadSourceUsingPOSTAsyncWithHttpInfo($leadsource, $contentType)
+        return $this->createLeadSourceUsingPOSTAsyncWithHttpInfo($create_lead_source_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -364,16 +364,16 @@ class LeadSourcesApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLeadSourceUsingPOSTAsyncWithHttpInfo($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTAsyncWithHttpInfo($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\LeadSource';
-        $request = $this->createLeadSourceUsingPOSTRequest($leadsource, $contentType);
+        $request = $this->createLeadSourceUsingPOSTRequest($create_lead_source_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -414,13 +414,13 @@ class LeadSourcesApi
     /**
      * Create request for operation 'createLeadSourceUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createLeadSourceUsingPOSTRequest($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTRequest($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
 
 
@@ -443,12 +443,12 @@ class LeadSourcesApi
         );
 
         // for model (json/xml)
-        if (isset($leadsource)) {
+        if (isset($create_lead_source_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($leadsource));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_lead_source_request));
             } else {
-                $httpBody = $leadsource;
+                $httpBody = $create_lead_source_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -867,8 +867,8 @@ class LeadSourcesApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -876,8 +876,8 @@ class LeadSourcesApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -885,8 +885,8 @@ class LeadSourcesApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -894,8 +894,8 @@ class LeadSourcesApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 

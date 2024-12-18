@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_lead_source_using_post**
-> LeadSource create_lead_source_using_post(leadsource=leadsource)
+> LeadSource create_lead_source_using_post(create_lead_source_request=create_lead_source_request)
 
 Create a Lead Source
 
@@ -35,11 +35,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.LeadSourcesApi(api_client)
-    leadsource = keap_sdk_core_client.CreateLeadSourceRequest() # CreateLeadSourceRequest | leadsource (optional)
+    create_lead_source_request = keap_sdk_core_client.CreateLeadSourceRequest() # CreateLeadSourceRequest | leadsource (optional)
 
     try:
         # Create a Lead Source
-        api_response = api_instance.create_lead_source_using_post(leadsource=leadsource)
+        api_response = api_instance.create_lead_source_using_post(create_lead_source_request=create_lead_source_request)
         print("The response of LeadSourcesApi->create_lead_source_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -52,7 +52,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
+ **create_lead_source_request** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] 
 
 ### Return type
 

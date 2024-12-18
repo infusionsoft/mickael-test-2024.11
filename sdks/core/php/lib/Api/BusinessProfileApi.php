@@ -524,16 +524,16 @@ class BusinessProfileApi
      * Update Business Profile
      *
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $business_profile businessProfile (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $patch_business_profile_request businessProfile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchBusinessProfileUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchBusinessProfileUsingPATCH($update_mask = null, $business_profile = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
+    public function patchBusinessProfileUsingPATCH($update_mask = null, $patch_business_profile_request = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
     {
-        list($response) = $this->patchBusinessProfileUsingPATCHWithHttpInfo($update_mask, $business_profile, $contentType);
+        list($response) = $this->patchBusinessProfileUsingPATCHWithHttpInfo($update_mask, $patch_business_profile_request, $contentType);
         return $response;
     }
 
@@ -543,16 +543,16 @@ class BusinessProfileApi
      * Update Business Profile
      *
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $business_profile businessProfile (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $patch_business_profile_request businessProfile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchBusinessProfileUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchBusinessProfileUsingPATCHWithHttpInfo($update_mask = null, $business_profile = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
+    public function patchBusinessProfileUsingPATCHWithHttpInfo($update_mask = null, $patch_business_profile_request = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
     {
-        $request = $this->patchBusinessProfileUsingPATCHRequest($update_mask, $business_profile, $contentType);
+        $request = $this->patchBusinessProfileUsingPATCHRequest($update_mask, $patch_business_profile_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -774,15 +774,15 @@ class BusinessProfileApi
      * Update Business Profile
      *
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $business_profile businessProfile (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $patch_business_profile_request businessProfile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchBusinessProfileUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchBusinessProfileUsingPATCHAsync($update_mask = null, $business_profile = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
+    public function patchBusinessProfileUsingPATCHAsync($update_mask = null, $patch_business_profile_request = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
     {
-        return $this->patchBusinessProfileUsingPATCHAsyncWithHttpInfo($update_mask, $business_profile, $contentType)
+        return $this->patchBusinessProfileUsingPATCHAsyncWithHttpInfo($update_mask, $patch_business_profile_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -796,16 +796,16 @@ class BusinessProfileApi
      * Update Business Profile
      *
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $business_profile businessProfile (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $patch_business_profile_request businessProfile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchBusinessProfileUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchBusinessProfileUsingPATCHAsyncWithHttpInfo($update_mask = null, $business_profile = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
+    public function patchBusinessProfileUsingPATCHAsyncWithHttpInfo($update_mask = null, $patch_business_profile_request = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse';
-        $request = $this->patchBusinessProfileUsingPATCHRequest($update_mask, $business_profile, $contentType);
+        $request = $this->patchBusinessProfileUsingPATCHRequest($update_mask, $patch_business_profile_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -847,13 +847,13 @@ class BusinessProfileApi
      * Create request for operation 'patchBusinessProfileUsingPATCH'
      *
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $business_profile businessProfile (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest $patch_business_profile_request businessProfile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchBusinessProfileUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchBusinessProfileUsingPATCHRequest($update_mask = null, $business_profile = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
+    public function patchBusinessProfileUsingPATCHRequest($update_mask = null, $patch_business_profile_request = null, string $contentType = self::contentTypes['patchBusinessProfileUsingPATCH'][0])
     {
 
 
@@ -886,12 +886,12 @@ class BusinessProfileApi
         );
 
         // for model (json/xml)
-        if (isset($business_profile)) {
+        if (isset($patch_business_profile_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($business_profile));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_business_profile_request));
             } else {
-                $httpBody = $business_profile;
+                $httpBody = $patch_business_profile_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

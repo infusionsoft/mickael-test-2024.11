@@ -45,14 +45,14 @@ export default class EmailApi {
     /**
      * Create an Email Record
      * Creates a Record of an Email sent to a Contact
-     * @param {module:com.keap.sdk.core/model/CreateEmailSentRequest} emailWithContent emailWithContent
+     * @param {module:com.keap.sdk.core/model/CreateEmailSentRequest} createEmailSentRequest emailWithContent
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/EmailSentWithContent} and HTTP response
      */
-    createEmailUsingPOST1WithHttpInfo(emailWithContent) {
-      let postBody = emailWithContent;
-      // verify the required parameter 'emailWithContent' is set
-      if (emailWithContent === undefined || emailWithContent === null) {
-        throw new Error("Missing the required parameter 'emailWithContent' when calling createEmailUsingPOST1");
+    createEmailUsingPOST1WithHttpInfo(createEmailSentRequest) {
+      let postBody = createEmailSentRequest;
+      // verify the required parameter 'createEmailSentRequest' is set
+      if (createEmailSentRequest === undefined || createEmailSentRequest === null) {
+        throw new Error("Missing the required parameter 'createEmailSentRequest' when calling createEmailUsingPOST1");
       }
 
       let pathParams = {
@@ -78,11 +78,11 @@ export default class EmailApi {
     /**
      * Create an Email Record
      * Creates a Record of an Email sent to a Contact
-     * @param {module:com.keap.sdk.core/model/CreateEmailSentRequest} emailWithContent emailWithContent
+     * @param {module:com.keap.sdk.core/model/CreateEmailSentRequest} createEmailSentRequest emailWithContent
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/EmailSentWithContent}
      */
-    createEmailUsingPOST1(emailWithContent) {
-      return this.createEmailUsingPOST1WithHttpInfo(emailWithContent)
+    createEmailUsingPOST1(createEmailSentRequest) {
+      return this.createEmailUsingPOST1WithHttpInfo(createEmailSentRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

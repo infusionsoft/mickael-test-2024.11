@@ -1338,8 +1338,8 @@ class CampaignApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1347,8 +1347,8 @@ class CampaignApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1356,8 +1356,8 @@ class CampaignApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1365,8 +1365,8 @@ class CampaignApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1374,8 +1374,8 @@ class CampaignApi
             $stats,
             'stats', // param base name
             'boolean', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 

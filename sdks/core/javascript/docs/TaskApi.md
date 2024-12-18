@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createTaskCustomFieldUsingPOST1
 
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -30,8 +30,8 @@ Adds a custom field of the specified type and options to the Task object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.TaskApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createTaskCustomFieldUsingPOST1(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createTaskCustomFieldUsingPOST1(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -44,7 +44,7 @@ apiInstance.createTaskCustomFieldUsingPOST1(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -75,7 +75,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.TaskApi();
 let opts = {
-  'task': new KeapCoreServiceCoreSdk.CreateTaskRequest() // CreateTaskRequest | task
+  'createTaskRequest': new KeapCoreServiceCoreSdk.CreateTaskRequest() // CreateTaskRequest | task
 };
 apiInstance.createTaskUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -90,7 +90,7 @@ apiInstance.createTaskUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
+ **createTaskRequest** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -311,7 +311,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.TaskApi();
 let taskId = "taskId_example"; // String | task_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'task': new KeapCoreServiceCoreSdk.CreatePatchTaskRequest() // CreatePatchTaskRequest | task
+  'createPatchTaskRequest': new KeapCoreServiceCoreSdk.CreatePatchTaskRequest() // CreatePatchTaskRequest | task
 };
 apiInstance.patchTaskUsingPATCH(taskId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **String**| task_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
+ **createPatchTaskRequest** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -386,7 +386,7 @@ No authorization required
 
 ## updateTaskCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Task&#39;s Custom Field
 
@@ -399,11 +399,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.TaskApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -417,7 +417,7 @@ apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, opts).then((
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

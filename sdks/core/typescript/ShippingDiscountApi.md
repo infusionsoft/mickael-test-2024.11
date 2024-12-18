@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createDiscountUsingPOST1**
-> ShippingDiscount createDiscountUsingPOST1(request)
+> ShippingDiscount createDiscountUsingPOST1(createShippingDiscountRequest)
 
 Creates a Shipping Discount
 
@@ -28,7 +28,7 @@ const apiInstance = new ShippingDiscountApi(configuration);
 
 const request: ShippingDiscountApiCreateDiscountUsingPOST1Request = {
     // request
-  request: {
+  createShippingDiscountRequest: {
     criteria: [
       {
         code: "code_example",
@@ -61,7 +61,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateShippingDiscountRequest**| request |
+ **createShippingDiscountRequest** | **CreateShippingDiscountRequest**| request |
 
 
 ### Return type
@@ -270,7 +270,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateDiscountUsingPATCH1**
-> ShippingDiscount updateDiscountUsingPATCH1(request)
+> ShippingDiscount updateDiscountUsingPATCH1(updateShippingDiscountRequest)
 
 Updates a Shipping Discount
 
@@ -288,7 +288,7 @@ const request: ShippingDiscountApiUpdateDiscountUsingPATCH1Request = {
     // discount_id
   discountId: "discount_id_example",
     // request
-  request: {
+  updateShippingDiscountRequest: {
     criteria: [
       {
         code: "code_example",
@@ -325,7 +325,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateShippingDiscountRequest**| request |
+ **updateShippingDiscountRequest** | **UpdateShippingDiscountRequest**| request |
  **discountId** | [**string**] | discount_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Note object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData CreateNoteCustomFieldUsingPOST1(CreateCustomFieldRequest customField, int operationIndex = 0);
+        CustomFieldMetaData CreateNoteCustomFieldUsingPOST1(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a Custom Field
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Note object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0);
         /// <summary>
         /// Create a Note
         /// </summary>
@@ -59,10 +59,10 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Note</returns>
-        Note CreateNoteUsingPOST1(string contactId, CreateNoteRequest request, int operationIndex = 0);
+        Note CreateNoteUsingPOST1(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a Note
@@ -72,10 +72,10 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> CreateNoteUsingPOST1WithHttpInfo(string contactId, CreateNoteRequest request, int operationIndex = 0);
+        ApiResponse<Note> CreateNoteUsingPOST1WithHttpInfo(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0);
         /// <summary>
         /// Delete a Note
         /// </summary>
@@ -244,11 +244,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Custom Field
@@ -258,11 +258,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -279,11 +279,11 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Note object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1Async(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Custom Field
@@ -292,11 +292,11 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Note object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateNoteCustomFieldUsingPOST1WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateNoteCustomFieldUsingPOST1WithHttpInfoAsync(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a Note
         /// </summary>
@@ -305,11 +305,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> CreateNoteUsingPOST1Async(string contactId, CreateNoteRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Note> CreateNoteUsingPOST1Async(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Note
@@ -319,11 +319,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> CreateNoteUsingPOST1WithHttpInfoAsync(string contactId, CreateNoteRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Note>> CreateNoteUsingPOST1WithHttpInfoAsync(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Note
         /// </summary>
@@ -504,12 +504,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Custom Field
@@ -519,12 +519,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateNotesCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateNotesCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -649,12 +649,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Custom Field Adds a custom field of the specified type and options to the Note object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData CreateNoteCustomFieldUsingPOST1(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public CustomFieldMetaData CreateNoteCustomFieldUsingPOST1(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateNoteCustomFieldUsingPOST1WithHttpInfo(customField);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
             return localVarResponse.Data;
         }
 
@@ -662,15 +662,15 @@ namespace Keap.Sdk.Core.Api
         /// Create a Custom Field Adds a custom field of the specified type and options to the Note object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'customField' is set
-            if (customField == null)
+            // verify the required parameter 'createCustomFieldRequest' is set
+            if (createCustomFieldRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling NoteApi->CreateNoteCustomFieldUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createCustomFieldRequest' when calling NoteApi->CreateNoteCustomFieldUsingPOST1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -696,7 +696,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = customField;
+            localVarRequestOptions.Data = createCustomFieldRequest;
 
             localVarRequestOptions.Operation = "NoteApi.CreateNoteCustomFieldUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -720,13 +720,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Custom Field Adds a custom field of the specified type and options to the Note object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1Async(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateNoteCustomFieldUsingPOST1Async(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateNoteCustomFieldUsingPOST1WithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateNoteCustomFieldUsingPOST1WithHttpInfoAsync(createCustomFieldRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -734,16 +734,16 @@ namespace Keap.Sdk.Core.Api
         /// Create a Custom Field Adds a custom field of the specified type and options to the Note object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateNoteCustomFieldUsingPOST1WithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateNoteCustomFieldUsingPOST1WithHttpInfoAsync(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'customField' is set
-            if (customField == null)
+            // verify the required parameter 'createCustomFieldRequest' is set
+            if (createCustomFieldRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling NoteApi->CreateNoteCustomFieldUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createCustomFieldRequest' when calling NoteApi->CreateNoteCustomFieldUsingPOST1");
             }
 
 
@@ -770,7 +770,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = customField;
+            localVarRequestOptions.Data = createCustomFieldRequest;
 
             localVarRequestOptions.Operation = "NoteApi.CreateNoteCustomFieldUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -796,12 +796,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Note</returns>
-        public Note CreateNoteUsingPOST1(string contactId, CreateNoteRequest request, int operationIndex = 0)
+        public Note CreateNoteUsingPOST1(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Note> localVarResponse = CreateNoteUsingPOST1WithHttpInfo(contactId, request);
+            Keap.Sdk.Core.Client.ApiResponse<Note> localVarResponse = CreateNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest);
             return localVarResponse.Data;
         }
 
@@ -810,10 +810,10 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Note</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Note> CreateNoteUsingPOST1WithHttpInfo(string contactId, CreateNoteRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Note> CreateNoteUsingPOST1WithHttpInfo(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0)
         {
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -821,10 +821,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'contactId' when calling NoteApi->CreateNoteUsingPOST1");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createNoteRequest' is set
+            if (createNoteRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling NoteApi->CreateNoteUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createNoteRequest' when calling NoteApi->CreateNoteUsingPOST1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -851,7 +851,7 @@ namespace Keap.Sdk.Core.Api
             }
 
             localVarRequestOptions.PathParameters.Add("contact_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(contactId)); // path parameter
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createNoteRequest;
 
             localVarRequestOptions.Operation = "NoteApi.CreateNoteUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -876,13 +876,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> CreateNoteUsingPOST1Async(string contactId, CreateNoteRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Note> CreateNoteUsingPOST1Async(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Note> localVarResponse = await CreateNoteUsingPOST1WithHttpInfoAsync(contactId, request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Note> localVarResponse = await CreateNoteUsingPOST1WithHttpInfoAsync(contactId, createNoteRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -891,11 +891,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
-        /// <param name="request">request</param>
+        /// <param name="createNoteRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Note>> CreateNoteUsingPOST1WithHttpInfoAsync(string contactId, CreateNoteRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Note>> CreateNoteUsingPOST1WithHttpInfoAsync(string contactId, CreateNoteRequest createNoteRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -903,10 +903,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'contactId' when calling NoteApi->CreateNoteUsingPOST1");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createNoteRequest' is set
+            if (createNoteRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling NoteApi->CreateNoteUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createNoteRequest' when calling NoteApi->CreateNoteUsingPOST1");
             }
 
 
@@ -934,7 +934,7 @@ namespace Keap.Sdk.Core.Api
             }
 
             localVarRequestOptions.PathParameters.Add("contact_id", Keap.Sdk.Core.Client.ClientUtils.ParameterToString(contactId)); // path parameter
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createNoteRequest;
 
             localVarRequestOptions.Operation = "NoteApi.CreateNoteUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1968,13 +1968,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             return localVarResponse.Data;
         }
 
@@ -1983,11 +1983,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
@@ -1995,10 +1995,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling NoteApi->UpdateNotesCustomFieldUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+            if (updateCustomFieldMetaDataRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling NoteApi->UpdateNotesCustomFieldUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateCustomFieldMetaDataRequest' when calling NoteApi->UpdateNotesCustomFieldUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2029,7 +2029,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateCustomFieldMetaDataRequest;
 
             localVarRequestOptions.Operation = "NoteApi.UpdateNotesCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2054,14 +2054,14 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateNotesCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateNotesCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateNotesCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, updateCustomFieldMetaDataRequest, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2070,12 +2070,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateNotesCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateNotesCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
@@ -2083,10 +2083,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling NoteApi->UpdateNotesCustomFieldUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+            if (updateCustomFieldMetaDataRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling NoteApi->UpdateNotesCustomFieldUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateCustomFieldMetaDataRequest' when calling NoteApi->UpdateNotesCustomFieldUsingPATCH");
             }
 
 
@@ -2118,7 +2118,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateCustomFieldMetaDataRequest;
 
             localVarRequestOptions.Operation = "NoteApi.UpdateNotesCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

@@ -97,24 +97,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Referral
    * Creates a new referral partner referral on the provided contact
-   * @param request request (required)
+   * @param createReferralRequest request (required)
    * @return Referral
    * @throws ApiException if fails to make API call
    */
-  public Referral createReferralUsingPOST(CreateReferralRequest request) throws ApiException {
-    ApiResponse<Referral> localVarResponse = createReferralUsingPOSTWithHttpInfo(request);
+  public Referral createReferralUsingPOST(CreateReferralRequest createReferralRequest) throws ApiException {
+    ApiResponse<Referral> localVarResponse = createReferralUsingPOSTWithHttpInfo(createReferralRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Referral
    * Creates a new referral partner referral on the provided contact
-   * @param request request (required)
+   * @param createReferralRequest request (required)
    * @return ApiResponse&lt;Referral&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Referral> createReferralUsingPOSTWithHttpInfo(CreateReferralRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createReferralUsingPOSTRequestBuilder(request);
+  public ApiResponse<Referral> createReferralUsingPOSTWithHttpInfo(CreateReferralRequest createReferralRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createReferralUsingPOSTRequestBuilder(createReferralRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -154,10 +154,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createReferralUsingPOSTRequestBuilder(CreateReferralRequest request) throws ApiException {
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createReferralUsingPOST");
+  private HttpRequest.Builder createReferralUsingPOSTRequestBuilder(CreateReferralRequest createReferralRequest) throws ApiException {
+    // verify the required parameter 'createReferralRequest' is set
+    if (createReferralRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createReferralRequest' when calling createReferralUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -171,7 +171,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createReferralRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

@@ -33,7 +33,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createOrderCustomFieldUsingPOST
 
-> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Order&#39;s Custom Field
 
@@ -55,9 +55,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createOrderCustomFieldUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createOrderCustomFieldUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrdersApi#createOrderCustomFieldUsingPOST");
@@ -75,7 +75,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -100,7 +100,7 @@ No authorization required
 
 ## createOrderCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOST createOrderCustomFieldUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOST createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create an Order&#39;s Custom Field
 
@@ -123,9 +123,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createOrderCustomFieldUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -145,7 +145,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -313,7 +313,7 @@ No authorization required
 
 ## createOrderUsingPOST1
 
-> RestV2Order createOrderUsingPOST1(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(restCreateOrderRequest)
 
 Create an Order
 
@@ -335,9 +335,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
-        RestCreateOrderRequest createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+        RestCreateOrderRequest restCreateOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
         try {
-            RestV2Order result = apiInstance.createOrderUsingPOST1(createOrderRequest);
+            RestV2Order result = apiInstance.createOrderUsingPOST1(restCreateOrderRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrdersApi#createOrderUsingPOST1");
@@ -355,7 +355,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
+| **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
 
 ### Return type
 
@@ -380,7 +380,7 @@ No authorization required
 
 ## createOrderUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2Order> createOrderUsingPOST1 createOrderUsingPOST1WithHttpInfo(createOrderRequest)
+> ApiResponse<RestV2Order> createOrderUsingPOST1 createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest)
 
 Create an Order
 
@@ -403,9 +403,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
-        RestCreateOrderRequest createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+        RestCreateOrderRequest restCreateOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
         try {
-            ApiResponse<RestV2Order> response = apiInstance.createOrderUsingPOST1WithHttpInfo(createOrderRequest);
+            ApiResponse<RestV2Order> response = apiInstance.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -425,7 +425,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
+| **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
 
 ### Return type
 
@@ -1317,7 +1317,7 @@ No authorization required
 
 ## patchOrderUsingPATCH
 
-> RestV2Order patchOrderUsingPATCH(orderId, updateMask, order)
+> RestV2Order patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest)
 
 Update an Order
 
@@ -1341,9 +1341,9 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
+        RestV2PatchOrderRequest restV2PatchOrderRequest = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
         try {
-            RestV2Order result = apiInstance.patchOrderUsingPATCH(orderId, updateMask, order);
+            RestV2Order result = apiInstance.patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrdersApi#patchOrderUsingPATCH");
@@ -1363,7 +1363,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **orderId** | **String**| order_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
-| **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
+| **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
 
 ### Return type
 
@@ -1389,7 +1389,7 @@ No authorization required
 
 ## patchOrderUsingPATCHWithHttpInfo
 
-> ApiResponse<RestV2Order> patchOrderUsingPATCH patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order)
+> ApiResponse<RestV2Order> patchOrderUsingPATCH patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest)
 
 Update an Order
 
@@ -1414,9 +1414,9 @@ public class Example {
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
+        RestV2PatchOrderRequest restV2PatchOrderRequest = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
         try {
-            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1438,7 +1438,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **orderId** | **String**| order_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
-| **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
+| **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
 
 ### Return type
 
@@ -1597,7 +1597,7 @@ No authorization required
 
 ## updateOrderCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update an Order&#39;s Custom Field
 
@@ -1620,10 +1620,10 @@ public class Example {
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrdersApi#updateOrderCustomFieldUsingPATCH");
@@ -1642,7 +1642,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -1669,7 +1669,7 @@ No authorization required
 
 ## updateOrderCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCH updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCH updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update an Order&#39;s Custom Field
 
@@ -1693,10 +1693,10 @@ public class Example {
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1717,7 +1717,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type

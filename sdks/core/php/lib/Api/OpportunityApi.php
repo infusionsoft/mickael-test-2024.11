@@ -160,16 +160,16 @@ class OpportunityApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOpportunityCustomFieldsUsingPOST($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
-        list($response) = $this->createOpportunityCustomFieldsUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createOpportunityCustomFieldsUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -178,16 +178,16 @@ class OpportunityApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOpportunityCustomFieldsUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
-        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -373,15 +373,15 @@ class OpportunityApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityCustomFieldsUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
-        return $this->createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -394,16 +394,16 @@ class OpportunityApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -444,19 +444,19 @@ class OpportunityApi
     /**
      * Create request for operation 'createOpportunityCustomFieldsUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOpportunityCustomFieldsUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createOpportunityCustomFieldsUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createOpportunityCustomFieldsUsingPOST'
             );
         }
 
@@ -479,12 +479,12 @@ class OpportunityApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -537,16 +537,16 @@ class OpportunityApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOpportunityStageUsingPOST($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOST($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
-        list($response) = $this->createOpportunityStageUsingPOSTWithHttpInfo($opportunity_stage, $contentType);
+        list($response) = $this->createOpportunityStageUsingPOSTWithHttpInfo($create_opportunity_stage_request, $contentType);
         return $response;
     }
 
@@ -555,16 +555,16 @@ class OpportunityApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOpportunityStageUsingPOSTWithHttpInfo($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTWithHttpInfo($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
-        $request = $this->createOpportunityStageUsingPOSTRequest($opportunity_stage, $contentType);
+        $request = $this->createOpportunityStageUsingPOSTRequest($create_opportunity_stage_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -750,15 +750,15 @@ class OpportunityApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityStageUsingPOSTAsync($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTAsync($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
-        return $this->createOpportunityStageUsingPOSTAsyncWithHttpInfo($opportunity_stage, $contentType)
+        return $this->createOpportunityStageUsingPOSTAsyncWithHttpInfo($create_opportunity_stage_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -771,16 +771,16 @@ class OpportunityApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityStageUsingPOSTAsyncWithHttpInfo($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTAsyncWithHttpInfo($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestOpportunityStage';
-        $request = $this->createOpportunityStageUsingPOSTRequest($opportunity_stage, $contentType);
+        $request = $this->createOpportunityStageUsingPOSTRequest($create_opportunity_stage_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -821,13 +821,13 @@ class OpportunityApi
     /**
      * Create request for operation 'createOpportunityStageUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOpportunityStageUsingPOSTRequest($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTRequest($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
 
 
@@ -850,12 +850,12 @@ class OpportunityApi
         );
 
         // for model (json/xml)
-        if (isset($opportunity_stage)) {
+        if (isset($create_opportunity_stage_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opportunity_stage));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_opportunity_stage_request));
             } else {
-                $httpBody = $opportunity_stage;
+                $httpBody = $create_opportunity_stage_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -908,16 +908,16 @@ class OpportunityApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOpportunityUsingPOST1($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
-        list($response) = $this->createOpportunityUsingPOST1WithHttpInfo($opportunity, $contentType);
+        list($response) = $this->createOpportunityUsingPOST1WithHttpInfo($create_opportunity_request, $contentType);
         return $response;
     }
 
@@ -926,16 +926,16 @@ class OpportunityApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOpportunityUsingPOST1WithHttpInfo($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1WithHttpInfo($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
-        $request = $this->createOpportunityUsingPOST1Request($opportunity, $contentType);
+        $request = $this->createOpportunityUsingPOST1Request($create_opportunity_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1121,15 +1121,15 @@ class OpportunityApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityUsingPOST1Async($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1Async($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
-        return $this->createOpportunityUsingPOST1AsyncWithHttpInfo($opportunity, $contentType)
+        return $this->createOpportunityUsingPOST1AsyncWithHttpInfo($create_opportunity_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1142,16 +1142,16 @@ class OpportunityApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityUsingPOST1AsyncWithHttpInfo($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1AsyncWithHttpInfo($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Opportunity';
-        $request = $this->createOpportunityUsingPOST1Request($opportunity, $contentType);
+        $request = $this->createOpportunityUsingPOST1Request($create_opportunity_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1192,13 +1192,13 @@ class OpportunityApi
     /**
      * Create request for operation 'createOpportunityUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOpportunityUsingPOST1Request($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1Request($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
 
 
@@ -1221,12 +1221,12 @@ class OpportunityApi
         );
 
         // for model (json/xml)
-        if (isset($opportunity)) {
+        if (isset($create_opportunity_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opportunity));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_opportunity_request));
             } else {
-                $httpBody = $opportunity;
+                $httpBody = $create_opportunity_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2968,8 +2968,8 @@ class OpportunityApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2977,8 +2977,8 @@ class OpportunityApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2986,8 +2986,8 @@ class OpportunityApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2995,8 +2995,8 @@ class OpportunityApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3427,8 +3427,8 @@ class OpportunityApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3436,8 +3436,8 @@ class OpportunityApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3445,8 +3445,8 @@ class OpportunityApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3454,8 +3454,8 @@ class OpportunityApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3521,7 +3521,7 @@ class OpportunityApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -3529,9 +3529,9 @@ class OpportunityApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -3541,7 +3541,7 @@ class OpportunityApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -3549,9 +3549,9 @@ class OpportunityApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3773,16 +3773,16 @@ class OpportunityApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
-        return $this->updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3796,17 +3796,17 @@ class OpportunityApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3848,14 +3848,14 @@ class OpportunityApi
      * Create request for operation 'updateOpportunityCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -3865,10 +3865,10 @@ class OpportunityApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOpportunityCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateOpportunityCustomFieldUsingPATCH'
             );
         }
 
@@ -3909,12 +3909,12 @@ class OpportunityApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3968,7 +3968,7 @@ class OpportunityApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
@@ -3976,9 +3976,9 @@ class OpportunityApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCH($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
-        list($response) = $this->updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -3988,7 +3988,7 @@ class OpportunityApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
@@ -3996,9 +3996,9 @@ class OpportunityApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
-        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $update_opportunity_stage_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4220,16 +4220,16 @@ class OpportunityApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityStageUsingPATCHAsync($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHAsync($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
-        return $this->updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $request, $update_mask, $contentType)
+        return $this->updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4243,17 +4243,17 @@ class OpportunityApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestOpportunityStage';
-        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $update_opportunity_stage_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4295,14 +4295,14 @@ class OpportunityApi
      * Create request for operation 'updateOpportunityStageUsingPATCH'
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOpportunityStageUsingPATCHRequest($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHRequest($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
 
         // verify the required parameter 'stage_id' is set
@@ -4312,10 +4312,10 @@ class OpportunityApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_opportunity_stage_request' is set
+        if ($update_opportunity_stage_request === null || (is_array($update_opportunity_stage_request) && count($update_opportunity_stage_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOpportunityStageUsingPATCH'
+                'Missing the required parameter $update_opportunity_stage_request when calling updateOpportunityStageUsingPATCH'
             );
         }
 
@@ -4356,12 +4356,12 @@ class OpportunityApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_opportunity_stage_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_opportunity_stage_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_opportunity_stage_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4415,7 +4415,7 @@ class OpportunityApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
@@ -4423,9 +4423,9 @@ class OpportunityApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCH($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
-        list($response) = $this->updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -4435,7 +4435,7 @@ class OpportunityApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
@@ -4443,9 +4443,9 @@ class OpportunityApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
-        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $patch_opportunity_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4667,16 +4667,16 @@ class OpportunityApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityUsingPATCHAsync($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHAsync($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
-        return $this->updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $request, $update_mask, $contentType)
+        return $this->updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4690,17 +4690,17 @@ class OpportunityApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Opportunity';
-        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $patch_opportunity_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4742,14 +4742,14 @@ class OpportunityApi
      * Create request for operation 'updateOpportunityUsingPATCH'
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOpportunityUsingPATCHRequest($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHRequest($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
 
         // verify the required parameter 'opportunity_id' is set
@@ -4759,10 +4759,10 @@ class OpportunityApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'patch_opportunity_request' is set
+        if ($patch_opportunity_request === null || (is_array($patch_opportunity_request) && count($patch_opportunity_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOpportunityUsingPATCH'
+                'Missing the required parameter $patch_opportunity_request when calling updateOpportunityUsingPATCH'
             );
         }
 
@@ -4803,12 +4803,12 @@ class OpportunityApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($patch_opportunity_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_opportunity_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $patch_opportunity_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

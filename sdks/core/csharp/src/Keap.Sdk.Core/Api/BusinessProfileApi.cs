@@ -57,10 +57,10 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBusinessProfileResponse</returns>
-        GetBusinessProfileResponse PatchBusinessProfileUsingPATCH(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0);
+        GetBusinessProfileResponse PatchBusinessProfileUsingPATCH(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update Business Profile
@@ -70,10 +70,10 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBusinessProfileResponse</returns>
-        ApiResponse<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHWithHttpInfo(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0);
+        ApiResponse<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHWithHttpInfo(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -114,11 +114,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBusinessProfileResponse</returns>
-        System.Threading.Tasks.Task<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Business Profile
@@ -128,11 +128,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBusinessProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetBusinessProfileResponse>> PatchBusinessProfileUsingPATCHWithHttpInfoAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetBusinessProfileResponse>> PatchBusinessProfileUsingPATCHWithHttpInfoAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -384,12 +384,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBusinessProfileResponse</returns>
-        public GetBusinessProfileResponse PatchBusinessProfileUsingPATCH(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0)
+        public GetBusinessProfileResponse PatchBusinessProfileUsingPATCH(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse> localVarResponse = PatchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile);
+            Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse> localVarResponse = PatchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
             return localVarResponse.Data;
         }
 
@@ -398,10 +398,10 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBusinessProfileResponse</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHWithHttpInfo(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHWithHttpInfo(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -430,7 +430,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = businessProfile;
+            localVarRequestOptions.Data = patchBusinessProfileRequest;
 
             localVarRequestOptions.Operation = "BusinessProfileApi.PatchBusinessProfileUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -455,13 +455,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBusinessProfileResponse</returns>
-        public async System.Threading.Tasks.Task<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetBusinessProfileResponse> PatchBusinessProfileUsingPATCHAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse> localVarResponse = await PatchBusinessProfileUsingPATCHWithHttpInfoAsync(updateMask, businessProfile, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse> localVarResponse = await PatchBusinessProfileUsingPATCHWithHttpInfoAsync(updateMask, patchBusinessProfileRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -470,11 +470,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateMask">An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)</param>
-        /// <param name="businessProfile">businessProfile (optional)</param>
+        /// <param name="patchBusinessProfileRequest">businessProfile (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBusinessProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse>> PatchBusinessProfileUsingPATCHWithHttpInfoAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? businessProfile = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<GetBusinessProfileResponse>> PatchBusinessProfileUsingPATCHWithHttpInfoAsync(List<string>? updateMask = default(List<string>?), PatchBusinessProfileRequest? patchBusinessProfileRequest = default(PatchBusinessProfileRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -504,7 +504,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = businessProfile;
+            localVarRequestOptions.Data = patchBusinessProfileRequest;
 
             localVarRequestOptions.Operation = "BusinessProfileApi.PatchBusinessProfileUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

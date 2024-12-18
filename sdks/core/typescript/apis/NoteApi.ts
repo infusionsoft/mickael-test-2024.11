@@ -28,14 +28,14 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createNoteCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createNoteCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("NoteApi", "createNoteCustomFieldUsingPOST1", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("NoteApi", "createNoteCustomFieldUsingPOST1", "createCustomFieldRequest");
         }
 
 
@@ -53,7 +53,7 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -71,9 +71,9 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
      * Creates a new Note.
      * Create a Note
      * @param contactId contact_id
-     * @param request request
+     * @param createNoteRequest request
      */
-    public async createNoteUsingPOST1(contactId: string, request: CreateNoteRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createNoteUsingPOST1(contactId: string, createNoteRequest: CreateNoteRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'contactId' is not null or undefined
@@ -82,9 +82,9 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("NoteApi", "createNoteUsingPOST1", "request");
+        // verify required parameter 'createNoteRequest' is not null or undefined
+        if (createNoteRequest === null || createNoteRequest === undefined) {
+            throw new RequiredError("NoteApi", "createNoteUsingPOST1", "createNoteRequest");
         }
 
 
@@ -103,7 +103,7 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateNoteRequest", ""),
+            ObjectSerializer.serialize(createNoteRequest, "CreateNoteRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -405,10 +405,10 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateNotesCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -417,9 +417,9 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("NoteApi", "updateNotesCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("NoteApi", "updateNotesCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -447,7 +447,7 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

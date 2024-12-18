@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **create_contact_link_type_using_post**
-> ContactLinkType create_contact_link_type_using_post(request)
+> ContactLinkType create_contact_link_type_using_post(create_contact_link_type_request)
 
 Create a Contact Link type
 
@@ -46,11 +46,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.ContactApi(api_client)
-    request = keap_sdk_core_client.CreateContactLinkTypeRequest() # CreateContactLinkTypeRequest | request
+    create_contact_link_type_request = keap_sdk_core_client.CreateContactLinkTypeRequest() # CreateContactLinkTypeRequest | request
 
     try:
         # Create a Contact Link type
-        api_response = api_instance.create_contact_link_type_using_post(request)
+        api_response = api_instance.create_contact_link_type_using_post(create_contact_link_type_request)
         print("The response of ContactApi->create_contact_link_type_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -63,7 +63,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | 
+ **create_contact_link_type_request** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | 
 
 ### Return type
 
@@ -89,7 +89,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_contact_using_post1**
-> Contact create_contact_using_post1(contact=contact)
+> Contact create_contact_using_post1(create_patch_contact_request=create_patch_contact_request)
 
 Create a Contact
 
@@ -115,11 +115,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.ContactApi(api_client)
-    contact = keap_sdk_core_client.CreatePatchContactRequest() # CreatePatchContactRequest | contact (optional)
+    create_patch_contact_request = keap_sdk_core_client.CreatePatchContactRequest() # CreatePatchContactRequest | contact (optional)
 
     try:
         # Create a Contact
-        api_response = api_instance.create_contact_using_post1(contact=contact)
+        api_response = api_instance.create_contact_using_post1(create_patch_contact_request=create_patch_contact_request)
         print("The response of ContactApi->create_contact_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -132,7 +132,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
+ **create_patch_contact_request** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
 
 ### Return type
 
@@ -723,7 +723,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_contact_using_patch**
-> Contact patch_contact_using_patch(contact_id, update_mask=update_mask, contact=contact)
+> Contact patch_contact_using_patch(contact_id, update_mask=update_mask, create_patch_contact_request=create_patch_contact_request)
 
 Update a Contact
 
@@ -751,11 +751,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.ContactApi(api_client)
     contact_id = 'contact_id_example' # str | contact_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    contact = keap_sdk_core_client.CreatePatchContactRequest() # CreatePatchContactRequest | contact (optional)
+    create_patch_contact_request = keap_sdk_core_client.CreatePatchContactRequest() # CreatePatchContactRequest | contact (optional)
 
     try:
         # Update a Contact
-        api_response = api_instance.patch_contact_using_patch(contact_id, update_mask=update_mask, contact=contact)
+        api_response = api_instance.patch_contact_using_patch(contact_id, update_mask=update_mask, create_patch_contact_request=create_patch_contact_request)
         print("The response of ContactApi->patch_contact_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -770,7 +770,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_id** | **str**| contact_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
+ **create_patch_contact_request** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
 
 ### Return type
 

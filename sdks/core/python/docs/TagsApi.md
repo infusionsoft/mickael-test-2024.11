@@ -92,7 +92,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_tag_category_using_post1**
-> Tag create_tag_category_using_post1(request)
+> Tag create_tag_category_using_post1(create_update_tag_category_request)
 
 Create Tag Category
 
@@ -118,11 +118,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TagsApi(api_client)
-    request = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | request
+    create_update_tag_category_request = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | request
 
     try:
         # Create Tag Category
-        api_response = api_instance.create_tag_category_using_post1(request)
+        api_response = api_instance.create_tag_category_using_post1(create_update_tag_category_request)
         print("The response of TagsApi->create_tag_category_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -135,7 +135,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| request | 
+ **create_update_tag_category_request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| request | 
 
 ### Return type
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_tag_using_post1**
-> Tag create_tag_using_post1(tag)
+> Tag create_tag_using_post1(create_update_tag_request)
 
 Create Tag
 
@@ -187,11 +187,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TagsApi(api_client)
-    tag = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag
+    create_update_tag_request = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag
 
     try:
         # Create Tag
-        api_response = api_instance.create_tag_using_post1(tag)
+        api_response = api_instance.create_tag_using_post1(create_update_tag_request)
         print("The response of TagsApi->create_tag_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -204,7 +204,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | 
+ **create_update_tag_request** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | 
 
 ### Return type
 
@@ -804,7 +804,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_tag_category_using_patch**
-> UpdateTagCategoryResponse patch_tag_category_using_patch(tag_category_id, update_mask=update_mask, tag_category=tag_category)
+> UpdateTagCategoryResponse patch_tag_category_using_patch(tag_category_id, update_mask=update_mask, create_update_tag_category_request=create_update_tag_category_request)
 
 Update a Tag Category
 
@@ -832,11 +832,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.TagsApi(api_client)
     tag_category_id = 'tag_category_id_example' # str | tag_category_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    tag_category = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | tagCategory (optional)
+    create_update_tag_category_request = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | tagCategory (optional)
 
     try:
         # Update a Tag Category
-        api_response = api_instance.patch_tag_category_using_patch(tag_category_id, update_mask=update_mask, tag_category=tag_category)
+        api_response = api_instance.patch_tag_category_using_patch(tag_category_id, update_mask=update_mask, create_update_tag_category_request=create_update_tag_category_request)
         print("The response of TagsApi->patch_tag_category_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -851,7 +851,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag_category_id** | **str**| tag_category_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **tag_category** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
+ **create_update_tag_category_request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
 
 ### Return type
 
@@ -878,7 +878,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_tag_using_patch**
-> UpdateTagResponse patch_tag_using_patch(tag_id, update_mask=update_mask, tag=tag)
+> UpdateTagResponse patch_tag_using_patch(tag_id, update_mask=update_mask, create_update_tag_request=create_update_tag_request)
 
 Update a Tag
 
@@ -906,11 +906,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.TagsApi(api_client)
     tag_id = 'tag_id_example' # str | tag_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    tag = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag (optional)
+    create_update_tag_request = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag (optional)
 
     try:
         # Update a Tag
-        api_response = api_instance.patch_tag_using_patch(tag_id, update_mask=update_mask, tag=tag)
+        api_response = api_instance.patch_tag_using_patch(tag_id, update_mask=update_mask, create_update_tag_request=create_update_tag_request)
         print("The response of TagsApi->patch_tag_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -925,7 +925,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag_id** | **str**| tag_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
+ **create_update_tag_request** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
 
 ### Return type
 

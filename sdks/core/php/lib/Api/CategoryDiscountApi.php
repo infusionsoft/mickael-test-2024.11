@@ -136,16 +136,16 @@ class CategoryDiscountApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createDiscountUsingPOST($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOST($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
-        list($response) = $this->createDiscountUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createDiscountUsingPOSTWithHttpInfo($create_update_discount_request, $contentType);
         return $response;
     }
 
@@ -154,16 +154,16 @@ class CategoryDiscountApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDiscountUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTWithHttpInfo($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
-        $request = $this->createDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createDiscountUsingPOSTRequest($create_update_discount_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -349,15 +349,15 @@ class CategoryDiscountApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDiscountUsingPOSTAsync($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTAsync($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
-        return $this->createDiscountUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createDiscountUsingPOSTAsyncWithHttpInfo($create_update_discount_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -370,16 +370,16 @@ class CategoryDiscountApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDiscountUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTAsyncWithHttpInfo($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CategoryDiscount';
-        $request = $this->createDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createDiscountUsingPOSTRequest($create_update_discount_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -420,19 +420,19 @@ class CategoryDiscountApi
     /**
      * Create request for operation 'createDiscountUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDiscountUsingPOSTRequest($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTRequest($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_update_discount_request' is set
+        if ($create_update_discount_request === null || (is_array($create_update_discount_request) && count($create_update_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createDiscountUsingPOST'
+                'Missing the required parameter $create_update_discount_request when calling createDiscountUsingPOST'
             );
         }
 
@@ -455,12 +455,12 @@ class CategoryDiscountApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_update_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_update_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1168,7 +1168,7 @@ class CategoryDiscountApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -1176,9 +1176,9 @@ class CategoryDiscountApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateDiscountUsingPATCH($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCH($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
-        list($response) = $this->updateDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateDiscountUsingPATCHWithHttpInfo($discount_id, $create_update_discount_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -1188,7 +1188,7 @@ class CategoryDiscountApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -1196,9 +1196,9 @@ class CategoryDiscountApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHWithHttpInfo($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
-        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $create_update_discount_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1420,16 +1420,16 @@ class CategoryDiscountApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDiscountUsingPATCHAsync($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHAsync($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
-        return $this->updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask, $contentType)
+        return $this->updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $create_update_discount_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1443,17 +1443,17 @@ class CategoryDiscountApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CategoryDiscount';
-        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $create_update_discount_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1495,14 +1495,14 @@ class CategoryDiscountApi
      * Create request for operation 'updateDiscountUsingPATCH'
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateDiscountUsingPATCHRequest($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHRequest($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
 
         // verify the required parameter 'discount_id' is set
@@ -1512,10 +1512,10 @@ class CategoryDiscountApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_update_discount_request' is set
+        if ($create_update_discount_request === null || (is_array($create_update_discount_request) && count($create_update_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateDiscountUsingPATCH'
+                'Missing the required parameter $create_update_discount_request when calling updateDiscountUsingPATCH'
             );
         }
 
@@ -1556,12 +1556,12 @@ class CategoryDiscountApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_update_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_update_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

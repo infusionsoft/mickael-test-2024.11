@@ -357,7 +357,7 @@ No authorization required
 
 ## addCommissionProgramUsingPOST
 
-> AffiliateCommissionProgramResponse addCommissionProgramUsingPOST(insertCommissionProgram)
+> AffiliateCommissionProgramResponse addCommissionProgramUsingPOST(createCommissionProgramRequest)
 
 Create an Affiliate Commission Program
 
@@ -379,9 +379,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCommissionProgramRequest insertCommissionProgram = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
+        CreateCommissionProgramRequest createCommissionProgramRequest = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
         try {
-            AffiliateCommissionProgramResponse result = apiInstance.addCommissionProgramUsingPOST(insertCommissionProgram);
+            AffiliateCommissionProgramResponse result = apiInstance.addCommissionProgramUsingPOST(createCommissionProgramRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#addCommissionProgramUsingPOST");
@@ -399,7 +399,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **insertCommissionProgram** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
+| **createCommissionProgramRequest** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
 
 ### Return type
 
@@ -424,7 +424,7 @@ No authorization required
 
 ## addCommissionProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<AffiliateCommissionProgramResponse> addCommissionProgramUsingPOST addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram)
+> ApiResponse<AffiliateCommissionProgramResponse> addCommissionProgramUsingPOST addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest)
 
 Create an Affiliate Commission Program
 
@@ -447,9 +447,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCommissionProgramRequest insertCommissionProgram = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
+        CreateCommissionProgramRequest createCommissionProgramRequest = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
         try {
-            ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram);
+            ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -469,7 +469,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **insertCommissionProgram** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
+| **createCommissionProgramRequest** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
 
 ### Return type
 
@@ -495,7 +495,7 @@ No authorization required
 
 ## assignProductCommissionProgramUsingPOST
 
-> ProductCommissionProgram assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram)
+> ProductCommissionProgram assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest)
 
 Assign a Product Commission Program
 
@@ -518,9 +518,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateProductCommissionProgramRequest productCommissionProgram = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
+        CreateProductCommissionProgramRequest createProductCommissionProgramRequest = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
         try {
-            ProductCommissionProgram result = apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram);
+            ProductCommissionProgram result = apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#assignProductCommissionProgramUsingPOST");
@@ -539,7 +539,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **productCommissionProgram** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
+| **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
 
 ### Return type
 
@@ -564,7 +564,7 @@ No authorization required
 
 ## assignProductCommissionProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<ProductCommissionProgram> assignProductCommissionProgramUsingPOST assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram)
+> ApiResponse<ProductCommissionProgram> assignProductCommissionProgramUsingPOST assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest)
 
 Assign a Product Commission Program
 
@@ -588,9 +588,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateProductCommissionProgramRequest productCommissionProgram = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
+        CreateProductCommissionProgramRequest createProductCommissionProgramRequest = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
         try {
-            ApiResponse<ProductCommissionProgram> response = apiInstance.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram);
+            ApiResponse<ProductCommissionProgram> response = apiInstance.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -611,7 +611,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **productCommissionProgram** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
+| **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
 
 ### Return type
 
@@ -637,7 +637,7 @@ No authorization required
 
 ## assignSubscriptionCommissionProgramUsingPOST
 
-> SubscriptionCommissionProgram assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram)
+> SubscriptionCommissionProgram assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest)
 
 Assign a Subscription Commission Program
 
@@ -660,9 +660,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateSubscriptionCommissionProgramRequest subscriptionCommissionProgram = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+        CreateSubscriptionCommissionProgramRequest createSubscriptionCommissionProgramRequest = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
         try {
-            SubscriptionCommissionProgram result = apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram);
+            SubscriptionCommissionProgram result = apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#assignSubscriptionCommissionProgramUsingPOST");
@@ -681,7 +681,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
+| **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
 
 ### Return type
 
@@ -706,7 +706,7 @@ No authorization required
 
 ## assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<SubscriptionCommissionProgram> assignSubscriptionCommissionProgramUsingPOST assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram)
+> ApiResponse<SubscriptionCommissionProgram> assignSubscriptionCommissionProgramUsingPOST assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest)
 
 Assign a Subscription Commission Program
 
@@ -730,9 +730,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateSubscriptionCommissionProgramRequest subscriptionCommissionProgram = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+        CreateSubscriptionCommissionProgramRequest createSubscriptionCommissionProgramRequest = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
         try {
-            ApiResponse<SubscriptionCommissionProgram> response = apiInstance.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram);
+            ApiResponse<SubscriptionCommissionProgram> response = apiInstance.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -753,7 +753,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
+| **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
 
 ### Return type
 
@@ -919,7 +919,7 @@ No authorization required
 
 ## createAffiliateCustomFieldUsingPOST
 
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -941,9 +941,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createAffiliateCustomFieldUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createAffiliateCustomFieldUsingPOST");
@@ -961,7 +961,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -986,7 +986,7 @@ No authorization required
 
 ## createAffiliateCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createAffiliateCustomFieldUsingPOST createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createAffiliateCustomFieldUsingPOST createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -1009,9 +1009,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1031,7 +1031,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -1199,7 +1199,7 @@ No authorization required
 
 ## createDiscountUsingPOST
 
-> CategoryDiscount createDiscountUsingPOST(request)
+> CategoryDiscount createDiscountUsingPOST(createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -1221,9 +1221,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         try {
-            CategoryDiscount result = apiInstance.createDiscountUsingPOST(request);
+            CategoryDiscount result = apiInstance.createDiscountUsingPOST(createUpdateDiscountRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createDiscountUsingPOST");
@@ -1241,7 +1241,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -1266,7 +1266,7 @@ No authorization required
 
 ## createDiscountUsingPOSTWithHttpInfo
 
-> ApiResponse<CategoryDiscount> createDiscountUsingPOST createDiscountUsingPOSTWithHttpInfo(request)
+> ApiResponse<CategoryDiscount> createDiscountUsingPOST createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -1289,9 +1289,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         try {
-            ApiResponse<CategoryDiscount> response = apiInstance.createDiscountUsingPOSTWithHttpInfo(request);
+            ApiResponse<CategoryDiscount> response = apiInstance.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1311,7 +1311,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -1337,7 +1337,7 @@ No authorization required
 
 ## createDiscountUsingPOST1
 
-> ShippingDiscount createDiscountUsingPOST1(request)
+> ShippingDiscount createDiscountUsingPOST1(createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -1359,9 +1359,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateShippingDiscountRequest request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+        CreateShippingDiscountRequest createShippingDiscountRequest = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
         try {
-            ShippingDiscount result = apiInstance.createDiscountUsingPOST1(request);
+            ShippingDiscount result = apiInstance.createDiscountUsingPOST1(createShippingDiscountRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createDiscountUsingPOST1");
@@ -1379,7 +1379,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
+| **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -1404,7 +1404,7 @@ No authorization required
 
 ## createDiscountUsingPOST1WithHttpInfo
 
-> ApiResponse<ShippingDiscount> createDiscountUsingPOST1 createDiscountUsingPOST1WithHttpInfo(request)
+> ApiResponse<ShippingDiscount> createDiscountUsingPOST1 createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -1427,9 +1427,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateShippingDiscountRequest request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+        CreateShippingDiscountRequest createShippingDiscountRequest = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
         try {
-            ApiResponse<ShippingDiscount> response = apiInstance.createDiscountUsingPOST1WithHttpInfo(request);
+            ApiResponse<ShippingDiscount> response = apiInstance.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1449,7 +1449,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
+| **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -1745,7 +1745,7 @@ No authorization required
 
 ## createLeadSourceUsingPOST
 
-> LeadSource createLeadSourceUsingPOST(leadsource)
+> LeadSource createLeadSourceUsingPOST(createLeadSourceRequest)
 
 Create a Lead Source
 
@@ -1767,9 +1767,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateLeadSourceRequest leadsource = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
+        CreateLeadSourceRequest createLeadSourceRequest = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
         try {
-            LeadSource result = apiInstance.createLeadSourceUsingPOST(leadsource);
+            LeadSource result = apiInstance.createLeadSourceUsingPOST(createLeadSourceRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createLeadSourceUsingPOST");
@@ -1787,7 +1787,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
+| **createLeadSourceRequest** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
 
 ### Return type
 
@@ -1812,7 +1812,7 @@ No authorization required
 
 ## createLeadSourceUsingPOSTWithHttpInfo
 
-> ApiResponse<LeadSource> createLeadSourceUsingPOST createLeadSourceUsingPOSTWithHttpInfo(leadsource)
+> ApiResponse<LeadSource> createLeadSourceUsingPOST createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest)
 
 Create a Lead Source
 
@@ -1835,9 +1835,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateLeadSourceRequest leadsource = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
+        CreateLeadSourceRequest createLeadSourceRequest = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
         try {
-            ApiResponse<LeadSource> response = apiInstance.createLeadSourceUsingPOSTWithHttpInfo(leadsource);
+            ApiResponse<LeadSource> response = apiInstance.createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1857,7 +1857,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
+| **createLeadSourceRequest** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
 
 ### Return type
 
@@ -1883,7 +1883,7 @@ No authorization required
 
 ## createNoteCustomFieldUsingPOST1
 
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -1905,9 +1905,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST1(customField);
+            CustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST1(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createNoteCustomFieldUsingPOST1");
@@ -1925,7 +1925,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -1950,7 +1950,7 @@ No authorization required
 
 ## createNoteCustomFieldUsingPOST1WithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1 createNoteCustomFieldUsingPOST1WithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1 createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -1973,9 +1973,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createNoteCustomFieldUsingPOST1WithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1995,7 +1995,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -2021,7 +2021,7 @@ No authorization required
 
 ## createOpportunityCustomFieldsUsingPOST
 
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -2043,9 +2043,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createOpportunityCustomFieldsUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createOpportunityCustomFieldsUsingPOST");
@@ -2063,7 +2063,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -2088,7 +2088,7 @@ No authorization required
 
 ## createOpportunityCustomFieldsUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOST createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOST createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -2111,9 +2111,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -2133,7 +2133,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -2159,7 +2159,7 @@ No authorization required
 
 ## createOpportunityStageUsingPOST
 
-> RestOpportunityStage createOpportunityStageUsingPOST(opportunityStage)
+> RestOpportunityStage createOpportunityStageUsingPOST(createOpportunityStageRequest)
 
 Create an Opportunity Stage
 
@@ -2181,9 +2181,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOpportunityStageRequest opportunityStage = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
+        CreateOpportunityStageRequest createOpportunityStageRequest = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
         try {
-            RestOpportunityStage result = apiInstance.createOpportunityStageUsingPOST(opportunityStage);
+            RestOpportunityStage result = apiInstance.createOpportunityStageUsingPOST(createOpportunityStageRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createOpportunityStageUsingPOST");
@@ -2201,7 +2201,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunityStage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
+| **createOpportunityStageRequest** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -2226,7 +2226,7 @@ No authorization required
 
 ## createOpportunityStageUsingPOSTWithHttpInfo
 
-> ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOST createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage)
+> ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOST createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest)
 
 Create an Opportunity Stage
 
@@ -2249,9 +2249,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOpportunityStageRequest opportunityStage = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
+        CreateOpportunityStageRequest createOpportunityStageRequest = new CreateOpportunityStageRequest(); // CreateOpportunityStageRequest | opportunity
         try {
-            ApiResponse<RestOpportunityStage> response = apiInstance.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
+            ApiResponse<RestOpportunityStage> response = apiInstance.createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -2271,7 +2271,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunityStage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
+| **createOpportunityStageRequest** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -2297,7 +2297,7 @@ No authorization required
 
 ## createOpportunityUsingPOST1
 
-> RestV2Opportunity createOpportunityUsingPOST1(opportunity)
+> RestV2Opportunity createOpportunityUsingPOST1(createOpportunityRequest)
 
 Create an Opportunity
 
@@ -2319,9 +2319,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOpportunityRequest opportunity = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
+        CreateOpportunityRequest createOpportunityRequest = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
         try {
-            RestV2Opportunity result = apiInstance.createOpportunityUsingPOST1(opportunity);
+            RestV2Opportunity result = apiInstance.createOpportunityUsingPOST1(createOpportunityRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createOpportunityUsingPOST1");
@@ -2339,7 +2339,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
+| **createOpportunityRequest** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -2364,7 +2364,7 @@ No authorization required
 
 ## createOpportunityUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1 createOpportunityUsingPOST1WithHttpInfo(opportunity)
+> ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1 createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest)
 
 Create an Opportunity
 
@@ -2387,9 +2387,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOpportunityRequest opportunity = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
+        CreateOpportunityRequest createOpportunityRequest = new CreateOpportunityRequest(); // CreateOpportunityRequest | opportunity
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.createOpportunityUsingPOST1WithHttpInfo(opportunity);
+            ApiResponse<RestV2Opportunity> response = apiInstance.createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -2409,7 +2409,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
+| **createOpportunityRequest** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -2435,7 +2435,7 @@ No authorization required
 
 ## createOrderCustomFieldUsingPOST
 
-> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Order&#39;s Custom Field
 
@@ -2457,9 +2457,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createOrderCustomFieldUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createOrderCustomFieldUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createOrderCustomFieldUsingPOST");
@@ -2477,7 +2477,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -2502,7 +2502,7 @@ No authorization required
 
 ## createOrderCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOST createOrderCustomFieldUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOST createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create an Order&#39;s Custom Field
 
@@ -2525,9 +2525,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createOrderCustomFieldUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -2547,7 +2547,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -2715,7 +2715,7 @@ No authorization required
 
 ## createOrderTotalDiscountUsingPOST
 
-> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -2737,9 +2737,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOrderTotalDiscountRequest request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+        CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
         try {
-            OrderTotalDiscount result = apiInstance.createOrderTotalDiscountUsingPOST(request);
+            OrderTotalDiscount result = apiInstance.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createOrderTotalDiscountUsingPOST");
@@ -2757,7 +2757,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
+| **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -2782,7 +2782,7 @@ No authorization required
 
 ## createOrderTotalDiscountUsingPOSTWithHttpInfo
 
-> ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOST createOrderTotalDiscountUsingPOSTWithHttpInfo(request)
+> ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOST createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -2805,9 +2805,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOrderTotalDiscountRequest request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+        CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
         try {
-            ApiResponse<OrderTotalDiscount> response = apiInstance.createOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+            ApiResponse<OrderTotalDiscount> response = apiInstance.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -2827,7 +2827,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
+| **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -2853,7 +2853,7 @@ No authorization required
 
 ## createOrderUsingPOST1
 
-> RestV2Order createOrderUsingPOST1(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(restCreateOrderRequest)
 
 Create an Order
 
@@ -2875,9 +2875,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        RestCreateOrderRequest createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+        RestCreateOrderRequest restCreateOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
         try {
-            RestV2Order result = apiInstance.createOrderUsingPOST1(createOrderRequest);
+            RestV2Order result = apiInstance.createOrderUsingPOST1(restCreateOrderRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createOrderUsingPOST1");
@@ -2895,7 +2895,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
+| **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
 
 ### Return type
 
@@ -2920,7 +2920,7 @@ No authorization required
 
 ## createOrderUsingPOST1WithHttpInfo
 
-> ApiResponse<RestV2Order> createOrderUsingPOST1 createOrderUsingPOST1WithHttpInfo(createOrderRequest)
+> ApiResponse<RestV2Order> createOrderUsingPOST1 createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest)
 
 Create an Order
 
@@ -2943,9 +2943,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        RestCreateOrderRequest createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+        RestCreateOrderRequest restCreateOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
         try {
-            ApiResponse<RestV2Order> response = apiInstance.createOrderUsingPOST1WithHttpInfo(createOrderRequest);
+            ApiResponse<RestV2Order> response = apiInstance.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -2965,7 +2965,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
+| **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | |
 
 ### Return type
 
@@ -3129,7 +3129,7 @@ No authorization required
 
 ## createRedirectLinkUsingPOST
 
-> AffiliateLink createRedirectLinkUsingPOST(request)
+> AffiliateLink createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -3151,9 +3151,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            AffiliateLink result = apiInstance.createRedirectLinkUsingPOST(request);
+            AffiliateLink result = apiInstance.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createRedirectLinkUsingPOST");
@@ -3171,7 +3171,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -3196,7 +3196,7 @@ No authorization required
 
 ## createRedirectLinkUsingPOSTWithHttpInfo
 
-> ApiResponse<AffiliateLink> createRedirectLinkUsingPOST createRedirectLinkUsingPOSTWithHttpInfo(request)
+> ApiResponse<AffiliateLink> createRedirectLinkUsingPOST createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -3219,9 +3219,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            ApiResponse<AffiliateLink> response = apiInstance.createRedirectLinkUsingPOSTWithHttpInfo(request);
+            ApiResponse<AffiliateLink> response = apiInstance.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3241,7 +3241,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -3267,7 +3267,7 @@ No authorization required
 
 ## createReferralUsingPOST
 
-> Referral createReferralUsingPOST(request)
+> Referral createReferralUsingPOST(createReferralRequest)
 
 Create a Referral
 
@@ -3289,9 +3289,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateReferralRequest request = new CreateReferralRequest(); // CreateReferralRequest | request
+        CreateReferralRequest createReferralRequest = new CreateReferralRequest(); // CreateReferralRequest | request
         try {
-            Referral result = apiInstance.createReferralUsingPOST(request);
+            Referral result = apiInstance.createReferralUsingPOST(createReferralRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createReferralUsingPOST");
@@ -3309,7 +3309,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
+| **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
 
 ### Return type
 
@@ -3334,7 +3334,7 @@ No authorization required
 
 ## createReferralUsingPOSTWithHttpInfo
 
-> ApiResponse<Referral> createReferralUsingPOST createReferralUsingPOSTWithHttpInfo(request)
+> ApiResponse<Referral> createReferralUsingPOST createReferralUsingPOSTWithHttpInfo(createReferralRequest)
 
 Create a Referral
 
@@ -3357,9 +3357,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateReferralRequest request = new CreateReferralRequest(); // CreateReferralRequest | request
+        CreateReferralRequest createReferralRequest = new CreateReferralRequest(); // CreateReferralRequest | request
         try {
-            ApiResponse<Referral> response = apiInstance.createReferralUsingPOSTWithHttpInfo(request);
+            ApiResponse<Referral> response = apiInstance.createReferralUsingPOSTWithHttpInfo(createReferralRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3379,7 +3379,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
+| **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
 
 ### Return type
 
@@ -3405,7 +3405,7 @@ No authorization required
 
 ## createSubscriptionCustomFieldUsingPOST
 
-> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create a Subscription&#39;s Custom Field
 
@@ -3427,9 +3427,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createSubscriptionCustomFieldUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createSubscriptionCustomFieldUsingPOST");
@@ -3447,7 +3447,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -3472,7 +3472,7 @@ No authorization required
 
 ## createSubscriptionCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createSubscriptionCustomFieldUsingPOST createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createSubscriptionCustomFieldUsingPOST createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create a Subscription&#39;s Custom Field
 
@@ -3495,9 +3495,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3517,7 +3517,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -3543,7 +3543,7 @@ No authorization required
 
 ## createTaskCustomFieldUsingPOST1
 
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -3565,9 +3565,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CreateCustomFieldResponse result = apiInstance.createTaskCustomFieldUsingPOST1(customField);
+            CreateCustomFieldResponse result = apiInstance.createTaskCustomFieldUsingPOST1(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createTaskCustomFieldUsingPOST1");
@@ -3585,7 +3585,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -3610,7 +3610,7 @@ No authorization required
 
 ## createTaskCustomFieldUsingPOST1WithHttpInfo
 
-> ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1 createTaskCustomFieldUsingPOST1WithHttpInfo(customField)
+> ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1 createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -3633,9 +3633,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CreateCustomFieldResponse> response = apiInstance.createTaskCustomFieldUsingPOST1WithHttpInfo(customField);
+            ApiResponse<CreateCustomFieldResponse> response = apiInstance.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3655,7 +3655,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -3681,7 +3681,7 @@ No authorization required
 
 ## createTaskUsingPOST1
 
-> Task createTaskUsingPOST1(task)
+> Task createTaskUsingPOST1(createTaskRequest)
 
 Create a Task
 
@@ -3703,9 +3703,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateTaskRequest task = new CreateTaskRequest(); // CreateTaskRequest | task
+        CreateTaskRequest createTaskRequest = new CreateTaskRequest(); // CreateTaskRequest | task
         try {
-            Task result = apiInstance.createTaskUsingPOST1(task);
+            Task result = apiInstance.createTaskUsingPOST1(createTaskRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createTaskUsingPOST1");
@@ -3723,7 +3723,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
+| **createTaskRequest** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -3748,7 +3748,7 @@ No authorization required
 
 ## createTaskUsingPOST1WithHttpInfo
 
-> ApiResponse<Task> createTaskUsingPOST1 createTaskUsingPOST1WithHttpInfo(task)
+> ApiResponse<Task> createTaskUsingPOST1 createTaskUsingPOST1WithHttpInfo(createTaskRequest)
 
 Create a Task
 
@@ -3771,9 +3771,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateTaskRequest task = new CreateTaskRequest(); // CreateTaskRequest | task
+        CreateTaskRequest createTaskRequest = new CreateTaskRequest(); // CreateTaskRequest | task
         try {
-            ApiResponse<Task> response = apiInstance.createTaskUsingPOST1WithHttpInfo(task);
+            ApiResponse<Task> response = apiInstance.createTaskUsingPOST1WithHttpInfo(createTaskRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3793,7 +3793,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
+| **createTaskRequest** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -3819,7 +3819,7 @@ No authorization required
 
 ## createUserUsingPOST1
 
-> User createUserUsingPOST1(user)
+> User createUserUsingPOST1(createUserRequestV2)
 
 Create a User
 
@@ -3841,9 +3841,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateUserRequestV2 user = new CreateUserRequestV2(); // CreateUserRequestV2 | user
+        CreateUserRequestV2 createUserRequestV2 = new CreateUserRequestV2(); // CreateUserRequestV2 | user
         try {
-            User result = apiInstance.createUserUsingPOST1(user);
+            User result = apiInstance.createUserUsingPOST1(createUserRequestV2);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#createUserUsingPOST1");
@@ -3861,7 +3861,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
+| **createUserRequestV2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -3886,7 +3886,7 @@ No authorization required
 
 ## createUserUsingPOST1WithHttpInfo
 
-> ApiResponse<User> createUserUsingPOST1 createUserUsingPOST1WithHttpInfo(user)
+> ApiResponse<User> createUserUsingPOST1 createUserUsingPOST1WithHttpInfo(createUserRequestV2)
 
 Create a User
 
@@ -3909,9 +3909,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
-        CreateUserRequestV2 user = new CreateUserRequestV2(); // CreateUserRequestV2 | user
+        CreateUserRequestV2 createUserRequestV2 = new CreateUserRequestV2(); // CreateUserRequestV2 | user
         try {
-            ApiResponse<User> response = apiInstance.createUserUsingPOST1WithHttpInfo(user);
+            ApiResponse<User> response = apiInstance.createUserUsingPOST1WithHttpInfo(createUserRequestV2);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3931,7 +3931,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
+| **createUserRequestV2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -11697,7 +11697,7 @@ No authorization required
 
 ## patchOrderUsingPATCH
 
-> RestV2Order patchOrderUsingPATCH(orderId, updateMask, order)
+> RestV2Order patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest)
 
 Update an Order
 
@@ -11721,9 +11721,9 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
+        RestV2PatchOrderRequest restV2PatchOrderRequest = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
         try {
-            RestV2Order result = apiInstance.patchOrderUsingPATCH(orderId, updateMask, order);
+            RestV2Order result = apiInstance.patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#patchOrderUsingPATCH");
@@ -11743,7 +11743,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **orderId** | **String**| order_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
-| **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
+| **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
 
 ### Return type
 
@@ -11769,7 +11769,7 @@ No authorization required
 
 ## patchOrderUsingPATCHWithHttpInfo
 
-> ApiResponse<RestV2Order> patchOrderUsingPATCH patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order)
+> ApiResponse<RestV2Order> patchOrderUsingPATCH patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest)
 
 Update an Order
 
@@ -11794,9 +11794,9 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        RestV2PatchOrderRequest order = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
+        RestV2PatchOrderRequest restV2PatchOrderRequest = new RestV2PatchOrderRequest(); // RestV2PatchOrderRequest | order
         try {
-            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+            ApiResponse<RestV2Order> response = apiInstance.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -11818,7 +11818,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **orderId** | **String**| order_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
-| **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
+| **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] |
 
 ### Return type
 
@@ -12141,7 +12141,7 @@ No authorization required
 
 ## patchTaskUsingPATCH
 
-> UpdateTaskResponse patchTaskUsingPATCH(taskId, updateMask, task)
+> UpdateTaskResponse patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest)
 
 Update a Task
 
@@ -12165,9 +12165,9 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreatePatchTaskRequest task = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
+        CreatePatchTaskRequest createPatchTaskRequest = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
         try {
-            UpdateTaskResponse result = apiInstance.patchTaskUsingPATCH(taskId, updateMask, task);
+            UpdateTaskResponse result = apiInstance.patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#patchTaskUsingPATCH");
@@ -12187,7 +12187,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **taskId** | **String**| task_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, title, description, type, priority, completion_time, due_time, remind_time_mins, assigned_to_user_id, contact_id, completed] |
-| **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
+| **createPatchTaskRequest** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -12213,7 +12213,7 @@ No authorization required
 
 ## patchTaskUsingPATCHWithHttpInfo
 
-> ApiResponse<UpdateTaskResponse> patchTaskUsingPATCH patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task)
+> ApiResponse<UpdateTaskResponse> patchTaskUsingPATCH patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest)
 
 Update a Task
 
@@ -12238,9 +12238,9 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreatePatchTaskRequest task = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
+        CreatePatchTaskRequest createPatchTaskRequest = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
         try {
-            ApiResponse<UpdateTaskResponse> response = apiInstance.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
+            ApiResponse<UpdateTaskResponse> response = apiInstance.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -12262,7 +12262,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **taskId** | **String**| task_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, title, description, type, priority, completion_time, due_time, remind_time_mins, assigned_to_user_id, contact_id, completed] |
-| **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
+| **createPatchTaskRequest** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -12289,7 +12289,7 @@ No authorization required
 
 ## patchUserUsingPATCH
 
-> User patchUserUsingPATCH(userId, updateMask, user)
+> User patchUserUsingPATCH(userId, updateMask, patchUserRequestV2)
 
 Update User
 
@@ -12313,9 +12313,9 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
+        PatchUserRequestV2 patchUserRequestV2 = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
-            User result = apiInstance.patchUserUsingPATCH(userId, updateMask, user);
+            User result = apiInstance.patchUserUsingPATCH(userId, updateMask, patchUserRequestV2);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#patchUserUsingPATCH");
@@ -12335,7 +12335,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
-| **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
+| **patchUserRequestV2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -12361,7 +12361,7 @@ No authorization required
 
 ## patchUserUsingPATCHWithHttpInfo
 
-> ApiResponse<User> patchUserUsingPATCH patchUserUsingPATCHWithHttpInfo(userId, updateMask, user)
+> ApiResponse<User> patchUserUsingPATCH patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2)
 
 Update User
 
@@ -12386,9 +12386,9 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
+        PatchUserRequestV2 patchUserRequestV2 = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
-            ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
+            ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -12410,7 +12410,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
-| **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
+| **patchUserRequestV2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -12437,7 +12437,7 @@ No authorization required
 
 ## removeAffiliateFromProgramUsingPOST
 
-> void removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest)
+> void removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -12460,9 +12460,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String id = "id_example"; // String | id
-        AffiliateRemoveFromProgramRequest removeFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+        AffiliateRemoveFromProgramRequest affiliateRemoveFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
         try {
-            apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest);
+            apiInstance.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#removeAffiliateFromProgramUsingPOST");
             System.err.println("Status code: " + e.getCode());
@@ -12480,7 +12480,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| id | |
-| **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
+| **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
 
 ### Return type
 
@@ -12505,7 +12505,7 @@ No authorization required
 
 ## removeAffiliateFromProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<Void> removeAffiliateFromProgramUsingPOST removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest)
+> ApiResponse<Void> removeAffiliateFromProgramUsingPOST removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -12529,9 +12529,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String id = "id_example"; // String | id
-        AffiliateRemoveFromProgramRequest removeFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+        AffiliateRemoveFromProgramRequest affiliateRemoveFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
         try {
-            ApiResponse<Void> response = apiInstance.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest);
+            ApiResponse<Void> response = apiInstance.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
@@ -12551,7 +12551,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| id | |
-| **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
+| **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
 
 ### Return type
 
@@ -13245,7 +13245,7 @@ No authorization required
 
 ## updateAffiliateCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -13268,10 +13268,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateAffiliateCustomFieldUsingPATCH");
@@ -13290,7 +13290,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -13317,7 +13317,7 @@ No authorization required
 
 ## updateAffiliateCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateAffiliateCustomFieldUsingPATCH updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateAffiliateCustomFieldUsingPATCH updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -13341,10 +13341,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -13365,7 +13365,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -13393,7 +13393,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH
 
-> CategoryDiscount updateDiscountUsingPATCH(discountId, request, updateMask)
+> CategoryDiscount updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask)
 
 Update a Category Discount
 
@@ -13416,10 +13416,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CategoryDiscount result = apiInstance.updateDiscountUsingPATCH(discountId, request, updateMask);
+            CategoryDiscount result = apiInstance.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateDiscountUsingPATCH");
@@ -13438,7 +13438,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
 
 ### Return type
@@ -13465,7 +13465,7 @@ No authorization required
 
 ## updateDiscountUsingPATCHWithHttpInfo
 
-> ApiResponse<CategoryDiscount> updateDiscountUsingPATCH updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask)
+> ApiResponse<CategoryDiscount> updateDiscountUsingPATCH updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask)
 
 Update a Category Discount
 
@@ -13489,10 +13489,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CategoryDiscount> response = apiInstance.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            ApiResponse<CategoryDiscount> response = apiInstance.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -13513,7 +13513,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
 
 ### Return type
@@ -13541,7 +13541,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH1
 
-> ShippingDiscount updateDiscountUsingPATCH1(discountId, request, updateMask)
+> ShippingDiscount updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask)
 
 Update a Shipping Discount
 
@@ -13564,10 +13564,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateShippingDiscountRequest request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+        UpdateShippingDiscountRequest updateShippingDiscountRequest = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ShippingDiscount result = apiInstance.updateDiscountUsingPATCH1(discountId, request, updateMask);
+            ShippingDiscount result = apiInstance.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateDiscountUsingPATCH1");
@@ -13586,7 +13586,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
+| **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: TODO: PAPI-1452] |
 
 ### Return type
@@ -13613,7 +13613,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH1WithHttpInfo
 
-> ApiResponse<ShippingDiscount> updateDiscountUsingPATCH1 updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask)
+> ApiResponse<ShippingDiscount> updateDiscountUsingPATCH1 updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask)
 
 Update a Shipping Discount
 
@@ -13637,10 +13637,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateShippingDiscountRequest request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+        UpdateShippingDiscountRequest updateShippingDiscountRequest = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<ShippingDiscount> response = apiInstance.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+            ApiResponse<ShippingDiscount> response = apiInstance.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -13661,7 +13661,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
+| **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: TODO: PAPI-1452] |
 
 ### Return type
@@ -13689,7 +13689,7 @@ No authorization required
 
 ## updateNotesCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -13712,10 +13712,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateNotesCustomFieldUsingPATCH");
@@ -13734,7 +13734,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -13761,7 +13761,7 @@ No authorization required
 
 ## updateNotesCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCH updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCH updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -13785,10 +13785,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -13809,7 +13809,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -13837,7 +13837,7 @@ No authorization required
 
 ## updateOpportunityCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -13860,10 +13860,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateOpportunityCustomFieldUsingPATCH");
@@ -13882,7 +13882,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -13909,7 +13909,7 @@ No authorization required
 
 ## updateOpportunityCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCH updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCH updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -13933,10 +13933,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -13957,7 +13957,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -13985,7 +13985,7 @@ No authorization required
 
 ## updateOpportunityStageUsingPATCH
 
-> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, updateMask)
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask)
 
 Update an Opportunity Stage
 
@@ -14008,10 +14008,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
-        UpdateOpportunityStageRequest request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+        UpdateOpportunityStageRequest updateOpportunityStageRequest = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            RestOpportunityStage result = apiInstance.updateOpportunityStageUsingPATCH(stageId, request, updateMask);
+            RestOpportunityStage result = apiInstance.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateOpportunityStageUsingPATCH");
@@ -14030,7 +14030,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **stageId** | **String**| stage_id | |
-| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
+| **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, order, target_number_days, probability, checklist_items] |
 
 ### Return type
@@ -14057,7 +14057,7 @@ No authorization required
 
 ## updateOpportunityStageUsingPATCHWithHttpInfo
 
-> ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCH updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask)
+> ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCH updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask)
 
 Update an Opportunity Stage
 
@@ -14081,10 +14081,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String stageId = "stageId_example"; // String | stage_id
-        UpdateOpportunityStageRequest request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+        UpdateOpportunityStageRequest updateOpportunityStageRequest = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<RestOpportunityStage> response = apiInstance.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+            ApiResponse<RestOpportunityStage> response = apiInstance.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14105,7 +14105,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **stageId** | **String**| stage_id | |
-| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
+| **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, order, target_number_days, probability, checklist_items] |
 
 ### Return type
@@ -14133,7 +14133,7 @@ No authorization required
 
 ## updateOpportunityUsingPATCH
 
-> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, updateMask)
+> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask)
 
 Update an opportunity
 
@@ -14156,10 +14156,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
-        PatchOpportunityRequest request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
+        PatchOpportunityRequest patchOpportunityRequest = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            RestV2Opportunity result = apiInstance.updateOpportunityUsingPATCH(opportunityId, request, updateMask);
+            RestV2Opportunity result = apiInstance.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateOpportunityUsingPATCH");
@@ -14178,7 +14178,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **opportunityId** | **String**| opportunity_id | |
-| **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
+| **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: opportunity_title, next_action_time, next_action_notes, opportunity_notesestimated_close_time, include_in_forecast, projected_revenue_low, projected_revenue_highcontact_id, stage_id, user_id, custom_fields, affiliate_id] |
 
 ### Return type
@@ -14205,7 +14205,7 @@ No authorization required
 
 ## updateOpportunityUsingPATCHWithHttpInfo
 
-> ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCH updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask)
+> ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCH updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask)
 
 Update an opportunity
 
@@ -14229,10 +14229,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String opportunityId = "opportunityId_example"; // String | opportunity_id
-        PatchOpportunityRequest request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
+        PatchOpportunityRequest patchOpportunityRequest = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<RestV2Opportunity> response = apiInstance.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
+            ApiResponse<RestV2Opportunity> response = apiInstance.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14253,7 +14253,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **opportunityId** | **String**| opportunity_id | |
-| **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
+| **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: opportunity_title, next_action_time, next_action_notes, opportunity_notesestimated_close_time, include_in_forecast, projected_revenue_low, projected_revenue_highcontact_id, stage_id, user_id, custom_fields, affiliate_id] |
 
 ### Return type
@@ -14281,7 +14281,7 @@ No authorization required
 
 ## updateOrderCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update an Order&#39;s Custom Field
 
@@ -14304,10 +14304,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateOrderCustomFieldUsingPATCH");
@@ -14326,7 +14326,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -14353,7 +14353,7 @@ No authorization required
 
 ## updateOrderCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCH updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCH updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update an Order&#39;s Custom Field
 
@@ -14377,10 +14377,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14401,7 +14401,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -14429,7 +14429,7 @@ No authorization required
 
 ## updateOrderTotalDiscountUsingPATCH
 
-> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask)
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask)
 
 Update an Order Total Discount
 
@@ -14452,10 +14452,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateOrderTotalDiscountRequest request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+        UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            OrderTotalDiscount result = apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask);
+            OrderTotalDiscount result = apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateOrderTotalDiscountUsingPATCH");
@@ -14474,7 +14474,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
+| **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, apply_to_commissions, discount_type, discount_value, discount_strategy, criteria] |
 
 ### Return type
@@ -14501,7 +14501,7 @@ No authorization required
 
 ## updateOrderTotalDiscountUsingPATCHWithHttpInfo
 
-> ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCH updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask)
+> ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCH updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask)
 
 Update an Order Total Discount
 
@@ -14525,10 +14525,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateOrderTotalDiscountRequest request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+        UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<OrderTotalDiscount> response = apiInstance.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            ApiResponse<OrderTotalDiscount> response = apiInstance.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14549,7 +14549,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
+| **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, apply_to_commissions, discount_type, discount_value, discount_strategy, criteria] |
 
 ### Return type
@@ -14577,7 +14577,7 @@ No authorization required
 
 ## updateRedirectLinkUsingPATCH
 
-> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, request)
+> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -14600,9 +14600,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String redirectId = "redirectId_example"; // String | redirect_id
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            AffiliateLink result = apiInstance.updateRedirectLinkUsingPATCH(redirectId, request);
+            AffiliateLink result = apiInstance.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateRedirectLinkUsingPATCH");
@@ -14621,7 +14621,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **redirectId** | **String**| redirect_id | |
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -14647,7 +14647,7 @@ No authorization required
 
 ## updateRedirectLinkUsingPATCHWithHttpInfo
 
-> ApiResponse<AffiliateLink> updateRedirectLinkUsingPATCH updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request)
+> ApiResponse<AffiliateLink> updateRedirectLinkUsingPATCH updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -14671,9 +14671,9 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String redirectId = "redirectId_example"; // String | redirect_id
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            ApiResponse<AffiliateLink> response = apiInstance.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request);
+            ApiResponse<AffiliateLink> response = apiInstance.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14694,7 +14694,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **redirectId** | **String**| redirect_id | |
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -14721,7 +14721,7 @@ No authorization required
 
 ## updateSubscriptionCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Subscription&#39;s Custom Field
 
@@ -14744,10 +14744,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateSubscriptionCustomFieldUsingPATCH");
@@ -14766,7 +14766,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -14793,7 +14793,7 @@ No authorization required
 
 ## updateSubscriptionCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateSubscriptionCustomFieldUsingPATCH updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateSubscriptionCustomFieldUsingPATCH updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Subscription&#39;s Custom Field
 
@@ -14817,10 +14817,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14841,7 +14841,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -14869,7 +14869,7 @@ No authorization required
 
 ## updateTaskCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Task&#39;s Custom Field
 
@@ -14892,10 +14892,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PreReleaseApi#updateTaskCustomFieldUsingPATCH");
@@ -14914,7 +14914,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -14941,7 +14941,7 @@ No authorization required
 
 ## updateTaskCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCH updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCH updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Task&#39;s Custom Field
 
@@ -14965,10 +14965,10 @@ public class Example {
 
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -14989,7 +14989,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type

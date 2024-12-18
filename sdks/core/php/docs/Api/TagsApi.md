@@ -80,7 +80,7 @@ No authorization required
 ## `createTagCategoryUsingPOST1()`
 
 ```php
-createTagCategoryUsingPOST1($request): \Com\Keap\Sdk\Core\Model\Tag
+createTagCategoryUsingPOST1($create_update_tag_category_request): \Com\Keap\Sdk\Core\Model\Tag
 ```
 
 Create Tag Category
@@ -99,10 +99,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | request
+$create_update_tag_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | request
 
 try {
-    $result = $apiInstance->createTagCategoryUsingPOST1($request);
+    $result = $apiInstance->createTagCategoryUsingPOST1($create_update_tag_category_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->createTagCategoryUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -113,7 +113,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| request | |
+| **create_update_tag_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| request | |
 
 ### Return type
 
@@ -135,7 +135,7 @@ No authorization required
 ## `createTagUsingPOST1()`
 
 ```php
-createTagUsingPOST1($tag): \Com\Keap\Sdk\Core\Model\Tag
+createTagUsingPOST1($create_update_tag_request): \Com\Keap\Sdk\Core\Model\Tag
 ```
 
 Create Tag
@@ -154,10 +154,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$tag = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
+$create_update_tag_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
 
 try {
-    $result = $apiInstance->createTagUsingPOST1($tag);
+    $result = $apiInstance->createTagUsingPOST1($create_update_tag_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->createTagUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -168,7 +168,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **tag** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | |
+| **create_update_tag_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | |
 
 ### Return type
 
@@ -656,7 +656,7 @@ No authorization required
 ## `patchTagCategoryUsingPATCH()`
 
 ```php
-patchTagCategoryUsingPATCH($tag_category_id, $update_mask, $tag_category): \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse
+patchTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request): \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse
 ```
 
 Update a Tag Category
@@ -677,10 +677,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
 );
 $tag_category_id = 'tag_category_id_example'; // string | tag_category_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$tag_category = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
+$create_update_tag_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
 
 try {
-    $result = $apiInstance->patchTagCategoryUsingPATCH($tag_category_id, $update_mask, $tag_category);
+    $result = $apiInstance->patchTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->patchTagCategoryUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -693,7 +693,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_category_id** | **string**| tag_category_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **tag_category** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+| **create_update_tag_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
 
@@ -715,7 +715,7 @@ No authorization required
 ## `patchTagUsingPATCH()`
 
 ```php
-patchTagUsingPATCH($tag_id, $update_mask, $tag): \Com\Keap\Sdk\Core\Model\UpdateTagResponse
+patchTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request): \Com\Keap\Sdk\Core\Model\UpdateTagResponse
 ```
 
 Update a Tag
@@ -736,10 +736,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
 );
 $tag_id = 'tag_id_example'; // string | tag_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$tag = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
+$create_update_tag_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
 
 try {
-    $result = $apiInstance->patchTagUsingPATCH($tag_id, $update_mask, $tag);
+    $result = $apiInstance->patchTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->patchTagUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -752,7 +752,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_id** | **string**| tag_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **tag** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
+| **create_update_tag_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type
 

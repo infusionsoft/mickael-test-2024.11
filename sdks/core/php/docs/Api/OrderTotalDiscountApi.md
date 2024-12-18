@@ -14,7 +14,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createOrderTotalDiscountUsingPOST()`
 
 ```php
-createOrderTotalDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+createOrderTotalDiscountUsingPOST($create_order_total_discount_request): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
 ```
 
 Create an Order Total Discount
@@ -33,10 +33,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrderTotalDiscountApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest | request
+$create_order_total_discount_request = new \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest | request
 
 try {
-    $result = $apiInstance->createOrderTotalDiscountUsingPOST($request);
+    $result = $apiInstance->createOrderTotalDiscountUsingPOST($create_order_total_discount_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderTotalDiscountApi->createOrderTotalDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest**](../Model/CreateOrderTotalDiscountRequest.md)| request | |
+| **create_order_total_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest**](../Model/CreateOrderTotalDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -239,7 +239,7 @@ No authorization required
 ## `updateOrderTotalDiscountUsingPATCH()`
 
 ```php
-updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+updateOrderTotalDiscountUsingPATCH($discount_id, $update_order_total_discount_request, $update_mask): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
 ```
 
 Update an Order Total Discount
@@ -259,11 +259,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrderTotalDiscountApi(
     new GuzzleHttp\Client()
 );
 $discount_id = 'discount_id_example'; // string | discount_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest | request
+$update_order_total_discount_request = new \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask);
+    $result = $apiInstance->updateOrderTotalDiscountUsingPATCH($discount_id, $update_order_total_discount_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderTotalDiscountApi->updateOrderTotalDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -275,7 +275,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **discount_id** | **string**| discount_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest**](../Model/UpdateOrderTotalDiscountRequest.md)| request | |
+| **update_order_total_discount_request** | [**\Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest**](../Model/UpdateOrderTotalDiscountRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

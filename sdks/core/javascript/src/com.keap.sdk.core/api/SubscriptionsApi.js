@@ -100,14 +100,14 @@ export default class SubscriptionsApi {
     /**
      * Create a Subscription's Custom Field
      * Adds a custom field of the specified type and options to the Subscription object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createSubscriptionCustomFieldUsingPOST");
+    createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createSubscriptionCustomFieldUsingPOST");
       }
 
       let pathParams = {
@@ -133,11 +133,11 @@ export default class SubscriptionsApi {
     /**
      * Create a Subscription's Custom Field
      * Adds a custom field of the specified type and options to the Subscription object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createSubscriptionCustomFieldUsingPOST(customField) {
-      return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField)
+    createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest) {
+      return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -292,21 +292,21 @@ export default class SubscriptionsApi {
      * Update a Subscription's Custom Field
      * Updates a custom field of the specified type and options to the Subscription object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateSubscriptionCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateSubscriptionCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateSubscriptionCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -335,13 +335,13 @@ export default class SubscriptionsApi {
      * Update a Subscription's Custom Field
      * Updates a custom field of the specified type and options to the Subscription object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

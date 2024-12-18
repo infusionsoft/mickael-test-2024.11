@@ -24,14 +24,14 @@ export class EmailApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a Record of an Email sent to a Contact
      * Create an Email Record
-     * @param emailWithContent emailWithContent
+     * @param createEmailSentRequest emailWithContent
      */
-    public async createEmailUsingPOST1(emailWithContent: CreateEmailSentRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createEmailUsingPOST1(createEmailSentRequest: CreateEmailSentRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'emailWithContent' is not null or undefined
-        if (emailWithContent === null || emailWithContent === undefined) {
-            throw new RequiredError("EmailApi", "createEmailUsingPOST1", "emailWithContent");
+        // verify required parameter 'createEmailSentRequest' is not null or undefined
+        if (createEmailSentRequest === null || createEmailSentRequest === undefined) {
+            throw new RequiredError("EmailApi", "createEmailUsingPOST1", "createEmailSentRequest");
         }
 
 
@@ -49,7 +49,7 @@ export class EmailApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(emailWithContent, "CreateEmailSentRequest", ""),
+            ObjectSerializer.serialize(createEmailSentRequest, "CreateEmailSentRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

@@ -470,8 +470,8 @@ class ReportingApi
             $fields,
             'fields', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -479,8 +479,8 @@ class ReportingApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -488,8 +488,8 @@ class ReportingApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -497,8 +497,8 @@ class ReportingApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 

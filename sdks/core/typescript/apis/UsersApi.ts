@@ -22,9 +22,9 @@ export class UsersApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param user user
+     * @param createUserRequestV2 user
      */
-    public async createUserUsingPOST1(user?: CreateUserRequestV2, _options?: Configuration): Promise<RequestContext> {
+    public async createUserUsingPOST1(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -42,7 +42,7 @@ export class UsersApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(user, "CreateUserRequestV2", ""),
+            ObjectSerializer.serialize(createUserRequestV2, "CreateUserRequestV2", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -187,9 +187,9 @@ export class UsersApiRequestFactory extends BaseAPIRequestFactory {
      * Update User
      * @param userId user_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param user user
+     * @param patchUserRequestV2 user
      */
-    public async patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<RequestContext> {
+    public async patchUserUsingPATCH(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'userId' is not null or undefined
@@ -223,7 +223,7 @@ export class UsersApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(user, "PatchUserRequestV2", ""),
+            ObjectSerializer.serialize(patchUserRequestV2, "PatchUserRequestV2", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

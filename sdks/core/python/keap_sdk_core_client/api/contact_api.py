@@ -53,7 +53,7 @@ class ContactApi:
     @validate_call
     def create_contact_link_type_using_post(
         self,
-        request: Annotated[CreateContactLinkTypeRequest, Field(description="request")],
+        create_contact_link_type_request: Annotated[CreateContactLinkTypeRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -71,8 +71,8 @@ class ContactApi:
 
         Creates a new type of Contact Link.
 
-        :param request: request (required)
-        :type request: CreateContactLinkTypeRequest
+        :param create_contact_link_type_request: request (required)
+        :type create_contact_link_type_request: CreateContactLinkTypeRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -96,7 +96,7 @@ class ContactApi:
         """ # noqa: E501
 
         _param = self._create_contact_link_type_using_post_serialize(
-            request=request,
+            create_contact_link_type_request=create_contact_link_type_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -121,7 +121,7 @@ class ContactApi:
     @validate_call
     def create_contact_link_type_using_post_with_http_info(
         self,
-        request: Annotated[CreateContactLinkTypeRequest, Field(description="request")],
+        create_contact_link_type_request: Annotated[CreateContactLinkTypeRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -139,8 +139,8 @@ class ContactApi:
 
         Creates a new type of Contact Link.
 
-        :param request: request (required)
-        :type request: CreateContactLinkTypeRequest
+        :param create_contact_link_type_request: request (required)
+        :type create_contact_link_type_request: CreateContactLinkTypeRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -164,7 +164,7 @@ class ContactApi:
         """ # noqa: E501
 
         _param = self._create_contact_link_type_using_post_serialize(
-            request=request,
+            create_contact_link_type_request=create_contact_link_type_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -189,7 +189,7 @@ class ContactApi:
     @validate_call
     def create_contact_link_type_using_post_without_preload_content(
         self,
-        request: Annotated[CreateContactLinkTypeRequest, Field(description="request")],
+        create_contact_link_type_request: Annotated[CreateContactLinkTypeRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -207,8 +207,8 @@ class ContactApi:
 
         Creates a new type of Contact Link.
 
-        :param request: request (required)
-        :type request: CreateContactLinkTypeRequest
+        :param create_contact_link_type_request: request (required)
+        :type create_contact_link_type_request: CreateContactLinkTypeRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -232,7 +232,7 @@ class ContactApi:
         """ # noqa: E501
 
         _param = self._create_contact_link_type_using_post_serialize(
-            request=request,
+            create_contact_link_type_request=create_contact_link_type_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -252,7 +252,7 @@ class ContactApi:
 
     def _create_contact_link_type_using_post_serialize(
         self,
-        request,
+        create_contact_link_type_request,
         _request_auth,
         _content_type,
         _headers,
@@ -278,8 +278,8 @@ class ContactApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_contact_link_type_request is not None:
+            _body_params = create_contact_link_type_request
 
 
         # set the HTTP header `Accept`
@@ -329,7 +329,7 @@ class ContactApi:
     @validate_call
     def create_contact_using_post1(
         self,
-        contact: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
+        create_patch_contact_request: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -347,8 +347,8 @@ class ContactApi:
 
         Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
 
-        :param contact: contact
-        :type contact: CreatePatchContactRequest
+        :param create_patch_contact_request: contact
+        :type create_patch_contact_request: CreatePatchContactRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -372,7 +372,7 @@ class ContactApi:
         """ # noqa: E501
 
         _param = self._create_contact_using_post1_serialize(
-            contact=contact,
+            create_patch_contact_request=create_patch_contact_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -397,7 +397,7 @@ class ContactApi:
     @validate_call
     def create_contact_using_post1_with_http_info(
         self,
-        contact: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
+        create_patch_contact_request: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -415,8 +415,8 @@ class ContactApi:
 
         Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
 
-        :param contact: contact
-        :type contact: CreatePatchContactRequest
+        :param create_patch_contact_request: contact
+        :type create_patch_contact_request: CreatePatchContactRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -440,7 +440,7 @@ class ContactApi:
         """ # noqa: E501
 
         _param = self._create_contact_using_post1_serialize(
-            contact=contact,
+            create_patch_contact_request=create_patch_contact_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -465,7 +465,7 @@ class ContactApi:
     @validate_call
     def create_contact_using_post1_without_preload_content(
         self,
-        contact: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
+        create_patch_contact_request: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -483,8 +483,8 @@ class ContactApi:
 
         Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
 
-        :param contact: contact
-        :type contact: CreatePatchContactRequest
+        :param create_patch_contact_request: contact
+        :type create_patch_contact_request: CreatePatchContactRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -508,7 +508,7 @@ class ContactApi:
         """ # noqa: E501
 
         _param = self._create_contact_using_post1_serialize(
-            contact=contact,
+            create_patch_contact_request=create_patch_contact_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -528,7 +528,7 @@ class ContactApi:
 
     def _create_contact_using_post1_serialize(
         self,
-        contact,
+        create_patch_contact_request,
         _request_auth,
         _content_type,
         _headers,
@@ -554,8 +554,8 @@ class ContactApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if contact is not None:
-            _body_params = contact
+        if create_patch_contact_request is not None:
+            _body_params = create_patch_contact_request
 
 
         # set the HTTP header `Accept`
@@ -2889,7 +2889,7 @@ class ContactApi:
         self,
         contact_id: Annotated[StrictStr, Field(description="contact_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        contact: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
+        create_patch_contact_request: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2911,8 +2911,8 @@ class ContactApi:
         :type contact_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param contact: contact
-        :type contact: CreatePatchContactRequest
+        :param create_patch_contact_request: contact
+        :type create_patch_contact_request: CreatePatchContactRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2938,7 +2938,7 @@ class ContactApi:
         _param = self._patch_contact_using_patch_serialize(
             contact_id=contact_id,
             update_mask=update_mask,
-            contact=contact,
+            create_patch_contact_request=create_patch_contact_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2966,7 +2966,7 @@ class ContactApi:
         self,
         contact_id: Annotated[StrictStr, Field(description="contact_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        contact: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
+        create_patch_contact_request: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2988,8 +2988,8 @@ class ContactApi:
         :type contact_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param contact: contact
-        :type contact: CreatePatchContactRequest
+        :param create_patch_contact_request: contact
+        :type create_patch_contact_request: CreatePatchContactRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3015,7 +3015,7 @@ class ContactApi:
         _param = self._patch_contact_using_patch_serialize(
             contact_id=contact_id,
             update_mask=update_mask,
-            contact=contact,
+            create_patch_contact_request=create_patch_contact_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3043,7 +3043,7 @@ class ContactApi:
         self,
         contact_id: Annotated[StrictStr, Field(description="contact_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        contact: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
+        create_patch_contact_request: Annotated[Optional[CreatePatchContactRequest], Field(description="contact")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3065,8 +3065,8 @@ class ContactApi:
         :type contact_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param contact: contact
-        :type contact: CreatePatchContactRequest
+        :param create_patch_contact_request: contact
+        :type create_patch_contact_request: CreatePatchContactRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3092,7 +3092,7 @@ class ContactApi:
         _param = self._patch_contact_using_patch_serialize(
             contact_id=contact_id,
             update_mask=update_mask,
-            contact=contact,
+            create_patch_contact_request=create_patch_contact_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3115,7 +3115,7 @@ class ContactApi:
         self,
         contact_id,
         update_mask,
-        contact,
+        create_patch_contact_request,
         _request_auth,
         _content_type,
         _headers,
@@ -3148,8 +3148,8 @@ class ContactApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if contact is not None:
-            _body_params = contact
+        if create_patch_contact_request is not None:
+            _body_params = create_patch_contact_request
 
 
         # set the HTTP header `Accept`

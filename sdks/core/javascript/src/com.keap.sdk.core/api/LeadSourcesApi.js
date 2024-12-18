@@ -42,12 +42,12 @@ export default class LeadSourcesApi {
      * Create a Lead Source
      * Creates a new Lead Source
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} [leadsource] leadsource
+     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} [createLeadSourceRequest] leadsource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/LeadSource} and HTTP response
      */
     createLeadSourceUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['leadsource'];
+      let postBody = opts['createLeadSourceRequest'];
 
       let pathParams = {
       };
@@ -73,7 +73,7 @@ export default class LeadSourcesApi {
      * Create a Lead Source
      * Creates a new Lead Source
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} opts.leadsource leadsource
+     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} opts.createLeadSourceRequest leadsource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/LeadSource}
      */
     createLeadSourceUsingPOST(opts) {

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createDiscountUsingPOST1
 
-> ShippingDiscount createDiscountUsingPOST1(request)
+> ShippingDiscount createDiscountUsingPOST1(createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -26,8 +26,8 @@ Creates a Shipping Discount
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.ShippingDiscountApi();
-let request = new KeapCoreServiceCoreSdk.CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
-apiInstance.createDiscountUsingPOST1(request).then((data) => {
+let createShippingDiscountRequest = new KeapCoreServiceCoreSdk.CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+apiInstance.createDiscountUsingPOST1(createShippingDiscountRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -40,7 +40,7 @@ apiInstance.createDiscountUsingPOST1(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
+ **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -200,7 +200,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH1
 
-> ShippingDiscount updateDiscountUsingPATCH1(discountId, request, opts)
+> ShippingDiscount updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, opts)
 
 Update a Shipping Discount
 
@@ -213,11 +213,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.ShippingDiscountApi();
 let discountId = "discountId_example"; // String | discount_id
-let request = new KeapCoreServiceCoreSdk.UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+let updateShippingDiscountRequest = new KeapCoreServiceCoreSdk.UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateDiscountUsingPATCH1(discountId, request, opts).then((data) => {
+apiInstance.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -231,7 +231,7 @@ apiInstance.updateDiscountUsingPATCH1(discountId, request, opts).then((data) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discountId** | **String**| discount_id | 
- **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
+ **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

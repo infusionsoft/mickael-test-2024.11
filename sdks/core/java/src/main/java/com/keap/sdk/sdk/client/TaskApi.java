@@ -105,24 +105,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Custom Field
    * Adds a custom field of the specified type and options to the Task object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return CreateCustomFieldResponse
    * @throws ApiException if fails to make API call
    */
-  public CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(CreateCustomFieldRequest customField) throws ApiException {
-    ApiResponse<CreateCustomFieldResponse> localVarResponse = createTaskCustomFieldUsingPOST1WithHttpInfo(customField);
+  public CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    ApiResponse<CreateCustomFieldResponse> localVarResponse = createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Custom Field
    * Adds a custom field of the specified type and options to the Task object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return ApiResponse&lt;CreateCustomFieldResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest customField) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createTaskCustomFieldUsingPOST1RequestBuilder(customField);
+  public ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createTaskCustomFieldUsingPOST1RequestBuilder(createCustomFieldRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -162,10 +162,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createTaskCustomFieldUsingPOST1RequestBuilder(CreateCustomFieldRequest customField) throws ApiException {
-    // verify the required parameter 'customField' is set
-    if (customField == null) {
-      throw new ApiException(400, "Missing the required parameter 'customField' when calling createTaskCustomFieldUsingPOST1");
+  private HttpRequest.Builder createTaskCustomFieldUsingPOST1RequestBuilder(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    // verify the required parameter 'createCustomFieldRequest' is set
+    if (createCustomFieldRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createCustomFieldRequest' when calling createTaskCustomFieldUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -179,7 +179,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(customField);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createCustomFieldRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -196,24 +196,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Task
    * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
-   * @param task task (optional)
+   * @param createTaskRequest task (optional)
    * @return Task
    * @throws ApiException if fails to make API call
    */
-  public Task createTaskUsingPOST1(CreateTaskRequest task) throws ApiException {
-    ApiResponse<Task> localVarResponse = createTaskUsingPOST1WithHttpInfo(task);
+  public Task createTaskUsingPOST1(CreateTaskRequest createTaskRequest) throws ApiException {
+    ApiResponse<Task> localVarResponse = createTaskUsingPOST1WithHttpInfo(createTaskRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Task
    * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
-   * @param task task (optional)
+   * @param createTaskRequest task (optional)
    * @return ApiResponse&lt;Task&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Task> createTaskUsingPOST1WithHttpInfo(CreateTaskRequest task) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createTaskUsingPOST1RequestBuilder(task);
+  public ApiResponse<Task> createTaskUsingPOST1WithHttpInfo(CreateTaskRequest createTaskRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createTaskUsingPOST1RequestBuilder(createTaskRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -253,7 +253,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createTaskUsingPOST1RequestBuilder(CreateTaskRequest task) throws ApiException {
+  private HttpRequest.Builder createTaskUsingPOST1RequestBuilder(CreateTaskRequest createTaskRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -266,7 +266,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(task);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createTaskRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -665,12 +665,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a task with only the values provided in the request.  This endpoint does not currently support updating Custom Field values.
    * @param taskId task_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param task task (optional)
+   * @param createPatchTaskRequest task (optional)
    * @return UpdateTaskResponse
    * @throws ApiException if fails to make API call
    */
-  public UpdateTaskResponse patchTaskUsingPATCH(String taskId, List<String> updateMask, CreatePatchTaskRequest task) throws ApiException {
-    ApiResponse<UpdateTaskResponse> localVarResponse = patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
+  public UpdateTaskResponse patchTaskUsingPATCH(String taskId, List<String> updateMask, CreatePatchTaskRequest createPatchTaskRequest) throws ApiException {
+    ApiResponse<UpdateTaskResponse> localVarResponse = patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest);
     return localVarResponse.getData();
   }
 
@@ -679,12 +679,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a task with only the values provided in the request.  This endpoint does not currently support updating Custom Field values.
    * @param taskId task_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param task task (optional)
+   * @param createPatchTaskRequest task (optional)
    * @return ApiResponse&lt;UpdateTaskResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<UpdateTaskResponse> patchTaskUsingPATCHWithHttpInfo(String taskId, List<String> updateMask, CreatePatchTaskRequest task) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchTaskUsingPATCHRequestBuilder(taskId, updateMask, task);
+  public ApiResponse<UpdateTaskResponse> patchTaskUsingPATCHWithHttpInfo(String taskId, List<String> updateMask, CreatePatchTaskRequest createPatchTaskRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchTaskUsingPATCHRequestBuilder(taskId, updateMask, createPatchTaskRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -724,7 +724,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchTaskUsingPATCHRequestBuilder(String taskId, List<String> updateMask, CreatePatchTaskRequest task) throws ApiException {
+  private HttpRequest.Builder patchTaskUsingPATCHRequestBuilder(String taskId, List<String> updateMask, CreatePatchTaskRequest createPatchTaskRequest) throws ApiException {
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
       throw new ApiException(400, "Missing the required parameter 'taskId' when calling patchTaskUsingPATCH");
@@ -757,7 +757,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(task);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createPatchTaskRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -854,13 +854,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Task&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Task object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData updateTaskCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+  public CustomFieldMetaData updateTaskCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -868,13 +868,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Task&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Task object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateTaskCustomFieldUsingPATCHRequestBuilder(customFieldId, request, updateMask);
+  public ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateTaskCustomFieldUsingPATCHRequestBuilder(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -914,14 +914,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateTaskCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateTaskCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
       throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling updateTaskCustomFieldUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateTaskCustomFieldUsingPATCH");
+    // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+    if (updateCustomFieldMetaDataRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateTaskCustomFieldUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -951,7 +951,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateCustomFieldMetaDataRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates an Order Total Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderTotalDiscount</returns>
-        OrderTotalDiscount CreateOrderTotalDiscountUsingPOST(CreateOrderTotalDiscountRequest request, int operationIndex = 0);
+        OrderTotalDiscount CreateOrderTotalDiscountUsingPOST(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create an Order Total Discount
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates an Order Total Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderTotalDiscount</returns>
-        ApiResponse<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTWithHttpInfo(CreateOrderTotalDiscountRequest request, int operationIndex = 0);
+        ApiResponse<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTWithHttpInfo(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0);
         /// <summary>
         /// Delete an Order Total Discount
         /// </summary>
@@ -134,11 +134,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderTotalDiscount</returns>
-        OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update an Order Total Discount
@@ -148,11 +148,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderTotalDiscount</returns>
-        ApiResponse<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -169,11 +169,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates an Order Total Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTotalDiscount</returns>
-        System.Threading.Tasks.Task<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTAsync(CreateOrderTotalDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTAsync(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Order Total Discount
@@ -182,11 +182,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates an Order Total Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTotalDiscount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderTotalDiscount>> CreateOrderTotalDiscountUsingPOSTWithHttpInfoAsync(CreateOrderTotalDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderTotalDiscount>> CreateOrderTotalDiscountUsingPOSTWithHttpInfoAsync(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an Order Total Discount
         /// </summary>
@@ -276,12 +276,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTotalDiscount</returns>
-        System.Threading.Tasks.Task<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHAsync(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHAsync(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update an Order Total Discount
@@ -291,12 +291,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTotalDiscount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderTotalDiscount>> UpdateOrderTotalDiscountUsingPATCHWithHttpInfoAsync(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderTotalDiscount>> UpdateOrderTotalDiscountUsingPATCHWithHttpInfoAsync(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -421,12 +421,12 @@ namespace Keap.Sdk.Core.Api
         /// Create an Order Total Discount Creates an Order Total Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderTotalDiscount</returns>
-        public OrderTotalDiscount CreateOrderTotalDiscountUsingPOST(CreateOrderTotalDiscountRequest request, int operationIndex = 0)
+        public OrderTotalDiscount CreateOrderTotalDiscountUsingPOST(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = CreateOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = CreateOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest);
             return localVarResponse.Data;
         }
 
@@ -434,15 +434,15 @@ namespace Keap.Sdk.Core.Api
         /// Create an Order Total Discount Creates an Order Total Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderTotalDiscount</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTWithHttpInfo(CreateOrderTotalDiscountRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTWithHttpInfo(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createOrderTotalDiscountRequest' is set
+            if (createOrderTotalDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OrderTotalDiscountApi->CreateOrderTotalDiscountUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createOrderTotalDiscountRequest' when calling OrderTotalDiscountApi->CreateOrderTotalDiscountUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -468,7 +468,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createOrderTotalDiscountRequest;
 
             localVarRequestOptions.Operation = "OrderTotalDiscountApi.CreateOrderTotalDiscountUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -492,13 +492,13 @@ namespace Keap.Sdk.Core.Api
         /// Create an Order Total Discount Creates an Order Total Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTotalDiscount</returns>
-        public async System.Threading.Tasks.Task<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTAsync(CreateOrderTotalDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderTotalDiscount> CreateOrderTotalDiscountUsingPOSTAsync(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = await CreateOrderTotalDiscountUsingPOSTWithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = await CreateOrderTotalDiscountUsingPOSTWithHttpInfoAsync(createOrderTotalDiscountRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -506,16 +506,16 @@ namespace Keap.Sdk.Core.Api
         /// Create an Order Total Discount Creates an Order Total Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createOrderTotalDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTotalDiscount)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount>> CreateOrderTotalDiscountUsingPOSTWithHttpInfoAsync(CreateOrderTotalDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount>> CreateOrderTotalDiscountUsingPOSTWithHttpInfoAsync(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createOrderTotalDiscountRequest' is set
+            if (createOrderTotalDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OrderTotalDiscountApi->CreateOrderTotalDiscountUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createOrderTotalDiscountRequest' when calling OrderTotalDiscountApi->CreateOrderTotalDiscountUsingPOST");
             }
 
 
@@ -542,7 +542,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createOrderTotalDiscountRequest;
 
             localVarRequestOptions.Operation = "OrderTotalDiscountApi.CreateOrderTotalDiscountUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1028,13 +1028,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OrderTotalDiscount</returns>
-        public OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public OrderTotalDiscount UpdateOrderTotalDiscountUsingPATCH(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask);
             return localVarResponse.Data;
         }
 
@@ -1043,11 +1043,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderTotalDiscount</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHWithHttpInfo(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
@@ -1055,10 +1055,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling OrderTotalDiscountApi->UpdateOrderTotalDiscountUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateOrderTotalDiscountRequest' is set
+            if (updateOrderTotalDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OrderTotalDiscountApi->UpdateOrderTotalDiscountUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateOrderTotalDiscountRequest' when calling OrderTotalDiscountApi->UpdateOrderTotalDiscountUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1089,7 +1089,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateOrderTotalDiscountRequest;
 
             localVarRequestOptions.Operation = "OrderTotalDiscountApi.UpdateOrderTotalDiscountUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1114,14 +1114,14 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTotalDiscount</returns>
-        public async System.Threading.Tasks.Task<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHAsync(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderTotalDiscount> UpdateOrderTotalDiscountUsingPATCHAsync(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = await UpdateOrderTotalDiscountUsingPATCHWithHttpInfoAsync(discountId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount> localVarResponse = await UpdateOrderTotalDiscountUsingPATCHWithHttpInfoAsync(discountId, updateOrderTotalDiscountRequest, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1130,12 +1130,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOrderTotalDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTotalDiscount)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount>> UpdateOrderTotalDiscountUsingPATCHWithHttpInfoAsync(string discountId, UpdateOrderTotalDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<OrderTotalDiscount>> UpdateOrderTotalDiscountUsingPATCHWithHttpInfoAsync(string discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
@@ -1143,10 +1143,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling OrderTotalDiscountApi->UpdateOrderTotalDiscountUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateOrderTotalDiscountRequest' is set
+            if (updateOrderTotalDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OrderTotalDiscountApi->UpdateOrderTotalDiscountUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateOrderTotalDiscountRequest' when calling OrderTotalDiscountApi->UpdateOrderTotalDiscountUsingPATCH");
             }
 
 
@@ -1178,7 +1178,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateOrderTotalDiscountRequest;
 
             localVarRequestOptions.Operation = "OrderTotalDiscountApi.UpdateOrderTotalDiscountUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

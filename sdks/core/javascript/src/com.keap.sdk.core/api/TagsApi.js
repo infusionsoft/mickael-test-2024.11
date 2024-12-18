@@ -104,14 +104,14 @@ export default class TagsApi {
     /**
      * Create Tag Category
      * Creates a new Tag Category.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} createUpdateTagCategoryRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Tag} and HTTP response
      */
-    createTagCategoryUsingPOST1WithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createTagCategoryUsingPOST1");
+    createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest) {
+      let postBody = createUpdateTagCategoryRequest;
+      // verify the required parameter 'createUpdateTagCategoryRequest' is set
+      if (createUpdateTagCategoryRequest === undefined || createUpdateTagCategoryRequest === null) {
+        throw new Error("Missing the required parameter 'createUpdateTagCategoryRequest' when calling createTagCategoryUsingPOST1");
       }
 
       let pathParams = {
@@ -137,11 +137,11 @@ export default class TagsApi {
     /**
      * Create Tag Category
      * Creates a new Tag Category.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} createUpdateTagCategoryRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Tag}
      */
-    createTagCategoryUsingPOST1(request) {
-      return this.createTagCategoryUsingPOST1WithHttpInfo(request)
+    createTagCategoryUsingPOST1(createUpdateTagCategoryRequest) {
+      return this.createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -151,14 +151,14 @@ export default class TagsApi {
     /**
      * Create Tag
      * Creates a new Tag
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} tag tag
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} createUpdateTagRequest tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Tag} and HTTP response
      */
-    createTagUsingPOST1WithHttpInfo(tag) {
-      let postBody = tag;
-      // verify the required parameter 'tag' is set
-      if (tag === undefined || tag === null) {
-        throw new Error("Missing the required parameter 'tag' when calling createTagUsingPOST1");
+    createTagUsingPOST1WithHttpInfo(createUpdateTagRequest) {
+      let postBody = createUpdateTagRequest;
+      // verify the required parameter 'createUpdateTagRequest' is set
+      if (createUpdateTagRequest === undefined || createUpdateTagRequest === null) {
+        throw new Error("Missing the required parameter 'createUpdateTagRequest' when calling createTagUsingPOST1");
       }
 
       let pathParams = {
@@ -184,11 +184,11 @@ export default class TagsApi {
     /**
      * Create Tag
      * Creates a new Tag
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} tag tag
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} createUpdateTagRequest tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Tag}
      */
-    createTagUsingPOST1(tag) {
-      return this.createTagUsingPOST1WithHttpInfo(tag)
+    createTagUsingPOST1(createUpdateTagRequest) {
+      return this.createTagUsingPOST1WithHttpInfo(createUpdateTagRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -631,12 +631,12 @@ export default class TagsApi {
      * @param {String} tagCategoryId tag_category_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} [tagCategory] tagCategory
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} [createUpdateTagCategoryRequest] tagCategory
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/UpdateTagCategoryResponse} and HTTP response
      */
     patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, opts) {
       opts = opts || {};
-      let postBody = opts['tagCategory'];
+      let postBody = opts['createUpdateTagCategoryRequest'];
       // verify the required parameter 'tagCategoryId' is set
       if (tagCategoryId === undefined || tagCategoryId === null) {
         throw new Error("Missing the required parameter 'tagCategoryId' when calling patchTagCategoryUsingPATCH");
@@ -670,7 +670,7 @@ export default class TagsApi {
      * @param {String} tagCategoryId tag_category_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} opts.tagCategory tagCategory
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagCategoryRequest} opts.createUpdateTagCategoryRequest tagCategory
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/UpdateTagCategoryResponse}
      */
     patchTagCategoryUsingPATCH(tagCategoryId, opts) {
@@ -687,12 +687,12 @@ export default class TagsApi {
      * @param {String} tagId tag_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} [tag] tag
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} [createUpdateTagRequest] tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/UpdateTagResponse} and HTTP response
      */
     patchTagUsingPATCHWithHttpInfo(tagId, opts) {
       opts = opts || {};
-      let postBody = opts['tag'];
+      let postBody = opts['createUpdateTagRequest'];
       // verify the required parameter 'tagId' is set
       if (tagId === undefined || tagId === null) {
         throw new Error("Missing the required parameter 'tagId' when calling patchTagUsingPATCH");
@@ -726,7 +726,7 @@ export default class TagsApi {
      * @param {String} tagId tag_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} opts.tag tag
+     * @param {module:com.keap.sdk.core/model/CreateUpdateTagRequest} opts.createUpdateTagRequest tag
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/UpdateTagResponse}
      */
     patchTagUsingPATCH(tagId, opts) {

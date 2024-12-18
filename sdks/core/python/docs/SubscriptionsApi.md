@@ -81,7 +81,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_subscription_custom_field_using_post**
-> CustomFieldMetaData create_subscription_custom_field_using_post(custom_field)
+> CustomFieldMetaData create_subscription_custom_field_using_post(create_custom_field_request)
 
 Create a Subscription's Custom Field
 
@@ -107,11 +107,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.SubscriptionsApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create a Subscription's Custom Field
-        api_response = api_instance.create_subscription_custom_field_using_post(custom_field)
+        api_response = api_instance.create_subscription_custom_field_using_post(create_custom_field_request)
         print("The response of SubscriptionsApi->create_subscription_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -124,7 +124,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -359,7 +359,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_subscription_custom_field_using_patch**
-> CustomFieldMetaData update_subscription_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_subscription_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Subscription's Custom Field
 
@@ -386,12 +386,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.SubscriptionsApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Subscription's Custom Field
-        api_response = api_instance.update_subscription_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_subscription_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of SubscriptionsApi->update_subscription_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -405,7 +405,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

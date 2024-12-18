@@ -52,7 +52,7 @@ class NoteApi:
     @validate_call
     def create_note_custom_field_using_post1(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -70,8 +70,8 @@ class NoteApi:
 
         Adds a custom field of the specified type and options to the Note object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -95,7 +95,7 @@ class NoteApi:
         """ # noqa: E501
 
         _param = self._create_note_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -120,7 +120,7 @@ class NoteApi:
     @validate_call
     def create_note_custom_field_using_post1_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -138,8 +138,8 @@ class NoteApi:
 
         Adds a custom field of the specified type and options to the Note object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -163,7 +163,7 @@ class NoteApi:
         """ # noqa: E501
 
         _param = self._create_note_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -188,7 +188,7 @@ class NoteApi:
     @validate_call
     def create_note_custom_field_using_post1_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -206,8 +206,8 @@ class NoteApi:
 
         Adds a custom field of the specified type and options to the Note object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -231,7 +231,7 @@ class NoteApi:
         """ # noqa: E501
 
         _param = self._create_note_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -251,7 +251,7 @@ class NoteApi:
 
     def _create_note_custom_field_using_post1_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -277,8 +277,8 @@ class NoteApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -329,7 +329,7 @@ class NoteApi:
     def create_note_using_post1(
         self,
         contact_id: Annotated[StrictStr, Field(description="contact_id")],
-        request: Annotated[CreateNoteRequest, Field(description="request")],
+        create_note_request: Annotated[CreateNoteRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -349,8 +349,8 @@ class NoteApi:
 
         :param contact_id: contact_id (required)
         :type contact_id: str
-        :param request: request (required)
-        :type request: CreateNoteRequest
+        :param create_note_request: request (required)
+        :type create_note_request: CreateNoteRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -375,7 +375,7 @@ class NoteApi:
 
         _param = self._create_note_using_post1_serialize(
             contact_id=contact_id,
-            request=request,
+            create_note_request=create_note_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -401,7 +401,7 @@ class NoteApi:
     def create_note_using_post1_with_http_info(
         self,
         contact_id: Annotated[StrictStr, Field(description="contact_id")],
-        request: Annotated[CreateNoteRequest, Field(description="request")],
+        create_note_request: Annotated[CreateNoteRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -421,8 +421,8 @@ class NoteApi:
 
         :param contact_id: contact_id (required)
         :type contact_id: str
-        :param request: request (required)
-        :type request: CreateNoteRequest
+        :param create_note_request: request (required)
+        :type create_note_request: CreateNoteRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -447,7 +447,7 @@ class NoteApi:
 
         _param = self._create_note_using_post1_serialize(
             contact_id=contact_id,
-            request=request,
+            create_note_request=create_note_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -473,7 +473,7 @@ class NoteApi:
     def create_note_using_post1_without_preload_content(
         self,
         contact_id: Annotated[StrictStr, Field(description="contact_id")],
-        request: Annotated[CreateNoteRequest, Field(description="request")],
+        create_note_request: Annotated[CreateNoteRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -493,8 +493,8 @@ class NoteApi:
 
         :param contact_id: contact_id (required)
         :type contact_id: str
-        :param request: request (required)
-        :type request: CreateNoteRequest
+        :param create_note_request: request (required)
+        :type create_note_request: CreateNoteRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -519,7 +519,7 @@ class NoteApi:
 
         _param = self._create_note_using_post1_serialize(
             contact_id=contact_id,
-            request=request,
+            create_note_request=create_note_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -540,7 +540,7 @@ class NoteApi:
     def _create_note_using_post1_serialize(
         self,
         contact_id,
-        request,
+        create_note_request,
         _request_auth,
         _content_type,
         _headers,
@@ -568,8 +568,8 @@ class NoteApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_note_request is not None:
+            _body_params = create_note_request
 
 
         # set the HTTP header `Accept`
@@ -2413,7 +2413,7 @@ class NoteApi:
     def update_notes_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2434,8 +2434,8 @@ class NoteApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2462,7 +2462,7 @@ class NoteApi:
 
         _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2490,7 +2490,7 @@ class NoteApi:
     def update_notes_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2511,8 +2511,8 @@ class NoteApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2539,7 +2539,7 @@ class NoteApi:
 
         _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2567,7 +2567,7 @@ class NoteApi:
     def update_notes_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2588,8 +2588,8 @@ class NoteApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2616,7 +2616,7 @@ class NoteApi:
 
         _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2639,7 +2639,7 @@ class NoteApi:
     def _update_notes_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -2673,8 +2673,8 @@ class NoteApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`

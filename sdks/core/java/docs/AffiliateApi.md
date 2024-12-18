@@ -207,7 +207,7 @@ No authorization required
 
 ## addAffiliateUsingPOST
 
-> RestAffiliate addAffiliateUsingPOST(insertAffiliate)
+> RestAffiliate addAffiliateUsingPOST(createAffiliateRequest)
 
 Create an Affiliate
 
@@ -229,9 +229,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateAffiliateRequest insertAffiliate = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
+        CreateAffiliateRequest createAffiliateRequest = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
         try {
-            RestAffiliate result = apiInstance.addAffiliateUsingPOST(insertAffiliate);
+            RestAffiliate result = apiInstance.addAffiliateUsingPOST(createAffiliateRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#addAffiliateUsingPOST");
@@ -249,7 +249,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **insertAffiliate** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
+| **createAffiliateRequest** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
 
 ### Return type
 
@@ -274,7 +274,7 @@ No authorization required
 
 ## addAffiliateUsingPOSTWithHttpInfo
 
-> ApiResponse<RestAffiliate> addAffiliateUsingPOST addAffiliateUsingPOSTWithHttpInfo(insertAffiliate)
+> ApiResponse<RestAffiliate> addAffiliateUsingPOST addAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest)
 
 Create an Affiliate
 
@@ -297,9 +297,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateAffiliateRequest insertAffiliate = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
+        CreateAffiliateRequest createAffiliateRequest = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
         try {
-            ApiResponse<RestAffiliate> response = apiInstance.addAffiliateUsingPOSTWithHttpInfo(insertAffiliate);
+            ApiResponse<RestAffiliate> response = apiInstance.addAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -319,7 +319,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **insertAffiliate** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
+| **createAffiliateRequest** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
 
 ### Return type
 
@@ -345,7 +345,7 @@ No authorization required
 
 ## addCommissionProgramUsingPOST
 
-> AffiliateCommissionProgramResponse addCommissionProgramUsingPOST(insertCommissionProgram)
+> AffiliateCommissionProgramResponse addCommissionProgramUsingPOST(createCommissionProgramRequest)
 
 Create an Affiliate Commission Program
 
@@ -367,9 +367,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateCommissionProgramRequest insertCommissionProgram = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
+        CreateCommissionProgramRequest createCommissionProgramRequest = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
         try {
-            AffiliateCommissionProgramResponse result = apiInstance.addCommissionProgramUsingPOST(insertCommissionProgram);
+            AffiliateCommissionProgramResponse result = apiInstance.addCommissionProgramUsingPOST(createCommissionProgramRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#addCommissionProgramUsingPOST");
@@ -387,7 +387,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **insertCommissionProgram** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
+| **createCommissionProgramRequest** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
 
 ### Return type
 
@@ -412,7 +412,7 @@ No authorization required
 
 ## addCommissionProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<AffiliateCommissionProgramResponse> addCommissionProgramUsingPOST addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram)
+> ApiResponse<AffiliateCommissionProgramResponse> addCommissionProgramUsingPOST addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest)
 
 Create an Affiliate Commission Program
 
@@ -435,9 +435,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateCommissionProgramRequest insertCommissionProgram = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
+        CreateCommissionProgramRequest createCommissionProgramRequest = new CreateCommissionProgramRequest(); // CreateCommissionProgramRequest | Commission Program to insert
         try {
-            ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram);
+            ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -457,7 +457,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **insertCommissionProgram** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
+| **createCommissionProgramRequest** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
 
 ### Return type
 
@@ -483,7 +483,7 @@ No authorization required
 
 ## assignProductCommissionProgramUsingPOST
 
-> ProductCommissionProgram assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram)
+> ProductCommissionProgram assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest)
 
 Assign a Product Commission Program
 
@@ -506,9 +506,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateProductCommissionProgramRequest productCommissionProgram = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
+        CreateProductCommissionProgramRequest createProductCommissionProgramRequest = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
         try {
-            ProductCommissionProgram result = apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram);
+            ProductCommissionProgram result = apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#assignProductCommissionProgramUsingPOST");
@@ -527,7 +527,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **productCommissionProgram** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
+| **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
 
 ### Return type
 
@@ -552,7 +552,7 @@ No authorization required
 
 ## assignProductCommissionProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<ProductCommissionProgram> assignProductCommissionProgramUsingPOST assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram)
+> ApiResponse<ProductCommissionProgram> assignProductCommissionProgramUsingPOST assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest)
 
 Assign a Product Commission Program
 
@@ -576,9 +576,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateProductCommissionProgramRequest productCommissionProgram = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
+        CreateProductCommissionProgramRequest createProductCommissionProgramRequest = new CreateProductCommissionProgramRequest(); // CreateProductCommissionProgramRequest | Product Commission Program
         try {
-            ApiResponse<ProductCommissionProgram> response = apiInstance.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram);
+            ApiResponse<ProductCommissionProgram> response = apiInstance.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -599,7 +599,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **productCommissionProgram** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
+| **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
 
 ### Return type
 
@@ -625,7 +625,7 @@ No authorization required
 
 ## assignSubscriptionCommissionProgramUsingPOST
 
-> SubscriptionCommissionProgram assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram)
+> SubscriptionCommissionProgram assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest)
 
 Assign a Subscription Commission Program
 
@@ -648,9 +648,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateSubscriptionCommissionProgramRequest subscriptionCommissionProgram = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+        CreateSubscriptionCommissionProgramRequest createSubscriptionCommissionProgramRequest = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
         try {
-            SubscriptionCommissionProgram result = apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram);
+            SubscriptionCommissionProgram result = apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#assignSubscriptionCommissionProgramUsingPOST");
@@ -669,7 +669,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
+| **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
 
 ### Return type
 
@@ -694,7 +694,7 @@ No authorization required
 
 ## assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<SubscriptionCommissionProgram> assignSubscriptionCommissionProgramUsingPOST assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram)
+> ApiResponse<SubscriptionCommissionProgram> assignSubscriptionCommissionProgramUsingPOST assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest)
 
 Assign a Subscription Commission Program
 
@@ -718,9 +718,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
-        CreateSubscriptionCommissionProgramRequest subscriptionCommissionProgram = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+        CreateSubscriptionCommissionProgramRequest createSubscriptionCommissionProgramRequest = new CreateSubscriptionCommissionProgramRequest(); // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
         try {
-            ApiResponse<SubscriptionCommissionProgram> response = apiInstance.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram);
+            ApiResponse<SubscriptionCommissionProgram> response = apiInstance.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -741,7 +741,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **commissionProgramId** | **String**| commission_program_id | |
-| **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
+| **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
 
 ### Return type
 
@@ -767,7 +767,7 @@ No authorization required
 
 ## createAffiliateCustomFieldUsingPOST
 
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -789,9 +789,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createAffiliateCustomFieldUsingPOST(customField);
+            CustomFieldMetaData result = apiInstance.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#createAffiliateCustomFieldUsingPOST");
@@ -809,7 +809,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -834,7 +834,7 @@ No authorization required
 
 ## createAffiliateCustomFieldUsingPOSTWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createAffiliateCustomFieldUsingPOST createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createAffiliateCustomFieldUsingPOST createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -857,9 +857,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -879,7 +879,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -1047,7 +1047,7 @@ No authorization required
 
 ## createRedirectLinkUsingPOST
 
-> AffiliateLink createRedirectLinkUsingPOST(request)
+> AffiliateLink createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -1069,9 +1069,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            AffiliateLink result = apiInstance.createRedirectLinkUsingPOST(request);
+            AffiliateLink result = apiInstance.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#createRedirectLinkUsingPOST");
@@ -1089,7 +1089,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -1114,7 +1114,7 @@ No authorization required
 
 ## createRedirectLinkUsingPOSTWithHttpInfo
 
-> ApiResponse<AffiliateLink> createRedirectLinkUsingPOST createRedirectLinkUsingPOSTWithHttpInfo(request)
+> ApiResponse<AffiliateLink> createRedirectLinkUsingPOST createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -1137,9 +1137,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            ApiResponse<AffiliateLink> response = apiInstance.createRedirectLinkUsingPOSTWithHttpInfo(request);
+            ApiResponse<AffiliateLink> response = apiInstance.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1159,7 +1159,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -3495,7 +3495,7 @@ No authorization required
 
 ## removeAffiliateFromProgramUsingPOST
 
-> void removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest)
+> void removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -3518,9 +3518,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
-        AffiliateRemoveFromProgramRequest removeFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+        AffiliateRemoveFromProgramRequest affiliateRemoveFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
         try {
-            apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest);
+            apiInstance.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#removeAffiliateFromProgramUsingPOST");
             System.err.println("Status code: " + e.getCode());
@@ -3538,7 +3538,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| id | |
-| **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
+| **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
 
 ### Return type
 
@@ -3563,7 +3563,7 @@ No authorization required
 
 ## removeAffiliateFromProgramUsingPOSTWithHttpInfo
 
-> ApiResponse<Void> removeAffiliateFromProgramUsingPOST removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest)
+> ApiResponse<Void> removeAffiliateFromProgramUsingPOST removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -3587,9 +3587,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
-        AffiliateRemoveFromProgramRequest removeFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+        AffiliateRemoveFromProgramRequest affiliateRemoveFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
         try {
-            ApiResponse<Void> response = apiInstance.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest);
+            ApiResponse<Void> response = apiInstance.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
         } catch (ApiException e) {
@@ -3609,7 +3609,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| id | |
-| **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
+| **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
 
 ### Return type
 
@@ -3775,7 +3775,7 @@ No authorization required
 
 ## updateAffiliateCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -3798,10 +3798,10 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#updateAffiliateCustomFieldUsingPATCH");
@@ -3820,7 +3820,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -3847,7 +3847,7 @@ No authorization required
 
 ## updateAffiliateCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateAffiliateCustomFieldUsingPATCH updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateAffiliateCustomFieldUsingPATCH updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -3871,10 +3871,10 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -3895,7 +3895,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -3923,7 +3923,7 @@ No authorization required
 
 ## updateAffiliateUsingPATCH
 
-> RestAffiliate updateAffiliateUsingPATCH(id, patchAffiliate)
+> RestAffiliate updateAffiliateUsingPATCH(id, patchAffiliateRequest)
 
 Update an Affiliate
 
@@ -3946,9 +3946,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
-        PatchAffiliateRequest patchAffiliate = new PatchAffiliateRequest(); // PatchAffiliateRequest | Affiliate request to patch
+        PatchAffiliateRequest patchAffiliateRequest = new PatchAffiliateRequest(); // PatchAffiliateRequest | Affiliate request to patch
         try {
-            RestAffiliate result = apiInstance.updateAffiliateUsingPATCH(id, patchAffiliate);
+            RestAffiliate result = apiInstance.updateAffiliateUsingPATCH(id, patchAffiliateRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#updateAffiliateUsingPATCH");
@@ -3967,7 +3967,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| id | |
-| **patchAffiliate** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] |
+| **patchAffiliateRequest** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] |
 
 ### Return type
 
@@ -3993,7 +3993,7 @@ No authorization required
 
 ## updateAffiliateUsingPATCHWithHttpInfo
 
-> ApiResponse<RestAffiliate> updateAffiliateUsingPATCH updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliate)
+> ApiResponse<RestAffiliate> updateAffiliateUsingPATCH updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest)
 
 Update an Affiliate
 
@@ -4017,9 +4017,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
-        PatchAffiliateRequest patchAffiliate = new PatchAffiliateRequest(); // PatchAffiliateRequest | Affiliate request to patch
+        PatchAffiliateRequest patchAffiliateRequest = new PatchAffiliateRequest(); // PatchAffiliateRequest | Affiliate request to patch
         try {
-            ApiResponse<RestAffiliate> response = apiInstance.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliate);
+            ApiResponse<RestAffiliate> response = apiInstance.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -4040,7 +4040,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| id | |
-| **patchAffiliate** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] |
+| **patchAffiliateRequest** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] |
 
 ### Return type
 
@@ -4067,7 +4067,7 @@ No authorization required
 
 ## updateRedirectLinkUsingPATCH
 
-> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, request)
+> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -4090,9 +4090,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String redirectId = "redirectId_example"; // String | redirect_id
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            AffiliateLink result = apiInstance.updateRedirectLinkUsingPATCH(redirectId, request);
+            AffiliateLink result = apiInstance.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AffiliateApi#updateRedirectLinkUsingPATCH");
@@ -4111,7 +4111,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **redirectId** | **String**| redirect_id | |
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -4137,7 +4137,7 @@ No authorization required
 
 ## updateRedirectLinkUsingPATCHWithHttpInfo
 
-> ApiResponse<AffiliateLink> updateRedirectLinkUsingPATCH updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request)
+> ApiResponse<AffiliateLink> updateRedirectLinkUsingPATCH updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -4161,9 +4161,9 @@ public class Example {
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String redirectId = "redirectId_example"; // String | redirect_id
-        CreateOrPatchAffiliateLinkRequest request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+        CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
         try {
-            ApiResponse<AffiliateLink> response = apiInstance.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request);
+            ApiResponse<AffiliateLink> response = apiInstance.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -4184,7 +4184,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **redirectId** | **String**| redirect_id | |
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 

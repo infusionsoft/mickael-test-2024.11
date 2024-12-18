@@ -151,9 +151,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param insertCommissionProgram Commission Program to insert
+     * @param createCommissionProgramRequest Commission Program to insert
      */
-    public async addCommissionProgramUsingPOST(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Promise<RequestContext> {
+    public async addCommissionProgramUsingPOST(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -171,7 +171,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(insertCommissionProgram, "CreateCommissionProgramRequest", ""),
+            ObjectSerializer.serialize(createCommissionProgramRequest, "CreateCommissionProgramRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -189,9 +189,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param productCommissionProgram Product Commission Program
+     * @param createProductCommissionProgramRequest Product Commission Program
      */
-    public async assignProductCommissionProgramUsingPOST(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<RequestContext> {
+    public async assignProductCommissionProgramUsingPOST(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'commissionProgramId' is not null or undefined
@@ -216,7 +216,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(productCommissionProgram, "CreateProductCommissionProgramRequest", ""),
+            ObjectSerializer.serialize(createProductCommissionProgramRequest, "CreateProductCommissionProgramRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -234,9 +234,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param subscriptionCommissionProgram Subscription Commission Program
+     * @param createSubscriptionCommissionProgramRequest Subscription Commission Program
      */
-    public async assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<RequestContext> {
+    public async assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'commissionProgramId' is not null or undefined
@@ -261,7 +261,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(subscriptionCommissionProgram, "CreateSubscriptionCommissionProgramRequest", ""),
+            ObjectSerializer.serialize(createSubscriptionCommissionProgramRequest, "CreateSubscriptionCommissionProgramRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -328,14 +328,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createAffiliateCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createAffiliateCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("PreReleaseApi", "createAffiliateCustomFieldUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createAffiliateCustomFieldUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -353,7 +353,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -415,14 +415,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public async createDiscountUsingPOST(request: CreateUpdateDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createDiscountUsingPOST(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "createDiscountUsingPOST", "request");
+        // verify required parameter 'createUpdateDiscountRequest' is not null or undefined
+        if (createUpdateDiscountRequest === null || createUpdateDiscountRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createDiscountUsingPOST", "createUpdateDiscountRequest");
         }
 
 
@@ -440,7 +440,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateUpdateDiscountRequest", ""),
+            ObjectSerializer.serialize(createUpdateDiscountRequest, "CreateUpdateDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -457,14 +457,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public async createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createDiscountUsingPOST1(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "createDiscountUsingPOST1", "request");
+        // verify required parameter 'createShippingDiscountRequest' is not null or undefined
+        if (createShippingDiscountRequest === null || createShippingDiscountRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createDiscountUsingPOST1", "createShippingDiscountRequest");
         }
 
 
@@ -482,7 +482,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateShippingDiscountRequest", ""),
+            ObjectSerializer.serialize(createShippingDiscountRequest, "CreateShippingDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -582,9 +582,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param leadsource leadsource
+     * @param createLeadSourceRequest leadsource
      */
-    public async createLeadSourceUsingPOST(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createLeadSourceUsingPOST(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -602,7 +602,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(leadsource, "CreateLeadSourceRequest", ""),
+            ObjectSerializer.serialize(createLeadSourceRequest, "CreateLeadSourceRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -619,14 +619,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createNoteCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createNoteCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("PreReleaseApi", "createNoteCustomFieldUsingPOST1", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createNoteCustomFieldUsingPOST1", "createCustomFieldRequest");
         }
 
 
@@ -644,7 +644,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -661,14 +661,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createOpportunityCustomFieldsUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("PreReleaseApi", "createOpportunityCustomFieldsUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createOpportunityCustomFieldsUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -686,7 +686,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -703,9 +703,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param opportunityStage opportunity
+     * @param createOpportunityStageRequest opportunity
      */
-    public async createOpportunityStageUsingPOST(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOpportunityStageUsingPOST(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -723,7 +723,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(opportunityStage, "CreateOpportunityStageRequest", ""),
+            ObjectSerializer.serialize(createOpportunityStageRequest, "CreateOpportunityStageRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -740,9 +740,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param opportunity opportunity
+     * @param createOpportunityRequest opportunity
      */
-    public async createOpportunityUsingPOST1(opportunity?: CreateOpportunityRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOpportunityUsingPOST1(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -760,7 +760,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(opportunity, "CreateOpportunityRequest", ""),
+            ObjectSerializer.serialize(createOpportunityRequest, "CreateOpportunityRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -777,14 +777,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createOrderCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOrderCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("PreReleaseApi", "createOrderCustomFieldUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createOrderCustomFieldUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -802,7 +802,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -869,14 +869,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public async createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "createOrderTotalDiscountUsingPOST", "request");
+        // verify required parameter 'createOrderTotalDiscountRequest' is not null or undefined
+        if (createOrderTotalDiscountRequest === null || createOrderTotalDiscountRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createOrderTotalDiscountUsingPOST", "createOrderTotalDiscountRequest");
         }
 
 
@@ -894,7 +894,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateOrderTotalDiscountRequest", ""),
+            ObjectSerializer.serialize(createOrderTotalDiscountRequest, "CreateOrderTotalDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -911,14 +911,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public async createOrderUsingPOST1(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOrderUsingPOST1(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'createOrderRequest' is not null or undefined
-        if (createOrderRequest === null || createOrderRequest === undefined) {
-            throw new RequiredError("PreReleaseApi", "createOrderUsingPOST1", "createOrderRequest");
+        // verify required parameter 'restCreateOrderRequest' is not null or undefined
+        if (restCreateOrderRequest === null || restCreateOrderRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createOrderUsingPOST1", "restCreateOrderRequest");
         }
 
 
@@ -936,7 +936,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(createOrderRequest, "RestCreateOrderRequest", ""),
+            ObjectSerializer.serialize(restCreateOrderRequest, "RestCreateOrderRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -995,14 +995,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public async createRedirectLinkUsingPOST(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "createRedirectLinkUsingPOST", "request");
+        // verify required parameter 'createOrPatchAffiliateLinkRequest' is not null or undefined
+        if (createOrPatchAffiliateLinkRequest === null || createOrPatchAffiliateLinkRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createRedirectLinkUsingPOST", "createOrPatchAffiliateLinkRequest");
         }
 
 
@@ -1020,7 +1020,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateOrPatchAffiliateLinkRequest", ""),
+            ObjectSerializer.serialize(createOrPatchAffiliateLinkRequest, "CreateOrPatchAffiliateLinkRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1037,14 +1037,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public async createReferralUsingPOST(request: CreateReferralRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createReferralUsingPOST(createReferralRequest: CreateReferralRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "createReferralUsingPOST", "request");
+        // verify required parameter 'createReferralRequest' is not null or undefined
+        if (createReferralRequest === null || createReferralRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createReferralUsingPOST", "createReferralRequest");
         }
 
 
@@ -1062,7 +1062,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateReferralRequest", ""),
+            ObjectSerializer.serialize(createReferralRequest, "CreateReferralRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1079,14 +1079,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("PreReleaseApi", "createSubscriptionCustomFieldUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createSubscriptionCustomFieldUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -1104,7 +1104,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1121,14 +1121,14 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createTaskCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createTaskCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("PreReleaseApi", "createTaskCustomFieldUsingPOST1", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "createTaskCustomFieldUsingPOST1", "createCustomFieldRequest");
         }
 
 
@@ -1146,7 +1146,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1163,9 +1163,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param task task
+     * @param createTaskRequest task
      */
-    public async createTaskUsingPOST1(task?: CreateTaskRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createTaskUsingPOST1(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -1183,7 +1183,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(task, "CreateTaskRequest", ""),
+            ObjectSerializer.serialize(createTaskRequest, "CreateTaskRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -1200,9 +1200,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param user user
+     * @param createUserRequestV2 user
      */
-    public async createUserUsingPOST1(user?: CreateUserRequestV2, _options?: Configuration): Promise<RequestContext> {
+    public async createUserUsingPOST1(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -1220,7 +1220,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(user, "CreateUserRequestV2", ""),
+            ObjectSerializer.serialize(createUserRequestV2, "CreateUserRequestV2", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3386,9 +3386,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Update an Order
      * @param orderId order_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param order order
+     * @param restV2PatchOrderRequest order
      */
-    public async patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'orderId' is not null or undefined
@@ -3422,7 +3422,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(order, "RestV2PatchOrderRequest", ""),
+            ObjectSerializer.serialize(restV2PatchOrderRequest, "RestV2PatchOrderRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3551,9 +3551,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Task
      * @param taskId task_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param task task
+     * @param createPatchTaskRequest task
      */
-    public async patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'taskId' is not null or undefined
@@ -3587,7 +3587,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(task, "CreatePatchTaskRequest", ""),
+            ObjectSerializer.serialize(createPatchTaskRequest, "CreatePatchTaskRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3606,9 +3606,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Update User
      * @param userId user_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param user user
+     * @param patchUserRequestV2 user
      */
-    public async patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<RequestContext> {
+    public async patchUserUsingPATCH(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'userId' is not null or undefined
@@ -3642,7 +3642,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(user, "PatchUserRequestV2", ""),
+            ObjectSerializer.serialize(patchUserRequestV2, "PatchUserRequestV2", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3660,9 +3660,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public async removeAffiliateFromProgramUsingPOST(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<RequestContext> {
+    public async removeAffiliateFromProgramUsingPOST(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'id' is not null or undefined
@@ -3671,9 +3671,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'removeFromProgramRequest' is not null or undefined
-        if (removeFromProgramRequest === null || removeFromProgramRequest === undefined) {
-            throw new RequiredError("PreReleaseApi", "removeAffiliateFromProgramUsingPOST", "removeFromProgramRequest");
+        // verify required parameter 'affiliateRemoveFromProgramRequest' is not null or undefined
+        if (affiliateRemoveFromProgramRequest === null || affiliateRemoveFromProgramRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "removeAffiliateFromProgramUsingPOST", "affiliateRemoveFromProgramRequest");
         }
 
 
@@ -3692,7 +3692,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(removeFromProgramRequest, "AffiliateRemoveFromProgramRequest", ""),
+            ObjectSerializer.serialize(affiliateRemoveFromProgramRequest, "AffiliateRemoveFromProgramRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3856,10 +3856,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateAffiliateCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -3868,9 +3868,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateAffiliateCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateAffiliateCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -3898,7 +3898,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3916,10 +3916,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateDiscountUsingPATCH(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateDiscountUsingPATCH(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'discountId' is not null or undefined
@@ -3928,9 +3928,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH", "request");
+        // verify required parameter 'createUpdateDiscountRequest' is not null or undefined
+        if (createUpdateDiscountRequest === null || createUpdateDiscountRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH", "createUpdateDiscountRequest");
         }
 
 
@@ -3958,7 +3958,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateUpdateDiscountRequest", ""),
+            ObjectSerializer.serialize(createUpdateDiscountRequest, "CreateUpdateDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -3976,10 +3976,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateDiscountUsingPATCH1(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'discountId' is not null or undefined
@@ -3988,9 +3988,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH1", "request");
+        // verify required parameter 'updateShippingDiscountRequest' is not null or undefined
+        if (updateShippingDiscountRequest === null || updateShippingDiscountRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateDiscountUsingPATCH1", "updateShippingDiscountRequest");
         }
 
 
@@ -4018,7 +4018,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateShippingDiscountRequest", ""),
+            ObjectSerializer.serialize(updateShippingDiscountRequest, "UpdateShippingDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4036,10 +4036,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateNotesCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -4048,9 +4048,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateNotesCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateNotesCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -4078,7 +4078,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4096,10 +4096,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOpportunityCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOpportunityCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -4108,9 +4108,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateOpportunityCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOpportunityCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -4138,7 +4138,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4156,10 +4156,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOpportunityStageUsingPATCH(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'stageId' is not null or undefined
@@ -4168,9 +4168,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateOpportunityStageUsingPATCH", "request");
+        // verify required parameter 'updateOpportunityStageRequest' is not null or undefined
+        if (updateOpportunityStageRequest === null || updateOpportunityStageRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOpportunityStageUsingPATCH", "updateOpportunityStageRequest");
         }
 
 
@@ -4198,7 +4198,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateOpportunityStageRequest", ""),
+            ObjectSerializer.serialize(updateOpportunityStageRequest, "UpdateOpportunityStageRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4216,10 +4216,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOpportunityUsingPATCH(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOpportunityUsingPATCH(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'opportunityId' is not null or undefined
@@ -4228,9 +4228,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateOpportunityUsingPATCH", "request");
+        // verify required parameter 'patchOpportunityRequest' is not null or undefined
+        if (patchOpportunityRequest === null || patchOpportunityRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOpportunityUsingPATCH", "patchOpportunityRequest");
         }
 
 
@@ -4258,7 +4258,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "PatchOpportunityRequest", ""),
+            ObjectSerializer.serialize(patchOpportunityRequest, "PatchOpportunityRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4276,10 +4276,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOrderCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOrderCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -4288,9 +4288,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateOrderCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOrderCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -4318,7 +4318,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4336,10 +4336,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOrderTotalDiscountUsingPATCH(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'discountId' is not null or undefined
@@ -4348,9 +4348,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateOrderTotalDiscountUsingPATCH", "request");
+        // verify required parameter 'updateOrderTotalDiscountRequest' is not null or undefined
+        if (updateOrderTotalDiscountRequest === null || updateOrderTotalDiscountRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateOrderTotalDiscountUsingPATCH", "updateOrderTotalDiscountRequest");
         }
 
 
@@ -4378,7 +4378,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateOrderTotalDiscountRequest", ""),
+            ObjectSerializer.serialize(updateOrderTotalDiscountRequest, "UpdateOrderTotalDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4396,9 +4396,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public async updateRedirectLinkUsingPATCH(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<RequestContext> {
+    public async updateRedirectLinkUsingPATCH(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'redirectId' is not null or undefined
@@ -4407,9 +4407,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateRedirectLinkUsingPATCH", "request");
+        // verify required parameter 'createOrPatchAffiliateLinkRequest' is not null or undefined
+        if (createOrPatchAffiliateLinkRequest === null || createOrPatchAffiliateLinkRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateRedirectLinkUsingPATCH", "createOrPatchAffiliateLinkRequest");
         }
 
 
@@ -4428,7 +4428,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateOrPatchAffiliateLinkRequest", ""),
+            ObjectSerializer.serialize(createOrPatchAffiliateLinkRequest, "CreateOrPatchAffiliateLinkRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4446,10 +4446,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -4458,9 +4458,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateSubscriptionCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateSubscriptionCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -4488,7 +4488,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -4506,10 +4506,10 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateTaskCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateTaskCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -4518,9 +4518,9 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PreReleaseApi", "updateTaskCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("PreReleaseApi", "updateTaskCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -4548,7 +4548,7 @@ export class PreReleaseApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

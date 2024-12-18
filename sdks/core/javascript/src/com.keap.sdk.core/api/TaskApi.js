@@ -48,14 +48,14 @@ export default class TaskApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Task object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CreateCustomFieldResponse} and HTTP response
      */
-    createTaskCustomFieldUsingPOST1WithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createTaskCustomFieldUsingPOST1");
+    createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createTaskCustomFieldUsingPOST1");
       }
 
       let pathParams = {
@@ -81,11 +81,11 @@ export default class TaskApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Task object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CreateCustomFieldResponse}
      */
-    createTaskCustomFieldUsingPOST1(customField) {
-      return this.createTaskCustomFieldUsingPOST1WithHttpInfo(customField)
+    createTaskCustomFieldUsingPOST1(createCustomFieldRequest) {
+      return this.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -96,12 +96,12 @@ export default class TaskApi {
      * Create a Task
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} [task] task
+     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} [createTaskRequest] task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Task} and HTTP response
      */
     createTaskUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['task'];
+      let postBody = opts['createTaskRequest'];
 
       let pathParams = {
       };
@@ -127,7 +127,7 @@ export default class TaskApi {
      * Create a Task
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} opts.task task
+     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} opts.createTaskRequest task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Task}
      */
     createTaskUsingPOST1(opts) {
@@ -350,12 +350,12 @@ export default class TaskApi {
      * @param {String} taskId task_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} [task] task
+     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} [createPatchTaskRequest] task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/UpdateTaskResponse} and HTTP response
      */
     patchTaskUsingPATCHWithHttpInfo(taskId, opts) {
       opts = opts || {};
-      let postBody = opts['task'];
+      let postBody = opts['createPatchTaskRequest'];
       // verify the required parameter 'taskId' is set
       if (taskId === undefined || taskId === null) {
         throw new Error("Missing the required parameter 'taskId' when calling patchTaskUsingPATCH");
@@ -389,7 +389,7 @@ export default class TaskApi {
      * @param {String} taskId task_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} opts.task task
+     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} opts.createPatchTaskRequest task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/UpdateTaskResponse}
      */
     patchTaskUsingPATCH(taskId, opts) {
@@ -445,21 +445,21 @@ export default class TaskApi {
      * Update a Task's Custom Field
      * Updates a custom field of the specified type and options to the Task object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateTaskCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateTaskCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateTaskCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -488,13 +488,13 @@ export default class TaskApi {
      * Update a Task's Custom Field
      * Updates a custom field of the specified type and options to the Task object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateTaskCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

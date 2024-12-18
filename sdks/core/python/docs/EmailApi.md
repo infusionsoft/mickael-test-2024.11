@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **create_email_using_post1**
-> EmailSentWithContent create_email_using_post1(email_with_content)
+> EmailSentWithContent create_email_using_post1(create_email_sent_request)
 
 Create an Email Record
 
@@ -39,11 +39,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.EmailApi(api_client)
-    email_with_content = keap_sdk_core_client.CreateEmailSentRequest() # CreateEmailSentRequest | emailWithContent
+    create_email_sent_request = keap_sdk_core_client.CreateEmailSentRequest() # CreateEmailSentRequest | emailWithContent
 
     try:
         # Create an Email Record
-        api_response = api_instance.create_email_using_post1(email_with_content)
+        api_response = api_instance.create_email_using_post1(create_email_sent_request)
         print("The response of EmailApi->create_email_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -56,7 +56,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_with_content** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | 
+ **create_email_sent_request** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | 
 
 ### Return type
 

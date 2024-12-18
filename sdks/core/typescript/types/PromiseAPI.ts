@@ -297,40 +297,40 @@ export class PromiseAffiliateApi {
     /**
      * Creates a single Affiliate
      * Create an Affiliate
-     * @param [insertAffiliate] Affiliate request to insert
+     * @param [createAffiliateRequest] Affiliate request to insert
      */
-    public addAffiliateUsingPOSTWithHttpInfo(insertAffiliate?: CreateAffiliateRequest, _options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
-        const result = this.api.addAffiliateUsingPOSTWithHttpInfo(insertAffiliate, _options);
+    public addAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest?: CreateAffiliateRequest, _options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
+        const result = this.api.addAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a single Affiliate
      * Create an Affiliate
-     * @param [insertAffiliate] Affiliate request to insert
+     * @param [createAffiliateRequest] Affiliate request to insert
      */
-    public addAffiliateUsingPOST(insertAffiliate?: CreateAffiliateRequest, _options?: Configuration): Promise<RestAffiliate> {
-        const result = this.api.addAffiliateUsingPOST(insertAffiliate, _options);
+    public addAffiliateUsingPOST(createAffiliateRequest?: CreateAffiliateRequest, _options?: Configuration): Promise<RestAffiliate> {
+        const result = this.api.addAffiliateUsingPOST(createAffiliateRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
-        const result = this.api.addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram, _options);
+    public addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
+        const result = this.api.addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOST(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
-        const result = this.api.addCommissionProgramUsingPOST(insertCommissionProgram, _options);
+    public addCommissionProgramUsingPOST(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
+        const result = this.api.addCommissionProgramUsingPOST(createCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -338,10 +338,10 @@ export class PromiseAffiliateApi {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
-        const result = this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram, _options);
+    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
+        const result = this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -349,10 +349,10 @@ export class PromiseAffiliateApi {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<ProductCommissionProgram> {
-        const result = this.api.assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram, _options);
+    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<ProductCommissionProgram> {
+        const result = this.api.assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -360,10 +360,10 @@ export class PromiseAffiliateApi {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
-        const result = this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram, _options);
+    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
+        const result = this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -371,30 +371,30 @@ export class PromiseAffiliateApi {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<SubscriptionCommissionProgram> {
-        const result = this.api.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram, _options);
+    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<SubscriptionCommissionProgram> {
+        const result = this.api.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField, _options);
+    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createAffiliateCustomFieldUsingPOST(customField, _options);
+    public createAffiliateCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
@@ -423,20 +423,20 @@ export class PromiseAffiliateApi {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOSTWithHttpInfo(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        const result = this.api.createRedirectLinkUsingPOSTWithHttpInfo(request, _options);
+    public createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+        const result = this.api.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOST(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
-        const result = this.api.createRedirectLinkUsingPOST(request, _options);
+    public createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
+        const result = this.api.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
@@ -804,10 +804,10 @@ export class PromiseAffiliateApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<HttpInfo<void>> {
-        const result = this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest, _options);
+    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<HttpInfo<void>> {
+        const result = this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -815,10 +815,10 @@ export class PromiseAffiliateApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOST(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<void> {
-        const result = this.api.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest, _options);
+    public removeAffiliateFromProgramUsingPOST(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<void> {
+        const result = this.api.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -848,11 +848,11 @@ export class PromiseAffiliateApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -860,11 +860,11 @@ export class PromiseAffiliateApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -872,10 +872,10 @@ export class PromiseAffiliateApi {
      * Updates a single Affiliate
      * Update an Affiliate
      * @param id id
-     * @param [patchAffiliate] Affiliate request to patch
+     * @param [patchAffiliateRequest] Affiliate request to patch
      */
-    public updateAffiliateUsingPATCHWithHttpInfo(id: string, patchAffiliate?: PatchAffiliateRequest, _options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
-        const result = this.api.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliate, _options);
+    public updateAffiliateUsingPATCHWithHttpInfo(id: string, patchAffiliateRequest?: PatchAffiliateRequest, _options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
+        const result = this.api.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest, _options);
         return result.toPromise();
     }
 
@@ -883,10 +883,10 @@ export class PromiseAffiliateApi {
      * Updates a single Affiliate
      * Update an Affiliate
      * @param id id
-     * @param [patchAffiliate] Affiliate request to patch
+     * @param [patchAffiliateRequest] Affiliate request to patch
      */
-    public updateAffiliateUsingPATCH(id: string, patchAffiliate?: PatchAffiliateRequest, _options?: Configuration): Promise<RestAffiliate> {
-        const result = this.api.updateAffiliateUsingPATCH(id, patchAffiliate, _options);
+    public updateAffiliateUsingPATCH(id: string, patchAffiliateRequest?: PatchAffiliateRequest, _options?: Configuration): Promise<RestAffiliate> {
+        const result = this.api.updateAffiliateUsingPATCH(id, patchAffiliateRequest, _options);
         return result.toPromise();
     }
 
@@ -894,10 +894,10 @@ export class PromiseAffiliateApi {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        const result = this.api.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request, _options);
+    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+        const result = this.api.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
@@ -905,10 +905,10 @@ export class PromiseAffiliateApi {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCH(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
-        const result = this.api.updateRedirectLinkUsingPATCH(redirectId, request, _options);
+    public updateRedirectLinkUsingPATCH(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
+        const result = this.api.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
@@ -1209,10 +1209,10 @@ export class PromiseBusinessProfileApi {
      * Updates Business Profile information.
      * Update Business Profile
      * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-     * @param [businessProfile] businessProfile
+     * @param [patchBusinessProfileRequest] businessProfile
      */
-    public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, businessProfile?: PatchBusinessProfileRequest, _options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
-        const result = this.api.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile, _options);
+    public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
+        const result = this.api.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest, _options);
         return result.toPromise();
     }
 
@@ -1220,10 +1220,10 @@ export class PromiseBusinessProfileApi {
      * Updates Business Profile information.
      * Update Business Profile
      * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-     * @param [businessProfile] businessProfile
+     * @param [patchBusinessProfileRequest] businessProfile
      */
-    public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, businessProfile?: PatchBusinessProfileRequest, _options?: Configuration): Promise<GetBusinessProfileResponse> {
-        const result = this.api.patchBusinessProfileUsingPATCH(updateMask, businessProfile, _options);
+    public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<GetBusinessProfileResponse> {
+        const result = this.api.patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest, _options);
         return result.toPromise();
     }
 
@@ -1364,20 +1364,20 @@ export class PromiseCategoryDiscountApi {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOSTWithHttpInfo(request: CreateUpdateDiscountRequest, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        const result = this.api.createDiscountUsingPOSTWithHttpInfo(request, _options);
+    public createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+        const result = this.api.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOST(request: CreateUpdateDiscountRequest, _options?: Configuration): Promise<CategoryDiscount> {
-        const result = this.api.createDiscountUsingPOST(request, _options);
+    public createDiscountUsingPOST(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Promise<CategoryDiscount> {
+        const result = this.api.createDiscountUsingPOST(createUpdateDiscountRequest, _options);
         return result.toPromise();
     }
 
@@ -1425,11 +1425,11 @@ export class PromiseCategoryDiscountApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        const result = this.api.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+        const result = this.api.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -1437,11 +1437,11 @@ export class PromiseCategoryDiscountApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CategoryDiscount> {
-        const result = this.api.updateDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CategoryDiscount> {
+        const result = this.api.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -1467,20 +1467,20 @@ export class PromiseCompanyApi {
     /**
      * Creates a new Company.`country_code` is required if `region` is specified.
      * Create a Company
-     * @param [company] company
+     * @param [createCompanyRequest] company
      */
-    public createCompanyUsingPOST1WithHttpInfo(company?: CreateCompanyRequest, _options?: Configuration): Promise<HttpInfo<Company>> {
-        const result = this.api.createCompanyUsingPOST1WithHttpInfo(company, _options);
+    public createCompanyUsingPOST1WithHttpInfo(createCompanyRequest?: CreateCompanyRequest, _options?: Configuration): Promise<HttpInfo<Company>> {
+        const result = this.api.createCompanyUsingPOST1WithHttpInfo(createCompanyRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Company.`country_code` is required if `region` is specified.
      * Create a Company
-     * @param [company] company
+     * @param [createCompanyRequest] company
      */
-    public createCompanyUsingPOST1(company?: CreateCompanyRequest, _options?: Configuration): Promise<Company> {
-        const result = this.api.createCompanyUsingPOST1(company, _options);
+    public createCompanyUsingPOST1(createCompanyRequest?: CreateCompanyRequest, _options?: Configuration): Promise<Company> {
+        const result = this.api.createCompanyUsingPOST1(createCompanyRequest, _options);
         return result.toPromise();
     }
 
@@ -1559,10 +1559,10 @@ export class PromiseCompanyApi {
      * Update a Company
      * @param companyId company_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [company] company
+     * @param [patchCompanyRequest] company
      */
-    public patchCompanyUsingPATCHWithHttpInfo(companyId: string, updateMask?: Array<string>, company?: PatchCompanyRequest, _options?: Configuration): Promise<HttpInfo<Company>> {
-        const result = this.api.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company, _options);
+    public patchCompanyUsingPATCHWithHttpInfo(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Promise<HttpInfo<Company>> {
+        const result = this.api.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest, _options);
         return result.toPromise();
     }
 
@@ -1571,10 +1571,10 @@ export class PromiseCompanyApi {
      * Update a Company
      * @param companyId company_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [company] company
+     * @param [patchCompanyRequest] company
      */
-    public patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, company?: PatchCompanyRequest, _options?: Configuration): Promise<Company> {
-        const result = this.api.patchCompanyUsingPATCH(companyId, updateMask, company, _options);
+    public patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Promise<Company> {
+        const result = this.api.patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest, _options);
         return result.toPromise();
     }
 
@@ -1600,40 +1600,40 @@ export class PromiseContactApi {
     /**
      * Creates a new type of Contact Link.
      * Create a Contact Link type
-     * @param request request
+     * @param createContactLinkTypeRequest request
      */
-    public createContactLinkTypeUsingPOSTWithHttpInfo(request: CreateContactLinkTypeRequest, _options?: Configuration): Promise<HttpInfo<ContactLinkType>> {
-        const result = this.api.createContactLinkTypeUsingPOSTWithHttpInfo(request, _options);
+    public createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest: CreateContactLinkTypeRequest, _options?: Configuration): Promise<HttpInfo<ContactLinkType>> {
+        const result = this.api.createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new type of Contact Link.
      * Create a Contact Link type
-     * @param request request
+     * @param createContactLinkTypeRequest request
      */
-    public createContactLinkTypeUsingPOST(request: CreateContactLinkTypeRequest, _options?: Configuration): Promise<ContactLinkType> {
-        const result = this.api.createContactLinkTypeUsingPOST(request, _options);
+    public createContactLinkTypeUsingPOST(createContactLinkTypeRequest: CreateContactLinkTypeRequest, _options?: Configuration): Promise<ContactLinkType> {
+        const result = this.api.createContactLinkTypeUsingPOST(createContactLinkTypeRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public createContactUsingPOST1WithHttpInfo(contact?: CreatePatchContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
-        const result = this.api.createContactUsingPOST1WithHttpInfo(contact, _options);
+    public createContactUsingPOST1WithHttpInfo(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
+        const result = this.api.createContactUsingPOST1WithHttpInfo(createPatchContactRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public createContactUsingPOST1(contact?: CreatePatchContactRequest, _options?: Configuration): Promise<Contact> {
-        const result = this.api.createContactUsingPOST1(contact, _options);
+    public createContactUsingPOST1(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<Contact> {
+        const result = this.api.createContactUsingPOST1(createPatchContactRequest, _options);
         return result.toPromise();
     }
 
@@ -1818,10 +1818,10 @@ export class PromiseContactApi {
      * Update a Contact
      * @param contactId contact_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public patchContactUsingPATCHWithHttpInfo(contactId: string, updateMask?: Array<string>, contact?: CreatePatchContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
-        const result = this.api.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact, _options);
+    public patchContactUsingPATCHWithHttpInfo(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
+        const result = this.api.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest, _options);
         return result.toPromise();
     }
 
@@ -1830,10 +1830,10 @@ export class PromiseContactApi {
      * Update a Contact
      * @param contactId contact_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [contact] contact
+     * @param [createPatchContactRequest] contact
      */
-    public patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, contact?: CreatePatchContactRequest, _options?: Configuration): Promise<Contact> {
-        const result = this.api.patchContactUsingPATCH(contactId, updateMask, contact, _options);
+    public patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<Contact> {
+        const result = this.api.patchContactUsingPATCH(contactId, updateMask, createPatchContactRequest, _options);
         return result.toPromise();
     }
 
@@ -1897,20 +1897,20 @@ export class PromiseEmailApi {
     /**
      * Creates a Record of an Email sent to a Contact
      * Create an Email Record
-     * @param emailWithContent emailWithContent
+     * @param createEmailSentRequest emailWithContent
      */
-    public createEmailUsingPOST1WithHttpInfo(emailWithContent: CreateEmailSentRequest, _options?: Configuration): Promise<HttpInfo<EmailSentWithContent>> {
-        const result = this.api.createEmailUsingPOST1WithHttpInfo(emailWithContent, _options);
+    public createEmailUsingPOST1WithHttpInfo(createEmailSentRequest: CreateEmailSentRequest, _options?: Configuration): Promise<HttpInfo<EmailSentWithContent>> {
+        const result = this.api.createEmailUsingPOST1WithHttpInfo(createEmailSentRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a Record of an Email sent to a Contact
      * Create an Email Record
-     * @param emailWithContent emailWithContent
+     * @param createEmailSentRequest emailWithContent
      */
-    public createEmailUsingPOST1(emailWithContent: CreateEmailSentRequest, _options?: Configuration): Promise<EmailSentWithContent> {
-        const result = this.api.createEmailUsingPOST1(emailWithContent, _options);
+    public createEmailUsingPOST1(createEmailSentRequest: CreateEmailSentRequest, _options?: Configuration): Promise<EmailSentWithContent> {
+        const result = this.api.createEmailUsingPOST1(createEmailSentRequest, _options);
         return result.toPromise();
     }
 
@@ -2258,20 +2258,20 @@ export class PromiseLeadSourcesApi {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOSTWithHttpInfo(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Promise<HttpInfo<LeadSource>> {
-        const result = this.api.createLeadSourceUsingPOSTWithHttpInfo(leadsource, _options);
+    public createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Promise<HttpInfo<LeadSource>> {
+        const result = this.api.createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOST(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Promise<LeadSource> {
-        const result = this.api.createLeadSourceUsingPOST(leadsource, _options);
+    public createLeadSourceUsingPOST(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Promise<LeadSource> {
+        const result = this.api.createLeadSourceUsingPOST(createLeadSourceRequest, _options);
         return result.toPromise();
     }
 
@@ -2421,20 +2421,20 @@ export class PromiseNoteApi {
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(customField, _options);
+    public createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createNoteCustomFieldUsingPOST1(customField, _options);
+    public createNoteCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createNoteCustomFieldUsingPOST1(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
@@ -2442,10 +2442,10 @@ export class PromiseNoteApi {
      * Creates a new Note.
      * Create a Note
      * @param contactId contact_id
-     * @param request request
+     * @param createNoteRequest request
      */
-    public createNoteUsingPOST1WithHttpInfo(contactId: string, request: CreateNoteRequest, _options?: Configuration): Promise<HttpInfo<Note>> {
-        const result = this.api.createNoteUsingPOST1WithHttpInfo(contactId, request, _options);
+    public createNoteUsingPOST1WithHttpInfo(contactId: string, createNoteRequest: CreateNoteRequest, _options?: Configuration): Promise<HttpInfo<Note>> {
+        const result = this.api.createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest, _options);
         return result.toPromise();
     }
 
@@ -2453,10 +2453,10 @@ export class PromiseNoteApi {
      * Creates a new Note.
      * Create a Note
      * @param contactId contact_id
-     * @param request request
+     * @param createNoteRequest request
      */
-    public createNoteUsingPOST1(contactId: string, request: CreateNoteRequest, _options?: Configuration): Promise<Note> {
-        const result = this.api.createNoteUsingPOST1(contactId, request, _options);
+    public createNoteUsingPOST1(contactId: string, createNoteRequest: CreateNoteRequest, _options?: Configuration): Promise<Note> {
+        const result = this.api.createNoteUsingPOST1(contactId, createNoteRequest, _options);
         return result.toPromise();
     }
 
@@ -2606,11 +2606,11 @@ export class PromiseNoteApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2618,11 +2618,11 @@ export class PromiseNoteApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2648,60 +2648,60 @@ export class PromiseOpportunityApi {
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField, _options);
+    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createOpportunityCustomFieldsUsingPOST(customField, _options);
+    public createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        const result = this.api.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage, _options);
+    public createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
+        const result = this.api.createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOST(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RestOpportunityStage> {
-        const result = this.api.createOpportunityStageUsingPOST(opportunityStage, _options);
+    public createOpportunityStageUsingPOST(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RestOpportunityStage> {
+        const result = this.api.createOpportunityStageUsingPOST(createOpportunityStageRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1WithHttpInfo(opportunity?: CreateOpportunityRequest, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        const result = this.api.createOpportunityUsingPOST1WithHttpInfo(opportunity, _options);
+    public createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+        const result = this.api.createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1(opportunity?: CreateOpportunityRequest, _options?: Configuration): Promise<RestV2Opportunity> {
-        const result = this.api.createOpportunityUsingPOST1(opportunity, _options);
+    public createOpportunityUsingPOST1(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Promise<RestV2Opportunity> {
+        const result = this.api.createOpportunityUsingPOST1(createOpportunityRequest, _options);
         return result.toPromise();
     }
 
@@ -2843,11 +2843,11 @@ export class PromiseOpportunityApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2855,11 +2855,11 @@ export class PromiseOpportunityApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2867,11 +2867,11 @@ export class PromiseOpportunityApi {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        const result = this.api.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask, _options);
+    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
+        const result = this.api.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2879,11 +2879,11 @@ export class PromiseOpportunityApi {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestOpportunityStage> {
-        const result = this.api.updateOpportunityStageUsingPATCH(stageId, request, updateMask, _options);
+    public updateOpportunityStageUsingPATCH(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestOpportunityStage> {
+        const result = this.api.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2891,11 +2891,11 @@ export class PromiseOpportunityApi {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        const result = this.api.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask, _options);
+    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+        const result = this.api.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2903,11 +2903,11 @@ export class PromiseOpportunityApi {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCH(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestV2Opportunity> {
-        const result = this.api.updateOpportunityUsingPATCH(opportunityId, request, updateMask, _options);
+    public updateOpportunityUsingPATCH(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestV2Opportunity> {
+        const result = this.api.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -2933,20 +2933,20 @@ export class PromiseOrderTotalDiscountApi {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOSTWithHttpInfo(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        const result = this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(request, _options);
+    public createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
+        const result = this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<OrderTotalDiscount> {
-        const result = this.api.createOrderTotalDiscountUsingPOST(request, _options);
+    public createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<OrderTotalDiscount> {
+        const result = this.api.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest, _options);
         return result.toPromise();
     }
 
@@ -3020,11 +3020,11 @@ export class PromiseOrderTotalDiscountApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        const result = this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options);
+    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
+        const result = this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -3032,11 +3032,11 @@ export class PromiseOrderTotalDiscountApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<OrderTotalDiscount> {
-        const result = this.api.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateOrderTotalDiscountUsingPATCH(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<OrderTotalDiscount> {
+        const result = this.api.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -3062,20 +3062,20 @@ export class PromiseOrdersApi {
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(customField, _options);
+    public createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createOrderCustomFieldUsingPOST(customField, _options);
+    public createOrderCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createOrderCustomFieldUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
@@ -3104,20 +3104,20 @@ export class PromiseOrdersApi {
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1WithHttpInfo(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        const result = this.api.createOrderUsingPOST1WithHttpInfo(createOrderRequest, _options);
+    public createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+        const result = this.api.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RestV2Order> {
-        const result = this.api.createOrderUsingPOST1(createOrderRequest, _options);
+    public createOrderUsingPOST1(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RestV2Order> {
+        const result = this.api.createOrderUsingPOST1(restCreateOrderRequest, _options);
         return result.toPromise();
     }
 
@@ -3262,10 +3262,10 @@ export class PromiseOrdersApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        const result = this.api.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order, _options);
+    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+        const result = this.api.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest, _options);
         return result.toPromise();
     }
 
@@ -3274,10 +3274,10 @@ export class PromiseOrdersApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RestV2Order> {
-        const result = this.api.patchOrderUsingPATCH(orderId, updateMask, order, _options);
+    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RestV2Order> {
+        const result = this.api.patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest, _options);
         return result.toPromise();
     }
 
@@ -3303,11 +3303,11 @@ export class PromiseOrdersApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -3315,11 +3315,11 @@ export class PromiseOrdersApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOrderCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -3345,20 +3345,20 @@ export class PromisePaymentMethodConfigApi {
     /**
      * Creates configuration details for rendering payment method components
      * Create Payment Method Configuration
-     * @param request request
+     * @param createPaymentMethodConfigRequest request
      */
-    public createPaymentMethodConfigUsingPOSTWithHttpInfo(request: CreatePaymentMethodConfigRequest, _options?: Configuration): Promise<HttpInfo<PaymentMethodConfig>> {
-        const result = this.api.createPaymentMethodConfigUsingPOSTWithHttpInfo(request, _options);
+    public createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest: CreatePaymentMethodConfigRequest, _options?: Configuration): Promise<HttpInfo<PaymentMethodConfig>> {
+        const result = this.api.createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates configuration details for rendering payment method components
      * Create Payment Method Configuration
-     * @param request request
+     * @param createPaymentMethodConfigRequest request
      */
-    public createPaymentMethodConfigUsingPOST(request: CreatePaymentMethodConfigRequest, _options?: Configuration): Promise<PaymentMethodConfig> {
-        const result = this.api.createPaymentMethodConfigUsingPOST(request, _options);
+    public createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest: CreatePaymentMethodConfigRequest, _options?: Configuration): Promise<PaymentMethodConfig> {
+        const result = this.api.createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest, _options);
         return result.toPromise();
     }
 
@@ -3406,20 +3406,20 @@ export class PromisePreReleaseApi {
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
-        const result = this.api.addCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram, _options);
+    public addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
+        const result = this.api.addCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates an Affiliate Commission Program
      * Create an Affiliate Commission Program
-     * @param [insertCommissionProgram] Commission Program to insert
+     * @param [createCommissionProgramRequest] Commission Program to insert
      */
-    public addCommissionProgramUsingPOST(insertCommissionProgram?: CreateCommissionProgramRequest, _options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
-        const result = this.api.addCommissionProgramUsingPOST(insertCommissionProgram, _options);
+    public addCommissionProgramUsingPOST(createCommissionProgramRequest?: CreateCommissionProgramRequest, _options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
+        const result = this.api.addCommissionProgramUsingPOST(createCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -3427,10 +3427,10 @@ export class PromisePreReleaseApi {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
-        const result = this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram, _options);
+    public assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
+        const result = this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -3438,10 +3438,10 @@ export class PromisePreReleaseApi {
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [productCommissionProgram] Product Commission Program
+     * @param [createProductCommissionProgramRequest] Product Commission Program
      */
-    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, productCommissionProgram?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<ProductCommissionProgram> {
-        const result = this.api.assignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram, _options);
+    public assignProductCommissionProgramUsingPOST(commissionProgramId: string, createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest, _options?: Configuration): Promise<ProductCommissionProgram> {
+        const result = this.api.assignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -3449,10 +3449,10 @@ export class PromisePreReleaseApi {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
-        const result = this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram, _options);
+    public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
+        const result = this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -3460,10 +3460,10 @@ export class PromisePreReleaseApi {
      * Assigns a Subscription Commission Program to a Subscription
      * Assign a Subscription Commission Program
      * @param commissionProgramId commission_program_id
-     * @param [subscriptionCommissionProgram] Subscription Commission Program
+     * @param [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      */
-    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<SubscriptionCommissionProgram> {
-        const result = this.api.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram, _options);
+    public assignSubscriptionCommissionProgramUsingPOST(commissionProgramId: string, createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest, _options?: Configuration): Promise<SubscriptionCommissionProgram> {
+        const result = this.api.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -3492,20 +3492,20 @@ export class PromisePreReleaseApi {
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField, _options);
+    public createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a single Affiliate Custom Field
      * Create an Affiliate Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createAffiliateCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createAffiliateCustomFieldUsingPOST(customField, _options);
+    public createAffiliateCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
@@ -3534,40 +3534,40 @@ export class PromisePreReleaseApi {
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOSTWithHttpInfo(request: CreateUpdateDiscountRequest, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        const result = this.api.createDiscountUsingPOSTWithHttpInfo(request, _options);
+    public createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+        const result = this.api.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Create a Category Discount.
      * Create a Category Discount
-     * @param request request
+     * @param createUpdateDiscountRequest request
      */
-    public createDiscountUsingPOST(request: CreateUpdateDiscountRequest, _options?: Configuration): Promise<CategoryDiscount> {
-        const result = this.api.createDiscountUsingPOST(request, _options);
+    public createDiscountUsingPOST(createUpdateDiscountRequest: CreateUpdateDiscountRequest, _options?: Configuration): Promise<CategoryDiscount> {
+        const result = this.api.createDiscountUsingPOST(createUpdateDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1WithHttpInfo(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        const result = this.api.createDiscountUsingPOST1WithHttpInfo(request, _options);
+    public createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
+        const result = this.api.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<ShippingDiscount> {
-        const result = this.api.createDiscountUsingPOST1(request, _options);
+    public createDiscountUsingPOST1(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Promise<ShippingDiscount> {
+        const result = this.api.createDiscountUsingPOST1(createShippingDiscountRequest, _options);
         return result.toPromise();
     }
 
@@ -3612,120 +3612,120 @@ export class PromisePreReleaseApi {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOSTWithHttpInfo(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Promise<HttpInfo<LeadSource>> {
-        const result = this.api.createLeadSourceUsingPOSTWithHttpInfo(leadsource, _options);
+    public createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Promise<HttpInfo<LeadSource>> {
+        const result = this.api.createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param [leadsource] leadsource
+     * @param [createLeadSourceRequest] leadsource
      */
-    public createLeadSourceUsingPOST(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Promise<LeadSource> {
-        const result = this.api.createLeadSourceUsingPOST(leadsource, _options);
+    public createLeadSourceUsingPOST(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Promise<LeadSource> {
+        const result = this.api.createLeadSourceUsingPOST(createLeadSourceRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(customField, _options);
+    public createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Note object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createNoteCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createNoteCustomFieldUsingPOST1(customField, _options);
+    public createNoteCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createNoteCustomFieldUsingPOST1(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField, _options);
+    public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOpportunityCustomFieldsUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createOpportunityCustomFieldsUsingPOST(customField, _options);
+    public createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        const result = this.api.createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage, _options);
+    public createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
+        const result = this.api.createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param [opportunityStage] opportunity
+     * @param [createOpportunityStageRequest] opportunity
      */
-    public createOpportunityStageUsingPOST(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RestOpportunityStage> {
-        const result = this.api.createOpportunityStageUsingPOST(opportunityStage, _options);
+    public createOpportunityStageUsingPOST(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RestOpportunityStage> {
+        const result = this.api.createOpportunityStageUsingPOST(createOpportunityStageRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1WithHttpInfo(opportunity?: CreateOpportunityRequest, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        const result = this.api.createOpportunityUsingPOST1WithHttpInfo(opportunity, _options);
+    public createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+        const result = this.api.createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param [opportunity] opportunity
+     * @param [createOpportunityRequest] opportunity
      */
-    public createOpportunityUsingPOST1(opportunity?: CreateOpportunityRequest, _options?: Configuration): Promise<RestV2Opportunity> {
-        const result = this.api.createOpportunityUsingPOST1(opportunity, _options);
+    public createOpportunityUsingPOST1(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Promise<RestV2Opportunity> {
+        const result = this.api.createOpportunityUsingPOST1(createOpportunityRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(customField, _options);
+    public createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createOrderCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createOrderCustomFieldUsingPOST(customField, _options);
+    public createOrderCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createOrderCustomFieldUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
@@ -3754,40 +3754,40 @@ export class PromisePreReleaseApi {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOSTWithHttpInfo(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        const result = this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(request, _options);
+    public createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
+        const result = this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<OrderTotalDiscount> {
-        const result = this.api.createOrderTotalDiscountUsingPOST(request, _options);
+    public createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<OrderTotalDiscount> {
+        const result = this.api.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1WithHttpInfo(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        const result = this.api.createOrderUsingPOST1WithHttpInfo(createOrderRequest, _options);
+    public createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+        const result = this.api.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public createOrderUsingPOST1(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RestV2Order> {
-        const result = this.api.createOrderUsingPOST1(createOrderRequest, _options);
+    public createOrderUsingPOST1(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RestV2Order> {
+        const result = this.api.createOrderUsingPOST1(restCreateOrderRequest, _options);
         return result.toPromise();
     }
 
@@ -3814,120 +3814,120 @@ export class PromisePreReleaseApi {
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOSTWithHttpInfo(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        const result = this.api.createRedirectLinkUsingPOSTWithHttpInfo(request, _options);
+    public createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+        const result = this.api.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a single Affiliate Link
      * Create an Affiliate Link
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public createRedirectLinkUsingPOST(request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
-        const result = this.api.createRedirectLinkUsingPOST(request, _options);
+    public createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
+        const result = this.api.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOSTWithHttpInfo(request: CreateReferralRequest, _options?: Configuration): Promise<HttpInfo<Referral>> {
-        const result = this.api.createReferralUsingPOSTWithHttpInfo(request, _options);
+    public createReferralUsingPOSTWithHttpInfo(createReferralRequest: CreateReferralRequest, _options?: Configuration): Promise<HttpInfo<Referral>> {
+        const result = this.api.createReferralUsingPOSTWithHttpInfo(createReferralRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOST(request: CreateReferralRequest, _options?: Configuration): Promise<Referral> {
-        const result = this.api.createReferralUsingPOST(request, _options);
+    public createReferralUsingPOST(createReferralRequest: CreateReferralRequest, _options?: Configuration): Promise<Referral> {
+        const result = this.api.createReferralUsingPOST(createReferralRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField, _options);
+    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createSubscriptionCustomFieldUsingPOST(customField, _options);
+    public createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
-        const result = this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(customField, _options);
+    public createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
+        const result = this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CreateCustomFieldResponse> {
-        const result = this.api.createTaskCustomFieldUsingPOST1(customField, _options);
+    public createTaskCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CreateCustomFieldResponse> {
+        const result = this.api.createTaskCustomFieldUsingPOST1(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1WithHttpInfo(task?: CreateTaskRequest, _options?: Configuration): Promise<HttpInfo<Task>> {
-        const result = this.api.createTaskUsingPOST1WithHttpInfo(task, _options);
+    public createTaskUsingPOST1WithHttpInfo(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Promise<HttpInfo<Task>> {
+        const result = this.api.createTaskUsingPOST1WithHttpInfo(createTaskRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1(task?: CreateTaskRequest, _options?: Configuration): Promise<Task> {
-        const result = this.api.createTaskUsingPOST1(task, _options);
+    public createTaskUsingPOST1(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Promise<Task> {
+        const result = this.api.createTaskUsingPOST1(createTaskRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1WithHttpInfo(user?: CreateUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
-        const result = this.api.createUserUsingPOST1WithHttpInfo(user, _options);
+    public createUserUsingPOST1WithHttpInfo(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
+        const result = this.api.createUserUsingPOST1WithHttpInfo(createUserRequestV2, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1(user?: CreateUserRequestV2, _options?: Configuration): Promise<User> {
-        const result = this.api.createUserUsingPOST1(user, _options);
+    public createUserUsingPOST1(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Promise<User> {
+        const result = this.api.createUserUsingPOST1(createUserRequestV2, _options);
         return result.toPromise();
     }
 
@@ -5130,10 +5130,10 @@ export class PromisePreReleaseApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        const result = this.api.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order, _options);
+    public patchOrderUsingPATCHWithHttpInfo(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Promise<HttpInfo<RestV2Order>> {
+        const result = this.api.patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest, _options);
         return result.toPromise();
     }
 
@@ -5142,10 +5142,10 @@ export class PromisePreReleaseApi {
      * Update an Order
      * @param orderId order_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [order] order
+     * @param [restV2PatchOrderRequest] order
      */
-    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RestV2Order> {
-        const result = this.api.patchOrderUsingPATCH(orderId, updateMask, order, _options);
+    public patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RestV2Order> {
+        const result = this.api.patchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest, _options);
         return result.toPromise();
     }
 
@@ -5202,10 +5202,10 @@ export class PromisePreReleaseApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
-        const result = this.api.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task, _options);
+    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
+        const result = this.api.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest, _options);
         return result.toPromise();
     }
 
@@ -5214,10 +5214,10 @@ export class PromisePreReleaseApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Promise<UpdateTaskResponse> {
-        const result = this.api.patchTaskUsingPATCH(taskId, updateMask, task, _options);
+    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Promise<UpdateTaskResponse> {
+        const result = this.api.patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest, _options);
         return result.toPromise();
     }
 
@@ -5226,10 +5226,10 @@ export class PromisePreReleaseApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
-        const result = this.api.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user, _options);
+    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
+        const result = this.api.patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2, _options);
         return result.toPromise();
     }
 
@@ -5238,10 +5238,10 @@ export class PromisePreReleaseApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<User> {
-        const result = this.api.patchUserUsingPATCH(userId, updateMask, user, _options);
+    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Promise<User> {
+        const result = this.api.patchUserUsingPATCH(userId, updateMask, patchUserRequestV2, _options);
         return result.toPromise();
     }
 
@@ -5249,10 +5249,10 @@ export class PromisePreReleaseApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<HttpInfo<void>> {
-        const result = this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest, _options);
+    public removeAffiliateFromProgramUsingPOSTWithHttpInfo(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<HttpInfo<void>> {
+        const result = this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -5260,10 +5260,10 @@ export class PromisePreReleaseApi {
      * Removes an Affiliate from a Commission Program
      * Remove an Affiliate from a Commission Program
      * @param id id
-     * @param removeFromProgramRequest removeFromProgramRequest
+     * @param affiliateRemoveFromProgramRequest removeFromProgramRequest
      */
-    public removeAffiliateFromProgramUsingPOST(id: string, removeFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<void> {
-        const result = this.api.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest, _options);
+    public removeAffiliateFromProgramUsingPOST(id: string, affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest, _options?: Configuration): Promise<void> {
+        const result = this.api.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest, _options);
         return result.toPromise();
     }
 
@@ -5365,11 +5365,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5377,11 +5377,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Affiliate object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5389,11 +5389,11 @@ export class PromisePreReleaseApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        const result = this.api.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCHWithHttpInfo(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
+        const result = this.api.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5401,11 +5401,11 @@ export class PromisePreReleaseApi {
      * Update a Category Discount.
      * Update a Category Discount
      * @param discountId discount_id
-     * @param request request
+     * @param createUpdateDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH(discountId: string, request: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CategoryDiscount> {
-        const result = this.api.updateDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH(discountId: string, createUpdateDiscountRequest: CreateUpdateDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CategoryDiscount> {
+        const result = this.api.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5413,11 +5413,11 @@ export class PromisePreReleaseApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        const result = this.api.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
+        const result = this.api.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5425,11 +5425,11 @@ export class PromisePreReleaseApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<ShippingDiscount> {
-        const result = this.api.updateDiscountUsingPATCH1(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH1(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<ShippingDiscount> {
+        const result = this.api.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5437,11 +5437,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5449,11 +5449,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateNotesCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5461,11 +5461,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5473,11 +5473,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOpportunityCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5485,11 +5485,11 @@ export class PromisePreReleaseApi {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        const result = this.api.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask, _options);
+    public updateOpportunityStageUsingPATCHWithHttpInfo(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
+        const result = this.api.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5497,11 +5497,11 @@ export class PromisePreReleaseApi {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestOpportunityStage> {
-        const result = this.api.updateOpportunityStageUsingPATCH(stageId, request, updateMask, _options);
+    public updateOpportunityStageUsingPATCH(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestOpportunityStage> {
+        const result = this.api.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5509,11 +5509,11 @@ export class PromisePreReleaseApi {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        const result = this.api.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask, _options);
+    public updateOpportunityUsingPATCHWithHttpInfo(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
+        const result = this.api.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5521,11 +5521,11 @@ export class PromisePreReleaseApi {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOpportunityUsingPATCH(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestV2Opportunity> {
-        const result = this.api.updateOpportunityUsingPATCH(opportunityId, request, updateMask, _options);
+    public updateOpportunityUsingPATCH(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RestV2Opportunity> {
+        const result = this.api.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5533,11 +5533,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5545,11 +5545,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateOrderCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5557,11 +5557,11 @@ export class PromisePreReleaseApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        const result = this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask, _options);
+    public updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
+        const result = this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5569,11 +5569,11 @@ export class PromisePreReleaseApi {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<OrderTotalDiscount> {
-        const result = this.api.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask, _options);
+    public updateOrderTotalDiscountUsingPATCH(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<OrderTotalDiscount> {
+        const result = this.api.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5581,10 +5581,10 @@ export class PromisePreReleaseApi {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        const result = this.api.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request, _options);
+    public updateRedirectLinkUsingPATCHWithHttpInfo(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
+        const result = this.api.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
@@ -5592,10 +5592,10 @@ export class PromisePreReleaseApi {
      * Updates an Affiliate Link
      * Update an Affiliate Link
      * @param redirectId redirect_id
-     * @param request request
+     * @param createOrPatchAffiliateLinkRequest request
      */
-    public updateRedirectLinkUsingPATCH(redirectId: string, request: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
-        const result = this.api.updateRedirectLinkUsingPATCH(redirectId, request, _options);
+    public updateRedirectLinkUsingPATCH(redirectId: string, createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest, _options?: Configuration): Promise<AffiliateLink> {
+        const result = this.api.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest, _options);
         return result.toPromise();
     }
 
@@ -5603,11 +5603,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5615,11 +5615,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5627,11 +5627,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5639,11 +5639,11 @@ export class PromisePreReleaseApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateTaskCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -5774,20 +5774,20 @@ export class PromiseReferralApi {
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOSTWithHttpInfo(request: CreateReferralRequest, _options?: Configuration): Promise<HttpInfo<Referral>> {
-        const result = this.api.createReferralUsingPOSTWithHttpInfo(request, _options);
+    public createReferralUsingPOSTWithHttpInfo(createReferralRequest: CreateReferralRequest, _options?: Configuration): Promise<HttpInfo<Referral>> {
+        const result = this.api.createReferralUsingPOSTWithHttpInfo(createReferralRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new referral partner referral on the provided contact
      * Create a Referral
-     * @param request request
+     * @param createReferralRequest request
      */
-    public createReferralUsingPOST(request: CreateReferralRequest, _options?: Configuration): Promise<Referral> {
-        const result = this.api.createReferralUsingPOST(request, _options);
+    public createReferralUsingPOST(createReferralRequest: CreateReferralRequest, _options?: Configuration): Promise<Referral> {
+        const result = this.api.createReferralUsingPOST(createReferralRequest, _options);
         return result.toPromise();
     }
 
@@ -6011,20 +6011,20 @@ export class PromiseShippingDiscountApi {
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1WithHttpInfo(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        const result = this.api.createDiscountUsingPOST1WithHttpInfo(request, _options);
+    public createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
+        const result = this.api.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a Shipping Discount
      * Create a Shipping Discount
-     * @param request request
+     * @param createShippingDiscountRequest request
      */
-    public createDiscountUsingPOST1(request: CreateShippingDiscountRequest, _options?: Configuration): Promise<ShippingDiscount> {
-        const result = this.api.createDiscountUsingPOST1(request, _options);
+    public createDiscountUsingPOST1(createShippingDiscountRequest: CreateShippingDiscountRequest, _options?: Configuration): Promise<ShippingDiscount> {
+        const result = this.api.createDiscountUsingPOST1(createShippingDiscountRequest, _options);
         return result.toPromise();
     }
 
@@ -6100,11 +6100,11 @@ export class PromiseShippingDiscountApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        const result = this.api.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH1WithHttpInfo(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
+        const result = this.api.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -6112,11 +6112,11 @@ export class PromiseShippingDiscountApi {
      * Updates a Shipping Discount
      * Update a Shipping Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateShippingDiscountRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateDiscountUsingPATCH1(discountId: string, request: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<ShippingDiscount> {
-        const result = this.api.updateDiscountUsingPATCH1(discountId, request, updateMask, _options);
+    public updateDiscountUsingPATCH1(discountId: string, updateShippingDiscountRequest: UpdateShippingDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<ShippingDiscount> {
+        const result = this.api.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -6209,20 +6209,20 @@ export class PromiseSubscriptionsApi {
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField, _options);
+    public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.createSubscriptionCustomFieldUsingPOST(customField, _options);
+    public createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
@@ -6294,11 +6294,11 @@ export class PromiseSubscriptionsApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -6306,11 +6306,11 @@ export class PromiseSubscriptionsApi {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -6358,40 +6358,40 @@ export class PromiseTagsApi {
     /**
      * Creates a new Tag Category.
      * Create Tag Category
-     * @param request request
+     * @param createUpdateTagCategoryRequest request
      */
-    public createTagCategoryUsingPOST1WithHttpInfo(request: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<HttpInfo<Tag>> {
-        const result = this.api.createTagCategoryUsingPOST1WithHttpInfo(request, _options);
+    public createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<HttpInfo<Tag>> {
+        const result = this.api.createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Tag Category.
      * Create Tag Category
-     * @param request request
+     * @param createUpdateTagCategoryRequest request
      */
-    public createTagCategoryUsingPOST1(request: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<Tag> {
-        const result = this.api.createTagCategoryUsingPOST1(request, _options);
+    public createTagCategoryUsingPOST1(createUpdateTagCategoryRequest: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<Tag> {
+        const result = this.api.createTagCategoryUsingPOST1(createUpdateTagCategoryRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Tag
      * Create Tag
-     * @param tag tag
+     * @param createUpdateTagRequest tag
      */
-    public createTagUsingPOST1WithHttpInfo(tag: CreateUpdateTagRequest, _options?: Configuration): Promise<HttpInfo<Tag>> {
-        const result = this.api.createTagUsingPOST1WithHttpInfo(tag, _options);
+    public createTagUsingPOST1WithHttpInfo(createUpdateTagRequest: CreateUpdateTagRequest, _options?: Configuration): Promise<HttpInfo<Tag>> {
+        const result = this.api.createTagUsingPOST1WithHttpInfo(createUpdateTagRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Tag
      * Create Tag
-     * @param tag tag
+     * @param createUpdateTagRequest tag
      */
-    public createTagUsingPOST1(tag: CreateUpdateTagRequest, _options?: Configuration): Promise<Tag> {
-        const result = this.api.createTagUsingPOST1(tag, _options);
+    public createTagUsingPOST1(createUpdateTagRequest: CreateUpdateTagRequest, _options?: Configuration): Promise<Tag> {
+        const result = this.api.createTagUsingPOST1(createUpdateTagRequest, _options);
         return result.toPromise();
     }
 
@@ -6588,10 +6588,10 @@ export class PromiseTagsApi {
      * Update a Tag Category
      * @param tagCategoryId tag_category_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tagCategory] tagCategory
+     * @param [createUpdateTagCategoryRequest] tagCategory
      */
-    public patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId: string, updateMask?: Array<string>, tagCategory?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
-        const result = this.api.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory, _options);
+    public patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
+        const result = this.api.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
         return result.toPromise();
     }
 
@@ -6600,10 +6600,10 @@ export class PromiseTagsApi {
      * Update a Tag Category
      * @param tagCategoryId tag_category_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tagCategory] tagCategory
+     * @param [createUpdateTagCategoryRequest] tagCategory
      */
-    public patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, tagCategory?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<UpdateTagCategoryResponse> {
-        const result = this.api.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, tagCategory, _options);
+    public patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<UpdateTagCategoryResponse> {
+        const result = this.api.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
         return result.toPromise();
     }
 
@@ -6612,10 +6612,10 @@ export class PromiseTagsApi {
      * Update a Tag
      * @param tagId tag_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tag] tag
+     * @param [createUpdateTagRequest] tag
      */
-    public patchTagUsingPATCHWithHttpInfo(tagId: string, updateMask?: Array<string>, tag?: CreateUpdateTagRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
-        const result = this.api.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag, _options);
+    public patchTagUsingPATCHWithHttpInfo(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
+        const result = this.api.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest, _options);
         return result.toPromise();
     }
 
@@ -6624,10 +6624,10 @@ export class PromiseTagsApi {
      * Update a Tag
      * @param tagId tag_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [tag] tag
+     * @param [createUpdateTagRequest] tag
      */
-    public patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, tag?: CreateUpdateTagRequest, _options?: Configuration): Promise<UpdateTagResponse> {
-        const result = this.api.patchTagUsingPATCH(tagId, updateMask, tag, _options);
+    public patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<UpdateTagResponse> {
+        const result = this.api.patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest, _options);
         return result.toPromise();
     }
 
@@ -6675,40 +6675,40 @@ export class PromiseTaskApi {
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1WithHttpInfo(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
-        const result = this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(customField, _options);
+    public createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
+        const result = this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public createTaskCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<CreateCustomFieldResponse> {
-        const result = this.api.createTaskCustomFieldUsingPOST1(customField, _options);
+    public createTaskCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<CreateCustomFieldResponse> {
+        const result = this.api.createTaskCustomFieldUsingPOST1(createCustomFieldRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1WithHttpInfo(task?: CreateTaskRequest, _options?: Configuration): Promise<HttpInfo<Task>> {
-        const result = this.api.createTaskUsingPOST1WithHttpInfo(task, _options);
+    public createTaskUsingPOST1WithHttpInfo(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Promise<HttpInfo<Task>> {
+        const result = this.api.createTaskUsingPOST1WithHttpInfo(createTaskRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param [task] task
+     * @param [createTaskRequest] task
      */
-    public createTaskUsingPOST1(task?: CreateTaskRequest, _options?: Configuration): Promise<Task> {
-        const result = this.api.createTaskUsingPOST1(task, _options);
+    public createTaskUsingPOST1(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Promise<Task> {
+        const result = this.api.createTaskUsingPOST1(createTaskRequest, _options);
         return result.toPromise();
     }
 
@@ -6807,10 +6807,10 @@ export class PromiseTaskApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
-        const result = this.api.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task, _options);
+    public patchTaskUsingPATCHWithHttpInfo(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
+        const result = this.api.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest, _options);
         return result.toPromise();
     }
 
@@ -6819,10 +6819,10 @@ export class PromiseTaskApi {
      * Update a Task
      * @param taskId task_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [task] task
+     * @param [createPatchTaskRequest] task
      */
-    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Promise<UpdateTaskResponse> {
-        const result = this.api.patchTaskUsingPATCH(taskId, updateMask, task, _options);
+    public patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Promise<UpdateTaskResponse> {
+        const result = this.api.patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest, _options);
         return result.toPromise();
     }
 
@@ -6848,11 +6848,11 @@ export class PromiseTaskApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        const result = this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask, _options);
+    public updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
+        const result = this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -6860,11 +6860,11 @@ export class PromiseTaskApi {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateTaskCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
-        const result = this.api.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask, _options);
+    public updateTaskCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
+        const result = this.api.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -6890,20 +6890,20 @@ export class PromiseUsersApi {
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1WithHttpInfo(user?: CreateUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
-        const result = this.api.createUserUsingPOST1WithHttpInfo(user, _options);
+    public createUserUsingPOST1WithHttpInfo(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
+        const result = this.api.createUserUsingPOST1WithHttpInfo(createUserRequestV2, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * Create a User
-     * @param [user] user
+     * @param [createUserRequestV2] user
      */
-    public createUserUsingPOST1(user?: CreateUserRequestV2, _options?: Configuration): Promise<User> {
-        const result = this.api.createUserUsingPOST1(user, _options);
+    public createUserUsingPOST1(createUserRequestV2?: CreateUserRequestV2, _options?: Configuration): Promise<User> {
+        const result = this.api.createUserUsingPOST1(createUserRequestV2, _options);
         return result.toPromise();
     }
 
@@ -6992,10 +6992,10 @@ export class PromiseUsersApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
-        const result = this.api.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user, _options);
+    public patchUserUsingPATCHWithHttpInfo(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Promise<HttpInfo<User>> {
+        const result = this.api.patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2, _options);
         return result.toPromise();
     }
 
@@ -7004,10 +7004,10 @@ export class PromiseUsersApi {
      * Update User
      * @param userId user_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [user] user
+     * @param [patchUserRequestV2] user
      */
-    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, user?: PatchUserRequestV2, _options?: Configuration): Promise<User> {
-        const result = this.api.patchUserUsingPATCH(userId, updateMask, user, _options);
+    public patchUserUsingPATCH(userId: string, updateMask?: Array<string>, patchUserRequestV2?: PatchUserRequestV2, _options?: Configuration): Promise<User> {
+        const result = this.api.patchUserUsingPATCH(userId, updateMask, patchUserRequestV2, _options);
         return result.toPromise();
     }
 

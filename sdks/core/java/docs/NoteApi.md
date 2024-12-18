@@ -27,7 +27,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createNoteCustomFieldUsingPOST1
 
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -49,9 +49,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST1(customField);
+            CustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST1(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NoteApi#createNoteCustomFieldUsingPOST1");
@@ -69,7 +69,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -94,7 +94,7 @@ No authorization required
 
 ## createNoteCustomFieldUsingPOST1WithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1 createNoteCustomFieldUsingPOST1WithHttpInfo(customField)
+> ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1 createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -117,9 +117,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.createNoteCustomFieldUsingPOST1WithHttpInfo(customField);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -139,7 +139,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -165,7 +165,7 @@ No authorization required
 
 ## createNoteUsingPOST1
 
-> Note createNoteUsingPOST1(contactId, request)
+> Note createNoteUsingPOST1(contactId, createNoteRequest)
 
 Create a Note
 
@@ -188,9 +188,9 @@ public class Example {
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
-        CreateNoteRequest request = new CreateNoteRequest(); // CreateNoteRequest | request
+        CreateNoteRequest createNoteRequest = new CreateNoteRequest(); // CreateNoteRequest | request
         try {
-            Note result = apiInstance.createNoteUsingPOST1(contactId, request);
+            Note result = apiInstance.createNoteUsingPOST1(contactId, createNoteRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NoteApi#createNoteUsingPOST1");
@@ -209,7 +209,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
-| **request** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | |
+| **createNoteRequest** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | |
 
 ### Return type
 
@@ -234,7 +234,7 @@ No authorization required
 
 ## createNoteUsingPOST1WithHttpInfo
 
-> ApiResponse<Note> createNoteUsingPOST1 createNoteUsingPOST1WithHttpInfo(contactId, request)
+> ApiResponse<Note> createNoteUsingPOST1 createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest)
 
 Create a Note
 
@@ -258,9 +258,9 @@ public class Example {
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
-        CreateNoteRequest request = new CreateNoteRequest(); // CreateNoteRequest | request
+        CreateNoteRequest createNoteRequest = new CreateNoteRequest(); // CreateNoteRequest | request
         try {
-            ApiResponse<Note> response = apiInstance.createNoteUsingPOST1WithHttpInfo(contactId, request);
+            ApiResponse<Note> response = apiInstance.createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -281,7 +281,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
-| **request** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | |
+| **createNoteRequest** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | |
 
 ### Return type
 
@@ -1185,7 +1185,7 @@ No authorization required
 
 ## updateNotesCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -1208,10 +1208,10 @@ public class Example {
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling NoteApi#updateNotesCustomFieldUsingPATCH");
@@ -1230,7 +1230,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -1257,7 +1257,7 @@ No authorization required
 
 ## updateNotesCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCH updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCH updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Custom Field
 
@@ -1281,10 +1281,10 @@ public class Example {
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1305,7 +1305,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type

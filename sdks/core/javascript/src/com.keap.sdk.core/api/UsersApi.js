@@ -44,12 +44,12 @@ export default class UsersApi {
      * Create a User
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} [user] user
+     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} [createUserRequestV2] user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
     createUserUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['user'];
+      let postBody = opts['createUserRequestV2'];
 
       let pathParams = {
       };
@@ -75,7 +75,7 @@ export default class UsersApi {
      * Create a User
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} opts.user user
+     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} opts.createUserRequestV2 user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
     createUserUsingPOST1(opts) {
@@ -279,12 +279,12 @@ export default class UsersApi {
      * @param {String} userId user_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} [user] user
+     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} [patchUserRequestV2] user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
     patchUserUsingPATCHWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['user'];
+      let postBody = opts['patchUserRequestV2'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling patchUserUsingPATCH");
@@ -318,7 +318,7 @@ export default class UsersApi {
      * @param {String} userId user_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} opts.user user
+     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} opts.patchUserRequestV2 user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
     patchUserUsingPATCH(userId, opts) {

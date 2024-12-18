@@ -151,16 +151,16 @@ class NoteApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createNoteCustomFieldUsingPOST1($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
-        list($response) = $this->createNoteCustomFieldUsingPOST1WithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createNoteCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -169,16 +169,16 @@ class NoteApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNoteCustomFieldUsingPOST1WithHttpInfo($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
-        $request = $this->createNoteCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createNoteCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -364,15 +364,15 @@ class NoteApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNoteCustomFieldUsingPOST1Async($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1Async($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
-        return $this->createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -385,16 +385,16 @@ class NoteApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createNoteCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createNoteCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -435,19 +435,19 @@ class NoteApi
     /**
      * Create request for operation 'createNoteCustomFieldUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createNoteCustomFieldUsingPOST1Request($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1Request($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createNoteCustomFieldUsingPOST1'
+                'Missing the required parameter $create_custom_field_request when calling createNoteCustomFieldUsingPOST1'
             );
         }
 
@@ -470,12 +470,12 @@ class NoteApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -529,16 +529,16 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Note|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createNoteUsingPOST1($contact_id, $request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
+    public function createNoteUsingPOST1($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
-        list($response) = $this->createNoteUsingPOST1WithHttpInfo($contact_id, $request, $contentType);
+        list($response) = $this->createNoteUsingPOST1WithHttpInfo($contact_id, $create_note_request, $contentType);
         return $response;
     }
 
@@ -548,16 +548,16 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Note|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNoteUsingPOST1WithHttpInfo($contact_id, $request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
+    public function createNoteUsingPOST1WithHttpInfo($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
-        $request = $this->createNoteUsingPOST1Request($contact_id, $request, $contentType);
+        $request = $this->createNoteUsingPOST1Request($contact_id, $create_note_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -744,15 +744,15 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNoteUsingPOST1Async($contact_id, $request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
+    public function createNoteUsingPOST1Async($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
-        return $this->createNoteUsingPOST1AsyncWithHttpInfo($contact_id, $request, $contentType)
+        return $this->createNoteUsingPOST1AsyncWithHttpInfo($contact_id, $create_note_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -766,16 +766,16 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNoteUsingPOST1AsyncWithHttpInfo($contact_id, $request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
+    public function createNoteUsingPOST1AsyncWithHttpInfo($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Note';
-        $request = $this->createNoteUsingPOST1Request($contact_id, $request, $contentType);
+        $request = $this->createNoteUsingPOST1Request($contact_id, $create_note_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -817,13 +817,13 @@ class NoteApi
      * Create request for operation 'createNoteUsingPOST1'
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createNoteUsingPOST1Request($contact_id, $request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
+    public function createNoteUsingPOST1Request($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
 
         // verify the required parameter 'contact_id' is set
@@ -833,10 +833,10 @@ class NoteApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_note_request' is set
+        if ($create_note_request === null || (is_array($create_note_request) && count($create_note_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createNoteUsingPOST1'
+                'Missing the required parameter $create_note_request when calling createNoteUsingPOST1'
             );
         }
 
@@ -867,12 +867,12 @@ class NoteApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_note_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_note_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_note_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1985,8 +1985,8 @@ class NoteApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1994,8 +1994,8 @@ class NoteApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2003,8 +2003,8 @@ class NoteApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2012,8 +2012,8 @@ class NoteApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -2456,8 +2456,8 @@ class NoteApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2465,8 +2465,8 @@ class NoteApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2474,8 +2474,8 @@ class NoteApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2483,8 +2483,8 @@ class NoteApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3418,7 +3418,7 @@ class NoteApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -3426,9 +3426,9 @@ class NoteApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateNotesCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -3438,7 +3438,7 @@ class NoteApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -3446,9 +3446,9 @@ class NoteApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3670,16 +3670,16 @@ class NoteApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateNotesCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
-        return $this->updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3693,17 +3693,17 @@ class NoteApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3745,14 +3745,14 @@ class NoteApi
      * Create request for operation 'updateNotesCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -3762,10 +3762,10 @@ class NoteApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateNotesCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateNotesCustomFieldUsingPATCH'
             );
         }
 
@@ -3806,12 +3806,12 @@ class NoteApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

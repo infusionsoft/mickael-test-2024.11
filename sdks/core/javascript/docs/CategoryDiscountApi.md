@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createDiscountUsingPOST
 
-> CategoryDiscount createDiscountUsingPOST(request)
+> CategoryDiscount createDiscountUsingPOST(createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -25,8 +25,8 @@ Create a Category Discount.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.CategoryDiscountApi();
-let request = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
-apiInstance.createDiscountUsingPOST(request).then((data) => {
+let createUpdateDiscountRequest = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+apiInstance.createDiscountUsingPOST(createUpdateDiscountRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -39,7 +39,7 @@ apiInstance.createDiscountUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -145,7 +145,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH
 
-> CategoryDiscount updateDiscountUsingPATCH(discountId, request, opts)
+> CategoryDiscount updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, opts)
 
 Update a Category Discount
 
@@ -158,11 +158,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.CategoryDiscountApi();
 let discountId = "discountId_example"; // String | discount_id
-let request = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+let createUpdateDiscountRequest = new KeapCoreServiceCoreSdk.CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateDiscountUsingPATCH(discountId, request, opts).then((data) => {
+apiInstance.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -176,7 +176,7 @@ apiInstance.updateDiscountUsingPATCH(discountId, request, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discountId** | **String**| discount_id | 
- **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
+ **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

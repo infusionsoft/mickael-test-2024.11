@@ -112,7 +112,7 @@ const apiInstance = new AffiliateApi(configuration);
 
 const request: AffiliateApiAddAffiliateUsingPOSTRequest = {
     // Affiliate request to insert (optional)
-  insertAffiliate: {
+  createAffiliateRequest: {
     code: "M123",
     contactId: "1",
     name: "Affiliate Name",
@@ -129,7 +129,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insertAffiliate** | **CreateAffiliateRequest**| Affiliate request to insert |
+ **createAffiliateRequest** | **CreateAffiliateRequest**| Affiliate request to insert |
 
 
 ### Return type
@@ -172,7 +172,7 @@ const apiInstance = new AffiliateApi(configuration);
 
 const request: AffiliateApiAddCommissionProgramUsingPOSTRequest = {
     // Commission Program to insert (optional)
-  insertCommissionProgram: {
+  createCommissionProgramRequest: {
     name: "Fitness program",
     notes: "20% default commission",
     priority: 100,
@@ -188,7 +188,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insertCommissionProgram** | **CreateCommissionProgramRequest**| Commission Program to insert |
+ **createCommissionProgramRequest** | **CreateCommissionProgramRequest**| Commission Program to insert |
 
 
 ### Return type
@@ -233,7 +233,7 @@ const request: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Product Commission Program (optional)
-  productCommissionProgram: {
+  createProductCommissionProgramRequest: {
     dollarAmount: "dollarAmount_example",
     percentage: "percentage_example",
     productId: "productId_example",
@@ -249,7 +249,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productCommissionProgram** | **CreateProductCommissionProgramRequest**| Product Commission Program |
+ **createProductCommissionProgramRequest** | **CreateProductCommissionProgramRequest**| Product Commission Program |
  **commissionProgramId** | [**string**] | commission_program_id | defaults to undefined
 
 
@@ -295,7 +295,7 @@ const request: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest =
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Subscription Commission Program (optional)
-  subscriptionCommissionProgram: {
+  createSubscriptionCommissionProgramRequest: {
     dollarAmount: "dollarAmount_example",
     percentage: "percentage_example",
     subscriptionId: "subscriptionId_example",
@@ -311,7 +311,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscriptionCommissionProgram** | **CreateSubscriptionCommissionProgramRequest**| Subscription Commission Program |
+ **createSubscriptionCommissionProgramRequest** | **CreateSubscriptionCommissionProgramRequest**| Subscription Commission Program |
  **commissionProgramId** | [**string**] | commission_program_id | defaults to undefined
 
 
@@ -339,7 +339,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createAffiliateCustomFieldUsingPOST**
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(createCustomFieldRequest)
 
 Creates a single Affiliate Custom Field
 
@@ -355,7 +355,7 @@ const apiInstance = new AffiliateApi(configuration);
 
 const request: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -378,7 +378,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -466,7 +466,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createRedirectLinkUsingPOST**
-> AffiliateLink createRedirectLinkUsingPOST(request)
+> AffiliateLink createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest)
 
 Creates a single Affiliate Link
 
@@ -482,7 +482,7 @@ const apiInstance = new AffiliateApi(configuration);
 
 const request: AffiliateApiCreateRedirectLinkUsingPOSTRequest = {
     // request
-  request: {
+  createOrPatchAffiliateLinkRequest: {
     affiliateId: "1",
     code: "fP100",
     name: "Fitness Program",
@@ -502,7 +502,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateOrPatchAffiliateLinkRequest**| request |
+ **createOrPatchAffiliateLinkRequest** | **CreateOrPatchAffiliateLinkRequest**| request |
 
 
 ### Return type
@@ -1504,7 +1504,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **removeAffiliateFromProgramUsingPOST**
-> void removeAffiliateFromProgramUsingPOST(removeFromProgramRequest)
+> void removeAffiliateFromProgramUsingPOST(affiliateRemoveFromProgramRequest)
 
 Removes an Affiliate from a Commission Program
 
@@ -1522,7 +1522,7 @@ const request: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest = {
     // id
   id: "id_example",
     // removeFromProgramRequest
-  removeFromProgramRequest: {
+  affiliateRemoveFromProgramRequest: {
     affiliateProgramId: "affiliateProgramId_example",
   },
 };
@@ -1536,7 +1536,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **removeFromProgramRequest** | **AffiliateRemoveFromProgramRequest**| removeFromProgramRequest |
+ **affiliateRemoveFromProgramRequest** | **AffiliateRemoveFromProgramRequest**| removeFromProgramRequest |
  **id** | [**string**] | id | defaults to undefined
 
 
@@ -1625,7 +1625,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateAffiliateCustomFieldUsingPATCH**
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Affiliate object.
 
@@ -1643,7 +1643,7 @@ const request: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -1669,7 +1669,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -1717,7 +1717,7 @@ const request: AffiliateApiUpdateAffiliateUsingPATCHRequest = {
     // id
   id: "id_example",
     // Affiliate request to patch (optional)
-  patchAffiliate: {
+  patchAffiliateRequest: {
     code: "M123",
     contactId: "1",
     name: "Affiliate Name",
@@ -1734,7 +1734,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patchAffiliate** | **PatchAffiliateRequest**| Affiliate request to patch |
+ **patchAffiliateRequest** | **PatchAffiliateRequest**| Affiliate request to patch |
  **id** | [**string**] | id | defaults to undefined
 
 
@@ -1763,7 +1763,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateRedirectLinkUsingPATCH**
-> AffiliateLink updateRedirectLinkUsingPATCH(request)
+> AffiliateLink updateRedirectLinkUsingPATCH(createOrPatchAffiliateLinkRequest)
 
 Updates an Affiliate Link
 
@@ -1781,7 +1781,7 @@ const request: AffiliateApiUpdateRedirectLinkUsingPATCHRequest = {
     // redirect_id
   redirectId: "redirect_id_example",
     // request
-  request: {
+  createOrPatchAffiliateLinkRequest: {
     affiliateId: "1",
     code: "fP100",
     name: "Fitness Program",
@@ -1801,7 +1801,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateOrPatchAffiliateLinkRequest**| request |
+ **createOrPatchAffiliateLinkRequest** | **CreateOrPatchAffiliateLinkRequest**| request |
  **redirectId** | [**string**] | redirect_id | defaults to undefined
 
 

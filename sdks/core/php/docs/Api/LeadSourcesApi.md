@@ -11,7 +11,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createLeadSourceUsingPOST()`
 
 ```php
-createLeadSourceUsingPOST($leadsource): \Com\Keap\Sdk\Core\Model\LeadSource
+createLeadSourceUsingPOST($create_lead_source_request): \Com\Keap\Sdk\Core\Model\LeadSource
 ```
 
 Create a Lead Source
@@ -30,10 +30,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\LeadSourcesApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$leadsource = new \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest(); // \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest | leadsource
+$create_lead_source_request = new \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest(); // \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest | leadsource
 
 try {
-    $result = $apiInstance->createLeadSourceUsingPOST($leadsource);
+    $result = $apiInstance->createLeadSourceUsingPOST($create_lead_source_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LeadSourcesApi->createLeadSourceUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -44,7 +44,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **leadsource** | [**\Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest**](../Model/CreateLeadSourceRequest.md)| leadsource | [optional] |
+| **create_lead_source_request** | [**\Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest**](../Model/CreateLeadSourceRequest.md)| leadsource | [optional] |
 
 ### Return type
 

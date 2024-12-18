@@ -344,7 +344,7 @@ class TagsApi:
     @validate_call
     def create_tag_category_using_post1(
         self,
-        request: Annotated[CreateUpdateTagCategoryRequest, Field(description="request")],
+        create_update_tag_category_request: Annotated[CreateUpdateTagCategoryRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -362,8 +362,8 @@ class TagsApi:
 
         Creates a new Tag Category.
 
-        :param request: request (required)
-        :type request: CreateUpdateTagCategoryRequest
+        :param create_update_tag_category_request: request (required)
+        :type create_update_tag_category_request: CreateUpdateTagCategoryRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -387,7 +387,7 @@ class TagsApi:
         """ # noqa: E501
 
         _param = self._create_tag_category_using_post1_serialize(
-            request=request,
+            create_update_tag_category_request=create_update_tag_category_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -412,7 +412,7 @@ class TagsApi:
     @validate_call
     def create_tag_category_using_post1_with_http_info(
         self,
-        request: Annotated[CreateUpdateTagCategoryRequest, Field(description="request")],
+        create_update_tag_category_request: Annotated[CreateUpdateTagCategoryRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -430,8 +430,8 @@ class TagsApi:
 
         Creates a new Tag Category.
 
-        :param request: request (required)
-        :type request: CreateUpdateTagCategoryRequest
+        :param create_update_tag_category_request: request (required)
+        :type create_update_tag_category_request: CreateUpdateTagCategoryRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -455,7 +455,7 @@ class TagsApi:
         """ # noqa: E501
 
         _param = self._create_tag_category_using_post1_serialize(
-            request=request,
+            create_update_tag_category_request=create_update_tag_category_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -480,7 +480,7 @@ class TagsApi:
     @validate_call
     def create_tag_category_using_post1_without_preload_content(
         self,
-        request: Annotated[CreateUpdateTagCategoryRequest, Field(description="request")],
+        create_update_tag_category_request: Annotated[CreateUpdateTagCategoryRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -498,8 +498,8 @@ class TagsApi:
 
         Creates a new Tag Category.
 
-        :param request: request (required)
-        :type request: CreateUpdateTagCategoryRequest
+        :param create_update_tag_category_request: request (required)
+        :type create_update_tag_category_request: CreateUpdateTagCategoryRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -523,7 +523,7 @@ class TagsApi:
         """ # noqa: E501
 
         _param = self._create_tag_category_using_post1_serialize(
-            request=request,
+            create_update_tag_category_request=create_update_tag_category_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -543,7 +543,7 @@ class TagsApi:
 
     def _create_tag_category_using_post1_serialize(
         self,
-        request,
+        create_update_tag_category_request,
         _request_auth,
         _content_type,
         _headers,
@@ -569,8 +569,8 @@ class TagsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_update_tag_category_request is not None:
+            _body_params = create_update_tag_category_request
 
 
         # set the HTTP header `Accept`
@@ -620,7 +620,7 @@ class TagsApi:
     @validate_call
     def create_tag_using_post1(
         self,
-        tag: Annotated[CreateUpdateTagRequest, Field(description="tag")],
+        create_update_tag_request: Annotated[CreateUpdateTagRequest, Field(description="tag")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -638,8 +638,8 @@ class TagsApi:
 
         Creates a new Tag
 
-        :param tag: tag (required)
-        :type tag: CreateUpdateTagRequest
+        :param create_update_tag_request: tag (required)
+        :type create_update_tag_request: CreateUpdateTagRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -663,7 +663,7 @@ class TagsApi:
         """ # noqa: E501
 
         _param = self._create_tag_using_post1_serialize(
-            tag=tag,
+            create_update_tag_request=create_update_tag_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -688,7 +688,7 @@ class TagsApi:
     @validate_call
     def create_tag_using_post1_with_http_info(
         self,
-        tag: Annotated[CreateUpdateTagRequest, Field(description="tag")],
+        create_update_tag_request: Annotated[CreateUpdateTagRequest, Field(description="tag")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -706,8 +706,8 @@ class TagsApi:
 
         Creates a new Tag
 
-        :param tag: tag (required)
-        :type tag: CreateUpdateTagRequest
+        :param create_update_tag_request: tag (required)
+        :type create_update_tag_request: CreateUpdateTagRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -731,7 +731,7 @@ class TagsApi:
         """ # noqa: E501
 
         _param = self._create_tag_using_post1_serialize(
-            tag=tag,
+            create_update_tag_request=create_update_tag_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -756,7 +756,7 @@ class TagsApi:
     @validate_call
     def create_tag_using_post1_without_preload_content(
         self,
-        tag: Annotated[CreateUpdateTagRequest, Field(description="tag")],
+        create_update_tag_request: Annotated[CreateUpdateTagRequest, Field(description="tag")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -774,8 +774,8 @@ class TagsApi:
 
         Creates a new Tag
 
-        :param tag: tag (required)
-        :type tag: CreateUpdateTagRequest
+        :param create_update_tag_request: tag (required)
+        :type create_update_tag_request: CreateUpdateTagRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -799,7 +799,7 @@ class TagsApi:
         """ # noqa: E501
 
         _param = self._create_tag_using_post1_serialize(
-            tag=tag,
+            create_update_tag_request=create_update_tag_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -819,7 +819,7 @@ class TagsApi:
 
     def _create_tag_using_post1_serialize(
         self,
-        tag,
+        create_update_tag_request,
         _request_auth,
         _content_type,
         _headers,
@@ -845,8 +845,8 @@ class TagsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if tag is not None:
-            _body_params = tag
+        if create_update_tag_request is not None:
+            _body_params = create_update_tag_request
 
 
         # set the HTTP header `Accept`
@@ -3268,7 +3268,7 @@ class TagsApi:
         self,
         tag_category_id: Annotated[StrictStr, Field(description="tag_category_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        tag_category: Annotated[Optional[CreateUpdateTagCategoryRequest], Field(description="tagCategory")] = None,
+        create_update_tag_category_request: Annotated[Optional[CreateUpdateTagCategoryRequest], Field(description="tagCategory")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3290,8 +3290,8 @@ class TagsApi:
         :type tag_category_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param tag_category: tagCategory
-        :type tag_category: CreateUpdateTagCategoryRequest
+        :param create_update_tag_category_request: tagCategory
+        :type create_update_tag_category_request: CreateUpdateTagCategoryRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3317,7 +3317,7 @@ class TagsApi:
         _param = self._patch_tag_category_using_patch_serialize(
             tag_category_id=tag_category_id,
             update_mask=update_mask,
-            tag_category=tag_category,
+            create_update_tag_category_request=create_update_tag_category_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3345,7 +3345,7 @@ class TagsApi:
         self,
         tag_category_id: Annotated[StrictStr, Field(description="tag_category_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        tag_category: Annotated[Optional[CreateUpdateTagCategoryRequest], Field(description="tagCategory")] = None,
+        create_update_tag_category_request: Annotated[Optional[CreateUpdateTagCategoryRequest], Field(description="tagCategory")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3367,8 +3367,8 @@ class TagsApi:
         :type tag_category_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param tag_category: tagCategory
-        :type tag_category: CreateUpdateTagCategoryRequest
+        :param create_update_tag_category_request: tagCategory
+        :type create_update_tag_category_request: CreateUpdateTagCategoryRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3394,7 +3394,7 @@ class TagsApi:
         _param = self._patch_tag_category_using_patch_serialize(
             tag_category_id=tag_category_id,
             update_mask=update_mask,
-            tag_category=tag_category,
+            create_update_tag_category_request=create_update_tag_category_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3422,7 +3422,7 @@ class TagsApi:
         self,
         tag_category_id: Annotated[StrictStr, Field(description="tag_category_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        tag_category: Annotated[Optional[CreateUpdateTagCategoryRequest], Field(description="tagCategory")] = None,
+        create_update_tag_category_request: Annotated[Optional[CreateUpdateTagCategoryRequest], Field(description="tagCategory")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3444,8 +3444,8 @@ class TagsApi:
         :type tag_category_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param tag_category: tagCategory
-        :type tag_category: CreateUpdateTagCategoryRequest
+        :param create_update_tag_category_request: tagCategory
+        :type create_update_tag_category_request: CreateUpdateTagCategoryRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3471,7 +3471,7 @@ class TagsApi:
         _param = self._patch_tag_category_using_patch_serialize(
             tag_category_id=tag_category_id,
             update_mask=update_mask,
-            tag_category=tag_category,
+            create_update_tag_category_request=create_update_tag_category_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3494,7 +3494,7 @@ class TagsApi:
         self,
         tag_category_id,
         update_mask,
-        tag_category,
+        create_update_tag_category_request,
         _request_auth,
         _content_type,
         _headers,
@@ -3527,8 +3527,8 @@ class TagsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if tag_category is not None:
-            _body_params = tag_category
+        if create_update_tag_category_request is not None:
+            _body_params = create_update_tag_category_request
 
 
         # set the HTTP header `Accept`
@@ -3580,7 +3580,7 @@ class TagsApi:
         self,
         tag_id: Annotated[StrictStr, Field(description="tag_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        tag: Annotated[Optional[CreateUpdateTagRequest], Field(description="tag")] = None,
+        create_update_tag_request: Annotated[Optional[CreateUpdateTagRequest], Field(description="tag")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3602,8 +3602,8 @@ class TagsApi:
         :type tag_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param tag: tag
-        :type tag: CreateUpdateTagRequest
+        :param create_update_tag_request: tag
+        :type create_update_tag_request: CreateUpdateTagRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3629,7 +3629,7 @@ class TagsApi:
         _param = self._patch_tag_using_patch_serialize(
             tag_id=tag_id,
             update_mask=update_mask,
-            tag=tag,
+            create_update_tag_request=create_update_tag_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3657,7 +3657,7 @@ class TagsApi:
         self,
         tag_id: Annotated[StrictStr, Field(description="tag_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        tag: Annotated[Optional[CreateUpdateTagRequest], Field(description="tag")] = None,
+        create_update_tag_request: Annotated[Optional[CreateUpdateTagRequest], Field(description="tag")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3679,8 +3679,8 @@ class TagsApi:
         :type tag_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param tag: tag
-        :type tag: CreateUpdateTagRequest
+        :param create_update_tag_request: tag
+        :type create_update_tag_request: CreateUpdateTagRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3706,7 +3706,7 @@ class TagsApi:
         _param = self._patch_tag_using_patch_serialize(
             tag_id=tag_id,
             update_mask=update_mask,
-            tag=tag,
+            create_update_tag_request=create_update_tag_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3734,7 +3734,7 @@ class TagsApi:
         self,
         tag_id: Annotated[StrictStr, Field(description="tag_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        tag: Annotated[Optional[CreateUpdateTagRequest], Field(description="tag")] = None,
+        create_update_tag_request: Annotated[Optional[CreateUpdateTagRequest], Field(description="tag")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3756,8 +3756,8 @@ class TagsApi:
         :type tag_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param tag: tag
-        :type tag: CreateUpdateTagRequest
+        :param create_update_tag_request: tag
+        :type create_update_tag_request: CreateUpdateTagRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3783,7 +3783,7 @@ class TagsApi:
         _param = self._patch_tag_using_patch_serialize(
             tag_id=tag_id,
             update_mask=update_mask,
-            tag=tag,
+            create_update_tag_request=create_update_tag_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3806,7 +3806,7 @@ class TagsApi:
         self,
         tag_id,
         update_mask,
-        tag,
+        create_update_tag_request,
         _request_auth,
         _content_type,
         _headers,
@@ -3839,8 +3839,8 @@ class TagsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if tag is not None:
-            _body_params = tag
+        if create_update_tag_request is not None:
+            _body_params = create_update_tag_request
 
 
         # set the HTTP header `Accept`

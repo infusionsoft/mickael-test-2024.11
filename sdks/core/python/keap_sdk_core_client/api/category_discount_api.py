@@ -43,7 +43,7 @@ class CategoryDiscountApi:
     @validate_call
     def create_discount_using_post(
         self,
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -61,8 +61,8 @@ class CategoryDiscountApi:
 
         Create a Category Discount.
 
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -86,7 +86,7 @@ class CategoryDiscountApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post_serialize(
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -111,7 +111,7 @@ class CategoryDiscountApi:
     @validate_call
     def create_discount_using_post_with_http_info(
         self,
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -129,8 +129,8 @@ class CategoryDiscountApi:
 
         Create a Category Discount.
 
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -154,7 +154,7 @@ class CategoryDiscountApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post_serialize(
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -179,7 +179,7 @@ class CategoryDiscountApi:
     @validate_call
     def create_discount_using_post_without_preload_content(
         self,
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -197,8 +197,8 @@ class CategoryDiscountApi:
 
         Create a Category Discount.
 
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -222,7 +222,7 @@ class CategoryDiscountApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post_serialize(
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -242,7 +242,7 @@ class CategoryDiscountApi:
 
     def _create_discount_using_post_serialize(
         self,
-        request,
+        create_update_discount_request,
         _request_auth,
         _content_type,
         _headers,
@@ -268,8 +268,8 @@ class CategoryDiscountApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_update_discount_request is not None:
+            _body_params = create_update_discount_request
 
 
         # set the HTTP header `Accept`
@@ -852,7 +852,7 @@ class CategoryDiscountApi:
     def update_discount_using_patch(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -873,8 +873,8 @@ class CategoryDiscountApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -901,7 +901,7 @@ class CategoryDiscountApi:
 
         _param = self._update_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -929,7 +929,7 @@ class CategoryDiscountApi:
     def update_discount_using_patch_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -950,8 +950,8 @@ class CategoryDiscountApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -978,7 +978,7 @@ class CategoryDiscountApi:
 
         _param = self._update_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1006,7 +1006,7 @@ class CategoryDiscountApi:
     def update_discount_using_patch_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -1027,8 +1027,8 @@ class CategoryDiscountApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -1055,7 +1055,7 @@ class CategoryDiscountApi:
 
         _param = self._update_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1078,7 +1078,7 @@ class CategoryDiscountApi:
     def _update_discount_using_patch_serialize(
         self,
         discount_id,
-        request,
+        create_update_discount_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -1112,8 +1112,8 @@ class CategoryDiscountApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_update_discount_request is not None:
+            _body_params = create_update_discount_request
 
 
         # set the HTTP header `Accept`

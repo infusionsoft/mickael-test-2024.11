@@ -8,7 +8,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createreferralusingpost"></a>
 # **CreateReferralUsingPOST**
-> Referral CreateReferralUsingPOST (CreateReferralRequest request)
+> Referral CreateReferralUsingPOST (CreateReferralRequest createReferralRequest)
 
 Create a Referral
 
@@ -31,12 +31,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new ReferralApi(config);
-            var request = new CreateReferralRequest(); // CreateReferralRequest | request
+            var createReferralRequest = new CreateReferralRequest(); // CreateReferralRequest | request
 
             try
             {
                 // Create a Referral
-                Referral result = apiInstance.CreateReferralUsingPOST(request);
+                Referral result = apiInstance.CreateReferralUsingPOST(createReferralRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -57,7 +57,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Referral
-    ApiResponse<Referral> response = apiInstance.CreateReferralUsingPOSTWithHttpInfo(request);
+    ApiResponse<Referral> response = apiInstance.CreateReferralUsingPOSTWithHttpInfo(createReferralRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -74,7 +74,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateReferralRequest**](CreateReferralRequest.md) | request |  |
+| **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md) | request |  |
 
 ### Return type
 

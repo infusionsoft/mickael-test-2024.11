@@ -107,24 +107,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Contact Link type
    * Creates a new type of Contact Link.
-   * @param request request (required)
+   * @param createContactLinkTypeRequest request (required)
    * @return ContactLinkType
    * @throws ApiException if fails to make API call
    */
-  public ContactLinkType createContactLinkTypeUsingPOST(CreateContactLinkTypeRequest request) throws ApiException {
-    ApiResponse<ContactLinkType> localVarResponse = createContactLinkTypeUsingPOSTWithHttpInfo(request);
+  public ContactLinkType createContactLinkTypeUsingPOST(CreateContactLinkTypeRequest createContactLinkTypeRequest) throws ApiException {
+    ApiResponse<ContactLinkType> localVarResponse = createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Contact Link type
    * Creates a new type of Contact Link.
-   * @param request request (required)
+   * @param createContactLinkTypeRequest request (required)
    * @return ApiResponse&lt;ContactLinkType&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ContactLinkType> createContactLinkTypeUsingPOSTWithHttpInfo(CreateContactLinkTypeRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createContactLinkTypeUsingPOSTRequestBuilder(request);
+  public ApiResponse<ContactLinkType> createContactLinkTypeUsingPOSTWithHttpInfo(CreateContactLinkTypeRequest createContactLinkTypeRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createContactLinkTypeUsingPOSTRequestBuilder(createContactLinkTypeRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -164,10 +164,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createContactLinkTypeUsingPOSTRequestBuilder(CreateContactLinkTypeRequest request) throws ApiException {
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createContactLinkTypeUsingPOST");
+  private HttpRequest.Builder createContactLinkTypeUsingPOSTRequestBuilder(CreateContactLinkTypeRequest createContactLinkTypeRequest) throws ApiException {
+    // verify the required parameter 'createContactLinkTypeRequest' is set
+    if (createContactLinkTypeRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createContactLinkTypeRequest' when calling createContactLinkTypeUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -181,7 +181,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createContactLinkTypeRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -198,24 +198,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Contact
    * Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
-   * @param contact contact (optional)
+   * @param createPatchContactRequest contact (optional)
    * @return Contact
    * @throws ApiException if fails to make API call
    */
-  public Contact createContactUsingPOST1(CreatePatchContactRequest contact) throws ApiException {
-    ApiResponse<Contact> localVarResponse = createContactUsingPOST1WithHttpInfo(contact);
+  public Contact createContactUsingPOST1(CreatePatchContactRequest createPatchContactRequest) throws ApiException {
+    ApiResponse<Contact> localVarResponse = createContactUsingPOST1WithHttpInfo(createPatchContactRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Contact
    * Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
-   * @param contact contact (optional)
+   * @param createPatchContactRequest contact (optional)
    * @return ApiResponse&lt;Contact&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Contact> createContactUsingPOST1WithHttpInfo(CreatePatchContactRequest contact) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createContactUsingPOST1RequestBuilder(contact);
+  public ApiResponse<Contact> createContactUsingPOST1WithHttpInfo(CreatePatchContactRequest createPatchContactRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createContactUsingPOST1RequestBuilder(createPatchContactRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -255,7 +255,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createContactUsingPOST1RequestBuilder(CreatePatchContactRequest contact) throws ApiException {
+  private HttpRequest.Builder createContactUsingPOST1RequestBuilder(CreatePatchContactRequest createPatchContactRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -268,7 +268,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(contact);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createPatchContactRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -1062,12 +1062,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Contact
    * @param contactId contact_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param contact contact (optional)
+   * @param createPatchContactRequest contact (optional)
    * @return Contact
    * @throws ApiException if fails to make API call
    */
-  public Contact patchContactUsingPATCH(String contactId, List<String> updateMask, CreatePatchContactRequest contact) throws ApiException {
-    ApiResponse<Contact> localVarResponse = patchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact);
+  public Contact patchContactUsingPATCH(String contactId, List<String> updateMask, CreatePatchContactRequest createPatchContactRequest) throws ApiException {
+    ApiResponse<Contact> localVarResponse = patchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest);
     return localVarResponse.getData();
   }
 
@@ -1076,12 +1076,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Contact
    * @param contactId contact_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param contact contact (optional)
+   * @param createPatchContactRequest contact (optional)
    * @return ApiResponse&lt;Contact&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Contact> patchContactUsingPATCHWithHttpInfo(String contactId, List<String> updateMask, CreatePatchContactRequest contact) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchContactUsingPATCHRequestBuilder(contactId, updateMask, contact);
+  public ApiResponse<Contact> patchContactUsingPATCHWithHttpInfo(String contactId, List<String> updateMask, CreatePatchContactRequest createPatchContactRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchContactUsingPATCHRequestBuilder(contactId, updateMask, createPatchContactRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1121,7 +1121,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchContactUsingPATCHRequestBuilder(String contactId, List<String> updateMask, CreatePatchContactRequest contact) throws ApiException {
+  private HttpRequest.Builder patchContactUsingPATCHRequestBuilder(String contactId, List<String> updateMask, CreatePatchContactRequest createPatchContactRequest) throws ApiException {
     // verify the required parameter 'contactId' is set
     if (contactId == null) {
       throw new ApiException(400, "Missing the required parameter 'contactId' when calling patchContactUsingPATCH");
@@ -1154,7 +1154,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(contact);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createPatchContactRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

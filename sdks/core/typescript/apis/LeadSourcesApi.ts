@@ -20,9 +20,9 @@ export class LeadSourcesApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Lead Source
      * Create a Lead Source
-     * @param leadsource leadsource
+     * @param createLeadSourceRequest leadsource
      */
-    public async createLeadSourceUsingPOST(leadsource?: CreateLeadSourceRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createLeadSourceUsingPOST(createLeadSourceRequest?: CreateLeadSourceRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -40,7 +40,7 @@ export class LeadSourcesApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(leadsource, "CreateLeadSourceRequest", ""),
+            ObjectSerializer.serialize(createLeadSourceRequest, "CreateLeadSourceRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

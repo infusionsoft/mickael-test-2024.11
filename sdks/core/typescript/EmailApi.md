@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createEmailUsingPOST1**
-> EmailSentWithContent createEmailUsingPOST1(emailWithContent)
+> EmailSentWithContent createEmailUsingPOST1(createEmailSentRequest)
 
 Creates a Record of an Email sent to a Contact
 
@@ -29,7 +29,7 @@ const apiInstance = new EmailApi(configuration);
 
 const request: EmailApiCreateEmailUsingPOST1Request = {
     // emailWithContent
-  emailWithContent: {
+  createEmailSentRequest: {
     clickedTime: "clickedTime_example",
     contactId: "contactId_example",
     headers: "headers_example",
@@ -63,7 +63,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailWithContent** | **CreateEmailSentRequest**| emailWithContent |
+ **createEmailSentRequest** | **CreateEmailSentRequest**| emailWithContent |
 
 
 ### Return type

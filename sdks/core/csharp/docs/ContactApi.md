@@ -20,7 +20,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createcontactlinktypeusingpost"></a>
 # **CreateContactLinkTypeUsingPOST**
-> ContactLinkType CreateContactLinkTypeUsingPOST (CreateContactLinkTypeRequest request)
+> ContactLinkType CreateContactLinkTypeUsingPOST (CreateContactLinkTypeRequest createContactLinkTypeRequest)
 
 Create a Contact Link type
 
@@ -43,12 +43,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new ContactApi(config);
-            var request = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
+            var createContactLinkTypeRequest = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
 
             try
             {
                 // Create a Contact Link type
-                ContactLinkType result = apiInstance.CreateContactLinkTypeUsingPOST(request);
+                ContactLinkType result = apiInstance.CreateContactLinkTypeUsingPOST(createContactLinkTypeRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -69,7 +69,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Contact Link type
-    ApiResponse<ContactLinkType> response = apiInstance.CreateContactLinkTypeUsingPOSTWithHttpInfo(request);
+    ApiResponse<ContactLinkType> response = apiInstance.CreateContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -86,7 +86,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md) | request |  |
+| **createContactLinkTypeRequest** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md) | request |  |
 
 ### Return type
 
@@ -113,7 +113,7 @@ No authorization required
 
 <a id="createcontactusingpost1"></a>
 # **CreateContactUsingPOST1**
-> Contact CreateContactUsingPOST1 (CreatePatchContactRequest? contact = null)
+> Contact CreateContactUsingPOST1 (CreatePatchContactRequest? createPatchContactRequest = null)
 
 Create a Contact
 
@@ -136,12 +136,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new ContactApi(config);
-            var contact = new CreatePatchContactRequest?(); // CreatePatchContactRequest? | contact (optional) 
+            var createPatchContactRequest = new CreatePatchContactRequest?(); // CreatePatchContactRequest? | contact (optional) 
 
             try
             {
                 // Create a Contact
-                Contact result = apiInstance.CreateContactUsingPOST1(contact);
+                Contact result = apiInstance.CreateContactUsingPOST1(createPatchContactRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Contact
-    ApiResponse<Contact> response = apiInstance.CreateContactUsingPOST1WithHttpInfo(contact);
+    ApiResponse<Contact> response = apiInstance.CreateContactUsingPOST1WithHttpInfo(createPatchContactRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -179,7 +179,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **contact** | [**CreatePatchContactRequest?**](CreatePatchContactRequest?.md) | contact | [optional]  |
+| **createPatchContactRequest** | [**CreatePatchContactRequest?**](CreatePatchContactRequest?.md) | contact | [optional]  |
 
 ### Return type
 
@@ -969,7 +969,7 @@ No authorization required
 
 <a id="patchcontactusingpatch"></a>
 # **PatchContactUsingPATCH**
-> Contact PatchContactUsingPATCH (string contactId, List<string>? updateMask = null, CreatePatchContactRequest? contact = null)
+> Contact PatchContactUsingPATCH (string contactId, List<string>? updateMask = null, CreatePatchContactRequest? createPatchContactRequest = null)
 
 Update a Contact
 
@@ -994,12 +994,12 @@ namespace Example
             var apiInstance = new ContactApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var contact = new CreatePatchContactRequest?(); // CreatePatchContactRequest? | contact (optional) 
+            var createPatchContactRequest = new CreatePatchContactRequest?(); // CreatePatchContactRequest? | contact (optional) 
 
             try
             {
                 // Update a Contact
-                Contact result = apiInstance.PatchContactUsingPATCH(contactId, updateMask, contact);
+                Contact result = apiInstance.PatchContactUsingPATCH(contactId, updateMask, createPatchContactRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1020,7 +1020,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Contact
-    ApiResponse<Contact> response = apiInstance.PatchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact);
+    ApiResponse<Contact> response = apiInstance.PatchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1039,7 +1039,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **contactId** | **string** | contact_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **contact** | [**CreatePatchContactRequest?**](CreatePatchContactRequest?.md) | contact | [optional]  |
+| **createPatchContactRequest** | [**CreatePatchContactRequest?**](CreatePatchContactRequest?.md) | contact | [optional]  |
 
 ### Return type
 

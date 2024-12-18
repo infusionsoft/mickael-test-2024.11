@@ -177,12 +177,12 @@ import io.github.resilience4j.retry.Retry;
    * Update Business Profile
    * Updates Business Profile information.
    * @param updateMask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-   * @param businessProfile businessProfile (optional)
+   * @param patchBusinessProfileRequest businessProfile (optional)
    * @return GetBusinessProfileResponse
    * @throws ApiException if fails to make API call
    */
-  public GetBusinessProfileResponse patchBusinessProfileUsingPATCH(List<String> updateMask, PatchBusinessProfileRequest businessProfile) throws ApiException {
-    ApiResponse<GetBusinessProfileResponse> localVarResponse = patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile);
+  public GetBusinessProfileResponse patchBusinessProfileUsingPATCH(List<String> updateMask, PatchBusinessProfileRequest patchBusinessProfileRequest) throws ApiException {
+    ApiResponse<GetBusinessProfileResponse> localVarResponse = patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
     return localVarResponse.getData();
   }
 
@@ -190,12 +190,12 @@ import io.github.resilience4j.retry.Retry;
    * Update Business Profile
    * Updates Business Profile information.
    * @param updateMask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
-   * @param businessProfile businessProfile (optional)
+   * @param patchBusinessProfileRequest businessProfile (optional)
    * @return ApiResponse&lt;GetBusinessProfileResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<GetBusinessProfileResponse> patchBusinessProfileUsingPATCHWithHttpInfo(List<String> updateMask, PatchBusinessProfileRequest businessProfile) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchBusinessProfileUsingPATCHRequestBuilder(updateMask, businessProfile);
+  public ApiResponse<GetBusinessProfileResponse> patchBusinessProfileUsingPATCHWithHttpInfo(List<String> updateMask, PatchBusinessProfileRequest patchBusinessProfileRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchBusinessProfileUsingPATCHRequestBuilder(updateMask, patchBusinessProfileRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -235,7 +235,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchBusinessProfileUsingPATCHRequestBuilder(List<String> updateMask, PatchBusinessProfileRequest businessProfile) throws ApiException {
+  private HttpRequest.Builder patchBusinessProfileUsingPATCHRequestBuilder(List<String> updateMask, PatchBusinessProfileRequest patchBusinessProfileRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -263,7 +263,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(businessProfile);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(patchBusinessProfileRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

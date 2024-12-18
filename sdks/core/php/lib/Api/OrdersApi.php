@@ -160,16 +160,16 @@ class OrdersApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOrderCustomFieldUsingPOST($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
-        list($response) = $this->createOrderCustomFieldUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createOrderCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -178,16 +178,16 @@ class OrdersApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderCustomFieldUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
-        $request = $this->createOrderCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOrderCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -373,15 +373,15 @@ class OrdersApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderCustomFieldUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
-        return $this->createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -394,16 +394,16 @@ class OrdersApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createOrderCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOrderCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -444,19 +444,19 @@ class OrdersApi
     /**
      * Create request for operation 'createOrderCustomFieldUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOrderCustomFieldUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createOrderCustomFieldUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createOrderCustomFieldUsingPOST'
             );
         }
 
@@ -479,12 +479,12 @@ class OrdersApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -934,16 +934,16 @@ class OrdersApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOrderUsingPOST1($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
-        list($response) = $this->createOrderUsingPOST1WithHttpInfo($create_order_request, $contentType);
+        list($response) = $this->createOrderUsingPOST1WithHttpInfo($rest_create_order_request, $contentType);
         return $response;
     }
 
@@ -952,16 +952,16 @@ class OrdersApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderUsingPOST1WithHttpInfo($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1WithHttpInfo($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
-        $request = $this->createOrderUsingPOST1Request($create_order_request, $contentType);
+        $request = $this->createOrderUsingPOST1Request($rest_create_order_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1147,15 +1147,15 @@ class OrdersApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderUsingPOST1Async($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1Async($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
-        return $this->createOrderUsingPOST1AsyncWithHttpInfo($create_order_request, $contentType)
+        return $this->createOrderUsingPOST1AsyncWithHttpInfo($rest_create_order_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1168,16 +1168,16 @@ class OrdersApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderUsingPOST1AsyncWithHttpInfo($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1AsyncWithHttpInfo($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Order';
-        $request = $this->createOrderUsingPOST1Request($create_order_request, $contentType);
+        $request = $this->createOrderUsingPOST1Request($rest_create_order_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1218,19 +1218,19 @@ class OrdersApi
     /**
      * Create request for operation 'createOrderUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOrderUsingPOST1Request($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1Request($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
 
-        // verify the required parameter 'create_order_request' is set
-        if ($create_order_request === null || (is_array($create_order_request) && count($create_order_request) === 0)) {
+        // verify the required parameter 'rest_create_order_request' is set
+        if ($rest_create_order_request === null || (is_array($rest_create_order_request) && count($rest_create_order_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $create_order_request when calling createOrderUsingPOST1'
+                'Missing the required parameter $rest_create_order_request when calling createOrderUsingPOST1'
             );
         }
 
@@ -1253,12 +1253,12 @@ class OrdersApi
         );
 
         // for model (json/xml)
-        if (isset($create_order_request)) {
+        if (isset($rest_create_order_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_order_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($rest_create_order_request));
             } else {
-                $httpBody = $create_order_request;
+                $httpBody = $rest_create_order_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2981,8 +2981,8 @@ class OrdersApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2990,8 +2990,8 @@ class OrdersApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2999,8 +2999,8 @@ class OrdersApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3008,8 +3008,8 @@ class OrdersApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3448,8 +3448,8 @@ class OrdersApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3457,8 +3457,8 @@ class OrdersApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3466,8 +3466,8 @@ class OrdersApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3475,8 +3475,8 @@ class OrdersApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3543,16 +3543,16 @@ class OrdersApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchOrderUsingPATCH($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCH($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
-        list($response) = $this->patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask, $order, $contentType);
+        list($response) = $this->patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask, $rest_v2_patch_order_request, $contentType);
         return $response;
     }
 
@@ -3563,16 +3563,16 @@ class OrdersApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
-        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $order, $contentType);
+        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $rest_v2_patch_order_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3795,15 +3795,15 @@ class OrdersApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOrderUsingPATCHAsync($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHAsync($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
-        return $this->patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask, $order, $contentType)
+        return $this->patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask, $rest_v2_patch_order_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3818,16 +3818,16 @@ class OrdersApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Order';
-        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $order, $contentType);
+        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $rest_v2_patch_order_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3870,13 +3870,13 @@ class OrdersApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchOrderUsingPATCHRequest($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHRequest($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
 
         // verify the required parameter 'order_id' is set
@@ -3924,12 +3924,12 @@ class OrdersApi
         );
 
         // for model (json/xml)
-        if (isset($order)) {
+        if (isset($rest_v2_patch_order_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($order));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($rest_v2_patch_order_request));
             } else {
-                $httpBody = $order;
+                $httpBody = $rest_v2_patch_order_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4376,7 +4376,7 @@ class OrdersApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -4384,9 +4384,9 @@ class OrdersApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -4396,7 +4396,7 @@ class OrdersApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -4404,9 +4404,9 @@ class OrdersApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4628,16 +4628,16 @@ class OrdersApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
-        return $this->updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4651,17 +4651,17 @@ class OrdersApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4703,14 +4703,14 @@ class OrdersApi
      * Create request for operation 'updateOrderCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -4720,10 +4720,10 @@ class OrdersApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOrderCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateOrderCustomFieldUsingPATCH'
             );
         }
 
@@ -4764,12 +4764,12 @@ class OrdersApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

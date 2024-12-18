@@ -53,6 +53,9 @@ namespace Keap.Sdk.Core.Model
         /// The body of the HTTP request that will be made when this action is processed in the builder(s).
         /// </summary>
         /// <value>The body of the HTTP request that will be made when this action is processed in the builder(s).</value>
+        /*
+        <example>{&quot;contact_id&quot;:&quot;123&quot;}</example>
+        */
         [DataMember(Name = "body", EmitDefaultValue = false)]
         public string Body { get; set; }
 

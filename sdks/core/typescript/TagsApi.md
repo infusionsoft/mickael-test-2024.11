@@ -83,7 +83,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createTagCategoryUsingPOST1**
-> Tag createTagCategoryUsingPOST1(request)
+> Tag createTagCategoryUsingPOST1(createUpdateTagCategoryRequest)
 
 Creates a new Tag Category.
 
@@ -99,7 +99,7 @@ const apiInstance = new TagsApi(configuration);
 
 const request: TagsApiCreateTagCategoryUsingPOST1Request = {
     // request
-  request: {
+  createUpdateTagCategoryRequest: {
     description: "description_example",
     name: "name_example",
   },
@@ -114,7 +114,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateUpdateTagCategoryRequest**| request |
+ **createUpdateTagCategoryRequest** | **CreateUpdateTagCategoryRequest**| request |
 
 
 ### Return type
@@ -141,7 +141,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createTagUsingPOST1**
-> Tag createTagUsingPOST1(tag)
+> Tag createTagUsingPOST1(createUpdateTagRequest)
 
 Creates a new Tag
 
@@ -157,7 +157,7 @@ const apiInstance = new TagsApi(configuration);
 
 const request: TagsApiCreateTagUsingPOST1Request = {
     // tag
-  tag: {
+  createUpdateTagRequest: {
     category: {
       id: "id_example",
     },
@@ -175,7 +175,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **CreateUpdateTagRequest**| tag |
+ **createUpdateTagRequest** | **CreateUpdateTagRequest**| tag |
 
 
 ### Return type
@@ -714,7 +714,7 @@ const request: TagsApiPatchTagCategoryUsingPATCHRequest = {
     "name",
   ],
     // tagCategory (optional)
-  tagCategory: {
+  createUpdateTagCategoryRequest: {
     description: "description_example",
     name: "name_example",
   },
@@ -729,7 +729,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tagCategory** | **CreateUpdateTagCategoryRequest**| tagCategory |
+ **createUpdateTagCategoryRequest** | **CreateUpdateTagCategoryRequest**| tagCategory |
  **tagCategoryId** | [**string**] | tag_category_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -781,7 +781,7 @@ const request: TagsApiPatchTagUsingPATCHRequest = {
     "name",
   ],
     // tag (optional)
-  tag: {
+  createUpdateTagRequest: {
     category: {
       id: "id_example",
     },
@@ -799,7 +799,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **CreateUpdateTagRequest**| tag |
+ **createUpdateTagRequest** | **CreateUpdateTagRequest**| tag |
  **tagId** | [**string**] | tag_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

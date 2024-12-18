@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **create_user_using_post1**
-> User create_user_using_post1(user=user)
+> User create_user_using_post1(create_user_request_v2=create_user_request_v2)
 
 Create a User
 
@@ -39,11 +39,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.UsersApi(api_client)
-    user = keap_sdk_core_client.CreateUserRequestV2() # CreateUserRequestV2 | user (optional)
+    create_user_request_v2 = keap_sdk_core_client.CreateUserRequestV2() # CreateUserRequestV2 | user (optional)
 
     try:
         # Create a User
-        api_response = api_instance.create_user_using_post1(user=user)
+        api_response = api_instance.create_user_using_post1(create_user_request_v2=create_user_request_v2)
         print("The response of UsersApi->create_user_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -56,7 +56,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
+ **create_user_request_v2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
 
 ### Return type
 
@@ -355,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_user_using_patch**
-> User patch_user_using_patch(user_id, update_mask=update_mask, user=user)
+> User patch_user_using_patch(user_id, update_mask=update_mask, patch_user_request_v2=patch_user_request_v2)
 
 Update User
 
@@ -383,11 +383,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.UsersApi(api_client)
     user_id = 'user_id_example' # str | user_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    user = keap_sdk_core_client.PatchUserRequestV2() # PatchUserRequestV2 | user (optional)
+    patch_user_request_v2 = keap_sdk_core_client.PatchUserRequestV2() # PatchUserRequestV2 | user (optional)
 
     try:
         # Update User
-        api_response = api_instance.patch_user_using_patch(user_id, update_mask=update_mask, user=user)
+        api_response = api_instance.patch_user_using_patch(user_id, update_mask=update_mask, patch_user_request_v2=patch_user_request_v2)
         print("The response of UsersApi->patch_user_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**| user_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
+ **patch_user_request_v2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type
 

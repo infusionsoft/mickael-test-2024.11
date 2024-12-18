@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **createTaskCustomFieldUsingPOST1**
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Task object.
 
@@ -32,7 +32,7 @@ const apiInstance = new TaskApi(configuration);
 
 const request: TaskApiCreateTaskCustomFieldUsingPOST1Request = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -55,7 +55,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -98,7 +98,7 @@ const apiInstance = new TaskApi(configuration);
 
 const request: TaskApiCreateTaskUsingPOST1Request = {
     // task (optional)
-  task: {
+  createTaskRequest: {
     assignedToUserId: "assignedToUserId_example",
     completed: true,
     completionTime: "completionTime_example",
@@ -121,7 +121,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | **CreateTaskRequest**| task |
+ **createTaskRequest** | **CreateTaskRequest**| task |
 
 
 ### Return type
@@ -409,7 +409,7 @@ const request: TaskApiPatchTaskUsingPATCHRequest = {
     "id",
   ],
     // task (optional)
-  task: {
+  createPatchTaskRequest: {
     assignedToUserId: "assignedToUserId_example",
     completed: true,
     completionTime: "completionTime_example",
@@ -432,7 +432,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | **CreatePatchTaskRequest**| task |
+ **createPatchTaskRequest** | **CreatePatchTaskRequest**| task |
  **taskId** | [**string**] | task_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -511,7 +511,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateTaskCustomFieldUsingPATCH**
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Task object.
 
@@ -529,7 +529,7 @@ const request: TaskApiUpdateTaskCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -555,7 +555,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

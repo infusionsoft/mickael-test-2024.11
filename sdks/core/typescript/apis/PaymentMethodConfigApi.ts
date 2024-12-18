@@ -19,14 +19,14 @@ export class PaymentMethodConfigApiRequestFactory extends BaseAPIRequestFactory 
     /**
      * Creates configuration details for rendering payment method components
      * Create Payment Method Configuration
-     * @param request request
+     * @param createPaymentMethodConfigRequest request
      */
-    public async createPaymentMethodConfigUsingPOST(request: CreatePaymentMethodConfigRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest: CreatePaymentMethodConfigRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("PaymentMethodConfigApi", "createPaymentMethodConfigUsingPOST", "request");
+        // verify required parameter 'createPaymentMethodConfigRequest' is not null or undefined
+        if (createPaymentMethodConfigRequest === null || createPaymentMethodConfigRequest === undefined) {
+            throw new RequiredError("PaymentMethodConfigApi", "createPaymentMethodConfigUsingPOST", "createPaymentMethodConfigRequest");
         }
 
 
@@ -44,7 +44,7 @@ export class PaymentMethodConfigApiRequestFactory extends BaseAPIRequestFactory 
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreatePaymentMethodConfigRequest", ""),
+            ObjectSerializer.serialize(createPaymentMethodConfigRequest, "CreatePaymentMethodConfigRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

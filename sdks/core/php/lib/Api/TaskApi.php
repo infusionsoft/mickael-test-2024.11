@@ -151,16 +151,16 @@ class TaskApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createTaskCustomFieldUsingPOST1($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
-        list($response) = $this->createTaskCustomFieldUsingPOST1WithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createTaskCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -169,16 +169,16 @@ class TaskApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTaskCustomFieldUsingPOST1WithHttpInfo($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
-        $request = $this->createTaskCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createTaskCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -364,15 +364,15 @@ class TaskApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskCustomFieldUsingPOST1Async($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1Async($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
-        return $this->createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -385,16 +385,16 @@ class TaskApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse';
-        $request = $this->createTaskCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createTaskCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -435,19 +435,19 @@ class TaskApi
     /**
      * Create request for operation 'createTaskCustomFieldUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTaskCustomFieldUsingPOST1Request($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1Request($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createTaskCustomFieldUsingPOST1'
+                'Missing the required parameter $create_custom_field_request when calling createTaskCustomFieldUsingPOST1'
             );
         }
 
@@ -470,12 +470,12 @@ class TaskApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -528,16 +528,16 @@ class TaskApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Task|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createTaskUsingPOST1($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
-        list($response) = $this->createTaskUsingPOST1WithHttpInfo($task, $contentType);
+        list($response) = $this->createTaskUsingPOST1WithHttpInfo($create_task_request, $contentType);
         return $response;
     }
 
@@ -546,16 +546,16 @@ class TaskApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Task|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTaskUsingPOST1WithHttpInfo($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1WithHttpInfo($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
-        $request = $this->createTaskUsingPOST1Request($task, $contentType);
+        $request = $this->createTaskUsingPOST1Request($create_task_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -741,15 +741,15 @@ class TaskApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskUsingPOST1Async($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1Async($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
-        return $this->createTaskUsingPOST1AsyncWithHttpInfo($task, $contentType)
+        return $this->createTaskUsingPOST1AsyncWithHttpInfo($create_task_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -762,16 +762,16 @@ class TaskApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskUsingPOST1AsyncWithHttpInfo($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1AsyncWithHttpInfo($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Task';
-        $request = $this->createTaskUsingPOST1Request($task, $contentType);
+        $request = $this->createTaskUsingPOST1Request($create_task_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -812,13 +812,13 @@ class TaskApi
     /**
      * Create request for operation 'createTaskUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTaskUsingPOST1Request($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1Request($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
 
 
@@ -841,12 +841,12 @@ class TaskApi
         );
 
         // for model (json/xml)
-        if (isset($task)) {
+        if (isset($create_task_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($task));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_task_request));
             } else {
-                $httpBody = $task;
+                $httpBody = $create_task_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2172,8 +2172,8 @@ class TaskApi
             $end_due_time,
             'end_due_time', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2181,8 +2181,8 @@ class TaskApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2190,8 +2190,8 @@ class TaskApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2199,8 +2199,8 @@ class TaskApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2208,8 +2208,8 @@ class TaskApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2217,8 +2217,8 @@ class TaskApi
             $start_due_time,
             'start_due_time', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -2285,16 +2285,16 @@ class TaskApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\UpdateTaskResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchTaskUsingPATCH($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCH($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
-        list($response) = $this->patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask, $task, $contentType);
+        list($response) = $this->patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask, $create_patch_task_request, $contentType);
         return $response;
     }
 
@@ -2305,16 +2305,16 @@ class TaskApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\UpdateTaskResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
-        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $task, $contentType);
+        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $create_patch_task_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2537,15 +2537,15 @@ class TaskApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTaskUsingPATCHAsync($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHAsync($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
-        return $this->patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask, $task, $contentType)
+        return $this->patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask, $create_patch_task_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2560,16 +2560,16 @@ class TaskApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTaskResponse';
-        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $task, $contentType);
+        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $create_patch_task_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2612,13 +2612,13 @@ class TaskApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchTaskUsingPATCHRequest($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHRequest($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
 
         // verify the required parameter 'task_id' is set
@@ -2666,12 +2666,12 @@ class TaskApi
         );
 
         // for model (json/xml)
-        if (isset($task)) {
+        if (isset($create_patch_task_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($task));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_patch_task_request));
             } else {
-                $httpBody = $task;
+                $httpBody = $create_patch_task_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3118,7 +3118,7 @@ class TaskApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -3126,9 +3126,9 @@ class TaskApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -3138,7 +3138,7 @@ class TaskApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -3146,9 +3146,9 @@ class TaskApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3370,16 +3370,16 @@ class TaskApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateTaskCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
-        return $this->updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3393,17 +3393,17 @@ class TaskApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3445,14 +3445,14 @@ class TaskApi
      * Create request for operation 'updateTaskCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -3462,10 +3462,10 @@ class TaskApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateTaskCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateTaskCustomFieldUsingPATCH'
             );
         }
 
@@ -3506,12 +3506,12 @@ class TaskApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

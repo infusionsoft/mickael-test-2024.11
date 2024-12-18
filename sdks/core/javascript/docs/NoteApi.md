@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createNoteCustomFieldUsingPOST1
 
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -30,8 +30,8 @@ Adds a custom field of the specified type and options to the Note object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createNoteCustomFieldUsingPOST1(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createNoteCustomFieldUsingPOST1(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -44,7 +44,7 @@ apiInstance.createNoteCustomFieldUsingPOST1(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -62,7 +62,7 @@ No authorization required
 
 ## createNoteUsingPOST1
 
-> Note createNoteUsingPOST1(contactId, request)
+> Note createNoteUsingPOST1(contactId, createNoteRequest)
 
 Create a Note
 
@@ -75,8 +75,8 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let contactId = "contactId_example"; // String | contact_id
-let request = new KeapCoreServiceCoreSdk.CreateNoteRequest(); // CreateNoteRequest | request
-apiInstance.createNoteUsingPOST1(contactId, request).then((data) => {
+let createNoteRequest = new KeapCoreServiceCoreSdk.CreateNoteRequest(); // CreateNoteRequest | request
+apiInstance.createNoteUsingPOST1(contactId, createNoteRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -90,7 +90,7 @@ apiInstance.createNoteUsingPOST1(contactId, request).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contactId** | **String**| contact_id | 
- **request** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | 
+ **createNoteRequest** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | 
 
 ### Return type
 
@@ -398,7 +398,7 @@ No authorization required
 
 ## updateNotesCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Custom Field
 
@@ -411,11 +411,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -429,7 +429,7 @@ apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, request, opts).then(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

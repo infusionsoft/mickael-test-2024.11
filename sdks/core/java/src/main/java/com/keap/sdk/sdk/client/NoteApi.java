@@ -106,24 +106,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Custom Field
    * Adds a custom field of the specified type and options to the Note object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData createNoteCustomFieldUsingPOST1(CreateCustomFieldRequest customField) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = createNoteCustomFieldUsingPOST1WithHttpInfo(customField);
+  public CustomFieldMetaData createNoteCustomFieldUsingPOST1(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Custom Field
    * Adds a custom field of the specified type and options to the Note object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest customField) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createNoteCustomFieldUsingPOST1RequestBuilder(customField);
+  public ApiResponse<CustomFieldMetaData> createNoteCustomFieldUsingPOST1WithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createNoteCustomFieldUsingPOST1RequestBuilder(createCustomFieldRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -163,10 +163,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createNoteCustomFieldUsingPOST1RequestBuilder(CreateCustomFieldRequest customField) throws ApiException {
-    // verify the required parameter 'customField' is set
-    if (customField == null) {
-      throw new ApiException(400, "Missing the required parameter 'customField' when calling createNoteCustomFieldUsingPOST1");
+  private HttpRequest.Builder createNoteCustomFieldUsingPOST1RequestBuilder(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    // verify the required parameter 'createCustomFieldRequest' is set
+    if (createCustomFieldRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createCustomFieldRequest' when calling createNoteCustomFieldUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -180,7 +180,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(customField);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createCustomFieldRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -198,12 +198,12 @@ import io.github.resilience4j.retry.Retry;
    * Create a Note
    * Creates a new Note.
    * @param contactId contact_id (required)
-   * @param request request (required)
+   * @param createNoteRequest request (required)
    * @return Note
    * @throws ApiException if fails to make API call
    */
-  public Note createNoteUsingPOST1(String contactId, CreateNoteRequest request) throws ApiException {
-    ApiResponse<Note> localVarResponse = createNoteUsingPOST1WithHttpInfo(contactId, request);
+  public Note createNoteUsingPOST1(String contactId, CreateNoteRequest createNoteRequest) throws ApiException {
+    ApiResponse<Note> localVarResponse = createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest);
     return localVarResponse.getData();
   }
 
@@ -211,12 +211,12 @@ import io.github.resilience4j.retry.Retry;
    * Create a Note
    * Creates a new Note.
    * @param contactId contact_id (required)
-   * @param request request (required)
+   * @param createNoteRequest request (required)
    * @return ApiResponse&lt;Note&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Note> createNoteUsingPOST1WithHttpInfo(String contactId, CreateNoteRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createNoteUsingPOST1RequestBuilder(contactId, request);
+  public ApiResponse<Note> createNoteUsingPOST1WithHttpInfo(String contactId, CreateNoteRequest createNoteRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createNoteUsingPOST1RequestBuilder(contactId, createNoteRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -256,14 +256,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createNoteUsingPOST1RequestBuilder(String contactId, CreateNoteRequest request) throws ApiException {
+  private HttpRequest.Builder createNoteUsingPOST1RequestBuilder(String contactId, CreateNoteRequest createNoteRequest) throws ApiException {
     // verify the required parameter 'contactId' is set
     if (contactId == null) {
       throw new ApiException(400, "Missing the required parameter 'contactId' when calling createNoteUsingPOST1");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createNoteUsingPOST1");
+    // verify the required parameter 'createNoteRequest' is set
+    if (createNoteRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createNoteRequest' when calling createNoteUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -278,7 +278,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createNoteRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -909,13 +909,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Custom Field
    * Updates a custom field of the specified type and options to the Note object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData updateNotesCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+  public CustomFieldMetaData updateNotesCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -923,13 +923,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Custom Field
    * Updates a custom field of the specified type and options to the Note object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateNotesCustomFieldUsingPATCHRequestBuilder(customFieldId, request, updateMask);
+  public ApiResponse<CustomFieldMetaData> updateNotesCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateNotesCustomFieldUsingPATCHRequestBuilder(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -969,14 +969,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateNotesCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateNotesCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
       throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling updateNotesCustomFieldUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateNotesCustomFieldUsingPATCH");
+    // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+    if (updateCustomFieldMetaDataRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateNotesCustomFieldUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -1006,7 +1006,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateCustomFieldMetaDataRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

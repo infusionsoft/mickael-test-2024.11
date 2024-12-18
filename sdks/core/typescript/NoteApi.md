@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **createNoteCustomFieldUsingPOST1**
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Note object.
 
@@ -32,7 +32,7 @@ const apiInstance = new NoteApi(configuration);
 
 const request: NoteApiCreateNoteCustomFieldUsingPOST1Request = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -55,7 +55,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -82,7 +82,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createNoteUsingPOST1**
-> Note createNoteUsingPOST1(request)
+> Note createNoteUsingPOST1(createNoteRequest)
 
 Creates a new Note.
 
@@ -100,7 +100,7 @@ const request: NoteApiCreateNoteUsingPOST1Request = {
     // contact_id
   contactId: "contact_id_example",
     // request
-  request: {
+  createNoteRequest: {
     text: "text_example",
     title: "title_example",
     type: "type_example",
@@ -117,7 +117,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateNoteRequest**| request |
+ **createNoteRequest** | **CreateNoteRequest**| request |
  **contactId** | [**string**] | contact_id | defaults to undefined
 
 
@@ -518,7 +518,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateNotesCustomFieldUsingPATCH**
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Note object.
 
@@ -536,7 +536,7 @@ const request: NoteApiUpdateNotesCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -562,7 +562,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

@@ -15,7 +15,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createEmailUsingPOST1()`
 
 ```php
-createEmailUsingPOST1($email_with_content): \Com\Keap\Sdk\Core\Model\EmailSentWithContent
+createEmailUsingPOST1($create_email_sent_request): \Com\Keap\Sdk\Core\Model\EmailSentWithContent
 ```
 
 Create an Email Record
@@ -34,10 +34,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_with_content = new \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest(); // \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest | emailWithContent
+$create_email_sent_request = new \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest(); // \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest | emailWithContent
 
 try {
-    $result = $apiInstance->createEmailUsingPOST1($email_with_content);
+    $result = $apiInstance->createEmailUsingPOST1($create_email_sent_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmailApi->createEmailUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_with_content** | [**\Com\Keap\Sdk\Core\Model\CreateEmailSentRequest**](../Model/CreateEmailSentRequest.md)| emailWithContent | |
+| **create_email_sent_request** | [**\Com\Keap\Sdk\Core\Model\CreateEmailSentRequest**](../Model/CreateEmailSentRequest.md)| emailWithContent | |
 
 ### Return type
 

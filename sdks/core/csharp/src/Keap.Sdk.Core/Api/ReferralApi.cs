@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new referral partner referral on the provided contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Referral</returns>
-        Referral CreateReferralUsingPOST(CreateReferralRequest request, int operationIndex = 0);
+        Referral CreateReferralUsingPOST(CreateReferralRequest createReferralRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a Referral
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new referral partner referral on the provided contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Referral</returns>
-        ApiResponse<Referral> CreateReferralUsingPOSTWithHttpInfo(CreateReferralRequest request, int operationIndex = 0);
+        ApiResponse<Referral> CreateReferralUsingPOSTWithHttpInfo(CreateReferralRequest createReferralRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -67,11 +67,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new referral partner referral on the provided contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Referral</returns>
-        System.Threading.Tasks.Task<Referral> CreateReferralUsingPOSTAsync(CreateReferralRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Referral> CreateReferralUsingPOSTAsync(CreateReferralRequest createReferralRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Referral
@@ -80,11 +80,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new referral partner referral on the provided contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Referral)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Referral>> CreateReferralUsingPOSTWithHttpInfoAsync(CreateReferralRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Referral>> CreateReferralUsingPOSTWithHttpInfoAsync(CreateReferralRequest createReferralRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -209,12 +209,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Referral Creates a new referral partner referral on the provided contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Referral</returns>
-        public Referral CreateReferralUsingPOST(CreateReferralRequest request, int operationIndex = 0)
+        public Referral CreateReferralUsingPOST(CreateReferralRequest createReferralRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Referral> localVarResponse = CreateReferralUsingPOSTWithHttpInfo(request);
+            Keap.Sdk.Core.Client.ApiResponse<Referral> localVarResponse = CreateReferralUsingPOSTWithHttpInfo(createReferralRequest);
             return localVarResponse.Data;
         }
 
@@ -222,15 +222,15 @@ namespace Keap.Sdk.Core.Api
         /// Create a Referral Creates a new referral partner referral on the provided contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Referral</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Referral> CreateReferralUsingPOSTWithHttpInfo(CreateReferralRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Referral> CreateReferralUsingPOSTWithHttpInfo(CreateReferralRequest createReferralRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createReferralRequest' is set
+            if (createReferralRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ReferralApi->CreateReferralUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createReferralRequest' when calling ReferralApi->CreateReferralUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -256,7 +256,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createReferralRequest;
 
             localVarRequestOptions.Operation = "ReferralApi.CreateReferralUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -280,13 +280,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Referral Creates a new referral partner referral on the provided contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Referral</returns>
-        public async System.Threading.Tasks.Task<Referral> CreateReferralUsingPOSTAsync(CreateReferralRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Referral> CreateReferralUsingPOSTAsync(CreateReferralRequest createReferralRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Referral> localVarResponse = await CreateReferralUsingPOSTWithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Referral> localVarResponse = await CreateReferralUsingPOSTWithHttpInfoAsync(createReferralRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -294,16 +294,16 @@ namespace Keap.Sdk.Core.Api
         /// Create a Referral Creates a new referral partner referral on the provided contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createReferralRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Referral)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Referral>> CreateReferralUsingPOSTWithHttpInfoAsync(CreateReferralRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Referral>> CreateReferralUsingPOSTWithHttpInfoAsync(CreateReferralRequest createReferralRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createReferralRequest' is set
+            if (createReferralRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ReferralApi->CreateReferralUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createReferralRequest' when calling ReferralApi->CreateReferralUsingPOST");
             }
 
 
@@ -330,7 +330,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createReferralRequest;
 
             localVarRequestOptions.Operation = "ReferralApi.CreateReferralUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;

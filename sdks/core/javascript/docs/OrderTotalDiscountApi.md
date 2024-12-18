@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createOrderTotalDiscountUsingPOST
 
-> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -26,8 +26,8 @@ Creates an Order Total Discount
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OrderTotalDiscountApi();
-let request = new KeapCoreServiceCoreSdk.CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
-apiInstance.createOrderTotalDiscountUsingPOST(request).then((data) => {
+let createOrderTotalDiscountRequest = new KeapCoreServiceCoreSdk.CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+apiInstance.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -40,7 +40,7 @@ apiInstance.createOrderTotalDiscountUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
+ **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | 
 
 ### Return type
 
@@ -198,7 +198,7 @@ No authorization required
 
 ## updateOrderTotalDiscountUsingPATCH
 
-> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, request, opts)
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, opts)
 
 Update an Order Total Discount
 
@@ -211,11 +211,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OrderTotalDiscountApi();
 let discountId = "discountId_example"; // String | discount_id
-let request = new KeapCoreServiceCoreSdk.UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+let updateOrderTotalDiscountRequest = new KeapCoreServiceCoreSdk.UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, opts).then((data) => {
+apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -229,7 +229,7 @@ apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, opts).then((
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **discountId** | **String**| discount_id | 
- **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
+ **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

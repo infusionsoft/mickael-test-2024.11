@@ -284,7 +284,7 @@ export interface AffiliateApiAddAffiliateUsingPOSTRequest {
      * @type CreateAffiliateRequest
      * @memberof AffiliateApiaddAffiliateUsingPOST
      */
-    insertAffiliate?: CreateAffiliateRequest
+    createAffiliateRequest?: CreateAffiliateRequest
 }
 
 export interface AffiliateApiAddCommissionProgramUsingPOSTRequest {
@@ -293,7 +293,7 @@ export interface AffiliateApiAddCommissionProgramUsingPOSTRequest {
      * @type CreateCommissionProgramRequest
      * @memberof AffiliateApiaddCommissionProgramUsingPOST
      */
-    insertCommissionProgram?: CreateCommissionProgramRequest
+    createCommissionProgramRequest?: CreateCommissionProgramRequest
 }
 
 export interface AffiliateApiAssignProductCommissionProgramUsingPOSTRequest {
@@ -309,7 +309,7 @@ export interface AffiliateApiAssignProductCommissionProgramUsingPOSTRequest {
      * @type CreateProductCommissionProgramRequest
      * @memberof AffiliateApiassignProductCommissionProgramUsingPOST
      */
-    productCommissionProgram?: CreateProductCommissionProgramRequest
+    createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest
 }
 
 export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest {
@@ -325,7 +325,7 @@ export interface AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest
      * @type CreateSubscriptionCommissionProgramRequest
      * @memberof AffiliateApiassignSubscriptionCommissionProgramUsingPOST
      */
-    subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest
+    createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest
 }
 
 export interface AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest {
@@ -334,7 +334,7 @@ export interface AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof AffiliateApicreateAffiliateCustomFieldUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface AffiliateApiCreateDefaultCommissionProgramUsingPOSTRequest {
@@ -359,7 +359,7 @@ export interface AffiliateApiCreateRedirectLinkUsingPOSTRequest {
      * @type CreateOrPatchAffiliateLinkRequest
      * @memberof AffiliateApicreateRedirectLinkUsingPOST
      */
-    request: CreateOrPatchAffiliateLinkRequest
+    createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest
 }
 
 export interface AffiliateApiDeleteAffiliateCommissionProgramUsingDELETERequest {
@@ -679,7 +679,7 @@ export interface AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest {
      * @type AffiliateRemoveFromProgramRequest
      * @memberof AffiliateApiremoveAffiliateFromProgramUsingPOST
      */
-    removeFromProgramRequest: AffiliateRemoveFromProgramRequest
+    affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest
 }
 
 export interface AffiliateApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest {
@@ -711,7 +711,7 @@ export interface AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof AffiliateApiupdateAffiliateCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -734,7 +734,7 @@ export interface AffiliateApiUpdateAffiliateUsingPATCHRequest {
      * @type PatchAffiliateRequest
      * @memberof AffiliateApiupdateAffiliateUsingPATCH
      */
-    patchAffiliate?: PatchAffiliateRequest
+    patchAffiliateRequest?: PatchAffiliateRequest
 }
 
 export interface AffiliateApiUpdateRedirectLinkUsingPATCHRequest {
@@ -750,7 +750,7 @@ export interface AffiliateApiUpdateRedirectLinkUsingPATCHRequest {
      * @type CreateOrPatchAffiliateLinkRequest
      * @memberof AffiliateApiupdateRedirectLinkUsingPATCH
      */
-    request: CreateOrPatchAffiliateLinkRequest
+    createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest
 }
 
 export class ObjectAffiliateApi {
@@ -784,7 +784,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public addAffiliateUsingPOSTWithHttpInfo(param: AffiliateApiAddAffiliateUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
-        return this.api.addAffiliateUsingPOSTWithHttpInfo(param.insertAffiliate,  options).toPromise();
+        return this.api.addAffiliateUsingPOSTWithHttpInfo(param.createAffiliateRequest,  options).toPromise();
     }
 
     /**
@@ -793,7 +793,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public addAffiliateUsingPOST(param: AffiliateApiAddAffiliateUsingPOSTRequest = {}, options?: Configuration): Promise<RestAffiliate> {
-        return this.api.addAffiliateUsingPOST(param.insertAffiliate,  options).toPromise();
+        return this.api.addAffiliateUsingPOST(param.createAffiliateRequest,  options).toPromise();
     }
 
     /**
@@ -802,7 +802,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public addCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAddCommissionProgramUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
-        return this.api.addCommissionProgramUsingPOSTWithHttpInfo(param.insertCommissionProgram,  options).toPromise();
+        return this.api.addCommissionProgramUsingPOSTWithHttpInfo(param.createCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -811,7 +811,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public addCommissionProgramUsingPOST(param: AffiliateApiAddCommissionProgramUsingPOSTRequest = {}, options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
-        return this.api.addCommissionProgramUsingPOST(param.insertCommissionProgram,  options).toPromise();
+        return this.api.addCommissionProgramUsingPOST(param.createCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -820,7 +820,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public assignProductCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
-        return this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.productCommissionProgram,  options).toPromise();
+        return this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.createProductCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -829,7 +829,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public assignProductCommissionProgramUsingPOST(param: AffiliateApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<ProductCommissionProgram> {
-        return this.api.assignProductCommissionProgramUsingPOST(param.commissionProgramId, param.productCommissionProgram,  options).toPromise();
+        return this.api.assignProductCommissionProgramUsingPOST(param.commissionProgramId, param.createProductCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -838,7 +838,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
-        return this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.subscriptionCommissionProgram,  options).toPromise();
+        return this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.createSubscriptionCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -847,7 +847,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public assignSubscriptionCommissionProgramUsingPOST(param: AffiliateApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<SubscriptionCommissionProgram> {
-        return this.api.assignSubscriptionCommissionProgramUsingPOST(param.commissionProgramId, param.subscriptionCommissionProgram,  options).toPromise();
+        return this.api.assignSubscriptionCommissionProgramUsingPOST(param.commissionProgramId, param.createSubscriptionCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -856,7 +856,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public createAffiliateCustomFieldUsingPOSTWithHttpInfo(param: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -865,7 +865,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public createAffiliateCustomFieldUsingPOST(param: AffiliateApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createAffiliateCustomFieldUsingPOST(param.customField,  options).toPromise();
+        return this.api.createAffiliateCustomFieldUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -892,7 +892,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public createRedirectLinkUsingPOSTWithHttpInfo(param: AffiliateApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        return this.api.createRedirectLinkUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createRedirectLinkUsingPOSTWithHttpInfo(param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -901,7 +901,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public createRedirectLinkUsingPOST(param: AffiliateApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<AffiliateLink> {
-        return this.api.createRedirectLinkUsingPOST(param.request,  options).toPromise();
+        return this.api.createRedirectLinkUsingPOST(param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -1198,7 +1198,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public removeAffiliateFromProgramUsingPOSTWithHttpInfo(param: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
-        return this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(param.id, param.removeFromProgramRequest,  options).toPromise();
+        return this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(param.id, param.affiliateRemoveFromProgramRequest,  options).toPromise();
     }
 
     /**
@@ -1207,7 +1207,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public removeAffiliateFromProgramUsingPOST(param: AffiliateApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<void> {
-        return this.api.removeAffiliateFromProgramUsingPOST(param.id, param.removeFromProgramRequest,  options).toPromise();
+        return this.api.removeAffiliateFromProgramUsingPOST(param.id, param.affiliateRemoveFromProgramRequest,  options).toPromise();
     }
 
     /**
@@ -1234,7 +1234,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -1243,7 +1243,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateAffiliateCustomFieldUsingPATCH(param: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateAffiliateCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateAffiliateCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -1252,7 +1252,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateAffiliateUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
-        return this.api.updateAffiliateUsingPATCHWithHttpInfo(param.id, param.patchAffiliate,  options).toPromise();
+        return this.api.updateAffiliateUsingPATCHWithHttpInfo(param.id, param.patchAffiliateRequest,  options).toPromise();
     }
 
     /**
@@ -1261,7 +1261,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateAffiliateUsingPATCH(param: AffiliateApiUpdateAffiliateUsingPATCHRequest, options?: Configuration): Promise<RestAffiliate> {
-        return this.api.updateAffiliateUsingPATCH(param.id, param.patchAffiliate,  options).toPromise();
+        return this.api.updateAffiliateUsingPATCH(param.id, param.patchAffiliateRequest,  options).toPromise();
     }
 
     /**
@@ -1270,7 +1270,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateRedirectLinkUsingPATCHWithHttpInfo(param: AffiliateApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        return this.api.updateRedirectLinkUsingPATCHWithHttpInfo(param.redirectId, param.request,  options).toPromise();
+        return this.api.updateRedirectLinkUsingPATCHWithHttpInfo(param.redirectId, param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -1279,7 +1279,7 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateRedirectLinkUsingPATCH(param: AffiliateApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<AffiliateLink> {
-        return this.api.updateRedirectLinkUsingPATCH(param.redirectId, param.request,  options).toPromise();
+        return this.api.updateRedirectLinkUsingPATCH(param.redirectId, param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
 }
@@ -1670,7 +1670,7 @@ export interface BusinessProfileApiPatchBusinessProfileUsingPATCHRequest {
      * @type PatchBusinessProfileRequest
      * @memberof BusinessProfileApipatchBusinessProfileUsingPATCH
      */
-    businessProfile?: PatchBusinessProfileRequest
+    patchBusinessProfileRequest?: PatchBusinessProfileRequest
 }
 
 export class ObjectBusinessProfileApi {
@@ -1704,7 +1704,7 @@ export class ObjectBusinessProfileApi {
      * @param param the request object
      */
     public patchBusinessProfileUsingPATCHWithHttpInfo(param: BusinessProfileApiPatchBusinessProfileUsingPATCHRequest = {}, options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
-        return this.api.patchBusinessProfileUsingPATCHWithHttpInfo(param.updateMask, param.businessProfile,  options).toPromise();
+        return this.api.patchBusinessProfileUsingPATCHWithHttpInfo(param.updateMask, param.patchBusinessProfileRequest,  options).toPromise();
     }
 
     /**
@@ -1713,7 +1713,7 @@ export class ObjectBusinessProfileApi {
      * @param param the request object
      */
     public patchBusinessProfileUsingPATCH(param: BusinessProfileApiPatchBusinessProfileUsingPATCHRequest = {}, options?: Configuration): Promise<GetBusinessProfileResponse> {
-        return this.api.patchBusinessProfileUsingPATCH(param.updateMask, param.businessProfile,  options).toPromise();
+        return this.api.patchBusinessProfileUsingPATCH(param.updateMask, param.patchBusinessProfileRequest,  options).toPromise();
     }
 
 }
@@ -1907,7 +1907,7 @@ export interface CategoryDiscountApiCreateDiscountUsingPOSTRequest {
      * @type CreateUpdateDiscountRequest
      * @memberof CategoryDiscountApicreateDiscountUsingPOST
      */
-    request: CreateUpdateDiscountRequest
+    createUpdateDiscountRequest: CreateUpdateDiscountRequest
 }
 
 export interface CategoryDiscountApiDeleteDiscountUsingDELETERequest {
@@ -1943,7 +1943,7 @@ export interface CategoryDiscountApiUpdateDiscountUsingPATCHRequest {
      * @type CreateUpdateDiscountRequest
      * @memberof CategoryDiscountApiupdateDiscountUsingPATCH
      */
-    request: CreateUpdateDiscountRequest
+    createUpdateDiscountRequest: CreateUpdateDiscountRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -1966,7 +1966,7 @@ export class ObjectCategoryDiscountApi {
      * @param param the request object
      */
     public createDiscountUsingPOSTWithHttpInfo(param: CategoryDiscountApiCreateDiscountUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        return this.api.createDiscountUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOSTWithHttpInfo(param.createUpdateDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -1975,7 +1975,7 @@ export class ObjectCategoryDiscountApi {
      * @param param the request object
      */
     public createDiscountUsingPOST(param: CategoryDiscountApiCreateDiscountUsingPOSTRequest, options?: Configuration): Promise<CategoryDiscount> {
-        return this.api.createDiscountUsingPOST(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOST(param.createUpdateDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -2020,7 +2020,7 @@ export class ObjectCategoryDiscountApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCHWithHttpInfo(param: CategoryDiscountApiUpdateDiscountUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        return this.api.updateDiscountUsingPATCHWithHttpInfo(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCHWithHttpInfo(param.discountId, param.createUpdateDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -2029,7 +2029,7 @@ export class ObjectCategoryDiscountApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCH(param: CategoryDiscountApiUpdateDiscountUsingPATCHRequest, options?: Configuration): Promise<CategoryDiscount> {
-        return this.api.updateDiscountUsingPATCH(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCH(param.discountId, param.createUpdateDiscountRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -2043,7 +2043,7 @@ export interface CompanyApiCreateCompanyUsingPOST1Request {
      * @type CreateCompanyRequest
      * @memberof CompanyApicreateCompanyUsingPOST1
      */
-    company?: CreateCompanyRequest
+    createCompanyRequest?: CreateCompanyRequest
 }
 
 export interface CompanyApiDeleteCompanyUsingDELETERequest {
@@ -2133,7 +2133,7 @@ export interface CompanyApiPatchCompanyUsingPATCHRequest {
      * @type PatchCompanyRequest
      * @memberof CompanyApipatchCompanyUsingPATCH
      */
-    company?: PatchCompanyRequest
+    patchCompanyRequest?: PatchCompanyRequest
 }
 
 export class ObjectCompanyApi {
@@ -2149,7 +2149,7 @@ export class ObjectCompanyApi {
      * @param param the request object
      */
     public createCompanyUsingPOST1WithHttpInfo(param: CompanyApiCreateCompanyUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<Company>> {
-        return this.api.createCompanyUsingPOST1WithHttpInfo(param.company,  options).toPromise();
+        return this.api.createCompanyUsingPOST1WithHttpInfo(param.createCompanyRequest,  options).toPromise();
     }
 
     /**
@@ -2158,7 +2158,7 @@ export class ObjectCompanyApi {
      * @param param the request object
      */
     public createCompanyUsingPOST1(param: CompanyApiCreateCompanyUsingPOST1Request = {}, options?: Configuration): Promise<Company> {
-        return this.api.createCompanyUsingPOST1(param.company,  options).toPromise();
+        return this.api.createCompanyUsingPOST1(param.createCompanyRequest,  options).toPromise();
     }
 
     /**
@@ -2221,7 +2221,7 @@ export class ObjectCompanyApi {
      * @param param the request object
      */
     public patchCompanyUsingPATCHWithHttpInfo(param: CompanyApiPatchCompanyUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<Company>> {
-        return this.api.patchCompanyUsingPATCHWithHttpInfo(param.companyId, param.updateMask, param.company,  options).toPromise();
+        return this.api.patchCompanyUsingPATCHWithHttpInfo(param.companyId, param.updateMask, param.patchCompanyRequest,  options).toPromise();
     }
 
     /**
@@ -2230,7 +2230,7 @@ export class ObjectCompanyApi {
      * @param param the request object
      */
     public patchCompanyUsingPATCH(param: CompanyApiPatchCompanyUsingPATCHRequest, options?: Configuration): Promise<Company> {
-        return this.api.patchCompanyUsingPATCH(param.companyId, param.updateMask, param.company,  options).toPromise();
+        return this.api.patchCompanyUsingPATCH(param.companyId, param.updateMask, param.patchCompanyRequest,  options).toPromise();
     }
 
 }
@@ -2244,7 +2244,7 @@ export interface ContactApiCreateContactLinkTypeUsingPOSTRequest {
      * @type CreateContactLinkTypeRequest
      * @memberof ContactApicreateContactLinkTypeUsingPOST
      */
-    request: CreateContactLinkTypeRequest
+    createContactLinkTypeRequest: CreateContactLinkTypeRequest
 }
 
 export interface ContactApiCreateContactUsingPOST1Request {
@@ -2253,7 +2253,7 @@ export interface ContactApiCreateContactUsingPOST1Request {
      * @type CreatePatchContactRequest
      * @memberof ContactApicreateContactUsingPOST1
      */
-    contact?: CreatePatchContactRequest
+    createPatchContactRequest?: CreatePatchContactRequest
 }
 
 export interface ContactApiDeleteContactUsingDELETE1Request {
@@ -2413,7 +2413,7 @@ export interface ContactApiPatchContactUsingPATCHRequest {
      * @type CreatePatchContactRequest
      * @memberof ContactApipatchContactUsingPATCH
      */
-    contact?: CreatePatchContactRequest
+    createPatchContactRequest?: CreatePatchContactRequest
 }
 
 export interface ContactApiRetrieveContactModelUsingGET1Request {
@@ -2441,7 +2441,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public createContactLinkTypeUsingPOSTWithHttpInfo(param: ContactApiCreateContactLinkTypeUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<ContactLinkType>> {
-        return this.api.createContactLinkTypeUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createContactLinkTypeUsingPOSTWithHttpInfo(param.createContactLinkTypeRequest,  options).toPromise();
     }
 
     /**
@@ -2450,7 +2450,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public createContactLinkTypeUsingPOST(param: ContactApiCreateContactLinkTypeUsingPOSTRequest, options?: Configuration): Promise<ContactLinkType> {
-        return this.api.createContactLinkTypeUsingPOST(param.request,  options).toPromise();
+        return this.api.createContactLinkTypeUsingPOST(param.createContactLinkTypeRequest,  options).toPromise();
     }
 
     /**
@@ -2459,7 +2459,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public createContactUsingPOST1WithHttpInfo(param: ContactApiCreateContactUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<Contact>> {
-        return this.api.createContactUsingPOST1WithHttpInfo(param.contact,  options).toPromise();
+        return this.api.createContactUsingPOST1WithHttpInfo(param.createPatchContactRequest,  options).toPromise();
     }
 
     /**
@@ -2468,7 +2468,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public createContactUsingPOST1(param: ContactApiCreateContactUsingPOST1Request = {}, options?: Configuration): Promise<Contact> {
-        return this.api.createContactUsingPOST1(param.contact,  options).toPromise();
+        return this.api.createContactUsingPOST1(param.createPatchContactRequest,  options).toPromise();
     }
 
     /**
@@ -2621,7 +2621,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public patchContactUsingPATCHWithHttpInfo(param: ContactApiPatchContactUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<Contact>> {
-        return this.api.patchContactUsingPATCHWithHttpInfo(param.contactId, param.updateMask, param.contact,  options).toPromise();
+        return this.api.patchContactUsingPATCHWithHttpInfo(param.contactId, param.updateMask, param.createPatchContactRequest,  options).toPromise();
     }
 
     /**
@@ -2630,7 +2630,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public patchContactUsingPATCH(param: ContactApiPatchContactUsingPATCHRequest, options?: Configuration): Promise<Contact> {
-        return this.api.patchContactUsingPATCH(param.contactId, param.updateMask, param.contact,  options).toPromise();
+        return this.api.patchContactUsingPATCH(param.contactId, param.updateMask, param.createPatchContactRequest,  options).toPromise();
     }
 
     /**
@@ -2680,7 +2680,7 @@ export interface EmailApiCreateEmailUsingPOST1Request {
      * @type CreateEmailSentRequest
      * @memberof EmailApicreateEmailUsingPOST1
      */
-    emailWithContent: CreateEmailSentRequest
+    createEmailSentRequest: CreateEmailSentRequest
 }
 
 export interface EmailApiCreateEmailsUsingPOST1Request {
@@ -2743,7 +2743,7 @@ export class ObjectEmailApi {
      * @param param the request object
      */
     public createEmailUsingPOST1WithHttpInfo(param: EmailApiCreateEmailUsingPOST1Request, options?: Configuration): Promise<HttpInfo<EmailSentWithContent>> {
-        return this.api.createEmailUsingPOST1WithHttpInfo(param.emailWithContent,  options).toPromise();
+        return this.api.createEmailUsingPOST1WithHttpInfo(param.createEmailSentRequest,  options).toPromise();
     }
 
     /**
@@ -2752,7 +2752,7 @@ export class ObjectEmailApi {
      * @param param the request object
      */
     public createEmailUsingPOST1(param: EmailApiCreateEmailUsingPOST1Request, options?: Configuration): Promise<EmailSentWithContent> {
-        return this.api.createEmailUsingPOST1(param.emailWithContent,  options).toPromise();
+        return this.api.createEmailUsingPOST1(param.createEmailSentRequest,  options).toPromise();
     }
 
     /**
@@ -3124,7 +3124,7 @@ export interface LeadSourcesApiCreateLeadSourceUsingPOSTRequest {
      * @type CreateLeadSourceRequest
      * @memberof LeadSourcesApicreateLeadSourceUsingPOST
      */
-    leadsource?: CreateLeadSourceRequest
+    createLeadSourceRequest?: CreateLeadSourceRequest
 }
 
 export interface LeadSourcesApiListLeadSourcesUsingGETRequest {
@@ -3173,7 +3173,7 @@ export class ObjectLeadSourcesApi {
      * @param param the request object
      */
     public createLeadSourceUsingPOSTWithHttpInfo(param: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<LeadSource>> {
-        return this.api.createLeadSourceUsingPOSTWithHttpInfo(param.leadsource,  options).toPromise();
+        return this.api.createLeadSourceUsingPOSTWithHttpInfo(param.createLeadSourceRequest,  options).toPromise();
     }
 
     /**
@@ -3182,7 +3182,7 @@ export class ObjectLeadSourcesApi {
      * @param param the request object
      */
     public createLeadSourceUsingPOST(param: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {}, options?: Configuration): Promise<LeadSource> {
-        return this.api.createLeadSourceUsingPOST(param.leadsource,  options).toPromise();
+        return this.api.createLeadSourceUsingPOST(param.createLeadSourceRequest,  options).toPromise();
     }
 
     /**
@@ -3334,7 +3334,7 @@ export interface NoteApiCreateNoteCustomFieldUsingPOST1Request {
      * @type CreateCustomFieldRequest
      * @memberof NoteApicreateNoteCustomFieldUsingPOST1
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface NoteApiCreateNoteUsingPOST1Request {
@@ -3350,7 +3350,7 @@ export interface NoteApiCreateNoteUsingPOST1Request {
      * @type CreateNoteRequest
      * @memberof NoteApicreateNoteUsingPOST1
      */
-    request: CreateNoteRequest
+    createNoteRequest: CreateNoteRequest
 }
 
 export interface NoteApiDeleteNoteUsingDELETE1Request {
@@ -3506,7 +3506,7 @@ export interface NoteApiUpdateNotesCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof NoteApiupdateNotesCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -3529,7 +3529,7 @@ export class ObjectNoteApi {
      * @param param the request object
      */
     public createNoteCustomFieldUsingPOST1WithHttpInfo(param: NoteApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -3538,7 +3538,7 @@ export class ObjectNoteApi {
      * @param param the request object
      */
     public createNoteCustomFieldUsingPOST1(param: NoteApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createNoteCustomFieldUsingPOST1(param.customField,  options).toPromise();
+        return this.api.createNoteCustomFieldUsingPOST1(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -3547,7 +3547,7 @@ export class ObjectNoteApi {
      * @param param the request object
      */
     public createNoteUsingPOST1WithHttpInfo(param: NoteApiCreateNoteUsingPOST1Request, options?: Configuration): Promise<HttpInfo<Note>> {
-        return this.api.createNoteUsingPOST1WithHttpInfo(param.contactId, param.request,  options).toPromise();
+        return this.api.createNoteUsingPOST1WithHttpInfo(param.contactId, param.createNoteRequest,  options).toPromise();
     }
 
     /**
@@ -3556,7 +3556,7 @@ export class ObjectNoteApi {
      * @param param the request object
      */
     public createNoteUsingPOST1(param: NoteApiCreateNoteUsingPOST1Request, options?: Configuration): Promise<Note> {
-        return this.api.createNoteUsingPOST1(param.contactId, param.request,  options).toPromise();
+        return this.api.createNoteUsingPOST1(param.contactId, param.createNoteRequest,  options).toPromise();
     }
 
     /**
@@ -3673,7 +3673,7 @@ export class ObjectNoteApi {
      * @param param the request object
      */
     public updateNotesCustomFieldUsingPATCHWithHttpInfo(param: NoteApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -3682,7 +3682,7 @@ export class ObjectNoteApi {
      * @param param the request object
      */
     public updateNotesCustomFieldUsingPATCH(param: NoteApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateNotesCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateNotesCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -3696,7 +3696,7 @@ export interface OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof OpportunityApicreateOpportunityCustomFieldsUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface OpportunityApiCreateOpportunityStageUsingPOSTRequest {
@@ -3705,7 +3705,7 @@ export interface OpportunityApiCreateOpportunityStageUsingPOSTRequest {
      * @type CreateOpportunityStageRequest
      * @memberof OpportunityApicreateOpportunityStageUsingPOST
      */
-    opportunityStage?: CreateOpportunityStageRequest
+    createOpportunityStageRequest?: CreateOpportunityStageRequest
 }
 
 export interface OpportunityApiCreateOpportunityUsingPOST1Request {
@@ -3714,7 +3714,7 @@ export interface OpportunityApiCreateOpportunityUsingPOST1Request {
      * @type CreateOpportunityRequest
      * @memberof OpportunityApicreateOpportunityUsingPOST1
      */
-    opportunity?: CreateOpportunityRequest
+    createOpportunityRequest?: CreateOpportunityRequest
 }
 
 export interface OpportunityApiDeleteOpportunityStageUsingDELETERequest {
@@ -3843,7 +3843,7 @@ export interface OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof OpportunityApiupdateOpportunityCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -3866,7 +3866,7 @@ export interface OpportunityApiUpdateOpportunityStageUsingPATCHRequest {
      * @type UpdateOpportunityStageRequest
      * @memberof OpportunityApiupdateOpportunityStageUsingPATCH
      */
-    request: UpdateOpportunityStageRequest
+    updateOpportunityStageRequest: UpdateOpportunityStageRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -3889,7 +3889,7 @@ export interface OpportunityApiUpdateOpportunityUsingPATCHRequest {
      * @type PatchOpportunityRequest
      * @memberof OpportunityApiupdateOpportunityUsingPATCH
      */
-    request: PatchOpportunityRequest
+    patchOpportunityRequest: PatchOpportunityRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -3912,7 +3912,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -3921,7 +3921,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public createOpportunityCustomFieldsUsingPOST(param: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createOpportunityCustomFieldsUsingPOST(param.customField,  options).toPromise();
+        return this.api.createOpportunityCustomFieldsUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -3930,7 +3930,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public createOpportunityStageUsingPOSTWithHttpInfo(param: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        return this.api.createOpportunityStageUsingPOSTWithHttpInfo(param.opportunityStage,  options).toPromise();
+        return this.api.createOpportunityStageUsingPOSTWithHttpInfo(param.createOpportunityStageRequest,  options).toPromise();
     }
 
     /**
@@ -3939,7 +3939,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public createOpportunityStageUsingPOST(param: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {}, options?: Configuration): Promise<RestOpportunityStage> {
-        return this.api.createOpportunityStageUsingPOST(param.opportunityStage,  options).toPromise();
+        return this.api.createOpportunityStageUsingPOST(param.createOpportunityStageRequest,  options).toPromise();
     }
 
     /**
@@ -3948,7 +3948,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public createOpportunityUsingPOST1WithHttpInfo(param: OpportunityApiCreateOpportunityUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        return this.api.createOpportunityUsingPOST1WithHttpInfo(param.opportunity,  options).toPromise();
+        return this.api.createOpportunityUsingPOST1WithHttpInfo(param.createOpportunityRequest,  options).toPromise();
     }
 
     /**
@@ -3957,7 +3957,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public createOpportunityUsingPOST1(param: OpportunityApiCreateOpportunityUsingPOST1Request = {}, options?: Configuration): Promise<RestV2Opportunity> {
-        return this.api.createOpportunityUsingPOST1(param.opportunity,  options).toPromise();
+        return this.api.createOpportunityUsingPOST1(param.createOpportunityRequest,  options).toPromise();
     }
 
     /**
@@ -4074,7 +4074,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4083,7 +4083,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public updateOpportunityCustomFieldUsingPATCH(param: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateOpportunityCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4092,7 +4092,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public updateOpportunityStageUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityStageUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        return this.api.updateOpportunityStageUsingPATCHWithHttpInfo(param.stageId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityStageUsingPATCHWithHttpInfo(param.stageId, param.updateOpportunityStageRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4101,7 +4101,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public updateOpportunityStageUsingPATCH(param: OpportunityApiUpdateOpportunityStageUsingPATCHRequest, options?: Configuration): Promise<RestOpportunityStage> {
-        return this.api.updateOpportunityStageUsingPATCH(param.stageId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityStageUsingPATCH(param.stageId, param.updateOpportunityStageRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4110,7 +4110,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public updateOpportunityUsingPATCHWithHttpInfo(param: OpportunityApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        return this.api.updateOpportunityUsingPATCHWithHttpInfo(param.opportunityId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityUsingPATCHWithHttpInfo(param.opportunityId, param.patchOpportunityRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4119,7 +4119,7 @@ export class ObjectOpportunityApi {
      * @param param the request object
      */
     public updateOpportunityUsingPATCH(param: OpportunityApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<RestV2Opportunity> {
-        return this.api.updateOpportunityUsingPATCH(param.opportunityId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityUsingPATCH(param.opportunityId, param.patchOpportunityRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -4133,7 +4133,7 @@ export interface OrderTotalDiscountApiCreateOrderTotalDiscountUsingPOSTRequest {
      * @type CreateOrderTotalDiscountRequest
      * @memberof OrderTotalDiscountApicreateOrderTotalDiscountUsingPOST
      */
-    request: CreateOrderTotalDiscountRequest
+    createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest
 }
 
 export interface OrderTotalDiscountApiDeleteOrderTotalDiscountUsingDELETERequest {
@@ -4202,7 +4202,7 @@ export interface OrderTotalDiscountApiUpdateOrderTotalDiscountUsingPATCHRequest 
      * @type UpdateOrderTotalDiscountRequest
      * @memberof OrderTotalDiscountApiupdateOrderTotalDiscountUsingPATCH
      */
-    request: UpdateOrderTotalDiscountRequest
+    updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -4225,7 +4225,7 @@ export class ObjectOrderTotalDiscountApi {
      * @param param the request object
      */
     public createOrderTotalDiscountUsingPOSTWithHttpInfo(param: OrderTotalDiscountApiCreateOrderTotalDiscountUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        return this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(param.createOrderTotalDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -4234,7 +4234,7 @@ export class ObjectOrderTotalDiscountApi {
      * @param param the request object
      */
     public createOrderTotalDiscountUsingPOST(param: OrderTotalDiscountApiCreateOrderTotalDiscountUsingPOSTRequest, options?: Configuration): Promise<OrderTotalDiscount> {
-        return this.api.createOrderTotalDiscountUsingPOST(param.request,  options).toPromise();
+        return this.api.createOrderTotalDiscountUsingPOST(param.createOrderTotalDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -4297,7 +4297,7 @@ export class ObjectOrderTotalDiscountApi {
      * @param param the request object
      */
     public updateOrderTotalDiscountUsingPATCHWithHttpInfo(param: OrderTotalDiscountApiUpdateOrderTotalDiscountUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        return this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(param.discountId, param.updateOrderTotalDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4306,7 +4306,7 @@ export class ObjectOrderTotalDiscountApi {
      * @param param the request object
      */
     public updateOrderTotalDiscountUsingPATCH(param: OrderTotalDiscountApiUpdateOrderTotalDiscountUsingPATCHRequest, options?: Configuration): Promise<OrderTotalDiscount> {
-        return this.api.updateOrderTotalDiscountUsingPATCH(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderTotalDiscountUsingPATCH(param.discountId, param.updateOrderTotalDiscountRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -4320,7 +4320,7 @@ export interface OrdersApiCreateOrderCustomFieldUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof OrdersApicreateOrderCustomFieldUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface OrdersApiCreateOrderItemsOnOrderUsingPOST1Request {
@@ -4345,7 +4345,7 @@ export interface OrdersApiCreateOrderUsingPOST1Request {
      * @type RestCreateOrderRequest
      * @memberof OrdersApicreateOrderUsingPOST1
      */
-    createOrderRequest: RestCreateOrderRequest
+    restCreateOrderRequest: RestCreateOrderRequest
 }
 
 export interface OrdersApiCreatePaymentOnOrderUsingPOST1Request {
@@ -4487,7 +4487,7 @@ export interface OrdersApiPatchOrderUsingPATCHRequest {
      * @type RestV2PatchOrderRequest
      * @memberof OrdersApipatchOrderUsingPATCH
      */
-    order?: RestV2PatchOrderRequest
+    restV2PatchOrderRequest?: RestV2PatchOrderRequest
 }
 
 export interface OrdersApiRetrieveOrderCustomFieldModelUsingGETRequest {
@@ -4506,7 +4506,7 @@ export interface OrdersApiUpdateOrderCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof OrdersApiupdateOrderCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -4529,7 +4529,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public createOrderCustomFieldUsingPOSTWithHttpInfo(param: OrdersApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -4538,7 +4538,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public createOrderCustomFieldUsingPOST(param: OrdersApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createOrderCustomFieldUsingPOST(param.customField,  options).toPromise();
+        return this.api.createOrderCustomFieldUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -4565,7 +4565,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public createOrderUsingPOST1WithHttpInfo(param: OrdersApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        return this.api.createOrderUsingPOST1WithHttpInfo(param.createOrderRequest,  options).toPromise();
+        return this.api.createOrderUsingPOST1WithHttpInfo(param.restCreateOrderRequest,  options).toPromise();
     }
 
     /**
@@ -4574,7 +4574,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public createOrderUsingPOST1(param: OrdersApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<RestV2Order> {
-        return this.api.createOrderUsingPOST1(param.createOrderRequest,  options).toPromise();
+        return this.api.createOrderUsingPOST1(param.restCreateOrderRequest,  options).toPromise();
     }
 
     /**
@@ -4691,7 +4691,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public patchOrderUsingPATCHWithHttpInfo(param: OrdersApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.order,  options).toPromise();
+        return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.restV2PatchOrderRequest,  options).toPromise();
     }
 
     /**
@@ -4700,7 +4700,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public patchOrderUsingPATCH(param: OrdersApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<RestV2Order> {
-        return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.order,  options).toPromise();
+        return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.restV2PatchOrderRequest,  options).toPromise();
     }
 
     /**
@@ -4727,7 +4727,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public updateOrderCustomFieldUsingPATCHWithHttpInfo(param: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -4736,7 +4736,7 @@ export class ObjectOrdersApi {
      * @param param the request object
      */
     public updateOrderCustomFieldUsingPATCH(param: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateOrderCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -4750,7 +4750,7 @@ export interface PaymentMethodConfigApiCreatePaymentMethodConfigUsingPOSTRequest
      * @type CreatePaymentMethodConfigRequest
      * @memberof PaymentMethodConfigApicreatePaymentMethodConfigUsingPOST
      */
-    request: CreatePaymentMethodConfigRequest
+    createPaymentMethodConfigRequest: CreatePaymentMethodConfigRequest
 }
 
 export class ObjectPaymentMethodConfigApi {
@@ -4766,7 +4766,7 @@ export class ObjectPaymentMethodConfigApi {
      * @param param the request object
      */
     public createPaymentMethodConfigUsingPOSTWithHttpInfo(param: PaymentMethodConfigApiCreatePaymentMethodConfigUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<PaymentMethodConfig>> {
-        return this.api.createPaymentMethodConfigUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createPaymentMethodConfigUsingPOSTWithHttpInfo(param.createPaymentMethodConfigRequest,  options).toPromise();
     }
 
     /**
@@ -4775,7 +4775,7 @@ export class ObjectPaymentMethodConfigApi {
      * @param param the request object
      */
     public createPaymentMethodConfigUsingPOST(param: PaymentMethodConfigApiCreatePaymentMethodConfigUsingPOSTRequest, options?: Configuration): Promise<PaymentMethodConfig> {
-        return this.api.createPaymentMethodConfigUsingPOST(param.request,  options).toPromise();
+        return this.api.createPaymentMethodConfigUsingPOST(param.createPaymentMethodConfigRequest,  options).toPromise();
     }
 
 }
@@ -4805,7 +4805,7 @@ export interface PreReleaseApiAddCommissionProgramUsingPOSTRequest {
      * @type CreateCommissionProgramRequest
      * @memberof PreReleaseApiaddCommissionProgramUsingPOST
      */
-    insertCommissionProgram?: CreateCommissionProgramRequest
+    createCommissionProgramRequest?: CreateCommissionProgramRequest
 }
 
 export interface PreReleaseApiAssignProductCommissionProgramUsingPOSTRequest {
@@ -4821,7 +4821,7 @@ export interface PreReleaseApiAssignProductCommissionProgramUsingPOSTRequest {
      * @type CreateProductCommissionProgramRequest
      * @memberof PreReleaseApiassignProductCommissionProgramUsingPOST
      */
-    productCommissionProgram?: CreateProductCommissionProgramRequest
+    createProductCommissionProgramRequest?: CreateProductCommissionProgramRequest
 }
 
 export interface PreReleaseApiAssignSubscriptionCommissionProgramUsingPOSTRequest {
@@ -4837,7 +4837,7 @@ export interface PreReleaseApiAssignSubscriptionCommissionProgramUsingPOSTReques
      * @type CreateSubscriptionCommissionProgramRequest
      * @memberof PreReleaseApiassignSubscriptionCommissionProgramUsingPOST
      */
-    subscriptionCommissionProgram?: CreateSubscriptionCommissionProgramRequest
+    createSubscriptionCommissionProgramRequest?: CreateSubscriptionCommissionProgramRequest
 }
 
 export interface PreReleaseApiCancelSubscriptionUsingPOSTRequest {
@@ -4862,7 +4862,7 @@ export interface PreReleaseApiCreateAffiliateCustomFieldUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof PreReleaseApicreateAffiliateCustomFieldUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface PreReleaseApiCreateDefaultCommissionProgramUsingPOSTRequest {
@@ -4887,7 +4887,7 @@ export interface PreReleaseApiCreateDiscountUsingPOSTRequest {
      * @type CreateUpdateDiscountRequest
      * @memberof PreReleaseApicreateDiscountUsingPOST
      */
-    request: CreateUpdateDiscountRequest
+    createUpdateDiscountRequest: CreateUpdateDiscountRequest
 }
 
 export interface PreReleaseApiCreateDiscountUsingPOST1Request {
@@ -4896,7 +4896,7 @@ export interface PreReleaseApiCreateDiscountUsingPOST1Request {
      * @type CreateShippingDiscountRequest
      * @memberof PreReleaseApicreateDiscountUsingPOST1
      */
-    request: CreateShippingDiscountRequest
+    createShippingDiscountRequest: CreateShippingDiscountRequest
 }
 
 export interface PreReleaseApiCreateFunnelIntegrationUsingPOSTRequest {
@@ -4923,7 +4923,7 @@ export interface PreReleaseApiCreateLeadSourceUsingPOSTRequest {
      * @type CreateLeadSourceRequest
      * @memberof PreReleaseApicreateLeadSourceUsingPOST
      */
-    leadsource?: CreateLeadSourceRequest
+    createLeadSourceRequest?: CreateLeadSourceRequest
 }
 
 export interface PreReleaseApiCreateNoteCustomFieldUsingPOST1Request {
@@ -4932,7 +4932,7 @@ export interface PreReleaseApiCreateNoteCustomFieldUsingPOST1Request {
      * @type CreateCustomFieldRequest
      * @memberof PreReleaseApicreateNoteCustomFieldUsingPOST1
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface PreReleaseApiCreateOpportunityCustomFieldsUsingPOSTRequest {
@@ -4941,7 +4941,7 @@ export interface PreReleaseApiCreateOpportunityCustomFieldsUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof PreReleaseApicreateOpportunityCustomFieldsUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface PreReleaseApiCreateOpportunityStageUsingPOSTRequest {
@@ -4950,7 +4950,7 @@ export interface PreReleaseApiCreateOpportunityStageUsingPOSTRequest {
      * @type CreateOpportunityStageRequest
      * @memberof PreReleaseApicreateOpportunityStageUsingPOST
      */
-    opportunityStage?: CreateOpportunityStageRequest
+    createOpportunityStageRequest?: CreateOpportunityStageRequest
 }
 
 export interface PreReleaseApiCreateOpportunityUsingPOST1Request {
@@ -4959,7 +4959,7 @@ export interface PreReleaseApiCreateOpportunityUsingPOST1Request {
      * @type CreateOpportunityRequest
      * @memberof PreReleaseApicreateOpportunityUsingPOST1
      */
-    opportunity?: CreateOpportunityRequest
+    createOpportunityRequest?: CreateOpportunityRequest
 }
 
 export interface PreReleaseApiCreateOrderCustomFieldUsingPOSTRequest {
@@ -4968,7 +4968,7 @@ export interface PreReleaseApiCreateOrderCustomFieldUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof PreReleaseApicreateOrderCustomFieldUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface PreReleaseApiCreateOrderItemsOnOrderUsingPOST1Request {
@@ -4993,7 +4993,7 @@ export interface PreReleaseApiCreateOrderTotalDiscountUsingPOSTRequest {
      * @type CreateOrderTotalDiscountRequest
      * @memberof PreReleaseApicreateOrderTotalDiscountUsingPOST
      */
-    request: CreateOrderTotalDiscountRequest
+    createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest
 }
 
 export interface PreReleaseApiCreateOrderUsingPOST1Request {
@@ -5002,7 +5002,7 @@ export interface PreReleaseApiCreateOrderUsingPOST1Request {
      * @type RestCreateOrderRequest
      * @memberof PreReleaseApicreateOrderUsingPOST1
      */
-    createOrderRequest: RestCreateOrderRequest
+    restCreateOrderRequest: RestCreateOrderRequest
 }
 
 export interface PreReleaseApiCreateProductUsingPOST1Request {
@@ -5020,7 +5020,7 @@ export interface PreReleaseApiCreateRedirectLinkUsingPOSTRequest {
      * @type CreateOrPatchAffiliateLinkRequest
      * @memberof PreReleaseApicreateRedirectLinkUsingPOST
      */
-    request: CreateOrPatchAffiliateLinkRequest
+    createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest
 }
 
 export interface PreReleaseApiCreateReferralUsingPOSTRequest {
@@ -5029,7 +5029,7 @@ export interface PreReleaseApiCreateReferralUsingPOSTRequest {
      * @type CreateReferralRequest
      * @memberof PreReleaseApicreateReferralUsingPOST
      */
-    request: CreateReferralRequest
+    createReferralRequest: CreateReferralRequest
 }
 
 export interface PreReleaseApiCreateSubscriptionCustomFieldUsingPOSTRequest {
@@ -5038,7 +5038,7 @@ export interface PreReleaseApiCreateSubscriptionCustomFieldUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof PreReleaseApicreateSubscriptionCustomFieldUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface PreReleaseApiCreateTaskCustomFieldUsingPOST1Request {
@@ -5047,7 +5047,7 @@ export interface PreReleaseApiCreateTaskCustomFieldUsingPOST1Request {
      * @type CreateCustomFieldRequest
      * @memberof PreReleaseApicreateTaskCustomFieldUsingPOST1
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface PreReleaseApiCreateTaskUsingPOST1Request {
@@ -5056,7 +5056,7 @@ export interface PreReleaseApiCreateTaskUsingPOST1Request {
      * @type CreateTaskRequest
      * @memberof PreReleaseApicreateTaskUsingPOST1
      */
-    task?: CreateTaskRequest
+    createTaskRequest?: CreateTaskRequest
 }
 
 export interface PreReleaseApiCreateUserUsingPOST1Request {
@@ -5065,7 +5065,7 @@ export interface PreReleaseApiCreateUserUsingPOST1Request {
      * @type CreateUserRequestV2
      * @memberof PreReleaseApicreateUserUsingPOST1
      */
-    user?: CreateUserRequestV2
+    createUserRequestV2?: CreateUserRequestV2
 }
 
 export interface PreReleaseApiDeleteAffiliateCommissionProgramUsingDELETERequest {
@@ -6075,7 +6075,7 @@ export interface PreReleaseApiPatchOrderUsingPATCHRequest {
      * @type RestV2PatchOrderRequest
      * @memberof PreReleaseApipatchOrderUsingPATCH
      */
-    order?: RestV2PatchOrderRequest
+    restV2PatchOrderRequest?: RestV2PatchOrderRequest
 }
 
 export interface PreReleaseApiPatchProductCommissionProgramUsingPATCHRequest {
@@ -6144,7 +6144,7 @@ export interface PreReleaseApiPatchTaskUsingPATCHRequest {
      * @type CreatePatchTaskRequest
      * @memberof PreReleaseApipatchTaskUsingPATCH
      */
-    task?: CreatePatchTaskRequest
+    createPatchTaskRequest?: CreatePatchTaskRequest
 }
 
 export interface PreReleaseApiPatchUserUsingPATCHRequest {
@@ -6167,7 +6167,7 @@ export interface PreReleaseApiPatchUserUsingPATCHRequest {
      * @type PatchUserRequestV2
      * @memberof PreReleaseApipatchUserUsingPATCH
      */
-    user?: PatchUserRequestV2
+    patchUserRequestV2?: PatchUserRequestV2
 }
 
 export interface PreReleaseApiRemoveAffiliateFromProgramUsingPOSTRequest {
@@ -6183,7 +6183,7 @@ export interface PreReleaseApiRemoveAffiliateFromProgramUsingPOSTRequest {
      * @type AffiliateRemoveFromProgramRequest
      * @memberof PreReleaseApiremoveAffiliateFromProgramUsingPOST
      */
-    removeFromProgramRequest: AffiliateRemoveFromProgramRequest
+    affiliateRemoveFromProgramRequest: AffiliateRemoveFromProgramRequest
 }
 
 export interface PreReleaseApiRemoveSubscriptionPlanCommissionFromCommissionsUsingPOSTRequest {
@@ -6227,7 +6227,7 @@ export interface PreReleaseApiUpdateAffiliateCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof PreReleaseApiupdateAffiliateCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6250,7 +6250,7 @@ export interface PreReleaseApiUpdateDiscountUsingPATCHRequest {
      * @type CreateUpdateDiscountRequest
      * @memberof PreReleaseApiupdateDiscountUsingPATCH
      */
-    request: CreateUpdateDiscountRequest
+    createUpdateDiscountRequest: CreateUpdateDiscountRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6273,7 +6273,7 @@ export interface PreReleaseApiUpdateDiscountUsingPATCH1Request {
      * @type UpdateShippingDiscountRequest
      * @memberof PreReleaseApiupdateDiscountUsingPATCH1
      */
-    request: UpdateShippingDiscountRequest
+    updateShippingDiscountRequest: UpdateShippingDiscountRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6296,7 +6296,7 @@ export interface PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof PreReleaseApiupdateNotesCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6319,7 +6319,7 @@ export interface PreReleaseApiUpdateOpportunityCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof PreReleaseApiupdateOpportunityCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6342,7 +6342,7 @@ export interface PreReleaseApiUpdateOpportunityStageUsingPATCHRequest {
      * @type UpdateOpportunityStageRequest
      * @memberof PreReleaseApiupdateOpportunityStageUsingPATCH
      */
-    request: UpdateOpportunityStageRequest
+    updateOpportunityStageRequest: UpdateOpportunityStageRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6365,7 +6365,7 @@ export interface PreReleaseApiUpdateOpportunityUsingPATCHRequest {
      * @type PatchOpportunityRequest
      * @memberof PreReleaseApiupdateOpportunityUsingPATCH
      */
-    request: PatchOpportunityRequest
+    patchOpportunityRequest: PatchOpportunityRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6388,7 +6388,7 @@ export interface PreReleaseApiUpdateOrderCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof PreReleaseApiupdateOrderCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6411,7 +6411,7 @@ export interface PreReleaseApiUpdateOrderTotalDiscountUsingPATCHRequest {
      * @type UpdateOrderTotalDiscountRequest
      * @memberof PreReleaseApiupdateOrderTotalDiscountUsingPATCH
      */
-    request: UpdateOrderTotalDiscountRequest
+    updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6434,7 +6434,7 @@ export interface PreReleaseApiUpdateRedirectLinkUsingPATCHRequest {
      * @type CreateOrPatchAffiliateLinkRequest
      * @memberof PreReleaseApiupdateRedirectLinkUsingPATCH
      */
-    request: CreateOrPatchAffiliateLinkRequest
+    createOrPatchAffiliateLinkRequest: CreateOrPatchAffiliateLinkRequest
 }
 
 export interface PreReleaseApiUpdateSubscriptionCustomFieldUsingPATCHRequest {
@@ -6450,7 +6450,7 @@ export interface PreReleaseApiUpdateSubscriptionCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof PreReleaseApiupdateSubscriptionCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6473,7 +6473,7 @@ export interface PreReleaseApiUpdateTaskCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof PreReleaseApiupdateTaskCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -6514,7 +6514,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public addCommissionProgramUsingPOSTWithHttpInfo(param: PreReleaseApiAddCommissionProgramUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
-        return this.api.addCommissionProgramUsingPOSTWithHttpInfo(param.insertCommissionProgram,  options).toPromise();
+        return this.api.addCommissionProgramUsingPOSTWithHttpInfo(param.createCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -6523,7 +6523,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public addCommissionProgramUsingPOST(param: PreReleaseApiAddCommissionProgramUsingPOSTRequest = {}, options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
-        return this.api.addCommissionProgramUsingPOST(param.insertCommissionProgram,  options).toPromise();
+        return this.api.addCommissionProgramUsingPOST(param.createCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -6532,7 +6532,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public assignProductCommissionProgramUsingPOSTWithHttpInfo(param: PreReleaseApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<ProductCommissionProgram>> {
-        return this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.productCommissionProgram,  options).toPromise();
+        return this.api.assignProductCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.createProductCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -6541,7 +6541,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public assignProductCommissionProgramUsingPOST(param: PreReleaseApiAssignProductCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<ProductCommissionProgram> {
-        return this.api.assignProductCommissionProgramUsingPOST(param.commissionProgramId, param.productCommissionProgram,  options).toPromise();
+        return this.api.assignProductCommissionProgramUsingPOST(param.commissionProgramId, param.createProductCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -6550,7 +6550,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param: PreReleaseApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<SubscriptionCommissionProgram>> {
-        return this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.subscriptionCommissionProgram,  options).toPromise();
+        return this.api.assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(param.commissionProgramId, param.createSubscriptionCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -6559,7 +6559,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public assignSubscriptionCommissionProgramUsingPOST(param: PreReleaseApiAssignSubscriptionCommissionProgramUsingPOSTRequest, options?: Configuration): Promise<SubscriptionCommissionProgram> {
-        return this.api.assignSubscriptionCommissionProgramUsingPOST(param.commissionProgramId, param.subscriptionCommissionProgram,  options).toPromise();
+        return this.api.assignSubscriptionCommissionProgramUsingPOST(param.commissionProgramId, param.createSubscriptionCommissionProgramRequest,  options).toPromise();
     }
 
     /**
@@ -6586,7 +6586,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createAffiliateCustomFieldUsingPOSTWithHttpInfo(param: PreReleaseApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createAffiliateCustomFieldUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6595,7 +6595,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createAffiliateCustomFieldUsingPOST(param: PreReleaseApiCreateAffiliateCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createAffiliateCustomFieldUsingPOST(param.customField,  options).toPromise();
+        return this.api.createAffiliateCustomFieldUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6622,7 +6622,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createDiscountUsingPOSTWithHttpInfo(param: PreReleaseApiCreateDiscountUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        return this.api.createDiscountUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOSTWithHttpInfo(param.createUpdateDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -6631,7 +6631,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createDiscountUsingPOST(param: PreReleaseApiCreateDiscountUsingPOSTRequest, options?: Configuration): Promise<CategoryDiscount> {
-        return this.api.createDiscountUsingPOST(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOST(param.createUpdateDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -6640,7 +6640,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createDiscountUsingPOST1WithHttpInfo(param: PreReleaseApiCreateDiscountUsingPOST1Request, options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        return this.api.createDiscountUsingPOST1WithHttpInfo(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOST1WithHttpInfo(param.createShippingDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -6649,7 +6649,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createDiscountUsingPOST1(param: PreReleaseApiCreateDiscountUsingPOST1Request, options?: Configuration): Promise<ShippingDiscount> {
-        return this.api.createDiscountUsingPOST1(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOST1(param.createShippingDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -6692,7 +6692,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createLeadSourceUsingPOSTWithHttpInfo(param: PreReleaseApiCreateLeadSourceUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<LeadSource>> {
-        return this.api.createLeadSourceUsingPOSTWithHttpInfo(param.leadsource,  options).toPromise();
+        return this.api.createLeadSourceUsingPOSTWithHttpInfo(param.createLeadSourceRequest,  options).toPromise();
     }
 
     /**
@@ -6701,7 +6701,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createLeadSourceUsingPOST(param: PreReleaseApiCreateLeadSourceUsingPOSTRequest = {}, options?: Configuration): Promise<LeadSource> {
-        return this.api.createLeadSourceUsingPOST(param.leadsource,  options).toPromise();
+        return this.api.createLeadSourceUsingPOST(param.createLeadSourceRequest,  options).toPromise();
     }
 
     /**
@@ -6710,7 +6710,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createNoteCustomFieldUsingPOST1WithHttpInfo(param: PreReleaseApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createNoteCustomFieldUsingPOST1WithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6719,7 +6719,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createNoteCustomFieldUsingPOST1(param: PreReleaseApiCreateNoteCustomFieldUsingPOST1Request, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createNoteCustomFieldUsingPOST1(param.customField,  options).toPromise();
+        return this.api.createNoteCustomFieldUsingPOST1(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6728,7 +6728,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param: PreReleaseApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6737,7 +6737,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOpportunityCustomFieldsUsingPOST(param: PreReleaseApiCreateOpportunityCustomFieldsUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createOpportunityCustomFieldsUsingPOST(param.customField,  options).toPromise();
+        return this.api.createOpportunityCustomFieldsUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6746,7 +6746,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOpportunityStageUsingPOSTWithHttpInfo(param: PreReleaseApiCreateOpportunityStageUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        return this.api.createOpportunityStageUsingPOSTWithHttpInfo(param.opportunityStage,  options).toPromise();
+        return this.api.createOpportunityStageUsingPOSTWithHttpInfo(param.createOpportunityStageRequest,  options).toPromise();
     }
 
     /**
@@ -6755,7 +6755,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOpportunityStageUsingPOST(param: PreReleaseApiCreateOpportunityStageUsingPOSTRequest = {}, options?: Configuration): Promise<RestOpportunityStage> {
-        return this.api.createOpportunityStageUsingPOST(param.opportunityStage,  options).toPromise();
+        return this.api.createOpportunityStageUsingPOST(param.createOpportunityStageRequest,  options).toPromise();
     }
 
     /**
@@ -6764,7 +6764,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOpportunityUsingPOST1WithHttpInfo(param: PreReleaseApiCreateOpportunityUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        return this.api.createOpportunityUsingPOST1WithHttpInfo(param.opportunity,  options).toPromise();
+        return this.api.createOpportunityUsingPOST1WithHttpInfo(param.createOpportunityRequest,  options).toPromise();
     }
 
     /**
@@ -6773,7 +6773,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOpportunityUsingPOST1(param: PreReleaseApiCreateOpportunityUsingPOST1Request = {}, options?: Configuration): Promise<RestV2Opportunity> {
-        return this.api.createOpportunityUsingPOST1(param.opportunity,  options).toPromise();
+        return this.api.createOpportunityUsingPOST1(param.createOpportunityRequest,  options).toPromise();
     }
 
     /**
@@ -6782,7 +6782,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOrderCustomFieldUsingPOSTWithHttpInfo(param: PreReleaseApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createOrderCustomFieldUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6791,7 +6791,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOrderCustomFieldUsingPOST(param: PreReleaseApiCreateOrderCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createOrderCustomFieldUsingPOST(param.customField,  options).toPromise();
+        return this.api.createOrderCustomFieldUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6818,7 +6818,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOrderTotalDiscountUsingPOSTWithHttpInfo(param: PreReleaseApiCreateOrderTotalDiscountUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        return this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createOrderTotalDiscountUsingPOSTWithHttpInfo(param.createOrderTotalDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -6827,7 +6827,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOrderTotalDiscountUsingPOST(param: PreReleaseApiCreateOrderTotalDiscountUsingPOSTRequest, options?: Configuration): Promise<OrderTotalDiscount> {
-        return this.api.createOrderTotalDiscountUsingPOST(param.request,  options).toPromise();
+        return this.api.createOrderTotalDiscountUsingPOST(param.createOrderTotalDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -6836,7 +6836,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOrderUsingPOST1WithHttpInfo(param: PreReleaseApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        return this.api.createOrderUsingPOST1WithHttpInfo(param.createOrderRequest,  options).toPromise();
+        return this.api.createOrderUsingPOST1WithHttpInfo(param.restCreateOrderRequest,  options).toPromise();
     }
 
     /**
@@ -6845,7 +6845,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createOrderUsingPOST1(param: PreReleaseApiCreateOrderUsingPOST1Request, options?: Configuration): Promise<RestV2Order> {
-        return this.api.createOrderUsingPOST1(param.createOrderRequest,  options).toPromise();
+        return this.api.createOrderUsingPOST1(param.restCreateOrderRequest,  options).toPromise();
     }
 
     /**
@@ -6872,7 +6872,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createRedirectLinkUsingPOSTWithHttpInfo(param: PreReleaseApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        return this.api.createRedirectLinkUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createRedirectLinkUsingPOSTWithHttpInfo(param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -6881,7 +6881,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createRedirectLinkUsingPOST(param: PreReleaseApiCreateRedirectLinkUsingPOSTRequest, options?: Configuration): Promise<AffiliateLink> {
-        return this.api.createRedirectLinkUsingPOST(param.request,  options).toPromise();
+        return this.api.createRedirectLinkUsingPOST(param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -6890,7 +6890,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createReferralUsingPOSTWithHttpInfo(param: PreReleaseApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<Referral>> {
-        return this.api.createReferralUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createReferralUsingPOSTWithHttpInfo(param.createReferralRequest,  options).toPromise();
     }
 
     /**
@@ -6899,7 +6899,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createReferralUsingPOST(param: PreReleaseApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<Referral> {
-        return this.api.createReferralUsingPOST(param.request,  options).toPromise();
+        return this.api.createReferralUsingPOST(param.createReferralRequest,  options).toPromise();
     }
 
     /**
@@ -6908,7 +6908,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param: PreReleaseApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6917,7 +6917,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createSubscriptionCustomFieldUsingPOST(param: PreReleaseApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createSubscriptionCustomFieldUsingPOST(param.customField,  options).toPromise();
+        return this.api.createSubscriptionCustomFieldUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6926,7 +6926,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createTaskCustomFieldUsingPOST1WithHttpInfo(param: PreReleaseApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
-        return this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6935,7 +6935,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createTaskCustomFieldUsingPOST1(param: PreReleaseApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<CreateCustomFieldResponse> {
-        return this.api.createTaskCustomFieldUsingPOST1(param.customField,  options).toPromise();
+        return this.api.createTaskCustomFieldUsingPOST1(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -6944,7 +6944,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createTaskUsingPOST1WithHttpInfo(param: PreReleaseApiCreateTaskUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<Task>> {
-        return this.api.createTaskUsingPOST1WithHttpInfo(param.task,  options).toPromise();
+        return this.api.createTaskUsingPOST1WithHttpInfo(param.createTaskRequest,  options).toPromise();
     }
 
     /**
@@ -6953,7 +6953,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createTaskUsingPOST1(param: PreReleaseApiCreateTaskUsingPOST1Request = {}, options?: Configuration): Promise<Task> {
-        return this.api.createTaskUsingPOST1(param.task,  options).toPromise();
+        return this.api.createTaskUsingPOST1(param.createTaskRequest,  options).toPromise();
     }
 
     /**
@@ -6962,7 +6962,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createUserUsingPOST1WithHttpInfo(param: PreReleaseApiCreateUserUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<User>> {
-        return this.api.createUserUsingPOST1WithHttpInfo(param.user,  options).toPromise();
+        return this.api.createUserUsingPOST1WithHttpInfo(param.createUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -6971,7 +6971,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public createUserUsingPOST1(param: PreReleaseApiCreateUserUsingPOST1Request = {}, options?: Configuration): Promise<User> {
-        return this.api.createUserUsingPOST1(param.user,  options).toPromise();
+        return this.api.createUserUsingPOST1(param.createUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -7948,7 +7948,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public patchOrderUsingPATCHWithHttpInfo(param: PreReleaseApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Order>> {
-        return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.order,  options).toPromise();
+        return this.api.patchOrderUsingPATCHWithHttpInfo(param.orderId, param.updateMask, param.restV2PatchOrderRequest,  options).toPromise();
     }
 
     /**
@@ -7957,7 +7957,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public patchOrderUsingPATCH(param: PreReleaseApiPatchOrderUsingPATCHRequest, options?: Configuration): Promise<RestV2Order> {
-        return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.order,  options).toPromise();
+        return this.api.patchOrderUsingPATCH(param.orderId, param.updateMask, param.restV2PatchOrderRequest,  options).toPromise();
     }
 
     /**
@@ -8002,7 +8002,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public patchTaskUsingPATCHWithHttpInfo(param: PreReleaseApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
-        return this.api.patchTaskUsingPATCHWithHttpInfo(param.taskId, param.updateMask, param.task,  options).toPromise();
+        return this.api.patchTaskUsingPATCHWithHttpInfo(param.taskId, param.updateMask, param.createPatchTaskRequest,  options).toPromise();
     }
 
     /**
@@ -8011,7 +8011,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public patchTaskUsingPATCH(param: PreReleaseApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<UpdateTaskResponse> {
-        return this.api.patchTaskUsingPATCH(param.taskId, param.updateMask, param.task,  options).toPromise();
+        return this.api.patchTaskUsingPATCH(param.taskId, param.updateMask, param.createPatchTaskRequest,  options).toPromise();
     }
 
     /**
@@ -8020,7 +8020,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public patchUserUsingPATCHWithHttpInfo(param: PreReleaseApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<User>> {
-        return this.api.patchUserUsingPATCHWithHttpInfo(param.userId, param.updateMask, param.user,  options).toPromise();
+        return this.api.patchUserUsingPATCHWithHttpInfo(param.userId, param.updateMask, param.patchUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -8029,7 +8029,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public patchUserUsingPATCH(param: PreReleaseApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<User> {
-        return this.api.patchUserUsingPATCH(param.userId, param.updateMask, param.user,  options).toPromise();
+        return this.api.patchUserUsingPATCH(param.userId, param.updateMask, param.patchUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -8038,7 +8038,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public removeAffiliateFromProgramUsingPOSTWithHttpInfo(param: PreReleaseApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<void>> {
-        return this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(param.id, param.removeFromProgramRequest,  options).toPromise();
+        return this.api.removeAffiliateFromProgramUsingPOSTWithHttpInfo(param.id, param.affiliateRemoveFromProgramRequest,  options).toPromise();
     }
 
     /**
@@ -8047,7 +8047,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public removeAffiliateFromProgramUsingPOST(param: PreReleaseApiRemoveAffiliateFromProgramUsingPOSTRequest, options?: Configuration): Promise<void> {
-        return this.api.removeAffiliateFromProgramUsingPOST(param.id, param.removeFromProgramRequest,  options).toPromise();
+        return this.api.removeAffiliateFromProgramUsingPOST(param.id, param.affiliateRemoveFromProgramRequest,  options).toPromise();
     }
 
     /**
@@ -8146,7 +8146,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8155,7 +8155,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateAffiliateCustomFieldUsingPATCH(param: PreReleaseApiUpdateAffiliateCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateAffiliateCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateAffiliateCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8164,7 +8164,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateDiscountUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CategoryDiscount>> {
-        return this.api.updateDiscountUsingPATCHWithHttpInfo(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCHWithHttpInfo(param.discountId, param.createUpdateDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8173,7 +8173,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCH(param: PreReleaseApiUpdateDiscountUsingPATCHRequest, options?: Configuration): Promise<CategoryDiscount> {
-        return this.api.updateDiscountUsingPATCH(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCH(param.discountId, param.createUpdateDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8182,7 +8182,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCH1WithHttpInfo(param: PreReleaseApiUpdateDiscountUsingPATCH1Request, options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        return this.api.updateDiscountUsingPATCH1WithHttpInfo(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCH1WithHttpInfo(param.discountId, param.updateShippingDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8191,7 +8191,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCH1(param: PreReleaseApiUpdateDiscountUsingPATCH1Request, options?: Configuration): Promise<ShippingDiscount> {
-        return this.api.updateDiscountUsingPATCH1(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCH1(param.discountId, param.updateShippingDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8200,7 +8200,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateNotesCustomFieldUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8209,7 +8209,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateNotesCustomFieldUsingPATCH(param: PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateNotesCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateNotesCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8218,7 +8218,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8227,7 +8227,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOpportunityCustomFieldUsingPATCH(param: PreReleaseApiUpdateOpportunityCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateOpportunityCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8236,7 +8236,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOpportunityStageUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateOpportunityStageUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestOpportunityStage>> {
-        return this.api.updateOpportunityStageUsingPATCHWithHttpInfo(param.stageId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityStageUsingPATCHWithHttpInfo(param.stageId, param.updateOpportunityStageRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8245,7 +8245,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOpportunityStageUsingPATCH(param: PreReleaseApiUpdateOpportunityStageUsingPATCHRequest, options?: Configuration): Promise<RestOpportunityStage> {
-        return this.api.updateOpportunityStageUsingPATCH(param.stageId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityStageUsingPATCH(param.stageId, param.updateOpportunityStageRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8254,7 +8254,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOpportunityUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestV2Opportunity>> {
-        return this.api.updateOpportunityUsingPATCHWithHttpInfo(param.opportunityId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityUsingPATCHWithHttpInfo(param.opportunityId, param.patchOpportunityRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8263,7 +8263,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOpportunityUsingPATCH(param: PreReleaseApiUpdateOpportunityUsingPATCHRequest, options?: Configuration): Promise<RestV2Opportunity> {
-        return this.api.updateOpportunityUsingPATCH(param.opportunityId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOpportunityUsingPATCH(param.opportunityId, param.patchOpportunityRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8272,7 +8272,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOrderCustomFieldUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8281,7 +8281,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOrderCustomFieldUsingPATCH(param: PreReleaseApiUpdateOrderCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateOrderCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8290,7 +8290,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOrderTotalDiscountUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateOrderTotalDiscountUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<OrderTotalDiscount>> {
-        return this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderTotalDiscountUsingPATCHWithHttpInfo(param.discountId, param.updateOrderTotalDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8299,7 +8299,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateOrderTotalDiscountUsingPATCH(param: PreReleaseApiUpdateOrderTotalDiscountUsingPATCHRequest, options?: Configuration): Promise<OrderTotalDiscount> {
-        return this.api.updateOrderTotalDiscountUsingPATCH(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateOrderTotalDiscountUsingPATCH(param.discountId, param.updateOrderTotalDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8308,7 +8308,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateRedirectLinkUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateLink>> {
-        return this.api.updateRedirectLinkUsingPATCHWithHttpInfo(param.redirectId, param.request,  options).toPromise();
+        return this.api.updateRedirectLinkUsingPATCHWithHttpInfo(param.redirectId, param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -8317,7 +8317,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateRedirectLinkUsingPATCH(param: PreReleaseApiUpdateRedirectLinkUsingPATCHRequest, options?: Configuration): Promise<AffiliateLink> {
-        return this.api.updateRedirectLinkUsingPATCH(param.redirectId, param.request,  options).toPromise();
+        return this.api.updateRedirectLinkUsingPATCH(param.redirectId, param.createOrPatchAffiliateLinkRequest,  options).toPromise();
     }
 
     /**
@@ -8326,7 +8326,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8335,7 +8335,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateSubscriptionCustomFieldUsingPATCH(param: PreReleaseApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateSubscriptionCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateSubscriptionCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8344,7 +8344,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateTaskCustomFieldUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8353,7 +8353,7 @@ export class ObjectPreReleaseApi {
      * @param param the request object
      */
     public updateTaskCustomFieldUsingPATCH(param: PreReleaseApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateTaskCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateTaskCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -8513,7 +8513,7 @@ export interface ReferralApiCreateReferralUsingPOSTRequest {
      * @type CreateReferralRequest
      * @memberof ReferralApicreateReferralUsingPOST
      */
-    request: CreateReferralRequest
+    createReferralRequest: CreateReferralRequest
 }
 
 export class ObjectReferralApi {
@@ -8529,7 +8529,7 @@ export class ObjectReferralApi {
      * @param param the request object
      */
     public createReferralUsingPOSTWithHttpInfo(param: ReferralApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<Referral>> {
-        return this.api.createReferralUsingPOSTWithHttpInfo(param.request,  options).toPromise();
+        return this.api.createReferralUsingPOSTWithHttpInfo(param.createReferralRequest,  options).toPromise();
     }
 
     /**
@@ -8538,7 +8538,7 @@ export class ObjectReferralApi {
      * @param param the request object
      */
     public createReferralUsingPOST(param: ReferralApiCreateReferralUsingPOSTRequest, options?: Configuration): Promise<Referral> {
-        return this.api.createReferralUsingPOST(param.request,  options).toPromise();
+        return this.api.createReferralUsingPOST(param.createReferralRequest,  options).toPromise();
     }
 
 }
@@ -8777,7 +8777,7 @@ export interface ShippingDiscountApiCreateDiscountUsingPOST1Request {
      * @type CreateShippingDiscountRequest
      * @memberof ShippingDiscountApicreateDiscountUsingPOST1
      */
-    request: CreateShippingDiscountRequest
+    createShippingDiscountRequest: CreateShippingDiscountRequest
 }
 
 export interface ShippingDiscountApiDeleteDiscountUsingDELETE2Request {
@@ -8853,7 +8853,7 @@ export interface ShippingDiscountApiUpdateDiscountUsingPATCH1Request {
      * @type UpdateShippingDiscountRequest
      * @memberof ShippingDiscountApiupdateDiscountUsingPATCH1
      */
-    request: UpdateShippingDiscountRequest
+    updateShippingDiscountRequest: UpdateShippingDiscountRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -8876,7 +8876,7 @@ export class ObjectShippingDiscountApi {
      * @param param the request object
      */
     public createDiscountUsingPOST1WithHttpInfo(param: ShippingDiscountApiCreateDiscountUsingPOST1Request, options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        return this.api.createDiscountUsingPOST1WithHttpInfo(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOST1WithHttpInfo(param.createShippingDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -8885,7 +8885,7 @@ export class ObjectShippingDiscountApi {
      * @param param the request object
      */
     public createDiscountUsingPOST1(param: ShippingDiscountApiCreateDiscountUsingPOST1Request, options?: Configuration): Promise<ShippingDiscount> {
-        return this.api.createDiscountUsingPOST1(param.request,  options).toPromise();
+        return this.api.createDiscountUsingPOST1(param.createShippingDiscountRequest,  options).toPromise();
     }
 
     /**
@@ -8948,7 +8948,7 @@ export class ObjectShippingDiscountApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCH1WithHttpInfo(param: ShippingDiscountApiUpdateDiscountUsingPATCH1Request, options?: Configuration): Promise<HttpInfo<ShippingDiscount>> {
-        return this.api.updateDiscountUsingPATCH1WithHttpInfo(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCH1WithHttpInfo(param.discountId, param.updateShippingDiscountRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -8957,7 +8957,7 @@ export class ObjectShippingDiscountApi {
      * @param param the request object
      */
     public updateDiscountUsingPATCH1(param: ShippingDiscountApiUpdateDiscountUsingPATCH1Request, options?: Configuration): Promise<ShippingDiscount> {
-        return this.api.updateDiscountUsingPATCH1(param.discountId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateDiscountUsingPATCH1(param.discountId, param.updateShippingDiscountRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -9050,7 +9050,7 @@ export interface SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest {
      * @type CreateCustomFieldRequest
      * @memberof SubscriptionsApicreateSubscriptionCustomFieldUsingPOST
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface SubscriptionsApiCreateSubscriptionV2UsingPOSTRequest {
@@ -9111,7 +9111,7 @@ export interface SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest 
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof SubscriptionsApiupdateSubscriptionCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -9152,7 +9152,7 @@ export class ObjectSubscriptionsApi {
      * @param param the request object
      */
     public createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -9161,7 +9161,7 @@ export class ObjectSubscriptionsApi {
      * @param param the request object
      */
     public createSubscriptionCustomFieldUsingPOST(param: SubscriptionsApiCreateSubscriptionCustomFieldUsingPOSTRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.createSubscriptionCustomFieldUsingPOST(param.customField,  options).toPromise();
+        return this.api.createSubscriptionCustomFieldUsingPOST(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -9224,7 +9224,7 @@ export class ObjectSubscriptionsApi {
      * @param param the request object
      */
     public updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -9233,7 +9233,7 @@ export class ObjectSubscriptionsApi {
      * @param param the request object
      */
     public updateSubscriptionCustomFieldUsingPATCH(param: SubscriptionsApiUpdateSubscriptionCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateSubscriptionCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateSubscriptionCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -9263,7 +9263,7 @@ export interface TagsApiCreateTagCategoryUsingPOST1Request {
      * @type CreateUpdateTagCategoryRequest
      * @memberof TagsApicreateTagCategoryUsingPOST1
      */
-    request: CreateUpdateTagCategoryRequest
+    createUpdateTagCategoryRequest: CreateUpdateTagCategoryRequest
 }
 
 export interface TagsApiCreateTagUsingPOST1Request {
@@ -9272,7 +9272,7 @@ export interface TagsApiCreateTagUsingPOST1Request {
      * @type CreateUpdateTagRequest
      * @memberof TagsApicreateTagUsingPOST1
      */
-    tag: CreateUpdateTagRequest
+    createUpdateTagRequest: CreateUpdateTagRequest
 }
 
 export interface TagsApiDeleteTagCategoryUsingDELETERequest {
@@ -9481,7 +9481,7 @@ export interface TagsApiPatchTagCategoryUsingPATCHRequest {
      * @type CreateUpdateTagCategoryRequest
      * @memberof TagsApipatchTagCategoryUsingPATCH
      */
-    tagCategory?: CreateUpdateTagCategoryRequest
+    createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest
 }
 
 export interface TagsApiPatchTagUsingPATCHRequest {
@@ -9504,7 +9504,7 @@ export interface TagsApiPatchTagUsingPATCHRequest {
      * @type CreateUpdateTagRequest
      * @memberof TagsApipatchTagUsingPATCH
      */
-    tag?: CreateUpdateTagRequest
+    createUpdateTagRequest?: CreateUpdateTagRequest
 }
 
 export interface TagsApiRemoveTagsUsingPOSTRequest {
@@ -9554,7 +9554,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public createTagCategoryUsingPOST1WithHttpInfo(param: TagsApiCreateTagCategoryUsingPOST1Request, options?: Configuration): Promise<HttpInfo<Tag>> {
-        return this.api.createTagCategoryUsingPOST1WithHttpInfo(param.request,  options).toPromise();
+        return this.api.createTagCategoryUsingPOST1WithHttpInfo(param.createUpdateTagCategoryRequest,  options).toPromise();
     }
 
     /**
@@ -9563,7 +9563,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public createTagCategoryUsingPOST1(param: TagsApiCreateTagCategoryUsingPOST1Request, options?: Configuration): Promise<Tag> {
-        return this.api.createTagCategoryUsingPOST1(param.request,  options).toPromise();
+        return this.api.createTagCategoryUsingPOST1(param.createUpdateTagCategoryRequest,  options).toPromise();
     }
 
     /**
@@ -9572,7 +9572,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public createTagUsingPOST1WithHttpInfo(param: TagsApiCreateTagUsingPOST1Request, options?: Configuration): Promise<HttpInfo<Tag>> {
-        return this.api.createTagUsingPOST1WithHttpInfo(param.tag,  options).toPromise();
+        return this.api.createTagUsingPOST1WithHttpInfo(param.createUpdateTagRequest,  options).toPromise();
     }
 
     /**
@@ -9581,7 +9581,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public createTagUsingPOST1(param: TagsApiCreateTagUsingPOST1Request, options?: Configuration): Promise<Tag> {
-        return this.api.createTagUsingPOST1(param.tag,  options).toPromise();
+        return this.api.createTagUsingPOST1(param.createUpdateTagRequest,  options).toPromise();
     }
 
     /**
@@ -9734,7 +9734,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public patchTagCategoryUsingPATCHWithHttpInfo(param: TagsApiPatchTagCategoryUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
-        return this.api.patchTagCategoryUsingPATCHWithHttpInfo(param.tagCategoryId, param.updateMask, param.tagCategory,  options).toPromise();
+        return this.api.patchTagCategoryUsingPATCHWithHttpInfo(param.tagCategoryId, param.updateMask, param.createUpdateTagCategoryRequest,  options).toPromise();
     }
 
     /**
@@ -9743,7 +9743,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public patchTagCategoryUsingPATCH(param: TagsApiPatchTagCategoryUsingPATCHRequest, options?: Configuration): Promise<UpdateTagCategoryResponse> {
-        return this.api.patchTagCategoryUsingPATCH(param.tagCategoryId, param.updateMask, param.tagCategory,  options).toPromise();
+        return this.api.patchTagCategoryUsingPATCH(param.tagCategoryId, param.updateMask, param.createUpdateTagCategoryRequest,  options).toPromise();
     }
 
     /**
@@ -9752,7 +9752,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public patchTagUsingPATCHWithHttpInfo(param: TagsApiPatchTagUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
-        return this.api.patchTagUsingPATCHWithHttpInfo(param.tagId, param.updateMask, param.tag,  options).toPromise();
+        return this.api.patchTagUsingPATCHWithHttpInfo(param.tagId, param.updateMask, param.createUpdateTagRequest,  options).toPromise();
     }
 
     /**
@@ -9761,7 +9761,7 @@ export class ObjectTagsApi {
      * @param param the request object
      */
     public patchTagUsingPATCH(param: TagsApiPatchTagUsingPATCHRequest, options?: Configuration): Promise<UpdateTagResponse> {
-        return this.api.patchTagUsingPATCH(param.tagId, param.updateMask, param.tag,  options).toPromise();
+        return this.api.patchTagUsingPATCH(param.tagId, param.updateMask, param.createUpdateTagRequest,  options).toPromise();
     }
 
     /**
@@ -9793,7 +9793,7 @@ export interface TaskApiCreateTaskCustomFieldUsingPOST1Request {
      * @type CreateCustomFieldRequest
      * @memberof TaskApicreateTaskCustomFieldUsingPOST1
      */
-    customField: CreateCustomFieldRequest
+    createCustomFieldRequest: CreateCustomFieldRequest
 }
 
 export interface TaskApiCreateTaskUsingPOST1Request {
@@ -9802,7 +9802,7 @@ export interface TaskApiCreateTaskUsingPOST1Request {
      * @type CreateTaskRequest
      * @memberof TaskApicreateTaskUsingPOST1
      */
-    task?: CreateTaskRequest
+    createTaskRequest?: CreateTaskRequest
 }
 
 export interface TaskApiDeleteTaskCustomFieldUsingDELETERequest {
@@ -9902,7 +9902,7 @@ export interface TaskApiPatchTaskUsingPATCHRequest {
      * @type CreatePatchTaskRequest
      * @memberof TaskApipatchTaskUsingPATCH
      */
-    task?: CreatePatchTaskRequest
+    createPatchTaskRequest?: CreatePatchTaskRequest
 }
 
 export interface TaskApiRetrieveTaskModelUsingGET1Request {
@@ -9921,7 +9921,7 @@ export interface TaskApiUpdateTaskCustomFieldUsingPATCHRequest {
      * @type UpdateCustomFieldMetaDataRequest
      * @memberof TaskApiupdateTaskCustomFieldUsingPATCH
      */
-    request: UpdateCustomFieldMetaDataRequest
+    updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
@@ -9944,7 +9944,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public createTaskCustomFieldUsingPOST1WithHttpInfo(param: TaskApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<HttpInfo<CreateCustomFieldResponse>> {
-        return this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(param.customField,  options).toPromise();
+        return this.api.createTaskCustomFieldUsingPOST1WithHttpInfo(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -9953,7 +9953,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public createTaskCustomFieldUsingPOST1(param: TaskApiCreateTaskCustomFieldUsingPOST1Request, options?: Configuration): Promise<CreateCustomFieldResponse> {
-        return this.api.createTaskCustomFieldUsingPOST1(param.customField,  options).toPromise();
+        return this.api.createTaskCustomFieldUsingPOST1(param.createCustomFieldRequest,  options).toPromise();
     }
 
     /**
@@ -9962,7 +9962,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public createTaskUsingPOST1WithHttpInfo(param: TaskApiCreateTaskUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<Task>> {
-        return this.api.createTaskUsingPOST1WithHttpInfo(param.task,  options).toPromise();
+        return this.api.createTaskUsingPOST1WithHttpInfo(param.createTaskRequest,  options).toPromise();
     }
 
     /**
@@ -9971,7 +9971,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public createTaskUsingPOST1(param: TaskApiCreateTaskUsingPOST1Request = {}, options?: Configuration): Promise<Task> {
-        return this.api.createTaskUsingPOST1(param.task,  options).toPromise();
+        return this.api.createTaskUsingPOST1(param.createTaskRequest,  options).toPromise();
     }
 
     /**
@@ -10052,7 +10052,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public patchTaskUsingPATCHWithHttpInfo(param: TaskApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTaskResponse>> {
-        return this.api.patchTaskUsingPATCHWithHttpInfo(param.taskId, param.updateMask, param.task,  options).toPromise();
+        return this.api.patchTaskUsingPATCHWithHttpInfo(param.taskId, param.updateMask, param.createPatchTaskRequest,  options).toPromise();
     }
 
     /**
@@ -10061,7 +10061,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public patchTaskUsingPATCH(param: TaskApiPatchTaskUsingPATCHRequest, options?: Configuration): Promise<UpdateTaskResponse> {
-        return this.api.patchTaskUsingPATCH(param.taskId, param.updateMask, param.task,  options).toPromise();
+        return this.api.patchTaskUsingPATCH(param.taskId, param.updateMask, param.createPatchTaskRequest,  options).toPromise();
     }
 
     /**
@@ -10088,7 +10088,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public updateTaskCustomFieldUsingPATCHWithHttpInfo(param: TaskApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
-        return this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateTaskCustomFieldUsingPATCHWithHttpInfo(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
     /**
@@ -10097,7 +10097,7 @@ export class ObjectTaskApi {
      * @param param the request object
      */
     public updateTaskCustomFieldUsingPATCH(param: TaskApiUpdateTaskCustomFieldUsingPATCHRequest, options?: Configuration): Promise<CustomFieldMetaData> {
-        return this.api.updateTaskCustomFieldUsingPATCH(param.customFieldId, param.request, param.updateMask,  options).toPromise();
+        return this.api.updateTaskCustomFieldUsingPATCH(param.customFieldId, param.updateCustomFieldMetaDataRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -10111,7 +10111,7 @@ export interface UsersApiCreateUserUsingPOST1Request {
      * @type CreateUserRequestV2
      * @memberof UsersApicreateUserUsingPOST1
      */
-    user?: CreateUserRequestV2
+    createUserRequestV2?: CreateUserRequestV2
 }
 
 export interface UsersApiGetUserByIdUsingGETRequest {
@@ -10174,7 +10174,7 @@ export interface UsersApiPatchUserUsingPATCHRequest {
      * @type PatchUserRequestV2
      * @memberof UsersApipatchUserUsingPATCH
      */
-    user?: PatchUserRequestV2
+    patchUserRequestV2?: PatchUserRequestV2
 }
 
 export class ObjectUsersApi {
@@ -10190,7 +10190,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public createUserUsingPOST1WithHttpInfo(param: UsersApiCreateUserUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<User>> {
-        return this.api.createUserUsingPOST1WithHttpInfo(param.user,  options).toPromise();
+        return this.api.createUserUsingPOST1WithHttpInfo(param.createUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -10199,7 +10199,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public createUserUsingPOST1(param: UsersApiCreateUserUsingPOST1Request = {}, options?: Configuration): Promise<User> {
-        return this.api.createUserUsingPOST1(param.user,  options).toPromise();
+        return this.api.createUserUsingPOST1(param.createUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -10280,7 +10280,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public patchUserUsingPATCHWithHttpInfo(param: UsersApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<User>> {
-        return this.api.patchUserUsingPATCHWithHttpInfo(param.userId, param.updateMask, param.user,  options).toPromise();
+        return this.api.patchUserUsingPATCHWithHttpInfo(param.userId, param.updateMask, param.patchUserRequestV2,  options).toPromise();
     }
 
     /**
@@ -10289,7 +10289,7 @@ export class ObjectUsersApi {
      * @param param the request object
      */
     public patchUserUsingPATCH(param: UsersApiPatchUserUsingPATCHRequest, options?: Configuration): Promise<User> {
-        return this.api.patchUserUsingPATCH(param.userId, param.updateMask, param.user,  options).toPromise();
+        return this.api.patchUserUsingPATCH(param.userId, param.updateMask, param.patchUserRequestV2,  options).toPromise();
     }
 
 }

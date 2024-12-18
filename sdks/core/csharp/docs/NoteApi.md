@@ -16,7 +16,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createnotecustomfieldusingpost1"></a>
 # **CreateNoteCustomFieldUsingPOST1**
-> CustomFieldMetaData CreateNoteCustomFieldUsingPOST1 (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateNoteCustomFieldUsingPOST1 (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -39,12 +39,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new NoteApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create a Custom Field
-                CustomFieldMetaData result = apiInstance.CreateNoteCustomFieldUsingPOST1(customField);
+                CustomFieldMetaData result = apiInstance.CreateNoteCustomFieldUsingPOST1(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -65,7 +65,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateNoteCustomFieldUsingPOST1WithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -82,7 +82,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -109,7 +109,7 @@ No authorization required
 
 <a id="createnoteusingpost1"></a>
 # **CreateNoteUsingPOST1**
-> Note CreateNoteUsingPOST1 (string contactId, CreateNoteRequest request)
+> Note CreateNoteUsingPOST1 (string contactId, CreateNoteRequest createNoteRequest)
 
 Create a Note
 
@@ -133,12 +133,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new NoteApi(config);
             var contactId = "contactId_example";  // string | contact_id
-            var request = new CreateNoteRequest(); // CreateNoteRequest | request
+            var createNoteRequest = new CreateNoteRequest(); // CreateNoteRequest | request
 
             try
             {
                 // Create a Note
-                Note result = apiInstance.CreateNoteUsingPOST1(contactId, request);
+                Note result = apiInstance.CreateNoteUsingPOST1(contactId, createNoteRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Note
-    ApiResponse<Note> response = apiInstance.CreateNoteUsingPOST1WithHttpInfo(contactId, request);
+    ApiResponse<Note> response = apiInstance.CreateNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -177,7 +177,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **contactId** | **string** | contact_id |  |
-| **request** | [**CreateNoteRequest**](CreateNoteRequest.md) | request |  |
+| **createNoteRequest** | [**CreateNoteRequest**](CreateNoteRequest.md) | request |  |
 
 ### Return type
 
@@ -783,7 +783,7 @@ No authorization required
 
 <a id="updatenotescustomfieldusingpatch"></a>
 # **UpdateNotesCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Custom Field
 
@@ -807,13 +807,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new NoteApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateNotesCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -834,7 +834,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -852,7 +852,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type

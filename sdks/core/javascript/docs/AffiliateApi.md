@@ -97,7 +97,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let opts = {
-  'insertAffiliate': new KeapCoreServiceCoreSdk.CreateAffiliateRequest() // CreateAffiliateRequest | Affiliate request to insert
+  'createAffiliateRequest': new KeapCoreServiceCoreSdk.CreateAffiliateRequest() // CreateAffiliateRequest | Affiliate request to insert
 };
 apiInstance.addAffiliateUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -112,7 +112,7 @@ apiInstance.addAffiliateUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insertAffiliate** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] 
+ **createAffiliateRequest** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] 
 
 ### Return type
 
@@ -143,7 +143,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let opts = {
-  'insertCommissionProgram': new KeapCoreServiceCoreSdk.CreateCommissionProgramRequest() // CreateCommissionProgramRequest | Commission Program to insert
+  'createCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateCommissionProgramRequest() // CreateCommissionProgramRequest | Commission Program to insert
 };
 apiInstance.addCommissionProgramUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -158,7 +158,7 @@ apiInstance.addCommissionProgramUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insertCommissionProgram** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
+ **createCommissionProgramRequest** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'productCommissionProgram': new KeapCoreServiceCoreSdk.CreateProductCommissionProgramRequest() // CreateProductCommissionProgramRequest | Product Commission Program
+  'createProductCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateProductCommissionProgramRequest() // CreateProductCommissionProgramRequest | Product Commission Program
 };
 apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -206,7 +206,7 @@ apiInstance.assignProductCommissionProgramUsingPOST(commissionProgramId, opts).t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commissionProgramId** | **String**| commission_program_id | 
- **productCommissionProgram** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
+ **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
 
 ### Return type
 
@@ -238,7 +238,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
 let opts = {
-  'subscriptionCommissionProgram': new KeapCoreServiceCoreSdk.CreateSubscriptionCommissionProgramRequest() // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+  'createSubscriptionCommissionProgramRequest': new KeapCoreServiceCoreSdk.CreateSubscriptionCommissionProgramRequest() // CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
 };
 apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -254,7 +254,7 @@ apiInstance.assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, op
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commissionProgramId** | **String**| commission_program_id | 
- **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
+ **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
 
 ### Return type
 
@@ -272,7 +272,7 @@ No authorization required
 
 ## createAffiliateCustomFieldUsingPOST
 
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -284,8 +284,8 @@ Creates a single Affiliate Custom Field
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createAffiliateCustomFieldUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createAffiliateCustomFieldUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -298,7 +298,7 @@ apiInstance.createAffiliateCustomFieldUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -364,7 +364,7 @@ No authorization required
 
 ## createRedirectLinkUsingPOST
 
-> AffiliateLink createRedirectLinkUsingPOST(request)
+> AffiliateLink createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -376,8 +376,8 @@ Creates a single Affiliate Link
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
-let request = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
-apiInstance.createRedirectLinkUsingPOST(request).then((data) => {
+let createOrPatchAffiliateLinkRequest = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+apiInstance.createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -390,7 +390,7 @@ apiInstance.createRedirectLinkUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 
@@ -1166,7 +1166,7 @@ No authorization required
 
 ## removeAffiliateFromProgramUsingPOST
 
-> removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest)
+> removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -1179,8 +1179,8 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let id = "id_example"; // String | id
-let removeFromProgramRequest = new KeapCoreServiceCoreSdk.AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
-apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest).then(() => {
+let affiliateRemoveFromProgramRequest = new KeapCoreServiceCoreSdk.AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+apiInstance.removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1194,7 +1194,7 @@ apiInstance.removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest).th
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id | 
- **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
+ **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
 
 ### Return type
 
@@ -1258,7 +1258,7 @@ No authorization required
 
 ## updateAffiliateCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Custom Field
 
@@ -1271,11 +1271,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1289,7 +1289,7 @@ apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts).t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -1322,7 +1322,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let id = "id_example"; // String | id
 let opts = {
-  'patchAffiliate': new KeapCoreServiceCoreSdk.PatchAffiliateRequest() // PatchAffiliateRequest | Affiliate request to patch
+  'patchAffiliateRequest': new KeapCoreServiceCoreSdk.PatchAffiliateRequest() // PatchAffiliateRequest | Affiliate request to patch
 };
 apiInstance.updateAffiliateUsingPATCH(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -1338,7 +1338,7 @@ apiInstance.updateAffiliateUsingPATCH(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id | 
- **patchAffiliate** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] 
+ **patchAffiliateRequest** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] 
 
 ### Return type
 
@@ -1356,7 +1356,7 @@ No authorization required
 
 ## updateRedirectLinkUsingPATCH
 
-> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, request)
+> AffiliateLink updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -1369,8 +1369,8 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.AffiliateApi();
 let redirectId = "redirectId_example"; // String | redirect_id
-let request = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
-apiInstance.updateRedirectLinkUsingPATCH(redirectId, request).then((data) => {
+let createOrPatchAffiliateLinkRequest = new KeapCoreServiceCoreSdk.CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+apiInstance.updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1384,7 +1384,7 @@ apiInstance.updateRedirectLinkUsingPATCH(redirectId, request).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **redirectId** | **String**| redirect_id | 
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 

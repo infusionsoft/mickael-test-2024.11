@@ -106,24 +106,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Opportunity Custom Field
    * Adds a custom field of the specified type and options to the Opportunity object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(CreateCustomFieldRequest customField) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
+  public CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Opportunity Custom Field
    * Adds a custom field of the specified type and options to the Opportunity object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createOpportunityCustomFieldsUsingPOSTRequestBuilder(customField);
+  public ApiResponse<CustomFieldMetaData> createOpportunityCustomFieldsUsingPOSTWithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createOpportunityCustomFieldsUsingPOSTRequestBuilder(createCustomFieldRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -163,10 +163,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createOpportunityCustomFieldsUsingPOSTRequestBuilder(CreateCustomFieldRequest customField) throws ApiException {
-    // verify the required parameter 'customField' is set
-    if (customField == null) {
-      throw new ApiException(400, "Missing the required parameter 'customField' when calling createOpportunityCustomFieldsUsingPOST");
+  private HttpRequest.Builder createOpportunityCustomFieldsUsingPOSTRequestBuilder(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    // verify the required parameter 'createCustomFieldRequest' is set
+    if (createCustomFieldRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createCustomFieldRequest' when calling createOpportunityCustomFieldsUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -180,7 +180,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(customField);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createCustomFieldRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -197,24 +197,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Opportunity Stage
    * Creates a new Opportunity Stage
-   * @param opportunityStage opportunity (optional)
+   * @param createOpportunityStageRequest opportunity (optional)
    * @return RestOpportunityStage
    * @throws ApiException if fails to make API call
    */
-  public RestOpportunityStage createOpportunityStageUsingPOST(CreateOpportunityStageRequest opportunityStage) throws ApiException {
-    ApiResponse<RestOpportunityStage> localVarResponse = createOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
+  public RestOpportunityStage createOpportunityStageUsingPOST(CreateOpportunityStageRequest createOpportunityStageRequest) throws ApiException {
+    ApiResponse<RestOpportunityStage> localVarResponse = createOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Opportunity Stage
    * Creates a new Opportunity Stage
-   * @param opportunityStage opportunity (optional)
+   * @param createOpportunityStageRequest opportunity (optional)
    * @return ApiResponse&lt;RestOpportunityStage&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOSTWithHttpInfo(CreateOpportunityStageRequest opportunityStage) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createOpportunityStageUsingPOSTRequestBuilder(opportunityStage);
+  public ApiResponse<RestOpportunityStage> createOpportunityStageUsingPOSTWithHttpInfo(CreateOpportunityStageRequest createOpportunityStageRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createOpportunityStageUsingPOSTRequestBuilder(createOpportunityStageRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -254,7 +254,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createOpportunityStageUsingPOSTRequestBuilder(CreateOpportunityStageRequest opportunityStage) throws ApiException {
+  private HttpRequest.Builder createOpportunityStageUsingPOSTRequestBuilder(CreateOpportunityStageRequest createOpportunityStageRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -267,7 +267,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(opportunityStage);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createOpportunityStageRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -284,24 +284,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Opportunity
    * Creates a new opportunity as the authenticated user.
-   * @param opportunity opportunity (optional)
+   * @param createOpportunityRequest opportunity (optional)
    * @return RestV2Opportunity
    * @throws ApiException if fails to make API call
    */
-  public RestV2Opportunity createOpportunityUsingPOST1(CreateOpportunityRequest opportunity) throws ApiException {
-    ApiResponse<RestV2Opportunity> localVarResponse = createOpportunityUsingPOST1WithHttpInfo(opportunity);
+  public RestV2Opportunity createOpportunityUsingPOST1(CreateOpportunityRequest createOpportunityRequest) throws ApiException {
+    ApiResponse<RestV2Opportunity> localVarResponse = createOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Opportunity
    * Creates a new opportunity as the authenticated user.
-   * @param opportunity opportunity (optional)
+   * @param createOpportunityRequest opportunity (optional)
    * @return ApiResponse&lt;RestV2Opportunity&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1WithHttpInfo(CreateOpportunityRequest opportunity) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createOpportunityUsingPOST1RequestBuilder(opportunity);
+  public ApiResponse<RestV2Opportunity> createOpportunityUsingPOST1WithHttpInfo(CreateOpportunityRequest createOpportunityRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createOpportunityUsingPOST1RequestBuilder(createOpportunityRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -341,7 +341,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createOpportunityUsingPOST1RequestBuilder(CreateOpportunityRequest opportunity) throws ApiException {
+  private HttpRequest.Builder createOpportunityUsingPOST1RequestBuilder(CreateOpportunityRequest createOpportunityRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -354,7 +354,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(opportunity);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createOpportunityRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -942,13 +942,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Opportunity&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Opportunity object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+  public CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -956,13 +956,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Opportunity&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Opportunity object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateOpportunityCustomFieldUsingPATCHRequestBuilder(customFieldId, request, updateMask);
+  public ApiResponse<CustomFieldMetaData> updateOpportunityCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateOpportunityCustomFieldUsingPATCHRequestBuilder(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1002,14 +1002,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateOpportunityCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateOpportunityCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
       throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling updateOpportunityCustomFieldUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateOpportunityCustomFieldUsingPATCH");
+    // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+    if (updateCustomFieldMetaDataRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateOpportunityCustomFieldUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -1039,7 +1039,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateCustomFieldMetaDataRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -1057,13 +1057,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an Opportunity Stage
    * Updates specified values of a given Opportunity Stage
    * @param stageId stage_id (required)
-   * @param request request (required)
+   * @param updateOpportunityStageRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return RestOpportunityStage
    * @throws ApiException if fails to make API call
    */
-  public RestOpportunityStage updateOpportunityStageUsingPATCH(String stageId, UpdateOpportunityStageRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<RestOpportunityStage> localVarResponse = updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+  public RestOpportunityStage updateOpportunityStageUsingPATCH(String stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<RestOpportunityStage> localVarResponse = updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -1071,13 +1071,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an Opportunity Stage
    * Updates specified values of a given Opportunity Stage
    * @param stageId stage_id (required)
-   * @param request request (required)
+   * @param updateOpportunityStageRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;RestOpportunityStage&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCHWithHttpInfo(String stageId, UpdateOpportunityStageRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateOpportunityStageUsingPATCHRequestBuilder(stageId, request, updateMask);
+  public ApiResponse<RestOpportunityStage> updateOpportunityStageUsingPATCHWithHttpInfo(String stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateOpportunityStageUsingPATCHRequestBuilder(stageId, updateOpportunityStageRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1117,14 +1117,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateOpportunityStageUsingPATCHRequestBuilder(String stageId, UpdateOpportunityStageRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateOpportunityStageUsingPATCHRequestBuilder(String stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'stageId' is set
     if (stageId == null) {
       throw new ApiException(400, "Missing the required parameter 'stageId' when calling updateOpportunityStageUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateOpportunityStageUsingPATCH");
+    // verify the required parameter 'updateOpportunityStageRequest' is set
+    if (updateOpportunityStageRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateOpportunityStageRequest' when calling updateOpportunityStageUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -1154,7 +1154,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateOpportunityStageRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -1172,13 +1172,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an opportunity
    * Updates specified values of a given opportunity
    * @param opportunityId opportunity_id (required)
-   * @param request request (required)
+   * @param patchOpportunityRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return RestV2Opportunity
    * @throws ApiException if fails to make API call
    */
-  public RestV2Opportunity updateOpportunityUsingPATCH(String opportunityId, PatchOpportunityRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<RestV2Opportunity> localVarResponse = updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
+  public RestV2Opportunity updateOpportunityUsingPATCH(String opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<RestV2Opportunity> localVarResponse = updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -1186,13 +1186,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an opportunity
    * Updates specified values of a given opportunity
    * @param opportunityId opportunity_id (required)
-   * @param request request (required)
+   * @param patchOpportunityRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;RestV2Opportunity&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCHWithHttpInfo(String opportunityId, PatchOpportunityRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateOpportunityUsingPATCHRequestBuilder(opportunityId, request, updateMask);
+  public ApiResponse<RestV2Opportunity> updateOpportunityUsingPATCHWithHttpInfo(String opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateOpportunityUsingPATCHRequestBuilder(opportunityId, patchOpportunityRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1232,14 +1232,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateOpportunityUsingPATCHRequestBuilder(String opportunityId, PatchOpportunityRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateOpportunityUsingPATCHRequestBuilder(String opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'opportunityId' is set
     if (opportunityId == null) {
       throw new ApiException(400, "Missing the required parameter 'opportunityId' when calling updateOpportunityUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateOpportunityUsingPATCH");
+    // verify the required parameter 'patchOpportunityRequest' is set
+    if (patchOpportunityRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'patchOpportunityRequest' when calling updateOpportunityUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -1269,7 +1269,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(patchOpportunityRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

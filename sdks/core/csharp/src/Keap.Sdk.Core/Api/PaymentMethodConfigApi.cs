@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates configuration details for rendering payment method components
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentMethodConfig</returns>
-        PaymentMethodConfig CreatePaymentMethodConfigUsingPOST(CreatePaymentMethodConfigRequest request, int operationIndex = 0);
+        PaymentMethodConfig CreatePaymentMethodConfigUsingPOST(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Payment Method Configuration
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates configuration details for rendering payment method components
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentMethodConfig</returns>
-        ApiResponse<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTWithHttpInfo(CreatePaymentMethodConfigRequest request, int operationIndex = 0);
+        ApiResponse<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTWithHttpInfo(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -67,11 +67,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates configuration details for rendering payment method components
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentMethodConfig</returns>
-        System.Threading.Tasks.Task<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTAsync(CreatePaymentMethodConfigRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTAsync(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Payment Method Configuration
@@ -80,11 +80,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates configuration details for rendering payment method components
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentMethodConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentMethodConfig>> CreatePaymentMethodConfigUsingPOSTWithHttpInfoAsync(CreatePaymentMethodConfigRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentMethodConfig>> CreatePaymentMethodConfigUsingPOSTWithHttpInfoAsync(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -209,12 +209,12 @@ namespace Keap.Sdk.Core.Api
         /// Create Payment Method Configuration Creates configuration details for rendering payment method components
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentMethodConfig</returns>
-        public PaymentMethodConfig CreatePaymentMethodConfigUsingPOST(CreatePaymentMethodConfigRequest request, int operationIndex = 0)
+        public PaymentMethodConfig CreatePaymentMethodConfigUsingPOST(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig> localVarResponse = CreatePaymentMethodConfigUsingPOSTWithHttpInfo(request);
+            Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig> localVarResponse = CreatePaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest);
             return localVarResponse.Data;
         }
 
@@ -222,15 +222,15 @@ namespace Keap.Sdk.Core.Api
         /// Create Payment Method Configuration Creates configuration details for rendering payment method components
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentMethodConfig</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTWithHttpInfo(CreatePaymentMethodConfigRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTWithHttpInfo(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createPaymentMethodConfigRequest' is set
+            if (createPaymentMethodConfigRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling PaymentMethodConfigApi->CreatePaymentMethodConfigUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createPaymentMethodConfigRequest' when calling PaymentMethodConfigApi->CreatePaymentMethodConfigUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -256,7 +256,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createPaymentMethodConfigRequest;
 
             localVarRequestOptions.Operation = "PaymentMethodConfigApi.CreatePaymentMethodConfigUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -280,13 +280,13 @@ namespace Keap.Sdk.Core.Api
         /// Create Payment Method Configuration Creates configuration details for rendering payment method components
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentMethodConfig</returns>
-        public async System.Threading.Tasks.Task<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTAsync(CreatePaymentMethodConfigRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentMethodConfig> CreatePaymentMethodConfigUsingPOSTAsync(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig> localVarResponse = await CreatePaymentMethodConfigUsingPOSTWithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig> localVarResponse = await CreatePaymentMethodConfigUsingPOSTWithHttpInfoAsync(createPaymentMethodConfigRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -294,16 +294,16 @@ namespace Keap.Sdk.Core.Api
         /// Create Payment Method Configuration Creates configuration details for rendering payment method components
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createPaymentMethodConfigRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentMethodConfig)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig>> CreatePaymentMethodConfigUsingPOSTWithHttpInfoAsync(CreatePaymentMethodConfigRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<PaymentMethodConfig>> CreatePaymentMethodConfigUsingPOSTWithHttpInfoAsync(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createPaymentMethodConfigRequest' is set
+            if (createPaymentMethodConfigRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling PaymentMethodConfigApi->CreatePaymentMethodConfigUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createPaymentMethodConfigRequest' when calling PaymentMethodConfigApi->CreatePaymentMethodConfigUsingPOST");
             }
 
 
@@ -330,7 +330,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createPaymentMethodConfigRequest;
 
             localVarRequestOptions.Operation = "PaymentMethodConfigApi.CreatePaymentMethodConfigUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;

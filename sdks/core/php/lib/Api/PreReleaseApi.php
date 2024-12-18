@@ -688,16 +688,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function addCommissionProgramUsingPOST($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOST($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
-        list($response) = $this->addCommissionProgramUsingPOSTWithHttpInfo($insert_commission_program, $contentType);
+        list($response) = $this->addCommissionProgramUsingPOSTWithHttpInfo($create_commission_program_request, $contentType);
         return $response;
     }
 
@@ -706,16 +706,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addCommissionProgramUsingPOSTWithHttpInfo($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTWithHttpInfo($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
-        $request = $this->addCommissionProgramUsingPOSTRequest($insert_commission_program, $contentType);
+        $request = $this->addCommissionProgramUsingPOSTRequest($create_commission_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -901,15 +901,15 @@ class PreReleaseApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addCommissionProgramUsingPOSTAsync($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTAsync($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
-        return $this->addCommissionProgramUsingPOSTAsyncWithHttpInfo($insert_commission_program, $contentType)
+        return $this->addCommissionProgramUsingPOSTAsyncWithHttpInfo($create_commission_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -922,16 +922,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addCommissionProgramUsingPOSTAsyncWithHttpInfo($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTAsyncWithHttpInfo($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse';
-        $request = $this->addCommissionProgramUsingPOSTRequest($insert_commission_program, $contentType);
+        $request = $this->addCommissionProgramUsingPOSTRequest($create_commission_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -972,13 +972,13 @@ class PreReleaseApi
     /**
      * Create request for operation 'addCommissionProgramUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addCommissionProgramUsingPOSTRequest($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTRequest($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
 
 
@@ -1001,12 +1001,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($insert_commission_program)) {
+        if (isset($create_commission_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($insert_commission_program));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_commission_program_request));
             } else {
-                $httpBody = $insert_commission_program;
+                $httpBody = $create_commission_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1060,16 +1060,16 @@ class PreReleaseApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\ProductCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function assignProductCommissionProgramUsingPOST($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOST($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
-        list($response) = $this->assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $product_commission_program, $contentType);
+        list($response) = $this->assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_product_commission_program_request, $contentType);
         return $response;
     }
 
@@ -1079,16 +1079,16 @@ class PreReleaseApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\ProductCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
-        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $product_commission_program, $contentType);
+        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $create_product_commission_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1275,15 +1275,15 @@ class PreReleaseApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignProductCommissionProgramUsingPOSTAsync($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTAsync($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
-        return $this->assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $product_commission_program, $contentType)
+        return $this->assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_product_commission_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1297,16 +1297,16 @@ class PreReleaseApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\ProductCommissionProgram';
-        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $product_commission_program, $contentType);
+        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $create_product_commission_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1348,13 +1348,13 @@ class PreReleaseApi
      * Create request for operation 'assignProductCommissionProgramUsingPOST'
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
 
         // verify the required parameter 'commission_program_id' is set
@@ -1392,12 +1392,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($product_commission_program)) {
+        if (isset($create_product_commission_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($product_commission_program));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_product_commission_program_request));
             } else {
-                $httpBody = $product_commission_program;
+                $httpBody = $create_product_commission_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1451,16 +1451,16 @@ class PreReleaseApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
-        list($response) = $this->assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $subscription_commission_program, $contentType);
+        list($response) = $this->assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_subscription_commission_program_request, $contentType);
         return $response;
     }
 
@@ -1470,16 +1470,16 @@ class PreReleaseApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
-        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $subscription_commission_program, $contentType);
+        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $create_subscription_commission_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1666,15 +1666,15 @@ class PreReleaseApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTAsync($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTAsync($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
-        return $this->assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $subscription_commission_program, $contentType)
+        return $this->assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_subscription_commission_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1688,16 +1688,16 @@ class PreReleaseApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram';
-        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $subscription_commission_program, $contentType);
+        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $create_subscription_commission_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1739,13 +1739,13 @@ class PreReleaseApi
      * Create request for operation 'assignSubscriptionCommissionProgramUsingPOST'
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
 
         // verify the required parameter 'commission_program_id' is set
@@ -1783,12 +1783,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($subscription_commission_program)) {
+        if (isset($create_subscription_commission_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($subscription_commission_program));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_subscription_commission_program_request));
             } else {
-                $httpBody = $subscription_commission_program;
+                $httpBody = $create_subscription_commission_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2093,16 +2093,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createAffiliateCustomFieldUsingPOST($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
-        list($response) = $this->createAffiliateCustomFieldUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createAffiliateCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -2111,16 +2111,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAffiliateCustomFieldUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
-        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2306,15 +2306,15 @@ class PreReleaseApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAffiliateCustomFieldUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
-        return $this->createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2327,16 +2327,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2377,19 +2377,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createAffiliateCustomFieldUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAffiliateCustomFieldUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createAffiliateCustomFieldUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createAffiliateCustomFieldUsingPOST'
             );
         }
 
@@ -2412,12 +2412,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2861,16 +2861,16 @@ class PreReleaseApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createDiscountUsingPOST($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOST($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
-        list($response) = $this->createDiscountUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createDiscountUsingPOSTWithHttpInfo($create_update_discount_request, $contentType);
         return $response;
     }
 
@@ -2879,16 +2879,16 @@ class PreReleaseApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDiscountUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTWithHttpInfo($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
-        $request = $this->createDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createDiscountUsingPOSTRequest($create_update_discount_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3074,15 +3074,15 @@ class PreReleaseApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDiscountUsingPOSTAsync($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTAsync($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
-        return $this->createDiscountUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createDiscountUsingPOSTAsyncWithHttpInfo($create_update_discount_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3095,16 +3095,16 @@ class PreReleaseApi
      *
      * Create a Category Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDiscountUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTAsyncWithHttpInfo($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CategoryDiscount';
-        $request = $this->createDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createDiscountUsingPOSTRequest($create_update_discount_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3145,19 +3145,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createDiscountUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDiscountUsingPOSTRequest($request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
+    public function createDiscountUsingPOSTRequest($create_update_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_update_discount_request' is set
+        if ($create_update_discount_request === null || (is_array($create_update_discount_request) && count($create_update_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createDiscountUsingPOST'
+                'Missing the required parameter $create_update_discount_request when calling createDiscountUsingPOST'
             );
         }
 
@@ -3180,12 +3180,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_update_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_update_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3238,16 +3238,16 @@ class PreReleaseApi
      *
      * Create a Shipping Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $create_shipping_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\ShippingDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createDiscountUsingPOST1($request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
+    public function createDiscountUsingPOST1($create_shipping_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
     {
-        list($response) = $this->createDiscountUsingPOST1WithHttpInfo($request, $contentType);
+        list($response) = $this->createDiscountUsingPOST1WithHttpInfo($create_shipping_discount_request, $contentType);
         return $response;
     }
 
@@ -3256,16 +3256,16 @@ class PreReleaseApi
      *
      * Create a Shipping Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $create_shipping_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\ShippingDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDiscountUsingPOST1WithHttpInfo($request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
+    public function createDiscountUsingPOST1WithHttpInfo($create_shipping_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
     {
-        $request = $this->createDiscountUsingPOST1Request($request, $contentType);
+        $request = $this->createDiscountUsingPOST1Request($create_shipping_discount_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3451,15 +3451,15 @@ class PreReleaseApi
      *
      * Create a Shipping Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $create_shipping_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDiscountUsingPOST1Async($request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
+    public function createDiscountUsingPOST1Async($create_shipping_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
     {
-        return $this->createDiscountUsingPOST1AsyncWithHttpInfo($request, $contentType)
+        return $this->createDiscountUsingPOST1AsyncWithHttpInfo($create_shipping_discount_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3472,16 +3472,16 @@ class PreReleaseApi
      *
      * Create a Shipping Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $create_shipping_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDiscountUsingPOST1AsyncWithHttpInfo($request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
+    public function createDiscountUsingPOST1AsyncWithHttpInfo($create_shipping_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\ShippingDiscount';
-        $request = $this->createDiscountUsingPOST1Request($request, $contentType);
+        $request = $this->createDiscountUsingPOST1Request($create_shipping_discount_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3522,19 +3522,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createDiscountUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest $create_shipping_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDiscountUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDiscountUsingPOST1Request($request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
+    public function createDiscountUsingPOST1Request($create_shipping_discount_request, string $contentType = self::contentTypes['createDiscountUsingPOST1'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_shipping_discount_request' is set
+        if ($create_shipping_discount_request === null || (is_array($create_shipping_discount_request) && count($create_shipping_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createDiscountUsingPOST1'
+                'Missing the required parameter $create_shipping_discount_request when calling createDiscountUsingPOST1'
             );
         }
 
@@ -3557,12 +3557,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_shipping_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_shipping_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_shipping_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4224,16 +4224,16 @@ class PreReleaseApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\LeadSource|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createLeadSourceUsingPOST($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOST($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
-        list($response) = $this->createLeadSourceUsingPOSTWithHttpInfo($leadsource, $contentType);
+        list($response) = $this->createLeadSourceUsingPOSTWithHttpInfo($create_lead_source_request, $contentType);
         return $response;
     }
 
@@ -4242,16 +4242,16 @@ class PreReleaseApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\LeadSource|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createLeadSourceUsingPOSTWithHttpInfo($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTWithHttpInfo($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
-        $request = $this->createLeadSourceUsingPOSTRequest($leadsource, $contentType);
+        $request = $this->createLeadSourceUsingPOSTRequest($create_lead_source_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4437,15 +4437,15 @@ class PreReleaseApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLeadSourceUsingPOSTAsync($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTAsync($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
-        return $this->createLeadSourceUsingPOSTAsyncWithHttpInfo($leadsource, $contentType)
+        return $this->createLeadSourceUsingPOSTAsyncWithHttpInfo($create_lead_source_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4458,16 +4458,16 @@ class PreReleaseApi
      *
      * Create a Lead Source
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLeadSourceUsingPOSTAsyncWithHttpInfo($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTAsyncWithHttpInfo($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\LeadSource';
-        $request = $this->createLeadSourceUsingPOSTRequest($leadsource, $contentType);
+        $request = $this->createLeadSourceUsingPOSTRequest($create_lead_source_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4508,13 +4508,13 @@ class PreReleaseApi
     /**
      * Create request for operation 'createLeadSourceUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $leadsource leadsource (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest $create_lead_source_request leadsource (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createLeadSourceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createLeadSourceUsingPOSTRequest($leadsource = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
+    public function createLeadSourceUsingPOSTRequest($create_lead_source_request = null, string $contentType = self::contentTypes['createLeadSourceUsingPOST'][0])
     {
 
 
@@ -4537,12 +4537,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($leadsource)) {
+        if (isset($create_lead_source_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($leadsource));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_lead_source_request));
             } else {
-                $httpBody = $leadsource;
+                $httpBody = $create_lead_source_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4595,16 +4595,16 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createNoteCustomFieldUsingPOST1($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
-        list($response) = $this->createNoteCustomFieldUsingPOST1WithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createNoteCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -4613,16 +4613,16 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNoteCustomFieldUsingPOST1WithHttpInfo($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
-        $request = $this->createNoteCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createNoteCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4808,15 +4808,15 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNoteCustomFieldUsingPOST1Async($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1Async($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
-        return $this->createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4829,16 +4829,16 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createNoteCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createNoteCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4879,19 +4879,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createNoteCustomFieldUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createNoteCustomFieldUsingPOST1Request($custom_field, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
+    public function createNoteCustomFieldUsingPOST1Request($create_custom_field_request, string $contentType = self::contentTypes['createNoteCustomFieldUsingPOST1'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createNoteCustomFieldUsingPOST1'
+                'Missing the required parameter $create_custom_field_request when calling createNoteCustomFieldUsingPOST1'
             );
         }
 
@@ -4914,12 +4914,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4972,16 +4972,16 @@ class PreReleaseApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOpportunityCustomFieldsUsingPOST($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
-        list($response) = $this->createOpportunityCustomFieldsUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createOpportunityCustomFieldsUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -4990,16 +4990,16 @@ class PreReleaseApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOpportunityCustomFieldsUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
-        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5185,15 +5185,15 @@ class PreReleaseApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityCustomFieldsUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
-        return $this->createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5206,16 +5206,16 @@ class PreReleaseApi
      *
      * Create an Opportunity Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOpportunityCustomFieldsUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5256,19 +5256,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createOpportunityCustomFieldsUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityCustomFieldsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOpportunityCustomFieldsUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
+    public function createOpportunityCustomFieldsUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createOpportunityCustomFieldsUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createOpportunityCustomFieldsUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createOpportunityCustomFieldsUsingPOST'
             );
         }
 
@@ -5291,12 +5291,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -5349,16 +5349,16 @@ class PreReleaseApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOpportunityStageUsingPOST($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOST($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
-        list($response) = $this->createOpportunityStageUsingPOSTWithHttpInfo($opportunity_stage, $contentType);
+        list($response) = $this->createOpportunityStageUsingPOSTWithHttpInfo($create_opportunity_stage_request, $contentType);
         return $response;
     }
 
@@ -5367,16 +5367,16 @@ class PreReleaseApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOpportunityStageUsingPOSTWithHttpInfo($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTWithHttpInfo($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
-        $request = $this->createOpportunityStageUsingPOSTRequest($opportunity_stage, $contentType);
+        $request = $this->createOpportunityStageUsingPOSTRequest($create_opportunity_stage_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5562,15 +5562,15 @@ class PreReleaseApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityStageUsingPOSTAsync($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTAsync($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
-        return $this->createOpportunityStageUsingPOSTAsyncWithHttpInfo($opportunity_stage, $contentType)
+        return $this->createOpportunityStageUsingPOSTAsyncWithHttpInfo($create_opportunity_stage_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5583,16 +5583,16 @@ class PreReleaseApi
      *
      * Create an Opportunity Stage
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityStageUsingPOSTAsyncWithHttpInfo($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTAsyncWithHttpInfo($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestOpportunityStage';
-        $request = $this->createOpportunityStageUsingPOSTRequest($opportunity_stage, $contentType);
+        $request = $this->createOpportunityStageUsingPOSTRequest($create_opportunity_stage_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5633,13 +5633,13 @@ class PreReleaseApi
     /**
      * Create request for operation 'createOpportunityStageUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $opportunity_stage opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest $create_opportunity_stage_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityStageUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOpportunityStageUsingPOSTRequest($opportunity_stage = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
+    public function createOpportunityStageUsingPOSTRequest($create_opportunity_stage_request = null, string $contentType = self::contentTypes['createOpportunityStageUsingPOST'][0])
     {
 
 
@@ -5662,12 +5662,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($opportunity_stage)) {
+        if (isset($create_opportunity_stage_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opportunity_stage));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_opportunity_stage_request));
             } else {
-                $httpBody = $opportunity_stage;
+                $httpBody = $create_opportunity_stage_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -5720,16 +5720,16 @@ class PreReleaseApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOpportunityUsingPOST1($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
-        list($response) = $this->createOpportunityUsingPOST1WithHttpInfo($opportunity, $contentType);
+        list($response) = $this->createOpportunityUsingPOST1WithHttpInfo($create_opportunity_request, $contentType);
         return $response;
     }
 
@@ -5738,16 +5738,16 @@ class PreReleaseApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOpportunityUsingPOST1WithHttpInfo($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1WithHttpInfo($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
-        $request = $this->createOpportunityUsingPOST1Request($opportunity, $contentType);
+        $request = $this->createOpportunityUsingPOST1Request($create_opportunity_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5933,15 +5933,15 @@ class PreReleaseApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityUsingPOST1Async($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1Async($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
-        return $this->createOpportunityUsingPOST1AsyncWithHttpInfo($opportunity, $contentType)
+        return $this->createOpportunityUsingPOST1AsyncWithHttpInfo($create_opportunity_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5954,16 +5954,16 @@ class PreReleaseApi
      *
      * Create an Opportunity
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOpportunityUsingPOST1AsyncWithHttpInfo($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1AsyncWithHttpInfo($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Opportunity';
-        $request = $this->createOpportunityUsingPOST1Request($opportunity, $contentType);
+        $request = $this->createOpportunityUsingPOST1Request($create_opportunity_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6004,13 +6004,13 @@ class PreReleaseApi
     /**
      * Create request for operation 'createOpportunityUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $opportunity opportunity (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest $create_opportunity_request opportunity (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunityUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOpportunityUsingPOST1Request($opportunity = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
+    public function createOpportunityUsingPOST1Request($create_opportunity_request = null, string $contentType = self::contentTypes['createOpportunityUsingPOST1'][0])
     {
 
 
@@ -6033,12 +6033,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($opportunity)) {
+        if (isset($create_opportunity_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opportunity));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_opportunity_request));
             } else {
-                $httpBody = $opportunity;
+                $httpBody = $create_opportunity_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -6091,16 +6091,16 @@ class PreReleaseApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOrderCustomFieldUsingPOST($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
-        list($response) = $this->createOrderCustomFieldUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createOrderCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -6109,16 +6109,16 @@ class PreReleaseApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderCustomFieldUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
-        $request = $this->createOrderCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOrderCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6304,15 +6304,15 @@ class PreReleaseApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderCustomFieldUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
-        return $this->createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6325,16 +6325,16 @@ class PreReleaseApi
      *
      * Create an Order&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createOrderCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createOrderCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6375,19 +6375,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createOrderCustomFieldUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOrderCustomFieldUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
+    public function createOrderCustomFieldUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createOrderCustomFieldUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createOrderCustomFieldUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createOrderCustomFieldUsingPOST'
             );
         }
 
@@ -6410,12 +6410,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -6865,16 +6865,16 @@ class PreReleaseApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOrderTotalDiscountUsingPOST($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOST($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
-        list($response) = $this->createOrderTotalDiscountUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createOrderTotalDiscountUsingPOSTWithHttpInfo($create_order_total_discount_request, $contentType);
         return $response;
     }
 
@@ -6883,16 +6883,16 @@ class PreReleaseApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderTotalDiscountUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTWithHttpInfo($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
-        $request = $this->createOrderTotalDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createOrderTotalDiscountUsingPOSTRequest($create_order_total_discount_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7078,15 +7078,15 @@ class PreReleaseApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderTotalDiscountUsingPOSTAsync($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTAsync($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
-        return $this->createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($create_order_total_discount_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7099,16 +7099,16 @@ class PreReleaseApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\OrderTotalDiscount';
-        $request = $this->createOrderTotalDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createOrderTotalDiscountUsingPOSTRequest($create_order_total_discount_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7149,19 +7149,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createOrderTotalDiscountUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOrderTotalDiscountUsingPOSTRequest($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTRequest($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_order_total_discount_request' is set
+        if ($create_order_total_discount_request === null || (is_array($create_order_total_discount_request) && count($create_order_total_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createOrderTotalDiscountUsingPOST'
+                'Missing the required parameter $create_order_total_discount_request when calling createOrderTotalDiscountUsingPOST'
             );
         }
 
@@ -7184,12 +7184,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_order_total_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_order_total_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_order_total_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -7242,16 +7242,16 @@ class PreReleaseApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOrderUsingPOST1($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
-        list($response) = $this->createOrderUsingPOST1WithHttpInfo($create_order_request, $contentType);
+        list($response) = $this->createOrderUsingPOST1WithHttpInfo($rest_create_order_request, $contentType);
         return $response;
     }
 
@@ -7260,16 +7260,16 @@ class PreReleaseApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderUsingPOST1WithHttpInfo($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1WithHttpInfo($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
-        $request = $this->createOrderUsingPOST1Request($create_order_request, $contentType);
+        $request = $this->createOrderUsingPOST1Request($rest_create_order_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7455,15 +7455,15 @@ class PreReleaseApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderUsingPOST1Async($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1Async($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
-        return $this->createOrderUsingPOST1AsyncWithHttpInfo($create_order_request, $contentType)
+        return $this->createOrderUsingPOST1AsyncWithHttpInfo($rest_create_order_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7476,16 +7476,16 @@ class PreReleaseApi
      *
      * Create an Order
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderUsingPOST1AsyncWithHttpInfo($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1AsyncWithHttpInfo($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Order';
-        $request = $this->createOrderUsingPOST1Request($create_order_request, $contentType);
+        $request = $this->createOrderUsingPOST1Request($rest_create_order_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7526,19 +7526,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createOrderUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $create_order_request createOrderRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest $rest_create_order_request createOrderRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOrderUsingPOST1Request($create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
+    public function createOrderUsingPOST1Request($rest_create_order_request, string $contentType = self::contentTypes['createOrderUsingPOST1'][0])
     {
 
-        // verify the required parameter 'create_order_request' is set
-        if ($create_order_request === null || (is_array($create_order_request) && count($create_order_request) === 0)) {
+        // verify the required parameter 'rest_create_order_request' is set
+        if ($rest_create_order_request === null || (is_array($rest_create_order_request) && count($rest_create_order_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $create_order_request when calling createOrderUsingPOST1'
+                'Missing the required parameter $rest_create_order_request when calling createOrderUsingPOST1'
             );
         }
 
@@ -7561,12 +7561,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($create_order_request)) {
+        if (isset($rest_create_order_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_order_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($rest_create_order_request));
             } else {
-                $httpBody = $create_order_request;
+                $httpBody = $rest_create_order_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -7996,16 +7996,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createRedirectLinkUsingPOST($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOST($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
-        list($response) = $this->createRedirectLinkUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createRedirectLinkUsingPOSTWithHttpInfo($create_or_patch_affiliate_link_request, $contentType);
         return $response;
     }
 
@@ -8014,16 +8014,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createRedirectLinkUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTWithHttpInfo($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
-        $request = $this->createRedirectLinkUsingPOSTRequest($request, $contentType);
+        $request = $this->createRedirectLinkUsingPOSTRequest($create_or_patch_affiliate_link_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8209,15 +8209,15 @@ class PreReleaseApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createRedirectLinkUsingPOSTAsync($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTAsync($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
-        return $this->createRedirectLinkUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createRedirectLinkUsingPOSTAsyncWithHttpInfo($create_or_patch_affiliate_link_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8230,16 +8230,16 @@ class PreReleaseApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createRedirectLinkUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTAsyncWithHttpInfo($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateLink';
-        $request = $this->createRedirectLinkUsingPOSTRequest($request, $contentType);
+        $request = $this->createRedirectLinkUsingPOSTRequest($create_or_patch_affiliate_link_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8280,19 +8280,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createRedirectLinkUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createRedirectLinkUsingPOSTRequest($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTRequest($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_or_patch_affiliate_link_request' is set
+        if ($create_or_patch_affiliate_link_request === null || (is_array($create_or_patch_affiliate_link_request) && count($create_or_patch_affiliate_link_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createRedirectLinkUsingPOST'
+                'Missing the required parameter $create_or_patch_affiliate_link_request when calling createRedirectLinkUsingPOST'
             );
         }
 
@@ -8315,12 +8315,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_or_patch_affiliate_link_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_or_patch_affiliate_link_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_or_patch_affiliate_link_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -8373,16 +8373,16 @@ class PreReleaseApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Referral|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createReferralUsingPOST($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOST($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
-        list($response) = $this->createReferralUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createReferralUsingPOSTWithHttpInfo($create_referral_request, $contentType);
         return $response;
     }
 
@@ -8391,16 +8391,16 @@ class PreReleaseApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Referral|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createReferralUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTWithHttpInfo($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
-        $request = $this->createReferralUsingPOSTRequest($request, $contentType);
+        $request = $this->createReferralUsingPOSTRequest($create_referral_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8586,15 +8586,15 @@ class PreReleaseApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createReferralUsingPOSTAsync($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTAsync($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
-        return $this->createReferralUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createReferralUsingPOSTAsyncWithHttpInfo($create_referral_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8607,16 +8607,16 @@ class PreReleaseApi
      *
      * Create a Referral
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createReferralUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTAsyncWithHttpInfo($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Referral';
-        $request = $this->createReferralUsingPOSTRequest($request, $contentType);
+        $request = $this->createReferralUsingPOSTRequest($create_referral_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8657,19 +8657,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createReferralUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateReferralRequest $create_referral_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createReferralUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createReferralUsingPOSTRequest($request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
+    public function createReferralUsingPOSTRequest($create_referral_request, string $contentType = self::contentTypes['createReferralUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_referral_request' is set
+        if ($create_referral_request === null || (is_array($create_referral_request) && count($create_referral_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createReferralUsingPOST'
+                'Missing the required parameter $create_referral_request when calling createReferralUsingPOST'
             );
         }
 
@@ -8692,12 +8692,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_referral_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_referral_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_referral_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -8750,16 +8750,16 @@ class PreReleaseApi
      *
      * Create a Subscription&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createSubscriptionCustomFieldUsingPOST($custom_field, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
+    public function createSubscriptionCustomFieldUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
     {
-        list($response) = $this->createSubscriptionCustomFieldUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createSubscriptionCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -8768,16 +8768,16 @@ class PreReleaseApi
      *
      * Create a Subscription&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createSubscriptionCustomFieldUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
+    public function createSubscriptionCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
     {
-        $request = $this->createSubscriptionCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createSubscriptionCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8963,15 +8963,15 @@ class PreReleaseApi
      *
      * Create a Subscription&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createSubscriptionCustomFieldUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
+    public function createSubscriptionCustomFieldUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
     {
-        return $this->createSubscriptionCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createSubscriptionCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8984,16 +8984,16 @@ class PreReleaseApi
      *
      * Create a Subscription&#39;s Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createSubscriptionCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
+    public function createSubscriptionCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createSubscriptionCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createSubscriptionCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9034,19 +9034,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createSubscriptionCustomFieldUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createSubscriptionCustomFieldUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
+    public function createSubscriptionCustomFieldUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createSubscriptionCustomFieldUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createSubscriptionCustomFieldUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createSubscriptionCustomFieldUsingPOST'
             );
         }
 
@@ -9069,12 +9069,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -9127,16 +9127,16 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createTaskCustomFieldUsingPOST1($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
-        list($response) = $this->createTaskCustomFieldUsingPOST1WithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createTaskCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -9145,16 +9145,16 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTaskCustomFieldUsingPOST1WithHttpInfo($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1WithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
-        $request = $this->createTaskCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createTaskCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9340,15 +9340,15 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskCustomFieldUsingPOST1Async($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1Async($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
-        return $this->createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9361,16 +9361,16 @@ class PreReleaseApi
      *
      * Create a Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1AsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse';
-        $request = $this->createTaskCustomFieldUsingPOST1Request($custom_field, $contentType);
+        $request = $this->createTaskCustomFieldUsingPOST1Request($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9411,19 +9411,19 @@ class PreReleaseApi
     /**
      * Create request for operation 'createTaskCustomFieldUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskCustomFieldUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTaskCustomFieldUsingPOST1Request($custom_field, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
+    public function createTaskCustomFieldUsingPOST1Request($create_custom_field_request, string $contentType = self::contentTypes['createTaskCustomFieldUsingPOST1'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createTaskCustomFieldUsingPOST1'
+                'Missing the required parameter $create_custom_field_request when calling createTaskCustomFieldUsingPOST1'
             );
         }
 
@@ -9446,12 +9446,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -9504,16 +9504,16 @@ class PreReleaseApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Task|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createTaskUsingPOST1($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
-        list($response) = $this->createTaskUsingPOST1WithHttpInfo($task, $contentType);
+        list($response) = $this->createTaskUsingPOST1WithHttpInfo($create_task_request, $contentType);
         return $response;
     }
 
@@ -9522,16 +9522,16 @@ class PreReleaseApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Task|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTaskUsingPOST1WithHttpInfo($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1WithHttpInfo($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
-        $request = $this->createTaskUsingPOST1Request($task, $contentType);
+        $request = $this->createTaskUsingPOST1Request($create_task_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9717,15 +9717,15 @@ class PreReleaseApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskUsingPOST1Async($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1Async($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
-        return $this->createTaskUsingPOST1AsyncWithHttpInfo($task, $contentType)
+        return $this->createTaskUsingPOST1AsyncWithHttpInfo($create_task_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9738,16 +9738,16 @@ class PreReleaseApi
      *
      * Create a Task
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskUsingPOST1AsyncWithHttpInfo($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1AsyncWithHttpInfo($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Task';
-        $request = $this->createTaskUsingPOST1Request($task, $contentType);
+        $request = $this->createTaskUsingPOST1Request($create_task_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9788,13 +9788,13 @@ class PreReleaseApi
     /**
      * Create request for operation 'createTaskUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateTaskRequest $create_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTaskUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTaskUsingPOST1Request($task = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
+    public function createTaskUsingPOST1Request($create_task_request = null, string $contentType = self::contentTypes['createTaskUsingPOST1'][0])
     {
 
 
@@ -9817,12 +9817,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($task)) {
+        if (isset($create_task_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($task));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_task_request));
             } else {
-                $httpBody = $task;
+                $httpBody = $create_task_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -9875,16 +9875,16 @@ class PreReleaseApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createUserUsingPOST1($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
-        list($response) = $this->createUserUsingPOST1WithHttpInfo($user, $contentType);
+        list($response) = $this->createUserUsingPOST1WithHttpInfo($create_user_request_v2, $contentType);
         return $response;
     }
 
@@ -9893,16 +9893,16 @@ class PreReleaseApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUserUsingPOST1WithHttpInfo($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1WithHttpInfo($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
-        $request = $this->createUserUsingPOST1Request($user, $contentType);
+        $request = $this->createUserUsingPOST1Request($create_user_request_v2, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10088,15 +10088,15 @@ class PreReleaseApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserUsingPOST1Async($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1Async($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
-        return $this->createUserUsingPOST1AsyncWithHttpInfo($user, $contentType)
+        return $this->createUserUsingPOST1AsyncWithHttpInfo($create_user_request_v2, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10109,16 +10109,16 @@ class PreReleaseApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserUsingPOST1AsyncWithHttpInfo($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1AsyncWithHttpInfo($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\User';
-        $request = $this->createUserUsingPOST1Request($user, $contentType);
+        $request = $this->createUserUsingPOST1Request($create_user_request_v2, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10159,13 +10159,13 @@ class PreReleaseApi
     /**
      * Create request for operation 'createUserUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUserUsingPOST1Request($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1Request($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
 
 
@@ -10188,12 +10188,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($user)) {
+        if (isset($create_user_request_v2)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_user_request_v2));
             } else {
-                $httpBody = $user;
+                $httpBody = $create_user_request_v2;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -14643,8 +14643,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -14652,8 +14652,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -14661,8 +14661,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -14670,8 +14670,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -15898,8 +15898,8 @@ class PreReleaseApi
             $search_param,
             'searchParam', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             true // required
         ) ?? []);
 
@@ -21266,8 +21266,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -21275,8 +21275,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -21284,8 +21284,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -21293,8 +21293,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -21725,8 +21725,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -21734,8 +21734,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -21743,8 +21743,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -21752,8 +21752,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -22592,8 +22592,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -22601,8 +22601,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -22610,8 +22610,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -22619,8 +22619,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -23051,8 +23051,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23060,8 +23060,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23069,8 +23069,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23078,8 +23078,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -23510,8 +23510,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23519,8 +23519,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23528,8 +23528,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23537,8 +23537,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -23969,8 +23969,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23978,8 +23978,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23987,8 +23987,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -23996,8 +23996,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -24428,8 +24428,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -24437,8 +24437,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -24446,8 +24446,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -24455,8 +24455,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -24902,8 +24902,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -24911,8 +24911,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -24920,8 +24920,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -24929,8 +24929,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -25361,8 +25361,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -25370,8 +25370,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -25379,8 +25379,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -25388,8 +25388,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -25832,8 +25832,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -25841,8 +25841,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -25850,8 +25850,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -25859,8 +25859,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -26299,8 +26299,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -26308,8 +26308,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -26317,8 +26317,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -26326,8 +26326,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -26758,8 +26758,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -26767,8 +26767,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -26776,8 +26776,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -26785,8 +26785,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -27217,8 +27217,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -27226,8 +27226,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -27235,8 +27235,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -27244,8 +27244,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -28482,8 +28482,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -28491,8 +28491,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -28500,8 +28500,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -28509,8 +28509,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -28941,8 +28941,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -28950,8 +28950,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -28959,8 +28959,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -28968,8 +28968,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -29400,8 +29400,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29409,8 +29409,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29418,8 +29418,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29427,8 +29427,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -29871,8 +29871,8 @@ class PreReleaseApi
             $end_due_time,
             'end_due_time', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29880,8 +29880,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29889,8 +29889,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29898,8 +29898,8 @@ class PreReleaseApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29907,8 +29907,8 @@ class PreReleaseApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -29916,8 +29916,8 @@ class PreReleaseApi
             $start_due_time,
             'start_due_time', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -30330,8 +30330,8 @@ class PreReleaseApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -30339,8 +30339,8 @@ class PreReleaseApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -30848,16 +30848,16 @@ class PreReleaseApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchOrderUsingPATCH($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCH($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
-        list($response) = $this->patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask, $order, $contentType);
+        list($response) = $this->patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask, $rest_v2_patch_order_request, $contentType);
         return $response;
     }
 
@@ -30868,16 +30868,16 @@ class PreReleaseApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Order|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHWithHttpInfo($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
-        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $order, $contentType);
+        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $rest_v2_patch_order_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -31100,15 +31100,15 @@ class PreReleaseApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOrderUsingPATCHAsync($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHAsync($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
-        return $this->patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask, $order, $contentType)
+        return $this->patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask, $rest_v2_patch_order_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -31123,16 +31123,16 @@ class PreReleaseApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHAsyncWithHttpInfo($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Order';
-        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $order, $contentType);
+        $request = $this->patchOrderUsingPATCHRequest($order_id, $update_mask, $rest_v2_patch_order_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -31175,13 +31175,13 @@ class PreReleaseApi
      *
      * @param  string $order_id order_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $order order (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest $rest_v2_patch_order_request order (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOrderUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchOrderUsingPATCHRequest($order_id, $update_mask = null, $order = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
+    public function patchOrderUsingPATCHRequest($order_id, $update_mask = null, $rest_v2_patch_order_request = null, string $contentType = self::contentTypes['patchOrderUsingPATCH'][0])
     {
 
         // verify the required parameter 'order_id' is set
@@ -31229,12 +31229,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($order)) {
+        if (isset($rest_v2_patch_order_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($order));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($rest_v2_patch_order_request));
             } else {
-                $httpBody = $order;
+                $httpBody = $rest_v2_patch_order_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -32171,16 +32171,16 @@ class PreReleaseApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\UpdateTaskResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchTaskUsingPATCH($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCH($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
-        list($response) = $this->patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask, $task, $contentType);
+        list($response) = $this->patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask, $create_patch_task_request, $contentType);
         return $response;
     }
 
@@ -32191,16 +32191,16 @@ class PreReleaseApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\UpdateTaskResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHWithHttpInfo($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
-        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $task, $contentType);
+        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $create_patch_task_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -32423,15 +32423,15 @@ class PreReleaseApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTaskUsingPATCHAsync($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHAsync($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
-        return $this->patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask, $task, $contentType)
+        return $this->patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask, $create_patch_task_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -32446,16 +32446,16 @@ class PreReleaseApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHAsyncWithHttpInfo($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTaskResponse';
-        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $task, $contentType);
+        $request = $this->patchTaskUsingPATCHRequest($task_id, $update_mask, $create_patch_task_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -32498,13 +32498,13 @@ class PreReleaseApi
      *
      * @param  string $task_id task_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $task task (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest $create_patch_task_request task (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTaskUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchTaskUsingPATCHRequest($task_id, $update_mask = null, $task = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
+    public function patchTaskUsingPATCHRequest($task_id, $update_mask = null, $create_patch_task_request = null, string $contentType = self::contentTypes['patchTaskUsingPATCH'][0])
     {
 
         // verify the required parameter 'task_id' is set
@@ -32552,12 +32552,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($task)) {
+        if (isset($create_patch_task_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($task));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_patch_task_request));
             } else {
-                $httpBody = $task;
+                $httpBody = $create_patch_task_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -32612,16 +32612,16 @@ class PreReleaseApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchUserUsingPATCH($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCH($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
-        list($response) = $this->patchUserUsingPATCHWithHttpInfo($user_id, $update_mask, $user, $contentType);
+        list($response) = $this->patchUserUsingPATCHWithHttpInfo($user_id, $update_mask, $patch_user_request_v2, $contentType);
         return $response;
     }
 
@@ -32632,16 +32632,16 @@ class PreReleaseApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchUserUsingPATCHWithHttpInfo($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHWithHttpInfo($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
-        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $user, $contentType);
+        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $patch_user_request_v2, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -32864,15 +32864,15 @@ class PreReleaseApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserUsingPATCHAsync($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHAsync($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
-        return $this->patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask, $user, $contentType)
+        return $this->patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask, $patch_user_request_v2, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -32887,16 +32887,16 @@ class PreReleaseApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\User';
-        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $user, $contentType);
+        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $patch_user_request_v2, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -32939,13 +32939,13 @@ class PreReleaseApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchUserUsingPATCHRequest($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHRequest($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
 
         // verify the required parameter 'user_id' is set
@@ -32993,12 +32993,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($user)) {
+        if (isset($patch_user_request_v2)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_user_request_v2));
             } else {
-                $httpBody = $user;
+                $httpBody = $patch_user_request_v2;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -33052,16 +33052,16 @@ class PreReleaseApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function removeAffiliateFromProgramUsingPOST($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOST($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
-        $this->removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $remove_from_program_request, $contentType);
+        $this->removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $affiliate_remove_from_program_request, $contentType);
     }
 
     /**
@@ -33070,16 +33070,16 @@ class PreReleaseApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
-        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $remove_from_program_request, $contentType);
+        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $affiliate_remove_from_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -33135,15 +33135,15 @@ class PreReleaseApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeAffiliateFromProgramUsingPOSTAsync($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTAsync($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
-        return $this->removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $remove_from_program_request, $contentType)
+        return $this->removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $affiliate_remove_from_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -33157,16 +33157,16 @@ class PreReleaseApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
         $returnType = '';
-        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $remove_from_program_request, $contentType);
+        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $affiliate_remove_from_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -33195,13 +33195,13 @@ class PreReleaseApi
      * Create request for operation 'removeAffiliateFromProgramUsingPOST'
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function removeAffiliateFromProgramUsingPOSTRequest($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTRequest($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -33211,10 +33211,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'remove_from_program_request' is set
-        if ($remove_from_program_request === null || (is_array($remove_from_program_request) && count($remove_from_program_request) === 0)) {
+        // verify the required parameter 'affiliate_remove_from_program_request' is set
+        if ($affiliate_remove_from_program_request === null || (is_array($affiliate_remove_from_program_request) && count($affiliate_remove_from_program_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $remove_from_program_request when calling removeAffiliateFromProgramUsingPOST'
+                'Missing the required parameter $affiliate_remove_from_program_request when calling removeAffiliateFromProgramUsingPOST'
             );
         }
 
@@ -33245,12 +33245,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($remove_from_program_request)) {
+        if (isset($affiliate_remove_from_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($remove_from_program_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($affiliate_remove_from_program_request));
             } else {
-                $httpBody = $remove_from_program_request;
+                $httpBody = $affiliate_remove_from_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -35128,7 +35128,7 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -35136,9 +35136,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateAffiliateCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -35148,7 +35148,7 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -35156,9 +35156,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -35380,16 +35380,16 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAffiliateCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
-        return $this->updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -35403,17 +35403,17 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -35455,14 +35455,14 @@ class PreReleaseApi
      * Create request for operation 'updateAffiliateCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -35472,10 +35472,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateAffiliateCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateAffiliateCustomFieldUsingPATCH'
             );
         }
 
@@ -35516,12 +35516,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -35575,7 +35575,7 @@ class PreReleaseApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -35583,9 +35583,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateDiscountUsingPATCH($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCH($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
-        list($response) = $this->updateDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateDiscountUsingPATCHWithHttpInfo($discount_id, $create_update_discount_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -35595,7 +35595,7 @@ class PreReleaseApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -35603,9 +35603,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CategoryDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHWithHttpInfo($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
-        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $create_update_discount_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -35827,16 +35827,16 @@ class PreReleaseApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDiscountUsingPATCHAsync($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHAsync($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
-        return $this->updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask, $contentType)
+        return $this->updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $create_update_discount_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -35850,17 +35850,17 @@ class PreReleaseApi
      * Update a Category Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CategoryDiscount';
-        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateDiscountUsingPATCHRequest($discount_id, $create_update_discount_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -35902,14 +35902,14 @@ class PreReleaseApi
      * Create request for operation 'updateDiscountUsingPATCH'
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest $create_update_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateDiscountUsingPATCHRequest($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
+    public function updateDiscountUsingPATCHRequest($discount_id, $create_update_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH'][0])
     {
 
         // verify the required parameter 'discount_id' is set
@@ -35919,10 +35919,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_update_discount_request' is set
+        if ($create_update_discount_request === null || (is_array($create_update_discount_request) && count($create_update_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateDiscountUsingPATCH'
+                'Missing the required parameter $create_update_discount_request when calling updateDiscountUsingPATCH'
             );
         }
 
@@ -35963,12 +35963,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_update_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_update_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -36022,7 +36022,7 @@ class PreReleaseApi
      * Update a Shipping Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $update_shipping_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH1'] to see the possible values for this operation
      *
@@ -36030,9 +36030,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\ShippingDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateDiscountUsingPATCH1($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
+    public function updateDiscountUsingPATCH1($discount_id, $update_shipping_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
     {
-        list($response) = $this->updateDiscountUsingPATCH1WithHttpInfo($discount_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateDiscountUsingPATCH1WithHttpInfo($discount_id, $update_shipping_discount_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -36042,7 +36042,7 @@ class PreReleaseApi
      * Update a Shipping Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $update_shipping_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH1'] to see the possible values for this operation
      *
@@ -36050,9 +36050,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\ShippingDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDiscountUsingPATCH1WithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
+    public function updateDiscountUsingPATCH1WithHttpInfo($discount_id, $update_shipping_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
     {
-        $request = $this->updateDiscountUsingPATCH1Request($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateDiscountUsingPATCH1Request($discount_id, $update_shipping_discount_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -36274,16 +36274,16 @@ class PreReleaseApi
      * Update a Shipping Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $update_shipping_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDiscountUsingPATCH1Async($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
+    public function updateDiscountUsingPATCH1Async($discount_id, $update_shipping_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
     {
-        return $this->updateDiscountUsingPATCH1AsyncWithHttpInfo($discount_id, $request, $update_mask, $contentType)
+        return $this->updateDiscountUsingPATCH1AsyncWithHttpInfo($discount_id, $update_shipping_discount_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -36297,17 +36297,17 @@ class PreReleaseApi
      * Update a Shipping Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $update_shipping_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDiscountUsingPATCH1AsyncWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
+    public function updateDiscountUsingPATCH1AsyncWithHttpInfo($discount_id, $update_shipping_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\ShippingDiscount';
-        $request = $this->updateDiscountUsingPATCH1Request($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateDiscountUsingPATCH1Request($discount_id, $update_shipping_discount_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -36349,14 +36349,14 @@ class PreReleaseApi
      * Create request for operation 'updateDiscountUsingPATCH1'
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest $update_shipping_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiscountUsingPATCH1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateDiscountUsingPATCH1Request($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
+    public function updateDiscountUsingPATCH1Request($discount_id, $update_shipping_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateDiscountUsingPATCH1'][0])
     {
 
         // verify the required parameter 'discount_id' is set
@@ -36366,10 +36366,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_shipping_discount_request' is set
+        if ($update_shipping_discount_request === null || (is_array($update_shipping_discount_request) && count($update_shipping_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateDiscountUsingPATCH1'
+                'Missing the required parameter $update_shipping_discount_request when calling updateDiscountUsingPATCH1'
             );
         }
 
@@ -36410,12 +36410,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_shipping_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_shipping_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_shipping_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -36469,7 +36469,7 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -36477,9 +36477,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateNotesCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -36489,7 +36489,7 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -36497,9 +36497,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -36721,16 +36721,16 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateNotesCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
-        return $this->updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -36744,17 +36744,17 @@ class PreReleaseApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -36796,14 +36796,14 @@ class PreReleaseApi
      * Create request for operation 'updateNotesCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNotesCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
+    public function updateNotesCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateNotesCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -36813,10 +36813,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateNotesCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateNotesCustomFieldUsingPATCH'
             );
         }
 
@@ -36857,12 +36857,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -36916,7 +36916,7 @@ class PreReleaseApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -36924,9 +36924,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -36936,7 +36936,7 @@ class PreReleaseApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -36944,9 +36944,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -37168,16 +37168,16 @@ class PreReleaseApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
-        return $this->updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -37191,17 +37191,17 @@ class PreReleaseApi
      * Update a Opportunity&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -37243,14 +37243,14 @@ class PreReleaseApi
      * Create request for operation 'updateOpportunityCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
+    public function updateOpportunityCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -37260,10 +37260,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOpportunityCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateOpportunityCustomFieldUsingPATCH'
             );
         }
 
@@ -37304,12 +37304,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -37363,7 +37363,7 @@ class PreReleaseApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
@@ -37371,9 +37371,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCH($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
-        list($response) = $this->updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -37383,7 +37383,7 @@ class PreReleaseApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
@@ -37391,9 +37391,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestOpportunityStage|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
-        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $update_opportunity_stage_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -37615,16 +37615,16 @@ class PreReleaseApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityStageUsingPATCHAsync($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHAsync($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
-        return $this->updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $request, $update_mask, $contentType)
+        return $this->updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -37638,17 +37638,17 @@ class PreReleaseApi
      * Update an Opportunity Stage
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHAsyncWithHttpInfo($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestOpportunityStage';
-        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityStageUsingPATCHRequest($stage_id, $update_opportunity_stage_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -37690,14 +37690,14 @@ class PreReleaseApi
      * Create request for operation 'updateOpportunityStageUsingPATCH'
      *
      * @param  string $stage_id stage_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest $update_opportunity_stage_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityStageUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOpportunityStageUsingPATCHRequest($stage_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
+    public function updateOpportunityStageUsingPATCHRequest($stage_id, $update_opportunity_stage_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityStageUsingPATCH'][0])
     {
 
         // verify the required parameter 'stage_id' is set
@@ -37707,10 +37707,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_opportunity_stage_request' is set
+        if ($update_opportunity_stage_request === null || (is_array($update_opportunity_stage_request) && count($update_opportunity_stage_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOpportunityStageUsingPATCH'
+                'Missing the required parameter $update_opportunity_stage_request when calling updateOpportunityStageUsingPATCH'
             );
         }
 
@@ -37751,12 +37751,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_opportunity_stage_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_opportunity_stage_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_opportunity_stage_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -37810,7 +37810,7 @@ class PreReleaseApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
@@ -37818,9 +37818,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCH($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
-        list($response) = $this->updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -37830,7 +37830,7 @@ class PreReleaseApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
@@ -37838,9 +37838,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestV2Opportunity|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
-        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $patch_opportunity_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -38062,16 +38062,16 @@ class PreReleaseApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityUsingPATCHAsync($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHAsync($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
-        return $this->updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $request, $update_mask, $contentType)
+        return $this->updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -38085,17 +38085,17 @@ class PreReleaseApi
      * Update an opportunity
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHAsyncWithHttpInfo($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestV2Opportunity';
-        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $request, $update_mask, $contentType);
+        $request = $this->updateOpportunityUsingPATCHRequest($opportunity_id, $patch_opportunity_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -38137,14 +38137,14 @@ class PreReleaseApi
      * Create request for operation 'updateOpportunityUsingPATCH'
      *
      * @param  string $opportunity_id opportunity_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest $patch_opportunity_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunityUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOpportunityUsingPATCHRequest($opportunity_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
+    public function updateOpportunityUsingPATCHRequest($opportunity_id, $patch_opportunity_request, $update_mask = null, string $contentType = self::contentTypes['updateOpportunityUsingPATCH'][0])
     {
 
         // verify the required parameter 'opportunity_id' is set
@@ -38154,10 +38154,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'patch_opportunity_request' is set
+        if ($patch_opportunity_request === null || (is_array($patch_opportunity_request) && count($patch_opportunity_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOpportunityUsingPATCH'
+                'Missing the required parameter $patch_opportunity_request when calling updateOpportunityUsingPATCH'
             );
         }
 
@@ -38198,12 +38198,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($patch_opportunity_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_opportunity_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $patch_opportunity_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -38257,7 +38257,7 @@ class PreReleaseApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -38265,9 +38265,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -38277,7 +38277,7 @@ class PreReleaseApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -38285,9 +38285,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -38509,16 +38509,16 @@ class PreReleaseApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
-        return $this->updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -38532,17 +38532,17 @@ class PreReleaseApi
      * Update an Order&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -38584,14 +38584,14 @@ class PreReleaseApi
      * Create request for operation 'updateOrderCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
+    public function updateOrderCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -38601,10 +38601,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOrderCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateOrderCustomFieldUsingPATCH'
             );
         }
 
@@ -38645,12 +38645,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -38704,7 +38704,7 @@ class PreReleaseApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -38712,9 +38712,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCH($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
-        list($response) = $this->updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -38724,7 +38724,7 @@ class PreReleaseApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -38732,9 +38732,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
-        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $update_order_total_discount_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -38956,16 +38956,16 @@ class PreReleaseApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderTotalDiscountUsingPATCHAsync($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHAsync($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
-        return $this->updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask, $contentType)
+        return $this->updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -38979,17 +38979,17 @@ class PreReleaseApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\OrderTotalDiscount';
-        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $update_order_total_discount_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -39031,14 +39031,14 @@ class PreReleaseApi
      * Create request for operation 'updateOrderTotalDiscountUsingPATCH'
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOrderTotalDiscountUsingPATCHRequest($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHRequest($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
 
         // verify the required parameter 'discount_id' is set
@@ -39048,10 +39048,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_order_total_discount_request' is set
+        if ($update_order_total_discount_request === null || (is_array($update_order_total_discount_request) && count($update_order_total_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOrderTotalDiscountUsingPATCH'
+                'Missing the required parameter $update_order_total_discount_request when calling updateOrderTotalDiscountUsingPATCH'
             );
         }
 
@@ -39092,12 +39092,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_order_total_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_order_total_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_order_total_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -39151,16 +39151,16 @@ class PreReleaseApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateRedirectLinkUsingPATCH($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCH($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
-        list($response) = $this->updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $request, $contentType);
+        list($response) = $this->updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, $contentType);
         return $response;
     }
 
@@ -39170,16 +39170,16 @@ class PreReleaseApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
-        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $request, $contentType);
+        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $create_or_patch_affiliate_link_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -39401,15 +39401,15 @@ class PreReleaseApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateRedirectLinkUsingPATCHAsync($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHAsync($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
-        return $this->updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $request, $contentType)
+        return $this->updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -39423,16 +39423,16 @@ class PreReleaseApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateLink';
-        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $request, $contentType);
+        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $create_or_patch_affiliate_link_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -39474,13 +39474,13 @@ class PreReleaseApi
      * Create request for operation 'updateRedirectLinkUsingPATCH'
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateRedirectLinkUsingPATCHRequest($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHRequest($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
 
         // verify the required parameter 'redirect_id' is set
@@ -39490,10 +39490,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_or_patch_affiliate_link_request' is set
+        if ($create_or_patch_affiliate_link_request === null || (is_array($create_or_patch_affiliate_link_request) && count($create_or_patch_affiliate_link_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateRedirectLinkUsingPATCH'
+                'Missing the required parameter $create_or_patch_affiliate_link_request when calling updateRedirectLinkUsingPATCH'
             );
         }
 
@@ -39524,12 +39524,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_or_patch_affiliate_link_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_or_patch_affiliate_link_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_or_patch_affiliate_link_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -39583,7 +39583,7 @@ class PreReleaseApi
      * Update a Subscription&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -39591,9 +39591,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
+    public function updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateSubscriptionCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateSubscriptionCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -39603,7 +39603,7 @@ class PreReleaseApi
      * Update a Subscription&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -39611,9 +39611,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSubscriptionCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
+    public function updateSubscriptionCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateSubscriptionCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateSubscriptionCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -39835,16 +39835,16 @@ class PreReleaseApi
      * Update a Subscription&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateSubscriptionCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
+    public function updateSubscriptionCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
     {
-        return $this->updateSubscriptionCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateSubscriptionCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -39858,17 +39858,17 @@ class PreReleaseApi
      * Update a Subscription&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateSubscriptionCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
+    public function updateSubscriptionCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateSubscriptionCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateSubscriptionCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -39910,14 +39910,14 @@ class PreReleaseApi
      * Create request for operation 'updateSubscriptionCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateSubscriptionCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
+    public function updateSubscriptionCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateSubscriptionCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -39927,10 +39927,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateSubscriptionCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateSubscriptionCustomFieldUsingPATCH'
             );
         }
 
@@ -39971,12 +39971,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -40030,7 +40030,7 @@ class PreReleaseApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -40038,9 +40038,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -40050,7 +40050,7 @@ class PreReleaseApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -40058,9 +40058,9 @@ class PreReleaseApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -40282,16 +40282,16 @@ class PreReleaseApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateTaskCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
-        return $this->updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -40305,17 +40305,17 @@ class PreReleaseApi
      * Update a Task&#39;s Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -40357,14 +40357,14 @@ class PreReleaseApi
      * Create request for operation 'updateTaskCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTaskCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
+    public function updateTaskCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateTaskCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -40374,10 +40374,10 @@ class PreReleaseApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateTaskCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateTaskCustomFieldUsingPATCH'
             );
         }
 
@@ -40418,12 +40418,12 @@ class PreReleaseApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

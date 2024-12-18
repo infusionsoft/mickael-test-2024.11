@@ -13,7 +13,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createLeadSourceUsingPOST
 
-> LeadSource createLeadSourceUsingPOST(leadsource)
+> LeadSource createLeadSourceUsingPOST(createLeadSourceRequest)
 
 Create a Lead Source
 
@@ -35,9 +35,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         LeadSourcesApi apiInstance = new LeadSourcesApi(defaultClient);
-        CreateLeadSourceRequest leadsource = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
+        CreateLeadSourceRequest createLeadSourceRequest = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
         try {
-            LeadSource result = apiInstance.createLeadSourceUsingPOST(leadsource);
+            LeadSource result = apiInstance.createLeadSourceUsingPOST(createLeadSourceRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LeadSourcesApi#createLeadSourceUsingPOST");
@@ -55,7 +55,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
+| **createLeadSourceRequest** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
 
 ### Return type
 
@@ -80,7 +80,7 @@ No authorization required
 
 ## createLeadSourceUsingPOSTWithHttpInfo
 
-> ApiResponse<LeadSource> createLeadSourceUsingPOST createLeadSourceUsingPOSTWithHttpInfo(leadsource)
+> ApiResponse<LeadSource> createLeadSourceUsingPOST createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest)
 
 Create a Lead Source
 
@@ -103,9 +103,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         LeadSourcesApi apiInstance = new LeadSourcesApi(defaultClient);
-        CreateLeadSourceRequest leadsource = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
+        CreateLeadSourceRequest createLeadSourceRequest = new CreateLeadSourceRequest(); // CreateLeadSourceRequest | leadsource
         try {
-            ApiResponse<LeadSource> response = apiInstance.createLeadSourceUsingPOSTWithHttpInfo(leadsource);
+            ApiResponse<LeadSource> response = apiInstance.createLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -125,7 +125,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **leadsource** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
+| **createLeadSourceRequest** | [**CreateLeadSourceRequest**](CreateLeadSourceRequest.md)| leadsource | [optional] |
 
 ### Return type
 

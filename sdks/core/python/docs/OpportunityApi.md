@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **create_opportunity_custom_fields_using_post**
-> CustomFieldMetaData create_opportunity_custom_fields_using_post(custom_field)
+> CustomFieldMetaData create_opportunity_custom_fields_using_post(create_custom_field_request)
 
 Create an Opportunity Custom Field
 
@@ -45,11 +45,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OpportunityApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create an Opportunity Custom Field
-        api_response = api_instance.create_opportunity_custom_fields_using_post(custom_field)
+        api_response = api_instance.create_opportunity_custom_fields_using_post(create_custom_field_request)
         print("The response of OpportunityApi->create_opportunity_custom_fields_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -62,7 +62,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -88,7 +88,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_opportunity_stage_using_post**
-> RestOpportunityStage create_opportunity_stage_using_post(opportunity_stage=opportunity_stage)
+> RestOpportunityStage create_opportunity_stage_using_post(create_opportunity_stage_request=create_opportunity_stage_request)
 
 Create an Opportunity Stage
 
@@ -114,11 +114,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OpportunityApi(api_client)
-    opportunity_stage = keap_sdk_core_client.CreateOpportunityStageRequest() # CreateOpportunityStageRequest | opportunity (optional)
+    create_opportunity_stage_request = keap_sdk_core_client.CreateOpportunityStageRequest() # CreateOpportunityStageRequest | opportunity (optional)
 
     try:
         # Create an Opportunity Stage
-        api_response = api_instance.create_opportunity_stage_using_post(opportunity_stage=opportunity_stage)
+        api_response = api_instance.create_opportunity_stage_using_post(create_opportunity_stage_request=create_opportunity_stage_request)
         print("The response of OpportunityApi->create_opportunity_stage_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -131,7 +131,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity_stage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
+ **create_opportunity_stage_request** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -157,7 +157,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_opportunity_using_post1**
-> RestV2Opportunity create_opportunity_using_post1(opportunity=opportunity)
+> RestV2Opportunity create_opportunity_using_post1(create_opportunity_request=create_opportunity_request)
 
 Create an Opportunity
 
@@ -183,11 +183,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OpportunityApi(api_client)
-    opportunity = keap_sdk_core_client.CreateOpportunityRequest() # CreateOpportunityRequest | opportunity (optional)
+    create_opportunity_request = keap_sdk_core_client.CreateOpportunityRequest() # CreateOpportunityRequest | opportunity (optional)
 
     try:
         # Create an Opportunity
-        api_response = api_instance.create_opportunity_using_post1(opportunity=opportunity)
+        api_response = api_instance.create_opportunity_using_post1(create_opportunity_request=create_opportunity_request)
         print("The response of OpportunityApi->create_opportunity_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -200,7 +200,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
+ **create_opportunity_request** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -648,7 +648,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_opportunity_custom_field_using_patch**
-> CustomFieldMetaData update_opportunity_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_opportunity_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Opportunity's Custom Field
 
@@ -675,12 +675,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OpportunityApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Opportunity's Custom Field
-        api_response = api_instance.update_opportunity_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_opportunity_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of OpportunityApi->update_opportunity_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -694,7 +694,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -722,7 +722,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_opportunity_stage_using_patch**
-> RestOpportunityStage update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+> RestOpportunityStage update_opportunity_stage_using_patch(stage_id, update_opportunity_stage_request, update_mask=update_mask)
 
 Update an Opportunity Stage
 
@@ -749,12 +749,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OpportunityApi(api_client)
     stage_id = 'stage_id_example' # str | stage_id
-    request = keap_sdk_core_client.UpdateOpportunityStageRequest() # UpdateOpportunityStageRequest | request
+    update_opportunity_stage_request = keap_sdk_core_client.UpdateOpportunityStageRequest() # UpdateOpportunityStageRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an Opportunity Stage
-        api_response = api_instance.update_opportunity_stage_using_patch(stage_id, request, update_mask=update_mask)
+        api_response = api_instance.update_opportunity_stage_using_patch(stage_id, update_opportunity_stage_request, update_mask=update_mask)
         print("The response of OpportunityApi->update_opportunity_stage_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -768,7 +768,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stage_id** | **str**| stage_id | 
- **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **update_opportunity_stage_request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -796,7 +796,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_opportunity_using_patch**
-> RestV2Opportunity update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
+> RestV2Opportunity update_opportunity_using_patch(opportunity_id, patch_opportunity_request, update_mask=update_mask)
 
 Update an opportunity
 
@@ -823,12 +823,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.OpportunityApi(api_client)
     opportunity_id = 'opportunity_id_example' # str | opportunity_id
-    request = keap_sdk_core_client.PatchOpportunityRequest() # PatchOpportunityRequest | request
+    patch_opportunity_request = keap_sdk_core_client.PatchOpportunityRequest() # PatchOpportunityRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update an opportunity
-        api_response = api_instance.update_opportunity_using_patch(opportunity_id, request, update_mask=update_mask)
+        api_response = api_instance.update_opportunity_using_patch(opportunity_id, patch_opportunity_request, update_mask=update_mask)
         print("The response of OpportunityApi->update_opportunity_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -842,7 +842,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **opportunity_id** | **str**| opportunity_id | 
- **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
+ **patch_opportunity_request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

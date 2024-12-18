@@ -28,7 +28,7 @@ const apiInstance = new CompanyApi(configuration);
 
 const request: CompanyApiCreateCompanyUsingPOST1Request = {
     // company (optional)
-  company: {
+  createCompanyRequest: {
     address: {
       country: "United States of America",
       countryCode: "USA",
@@ -81,7 +81,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | **CreateCompanyRequest**| company |
+ **createCompanyRequest** | **CreateCompanyRequest**| company |
 
 
 ### Return type
@@ -317,7 +317,7 @@ const request: CompanyApiPatchCompanyUsingPATCHRequest = {
     "id",
   ],
     // company (optional)
-  company: {
+  patchCompanyRequest: {
     address: {
       country: "United States of America",
       countryCode: "USA",
@@ -370,7 +370,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | **PatchCompanyRequest**| company |
+ **patchCompanyRequest** | **PatchCompanyRequest**| company |
  **companyId** | [**string**] | company_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

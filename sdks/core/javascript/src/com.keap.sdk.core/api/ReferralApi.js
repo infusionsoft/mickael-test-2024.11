@@ -40,14 +40,14 @@ export default class ReferralApi {
     /**
      * Create a Referral
      * Creates a new referral partner referral on the provided contact
-     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} createReferralRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Referral} and HTTP response
      */
-    createReferralUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createReferralUsingPOST");
+    createReferralUsingPOSTWithHttpInfo(createReferralRequest) {
+      let postBody = createReferralRequest;
+      // verify the required parameter 'createReferralRequest' is set
+      if (createReferralRequest === undefined || createReferralRequest === null) {
+        throw new Error("Missing the required parameter 'createReferralRequest' when calling createReferralUsingPOST");
       }
 
       let pathParams = {
@@ -73,11 +73,11 @@ export default class ReferralApi {
     /**
      * Create a Referral
      * Creates a new referral partner referral on the provided contact
-     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} createReferralRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Referral}
      */
-    createReferralUsingPOST(request) {
-      return this.createReferralUsingPOSTWithHttpInfo(request)
+    createReferralUsingPOST(createReferralRequest) {
+      return this.createReferralUsingPOSTWithHttpInfo(createReferralRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

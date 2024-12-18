@@ -46,7 +46,7 @@ class UsersApi:
     @validate_call
     def create_user_using_post1(
         self,
-        user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
+        create_user_request_v2: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -64,8 +64,8 @@ class UsersApi:
 
         Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
 
-        :param user: user
-        :type user: CreateUserRequestV2
+        :param create_user_request_v2: user
+        :type create_user_request_v2: CreateUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -89,7 +89,7 @@ class UsersApi:
         """ # noqa: E501
 
         _param = self._create_user_using_post1_serialize(
-            user=user,
+            create_user_request_v2=create_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -114,7 +114,7 @@ class UsersApi:
     @validate_call
     def create_user_using_post1_with_http_info(
         self,
-        user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
+        create_user_request_v2: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -132,8 +132,8 @@ class UsersApi:
 
         Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
 
-        :param user: user
-        :type user: CreateUserRequestV2
+        :param create_user_request_v2: user
+        :type create_user_request_v2: CreateUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -157,7 +157,7 @@ class UsersApi:
         """ # noqa: E501
 
         _param = self._create_user_using_post1_serialize(
-            user=user,
+            create_user_request_v2=create_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -182,7 +182,7 @@ class UsersApi:
     @validate_call
     def create_user_using_post1_without_preload_content(
         self,
-        user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
+        create_user_request_v2: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -200,8 +200,8 @@ class UsersApi:
 
         Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
 
-        :param user: user
-        :type user: CreateUserRequestV2
+        :param create_user_request_v2: user
+        :type create_user_request_v2: CreateUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -225,7 +225,7 @@ class UsersApi:
         """ # noqa: E501
 
         _param = self._create_user_using_post1_serialize(
-            user=user,
+            create_user_request_v2=create_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -245,7 +245,7 @@ class UsersApi:
 
     def _create_user_using_post1_serialize(
         self,
-        user,
+        create_user_request_v2,
         _request_auth,
         _content_type,
         _headers,
@@ -271,8 +271,8 @@ class UsersApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if user is not None:
-            _body_params = user
+        if create_user_request_v2 is not None:
+            _body_params = create_user_request_v2
 
 
         # set the HTTP header `Accept`
@@ -1392,7 +1392,7 @@ class UsersApi:
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        user: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
+        patch_user_request_v2: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1414,8 +1414,8 @@ class UsersApi:
         :type user_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param user: user
-        :type user: PatchUserRequestV2
+        :param patch_user_request_v2: user
+        :type patch_user_request_v2: PatchUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1441,7 +1441,7 @@ class UsersApi:
         _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
-            user=user,
+            patch_user_request_v2=patch_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1469,7 +1469,7 @@ class UsersApi:
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        user: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
+        patch_user_request_v2: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1491,8 +1491,8 @@ class UsersApi:
         :type user_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param user: user
-        :type user: PatchUserRequestV2
+        :param patch_user_request_v2: user
+        :type patch_user_request_v2: PatchUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1518,7 +1518,7 @@ class UsersApi:
         _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
-            user=user,
+            patch_user_request_v2=patch_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1546,7 +1546,7 @@ class UsersApi:
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        user: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
+        patch_user_request_v2: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1568,8 +1568,8 @@ class UsersApi:
         :type user_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param user: user
-        :type user: PatchUserRequestV2
+        :param patch_user_request_v2: user
+        :type patch_user_request_v2: PatchUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1595,7 +1595,7 @@ class UsersApi:
         _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
-            user=user,
+            patch_user_request_v2=patch_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1618,7 +1618,7 @@ class UsersApi:
         self,
         user_id,
         update_mask,
-        user,
+        patch_user_request_v2,
         _request_auth,
         _content_type,
         _headers,
@@ -1651,8 +1651,8 @@ class UsersApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if user is not None:
-            _body_params = user
+        if patch_user_request_v2 is not None:
+            _body_params = patch_user_request_v2
 
 
         # set the HTTP header `Accept`

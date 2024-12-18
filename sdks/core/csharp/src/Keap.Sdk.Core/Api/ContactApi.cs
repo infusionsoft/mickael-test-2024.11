@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new type of Contact Link.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ContactLinkType</returns>
-        ContactLinkType CreateContactLinkTypeUsingPOST(CreateContactLinkTypeRequest request, int operationIndex = 0);
+        ContactLinkType CreateContactLinkTypeUsingPOST(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a Contact Link type
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new type of Contact Link.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ContactLinkType</returns>
-        ApiResponse<ContactLinkType> CreateContactLinkTypeUsingPOSTWithHttpInfo(CreateContactLinkTypeRequest request, int operationIndex = 0);
+        ApiResponse<ContactLinkType> CreateContactLinkTypeUsingPOSTWithHttpInfo(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0);
         /// <summary>
         /// Create a Contact
         /// </summary>
@@ -58,10 +58,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Contact</returns>
-        Contact CreateContactUsingPOST1(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0);
+        Contact CreateContactUsingPOST1(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create a Contact
@@ -70,10 +70,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Contact</returns>
-        ApiResponse<Contact> CreateContactUsingPOST1WithHttpInfo(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0);
+        ApiResponse<Contact> CreateContactUsingPOST1WithHttpInfo(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0);
         /// <summary>
         /// Delete a Contact
         /// </summary>
@@ -283,10 +283,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Contact</returns>
-        Contact PatchContactUsingPATCH(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0);
+        Contact PatchContactUsingPATCH(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Contact
@@ -297,10 +297,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Contact</returns>
-        ApiResponse<Contact> PatchContactUsingPATCHWithHttpInfo(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0);
+        ApiResponse<Contact> PatchContactUsingPATCHWithHttpInfo(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0);
         /// <summary>
         /// Retrieve Contact Model
         /// </summary>
@@ -361,11 +361,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new type of Contact Link.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContactLinkType</returns>
-        System.Threading.Tasks.Task<ContactLinkType> CreateContactLinkTypeUsingPOSTAsync(CreateContactLinkTypeRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ContactLinkType> CreateContactLinkTypeUsingPOSTAsync(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Contact Link type
@@ -374,11 +374,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new type of Contact Link.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContactLinkType)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactLinkType>> CreateContactLinkTypeUsingPOSTWithHttpInfoAsync(CreateContactLinkTypeRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ContactLinkType>> CreateContactLinkTypeUsingPOSTWithHttpInfoAsync(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a Contact
         /// </summary>
@@ -386,11 +386,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Contact</returns>
-        System.Threading.Tasks.Task<Contact> CreateContactUsingPOST1Async(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Contact> CreateContactUsingPOST1Async(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Contact
@@ -399,11 +399,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Contact>> CreateContactUsingPOST1WithHttpInfoAsync(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Contact>> CreateContactUsingPOST1WithHttpInfoAsync(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Contact
         /// </summary>
@@ -629,11 +629,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Contact</returns>
-        System.Threading.Tasks.Task<Contact> PatchContactUsingPATCHAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Contact> PatchContactUsingPATCHAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Contact
@@ -644,11 +644,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Contact>> PatchContactUsingPATCHWithHttpInfoAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Contact>> PatchContactUsingPATCHWithHttpInfoAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Contact Model
         /// </summary>
@@ -821,12 +821,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Link type Creates a new type of Contact Link.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ContactLinkType</returns>
-        public ContactLinkType CreateContactLinkTypeUsingPOST(CreateContactLinkTypeRequest request, int operationIndex = 0)
+        public ContactLinkType CreateContactLinkTypeUsingPOST(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ContactLinkType> localVarResponse = CreateContactLinkTypeUsingPOSTWithHttpInfo(request);
+            Keap.Sdk.Core.Client.ApiResponse<ContactLinkType> localVarResponse = CreateContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest);
             return localVarResponse.Data;
         }
 
@@ -834,15 +834,15 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Link type Creates a new type of Contact Link.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ContactLinkType</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ContactLinkType> CreateContactLinkTypeUsingPOSTWithHttpInfo(CreateContactLinkTypeRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ContactLinkType> CreateContactLinkTypeUsingPOSTWithHttpInfo(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createContactLinkTypeRequest' is set
+            if (createContactLinkTypeRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ContactApi->CreateContactLinkTypeUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createContactLinkTypeRequest' when calling ContactApi->CreateContactLinkTypeUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -868,7 +868,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createContactLinkTypeRequest;
 
             localVarRequestOptions.Operation = "ContactApi.CreateContactLinkTypeUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -892,13 +892,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Link type Creates a new type of Contact Link.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContactLinkType</returns>
-        public async System.Threading.Tasks.Task<ContactLinkType> CreateContactLinkTypeUsingPOSTAsync(CreateContactLinkTypeRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ContactLinkType> CreateContactLinkTypeUsingPOSTAsync(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ContactLinkType> localVarResponse = await CreateContactLinkTypeUsingPOSTWithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ContactLinkType> localVarResponse = await CreateContactLinkTypeUsingPOSTWithHttpInfoAsync(createContactLinkTypeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -906,16 +906,16 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Link type Creates a new type of Contact Link.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createContactLinkTypeRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContactLinkType)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ContactLinkType>> CreateContactLinkTypeUsingPOSTWithHttpInfoAsync(CreateContactLinkTypeRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ContactLinkType>> CreateContactLinkTypeUsingPOSTWithHttpInfoAsync(CreateContactLinkTypeRequest createContactLinkTypeRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createContactLinkTypeRequest' is set
+            if (createContactLinkTypeRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ContactApi->CreateContactLinkTypeUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createContactLinkTypeRequest' when calling ContactApi->CreateContactLinkTypeUsingPOST");
             }
 
 
@@ -942,7 +942,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createContactLinkTypeRequest;
 
             localVarRequestOptions.Operation = "ContactApi.CreateContactLinkTypeUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -967,12 +967,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Contact</returns>
-        public Contact CreateContactUsingPOST1(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0)
+        public Contact CreateContactUsingPOST1(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = CreateContactUsingPOST1WithHttpInfo(contact);
+            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = CreateContactUsingPOST1WithHttpInfo(createPatchContactRequest);
             return localVarResponse.Data;
         }
 
@@ -980,10 +980,10 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Contact</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Contact> CreateContactUsingPOST1WithHttpInfo(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Contact> CreateContactUsingPOST1WithHttpInfo(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -1008,7 +1008,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = contact;
+            localVarRequestOptions.Data = createPatchContactRequest;
 
             localVarRequestOptions.Operation = "ContactApi.CreateContactUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1032,13 +1032,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Contact</returns>
-        public async System.Threading.Tasks.Task<Contact> CreateContactUsingPOST1Async(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Contact> CreateContactUsingPOST1Async(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = await CreateContactUsingPOST1WithHttpInfoAsync(contact, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = await CreateContactUsingPOST1WithHttpInfoAsync(createPatchContactRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1046,11 +1046,11 @@ namespace Keap.Sdk.Core.Api
         /// Create a Contact Creates a new Contact. *Note:* Contact must contain at least one item in &#x60;email_addresses&#x60; or &#x60;phone_numbers&#x60; and &#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Contact>> CreateContactUsingPOST1WithHttpInfoAsync(CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Contact>> CreateContactUsingPOST1WithHttpInfoAsync(CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1076,7 +1076,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = contact;
+            localVarRequestOptions.Data = createPatchContactRequest;
 
             localVarRequestOptions.Operation = "ContactApi.CreateContactUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2327,12 +2327,12 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Contact</returns>
-        public Contact PatchContactUsingPATCH(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0)
+        public Contact PatchContactUsingPATCH(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = PatchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact);
+            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = PatchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest);
             return localVarResponse.Data;
         }
 
@@ -2342,10 +2342,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Contact</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Contact> PatchContactUsingPATCHWithHttpInfo(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Contact> PatchContactUsingPATCHWithHttpInfo(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -2381,7 +2381,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = contact;
+            localVarRequestOptions.Data = createPatchContactRequest;
 
             localVarRequestOptions.Operation = "ContactApi.PatchContactUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2407,13 +2407,13 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Contact</returns>
-        public async System.Threading.Tasks.Task<Contact> PatchContactUsingPATCHAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Contact> PatchContactUsingPATCHAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = await PatchContactUsingPATCHWithHttpInfoAsync(contactId, updateMask, contact, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Contact> localVarResponse = await PatchContactUsingPATCHWithHttpInfoAsync(contactId, updateMask, createPatchContactRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2423,11 +2423,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">contact_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="contact">contact (optional)</param>
+        /// <param name="createPatchContactRequest">contact (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Contact>> PatchContactUsingPATCHWithHttpInfoAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? contact = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Contact>> PatchContactUsingPATCHWithHttpInfoAsync(string contactId, List<string>? updateMask = default(List<string>?), CreatePatchContactRequest? createPatchContactRequest = default(CreatePatchContactRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -2464,7 +2464,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = contact;
+            localVarRequestOptions.Data = createPatchContactRequest;
 
             localVarRequestOptions.Operation = "ContactApi.PatchContactUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

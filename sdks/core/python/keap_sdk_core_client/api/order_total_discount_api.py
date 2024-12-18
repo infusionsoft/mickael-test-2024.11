@@ -45,7 +45,7 @@ class OrderTotalDiscountApi:
     @validate_call
     def create_order_total_discount_using_post(
         self,
-        request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
+        create_order_total_discount_request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -63,8 +63,8 @@ class OrderTotalDiscountApi:
 
         Creates an Order Total Discount
 
-        :param request: request (required)
-        :type request: CreateOrderTotalDiscountRequest
+        :param create_order_total_discount_request: request (required)
+        :type create_order_total_discount_request: CreateOrderTotalDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -88,7 +88,7 @@ class OrderTotalDiscountApi:
         """ # noqa: E501
 
         _param = self._create_order_total_discount_using_post_serialize(
-            request=request,
+            create_order_total_discount_request=create_order_total_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -113,7 +113,7 @@ class OrderTotalDiscountApi:
     @validate_call
     def create_order_total_discount_using_post_with_http_info(
         self,
-        request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
+        create_order_total_discount_request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -131,8 +131,8 @@ class OrderTotalDiscountApi:
 
         Creates an Order Total Discount
 
-        :param request: request (required)
-        :type request: CreateOrderTotalDiscountRequest
+        :param create_order_total_discount_request: request (required)
+        :type create_order_total_discount_request: CreateOrderTotalDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -156,7 +156,7 @@ class OrderTotalDiscountApi:
         """ # noqa: E501
 
         _param = self._create_order_total_discount_using_post_serialize(
-            request=request,
+            create_order_total_discount_request=create_order_total_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -181,7 +181,7 @@ class OrderTotalDiscountApi:
     @validate_call
     def create_order_total_discount_using_post_without_preload_content(
         self,
-        request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
+        create_order_total_discount_request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -199,8 +199,8 @@ class OrderTotalDiscountApi:
 
         Creates an Order Total Discount
 
-        :param request: request (required)
-        :type request: CreateOrderTotalDiscountRequest
+        :param create_order_total_discount_request: request (required)
+        :type create_order_total_discount_request: CreateOrderTotalDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -224,7 +224,7 @@ class OrderTotalDiscountApi:
         """ # noqa: E501
 
         _param = self._create_order_total_discount_using_post_serialize(
-            request=request,
+            create_order_total_discount_request=create_order_total_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -244,7 +244,7 @@ class OrderTotalDiscountApi:
 
     def _create_order_total_discount_using_post_serialize(
         self,
-        request,
+        create_order_total_discount_request,
         _request_auth,
         _content_type,
         _headers,
@@ -270,8 +270,8 @@ class OrderTotalDiscountApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_order_total_discount_request is not None:
+            _body_params = create_order_total_discount_request
 
 
         # set the HTTP header `Accept`
@@ -1173,7 +1173,7 @@ class OrderTotalDiscountApi:
     def update_order_total_discount_using_patch(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
+        update_order_total_discount_request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -1194,8 +1194,8 @@ class OrderTotalDiscountApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateOrderTotalDiscountRequest
+        :param update_order_total_discount_request: request (required)
+        :type update_order_total_discount_request: UpdateOrderTotalDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -1222,7 +1222,7 @@ class OrderTotalDiscountApi:
 
         _param = self._update_order_total_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            update_order_total_discount_request=update_order_total_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1250,7 +1250,7 @@ class OrderTotalDiscountApi:
     def update_order_total_discount_using_patch_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
+        update_order_total_discount_request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -1271,8 +1271,8 @@ class OrderTotalDiscountApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateOrderTotalDiscountRequest
+        :param update_order_total_discount_request: request (required)
+        :type update_order_total_discount_request: UpdateOrderTotalDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -1299,7 +1299,7 @@ class OrderTotalDiscountApi:
 
         _param = self._update_order_total_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            update_order_total_discount_request=update_order_total_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1327,7 +1327,7 @@ class OrderTotalDiscountApi:
     def update_order_total_discount_using_patch_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
+        update_order_total_discount_request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -1348,8 +1348,8 @@ class OrderTotalDiscountApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateOrderTotalDiscountRequest
+        :param update_order_total_discount_request: request (required)
+        :type update_order_total_discount_request: UpdateOrderTotalDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -1376,7 +1376,7 @@ class OrderTotalDiscountApi:
 
         _param = self._update_order_total_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            update_order_total_discount_request=update_order_total_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1399,7 +1399,7 @@ class OrderTotalDiscountApi:
     def _update_order_total_discount_using_patch_serialize(
         self,
         discount_id,
-        request,
+        update_order_total_discount_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -1433,8 +1433,8 @@ class OrderTotalDiscountApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_order_total_discount_request is not None:
+            _body_params = update_order_total_discount_request
 
 
         # set the HTTP header `Accept`

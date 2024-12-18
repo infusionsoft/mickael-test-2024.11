@@ -54,7 +54,7 @@ class OrdersApi:
     @validate_call
     def create_order_custom_field_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -72,8 +72,8 @@ class OrdersApi:
 
         Adds a custom field of the specified type and options to the Order object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -97,7 +97,7 @@ class OrdersApi:
         """ # noqa: E501
 
         _param = self._create_order_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -122,7 +122,7 @@ class OrdersApi:
     @validate_call
     def create_order_custom_field_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -140,8 +140,8 @@ class OrdersApi:
 
         Adds a custom field of the specified type and options to the Order object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -165,7 +165,7 @@ class OrdersApi:
         """ # noqa: E501
 
         _param = self._create_order_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -190,7 +190,7 @@ class OrdersApi:
     @validate_call
     def create_order_custom_field_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -208,8 +208,8 @@ class OrdersApi:
 
         Adds a custom field of the specified type and options to the Order object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -233,7 +233,7 @@ class OrdersApi:
         """ # noqa: E501
 
         _param = self._create_order_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -253,7 +253,7 @@ class OrdersApi:
 
     def _create_order_custom_field_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -279,8 +279,8 @@ class OrdersApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -621,7 +621,7 @@ class OrdersApi:
     @validate_call
     def create_order_using_post1(
         self,
-        create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
+        rest_create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -639,8 +639,8 @@ class OrdersApi:
 
         Create a one time Order with Order items.
 
-        :param create_order_request: createOrderRequest (required)
-        :type create_order_request: RestCreateOrderRequest
+        :param rest_create_order_request: createOrderRequest (required)
+        :type rest_create_order_request: RestCreateOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -664,7 +664,7 @@ class OrdersApi:
         """ # noqa: E501
 
         _param = self._create_order_using_post1_serialize(
-            create_order_request=create_order_request,
+            rest_create_order_request=rest_create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -689,7 +689,7 @@ class OrdersApi:
     @validate_call
     def create_order_using_post1_with_http_info(
         self,
-        create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
+        rest_create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -707,8 +707,8 @@ class OrdersApi:
 
         Create a one time Order with Order items.
 
-        :param create_order_request: createOrderRequest (required)
-        :type create_order_request: RestCreateOrderRequest
+        :param rest_create_order_request: createOrderRequest (required)
+        :type rest_create_order_request: RestCreateOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -732,7 +732,7 @@ class OrdersApi:
         """ # noqa: E501
 
         _param = self._create_order_using_post1_serialize(
-            create_order_request=create_order_request,
+            rest_create_order_request=rest_create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -757,7 +757,7 @@ class OrdersApi:
     @validate_call
     def create_order_using_post1_without_preload_content(
         self,
-        create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
+        rest_create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -775,8 +775,8 @@ class OrdersApi:
 
         Create a one time Order with Order items.
 
-        :param create_order_request: createOrderRequest (required)
-        :type create_order_request: RestCreateOrderRequest
+        :param rest_create_order_request: createOrderRequest (required)
+        :type rest_create_order_request: RestCreateOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -800,7 +800,7 @@ class OrdersApi:
         """ # noqa: E501
 
         _param = self._create_order_using_post1_serialize(
-            create_order_request=create_order_request,
+            rest_create_order_request=rest_create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -820,7 +820,7 @@ class OrdersApi:
 
     def _create_order_using_post1_serialize(
         self,
-        create_order_request,
+        rest_create_order_request,
         _request_auth,
         _content_type,
         _headers,
@@ -846,8 +846,8 @@ class OrdersApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if create_order_request is not None:
-            _body_params = create_order_request
+        if rest_create_order_request is not None:
+            _body_params = rest_create_order_request
 
 
         # set the HTTP header `Accept`
@@ -2641,7 +2641,7 @@ class OrdersApi:
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        order: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
+        rest_v2_patch_order_request: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2663,8 +2663,8 @@ class OrdersApi:
         :type order_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param order: order
-        :type order: RestV2PatchOrderRequest
+        :param rest_v2_patch_order_request: order
+        :type rest_v2_patch_order_request: RestV2PatchOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2690,7 +2690,7 @@ class OrdersApi:
         _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
-            order=order,
+            rest_v2_patch_order_request=rest_v2_patch_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2718,7 +2718,7 @@ class OrdersApi:
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        order: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
+        rest_v2_patch_order_request: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2740,8 +2740,8 @@ class OrdersApi:
         :type order_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param order: order
-        :type order: RestV2PatchOrderRequest
+        :param rest_v2_patch_order_request: order
+        :type rest_v2_patch_order_request: RestV2PatchOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2767,7 +2767,7 @@ class OrdersApi:
         _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
-            order=order,
+            rest_v2_patch_order_request=rest_v2_patch_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2795,7 +2795,7 @@ class OrdersApi:
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        order: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
+        rest_v2_patch_order_request: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2817,8 +2817,8 @@ class OrdersApi:
         :type order_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param order: order
-        :type order: RestV2PatchOrderRequest
+        :param rest_v2_patch_order_request: order
+        :type rest_v2_patch_order_request: RestV2PatchOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2844,7 +2844,7 @@ class OrdersApi:
         _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
-            order=order,
+            rest_v2_patch_order_request=rest_v2_patch_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2867,7 +2867,7 @@ class OrdersApi:
         self,
         order_id,
         update_mask,
-        order,
+        rest_v2_patch_order_request,
         _request_auth,
         _content_type,
         _headers,
@@ -2900,8 +2900,8 @@ class OrdersApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if order is not None:
-            _body_params = order
+        if rest_v2_patch_order_request is not None:
+            _body_params = rest_v2_patch_order_request
 
 
         # set the HTTP header `Accept`
@@ -3203,7 +3203,7 @@ class OrdersApi:
     def update_order_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3224,8 +3224,8 @@ class OrdersApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3252,7 +3252,7 @@ class OrdersApi:
 
         _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3280,7 +3280,7 @@ class OrdersApi:
     def update_order_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3301,8 +3301,8 @@ class OrdersApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3329,7 +3329,7 @@ class OrdersApi:
 
         _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3357,7 +3357,7 @@ class OrdersApi:
     def update_order_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3378,8 +3378,8 @@ class OrdersApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3406,7 +3406,7 @@ class OrdersApi:
 
         _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3429,7 +3429,7 @@ class OrdersApi:
     def _update_order_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -3463,8 +3463,8 @@ class OrdersApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`

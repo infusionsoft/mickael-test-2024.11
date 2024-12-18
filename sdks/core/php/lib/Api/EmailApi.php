@@ -142,16 +142,16 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $email_with_content emailWithContent (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\EmailSentWithContent|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createEmailUsingPOST1($email_with_content, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
+    public function createEmailUsingPOST1($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
-        list($response) = $this->createEmailUsingPOST1WithHttpInfo($email_with_content, $contentType);
+        list($response) = $this->createEmailUsingPOST1WithHttpInfo($create_email_sent_request, $contentType);
         return $response;
     }
 
@@ -160,16 +160,16 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $email_with_content emailWithContent (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\EmailSentWithContent|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createEmailUsingPOST1WithHttpInfo($email_with_content, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
+    public function createEmailUsingPOST1WithHttpInfo($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
-        $request = $this->createEmailUsingPOST1Request($email_with_content, $contentType);
+        $request = $this->createEmailUsingPOST1Request($create_email_sent_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -355,15 +355,15 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $email_with_content emailWithContent (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createEmailUsingPOST1Async($email_with_content, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
+    public function createEmailUsingPOST1Async($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
-        return $this->createEmailUsingPOST1AsyncWithHttpInfo($email_with_content, $contentType)
+        return $this->createEmailUsingPOST1AsyncWithHttpInfo($create_email_sent_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -376,16 +376,16 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $email_with_content emailWithContent (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createEmailUsingPOST1AsyncWithHttpInfo($email_with_content, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
+    public function createEmailUsingPOST1AsyncWithHttpInfo($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\EmailSentWithContent';
-        $request = $this->createEmailUsingPOST1Request($email_with_content, $contentType);
+        $request = $this->createEmailUsingPOST1Request($create_email_sent_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -426,19 +426,19 @@ class EmailApi
     /**
      * Create request for operation 'createEmailUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $email_with_content emailWithContent (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createEmailUsingPOST1Request($email_with_content, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
+    public function createEmailUsingPOST1Request($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
 
-        // verify the required parameter 'email_with_content' is set
-        if ($email_with_content === null || (is_array($email_with_content) && count($email_with_content) === 0)) {
+        // verify the required parameter 'create_email_sent_request' is set
+        if ($create_email_sent_request === null || (is_array($create_email_sent_request) && count($create_email_sent_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $email_with_content when calling createEmailUsingPOST1'
+                'Missing the required parameter $create_email_sent_request when calling createEmailUsingPOST1'
             );
         }
 
@@ -461,12 +461,12 @@ class EmailApi
         );
 
         // for model (json/xml)
-        if (isset($email_with_content)) {
+        if (isset($create_email_sent_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($email_with_content));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_email_sent_request));
             } else {
-                $httpBody = $email_with_content;
+                $httpBody = $create_email_sent_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

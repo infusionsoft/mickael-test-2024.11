@@ -15,7 +15,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createUserUsingPOST1()`
 
 ```php
-createUserUsingPOST1($user): \Com\Keap\Sdk\Core\Model\User
+createUserUsingPOST1($create_user_request_v2): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Create a User
@@ -34,10 +34,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$user = new \Com\Keap\Sdk\Core\Model\CreateUserRequestV2(); // \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 | user
+$create_user_request_v2 = new \Com\Keap\Sdk\Core\Model\CreateUserRequestV2(); // \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 | user
 
 try {
-    $result = $apiInstance->createUserUsingPOST1($user);
+    $result = $apiInstance->createUserUsingPOST1($create_user_request_v2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->createUserUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user** | [**\Com\Keap\Sdk\Core\Model\CreateUserRequestV2**](../Model/CreateUserRequestV2.md)| user | [optional] |
+| **create_user_request_v2** | [**\Com\Keap\Sdk\Core\Model\CreateUserRequestV2**](../Model/CreateUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -289,7 +289,7 @@ No authorization required
 ## `patchUserUsingPATCH()`
 
 ```php
-patchUserUsingPATCH($user_id, $update_mask, $user): \Com\Keap\Sdk\Core\Model\User
+patchUserUsingPATCH($user_id, $update_mask, $patch_user_request_v2): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Update User
@@ -310,10 +310,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\UsersApi(
 );
 $user_id = 'user_id_example'; // string | user_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$user = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
+$patch_user_request_v2 = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
 
 try {
-    $result = $apiInstance->patchUserUsingPATCH($user_id, $update_mask, $user);
+    $result = $apiInstance->patchUserUsingPATCH($user_id, $update_mask, $patch_user_request_v2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->patchUserUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -326,7 +326,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **user_id** | **string**| user_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **user** | [**\Com\Keap\Sdk\Core\Model\PatchUserRequestV2**](../Model/PatchUserRequestV2.md)| user | [optional] |
+| **patch_user_request_v2** | [**\Com\Keap\Sdk\Core\Model\PatchUserRequestV2**](../Model/PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
 

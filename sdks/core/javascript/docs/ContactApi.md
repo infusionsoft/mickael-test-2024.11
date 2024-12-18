@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 ## createContactLinkTypeUsingPOST
 
-> ContactLinkType createContactLinkTypeUsingPOST(request)
+> ContactLinkType createContactLinkTypeUsingPOST(createContactLinkTypeRequest)
 
 Create a Contact Link type
 
@@ -34,8 +34,8 @@ Creates a new type of Contact Link.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
-let request = new KeapCoreServiceCoreSdk.CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
-apiInstance.createContactLinkTypeUsingPOST(request).then((data) => {
+let createContactLinkTypeRequest = new KeapCoreServiceCoreSdk.CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
+apiInstance.createContactLinkTypeUsingPOST(createContactLinkTypeRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -48,7 +48,7 @@ apiInstance.createContactLinkTypeUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | 
+ **createContactLinkTypeRequest** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | 
 
 ### Return type
 
@@ -79,7 +79,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let opts = {
-  'contact': new KeapCoreServiceCoreSdk.CreatePatchContactRequest() // CreatePatchContactRequest | contact
+  'createPatchContactRequest': new KeapCoreServiceCoreSdk.CreatePatchContactRequest() // CreatePatchContactRequest | contact
 };
 apiInstance.createContactUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -94,7 +94,7 @@ apiInstance.createContactUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
+ **createPatchContactRequest** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
 
 ### Return type
 
@@ -501,7 +501,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.ContactApi();
 let contactId = "contactId_example"; // String | contact_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'contact': new KeapCoreServiceCoreSdk.CreatePatchContactRequest() // CreatePatchContactRequest | contact
+  'createPatchContactRequest': new KeapCoreServiceCoreSdk.CreatePatchContactRequest() // CreatePatchContactRequest | contact
 };
 apiInstance.patchContactUsingPATCH(contactId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contactId** | **String**| contact_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
+ **createPatchContactRequest** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] 
 
 ### Return type
 

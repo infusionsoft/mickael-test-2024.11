@@ -75,14 +75,14 @@ export class SubscriptionsApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Subscription object.
      * Create a Subscription\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createSubscriptionCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("SubscriptionsApi", "createSubscriptionCustomFieldUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("SubscriptionsApi", "createSubscriptionCustomFieldUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -100,7 +100,7 @@ export class SubscriptionsApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -236,10 +236,10 @@ export class SubscriptionsApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Subscription object.
      * Update a Subscription\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateSubscriptionCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -248,9 +248,9 @@ export class SubscriptionsApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("SubscriptionsApi", "updateSubscriptionCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("SubscriptionsApi", "updateSubscriptionCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -278,7 +278,7 @@ export class SubscriptionsApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

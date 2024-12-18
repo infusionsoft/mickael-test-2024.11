@@ -25,7 +25,7 @@ const apiInstance = new LeadSourcesApi(configuration);
 
 const request: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {
     // leadsource (optional)
-  leadsource: {
+  createLeadSourceRequest: {
     category: {
       id: "id_example",
       name: "name_example",
@@ -50,7 +50,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **leadsource** | **CreateLeadSourceRequest**| leadsource |
+ **createLeadSourceRequest** | **CreateLeadSourceRequest**| leadsource |
 
 
 ### Return type

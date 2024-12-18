@@ -142,16 +142,16 @@ class UsersApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createUserUsingPOST1($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
-        list($response) = $this->createUserUsingPOST1WithHttpInfo($user, $contentType);
+        list($response) = $this->createUserUsingPOST1WithHttpInfo($create_user_request_v2, $contentType);
         return $response;
     }
 
@@ -160,16 +160,16 @@ class UsersApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUserUsingPOST1WithHttpInfo($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1WithHttpInfo($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
-        $request = $this->createUserUsingPOST1Request($user, $contentType);
+        $request = $this->createUserUsingPOST1Request($create_user_request_v2, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -355,15 +355,15 @@ class UsersApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserUsingPOST1Async($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1Async($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
-        return $this->createUserUsingPOST1AsyncWithHttpInfo($user, $contentType)
+        return $this->createUserUsingPOST1AsyncWithHttpInfo($create_user_request_v2, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -376,16 +376,16 @@ class UsersApi
      *
      * Create a User
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserUsingPOST1AsyncWithHttpInfo($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1AsyncWithHttpInfo($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\User';
-        $request = $this->createUserUsingPOST1Request($user, $contentType);
+        $request = $this->createUserUsingPOST1Request($create_user_request_v2, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -426,13 +426,13 @@ class UsersApi
     /**
      * Create request for operation 'createUserUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 $create_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUserUsingPOST1Request($user = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
+    public function createUserUsingPOST1Request($create_user_request_v2 = null, string $contentType = self::contentTypes['createUserUsingPOST1'][0])
     {
 
 
@@ -455,12 +455,12 @@ class UsersApi
         );
 
         // for model (json/xml)
-        if (isset($user)) {
+        if (isset($create_user_request_v2)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_user_request_v2));
             } else {
-                $httpBody = $user;
+                $httpBody = $create_user_request_v2;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2080,8 +2080,8 @@ class UsersApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2089,8 +2089,8 @@ class UsersApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -2157,16 +2157,16 @@ class UsersApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchUserUsingPATCH($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCH($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
-        list($response) = $this->patchUserUsingPATCHWithHttpInfo($user_id, $update_mask, $user, $contentType);
+        list($response) = $this->patchUserUsingPATCHWithHttpInfo($user_id, $update_mask, $patch_user_request_v2, $contentType);
         return $response;
     }
 
@@ -2177,16 +2177,16 @@ class UsersApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\User|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchUserUsingPATCHWithHttpInfo($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHWithHttpInfo($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
-        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $user, $contentType);
+        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $patch_user_request_v2, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2409,15 +2409,15 @@ class UsersApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserUsingPATCHAsync($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHAsync($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
-        return $this->patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask, $user, $contentType)
+        return $this->patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask, $patch_user_request_v2, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2432,16 +2432,16 @@ class UsersApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHAsyncWithHttpInfo($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\User';
-        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $user, $contentType);
+        $request = $this->patchUserUsingPATCHRequest($user_id, $update_mask, $patch_user_request_v2, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2484,13 +2484,13 @@ class UsersApi
      *
      * @param  string $user_id user_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $user user (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 $patch_user_request_v2 user (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchUserUsingPATCHRequest($user_id, $update_mask = null, $user = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
+    public function patchUserUsingPATCHRequest($user_id, $update_mask = null, $patch_user_request_v2 = null, string $contentType = self::contentTypes['patchUserUsingPATCH'][0])
     {
 
         // verify the required parameter 'user_id' is set
@@ -2538,12 +2538,12 @@ class UsersApi
         );
 
         // for model (json/xml)
-        if (isset($user)) {
+        if (isset($patch_user_request_v2)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_user_request_v2));
             } else {
-                $httpBody = $user;
+                $httpBody = $patch_user_request_v2;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

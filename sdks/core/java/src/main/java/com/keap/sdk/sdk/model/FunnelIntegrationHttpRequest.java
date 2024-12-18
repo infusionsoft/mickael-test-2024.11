@@ -72,7 +72,7 @@ public class FunnelIntegrationHttpRequest implements Serializable {
    * The body of the HTTP request that will be made when this action is processed in the builder(s).
    * @return body
    */
-  @jakarta.annotation.Nullable  @Schema(example = "", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The body of the HTTP request that will be made when this action is processed in the builder(s).")
+  @jakarta.annotation.Nullable  @Schema(example = "{\"contact_id\":\"123\"}", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The body of the HTTP request that will be made when this action is processed in the builder(s).")
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getBody() {

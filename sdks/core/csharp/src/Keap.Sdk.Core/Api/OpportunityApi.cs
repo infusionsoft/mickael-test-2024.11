@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Opportunity object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST(CreateCustomFieldRequest customField, int operationIndex = 0);
+        CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create an Opportunity Custom Field
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Opportunity object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0);
         /// <summary>
         /// Create an Opportunity Stage
         /// </summary>
@@ -58,10 +58,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Opportunity Stage
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestOpportunityStage</returns>
-        RestOpportunityStage CreateOpportunityStageUsingPOST(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0);
+        RestOpportunityStage CreateOpportunityStageUsingPOST(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create an Opportunity Stage
@@ -70,10 +70,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Opportunity Stage
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestOpportunityStage</returns>
-        ApiResponse<RestOpportunityStage> CreateOpportunityStageUsingPOSTWithHttpInfo(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0);
+        ApiResponse<RestOpportunityStage> CreateOpportunityStageUsingPOSTWithHttpInfo(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0);
         /// <summary>
         /// Create an Opportunity
         /// </summary>
@@ -81,10 +81,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new opportunity as the authenticated user.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestV2Opportunity</returns>
-        RestV2Opportunity CreateOpportunityUsingPOST1(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0);
+        RestV2Opportunity CreateOpportunityUsingPOST1(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create an Opportunity
@@ -93,10 +93,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new opportunity as the authenticated user.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestV2Opportunity</returns>
-        ApiResponse<RestV2Opportunity> CreateOpportunityUsingPOST1WithHttpInfo(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0);
+        ApiResponse<RestV2Opportunity> CreateOpportunityUsingPOST1WithHttpInfo(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0);
         /// <summary>
         /// Delete an Opportunity Stage
         /// </summary>
@@ -257,11 +257,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Opportunity&#39;s Custom Field
@@ -271,11 +271,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        ApiResponse<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         /// <summary>
         /// Update an Opportunity Stage
         /// </summary>
@@ -284,11 +284,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestOpportunityStage</returns>
-        RestOpportunityStage UpdateOpportunityStageUsingPATCH(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        RestOpportunityStage UpdateOpportunityStageUsingPATCH(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update an Opportunity Stage
@@ -298,11 +298,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestOpportunityStage</returns>
-        ApiResponse<RestOpportunityStage> UpdateOpportunityStageUsingPATCHWithHttpInfo(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<RestOpportunityStage> UpdateOpportunityStageUsingPATCHWithHttpInfo(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         /// <summary>
         /// Update an opportunity
         /// </summary>
@@ -311,11 +311,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestV2Opportunity</returns>
-        RestV2Opportunity UpdateOpportunityUsingPATCH(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        RestV2Opportunity UpdateOpportunityUsingPATCH(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update an opportunity
@@ -325,11 +325,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestV2Opportunity</returns>
-        ApiResponse<RestV2Opportunity> UpdateOpportunityUsingPATCHWithHttpInfo(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<RestV2Opportunity> UpdateOpportunityUsingPATCHWithHttpInfo(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -346,11 +346,11 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Opportunity object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTAsync(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Opportunity Custom Field
@@ -359,11 +359,11 @@ namespace Keap.Sdk.Core.Api
         /// Adds a custom field of the specified type and options to the Opportunity object.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an Opportunity Stage
         /// </summary>
@@ -371,11 +371,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Opportunity Stage
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestOpportunityStage</returns>
-        System.Threading.Tasks.Task<RestOpportunityStage> CreateOpportunityStageUsingPOSTAsync(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestOpportunityStage> CreateOpportunityStageUsingPOSTAsync(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Opportunity Stage
@@ -384,11 +384,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Opportunity Stage
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestOpportunityStage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestOpportunityStage>> CreateOpportunityStageUsingPOSTWithHttpInfoAsync(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestOpportunityStage>> CreateOpportunityStageUsingPOSTWithHttpInfoAsync(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an Opportunity
         /// </summary>
@@ -396,11 +396,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new opportunity as the authenticated user.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestV2Opportunity</returns>
-        System.Threading.Tasks.Task<RestV2Opportunity> CreateOpportunityUsingPOST1Async(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestV2Opportunity> CreateOpportunityUsingPOST1Async(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Opportunity
@@ -409,11 +409,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new opportunity as the authenticated user.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestV2Opportunity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestV2Opportunity>> CreateOpportunityUsingPOST1WithHttpInfoAsync(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestV2Opportunity>> CreateOpportunityUsingPOST1WithHttpInfoAsync(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an Opportunity Stage
         /// </summary>
@@ -586,12 +586,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Opportunity&#39;s Custom Field
@@ -601,12 +601,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomFieldMetaData>> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update an Opportunity Stage
         /// </summary>
@@ -615,12 +615,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestOpportunityStage</returns>
-        System.Threading.Tasks.Task<RestOpportunityStage> UpdateOpportunityStageUsingPATCHAsync(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestOpportunityStage> UpdateOpportunityStageUsingPATCHAsync(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update an Opportunity Stage
@@ -630,12 +630,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestOpportunityStage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestOpportunityStage>> UpdateOpportunityStageUsingPATCHWithHttpInfoAsync(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestOpportunityStage>> UpdateOpportunityStageUsingPATCHWithHttpInfoAsync(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update an opportunity
         /// </summary>
@@ -644,12 +644,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestV2Opportunity</returns>
-        System.Threading.Tasks.Task<RestV2Opportunity> UpdateOpportunityUsingPATCHAsync(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestV2Opportunity> UpdateOpportunityUsingPATCHAsync(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update an opportunity
@@ -659,12 +659,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestV2Opportunity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestV2Opportunity>> UpdateOpportunityUsingPATCHWithHttpInfoAsync(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestV2Opportunity>> UpdateOpportunityUsingPATCHWithHttpInfoAsync(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -789,12 +789,12 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Custom Field Adds a custom field of the specified type and options to the Opportunity object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest);
             return localVarResponse.Data;
         }
 
@@ -802,15 +802,15 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Custom Field Adds a custom field of the specified type and options to the Opportunity object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'customField' is set
-            if (customField == null)
+            // verify the required parameter 'createCustomFieldRequest' is set
+            if (createCustomFieldRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling OpportunityApi->CreateOpportunityCustomFieldsUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createCustomFieldRequest' when calling OpportunityApi->CreateOpportunityCustomFieldsUsingPOST");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -836,7 +836,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = customField;
+            localVarRequestOptions.Data = createCustomFieldRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.CreateOpportunityCustomFieldsUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -860,13 +860,13 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Custom Field Adds a custom field of the specified type and options to the Opportunity object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> CreateOpportunityCustomFieldsUsingPOSTAsync(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateOpportunityCustomFieldsUsingPOSTWithHttpInfoAsync(customField, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await CreateOpportunityCustomFieldsUsingPOSTWithHttpInfoAsync(createCustomFieldRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -874,16 +874,16 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Custom Field Adds a custom field of the specified type and options to the Opportunity object.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customField">customField</param>
+        /// <param name="createCustomFieldRequest">customField</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest customField, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> CreateOpportunityCustomFieldsUsingPOSTWithHttpInfoAsync(CreateCustomFieldRequest createCustomFieldRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'customField' is set
-            if (customField == null)
+            // verify the required parameter 'createCustomFieldRequest' is set
+            if (createCustomFieldRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customField' when calling OpportunityApi->CreateOpportunityCustomFieldsUsingPOST");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createCustomFieldRequest' when calling OpportunityApi->CreateOpportunityCustomFieldsUsingPOST");
             }
 
 
@@ -910,7 +910,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = customField;
+            localVarRequestOptions.Data = createCustomFieldRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.CreateOpportunityCustomFieldsUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -935,12 +935,12 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Stage Creates a new Opportunity Stage
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestOpportunityStage</returns>
-        public RestOpportunityStage CreateOpportunityStageUsingPOST(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0)
+        public RestOpportunityStage CreateOpportunityStageUsingPOST(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = CreateOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
+            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = CreateOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest);
             return localVarResponse.Data;
         }
 
@@ -948,10 +948,10 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Stage Creates a new Opportunity Stage
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestOpportunityStage</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> CreateOpportunityStageUsingPOSTWithHttpInfo(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> CreateOpportunityStageUsingPOSTWithHttpInfo(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -976,7 +976,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = opportunityStage;
+            localVarRequestOptions.Data = createOpportunityStageRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.CreateOpportunityStageUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1000,13 +1000,13 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Stage Creates a new Opportunity Stage
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestOpportunityStage</returns>
-        public async System.Threading.Tasks.Task<RestOpportunityStage> CreateOpportunityStageUsingPOSTAsync(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestOpportunityStage> CreateOpportunityStageUsingPOSTAsync(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = await CreateOpportunityStageUsingPOSTWithHttpInfoAsync(opportunityStage, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = await CreateOpportunityStageUsingPOSTWithHttpInfoAsync(createOpportunityStageRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1014,11 +1014,11 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Stage Creates a new Opportunity Stage
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunityStage">opportunity (optional)</param>
+        /// <param name="createOpportunityStageRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestOpportunityStage)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage>> CreateOpportunityStageUsingPOSTWithHttpInfoAsync(CreateOpportunityStageRequest? opportunityStage = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage>> CreateOpportunityStageUsingPOSTWithHttpInfoAsync(CreateOpportunityStageRequest? createOpportunityStageRequest = default(CreateOpportunityStageRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1044,7 +1044,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = opportunityStage;
+            localVarRequestOptions.Data = createOpportunityStageRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.CreateOpportunityStageUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1069,12 +1069,12 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Creates a new opportunity as the authenticated user.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestV2Opportunity</returns>
-        public RestV2Opportunity CreateOpportunityUsingPOST1(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0)
+        public RestV2Opportunity CreateOpportunityUsingPOST1(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = CreateOpportunityUsingPOST1WithHttpInfo(opportunity);
+            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = CreateOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest);
             return localVarResponse.Data;
         }
 
@@ -1082,10 +1082,10 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Creates a new opportunity as the authenticated user.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestV2Opportunity</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> CreateOpportunityUsingPOST1WithHttpInfo(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> CreateOpportunityUsingPOST1WithHttpInfo(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -1110,7 +1110,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = opportunity;
+            localVarRequestOptions.Data = createOpportunityRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.CreateOpportunityUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1134,13 +1134,13 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Creates a new opportunity as the authenticated user.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestV2Opportunity</returns>
-        public async System.Threading.Tasks.Task<RestV2Opportunity> CreateOpportunityUsingPOST1Async(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestV2Opportunity> CreateOpportunityUsingPOST1Async(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = await CreateOpportunityUsingPOST1WithHttpInfoAsync(opportunity, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = await CreateOpportunityUsingPOST1WithHttpInfoAsync(createOpportunityRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1148,11 +1148,11 @@ namespace Keap.Sdk.Core.Api
         /// Create an Opportunity Creates a new opportunity as the authenticated user.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="opportunity">opportunity (optional)</param>
+        /// <param name="createOpportunityRequest">opportunity (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestV2Opportunity)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity>> CreateOpportunityUsingPOST1WithHttpInfoAsync(CreateOpportunityRequest? opportunity = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity>> CreateOpportunityUsingPOST1WithHttpInfoAsync(CreateOpportunityRequest? createOpportunityRequest = default(CreateOpportunityRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1178,7 +1178,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = opportunity;
+            localVarRequestOptions.Data = createOpportunityRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.CreateOpportunityUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2136,13 +2136,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomFieldMetaData</returns>
-        public CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             return localVarResponse.Data;
         }
 
@@ -2151,11 +2151,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomFieldMetaData</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
@@ -2163,10 +2163,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling OpportunityApi->UpdateOpportunityCustomFieldUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+            if (updateCustomFieldMetaDataRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OpportunityApi->UpdateOpportunityCustomFieldUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateCustomFieldMetaDataRequest' when calling OpportunityApi->UpdateOpportunityCustomFieldUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2197,7 +2197,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateCustomFieldMetaDataRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.UpdateOpportunityCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2222,14 +2222,14 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomFieldMetaData</returns>
-        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomFieldMetaData> UpdateOpportunityCustomFieldUsingPATCHAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateOpportunityCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData> localVarResponse = await UpdateOpportunityCustomFieldUsingPATCHWithHttpInfoAsync(customFieldId, updateCustomFieldMetaDataRequest, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2238,12 +2238,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customFieldId">custom_field_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateCustomFieldMetaDataRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomFieldMetaData)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<CustomFieldMetaData>> UpdateOpportunityCustomFieldUsingPATCHWithHttpInfoAsync(string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customFieldId' is set
             if (customFieldId == null)
@@ -2251,10 +2251,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'customFieldId' when calling OpportunityApi->UpdateOpportunityCustomFieldUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+            if (updateCustomFieldMetaDataRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OpportunityApi->UpdateOpportunityCustomFieldUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateCustomFieldMetaDataRequest' when calling OpportunityApi->UpdateOpportunityCustomFieldUsingPATCH");
             }
 
 
@@ -2286,7 +2286,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateCustomFieldMetaDataRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.UpdateOpportunityCustomFieldUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2312,13 +2312,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestOpportunityStage</returns>
-        public RestOpportunityStage UpdateOpportunityStageUsingPATCH(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public RestOpportunityStage UpdateOpportunityStageUsingPATCH(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask);
             return localVarResponse.Data;
         }
 
@@ -2327,11 +2327,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestOpportunityStage</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> UpdateOpportunityStageUsingPATCHWithHttpInfo(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> UpdateOpportunityStageUsingPATCHWithHttpInfo(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'stageId' is set
             if (stageId == null)
@@ -2339,10 +2339,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'stageId' when calling OpportunityApi->UpdateOpportunityStageUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateOpportunityStageRequest' is set
+            if (updateOpportunityStageRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OpportunityApi->UpdateOpportunityStageUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateOpportunityStageRequest' when calling OpportunityApi->UpdateOpportunityStageUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2373,7 +2373,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateOpportunityStageRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.UpdateOpportunityStageUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2398,14 +2398,14 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestOpportunityStage</returns>
-        public async System.Threading.Tasks.Task<RestOpportunityStage> UpdateOpportunityStageUsingPATCHAsync(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestOpportunityStage> UpdateOpportunityStageUsingPATCHAsync(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = await UpdateOpportunityStageUsingPATCHWithHttpInfoAsync(stageId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage> localVarResponse = await UpdateOpportunityStageUsingPATCHWithHttpInfoAsync(stageId, updateOpportunityStageRequest, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2414,12 +2414,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stageId">stage_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateOpportunityStageRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestOpportunityStage)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage>> UpdateOpportunityStageUsingPATCHWithHttpInfoAsync(string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestOpportunityStage>> UpdateOpportunityStageUsingPATCHWithHttpInfoAsync(string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'stageId' is set
             if (stageId == null)
@@ -2427,10 +2427,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'stageId' when calling OpportunityApi->UpdateOpportunityStageUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateOpportunityStageRequest' is set
+            if (updateOpportunityStageRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OpportunityApi->UpdateOpportunityStageUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateOpportunityStageRequest' when calling OpportunityApi->UpdateOpportunityStageUsingPATCH");
             }
 
 
@@ -2462,7 +2462,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateOpportunityStageRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.UpdateOpportunityStageUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2488,13 +2488,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RestV2Opportunity</returns>
-        public RestV2Opportunity UpdateOpportunityUsingPATCH(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public RestV2Opportunity UpdateOpportunityUsingPATCH(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask);
             return localVarResponse.Data;
         }
 
@@ -2503,11 +2503,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RestV2Opportunity</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> UpdateOpportunityUsingPATCHWithHttpInfo(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> UpdateOpportunityUsingPATCHWithHttpInfo(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'opportunityId' is set
             if (opportunityId == null)
@@ -2515,10 +2515,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'opportunityId' when calling OpportunityApi->UpdateOpportunityUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'patchOpportunityRequest' is set
+            if (patchOpportunityRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OpportunityApi->UpdateOpportunityUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'patchOpportunityRequest' when calling OpportunityApi->UpdateOpportunityUsingPATCH");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -2549,7 +2549,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = patchOpportunityRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.UpdateOpportunityUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -2574,14 +2574,14 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestV2Opportunity</returns>
-        public async System.Threading.Tasks.Task<RestV2Opportunity> UpdateOpportunityUsingPATCHAsync(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestV2Opportunity> UpdateOpportunityUsingPATCHAsync(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = await UpdateOpportunityUsingPATCHWithHttpInfoAsync(opportunityId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity> localVarResponse = await UpdateOpportunityUsingPATCHWithHttpInfoAsync(opportunityId, patchOpportunityRequest, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2590,12 +2590,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="opportunityId">opportunity_id</param>
-        /// <param name="request">request</param>
+        /// <param name="patchOpportunityRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestV2Opportunity)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity>> UpdateOpportunityUsingPATCHWithHttpInfoAsync(string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<RestV2Opportunity>> UpdateOpportunityUsingPATCHWithHttpInfoAsync(string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'opportunityId' is set
             if (opportunityId == null)
@@ -2603,10 +2603,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'opportunityId' when calling OpportunityApi->UpdateOpportunityUsingPATCH");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'patchOpportunityRequest' is set
+            if (patchOpportunityRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling OpportunityApi->UpdateOpportunityUsingPATCH");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'patchOpportunityRequest' when calling OpportunityApi->UpdateOpportunityUsingPATCH");
             }
 
 
@@ -2638,7 +2638,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = patchOpportunityRequest;
 
             localVarRequestOptions.Operation = "OpportunityApi.UpdateOpportunityUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

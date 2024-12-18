@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Record of an Email sent to a Contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EmailSentWithContent</returns>
-        EmailSentWithContent CreateEmailUsingPOST1(CreateEmailSentRequest emailWithContent, int operationIndex = 0);
+        EmailSentWithContent CreateEmailUsingPOST1(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create an Email Record
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Record of an Email sent to a Contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EmailSentWithContent</returns>
-        ApiResponse<EmailSentWithContent> CreateEmailUsingPOST1WithHttpInfo(CreateEmailSentRequest emailWithContent, int operationIndex = 0);
+        ApiResponse<EmailSentWithContent> CreateEmailUsingPOST1WithHttpInfo(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0);
         /// <summary>
         /// Create a set of Email Records
         /// </summary>
@@ -182,11 +182,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Record of an Email sent to a Contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EmailSentWithContent</returns>
-        System.Threading.Tasks.Task<EmailSentWithContent> CreateEmailUsingPOST1Async(CreateEmailSentRequest emailWithContent, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EmailSentWithContent> CreateEmailUsingPOST1Async(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Email Record
@@ -195,11 +195,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Record of an Email sent to a Contact
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EmailSentWithContent)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailSentWithContent>> CreateEmailUsingPOST1WithHttpInfoAsync(CreateEmailSentRequest emailWithContent, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EmailSentWithContent>> CreateEmailUsingPOST1WithHttpInfoAsync(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a set of Email Records
         /// </summary>
@@ -449,12 +449,12 @@ namespace Keap.Sdk.Core.Api
         /// Create an Email Record Creates a Record of an Email sent to a Contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EmailSentWithContent</returns>
-        public EmailSentWithContent CreateEmailUsingPOST1(CreateEmailSentRequest emailWithContent, int operationIndex = 0)
+        public EmailSentWithContent CreateEmailUsingPOST1(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent> localVarResponse = CreateEmailUsingPOST1WithHttpInfo(emailWithContent);
+            Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent> localVarResponse = CreateEmailUsingPOST1WithHttpInfo(createEmailSentRequest);
             return localVarResponse.Data;
         }
 
@@ -462,15 +462,15 @@ namespace Keap.Sdk.Core.Api
         /// Create an Email Record Creates a Record of an Email sent to a Contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EmailSentWithContent</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent> CreateEmailUsingPOST1WithHttpInfo(CreateEmailSentRequest emailWithContent, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent> CreateEmailUsingPOST1WithHttpInfo(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'emailWithContent' is set
-            if (emailWithContent == null)
+            // verify the required parameter 'createEmailSentRequest' is set
+            if (createEmailSentRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'emailWithContent' when calling EmailApi->CreateEmailUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createEmailSentRequest' when calling EmailApi->CreateEmailUsingPOST1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -496,7 +496,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = emailWithContent;
+            localVarRequestOptions.Data = createEmailSentRequest;
 
             localVarRequestOptions.Operation = "EmailApi.CreateEmailUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -520,13 +520,13 @@ namespace Keap.Sdk.Core.Api
         /// Create an Email Record Creates a Record of an Email sent to a Contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EmailSentWithContent</returns>
-        public async System.Threading.Tasks.Task<EmailSentWithContent> CreateEmailUsingPOST1Async(CreateEmailSentRequest emailWithContent, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EmailSentWithContent> CreateEmailUsingPOST1Async(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent> localVarResponse = await CreateEmailUsingPOST1WithHttpInfoAsync(emailWithContent, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent> localVarResponse = await CreateEmailUsingPOST1WithHttpInfoAsync(createEmailSentRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -534,16 +534,16 @@ namespace Keap.Sdk.Core.Api
         /// Create an Email Record Creates a Record of an Email sent to a Contact
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailWithContent">emailWithContent</param>
+        /// <param name="createEmailSentRequest">emailWithContent</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EmailSentWithContent)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent>> CreateEmailUsingPOST1WithHttpInfoAsync(CreateEmailSentRequest emailWithContent, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<EmailSentWithContent>> CreateEmailUsingPOST1WithHttpInfoAsync(CreateEmailSentRequest createEmailSentRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'emailWithContent' is set
-            if (emailWithContent == null)
+            // verify the required parameter 'createEmailSentRequest' is set
+            if (createEmailSentRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'emailWithContent' when calling EmailApi->CreateEmailUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createEmailSentRequest' when calling EmailApi->CreateEmailUsingPOST1");
             }
 
 
@@ -570,7 +570,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = emailWithContent;
+            localVarRequestOptions.Data = createEmailSentRequest;
 
             localVarRequestOptions.Operation = "EmailApi.CreateEmailUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;

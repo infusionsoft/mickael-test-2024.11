@@ -463,16 +463,16 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $insert_affiliate Affiliate request to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function addAffiliateUsingPOST($insert_affiliate = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
+    public function addAffiliateUsingPOST($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
-        list($response) = $this->addAffiliateUsingPOSTWithHttpInfo($insert_affiliate, $contentType);
+        list($response) = $this->addAffiliateUsingPOSTWithHttpInfo($create_affiliate_request, $contentType);
         return $response;
     }
 
@@ -481,16 +481,16 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $insert_affiliate Affiliate request to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addAffiliateUsingPOSTWithHttpInfo($insert_affiliate = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
+    public function addAffiliateUsingPOSTWithHttpInfo($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
-        $request = $this->addAffiliateUsingPOSTRequest($insert_affiliate, $contentType);
+        $request = $this->addAffiliateUsingPOSTRequest($create_affiliate_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -676,15 +676,15 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $insert_affiliate Affiliate request to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addAffiliateUsingPOSTAsync($insert_affiliate = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
+    public function addAffiliateUsingPOSTAsync($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
-        return $this->addAffiliateUsingPOSTAsyncWithHttpInfo($insert_affiliate, $contentType)
+        return $this->addAffiliateUsingPOSTAsyncWithHttpInfo($create_affiliate_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -697,16 +697,16 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $insert_affiliate Affiliate request to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addAffiliateUsingPOSTAsyncWithHttpInfo($insert_affiliate = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
+    public function addAffiliateUsingPOSTAsyncWithHttpInfo($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
-        $request = $this->addAffiliateUsingPOSTRequest($insert_affiliate, $contentType);
+        $request = $this->addAffiliateUsingPOSTRequest($create_affiliate_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -747,13 +747,13 @@ class AffiliateApi
     /**
      * Create request for operation 'addAffiliateUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $insert_affiliate Affiliate request to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addAffiliateUsingPOSTRequest($insert_affiliate = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
+    public function addAffiliateUsingPOSTRequest($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
 
 
@@ -776,12 +776,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($insert_affiliate)) {
+        if (isset($create_affiliate_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($insert_affiliate));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_affiliate_request));
             } else {
-                $httpBody = $insert_affiliate;
+                $httpBody = $create_affiliate_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -834,16 +834,16 @@ class AffiliateApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function addCommissionProgramUsingPOST($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOST($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
-        list($response) = $this->addCommissionProgramUsingPOSTWithHttpInfo($insert_commission_program, $contentType);
+        list($response) = $this->addCommissionProgramUsingPOSTWithHttpInfo($create_commission_program_request, $contentType);
         return $response;
     }
 
@@ -852,16 +852,16 @@ class AffiliateApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addCommissionProgramUsingPOSTWithHttpInfo($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTWithHttpInfo($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
-        $request = $this->addCommissionProgramUsingPOSTRequest($insert_commission_program, $contentType);
+        $request = $this->addCommissionProgramUsingPOSTRequest($create_commission_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1047,15 +1047,15 @@ class AffiliateApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addCommissionProgramUsingPOSTAsync($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTAsync($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
-        return $this->addCommissionProgramUsingPOSTAsyncWithHttpInfo($insert_commission_program, $contentType)
+        return $this->addCommissionProgramUsingPOSTAsyncWithHttpInfo($create_commission_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1068,16 +1068,16 @@ class AffiliateApi
      *
      * Create an Affiliate Commission Program
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addCommissionProgramUsingPOSTAsyncWithHttpInfo($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTAsyncWithHttpInfo($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse';
-        $request = $this->addCommissionProgramUsingPOSTRequest($insert_commission_program, $contentType);
+        $request = $this->addCommissionProgramUsingPOSTRequest($create_commission_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1118,13 +1118,13 @@ class AffiliateApi
     /**
      * Create request for operation 'addCommissionProgramUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $insert_commission_program Commission Program to insert (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest $create_commission_program_request Commission Program to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addCommissionProgramUsingPOSTRequest($insert_commission_program = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
+    public function addCommissionProgramUsingPOSTRequest($create_commission_program_request = null, string $contentType = self::contentTypes['addCommissionProgramUsingPOST'][0])
     {
 
 
@@ -1147,12 +1147,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($insert_commission_program)) {
+        if (isset($create_commission_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($insert_commission_program));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_commission_program_request));
             } else {
-                $httpBody = $insert_commission_program;
+                $httpBody = $create_commission_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1206,16 +1206,16 @@ class AffiliateApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\ProductCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function assignProductCommissionProgramUsingPOST($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOST($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
-        list($response) = $this->assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $product_commission_program, $contentType);
+        list($response) = $this->assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_product_commission_program_request, $contentType);
         return $response;
     }
 
@@ -1225,16 +1225,16 @@ class AffiliateApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\ProductCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
-        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $product_commission_program, $contentType);
+        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $create_product_commission_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1421,15 +1421,15 @@ class AffiliateApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignProductCommissionProgramUsingPOSTAsync($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTAsync($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
-        return $this->assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $product_commission_program, $contentType)
+        return $this->assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_product_commission_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1443,16 +1443,16 @@ class AffiliateApi
      * Assign a Product Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\ProductCommissionProgram';
-        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $product_commission_program, $contentType);
+        $request = $this->assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $create_product_commission_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1494,13 +1494,13 @@ class AffiliateApi
      * Create request for operation 'assignProductCommissionProgramUsingPOST'
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $product_commission_program Product Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest $create_product_commission_program_request Product Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignProductCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $product_commission_program = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
+    public function assignProductCommissionProgramUsingPOSTRequest($commission_program_id, $create_product_commission_program_request = null, string $contentType = self::contentTypes['assignProductCommissionProgramUsingPOST'][0])
     {
 
         // verify the required parameter 'commission_program_id' is set
@@ -1538,12 +1538,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($product_commission_program)) {
+        if (isset($create_product_commission_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($product_commission_program));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_product_commission_program_request));
             } else {
-                $httpBody = $product_commission_program;
+                $httpBody = $create_product_commission_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1597,16 +1597,16 @@ class AffiliateApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
-        list($response) = $this->assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $subscription_commission_program, $contentType);
+        list($response) = $this->assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_subscription_commission_program_request, $contentType);
         return $response;
     }
 
@@ -1616,16 +1616,16 @@ class AffiliateApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
-        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $subscription_commission_program, $contentType);
+        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $create_subscription_commission_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1812,15 +1812,15 @@ class AffiliateApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTAsync($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTAsync($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
-        return $this->assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $subscription_commission_program, $contentType)
+        return $this->assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_subscription_commission_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1834,16 +1834,16 @@ class AffiliateApi
      * Assign a Subscription Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTAsyncWithHttpInfo($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram';
-        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $subscription_commission_program, $contentType);
+        $request = $this->assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $create_subscription_commission_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1885,13 +1885,13 @@ class AffiliateApi
      * Create request for operation 'assignSubscriptionCommissionProgramUsingPOST'
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $subscription_commission_program Subscription Commission Program (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest $create_subscription_commission_program_request Subscription Commission Program (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $subscription_commission_program = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
+    public function assignSubscriptionCommissionProgramUsingPOSTRequest($commission_program_id, $create_subscription_commission_program_request = null, string $contentType = self::contentTypes['assignSubscriptionCommissionProgramUsingPOST'][0])
     {
 
         // verify the required parameter 'commission_program_id' is set
@@ -1929,12 +1929,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($subscription_commission_program)) {
+        if (isset($create_subscription_commission_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($subscription_commission_program));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_subscription_commission_program_request));
             } else {
-                $httpBody = $subscription_commission_program;
+                $httpBody = $create_subscription_commission_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1987,16 +1987,16 @@ class AffiliateApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createAffiliateCustomFieldUsingPOST($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOST($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
-        list($response) = $this->createAffiliateCustomFieldUsingPOSTWithHttpInfo($custom_field, $contentType);
+        list($response) = $this->createAffiliateCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, $contentType);
         return $response;
     }
 
@@ -2005,16 +2005,16 @@ class AffiliateApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAffiliateCustomFieldUsingPOSTWithHttpInfo($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
-        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2200,15 +2200,15 @@ class AffiliateApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAffiliateCustomFieldUsingPOSTAsync($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTAsync($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
-        return $this->createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, $contentType)
+        return $this->createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2221,16 +2221,16 @@ class AffiliateApi
      *
      * Create an Affiliate Custom Field
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTAsyncWithHttpInfo($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($custom_field, $contentType);
+        $request = $this->createAffiliateCustomFieldUsingPOSTRequest($create_custom_field_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2271,19 +2271,19 @@ class AffiliateApi
     /**
      * Create request for operation 'createAffiliateCustomFieldUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $custom_field customField (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest $create_custom_field_request customField (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAffiliateCustomFieldUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAffiliateCustomFieldUsingPOSTRequest($custom_field, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
+    public function createAffiliateCustomFieldUsingPOSTRequest($create_custom_field_request, string $contentType = self::contentTypes['createAffiliateCustomFieldUsingPOST'][0])
     {
 
-        // verify the required parameter 'custom_field' is set
-        if ($custom_field === null || (is_array($custom_field) && count($custom_field) === 0)) {
+        // verify the required parameter 'create_custom_field_request' is set
+        if ($create_custom_field_request === null || (is_array($create_custom_field_request) && count($create_custom_field_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $custom_field when calling createAffiliateCustomFieldUsingPOST'
+                'Missing the required parameter $create_custom_field_request when calling createAffiliateCustomFieldUsingPOST'
             );
         }
 
@@ -2306,12 +2306,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($custom_field)) {
+        if (isset($create_custom_field_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($custom_field));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_custom_field_request));
             } else {
-                $httpBody = $custom_field;
+                $httpBody = $create_custom_field_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2755,16 +2755,16 @@ class AffiliateApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createRedirectLinkUsingPOST($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOST($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
-        list($response) = $this->createRedirectLinkUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createRedirectLinkUsingPOSTWithHttpInfo($create_or_patch_affiliate_link_request, $contentType);
         return $response;
     }
 
@@ -2773,16 +2773,16 @@ class AffiliateApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createRedirectLinkUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTWithHttpInfo($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
-        $request = $this->createRedirectLinkUsingPOSTRequest($request, $contentType);
+        $request = $this->createRedirectLinkUsingPOSTRequest($create_or_patch_affiliate_link_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2968,15 +2968,15 @@ class AffiliateApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createRedirectLinkUsingPOSTAsync($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTAsync($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
-        return $this->createRedirectLinkUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createRedirectLinkUsingPOSTAsyncWithHttpInfo($create_or_patch_affiliate_link_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2989,16 +2989,16 @@ class AffiliateApi
      *
      * Create an Affiliate Link
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createRedirectLinkUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTAsyncWithHttpInfo($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateLink';
-        $request = $this->createRedirectLinkUsingPOSTRequest($request, $contentType);
+        $request = $this->createRedirectLinkUsingPOSTRequest($create_or_patch_affiliate_link_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3039,19 +3039,19 @@ class AffiliateApi
     /**
      * Create request for operation 'createRedirectLinkUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRedirectLinkUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createRedirectLinkUsingPOSTRequest($request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
+    public function createRedirectLinkUsingPOSTRequest($create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['createRedirectLinkUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_or_patch_affiliate_link_request' is set
+        if ($create_or_patch_affiliate_link_request === null || (is_array($create_or_patch_affiliate_link_request) && count($create_or_patch_affiliate_link_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createRedirectLinkUsingPOST'
+                'Missing the required parameter $create_or_patch_affiliate_link_request when calling createRedirectLinkUsingPOST'
             );
         }
 
@@ -3074,12 +3074,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_or_patch_affiliate_link_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_or_patch_affiliate_link_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_or_patch_affiliate_link_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4646,8 +4646,8 @@ class AffiliateApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -4655,8 +4655,8 @@ class AffiliateApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -4664,8 +4664,8 @@ class AffiliateApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -4673,8 +4673,8 @@ class AffiliateApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -6745,8 +6745,8 @@ class AffiliateApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -6754,8 +6754,8 @@ class AffiliateApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -6763,8 +6763,8 @@ class AffiliateApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -6772,8 +6772,8 @@ class AffiliateApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -7204,8 +7204,8 @@ class AffiliateApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -7213,8 +7213,8 @@ class AffiliateApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -7222,8 +7222,8 @@ class AffiliateApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -7231,8 +7231,8 @@ class AffiliateApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -7663,8 +7663,8 @@ class AffiliateApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -7672,8 +7672,8 @@ class AffiliateApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -7681,8 +7681,8 @@ class AffiliateApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -7690,8 +7690,8 @@ class AffiliateApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -9527,16 +9527,16 @@ class AffiliateApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function removeAffiliateFromProgramUsingPOST($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOST($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
-        $this->removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $remove_from_program_request, $contentType);
+        $this->removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $affiliate_remove_from_program_request, $contentType);
     }
 
     /**
@@ -9545,16 +9545,16 @@ class AffiliateApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTWithHttpInfo($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
-        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $remove_from_program_request, $contentType);
+        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $affiliate_remove_from_program_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9610,15 +9610,15 @@ class AffiliateApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeAffiliateFromProgramUsingPOSTAsync($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTAsync($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
-        return $this->removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $remove_from_program_request, $contentType)
+        return $this->removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $affiliate_remove_from_program_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9632,16 +9632,16 @@ class AffiliateApi
      * Remove an Affiliate from a Commission Program
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTAsyncWithHttpInfo($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
         $returnType = '';
-        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $remove_from_program_request, $contentType);
+        $request = $this->removeAffiliateFromProgramUsingPOSTRequest($id, $affiliate_remove_from_program_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9670,13 +9670,13 @@ class AffiliateApi
      * Create request for operation 'removeAffiliateFromProgramUsingPOST'
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $remove_from_program_request removeFromProgramRequest (required)
+     * @param  \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest $affiliate_remove_from_program_request removeFromProgramRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeAffiliateFromProgramUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function removeAffiliateFromProgramUsingPOSTRequest($id, $remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
+    public function removeAffiliateFromProgramUsingPOSTRequest($id, $affiliate_remove_from_program_request, string $contentType = self::contentTypes['removeAffiliateFromProgramUsingPOST'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -9686,10 +9686,10 @@ class AffiliateApi
             );
         }
 
-        // verify the required parameter 'remove_from_program_request' is set
-        if ($remove_from_program_request === null || (is_array($remove_from_program_request) && count($remove_from_program_request) === 0)) {
+        // verify the required parameter 'affiliate_remove_from_program_request' is set
+        if ($affiliate_remove_from_program_request === null || (is_array($affiliate_remove_from_program_request) && count($affiliate_remove_from_program_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $remove_from_program_request when calling removeAffiliateFromProgramUsingPOST'
+                'Missing the required parameter $affiliate_remove_from_program_request when calling removeAffiliateFromProgramUsingPOST'
             );
         }
 
@@ -9720,12 +9720,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($remove_from_program_request)) {
+        if (isset($affiliate_remove_from_program_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($remove_from_program_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($affiliate_remove_from_program_request));
             } else {
-                $httpBody = $remove_from_program_request;
+                $httpBody = $affiliate_remove_from_program_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -10031,7 +10031,7 @@ class AffiliateApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -10039,9 +10039,9 @@ class AffiliateApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateAffiliateCustomFieldUsingPATCH($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
-        list($response) = $this->updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -10051,7 +10051,7 @@ class AffiliateApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
@@ -10059,9 +10059,9 @@ class AffiliateApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\CustomFieldMetaData|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
-        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10283,16 +10283,16 @@ class AffiliateApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAffiliateCustomFieldUsingPATCHAsync($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHAsync($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
-        return $this->updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask, $contentType)
+        return $this->updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10306,17 +10306,17 @@ class AffiliateApi
      * Update a Custom Field
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHAsyncWithHttpInfo($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData';
-        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask, $contentType);
+        $request = $this->updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10358,14 +10358,14 @@ class AffiliateApi
      * Create request for operation 'updateAffiliateCustomFieldUsingPATCH'
      *
      * @param  string $custom_field_id custom_field_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest $update_custom_field_meta_data_request request (required)
      * @param  string[] $update_mask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateCustomFieldUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
+    public function updateAffiliateCustomFieldUsingPATCHRequest($custom_field_id, $update_custom_field_meta_data_request, $update_mask = null, string $contentType = self::contentTypes['updateAffiliateCustomFieldUsingPATCH'][0])
     {
 
         // verify the required parameter 'custom_field_id' is set
@@ -10375,10 +10375,10 @@ class AffiliateApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_custom_field_meta_data_request' is set
+        if ($update_custom_field_meta_data_request === null || (is_array($update_custom_field_meta_data_request) && count($update_custom_field_meta_data_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateAffiliateCustomFieldUsingPATCH'
+                'Missing the required parameter $update_custom_field_meta_data_request when calling updateAffiliateCustomFieldUsingPATCH'
             );
         }
 
@@ -10419,12 +10419,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_custom_field_meta_data_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_custom_field_meta_data_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_custom_field_meta_data_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -10478,16 +10478,16 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate Affiliate request to patch (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate_request Affiliate request to patch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateAffiliateUsingPATCH($id, $patch_affiliate = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
+    public function updateAffiliateUsingPATCH($id, $patch_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
-        list($response) = $this->updateAffiliateUsingPATCHWithHttpInfo($id, $patch_affiliate, $contentType);
+        list($response) = $this->updateAffiliateUsingPATCHWithHttpInfo($id, $patch_affiliate_request, $contentType);
         return $response;
     }
 
@@ -10497,16 +10497,16 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate Affiliate request to patch (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate_request Affiliate request to patch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAffiliateUsingPATCHWithHttpInfo($id, $patch_affiliate = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
+    public function updateAffiliateUsingPATCHWithHttpInfo($id, $patch_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
-        $request = $this->updateAffiliateUsingPATCHRequest($id, $patch_affiliate, $contentType);
+        $request = $this->updateAffiliateUsingPATCHRequest($id, $patch_affiliate_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10728,15 +10728,15 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate Affiliate request to patch (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate_request Affiliate request to patch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAffiliateUsingPATCHAsync($id, $patch_affiliate = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
+    public function updateAffiliateUsingPATCHAsync($id, $patch_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
-        return $this->updateAffiliateUsingPATCHAsyncWithHttpInfo($id, $patch_affiliate, $contentType)
+        return $this->updateAffiliateUsingPATCHAsyncWithHttpInfo($id, $patch_affiliate_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10750,16 +10750,16 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate Affiliate request to patch (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate_request Affiliate request to patch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAffiliateUsingPATCHAsyncWithHttpInfo($id, $patch_affiliate = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
+    public function updateAffiliateUsingPATCHAsyncWithHttpInfo($id, $patch_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
-        $request = $this->updateAffiliateUsingPATCHRequest($id, $patch_affiliate, $contentType);
+        $request = $this->updateAffiliateUsingPATCHRequest($id, $patch_affiliate_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10801,13 +10801,13 @@ class AffiliateApi
      * Create request for operation 'updateAffiliateUsingPATCH'
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate Affiliate request to patch (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest $patch_affiliate_request Affiliate request to patch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateAffiliateUsingPATCHRequest($id, $patch_affiliate = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
+    public function updateAffiliateUsingPATCHRequest($id, $patch_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -10845,12 +10845,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($patch_affiliate)) {
+        if (isset($patch_affiliate_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_affiliate));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_affiliate_request));
             } else {
-                $httpBody = $patch_affiliate;
+                $httpBody = $patch_affiliate_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -10904,16 +10904,16 @@ class AffiliateApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateRedirectLinkUsingPATCH($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCH($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
-        list($response) = $this->updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $request, $contentType);
+        list($response) = $this->updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, $contentType);
         return $response;
     }
 
@@ -10923,16 +10923,16 @@ class AffiliateApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\AffiliateLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
-        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $request, $contentType);
+        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $create_or_patch_affiliate_link_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11154,15 +11154,15 @@ class AffiliateApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateRedirectLinkUsingPATCHAsync($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHAsync($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
-        return $this->updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $request, $contentType)
+        return $this->updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11176,16 +11176,16 @@ class AffiliateApi
      * Update an Affiliate Link
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHAsyncWithHttpInfo($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateLink';
-        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $request, $contentType);
+        $request = $this->updateRedirectLinkUsingPATCHRequest($redirect_id, $create_or_patch_affiliate_link_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11227,13 +11227,13 @@ class AffiliateApi
      * Create request for operation 'updateRedirectLinkUsingPATCH'
      *
      * @param  string $redirect_id redirect_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest $create_or_patch_affiliate_link_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateRedirectLinkUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateRedirectLinkUsingPATCHRequest($redirect_id, $request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
+    public function updateRedirectLinkUsingPATCHRequest($redirect_id, $create_or_patch_affiliate_link_request, string $contentType = self::contentTypes['updateRedirectLinkUsingPATCH'][0])
     {
 
         // verify the required parameter 'redirect_id' is set
@@ -11243,10 +11243,10 @@ class AffiliateApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_or_patch_affiliate_link_request' is set
+        if ($create_or_patch_affiliate_link_request === null || (is_array($create_or_patch_affiliate_link_request) && count($create_or_patch_affiliate_link_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateRedirectLinkUsingPATCH'
+                'Missing the required parameter $create_or_patch_affiliate_link_request when calling updateRedirectLinkUsingPATCH'
             );
         }
 
@@ -11277,12 +11277,12 @@ class AffiliateApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_or_patch_affiliate_link_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_or_patch_affiliate_link_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_or_patch_affiliate_link_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

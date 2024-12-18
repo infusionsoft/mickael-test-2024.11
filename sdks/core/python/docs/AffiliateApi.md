@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_affiliate_using_post**
-> RestAffiliate add_affiliate_using_post(insert_affiliate=insert_affiliate)
+> RestAffiliate add_affiliate_using_post(create_affiliate_request=create_affiliate_request)
 
 Create an Affiliate
 
@@ -130,11 +130,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
-    insert_affiliate = keap_sdk_core_client.CreateAffiliateRequest() # CreateAffiliateRequest | Affiliate request to insert (optional)
+    create_affiliate_request = keap_sdk_core_client.CreateAffiliateRequest() # CreateAffiliateRequest | Affiliate request to insert (optional)
 
     try:
         # Create an Affiliate
-        api_response = api_instance.add_affiliate_using_post(insert_affiliate=insert_affiliate)
+        api_response = api_instance.add_affiliate_using_post(create_affiliate_request=create_affiliate_request)
         print("The response of AffiliateApi->add_affiliate_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -147,7 +147,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insert_affiliate** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] 
+ **create_affiliate_request** | [**CreateAffiliateRequest**](CreateAffiliateRequest.md)| Affiliate request to insert | [optional] 
 
 ### Return type
 
@@ -173,7 +173,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_commission_program_using_post**
-> AffiliateCommissionProgramResponse add_commission_program_using_post(insert_commission_program=insert_commission_program)
+> AffiliateCommissionProgramResponse add_commission_program_using_post(create_commission_program_request=create_commission_program_request)
 
 Create an Affiliate Commission Program
 
@@ -199,11 +199,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
-    insert_commission_program = keap_sdk_core_client.CreateCommissionProgramRequest() # CreateCommissionProgramRequest | Commission Program to insert (optional)
+    create_commission_program_request = keap_sdk_core_client.CreateCommissionProgramRequest() # CreateCommissionProgramRequest | Commission Program to insert (optional)
 
     try:
         # Create an Affiliate Commission Program
-        api_response = api_instance.add_commission_program_using_post(insert_commission_program=insert_commission_program)
+        api_response = api_instance.add_commission_program_using_post(create_commission_program_request=create_commission_program_request)
         print("The response of AffiliateApi->add_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -216,7 +216,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insert_commission_program** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
+ **create_commission_program_request** | [**CreateCommissionProgramRequest**](CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] 
 
 ### Return type
 
@@ -242,7 +242,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assign_product_commission_program_using_post**
-> ProductCommissionProgram assign_product_commission_program_using_post(commission_program_id, product_commission_program=product_commission_program)
+> ProductCommissionProgram assign_product_commission_program_using_post(commission_program_id, create_product_commission_program_request=create_product_commission_program_request)
 
 Assign a Product Commission Program
 
@@ -269,11 +269,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
     commission_program_id = 'commission_program_id_example' # str | commission_program_id
-    product_commission_program = keap_sdk_core_client.CreateProductCommissionProgramRequest() # CreateProductCommissionProgramRequest | Product Commission Program (optional)
+    create_product_commission_program_request = keap_sdk_core_client.CreateProductCommissionProgramRequest() # CreateProductCommissionProgramRequest | Product Commission Program (optional)
 
     try:
         # Assign a Product Commission Program
-        api_response = api_instance.assign_product_commission_program_using_post(commission_program_id, product_commission_program=product_commission_program)
+        api_response = api_instance.assign_product_commission_program_using_post(commission_program_id, create_product_commission_program_request=create_product_commission_program_request)
         print("The response of AffiliateApi->assign_product_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -287,7 +287,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commission_program_id** | **str**| commission_program_id | 
- **product_commission_program** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
+ **create_product_commission_program_request** | [**CreateProductCommissionProgramRequest**](CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] 
 
 ### Return type
 
@@ -313,7 +313,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assign_subscription_commission_program_using_post**
-> SubscriptionCommissionProgram assign_subscription_commission_program_using_post(commission_program_id, subscription_commission_program=subscription_commission_program)
+> SubscriptionCommissionProgram assign_subscription_commission_program_using_post(commission_program_id, create_subscription_commission_program_request=create_subscription_commission_program_request)
 
 Assign a Subscription Commission Program
 
@@ -340,11 +340,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
     commission_program_id = 'commission_program_id_example' # str | commission_program_id
-    subscription_commission_program = keap_sdk_core_client.CreateSubscriptionCommissionProgramRequest() # CreateSubscriptionCommissionProgramRequest | Subscription Commission Program (optional)
+    create_subscription_commission_program_request = keap_sdk_core_client.CreateSubscriptionCommissionProgramRequest() # CreateSubscriptionCommissionProgramRequest | Subscription Commission Program (optional)
 
     try:
         # Assign a Subscription Commission Program
-        api_response = api_instance.assign_subscription_commission_program_using_post(commission_program_id, subscription_commission_program=subscription_commission_program)
+        api_response = api_instance.assign_subscription_commission_program_using_post(commission_program_id, create_subscription_commission_program_request=create_subscription_commission_program_request)
         print("The response of AffiliateApi->assign_subscription_commission_program_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -358,7 +358,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commission_program_id** | **str**| commission_program_id | 
- **subscription_commission_program** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
+ **create_subscription_commission_program_request** | [**CreateSubscriptionCommissionProgramRequest**](CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] 
 
 ### Return type
 
@@ -384,7 +384,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_affiliate_custom_field_using_post**
-> CustomFieldMetaData create_affiliate_custom_field_using_post(custom_field)
+> CustomFieldMetaData create_affiliate_custom_field_using_post(create_custom_field_request)
 
 Create an Affiliate Custom Field
 
@@ -410,11 +410,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create an Affiliate Custom Field
-        api_response = api_instance.create_affiliate_custom_field_using_post(custom_field)
+        api_response = api_instance.create_affiliate_custom_field_using_post(create_custom_field_request)
         print("The response of AffiliateApi->create_affiliate_custom_field_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -427,7 +427,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -524,7 +524,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_redirect_link_using_post**
-> AffiliateLink create_redirect_link_using_post(request)
+> AffiliateLink create_redirect_link_using_post(create_or_patch_affiliate_link_request)
 
 Create an Affiliate Link
 
@@ -550,11 +550,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
-    request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
+    create_or_patch_affiliate_link_request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
 
     try:
         # Create an Affiliate Link
-        api_response = api_instance.create_redirect_link_using_post(request)
+        api_response = api_instance.create_redirect_link_using_post(create_or_patch_affiliate_link_request)
         print("The response of AffiliateApi->create_redirect_link_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -567,7 +567,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **create_or_patch_affiliate_link_request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 
@@ -1730,7 +1730,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_affiliate_from_program_using_post**
-> remove_affiliate_from_program_using_post(id, remove_from_program_request)
+> remove_affiliate_from_program_using_post(id, affiliate_remove_from_program_request)
 
 Remove an Affiliate from a Commission Program
 
@@ -1756,11 +1756,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
     id = 'id_example' # str | id
-    remove_from_program_request = keap_sdk_core_client.AffiliateRemoveFromProgramRequest() # AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+    affiliate_remove_from_program_request = keap_sdk_core_client.AffiliateRemoveFromProgramRequest() # AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 
     try:
         # Remove an Affiliate from a Commission Program
-        api_instance.remove_affiliate_from_program_using_post(id, remove_from_program_request)
+        api_instance.remove_affiliate_from_program_using_post(id, affiliate_remove_from_program_request)
     except Exception as e:
         print("Exception when calling AffiliateApi->remove_affiliate_from_program_using_post: %s\n" % e)
 ```
@@ -1772,7 +1772,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| id | 
- **remove_from_program_request** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
+ **affiliate_remove_from_program_request** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | 
 
 ### Return type
 
@@ -1866,7 +1866,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_affiliate_custom_field_using_patch**
-> CustomFieldMetaData update_affiliate_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_affiliate_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Custom Field
 
@@ -1893,12 +1893,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
-        api_response = api_instance.update_affiliate_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_affiliate_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of AffiliateApi->update_affiliate_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -1912,7 +1912,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -1940,7 +1940,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_affiliate_using_patch**
-> RestAffiliate update_affiliate_using_patch(id, patch_affiliate=patch_affiliate)
+> RestAffiliate update_affiliate_using_patch(id, patch_affiliate_request=patch_affiliate_request)
 
 Update an Affiliate
 
@@ -1967,11 +1967,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
     id = 'id_example' # str | id
-    patch_affiliate = keap_sdk_core_client.PatchAffiliateRequest() # PatchAffiliateRequest | Affiliate request to patch (optional)
+    patch_affiliate_request = keap_sdk_core_client.PatchAffiliateRequest() # PatchAffiliateRequest | Affiliate request to patch (optional)
 
     try:
         # Update an Affiliate
-        api_response = api_instance.update_affiliate_using_patch(id, patch_affiliate=patch_affiliate)
+        api_response = api_instance.update_affiliate_using_patch(id, patch_affiliate_request=patch_affiliate_request)
         print("The response of AffiliateApi->update_affiliate_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -1985,7 +1985,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| id | 
- **patch_affiliate** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] 
+ **patch_affiliate_request** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] 
 
 ### Return type
 
@@ -2012,7 +2012,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_redirect_link_using_patch**
-> AffiliateLink update_redirect_link_using_patch(redirect_id, request)
+> AffiliateLink update_redirect_link_using_patch(redirect_id, create_or_patch_affiliate_link_request)
 
 Update an Affiliate Link
 
@@ -2039,11 +2039,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
     redirect_id = 'redirect_id_example' # str | redirect_id
-    request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
+    create_or_patch_affiliate_link_request = keap_sdk_core_client.CreateOrPatchAffiliateLinkRequest() # CreateOrPatchAffiliateLinkRequest | request
 
     try:
         # Update an Affiliate Link
-        api_response = api_instance.update_redirect_link_using_patch(redirect_id, request)
+        api_response = api_instance.update_redirect_link_using_patch(redirect_id, create_or_patch_affiliate_link_request)
         print("The response of AffiliateApi->update_redirect_link_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -2057,7 +2057,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **redirect_id** | **str**| redirect_id | 
- **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
+ **create_or_patch_affiliate_link_request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md)| request | 
 
 ### Return type
 

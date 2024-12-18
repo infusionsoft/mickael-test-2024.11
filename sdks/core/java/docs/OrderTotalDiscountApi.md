@@ -19,7 +19,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createOrderTotalDiscountUsingPOST
 
-> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -41,9 +41,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OrderTotalDiscountApi apiInstance = new OrderTotalDiscountApi(defaultClient);
-        CreateOrderTotalDiscountRequest request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+        CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
         try {
-            OrderTotalDiscount result = apiInstance.createOrderTotalDiscountUsingPOST(request);
+            OrderTotalDiscount result = apiInstance.createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrderTotalDiscountApi#createOrderTotalDiscountUsingPOST");
@@ -61,7 +61,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
+| **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -86,7 +86,7 @@ No authorization required
 
 ## createOrderTotalDiscountUsingPOSTWithHttpInfo
 
-> ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOST createOrderTotalDiscountUsingPOSTWithHttpInfo(request)
+> ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOST createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest)
 
 Create an Order Total Discount
 
@@ -109,9 +109,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         OrderTotalDiscountApi apiInstance = new OrderTotalDiscountApi(defaultClient);
-        CreateOrderTotalDiscountRequest request = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
+        CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest = new CreateOrderTotalDiscountRequest(); // CreateOrderTotalDiscountRequest | request
         try {
-            ApiResponse<OrderTotalDiscount> response = apiInstance.createOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+            ApiResponse<OrderTotalDiscount> response = apiInstance.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -131,7 +131,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
+| **createOrderTotalDiscountRequest** | [**CreateOrderTotalDiscountRequest**](CreateOrderTotalDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -587,7 +587,7 @@ No authorization required
 
 ## updateOrderTotalDiscountUsingPATCH
 
-> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask)
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask)
 
 Update an Order Total Discount
 
@@ -610,10 +610,10 @@ public class Example {
 
         OrderTotalDiscountApi apiInstance = new OrderTotalDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateOrderTotalDiscountRequest request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+        UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            OrderTotalDiscount result = apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, request, updateMask);
+            OrderTotalDiscount result = apiInstance.updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling OrderTotalDiscountApi#updateOrderTotalDiscountUsingPATCH");
@@ -632,7 +632,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
+| **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, apply_to_commissions, discount_type, discount_value, discount_strategy, criteria] |
 
 ### Return type
@@ -659,7 +659,7 @@ No authorization required
 
 ## updateOrderTotalDiscountUsingPATCHWithHttpInfo
 
-> ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCH updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask)
+> ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCH updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask)
 
 Update an Order Total Discount
 
@@ -683,10 +683,10 @@ public class Example {
 
         OrderTotalDiscountApi apiInstance = new OrderTotalDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateOrderTotalDiscountRequest request = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
+        UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest = new UpdateOrderTotalDiscountRequest(); // UpdateOrderTotalDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<OrderTotalDiscount> response = apiInstance.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            ApiResponse<OrderTotalDiscount> response = apiInstance.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -707,7 +707,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
+| **updateOrderTotalDiscountRequest** | [**UpdateOrderTotalDiscountRequest**](UpdateOrderTotalDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, apply_to_commissions, discount_type, discount_value, discount_strategy, criteria] |
 
 ### Return type

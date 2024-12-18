@@ -43,12 +43,12 @@ export default class CompanyApi {
      * Create a Company
      * Creates a new Company.`country_code` is required if `region` is specified.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateCompanyRequest} [company] company
+     * @param {module:com.keap.sdk.core/model/CreateCompanyRequest} [createCompanyRequest] company
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Company} and HTTP response
      */
     createCompanyUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['company'];
+      let postBody = opts['createCompanyRequest'];
 
       let pathParams = {
       };
@@ -74,7 +74,7 @@ export default class CompanyApi {
      * Create a Company
      * Creates a new Company.`country_code` is required if `region` is specified.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateCompanyRequest} opts.company company
+     * @param {module:com.keap.sdk.core/model/CreateCompanyRequest} opts.createCompanyRequest company
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Company}
      */
     createCompanyUsingPOST1(opts) {
@@ -252,12 +252,12 @@ export default class CompanyApi {
      * @param {String} companyId company_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchCompanyRequest} [company] company
+     * @param {module:com.keap.sdk.core/model/PatchCompanyRequest} [patchCompanyRequest] company
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Company} and HTTP response
      */
     patchCompanyUsingPATCHWithHttpInfo(companyId, opts) {
       opts = opts || {};
-      let postBody = opts['company'];
+      let postBody = opts['patchCompanyRequest'];
       // verify the required parameter 'companyId' is set
       if (companyId === undefined || companyId === null) {
         throw new Error("Missing the required parameter 'companyId' when calling patchCompanyUsingPATCH");
@@ -291,7 +291,7 @@ export default class CompanyApi {
      * @param {String} companyId company_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchCompanyRequest} opts.company company
+     * @param {module:com.keap.sdk.core/model/PatchCompanyRequest} opts.patchCompanyRequest company
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Company}
      */
     patchCompanyUsingPATCH(companyId, opts) {

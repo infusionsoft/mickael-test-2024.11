@@ -19,7 +19,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createDiscountUsingPOST1
 
-> ShippingDiscount createDiscountUsingPOST1(request)
+> ShippingDiscount createDiscountUsingPOST1(createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -41,9 +41,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ShippingDiscountApi apiInstance = new ShippingDiscountApi(defaultClient);
-        CreateShippingDiscountRequest request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+        CreateShippingDiscountRequest createShippingDiscountRequest = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
         try {
-            ShippingDiscount result = apiInstance.createDiscountUsingPOST1(request);
+            ShippingDiscount result = apiInstance.createDiscountUsingPOST1(createShippingDiscountRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ShippingDiscountApi#createDiscountUsingPOST1");
@@ -61,7 +61,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
+| **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -86,7 +86,7 @@ No authorization required
 
 ## createDiscountUsingPOST1WithHttpInfo
 
-> ApiResponse<ShippingDiscount> createDiscountUsingPOST1 createDiscountUsingPOST1WithHttpInfo(request)
+> ApiResponse<ShippingDiscount> createDiscountUsingPOST1 createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -109,9 +109,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ShippingDiscountApi apiInstance = new ShippingDiscountApi(defaultClient);
-        CreateShippingDiscountRequest request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+        CreateShippingDiscountRequest createShippingDiscountRequest = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
         try {
-            ApiResponse<ShippingDiscount> response = apiInstance.createDiscountUsingPOST1WithHttpInfo(request);
+            ApiResponse<ShippingDiscount> response = apiInstance.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -131,7 +131,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
+| **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -591,7 +591,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH1
 
-> ShippingDiscount updateDiscountUsingPATCH1(discountId, request, updateMask)
+> ShippingDiscount updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask)
 
 Update a Shipping Discount
 
@@ -614,10 +614,10 @@ public class Example {
 
         ShippingDiscountApi apiInstance = new ShippingDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateShippingDiscountRequest request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+        UpdateShippingDiscountRequest updateShippingDiscountRequest = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ShippingDiscount result = apiInstance.updateDiscountUsingPATCH1(discountId, request, updateMask);
+            ShippingDiscount result = apiInstance.updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ShippingDiscountApi#updateDiscountUsingPATCH1");
@@ -636,7 +636,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
+| **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: TODO: PAPI-1452] |
 
 ### Return type
@@ -663,7 +663,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH1WithHttpInfo
 
-> ApiResponse<ShippingDiscount> updateDiscountUsingPATCH1 updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask)
+> ApiResponse<ShippingDiscount> updateDiscountUsingPATCH1 updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask)
 
 Update a Shipping Discount
 
@@ -687,10 +687,10 @@ public class Example {
 
         ShippingDiscountApi apiInstance = new ShippingDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        UpdateShippingDiscountRequest request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+        UpdateShippingDiscountRequest updateShippingDiscountRequest = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<ShippingDiscount> response = apiInstance.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+            ApiResponse<ShippingDiscount> response = apiInstance.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -711,7 +711,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
+| **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: TODO: PAPI-1452] |
 
 ### Return type

@@ -98,7 +98,7 @@ No authorization required
 
 <a id="patchbusinessprofileusingpatch"></a>
 # **PatchBusinessProfileUsingPATCH**
-> GetBusinessProfileResponse PatchBusinessProfileUsingPATCH (List<string>? updateMask = null, PatchBusinessProfileRequest? businessProfile = null)
+> GetBusinessProfileResponse PatchBusinessProfileUsingPATCH (List<string>? updateMask = null, PatchBusinessProfileRequest? patchBusinessProfileRequest = null)
 
 Update Business Profile
 
@@ -122,12 +122,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new BusinessProfileApi(config);
             var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional) 
-            var businessProfile = new PatchBusinessProfileRequest?(); // PatchBusinessProfileRequest? | businessProfile (optional) 
+            var patchBusinessProfileRequest = new PatchBusinessProfileRequest?(); // PatchBusinessProfileRequest? | businessProfile (optional) 
 
             try
             {
                 // Update Business Profile
-                GetBusinessProfileResponse result = apiInstance.PatchBusinessProfileUsingPATCH(updateMask, businessProfile);
+                GetBusinessProfileResponse result = apiInstance.PatchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -148,7 +148,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update Business Profile
-    ApiResponse<GetBusinessProfileResponse> response = apiInstance.PatchBusinessProfileUsingPATCHWithHttpInfo(updateMask, businessProfile);
+    ApiResponse<GetBusinessProfileResponse> response = apiInstance.PatchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -166,7 +166,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional]  |
-| **businessProfile** | [**PatchBusinessProfileRequest?**](PatchBusinessProfileRequest?.md) | businessProfile | [optional]  |
+| **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest?**](PatchBusinessProfileRequest?.md) | businessProfile | [optional]  |
 
 ### Return type
 

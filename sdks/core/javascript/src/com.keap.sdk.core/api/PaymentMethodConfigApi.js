@@ -40,14 +40,14 @@ export default class PaymentMethodConfigApi {
     /**
      * Create Payment Method Configuration
      * Creates configuration details for rendering payment method components
-     * @param {module:com.keap.sdk.core/model/CreatePaymentMethodConfigRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreatePaymentMethodConfigRequest} createPaymentMethodConfigRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/PaymentMethodConfig} and HTTP response
      */
-    createPaymentMethodConfigUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createPaymentMethodConfigUsingPOST");
+    createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest) {
+      let postBody = createPaymentMethodConfigRequest;
+      // verify the required parameter 'createPaymentMethodConfigRequest' is set
+      if (createPaymentMethodConfigRequest === undefined || createPaymentMethodConfigRequest === null) {
+        throw new Error("Missing the required parameter 'createPaymentMethodConfigRequest' when calling createPaymentMethodConfigUsingPOST");
       }
 
       let pathParams = {
@@ -73,11 +73,11 @@ export default class PaymentMethodConfigApi {
     /**
      * Create Payment Method Configuration
      * Creates configuration details for rendering payment method components
-     * @param {module:com.keap.sdk.core/model/CreatePaymentMethodConfigRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreatePaymentMethodConfigRequest} createPaymentMethodConfigRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/PaymentMethodConfig}
      */
-    createPaymentMethodConfigUsingPOST(request) {
-      return this.createPaymentMethodConfigUsingPOSTWithHttpInfo(request)
+    createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest) {
+      return this.createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

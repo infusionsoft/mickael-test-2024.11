@@ -139,16 +139,16 @@ class OrderTotalDiscountApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createOrderTotalDiscountUsingPOST($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOST($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
-        list($response) = $this->createOrderTotalDiscountUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createOrderTotalDiscountUsingPOSTWithHttpInfo($create_order_total_discount_request, $contentType);
         return $response;
     }
 
@@ -157,16 +157,16 @@ class OrderTotalDiscountApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderTotalDiscountUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTWithHttpInfo($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
-        $request = $this->createOrderTotalDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createOrderTotalDiscountUsingPOSTRequest($create_order_total_discount_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -352,15 +352,15 @@ class OrderTotalDiscountApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderTotalDiscountUsingPOSTAsync($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTAsync($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
-        return $this->createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($create_order_total_discount_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -373,16 +373,16 @@ class OrderTotalDiscountApi
      *
      * Create an Order Total Discount
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTAsyncWithHttpInfo($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\OrderTotalDiscount';
-        $request = $this->createOrderTotalDiscountUsingPOSTRequest($request, $contentType);
+        $request = $this->createOrderTotalDiscountUsingPOSTRequest($create_order_total_discount_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -423,19 +423,19 @@ class OrderTotalDiscountApi
     /**
      * Create request for operation 'createOrderTotalDiscountUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest $create_order_total_discount_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderTotalDiscountUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOrderTotalDiscountUsingPOSTRequest($request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
+    public function createOrderTotalDiscountUsingPOSTRequest($create_order_total_discount_request, string $contentType = self::contentTypes['createOrderTotalDiscountUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_order_total_discount_request' is set
+        if ($create_order_total_discount_request === null || (is_array($create_order_total_discount_request) && count($create_order_total_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createOrderTotalDiscountUsingPOST'
+                'Missing the required parameter $create_order_total_discount_request when calling createOrderTotalDiscountUsingPOST'
             );
         }
 
@@ -458,12 +458,12 @@ class OrderTotalDiscountApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_order_total_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_order_total_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_order_total_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1536,8 +1536,8 @@ class OrderTotalDiscountApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1545,8 +1545,8 @@ class OrderTotalDiscountApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1554,8 +1554,8 @@ class OrderTotalDiscountApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1563,8 +1563,8 @@ class OrderTotalDiscountApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -1630,7 +1630,7 @@ class OrderTotalDiscountApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -1638,9 +1638,9 @@ class OrderTotalDiscountApi
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCH($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
-        list($response) = $this->updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask, $contentType);
+        list($response) = $this->updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask, $contentType);
         return $response;
     }
 
@@ -1650,7 +1650,7 @@ class OrderTotalDiscountApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
@@ -1658,9 +1658,9 @@ class OrderTotalDiscountApi
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\OrderTotalDiscount|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
-        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $update_order_total_discount_request, $update_mask, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1882,16 +1882,16 @@ class OrderTotalDiscountApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderTotalDiscountUsingPATCHAsync($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHAsync($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
-        return $this->updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask, $contentType)
+        return $this->updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1905,17 +1905,17 @@ class OrderTotalDiscountApi
      * Update an Order Total Discount
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHAsyncWithHttpInfo($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\OrderTotalDiscount';
-        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $request, $update_mask, $contentType);
+        $request = $this->updateOrderTotalDiscountUsingPATCHRequest($discount_id, $update_order_total_discount_request, $update_mask, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1957,14 +1957,14 @@ class OrderTotalDiscountApi
      * Create request for operation 'updateOrderTotalDiscountUsingPATCH'
      *
      * @param  string $discount_id discount_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest $update_order_total_discount_request request (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrderTotalDiscountUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateOrderTotalDiscountUsingPATCHRequest($discount_id, $request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
+    public function updateOrderTotalDiscountUsingPATCHRequest($discount_id, $update_order_total_discount_request, $update_mask = null, string $contentType = self::contentTypes['updateOrderTotalDiscountUsingPATCH'][0])
     {
 
         // verify the required parameter 'discount_id' is set
@@ -1974,10 +1974,10 @@ class OrderTotalDiscountApi
             );
         }
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'update_order_total_discount_request' is set
+        if ($update_order_total_discount_request === null || (is_array($update_order_total_discount_request) && count($update_order_total_discount_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling updateOrderTotalDiscountUsingPATCH'
+                'Missing the required parameter $update_order_total_discount_request when calling updateOrderTotalDiscountUsingPATCH'
             );
         }
 
@@ -2018,12 +2018,12 @@ class OrderTotalDiscountApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($update_order_total_discount_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($update_order_total_discount_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $update_order_total_discount_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

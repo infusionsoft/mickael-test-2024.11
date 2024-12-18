@@ -97,24 +97,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Category Discount
    * Create a Category Discount.
-   * @param request request (required)
+   * @param createUpdateDiscountRequest request (required)
    * @return CategoryDiscount
    * @throws ApiException if fails to make API call
    */
-  public CategoryDiscount createDiscountUsingPOST(CreateUpdateDiscountRequest request) throws ApiException {
-    ApiResponse<CategoryDiscount> localVarResponse = createDiscountUsingPOSTWithHttpInfo(request);
+  public CategoryDiscount createDiscountUsingPOST(CreateUpdateDiscountRequest createUpdateDiscountRequest) throws ApiException {
+    ApiResponse<CategoryDiscount> localVarResponse = createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Category Discount
    * Create a Category Discount.
-   * @param request request (required)
+   * @param createUpdateDiscountRequest request (required)
    * @return ApiResponse&lt;CategoryDiscount&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CategoryDiscount> createDiscountUsingPOSTWithHttpInfo(CreateUpdateDiscountRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createDiscountUsingPOSTRequestBuilder(request);
+  public ApiResponse<CategoryDiscount> createDiscountUsingPOSTWithHttpInfo(CreateUpdateDiscountRequest createUpdateDiscountRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createDiscountUsingPOSTRequestBuilder(createUpdateDiscountRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -154,10 +154,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createDiscountUsingPOSTRequestBuilder(CreateUpdateDiscountRequest request) throws ApiException {
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createDiscountUsingPOST");
+  private HttpRequest.Builder createDiscountUsingPOSTRequestBuilder(CreateUpdateDiscountRequest createUpdateDiscountRequest) throws ApiException {
+    // verify the required parameter 'createUpdateDiscountRequest' is set
+    if (createUpdateDiscountRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createUpdateDiscountRequest' when calling createDiscountUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -171,7 +171,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUpdateDiscountRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -364,13 +364,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Category Discount
    * Update a Category Discount.
    * @param discountId discount_id (required)
-   * @param request request (required)
+   * @param createUpdateDiscountRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return CategoryDiscount
    * @throws ApiException if fails to make API call
    */
-  public CategoryDiscount updateDiscountUsingPATCH(String discountId, CreateUpdateDiscountRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<CategoryDiscount> localVarResponse = updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+  public CategoryDiscount updateDiscountUsingPATCH(String discountId, CreateUpdateDiscountRequest createUpdateDiscountRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<CategoryDiscount> localVarResponse = updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -378,13 +378,13 @@ import io.github.resilience4j.retry.Retry;
    * Update a Category Discount
    * Update a Category Discount.
    * @param discountId discount_id (required)
-   * @param request request (required)
+   * @param createUpdateDiscountRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;CategoryDiscount&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CategoryDiscount> updateDiscountUsingPATCHWithHttpInfo(String discountId, CreateUpdateDiscountRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateDiscountUsingPATCHRequestBuilder(discountId, request, updateMask);
+  public ApiResponse<CategoryDiscount> updateDiscountUsingPATCHWithHttpInfo(String discountId, CreateUpdateDiscountRequest createUpdateDiscountRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateDiscountUsingPATCHRequestBuilder(discountId, createUpdateDiscountRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -424,14 +424,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateDiscountUsingPATCHRequestBuilder(String discountId, CreateUpdateDiscountRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateDiscountUsingPATCHRequestBuilder(String discountId, CreateUpdateDiscountRequest createUpdateDiscountRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'discountId' is set
     if (discountId == null) {
       throw new ApiException(400, "Missing the required parameter 'discountId' when calling updateDiscountUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateDiscountUsingPATCH");
+    // verify the required parameter 'createUpdateDiscountRequest' is set
+    if (createUpdateDiscountRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createUpdateDiscountRequest' when calling updateDiscountUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -461,7 +461,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUpdateDiscountRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

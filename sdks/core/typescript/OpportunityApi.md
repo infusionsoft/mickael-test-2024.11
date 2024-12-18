@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **createOpportunityCustomFieldsUsingPOST**
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Opportunity object.
 
@@ -35,7 +35,7 @@ const apiInstance = new OpportunityApi(configuration);
 
 const request: OpportunityApiCreateOpportunityCustomFieldsUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -58,7 +58,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -101,7 +101,7 @@ const apiInstance = new OpportunityApi(configuration);
 
 const request: OpportunityApiCreateOpportunityStageUsingPOSTRequest = {
     // opportunity (optional)
-  opportunityStage: {
+  createOpportunityStageRequest: {
     checklistItems: [
       {
         description: "description_example",
@@ -125,7 +125,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunityStage** | **CreateOpportunityStageRequest**| opportunity |
+ **createOpportunityStageRequest** | **CreateOpportunityStageRequest**| opportunity |
 
 
 ### Return type
@@ -168,7 +168,7 @@ const apiInstance = new OpportunityApi(configuration);
 
 const request: OpportunityApiCreateOpportunityUsingPOST1Request = {
     // opportunity (optional)
-  opportunity: {
+  createOpportunityRequest: {
     affiliateId: "affiliateId_example",
     contactId: "contactId_example",
     customFields: [
@@ -199,7 +199,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity** | **CreateOpportunityRequest**| opportunity |
+ **createOpportunityRequest** | **CreateOpportunityRequest**| opportunity |
 
 
 ### Return type
@@ -585,7 +585,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOpportunityCustomFieldUsingPATCH**
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Opportunity object.
 
@@ -603,7 +603,7 @@ const request: OpportunityApiUpdateOpportunityCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -629,7 +629,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -659,7 +659,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOpportunityStageUsingPATCH**
-> RestOpportunityStage updateOpportunityStageUsingPATCH(request)
+> RestOpportunityStage updateOpportunityStageUsingPATCH(updateOpportunityStageRequest)
 
 Updates specified values of a given Opportunity Stage
 
@@ -677,7 +677,7 @@ const request: OpportunityApiUpdateOpportunityStageUsingPATCHRequest = {
     // stage_id
   stageId: "stage_id_example",
     // request
-  request: {
+  updateOpportunityStageRequest: {
     checklistItems: [
       {
         description: "description_example",
@@ -706,7 +706,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateOpportunityStageRequest**| request |
+ **updateOpportunityStageRequest** | **UpdateOpportunityStageRequest**| request |
  **stageId** | [**string**] | stage_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -736,7 +736,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOpportunityUsingPATCH**
-> RestV2Opportunity updateOpportunityUsingPATCH(request)
+> RestV2Opportunity updateOpportunityUsingPATCH(patchOpportunityRequest)
 
 Updates specified values of a given opportunity
 
@@ -754,7 +754,7 @@ const request: OpportunityApiUpdateOpportunityUsingPATCHRequest = {
     // opportunity_id
   opportunityId: "opportunity_id_example",
     // request
-  request: {
+  patchOpportunityRequest: {
     affiliateId: "affiliateId_example",
     contactId: "contactId_example",
     customFields: [
@@ -789,7 +789,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **PatchOpportunityRequest**| request |
+ **patchOpportunityRequest** | **PatchOpportunityRequest**| request |
  **opportunityId** | [**string**] | opportunity_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

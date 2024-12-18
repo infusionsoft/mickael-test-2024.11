@@ -21,14 +21,14 @@ export class OrderTotalDiscountApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates an Order Total Discount
      * Create an Order Total Discount
-     * @param request request
+     * @param createOrderTotalDiscountRequest request
      */
-    public async createOrderTotalDiscountUsingPOST(request: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest: CreateOrderTotalDiscountRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("OrderTotalDiscountApi", "createOrderTotalDiscountUsingPOST", "request");
+        // verify required parameter 'createOrderTotalDiscountRequest' is not null or undefined
+        if (createOrderTotalDiscountRequest === null || createOrderTotalDiscountRequest === undefined) {
+            throw new RequiredError("OrderTotalDiscountApi", "createOrderTotalDiscountUsingPOST", "createOrderTotalDiscountRequest");
         }
 
 
@@ -46,7 +46,7 @@ export class OrderTotalDiscountApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "CreateOrderTotalDiscountRequest", ""),
+            ObjectSerializer.serialize(createOrderTotalDiscountRequest, "CreateOrderTotalDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -180,10 +180,10 @@ export class OrderTotalDiscountApiRequestFactory extends BaseAPIRequestFactory {
      * Updates an Order Total Discount
      * Update an Order Total Discount
      * @param discountId discount_id
-     * @param request request
+     * @param updateOrderTotalDiscountRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOrderTotalDiscountUsingPATCH(discountId: string, request: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOrderTotalDiscountUsingPATCH(discountId: string, updateOrderTotalDiscountRequest: UpdateOrderTotalDiscountRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'discountId' is not null or undefined
@@ -192,9 +192,9 @@ export class OrderTotalDiscountApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("OrderTotalDiscountApi", "updateOrderTotalDiscountUsingPATCH", "request");
+        // verify required parameter 'updateOrderTotalDiscountRequest' is not null or undefined
+        if (updateOrderTotalDiscountRequest === null || updateOrderTotalDiscountRequest === undefined) {
+            throw new RequiredError("OrderTotalDiscountApi", "updateOrderTotalDiscountUsingPATCH", "updateOrderTotalDiscountRequest");
         }
 
 
@@ -222,7 +222,7 @@ export class OrderTotalDiscountApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateOrderTotalDiscountRequest", ""),
+            ObjectSerializer.serialize(updateOrderTotalDiscountRequest, "UpdateOrderTotalDiscountRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

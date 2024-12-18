@@ -416,7 +416,7 @@ class PreReleaseApi:
     @validate_call
     def add_commission_program_using_post(
         self,
-        insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
+        create_commission_program_request: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -434,8 +434,8 @@ class PreReleaseApi:
 
         Creates an Affiliate Commission Program
 
-        :param insert_commission_program: Commission Program to insert
-        :type insert_commission_program: CreateCommissionProgramRequest
+        :param create_commission_program_request: Commission Program to insert
+        :type create_commission_program_request: CreateCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -459,7 +459,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._add_commission_program_using_post_serialize(
-            insert_commission_program=insert_commission_program,
+            create_commission_program_request=create_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -484,7 +484,7 @@ class PreReleaseApi:
     @validate_call
     def add_commission_program_using_post_with_http_info(
         self,
-        insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
+        create_commission_program_request: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -502,8 +502,8 @@ class PreReleaseApi:
 
         Creates an Affiliate Commission Program
 
-        :param insert_commission_program: Commission Program to insert
-        :type insert_commission_program: CreateCommissionProgramRequest
+        :param create_commission_program_request: Commission Program to insert
+        :type create_commission_program_request: CreateCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -527,7 +527,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._add_commission_program_using_post_serialize(
-            insert_commission_program=insert_commission_program,
+            create_commission_program_request=create_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -552,7 +552,7 @@ class PreReleaseApi:
     @validate_call
     def add_commission_program_using_post_without_preload_content(
         self,
-        insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
+        create_commission_program_request: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -570,8 +570,8 @@ class PreReleaseApi:
 
         Creates an Affiliate Commission Program
 
-        :param insert_commission_program: Commission Program to insert
-        :type insert_commission_program: CreateCommissionProgramRequest
+        :param create_commission_program_request: Commission Program to insert
+        :type create_commission_program_request: CreateCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -595,7 +595,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._add_commission_program_using_post_serialize(
-            insert_commission_program=insert_commission_program,
+            create_commission_program_request=create_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -615,7 +615,7 @@ class PreReleaseApi:
 
     def _add_commission_program_using_post_serialize(
         self,
-        insert_commission_program,
+        create_commission_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -641,8 +641,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if insert_commission_program is not None:
-            _body_params = insert_commission_program
+        if create_commission_program_request is not None:
+            _body_params = create_commission_program_request
 
 
         # set the HTTP header `Accept`
@@ -693,7 +693,7 @@ class PreReleaseApi:
     def assign_product_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
+        create_product_commission_program_request: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -713,8 +713,8 @@ class PreReleaseApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param product_commission_program: Product Commission Program
-        :type product_commission_program: CreateProductCommissionProgramRequest
+        :param create_product_commission_program_request: Product Commission Program
+        :type create_product_commission_program_request: CreateProductCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -739,7 +739,7 @@ class PreReleaseApi:
 
         _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            product_commission_program=product_commission_program,
+            create_product_commission_program_request=create_product_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -765,7 +765,7 @@ class PreReleaseApi:
     def assign_product_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
+        create_product_commission_program_request: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -785,8 +785,8 @@ class PreReleaseApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param product_commission_program: Product Commission Program
-        :type product_commission_program: CreateProductCommissionProgramRequest
+        :param create_product_commission_program_request: Product Commission Program
+        :type create_product_commission_program_request: CreateProductCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -811,7 +811,7 @@ class PreReleaseApi:
 
         _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            product_commission_program=product_commission_program,
+            create_product_commission_program_request=create_product_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -837,7 +837,7 @@ class PreReleaseApi:
     def assign_product_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
+        create_product_commission_program_request: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -857,8 +857,8 @@ class PreReleaseApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param product_commission_program: Product Commission Program
-        :type product_commission_program: CreateProductCommissionProgramRequest
+        :param create_product_commission_program_request: Product Commission Program
+        :type create_product_commission_program_request: CreateProductCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -883,7 +883,7 @@ class PreReleaseApi:
 
         _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            product_commission_program=product_commission_program,
+            create_product_commission_program_request=create_product_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -904,7 +904,7 @@ class PreReleaseApi:
     def _assign_product_commission_program_using_post_serialize(
         self,
         commission_program_id,
-        product_commission_program,
+        create_product_commission_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -932,8 +932,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if product_commission_program is not None:
-            _body_params = product_commission_program
+        if create_product_commission_program_request is not None:
+            _body_params = create_product_commission_program_request
 
 
         # set the HTTP header `Accept`
@@ -984,7 +984,7 @@ class PreReleaseApi:
     def assign_subscription_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
+        create_subscription_commission_program_request: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1004,8 +1004,8 @@ class PreReleaseApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param subscription_commission_program: Subscription Commission Program
-        :type subscription_commission_program: CreateSubscriptionCommissionProgramRequest
+        :param create_subscription_commission_program_request: Subscription Commission Program
+        :type create_subscription_commission_program_request: CreateSubscriptionCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1030,7 +1030,7 @@ class PreReleaseApi:
 
         _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            subscription_commission_program=subscription_commission_program,
+            create_subscription_commission_program_request=create_subscription_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1056,7 +1056,7 @@ class PreReleaseApi:
     def assign_subscription_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
+        create_subscription_commission_program_request: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1076,8 +1076,8 @@ class PreReleaseApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param subscription_commission_program: Subscription Commission Program
-        :type subscription_commission_program: CreateSubscriptionCommissionProgramRequest
+        :param create_subscription_commission_program_request: Subscription Commission Program
+        :type create_subscription_commission_program_request: CreateSubscriptionCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1102,7 +1102,7 @@ class PreReleaseApi:
 
         _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            subscription_commission_program=subscription_commission_program,
+            create_subscription_commission_program_request=create_subscription_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1128,7 +1128,7 @@ class PreReleaseApi:
     def assign_subscription_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
+        create_subscription_commission_program_request: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1148,8 +1148,8 @@ class PreReleaseApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param subscription_commission_program: Subscription Commission Program
-        :type subscription_commission_program: CreateSubscriptionCommissionProgramRequest
+        :param create_subscription_commission_program_request: Subscription Commission Program
+        :type create_subscription_commission_program_request: CreateSubscriptionCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1174,7 +1174,7 @@ class PreReleaseApi:
 
         _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            subscription_commission_program=subscription_commission_program,
+            create_subscription_commission_program_request=create_subscription_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1195,7 +1195,7 @@ class PreReleaseApi:
     def _assign_subscription_commission_program_using_post_serialize(
         self,
         commission_program_id,
-        subscription_commission_program,
+        create_subscription_commission_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -1223,8 +1223,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if subscription_commission_program is not None:
-            _body_params = subscription_commission_program
+        if create_subscription_commission_program_request is not None:
+            _body_params = create_subscription_commission_program_request
 
 
         # set the HTTP header `Accept`
@@ -1565,7 +1565,7 @@ class PreReleaseApi:
     @validate_call
     def create_affiliate_custom_field_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1583,8 +1583,8 @@ class PreReleaseApi:
 
         Creates a single Affiliate Custom Field
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1608,7 +1608,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_affiliate_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1633,7 +1633,7 @@ class PreReleaseApi:
     @validate_call
     def create_affiliate_custom_field_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1651,8 +1651,8 @@ class PreReleaseApi:
 
         Creates a single Affiliate Custom Field
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1676,7 +1676,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_affiliate_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1701,7 +1701,7 @@ class PreReleaseApi:
     @validate_call
     def create_affiliate_custom_field_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1719,8 +1719,8 @@ class PreReleaseApi:
 
         Creates a single Affiliate Custom Field
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1744,7 +1744,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_affiliate_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1764,7 +1764,7 @@ class PreReleaseApi:
 
     def _create_affiliate_custom_field_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -1790,8 +1790,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -2132,7 +2132,7 @@ class PreReleaseApi:
     @validate_call
     def create_discount_using_post(
         self,
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2150,8 +2150,8 @@ class PreReleaseApi:
 
         Create a Category Discount.
 
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2175,7 +2175,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post_serialize(
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2200,7 +2200,7 @@ class PreReleaseApi:
     @validate_call
     def create_discount_using_post_with_http_info(
         self,
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2218,8 +2218,8 @@ class PreReleaseApi:
 
         Create a Category Discount.
 
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2243,7 +2243,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post_serialize(
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2268,7 +2268,7 @@ class PreReleaseApi:
     @validate_call
     def create_discount_using_post_without_preload_content(
         self,
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2286,8 +2286,8 @@ class PreReleaseApi:
 
         Create a Category Discount.
 
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2311,7 +2311,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post_serialize(
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2331,7 +2331,7 @@ class PreReleaseApi:
 
     def _create_discount_using_post_serialize(
         self,
-        request,
+        create_update_discount_request,
         _request_auth,
         _content_type,
         _headers,
@@ -2357,8 +2357,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_update_discount_request is not None:
+            _body_params = create_update_discount_request
 
 
         # set the HTTP header `Accept`
@@ -2408,7 +2408,7 @@ class PreReleaseApi:
     @validate_call
     def create_discount_using_post1(
         self,
-        request: Annotated[CreateShippingDiscountRequest, Field(description="request")],
+        create_shipping_discount_request: Annotated[CreateShippingDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2426,8 +2426,8 @@ class PreReleaseApi:
 
         Creates a Shipping Discount
 
-        :param request: request (required)
-        :type request: CreateShippingDiscountRequest
+        :param create_shipping_discount_request: request (required)
+        :type create_shipping_discount_request: CreateShippingDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2451,7 +2451,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post1_serialize(
-            request=request,
+            create_shipping_discount_request=create_shipping_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2476,7 +2476,7 @@ class PreReleaseApi:
     @validate_call
     def create_discount_using_post1_with_http_info(
         self,
-        request: Annotated[CreateShippingDiscountRequest, Field(description="request")],
+        create_shipping_discount_request: Annotated[CreateShippingDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2494,8 +2494,8 @@ class PreReleaseApi:
 
         Creates a Shipping Discount
 
-        :param request: request (required)
-        :type request: CreateShippingDiscountRequest
+        :param create_shipping_discount_request: request (required)
+        :type create_shipping_discount_request: CreateShippingDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2519,7 +2519,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post1_serialize(
-            request=request,
+            create_shipping_discount_request=create_shipping_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2544,7 +2544,7 @@ class PreReleaseApi:
     @validate_call
     def create_discount_using_post1_without_preload_content(
         self,
-        request: Annotated[CreateShippingDiscountRequest, Field(description="request")],
+        create_shipping_discount_request: Annotated[CreateShippingDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2562,8 +2562,8 @@ class PreReleaseApi:
 
         Creates a Shipping Discount
 
-        :param request: request (required)
-        :type request: CreateShippingDiscountRequest
+        :param create_shipping_discount_request: request (required)
+        :type create_shipping_discount_request: CreateShippingDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2587,7 +2587,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_discount_using_post1_serialize(
-            request=request,
+            create_shipping_discount_request=create_shipping_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2607,7 +2607,7 @@ class PreReleaseApi:
 
     def _create_discount_using_post1_serialize(
         self,
-        request,
+        create_shipping_discount_request,
         _request_auth,
         _content_type,
         _headers,
@@ -2633,8 +2633,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_shipping_discount_request is not None:
+            _body_params = create_shipping_discount_request
 
 
         # set the HTTP header `Accept`
@@ -3233,7 +3233,7 @@ class PreReleaseApi:
     @validate_call
     def create_lead_source_using_post(
         self,
-        leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
+        create_lead_source_request: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3251,8 +3251,8 @@ class PreReleaseApi:
 
         Creates a new Lead Source
 
-        :param leadsource: leadsource
-        :type leadsource: CreateLeadSourceRequest
+        :param create_lead_source_request: leadsource
+        :type create_lead_source_request: CreateLeadSourceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3276,7 +3276,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_lead_source_using_post_serialize(
-            leadsource=leadsource,
+            create_lead_source_request=create_lead_source_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3301,7 +3301,7 @@ class PreReleaseApi:
     @validate_call
     def create_lead_source_using_post_with_http_info(
         self,
-        leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
+        create_lead_source_request: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3319,8 +3319,8 @@ class PreReleaseApi:
 
         Creates a new Lead Source
 
-        :param leadsource: leadsource
-        :type leadsource: CreateLeadSourceRequest
+        :param create_lead_source_request: leadsource
+        :type create_lead_source_request: CreateLeadSourceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3344,7 +3344,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_lead_source_using_post_serialize(
-            leadsource=leadsource,
+            create_lead_source_request=create_lead_source_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3369,7 +3369,7 @@ class PreReleaseApi:
     @validate_call
     def create_lead_source_using_post_without_preload_content(
         self,
-        leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
+        create_lead_source_request: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3387,8 +3387,8 @@ class PreReleaseApi:
 
         Creates a new Lead Source
 
-        :param leadsource: leadsource
-        :type leadsource: CreateLeadSourceRequest
+        :param create_lead_source_request: leadsource
+        :type create_lead_source_request: CreateLeadSourceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3412,7 +3412,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_lead_source_using_post_serialize(
-            leadsource=leadsource,
+            create_lead_source_request=create_lead_source_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3432,7 +3432,7 @@ class PreReleaseApi:
 
     def _create_lead_source_using_post_serialize(
         self,
-        leadsource,
+        create_lead_source_request,
         _request_auth,
         _content_type,
         _headers,
@@ -3458,8 +3458,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if leadsource is not None:
-            _body_params = leadsource
+        if create_lead_source_request is not None:
+            _body_params = create_lead_source_request
 
 
         # set the HTTP header `Accept`
@@ -3509,7 +3509,7 @@ class PreReleaseApi:
     @validate_call
     def create_note_custom_field_using_post1(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3527,8 +3527,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Note object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3552,7 +3552,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_note_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3577,7 +3577,7 @@ class PreReleaseApi:
     @validate_call
     def create_note_custom_field_using_post1_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3595,8 +3595,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Note object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3620,7 +3620,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_note_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3645,7 +3645,7 @@ class PreReleaseApi:
     @validate_call
     def create_note_custom_field_using_post1_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3663,8 +3663,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Note object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3688,7 +3688,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_note_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3708,7 +3708,7 @@ class PreReleaseApi:
 
     def _create_note_custom_field_using_post1_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -3734,8 +3734,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -3785,7 +3785,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_custom_fields_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3803,8 +3803,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Opportunity object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3828,7 +3828,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_custom_fields_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3853,7 +3853,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_custom_fields_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3871,8 +3871,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Opportunity object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3896,7 +3896,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_custom_fields_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3921,7 +3921,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_custom_fields_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3939,8 +3939,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Opportunity object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3964,7 +3964,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_custom_fields_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3984,7 +3984,7 @@ class PreReleaseApi:
 
     def _create_opportunity_custom_fields_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -4010,8 +4010,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -4061,7 +4061,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_stage_using_post(
         self,
-        opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
+        create_opportunity_stage_request: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4079,8 +4079,8 @@ class PreReleaseApi:
 
         Creates a new Opportunity Stage
 
-        :param opportunity_stage: opportunity
-        :type opportunity_stage: CreateOpportunityStageRequest
+        :param create_opportunity_stage_request: opportunity
+        :type create_opportunity_stage_request: CreateOpportunityStageRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4104,7 +4104,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_stage_using_post_serialize(
-            opportunity_stage=opportunity_stage,
+            create_opportunity_stage_request=create_opportunity_stage_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4129,7 +4129,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_stage_using_post_with_http_info(
         self,
-        opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
+        create_opportunity_stage_request: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4147,8 +4147,8 @@ class PreReleaseApi:
 
         Creates a new Opportunity Stage
 
-        :param opportunity_stage: opportunity
-        :type opportunity_stage: CreateOpportunityStageRequest
+        :param create_opportunity_stage_request: opportunity
+        :type create_opportunity_stage_request: CreateOpportunityStageRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4172,7 +4172,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_stage_using_post_serialize(
-            opportunity_stage=opportunity_stage,
+            create_opportunity_stage_request=create_opportunity_stage_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4197,7 +4197,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_stage_using_post_without_preload_content(
         self,
-        opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
+        create_opportunity_stage_request: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4215,8 +4215,8 @@ class PreReleaseApi:
 
         Creates a new Opportunity Stage
 
-        :param opportunity_stage: opportunity
-        :type opportunity_stage: CreateOpportunityStageRequest
+        :param create_opportunity_stage_request: opportunity
+        :type create_opportunity_stage_request: CreateOpportunityStageRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4240,7 +4240,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_stage_using_post_serialize(
-            opportunity_stage=opportunity_stage,
+            create_opportunity_stage_request=create_opportunity_stage_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4260,7 +4260,7 @@ class PreReleaseApi:
 
     def _create_opportunity_stage_using_post_serialize(
         self,
-        opportunity_stage,
+        create_opportunity_stage_request,
         _request_auth,
         _content_type,
         _headers,
@@ -4286,8 +4286,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if opportunity_stage is not None:
-            _body_params = opportunity_stage
+        if create_opportunity_stage_request is not None:
+            _body_params = create_opportunity_stage_request
 
 
         # set the HTTP header `Accept`
@@ -4337,7 +4337,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_using_post1(
         self,
-        opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
+        create_opportunity_request: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4355,8 +4355,8 @@ class PreReleaseApi:
 
         Creates a new opportunity as the authenticated user.
 
-        :param opportunity: opportunity
-        :type opportunity: CreateOpportunityRequest
+        :param create_opportunity_request: opportunity
+        :type create_opportunity_request: CreateOpportunityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4380,7 +4380,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_using_post1_serialize(
-            opportunity=opportunity,
+            create_opportunity_request=create_opportunity_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4405,7 +4405,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_using_post1_with_http_info(
         self,
-        opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
+        create_opportunity_request: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4423,8 +4423,8 @@ class PreReleaseApi:
 
         Creates a new opportunity as the authenticated user.
 
-        :param opportunity: opportunity
-        :type opportunity: CreateOpportunityRequest
+        :param create_opportunity_request: opportunity
+        :type create_opportunity_request: CreateOpportunityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4448,7 +4448,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_using_post1_serialize(
-            opportunity=opportunity,
+            create_opportunity_request=create_opportunity_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4473,7 +4473,7 @@ class PreReleaseApi:
     @validate_call
     def create_opportunity_using_post1_without_preload_content(
         self,
-        opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
+        create_opportunity_request: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4491,8 +4491,8 @@ class PreReleaseApi:
 
         Creates a new opportunity as the authenticated user.
 
-        :param opportunity: opportunity
-        :type opportunity: CreateOpportunityRequest
+        :param create_opportunity_request: opportunity
+        :type create_opportunity_request: CreateOpportunityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4516,7 +4516,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_using_post1_serialize(
-            opportunity=opportunity,
+            create_opportunity_request=create_opportunity_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4536,7 +4536,7 @@ class PreReleaseApi:
 
     def _create_opportunity_using_post1_serialize(
         self,
-        opportunity,
+        create_opportunity_request,
         _request_auth,
         _content_type,
         _headers,
@@ -4562,8 +4562,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if opportunity is not None:
-            _body_params = opportunity
+        if create_opportunity_request is not None:
+            _body_params = create_opportunity_request
 
 
         # set the HTTP header `Accept`
@@ -4613,7 +4613,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_custom_field_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4631,8 +4631,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Order object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4656,7 +4656,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4681,7 +4681,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_custom_field_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4699,8 +4699,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Order object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4724,7 +4724,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4749,7 +4749,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_custom_field_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4767,8 +4767,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Order object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -4792,7 +4792,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -4812,7 +4812,7 @@ class PreReleaseApi:
 
     def _create_order_custom_field_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -4838,8 +4838,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -5180,7 +5180,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_total_discount_using_post(
         self,
-        request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
+        create_order_total_discount_request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5198,8 +5198,8 @@ class PreReleaseApi:
 
         Creates an Order Total Discount
 
-        :param request: request (required)
-        :type request: CreateOrderTotalDiscountRequest
+        :param create_order_total_discount_request: request (required)
+        :type create_order_total_discount_request: CreateOrderTotalDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5223,7 +5223,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_total_discount_using_post_serialize(
-            request=request,
+            create_order_total_discount_request=create_order_total_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5248,7 +5248,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_total_discount_using_post_with_http_info(
         self,
-        request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
+        create_order_total_discount_request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5266,8 +5266,8 @@ class PreReleaseApi:
 
         Creates an Order Total Discount
 
-        :param request: request (required)
-        :type request: CreateOrderTotalDiscountRequest
+        :param create_order_total_discount_request: request (required)
+        :type create_order_total_discount_request: CreateOrderTotalDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5291,7 +5291,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_total_discount_using_post_serialize(
-            request=request,
+            create_order_total_discount_request=create_order_total_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5316,7 +5316,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_total_discount_using_post_without_preload_content(
         self,
-        request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
+        create_order_total_discount_request: Annotated[CreateOrderTotalDiscountRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5334,8 +5334,8 @@ class PreReleaseApi:
 
         Creates an Order Total Discount
 
-        :param request: request (required)
-        :type request: CreateOrderTotalDiscountRequest
+        :param create_order_total_discount_request: request (required)
+        :type create_order_total_discount_request: CreateOrderTotalDiscountRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5359,7 +5359,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_total_discount_using_post_serialize(
-            request=request,
+            create_order_total_discount_request=create_order_total_discount_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5379,7 +5379,7 @@ class PreReleaseApi:
 
     def _create_order_total_discount_using_post_serialize(
         self,
-        request,
+        create_order_total_discount_request,
         _request_auth,
         _content_type,
         _headers,
@@ -5405,8 +5405,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_order_total_discount_request is not None:
+            _body_params = create_order_total_discount_request
 
 
         # set the HTTP header `Accept`
@@ -5456,7 +5456,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_using_post1(
         self,
-        create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
+        rest_create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5474,8 +5474,8 @@ class PreReleaseApi:
 
         Create a one time Order with Order items.
 
-        :param create_order_request: createOrderRequest (required)
-        :type create_order_request: RestCreateOrderRequest
+        :param rest_create_order_request: createOrderRequest (required)
+        :type rest_create_order_request: RestCreateOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5499,7 +5499,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_using_post1_serialize(
-            create_order_request=create_order_request,
+            rest_create_order_request=rest_create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5524,7 +5524,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_using_post1_with_http_info(
         self,
-        create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
+        rest_create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5542,8 +5542,8 @@ class PreReleaseApi:
 
         Create a one time Order with Order items.
 
-        :param create_order_request: createOrderRequest (required)
-        :type create_order_request: RestCreateOrderRequest
+        :param rest_create_order_request: createOrderRequest (required)
+        :type rest_create_order_request: RestCreateOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5567,7 +5567,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_using_post1_serialize(
-            create_order_request=create_order_request,
+            rest_create_order_request=rest_create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5592,7 +5592,7 @@ class PreReleaseApi:
     @validate_call
     def create_order_using_post1_without_preload_content(
         self,
-        create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
+        rest_create_order_request: Annotated[RestCreateOrderRequest, Field(description="createOrderRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5610,8 +5610,8 @@ class PreReleaseApi:
 
         Create a one time Order with Order items.
 
-        :param create_order_request: createOrderRequest (required)
-        :type create_order_request: RestCreateOrderRequest
+        :param rest_create_order_request: createOrderRequest (required)
+        :type rest_create_order_request: RestCreateOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5635,7 +5635,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_order_using_post1_serialize(
-            create_order_request=create_order_request,
+            rest_create_order_request=rest_create_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5655,7 +5655,7 @@ class PreReleaseApi:
 
     def _create_order_using_post1_serialize(
         self,
-        create_order_request,
+        rest_create_order_request,
         _request_auth,
         _content_type,
         _headers,
@@ -5681,8 +5681,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if create_order_request is not None:
-            _body_params = create_order_request
+        if rest_create_order_request is not None:
+            _body_params = rest_create_order_request
 
 
         # set the HTTP header `Accept`
@@ -6008,7 +6008,7 @@ class PreReleaseApi:
     @validate_call
     def create_redirect_link_using_post(
         self,
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6026,8 +6026,8 @@ class PreReleaseApi:
 
         Creates a single Affiliate Link
 
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6051,7 +6051,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_redirect_link_using_post_serialize(
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6076,7 +6076,7 @@ class PreReleaseApi:
     @validate_call
     def create_redirect_link_using_post_with_http_info(
         self,
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6094,8 +6094,8 @@ class PreReleaseApi:
 
         Creates a single Affiliate Link
 
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6119,7 +6119,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_redirect_link_using_post_serialize(
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6144,7 +6144,7 @@ class PreReleaseApi:
     @validate_call
     def create_redirect_link_using_post_without_preload_content(
         self,
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6162,8 +6162,8 @@ class PreReleaseApi:
 
         Creates a single Affiliate Link
 
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6187,7 +6187,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_redirect_link_using_post_serialize(
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6207,7 +6207,7 @@ class PreReleaseApi:
 
     def _create_redirect_link_using_post_serialize(
         self,
-        request,
+        create_or_patch_affiliate_link_request,
         _request_auth,
         _content_type,
         _headers,
@@ -6233,8 +6233,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_or_patch_affiliate_link_request is not None:
+            _body_params = create_or_patch_affiliate_link_request
 
 
         # set the HTTP header `Accept`
@@ -6284,7 +6284,7 @@ class PreReleaseApi:
     @validate_call
     def create_referral_using_post(
         self,
-        request: Annotated[CreateReferralRequest, Field(description="request")],
+        create_referral_request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6302,8 +6302,8 @@ class PreReleaseApi:
 
         Creates a new referral partner referral on the provided contact
 
-        :param request: request (required)
-        :type request: CreateReferralRequest
+        :param create_referral_request: request (required)
+        :type create_referral_request: CreateReferralRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6327,7 +6327,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_referral_using_post_serialize(
-            request=request,
+            create_referral_request=create_referral_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6352,7 +6352,7 @@ class PreReleaseApi:
     @validate_call
     def create_referral_using_post_with_http_info(
         self,
-        request: Annotated[CreateReferralRequest, Field(description="request")],
+        create_referral_request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6370,8 +6370,8 @@ class PreReleaseApi:
 
         Creates a new referral partner referral on the provided contact
 
-        :param request: request (required)
-        :type request: CreateReferralRequest
+        :param create_referral_request: request (required)
+        :type create_referral_request: CreateReferralRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6395,7 +6395,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_referral_using_post_serialize(
-            request=request,
+            create_referral_request=create_referral_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6420,7 +6420,7 @@ class PreReleaseApi:
     @validate_call
     def create_referral_using_post_without_preload_content(
         self,
-        request: Annotated[CreateReferralRequest, Field(description="request")],
+        create_referral_request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6438,8 +6438,8 @@ class PreReleaseApi:
 
         Creates a new referral partner referral on the provided contact
 
-        :param request: request (required)
-        :type request: CreateReferralRequest
+        :param create_referral_request: request (required)
+        :type create_referral_request: CreateReferralRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6463,7 +6463,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_referral_using_post_serialize(
-            request=request,
+            create_referral_request=create_referral_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6483,7 +6483,7 @@ class PreReleaseApi:
 
     def _create_referral_using_post_serialize(
         self,
-        request,
+        create_referral_request,
         _request_auth,
         _content_type,
         _headers,
@@ -6509,8 +6509,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_referral_request is not None:
+            _body_params = create_referral_request
 
 
         # set the HTTP header `Accept`
@@ -6560,7 +6560,7 @@ class PreReleaseApi:
     @validate_call
     def create_subscription_custom_field_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6578,8 +6578,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Subscription object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6603,7 +6603,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_subscription_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6628,7 +6628,7 @@ class PreReleaseApi:
     @validate_call
     def create_subscription_custom_field_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6646,8 +6646,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Subscription object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6671,7 +6671,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_subscription_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6696,7 +6696,7 @@ class PreReleaseApi:
     @validate_call
     def create_subscription_custom_field_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6714,8 +6714,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Subscription object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6739,7 +6739,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_subscription_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6759,7 +6759,7 @@ class PreReleaseApi:
 
     def _create_subscription_custom_field_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -6785,8 +6785,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -6836,7 +6836,7 @@ class PreReleaseApi:
     @validate_call
     def create_task_custom_field_using_post1(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6854,8 +6854,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Task object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6879,7 +6879,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_task_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6904,7 +6904,7 @@ class PreReleaseApi:
     @validate_call
     def create_task_custom_field_using_post1_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6922,8 +6922,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Task object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6947,7 +6947,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_task_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6972,7 +6972,7 @@ class PreReleaseApi:
     @validate_call
     def create_task_custom_field_using_post1_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6990,8 +6990,8 @@ class PreReleaseApi:
 
         Adds a custom field of the specified type and options to the Task object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7015,7 +7015,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_task_custom_field_using_post1_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7035,7 +7035,7 @@ class PreReleaseApi:
 
     def _create_task_custom_field_using_post1_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -7061,8 +7061,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -7112,7 +7112,7 @@ class PreReleaseApi:
     @validate_call
     def create_task_using_post1(
         self,
-        task: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
+        create_task_request: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7130,8 +7130,8 @@ class PreReleaseApi:
 
         Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
 
-        :param task: task
-        :type task: CreateTaskRequest
+        :param create_task_request: task
+        :type create_task_request: CreateTaskRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7155,7 +7155,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_task_using_post1_serialize(
-            task=task,
+            create_task_request=create_task_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7180,7 +7180,7 @@ class PreReleaseApi:
     @validate_call
     def create_task_using_post1_with_http_info(
         self,
-        task: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
+        create_task_request: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7198,8 +7198,8 @@ class PreReleaseApi:
 
         Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
 
-        :param task: task
-        :type task: CreateTaskRequest
+        :param create_task_request: task
+        :type create_task_request: CreateTaskRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7223,7 +7223,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_task_using_post1_serialize(
-            task=task,
+            create_task_request=create_task_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7248,7 +7248,7 @@ class PreReleaseApi:
     @validate_call
     def create_task_using_post1_without_preload_content(
         self,
-        task: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
+        create_task_request: Annotated[Optional[CreateTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7266,8 +7266,8 @@ class PreReleaseApi:
 
         Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
 
-        :param task: task
-        :type task: CreateTaskRequest
+        :param create_task_request: task
+        :type create_task_request: CreateTaskRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7291,7 +7291,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_task_using_post1_serialize(
-            task=task,
+            create_task_request=create_task_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7311,7 +7311,7 @@ class PreReleaseApi:
 
     def _create_task_using_post1_serialize(
         self,
-        task,
+        create_task_request,
         _request_auth,
         _content_type,
         _headers,
@@ -7337,8 +7337,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if task is not None:
-            _body_params = task
+        if create_task_request is not None:
+            _body_params = create_task_request
 
 
         # set the HTTP header `Accept`
@@ -7388,7 +7388,7 @@ class PreReleaseApi:
     @validate_call
     def create_user_using_post1(
         self,
-        user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
+        create_user_request_v2: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7406,8 +7406,8 @@ class PreReleaseApi:
 
         Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
 
-        :param user: user
-        :type user: CreateUserRequestV2
+        :param create_user_request_v2: user
+        :type create_user_request_v2: CreateUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7431,7 +7431,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_user_using_post1_serialize(
-            user=user,
+            create_user_request_v2=create_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7456,7 +7456,7 @@ class PreReleaseApi:
     @validate_call
     def create_user_using_post1_with_http_info(
         self,
-        user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
+        create_user_request_v2: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7474,8 +7474,8 @@ class PreReleaseApi:
 
         Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
 
-        :param user: user
-        :type user: CreateUserRequestV2
+        :param create_user_request_v2: user
+        :type create_user_request_v2: CreateUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7499,7 +7499,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_user_using_post1_serialize(
-            user=user,
+            create_user_request_v2=create_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7524,7 +7524,7 @@ class PreReleaseApi:
     @validate_call
     def create_user_using_post1_without_preload_content(
         self,
-        user: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
+        create_user_request_v2: Annotated[Optional[CreateUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7542,8 +7542,8 @@ class PreReleaseApi:
 
         Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
 
-        :param user: user
-        :type user: CreateUserRequestV2
+        :param create_user_request_v2: user
+        :type create_user_request_v2: CreateUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7567,7 +7567,7 @@ class PreReleaseApi:
         """ # noqa: E501
 
         _param = self._create_user_using_post1_serialize(
-            user=user,
+            create_user_request_v2=create_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7587,7 +7587,7 @@ class PreReleaseApi:
 
     def _create_user_using_post1_serialize(
         self,
-        user,
+        create_user_request_v2,
         _request_auth,
         _content_type,
         _headers,
@@ -7613,8 +7613,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if user is not None:
-            _body_params = user
+        if create_user_request_v2 is not None:
+            _body_params = create_user_request_v2
 
 
         # set the HTTP header `Accept`
@@ -23095,7 +23095,7 @@ class PreReleaseApi:
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        order: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
+        rest_v2_patch_order_request: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -23117,8 +23117,8 @@ class PreReleaseApi:
         :type order_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param order: order
-        :type order: RestV2PatchOrderRequest
+        :param rest_v2_patch_order_request: order
+        :type rest_v2_patch_order_request: RestV2PatchOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -23144,7 +23144,7 @@ class PreReleaseApi:
         _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
-            order=order,
+            rest_v2_patch_order_request=rest_v2_patch_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -23172,7 +23172,7 @@ class PreReleaseApi:
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        order: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
+        rest_v2_patch_order_request: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -23194,8 +23194,8 @@ class PreReleaseApi:
         :type order_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param order: order
-        :type order: RestV2PatchOrderRequest
+        :param rest_v2_patch_order_request: order
+        :type rest_v2_patch_order_request: RestV2PatchOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -23221,7 +23221,7 @@ class PreReleaseApi:
         _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
-            order=order,
+            rest_v2_patch_order_request=rest_v2_patch_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -23249,7 +23249,7 @@ class PreReleaseApi:
         self,
         order_id: Annotated[StrictStr, Field(description="order_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        order: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
+        rest_v2_patch_order_request: Annotated[Optional[RestV2PatchOrderRequest], Field(description="order")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -23271,8 +23271,8 @@ class PreReleaseApi:
         :type order_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param order: order
-        :type order: RestV2PatchOrderRequest
+        :param rest_v2_patch_order_request: order
+        :type rest_v2_patch_order_request: RestV2PatchOrderRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -23298,7 +23298,7 @@ class PreReleaseApi:
         _param = self._patch_order_using_patch_serialize(
             order_id=order_id,
             update_mask=update_mask,
-            order=order,
+            rest_v2_patch_order_request=rest_v2_patch_order_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -23321,7 +23321,7 @@ class PreReleaseApi:
         self,
         order_id,
         update_mask,
-        order,
+        rest_v2_patch_order_request,
         _request_auth,
         _content_type,
         _headers,
@@ -23354,8 +23354,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if order is not None:
-            _body_params = order
+        if rest_v2_patch_order_request is not None:
+            _body_params = rest_v2_patch_order_request
 
 
         # set the HTTP header `Accept`
@@ -24031,7 +24031,7 @@ class PreReleaseApi:
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        task: Annotated[Optional[CreatePatchTaskRequest], Field(description="task")] = None,
+        create_patch_task_request: Annotated[Optional[CreatePatchTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24053,8 +24053,8 @@ class PreReleaseApi:
         :type task_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param task: task
-        :type task: CreatePatchTaskRequest
+        :param create_patch_task_request: task
+        :type create_patch_task_request: CreatePatchTaskRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24080,7 +24080,7 @@ class PreReleaseApi:
         _param = self._patch_task_using_patch_serialize(
             task_id=task_id,
             update_mask=update_mask,
-            task=task,
+            create_patch_task_request=create_patch_task_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24108,7 +24108,7 @@ class PreReleaseApi:
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        task: Annotated[Optional[CreatePatchTaskRequest], Field(description="task")] = None,
+        create_patch_task_request: Annotated[Optional[CreatePatchTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24130,8 +24130,8 @@ class PreReleaseApi:
         :type task_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param task: task
-        :type task: CreatePatchTaskRequest
+        :param create_patch_task_request: task
+        :type create_patch_task_request: CreatePatchTaskRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24157,7 +24157,7 @@ class PreReleaseApi:
         _param = self._patch_task_using_patch_serialize(
             task_id=task_id,
             update_mask=update_mask,
-            task=task,
+            create_patch_task_request=create_patch_task_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24185,7 +24185,7 @@ class PreReleaseApi:
         self,
         task_id: Annotated[StrictStr, Field(description="task_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        task: Annotated[Optional[CreatePatchTaskRequest], Field(description="task")] = None,
+        create_patch_task_request: Annotated[Optional[CreatePatchTaskRequest], Field(description="task")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24207,8 +24207,8 @@ class PreReleaseApi:
         :type task_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param task: task
-        :type task: CreatePatchTaskRequest
+        :param create_patch_task_request: task
+        :type create_patch_task_request: CreatePatchTaskRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24234,7 +24234,7 @@ class PreReleaseApi:
         _param = self._patch_task_using_patch_serialize(
             task_id=task_id,
             update_mask=update_mask,
-            task=task,
+            create_patch_task_request=create_patch_task_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24257,7 +24257,7 @@ class PreReleaseApi:
         self,
         task_id,
         update_mask,
-        task,
+        create_patch_task_request,
         _request_auth,
         _content_type,
         _headers,
@@ -24290,8 +24290,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if task is not None:
-            _body_params = task
+        if create_patch_task_request is not None:
+            _body_params = create_patch_task_request
 
 
         # set the HTTP header `Accept`
@@ -24343,7 +24343,7 @@ class PreReleaseApi:
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        user: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
+        patch_user_request_v2: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24365,8 +24365,8 @@ class PreReleaseApi:
         :type user_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param user: user
-        :type user: PatchUserRequestV2
+        :param patch_user_request_v2: user
+        :type patch_user_request_v2: PatchUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24392,7 +24392,7 @@ class PreReleaseApi:
         _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
-            user=user,
+            patch_user_request_v2=patch_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24420,7 +24420,7 @@ class PreReleaseApi:
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        user: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
+        patch_user_request_v2: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24442,8 +24442,8 @@ class PreReleaseApi:
         :type user_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param user: user
-        :type user: PatchUserRequestV2
+        :param patch_user_request_v2: user
+        :type patch_user_request_v2: PatchUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24469,7 +24469,7 @@ class PreReleaseApi:
         _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
-            user=user,
+            patch_user_request_v2=patch_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24497,7 +24497,7 @@ class PreReleaseApi:
         self,
         user_id: Annotated[StrictStr, Field(description="user_id")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
-        user: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
+        patch_user_request_v2: Annotated[Optional[PatchUserRequestV2], Field(description="user")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24519,8 +24519,8 @@ class PreReleaseApi:
         :type user_id: str
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param user: user
-        :type user: PatchUserRequestV2
+        :param patch_user_request_v2: user
+        :type patch_user_request_v2: PatchUserRequestV2
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24546,7 +24546,7 @@ class PreReleaseApi:
         _param = self._patch_user_using_patch_serialize(
             user_id=user_id,
             update_mask=update_mask,
-            user=user,
+            patch_user_request_v2=patch_user_request_v2,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24569,7 +24569,7 @@ class PreReleaseApi:
         self,
         user_id,
         update_mask,
-        user,
+        patch_user_request_v2,
         _request_auth,
         _content_type,
         _headers,
@@ -24602,8 +24602,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if user is not None:
-            _body_params = user
+        if patch_user_request_v2 is not None:
+            _body_params = patch_user_request_v2
 
 
         # set the HTTP header `Accept`
@@ -24654,7 +24654,7 @@ class PreReleaseApi:
     def remove_affiliate_from_program_using_post(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
+        affiliate_remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24674,8 +24674,8 @@ class PreReleaseApi:
 
         :param id: id (required)
         :type id: str
-        :param remove_from_program_request: removeFromProgramRequest (required)
-        :type remove_from_program_request: AffiliateRemoveFromProgramRequest
+        :param affiliate_remove_from_program_request: removeFromProgramRequest (required)
+        :type affiliate_remove_from_program_request: AffiliateRemoveFromProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24700,7 +24700,7 @@ class PreReleaseApi:
 
         _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
-            remove_from_program_request=remove_from_program_request,
+            affiliate_remove_from_program_request=affiliate_remove_from_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24726,7 +24726,7 @@ class PreReleaseApi:
     def remove_affiliate_from_program_using_post_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
+        affiliate_remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24746,8 +24746,8 @@ class PreReleaseApi:
 
         :param id: id (required)
         :type id: str
-        :param remove_from_program_request: removeFromProgramRequest (required)
-        :type remove_from_program_request: AffiliateRemoveFromProgramRequest
+        :param affiliate_remove_from_program_request: removeFromProgramRequest (required)
+        :type affiliate_remove_from_program_request: AffiliateRemoveFromProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24772,7 +24772,7 @@ class PreReleaseApi:
 
         _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
-            remove_from_program_request=remove_from_program_request,
+            affiliate_remove_from_program_request=affiliate_remove_from_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24798,7 +24798,7 @@ class PreReleaseApi:
     def remove_affiliate_from_program_using_post_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
+        affiliate_remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -24818,8 +24818,8 @@ class PreReleaseApi:
 
         :param id: id (required)
         :type id: str
-        :param remove_from_program_request: removeFromProgramRequest (required)
-        :type remove_from_program_request: AffiliateRemoveFromProgramRequest
+        :param affiliate_remove_from_program_request: removeFromProgramRequest (required)
+        :type affiliate_remove_from_program_request: AffiliateRemoveFromProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -24844,7 +24844,7 @@ class PreReleaseApi:
 
         _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
-            remove_from_program_request=remove_from_program_request,
+            affiliate_remove_from_program_request=affiliate_remove_from_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -24865,7 +24865,7 @@ class PreReleaseApi:
     def _remove_affiliate_from_program_using_post_serialize(
         self,
         id,
-        remove_from_program_request,
+        affiliate_remove_from_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -24893,8 +24893,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if remove_from_program_request is not None:
-            _body_params = remove_from_program_request
+        if affiliate_remove_from_program_request is not None:
+            _body_params = affiliate_remove_from_program_request
 
 
         # set the HTTP header `Accept`
@@ -26240,7 +26240,7 @@ class PreReleaseApi:
     def update_affiliate_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26261,8 +26261,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26289,7 +26289,7 @@ class PreReleaseApi:
 
         _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26317,7 +26317,7 @@ class PreReleaseApi:
     def update_affiliate_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26338,8 +26338,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26366,7 +26366,7 @@ class PreReleaseApi:
 
         _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26394,7 +26394,7 @@ class PreReleaseApi:
     def update_affiliate_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26415,8 +26415,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26443,7 +26443,7 @@ class PreReleaseApi:
 
         _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26466,7 +26466,7 @@ class PreReleaseApi:
     def _update_affiliate_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -26500,8 +26500,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -26552,7 +26552,7 @@ class PreReleaseApi:
     def update_discount_using_patch(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26573,8 +26573,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26601,7 +26601,7 @@ class PreReleaseApi:
 
         _param = self._update_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26629,7 +26629,7 @@ class PreReleaseApi:
     def update_discount_using_patch_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26650,8 +26650,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26678,7 +26678,7 @@ class PreReleaseApi:
 
         _param = self._update_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26706,7 +26706,7 @@ class PreReleaseApi:
     def update_discount_using_patch_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
+        create_update_discount_request: Annotated[CreateUpdateDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26727,8 +26727,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: CreateUpdateDiscountRequest
+        :param create_update_discount_request: request (required)
+        :type create_update_discount_request: CreateUpdateDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26755,7 +26755,7 @@ class PreReleaseApi:
 
         _param = self._update_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            create_update_discount_request=create_update_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26778,7 +26778,7 @@ class PreReleaseApi:
     def _update_discount_using_patch_serialize(
         self,
         discount_id,
-        request,
+        create_update_discount_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -26812,8 +26812,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_update_discount_request is not None:
+            _body_params = create_update_discount_request
 
 
         # set the HTTP header `Accept`
@@ -26864,7 +26864,7 @@ class PreReleaseApi:
     def update_discount_using_patch1(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateShippingDiscountRequest, Field(description="request")],
+        update_shipping_discount_request: Annotated[UpdateShippingDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26885,8 +26885,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateShippingDiscountRequest
+        :param update_shipping_discount_request: request (required)
+        :type update_shipping_discount_request: UpdateShippingDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26913,7 +26913,7 @@ class PreReleaseApi:
 
         _param = self._update_discount_using_patch1_serialize(
             discount_id=discount_id,
-            request=request,
+            update_shipping_discount_request=update_shipping_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -26941,7 +26941,7 @@ class PreReleaseApi:
     def update_discount_using_patch1_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateShippingDiscountRequest, Field(description="request")],
+        update_shipping_discount_request: Annotated[UpdateShippingDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -26962,8 +26962,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateShippingDiscountRequest
+        :param update_shipping_discount_request: request (required)
+        :type update_shipping_discount_request: UpdateShippingDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -26990,7 +26990,7 @@ class PreReleaseApi:
 
         _param = self._update_discount_using_patch1_serialize(
             discount_id=discount_id,
-            request=request,
+            update_shipping_discount_request=update_shipping_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27018,7 +27018,7 @@ class PreReleaseApi:
     def update_discount_using_patch1_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateShippingDiscountRequest, Field(description="request")],
+        update_shipping_discount_request: Annotated[UpdateShippingDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27039,8 +27039,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateShippingDiscountRequest
+        :param update_shipping_discount_request: request (required)
+        :type update_shipping_discount_request: UpdateShippingDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27067,7 +27067,7 @@ class PreReleaseApi:
 
         _param = self._update_discount_using_patch1_serialize(
             discount_id=discount_id,
-            request=request,
+            update_shipping_discount_request=update_shipping_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27090,7 +27090,7 @@ class PreReleaseApi:
     def _update_discount_using_patch1_serialize(
         self,
         discount_id,
-        request,
+        update_shipping_discount_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -27124,8 +27124,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_shipping_discount_request is not None:
+            _body_params = update_shipping_discount_request
 
 
         # set the HTTP header `Accept`
@@ -27176,7 +27176,7 @@ class PreReleaseApi:
     def update_notes_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27197,8 +27197,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27225,7 +27225,7 @@ class PreReleaseApi:
 
         _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27253,7 +27253,7 @@ class PreReleaseApi:
     def update_notes_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27274,8 +27274,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27302,7 +27302,7 @@ class PreReleaseApi:
 
         _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27330,7 +27330,7 @@ class PreReleaseApi:
     def update_notes_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27351,8 +27351,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27379,7 +27379,7 @@ class PreReleaseApi:
 
         _param = self._update_notes_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27402,7 +27402,7 @@ class PreReleaseApi:
     def _update_notes_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -27436,8 +27436,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -27488,7 +27488,7 @@ class PreReleaseApi:
     def update_opportunity_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27509,8 +27509,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27537,7 +27537,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27565,7 +27565,7 @@ class PreReleaseApi:
     def update_opportunity_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27586,8 +27586,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27614,7 +27614,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27642,7 +27642,7 @@ class PreReleaseApi:
     def update_opportunity_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27663,8 +27663,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27691,7 +27691,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27714,7 +27714,7 @@ class PreReleaseApi:
     def _update_opportunity_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -27748,8 +27748,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -27800,7 +27800,7 @@ class PreReleaseApi:
     def update_opportunity_stage_using_patch(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
-        request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
+        update_opportunity_stage_request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27821,8 +27821,8 @@ class PreReleaseApi:
 
         :param stage_id: stage_id (required)
         :type stage_id: str
-        :param request: request (required)
-        :type request: UpdateOpportunityStageRequest
+        :param update_opportunity_stage_request: request (required)
+        :type update_opportunity_stage_request: UpdateOpportunityStageRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27849,7 +27849,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_stage_using_patch_serialize(
             stage_id=stage_id,
-            request=request,
+            update_opportunity_stage_request=update_opportunity_stage_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27877,7 +27877,7 @@ class PreReleaseApi:
     def update_opportunity_stage_using_patch_with_http_info(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
-        request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
+        update_opportunity_stage_request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27898,8 +27898,8 @@ class PreReleaseApi:
 
         :param stage_id: stage_id (required)
         :type stage_id: str
-        :param request: request (required)
-        :type request: UpdateOpportunityStageRequest
+        :param update_opportunity_stage_request: request (required)
+        :type update_opportunity_stage_request: UpdateOpportunityStageRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -27926,7 +27926,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_stage_using_patch_serialize(
             stage_id=stage_id,
-            request=request,
+            update_opportunity_stage_request=update_opportunity_stage_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -27954,7 +27954,7 @@ class PreReleaseApi:
     def update_opportunity_stage_using_patch_without_preload_content(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
-        request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
+        update_opportunity_stage_request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -27975,8 +27975,8 @@ class PreReleaseApi:
 
         :param stage_id: stage_id (required)
         :type stage_id: str
-        :param request: request (required)
-        :type request: UpdateOpportunityStageRequest
+        :param update_opportunity_stage_request: request (required)
+        :type update_opportunity_stage_request: UpdateOpportunityStageRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28003,7 +28003,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_stage_using_patch_serialize(
             stage_id=stage_id,
-            request=request,
+            update_opportunity_stage_request=update_opportunity_stage_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28026,7 +28026,7 @@ class PreReleaseApi:
     def _update_opportunity_stage_using_patch_serialize(
         self,
         stage_id,
-        request,
+        update_opportunity_stage_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -28060,8 +28060,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_opportunity_stage_request is not None:
+            _body_params = update_opportunity_stage_request
 
 
         # set the HTTP header `Accept`
@@ -28112,7 +28112,7 @@ class PreReleaseApi:
     def update_opportunity_using_patch(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
-        request: Annotated[PatchOpportunityRequest, Field(description="request")],
+        patch_opportunity_request: Annotated[PatchOpportunityRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28133,8 +28133,8 @@ class PreReleaseApi:
 
         :param opportunity_id: opportunity_id (required)
         :type opportunity_id: str
-        :param request: request (required)
-        :type request: PatchOpportunityRequest
+        :param patch_opportunity_request: request (required)
+        :type patch_opportunity_request: PatchOpportunityRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28161,7 +28161,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
-            request=request,
+            patch_opportunity_request=patch_opportunity_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28189,7 +28189,7 @@ class PreReleaseApi:
     def update_opportunity_using_patch_with_http_info(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
-        request: Annotated[PatchOpportunityRequest, Field(description="request")],
+        patch_opportunity_request: Annotated[PatchOpportunityRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28210,8 +28210,8 @@ class PreReleaseApi:
 
         :param opportunity_id: opportunity_id (required)
         :type opportunity_id: str
-        :param request: request (required)
-        :type request: PatchOpportunityRequest
+        :param patch_opportunity_request: request (required)
+        :type patch_opportunity_request: PatchOpportunityRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28238,7 +28238,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
-            request=request,
+            patch_opportunity_request=patch_opportunity_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28266,7 +28266,7 @@ class PreReleaseApi:
     def update_opportunity_using_patch_without_preload_content(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
-        request: Annotated[PatchOpportunityRequest, Field(description="request")],
+        patch_opportunity_request: Annotated[PatchOpportunityRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28287,8 +28287,8 @@ class PreReleaseApi:
 
         :param opportunity_id: opportunity_id (required)
         :type opportunity_id: str
-        :param request: request (required)
-        :type request: PatchOpportunityRequest
+        :param patch_opportunity_request: request (required)
+        :type patch_opportunity_request: PatchOpportunityRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28315,7 +28315,7 @@ class PreReleaseApi:
 
         _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
-            request=request,
+            patch_opportunity_request=patch_opportunity_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28338,7 +28338,7 @@ class PreReleaseApi:
     def _update_opportunity_using_patch_serialize(
         self,
         opportunity_id,
-        request,
+        patch_opportunity_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -28372,8 +28372,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if patch_opportunity_request is not None:
+            _body_params = patch_opportunity_request
 
 
         # set the HTTP header `Accept`
@@ -28424,7 +28424,7 @@ class PreReleaseApi:
     def update_order_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28445,8 +28445,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28473,7 +28473,7 @@ class PreReleaseApi:
 
         _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28501,7 +28501,7 @@ class PreReleaseApi:
     def update_order_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28522,8 +28522,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28550,7 +28550,7 @@ class PreReleaseApi:
 
         _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28578,7 +28578,7 @@ class PreReleaseApi:
     def update_order_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28599,8 +28599,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28627,7 +28627,7 @@ class PreReleaseApi:
 
         _param = self._update_order_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28650,7 +28650,7 @@ class PreReleaseApi:
     def _update_order_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -28684,8 +28684,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -28736,7 +28736,7 @@ class PreReleaseApi:
     def update_order_total_discount_using_patch(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
+        update_order_total_discount_request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28757,8 +28757,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateOrderTotalDiscountRequest
+        :param update_order_total_discount_request: request (required)
+        :type update_order_total_discount_request: UpdateOrderTotalDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28785,7 +28785,7 @@ class PreReleaseApi:
 
         _param = self._update_order_total_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            update_order_total_discount_request=update_order_total_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28813,7 +28813,7 @@ class PreReleaseApi:
     def update_order_total_discount_using_patch_with_http_info(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
+        update_order_total_discount_request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28834,8 +28834,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateOrderTotalDiscountRequest
+        :param update_order_total_discount_request: request (required)
+        :type update_order_total_discount_request: UpdateOrderTotalDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28862,7 +28862,7 @@ class PreReleaseApi:
 
         _param = self._update_order_total_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            update_order_total_discount_request=update_order_total_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28890,7 +28890,7 @@ class PreReleaseApi:
     def update_order_total_discount_using_patch_without_preload_content(
         self,
         discount_id: Annotated[StrictStr, Field(description="discount_id")],
-        request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
+        update_order_total_discount_request: Annotated[UpdateOrderTotalDiscountRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -28911,8 +28911,8 @@ class PreReleaseApi:
 
         :param discount_id: discount_id (required)
         :type discount_id: str
-        :param request: request (required)
-        :type request: UpdateOrderTotalDiscountRequest
+        :param update_order_total_discount_request: request (required)
+        :type update_order_total_discount_request: UpdateOrderTotalDiscountRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -28939,7 +28939,7 @@ class PreReleaseApi:
 
         _param = self._update_order_total_discount_using_patch_serialize(
             discount_id=discount_id,
-            request=request,
+            update_order_total_discount_request=update_order_total_discount_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -28962,7 +28962,7 @@ class PreReleaseApi:
     def _update_order_total_discount_using_patch_serialize(
         self,
         discount_id,
-        request,
+        update_order_total_discount_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -28996,8 +28996,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_order_total_discount_request is not None:
+            _body_params = update_order_total_discount_request
 
 
         # set the HTTP header `Accept`
@@ -29048,7 +29048,7 @@ class PreReleaseApi:
     def update_redirect_link_using_patch(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -29068,8 +29068,8 @@ class PreReleaseApi:
 
         :param redirect_id: redirect_id (required)
         :type redirect_id: str
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -29094,7 +29094,7 @@ class PreReleaseApi:
 
         _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -29121,7 +29121,7 @@ class PreReleaseApi:
     def update_redirect_link_using_patch_with_http_info(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -29141,8 +29141,8 @@ class PreReleaseApi:
 
         :param redirect_id: redirect_id (required)
         :type redirect_id: str
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -29167,7 +29167,7 @@ class PreReleaseApi:
 
         _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -29194,7 +29194,7 @@ class PreReleaseApi:
     def update_redirect_link_using_patch_without_preload_content(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -29214,8 +29214,8 @@ class PreReleaseApi:
 
         :param redirect_id: redirect_id (required)
         :type redirect_id: str
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -29240,7 +29240,7 @@ class PreReleaseApi:
 
         _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -29262,7 +29262,7 @@ class PreReleaseApi:
     def _update_redirect_link_using_patch_serialize(
         self,
         redirect_id,
-        request,
+        create_or_patch_affiliate_link_request,
         _request_auth,
         _content_type,
         _headers,
@@ -29290,8 +29290,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_or_patch_affiliate_link_request is not None:
+            _body_params = create_or_patch_affiliate_link_request
 
 
         # set the HTTP header `Accept`
@@ -29342,7 +29342,7 @@ class PreReleaseApi:
     def update_subscription_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -29363,8 +29363,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -29391,7 +29391,7 @@ class PreReleaseApi:
 
         _param = self._update_subscription_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -29419,7 +29419,7 @@ class PreReleaseApi:
     def update_subscription_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -29440,8 +29440,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -29468,7 +29468,7 @@ class PreReleaseApi:
 
         _param = self._update_subscription_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -29496,7 +29496,7 @@ class PreReleaseApi:
     def update_subscription_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -29517,8 +29517,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -29545,7 +29545,7 @@ class PreReleaseApi:
 
         _param = self._update_subscription_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -29568,7 +29568,7 @@ class PreReleaseApi:
     def _update_subscription_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -29602,8 +29602,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -29654,7 +29654,7 @@ class PreReleaseApi:
     def update_task_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -29675,8 +29675,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -29703,7 +29703,7 @@ class PreReleaseApi:
 
         _param = self._update_task_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -29731,7 +29731,7 @@ class PreReleaseApi:
     def update_task_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -29752,8 +29752,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -29780,7 +29780,7 @@ class PreReleaseApi:
 
         _param = self._update_task_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -29808,7 +29808,7 @@ class PreReleaseApi:
     def update_task_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -29829,8 +29829,8 @@ class PreReleaseApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -29857,7 +29857,7 @@ class PreReleaseApi:
 
         _param = self._update_task_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -29880,7 +29880,7 @@ class PreReleaseApi:
     def _update_task_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -29914,8 +29914,8 @@ class PreReleaseApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`

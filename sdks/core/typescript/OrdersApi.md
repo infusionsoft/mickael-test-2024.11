@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **createOrderCustomFieldUsingPOST**
-> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Order object.
 
@@ -35,7 +35,7 @@ const apiInstance = new OrdersApi(configuration);
 
 const request: OrdersApiCreateOrderCustomFieldUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -58,7 +58,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -149,7 +149,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createOrderUsingPOST1**
-> RestV2Order createOrderUsingPOST1(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(restCreateOrderRequest)
 
 Create a one time Order with Order items.
 
@@ -165,7 +165,7 @@ const apiInstance = new OrdersApi(configuration);
 
 const request: OrdersApiCreateOrderUsingPOST1Request = {
     // createOrderRequest
-  createOrderRequest: {
+  restCreateOrderRequest: {
     contactId: "contactId_example",
     leadAffiliateId: "leadAffiliateId_example",
     orderItems: [
@@ -211,7 +211,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrderRequest** | **RestCreateOrderRequest**| createOrderRequest |
+ **restCreateOrderRequest** | **RestCreateOrderRequest**| createOrderRequest |
 
 
 ### Return type
@@ -625,7 +625,7 @@ const request: OrdersApiPatchOrderUsingPATCHRequest = {
     "contact_id",
   ],
     // order (optional)
-  order: {
+  restV2PatchOrderRequest: {
     contactId: "contactId_example",
     leadAffiliateId: "leadAffiliateId_example",
     orderTime: "orderTime_example",
@@ -662,7 +662,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order** | **RestV2PatchOrderRequest**| order |
+ **restV2PatchOrderRequest** | **RestV2PatchOrderRequest**| order |
  **orderId** | [**string**] | order_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -741,7 +741,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOrderCustomFieldUsingPATCH**
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Order object.
 
@@ -759,7 +759,7 @@ const request: OrdersApiUpdateOrderCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -785,7 +785,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

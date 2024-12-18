@@ -61,7 +61,7 @@ No authorization required
 
 ## createSubscriptionCustomFieldUsingPOST
 
-> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create a Subscription&#39;s Custom Field
 
@@ -73,8 +73,8 @@ Adds a custom field of the specified type and options to the Subscription object
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.SubscriptionsApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createSubscriptionCustomFieldUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -87,7 +87,7 @@ apiInstance.createSubscriptionCustomFieldUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -241,7 +241,7 @@ No authorization required
 
 ## updateSubscriptionCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Subscription&#39;s Custom Field
 
@@ -254,11 +254,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.SubscriptionsApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -272,7 +272,7 @@ apiInstance.updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

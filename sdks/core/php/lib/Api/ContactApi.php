@@ -163,16 +163,16 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\ContactLinkType|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createContactLinkTypeUsingPOST($request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
+    public function createContactLinkTypeUsingPOST($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
-        list($response) = $this->createContactLinkTypeUsingPOSTWithHttpInfo($request, $contentType);
+        list($response) = $this->createContactLinkTypeUsingPOSTWithHttpInfo($create_contact_link_type_request, $contentType);
         return $response;
     }
 
@@ -181,16 +181,16 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\ContactLinkType|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createContactLinkTypeUsingPOSTWithHttpInfo($request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
+    public function createContactLinkTypeUsingPOSTWithHttpInfo($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
-        $request = $this->createContactLinkTypeUsingPOSTRequest($request, $contentType);
+        $request = $this->createContactLinkTypeUsingPOSTRequest($create_contact_link_type_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -376,15 +376,15 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createContactLinkTypeUsingPOSTAsync($request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
+    public function createContactLinkTypeUsingPOSTAsync($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
-        return $this->createContactLinkTypeUsingPOSTAsyncWithHttpInfo($request, $contentType)
+        return $this->createContactLinkTypeUsingPOSTAsyncWithHttpInfo($create_contact_link_type_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -397,16 +397,16 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createContactLinkTypeUsingPOSTAsyncWithHttpInfo($request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
+    public function createContactLinkTypeUsingPOSTAsyncWithHttpInfo($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\ContactLinkType';
-        $request = $this->createContactLinkTypeUsingPOSTRequest($request, $contentType);
+        $request = $this->createContactLinkTypeUsingPOSTRequest($create_contact_link_type_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -447,19 +447,19 @@ class ContactApi
     /**
      * Create request for operation 'createContactLinkTypeUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createContactLinkTypeUsingPOSTRequest($request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
+    public function createContactLinkTypeUsingPOSTRequest($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_contact_link_type_request' is set
+        if ($create_contact_link_type_request === null || (is_array($create_contact_link_type_request) && count($create_contact_link_type_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createContactLinkTypeUsingPOST'
+                'Missing the required parameter $create_contact_link_type_request when calling createContactLinkTypeUsingPOST'
             );
         }
 
@@ -482,12 +482,12 @@ class ContactApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_contact_link_type_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_contact_link_type_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_contact_link_type_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -540,16 +540,16 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createContactUsingPOST1($contact = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
+    public function createContactUsingPOST1($create_patch_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
-        list($response) = $this->createContactUsingPOST1WithHttpInfo($contact, $contentType);
+        list($response) = $this->createContactUsingPOST1WithHttpInfo($create_patch_contact_request, $contentType);
         return $response;
     }
 
@@ -558,16 +558,16 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createContactUsingPOST1WithHttpInfo($contact = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
+    public function createContactUsingPOST1WithHttpInfo($create_patch_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
-        $request = $this->createContactUsingPOST1Request($contact, $contentType);
+        $request = $this->createContactUsingPOST1Request($create_patch_contact_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -753,15 +753,15 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createContactUsingPOST1Async($contact = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
+    public function createContactUsingPOST1Async($create_patch_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
-        return $this->createContactUsingPOST1AsyncWithHttpInfo($contact, $contentType)
+        return $this->createContactUsingPOST1AsyncWithHttpInfo($create_patch_contact_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -774,16 +774,16 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createContactUsingPOST1AsyncWithHttpInfo($contact = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
+    public function createContactUsingPOST1AsyncWithHttpInfo($create_patch_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
-        $request = $this->createContactUsingPOST1Request($contact, $contentType);
+        $request = $this->createContactUsingPOST1Request($create_patch_contact_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -824,13 +824,13 @@ class ContactApi
     /**
      * Create request for operation 'createContactUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createContactUsingPOST1Request($contact = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
+    public function createContactUsingPOST1Request($create_patch_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
 
 
@@ -853,12 +853,12 @@ class ContactApi
         );
 
         // for model (json/xml)
-        if (isset($contact)) {
+        if (isset($create_patch_contact_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_patch_contact_request));
             } else {
-                $httpBody = $contact;
+                $httpBody = $create_patch_contact_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1928,8 +1928,8 @@ class ContactApi
             $search_param,
             'searchParam', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             true // required
         ) ?? []);
 
@@ -2731,8 +2731,8 @@ class ContactApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2740,8 +2740,8 @@ class ContactApi
             $order_by,
             'orderBy', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2749,8 +2749,8 @@ class ContactApi
             $page_size,
             'pageSize', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -2758,8 +2758,8 @@ class ContactApi
             $page_token,
             'pageToken', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3618,8 +3618,8 @@ class ContactApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3627,8 +3627,8 @@ class ContactApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3636,8 +3636,8 @@ class ContactApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3645,8 +3645,8 @@ class ContactApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -4126,16 +4126,16 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchContactUsingPATCH($contact_id, $update_mask = null, $contact = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
+    public function patchContactUsingPATCH($contact_id, $update_mask = null, $create_patch_contact_request = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
     {
-        list($response) = $this->patchContactUsingPATCHWithHttpInfo($contact_id, $update_mask, $contact, $contentType);
+        list($response) = $this->patchContactUsingPATCHWithHttpInfo($contact_id, $update_mask, $create_patch_contact_request, $contentType);
         return $response;
     }
 
@@ -4146,16 +4146,16 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchContactUsingPATCHWithHttpInfo($contact_id, $update_mask = null, $contact = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
+    public function patchContactUsingPATCHWithHttpInfo($contact_id, $update_mask = null, $create_patch_contact_request = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
     {
-        $request = $this->patchContactUsingPATCHRequest($contact_id, $update_mask, $contact, $contentType);
+        $request = $this->patchContactUsingPATCHRequest($contact_id, $update_mask, $create_patch_contact_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4378,15 +4378,15 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchContactUsingPATCHAsync($contact_id, $update_mask = null, $contact = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
+    public function patchContactUsingPATCHAsync($contact_id, $update_mask = null, $create_patch_contact_request = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
     {
-        return $this->patchContactUsingPATCHAsyncWithHttpInfo($contact_id, $update_mask, $contact, $contentType)
+        return $this->patchContactUsingPATCHAsyncWithHttpInfo($contact_id, $update_mask, $create_patch_contact_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4401,16 +4401,16 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchContactUsingPATCHAsyncWithHttpInfo($contact_id, $update_mask = null, $contact = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
+    public function patchContactUsingPATCHAsyncWithHttpInfo($contact_id, $update_mask = null, $create_patch_contact_request = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
-        $request = $this->patchContactUsingPATCHRequest($contact_id, $update_mask, $contact, $contentType);
+        $request = $this->patchContactUsingPATCHRequest($contact_id, $update_mask, $create_patch_contact_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4453,13 +4453,13 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $contact contact (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest $create_patch_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchContactUsingPATCHRequest($contact_id, $update_mask = null, $contact = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
+    public function patchContactUsingPATCHRequest($contact_id, $update_mask = null, $create_patch_contact_request = null, string $contentType = self::contentTypes['patchContactUsingPATCH'][0])
     {
 
         // verify the required parameter 'contact_id' is set
@@ -4507,12 +4507,12 @@ class ContactApi
         );
 
         // for model (json/xml)
-        if (isset($contact)) {
+        if (isset($create_patch_contact_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_patch_contact_request));
             } else {
-                $httpBody = $contact;
+                $httpBody = $create_patch_contact_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

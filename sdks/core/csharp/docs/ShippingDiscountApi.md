@@ -12,7 +12,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="creatediscountusingpost1"></a>
 # **CreateDiscountUsingPOST1**
-> ShippingDiscount CreateDiscountUsingPOST1 (CreateShippingDiscountRequest request)
+> ShippingDiscount CreateDiscountUsingPOST1 (CreateShippingDiscountRequest createShippingDiscountRequest)
 
 Create a Shipping Discount
 
@@ -35,12 +35,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new ShippingDiscountApi(config);
-            var request = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
+            var createShippingDiscountRequest = new CreateShippingDiscountRequest(); // CreateShippingDiscountRequest | request
 
             try
             {
                 // Create a Shipping Discount
-                ShippingDiscount result = apiInstance.CreateDiscountUsingPOST1(request);
+                ShippingDiscount result = apiInstance.CreateDiscountUsingPOST1(createShippingDiscountRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Shipping Discount
-    ApiResponse<ShippingDiscount> response = apiInstance.CreateDiscountUsingPOST1WithHttpInfo(request);
+    ApiResponse<ShippingDiscount> response = apiInstance.CreateDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,7 +78,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md) | request |  |
+| **createShippingDiscountRequest** | [**CreateShippingDiscountRequest**](CreateShippingDiscountRequest.md) | request |  |
 
 ### Return type
 
@@ -391,7 +391,7 @@ No authorization required
 
 <a id="updatediscountusingpatch1"></a>
 # **UpdateDiscountUsingPATCH1**
-> ShippingDiscount UpdateDiscountUsingPATCH1 (string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = null)
+> ShippingDiscount UpdateDiscountUsingPATCH1 (string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = null)
 
 Update a Shipping Discount
 
@@ -415,13 +415,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new ShippingDiscountApi(config);
             var discountId = "discountId_example";  // string | discount_id
-            var request = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
+            var updateShippingDiscountRequest = new UpdateShippingDiscountRequest(); // UpdateShippingDiscountRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Shipping Discount
-                ShippingDiscount result = apiInstance.UpdateDiscountUsingPATCH1(discountId, request, updateMask);
+                ShippingDiscount result = apiInstance.UpdateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -442,7 +442,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Shipping Discount
-    ApiResponse<ShippingDiscount> response = apiInstance.UpdateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+    ApiResponse<ShippingDiscount> response = apiInstance.UpdateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -460,7 +460,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **discountId** | **string** | discount_id |  |
-| **request** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md) | request |  |
+| **updateShippingDiscountRequest** | [**UpdateShippingDiscountRequest**](UpdateShippingDiscountRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type

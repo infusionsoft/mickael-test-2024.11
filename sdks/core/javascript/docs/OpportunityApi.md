@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## createOpportunityCustomFieldsUsingPOST
 
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -33,8 +33,8 @@ Adds a custom field of the specified type and options to the Opportunity object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createOpportunityCustomFieldsUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -47,7 +47,7 @@ apiInstance.createOpportunityCustomFieldsUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -78,7 +78,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
 let opts = {
-  'opportunityStage': new KeapCoreServiceCoreSdk.CreateOpportunityStageRequest() // CreateOpportunityStageRequest | opportunity
+  'createOpportunityStageRequest': new KeapCoreServiceCoreSdk.CreateOpportunityStageRequest() // CreateOpportunityStageRequest | opportunity
 };
 apiInstance.createOpportunityStageUsingPOST(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -93,7 +93,7 @@ apiInstance.createOpportunityStageUsingPOST(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunityStage** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
+ **createOpportunityStageRequest** | [**CreateOpportunityStageRequest**](CreateOpportunityStageRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -124,7 +124,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
 let opts = {
-  'opportunity': new KeapCoreServiceCoreSdk.CreateOpportunityRequest() // CreateOpportunityRequest | opportunity
+  'createOpportunityRequest': new KeapCoreServiceCoreSdk.CreateOpportunityRequest() // CreateOpportunityRequest | opportunity
 };
 apiInstance.createOpportunityUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -139,7 +139,7 @@ apiInstance.createOpportunityUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
+ **createOpportunityRequest** | [**CreateOpportunityRequest**](CreateOpportunityRequest.md)| opportunity | [optional] 
 
 ### Return type
 
@@ -439,7 +439,7 @@ No authorization required
 
 ## updateOpportunityCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update a Opportunity&#39;s Custom Field
 
@@ -452,11 +452,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -470,7 +470,7 @@ apiInstance.updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -489,7 +489,7 @@ No authorization required
 
 ## updateOpportunityStageUsingPATCH
 
-> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, request, opts)
+> RestOpportunityStage updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, opts)
 
 Update an Opportunity Stage
 
@@ -502,11 +502,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
 let stageId = "stageId_example"; // String | stage_id
-let request = new KeapCoreServiceCoreSdk.UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+let updateOpportunityStageRequest = new KeapCoreServiceCoreSdk.UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOpportunityStageUsingPATCH(stageId, request, opts).then((data) => {
+apiInstance.updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -520,7 +520,7 @@ apiInstance.updateOpportunityStageUsingPATCH(stageId, request, opts).then((data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stageId** | **String**| stage_id | 
- **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
+ **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
@@ -539,7 +539,7 @@ No authorization required
 
 ## updateOpportunityUsingPATCH
 
-> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, request, opts)
+> RestV2Opportunity updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, opts)
 
 Update an opportunity
 
@@ -552,11 +552,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OpportunityApi();
 let opportunityId = "opportunityId_example"; // String | opportunity_id
-let request = new KeapCoreServiceCoreSdk.PatchOpportunityRequest(); // PatchOpportunityRequest | request
+let patchOpportunityRequest = new KeapCoreServiceCoreSdk.PatchOpportunityRequest(); // PatchOpportunityRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOpportunityUsingPATCH(opportunityId, request, opts).then((data) => {
+apiInstance.updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -570,7 +570,7 @@ apiInstance.updateOpportunityUsingPATCH(opportunityId, request, opts).then((data
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **opportunityId** | **String**| opportunity_id | 
- **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
+ **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

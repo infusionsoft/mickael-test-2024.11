@@ -362,7 +362,7 @@ class AffiliateApi:
     @validate_call
     def add_affiliate_using_post(
         self,
-        insert_affiliate: Annotated[Optional[CreateAffiliateRequest], Field(description="Affiliate request to insert")] = None,
+        create_affiliate_request: Annotated[Optional[CreateAffiliateRequest], Field(description="Affiliate request to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -380,8 +380,8 @@ class AffiliateApi:
 
         Creates a single Affiliate
 
-        :param insert_affiliate: Affiliate request to insert
-        :type insert_affiliate: CreateAffiliateRequest
+        :param create_affiliate_request: Affiliate request to insert
+        :type create_affiliate_request: CreateAffiliateRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -405,7 +405,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._add_affiliate_using_post_serialize(
-            insert_affiliate=insert_affiliate,
+            create_affiliate_request=create_affiliate_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -430,7 +430,7 @@ class AffiliateApi:
     @validate_call
     def add_affiliate_using_post_with_http_info(
         self,
-        insert_affiliate: Annotated[Optional[CreateAffiliateRequest], Field(description="Affiliate request to insert")] = None,
+        create_affiliate_request: Annotated[Optional[CreateAffiliateRequest], Field(description="Affiliate request to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -448,8 +448,8 @@ class AffiliateApi:
 
         Creates a single Affiliate
 
-        :param insert_affiliate: Affiliate request to insert
-        :type insert_affiliate: CreateAffiliateRequest
+        :param create_affiliate_request: Affiliate request to insert
+        :type create_affiliate_request: CreateAffiliateRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -473,7 +473,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._add_affiliate_using_post_serialize(
-            insert_affiliate=insert_affiliate,
+            create_affiliate_request=create_affiliate_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -498,7 +498,7 @@ class AffiliateApi:
     @validate_call
     def add_affiliate_using_post_without_preload_content(
         self,
-        insert_affiliate: Annotated[Optional[CreateAffiliateRequest], Field(description="Affiliate request to insert")] = None,
+        create_affiliate_request: Annotated[Optional[CreateAffiliateRequest], Field(description="Affiliate request to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -516,8 +516,8 @@ class AffiliateApi:
 
         Creates a single Affiliate
 
-        :param insert_affiliate: Affiliate request to insert
-        :type insert_affiliate: CreateAffiliateRequest
+        :param create_affiliate_request: Affiliate request to insert
+        :type create_affiliate_request: CreateAffiliateRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -541,7 +541,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._add_affiliate_using_post_serialize(
-            insert_affiliate=insert_affiliate,
+            create_affiliate_request=create_affiliate_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -561,7 +561,7 @@ class AffiliateApi:
 
     def _add_affiliate_using_post_serialize(
         self,
-        insert_affiliate,
+        create_affiliate_request,
         _request_auth,
         _content_type,
         _headers,
@@ -587,8 +587,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if insert_affiliate is not None:
-            _body_params = insert_affiliate
+        if create_affiliate_request is not None:
+            _body_params = create_affiliate_request
 
 
         # set the HTTP header `Accept`
@@ -638,7 +638,7 @@ class AffiliateApi:
     @validate_call
     def add_commission_program_using_post(
         self,
-        insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
+        create_commission_program_request: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -656,8 +656,8 @@ class AffiliateApi:
 
         Creates an Affiliate Commission Program
 
-        :param insert_commission_program: Commission Program to insert
-        :type insert_commission_program: CreateCommissionProgramRequest
+        :param create_commission_program_request: Commission Program to insert
+        :type create_commission_program_request: CreateCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -681,7 +681,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._add_commission_program_using_post_serialize(
-            insert_commission_program=insert_commission_program,
+            create_commission_program_request=create_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -706,7 +706,7 @@ class AffiliateApi:
     @validate_call
     def add_commission_program_using_post_with_http_info(
         self,
-        insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
+        create_commission_program_request: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -724,8 +724,8 @@ class AffiliateApi:
 
         Creates an Affiliate Commission Program
 
-        :param insert_commission_program: Commission Program to insert
-        :type insert_commission_program: CreateCommissionProgramRequest
+        :param create_commission_program_request: Commission Program to insert
+        :type create_commission_program_request: CreateCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -749,7 +749,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._add_commission_program_using_post_serialize(
-            insert_commission_program=insert_commission_program,
+            create_commission_program_request=create_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -774,7 +774,7 @@ class AffiliateApi:
     @validate_call
     def add_commission_program_using_post_without_preload_content(
         self,
-        insert_commission_program: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
+        create_commission_program_request: Annotated[Optional[CreateCommissionProgramRequest], Field(description="Commission Program to insert")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -792,8 +792,8 @@ class AffiliateApi:
 
         Creates an Affiliate Commission Program
 
-        :param insert_commission_program: Commission Program to insert
-        :type insert_commission_program: CreateCommissionProgramRequest
+        :param create_commission_program_request: Commission Program to insert
+        :type create_commission_program_request: CreateCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -817,7 +817,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._add_commission_program_using_post_serialize(
-            insert_commission_program=insert_commission_program,
+            create_commission_program_request=create_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -837,7 +837,7 @@ class AffiliateApi:
 
     def _add_commission_program_using_post_serialize(
         self,
-        insert_commission_program,
+        create_commission_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -863,8 +863,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if insert_commission_program is not None:
-            _body_params = insert_commission_program
+        if create_commission_program_request is not None:
+            _body_params = create_commission_program_request
 
 
         # set the HTTP header `Accept`
@@ -915,7 +915,7 @@ class AffiliateApi:
     def assign_product_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
+        create_product_commission_program_request: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -935,8 +935,8 @@ class AffiliateApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param product_commission_program: Product Commission Program
-        :type product_commission_program: CreateProductCommissionProgramRequest
+        :param create_product_commission_program_request: Product Commission Program
+        :type create_product_commission_program_request: CreateProductCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -961,7 +961,7 @@ class AffiliateApi:
 
         _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            product_commission_program=product_commission_program,
+            create_product_commission_program_request=create_product_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -987,7 +987,7 @@ class AffiliateApi:
     def assign_product_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
+        create_product_commission_program_request: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1007,8 +1007,8 @@ class AffiliateApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param product_commission_program: Product Commission Program
-        :type product_commission_program: CreateProductCommissionProgramRequest
+        :param create_product_commission_program_request: Product Commission Program
+        :type create_product_commission_program_request: CreateProductCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1033,7 +1033,7 @@ class AffiliateApi:
 
         _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            product_commission_program=product_commission_program,
+            create_product_commission_program_request=create_product_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1059,7 +1059,7 @@ class AffiliateApi:
     def assign_product_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        product_commission_program: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
+        create_product_commission_program_request: Annotated[Optional[CreateProductCommissionProgramRequest], Field(description="Product Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1079,8 +1079,8 @@ class AffiliateApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param product_commission_program: Product Commission Program
-        :type product_commission_program: CreateProductCommissionProgramRequest
+        :param create_product_commission_program_request: Product Commission Program
+        :type create_product_commission_program_request: CreateProductCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1105,7 +1105,7 @@ class AffiliateApi:
 
         _param = self._assign_product_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            product_commission_program=product_commission_program,
+            create_product_commission_program_request=create_product_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1126,7 +1126,7 @@ class AffiliateApi:
     def _assign_product_commission_program_using_post_serialize(
         self,
         commission_program_id,
-        product_commission_program,
+        create_product_commission_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -1154,8 +1154,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if product_commission_program is not None:
-            _body_params = product_commission_program
+        if create_product_commission_program_request is not None:
+            _body_params = create_product_commission_program_request
 
 
         # set the HTTP header `Accept`
@@ -1206,7 +1206,7 @@ class AffiliateApi:
     def assign_subscription_commission_program_using_post(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
+        create_subscription_commission_program_request: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1226,8 +1226,8 @@ class AffiliateApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param subscription_commission_program: Subscription Commission Program
-        :type subscription_commission_program: CreateSubscriptionCommissionProgramRequest
+        :param create_subscription_commission_program_request: Subscription Commission Program
+        :type create_subscription_commission_program_request: CreateSubscriptionCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1252,7 +1252,7 @@ class AffiliateApi:
 
         _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            subscription_commission_program=subscription_commission_program,
+            create_subscription_commission_program_request=create_subscription_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1278,7 +1278,7 @@ class AffiliateApi:
     def assign_subscription_commission_program_using_post_with_http_info(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
+        create_subscription_commission_program_request: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1298,8 +1298,8 @@ class AffiliateApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param subscription_commission_program: Subscription Commission Program
-        :type subscription_commission_program: CreateSubscriptionCommissionProgramRequest
+        :param create_subscription_commission_program_request: Subscription Commission Program
+        :type create_subscription_commission_program_request: CreateSubscriptionCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1324,7 +1324,7 @@ class AffiliateApi:
 
         _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            subscription_commission_program=subscription_commission_program,
+            create_subscription_commission_program_request=create_subscription_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1350,7 +1350,7 @@ class AffiliateApi:
     def assign_subscription_commission_program_using_post_without_preload_content(
         self,
         commission_program_id: Annotated[StrictStr, Field(description="commission_program_id")],
-        subscription_commission_program: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
+        create_subscription_commission_program_request: Annotated[Optional[CreateSubscriptionCommissionProgramRequest], Field(description="Subscription Commission Program")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1370,8 +1370,8 @@ class AffiliateApi:
 
         :param commission_program_id: commission_program_id (required)
         :type commission_program_id: str
-        :param subscription_commission_program: Subscription Commission Program
-        :type subscription_commission_program: CreateSubscriptionCommissionProgramRequest
+        :param create_subscription_commission_program_request: Subscription Commission Program
+        :type create_subscription_commission_program_request: CreateSubscriptionCommissionProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1396,7 +1396,7 @@ class AffiliateApi:
 
         _param = self._assign_subscription_commission_program_using_post_serialize(
             commission_program_id=commission_program_id,
-            subscription_commission_program=subscription_commission_program,
+            create_subscription_commission_program_request=create_subscription_commission_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1417,7 +1417,7 @@ class AffiliateApi:
     def _assign_subscription_commission_program_using_post_serialize(
         self,
         commission_program_id,
-        subscription_commission_program,
+        create_subscription_commission_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -1445,8 +1445,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if subscription_commission_program is not None:
-            _body_params = subscription_commission_program
+        if create_subscription_commission_program_request is not None:
+            _body_params = create_subscription_commission_program_request
 
 
         # set the HTTP header `Accept`
@@ -1496,7 +1496,7 @@ class AffiliateApi:
     @validate_call
     def create_affiliate_custom_field_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1514,8 +1514,8 @@ class AffiliateApi:
 
         Creates a single Affiliate Custom Field
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1539,7 +1539,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._create_affiliate_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1564,7 +1564,7 @@ class AffiliateApi:
     @validate_call
     def create_affiliate_custom_field_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1582,8 +1582,8 @@ class AffiliateApi:
 
         Creates a single Affiliate Custom Field
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1607,7 +1607,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._create_affiliate_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1632,7 +1632,7 @@ class AffiliateApi:
     @validate_call
     def create_affiliate_custom_field_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1650,8 +1650,8 @@ class AffiliateApi:
 
         Creates a single Affiliate Custom Field
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1675,7 +1675,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._create_affiliate_custom_field_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1695,7 +1695,7 @@ class AffiliateApi:
 
     def _create_affiliate_custom_field_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -1721,8 +1721,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -2063,7 +2063,7 @@ class AffiliateApi:
     @validate_call
     def create_redirect_link_using_post(
         self,
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2081,8 +2081,8 @@ class AffiliateApi:
 
         Creates a single Affiliate Link
 
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2106,7 +2106,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._create_redirect_link_using_post_serialize(
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2131,7 +2131,7 @@ class AffiliateApi:
     @validate_call
     def create_redirect_link_using_post_with_http_info(
         self,
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2149,8 +2149,8 @@ class AffiliateApi:
 
         Creates a single Affiliate Link
 
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2174,7 +2174,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._create_redirect_link_using_post_serialize(
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2199,7 +2199,7 @@ class AffiliateApi:
     @validate_call
     def create_redirect_link_using_post_without_preload_content(
         self,
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2217,8 +2217,8 @@ class AffiliateApi:
 
         Creates a single Affiliate Link
 
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2242,7 +2242,7 @@ class AffiliateApi:
         """ # noqa: E501
 
         _param = self._create_redirect_link_using_post_serialize(
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2262,7 +2262,7 @@ class AffiliateApi:
 
     def _create_redirect_link_using_post_serialize(
         self,
-        request,
+        create_or_patch_affiliate_link_request,
         _request_auth,
         _content_type,
         _headers,
@@ -2288,8 +2288,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_or_patch_affiliate_link_request is not None:
+            _body_params = create_or_patch_affiliate_link_request
 
 
         # set the HTTP header `Accept`
@@ -6992,7 +6992,7 @@ class AffiliateApi:
     def remove_affiliate_from_program_using_post(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
+        affiliate_remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7012,8 +7012,8 @@ class AffiliateApi:
 
         :param id: id (required)
         :type id: str
-        :param remove_from_program_request: removeFromProgramRequest (required)
-        :type remove_from_program_request: AffiliateRemoveFromProgramRequest
+        :param affiliate_remove_from_program_request: removeFromProgramRequest (required)
+        :type affiliate_remove_from_program_request: AffiliateRemoveFromProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7038,7 +7038,7 @@ class AffiliateApi:
 
         _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
-            remove_from_program_request=remove_from_program_request,
+            affiliate_remove_from_program_request=affiliate_remove_from_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7064,7 +7064,7 @@ class AffiliateApi:
     def remove_affiliate_from_program_using_post_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
+        affiliate_remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7084,8 +7084,8 @@ class AffiliateApi:
 
         :param id: id (required)
         :type id: str
-        :param remove_from_program_request: removeFromProgramRequest (required)
-        :type remove_from_program_request: AffiliateRemoveFromProgramRequest
+        :param affiliate_remove_from_program_request: removeFromProgramRequest (required)
+        :type affiliate_remove_from_program_request: AffiliateRemoveFromProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7110,7 +7110,7 @@ class AffiliateApi:
 
         _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
-            remove_from_program_request=remove_from_program_request,
+            affiliate_remove_from_program_request=affiliate_remove_from_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7136,7 +7136,7 @@ class AffiliateApi:
     def remove_affiliate_from_program_using_post_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
+        affiliate_remove_from_program_request: Annotated[AffiliateRemoveFromProgramRequest, Field(description="removeFromProgramRequest")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7156,8 +7156,8 @@ class AffiliateApi:
 
         :param id: id (required)
         :type id: str
-        :param remove_from_program_request: removeFromProgramRequest (required)
-        :type remove_from_program_request: AffiliateRemoveFromProgramRequest
+        :param affiliate_remove_from_program_request: removeFromProgramRequest (required)
+        :type affiliate_remove_from_program_request: AffiliateRemoveFromProgramRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7182,7 +7182,7 @@ class AffiliateApi:
 
         _param = self._remove_affiliate_from_program_using_post_serialize(
             id=id,
-            remove_from_program_request=remove_from_program_request,
+            affiliate_remove_from_program_request=affiliate_remove_from_program_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7203,7 +7203,7 @@ class AffiliateApi:
     def _remove_affiliate_from_program_using_post_serialize(
         self,
         id,
-        remove_from_program_request,
+        affiliate_remove_from_program_request,
         _request_auth,
         _content_type,
         _headers,
@@ -7231,8 +7231,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if remove_from_program_request is not None:
-            _body_params = remove_from_program_request
+        if affiliate_remove_from_program_request is not None:
+            _body_params = affiliate_remove_from_program_request
 
 
         # set the HTTP header `Accept`
@@ -7574,7 +7574,7 @@ class AffiliateApi:
     def update_affiliate_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -7595,8 +7595,8 @@ class AffiliateApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -7623,7 +7623,7 @@ class AffiliateApi:
 
         _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -7651,7 +7651,7 @@ class AffiliateApi:
     def update_affiliate_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -7672,8 +7672,8 @@ class AffiliateApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -7700,7 +7700,7 @@ class AffiliateApi:
 
         _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -7728,7 +7728,7 @@ class AffiliateApi:
     def update_affiliate_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -7749,8 +7749,8 @@ class AffiliateApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -7777,7 +7777,7 @@ class AffiliateApi:
 
         _param = self._update_affiliate_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -7800,7 +7800,7 @@ class AffiliateApi:
     def _update_affiliate_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -7834,8 +7834,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -7886,7 +7886,7 @@ class AffiliateApi:
     def update_affiliate_using_patch(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        patch_affiliate: Annotated[Optional[PatchAffiliateRequest], Field(description="Affiliate request to patch")] = None,
+        patch_affiliate_request: Annotated[Optional[PatchAffiliateRequest], Field(description="Affiliate request to patch")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7906,8 +7906,8 @@ class AffiliateApi:
 
         :param id: id (required)
         :type id: str
-        :param patch_affiliate: Affiliate request to patch
-        :type patch_affiliate: PatchAffiliateRequest
+        :param patch_affiliate_request: Affiliate request to patch
+        :type patch_affiliate_request: PatchAffiliateRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7932,7 +7932,7 @@ class AffiliateApi:
 
         _param = self._update_affiliate_using_patch_serialize(
             id=id,
-            patch_affiliate=patch_affiliate,
+            patch_affiliate_request=patch_affiliate_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7959,7 +7959,7 @@ class AffiliateApi:
     def update_affiliate_using_patch_with_http_info(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        patch_affiliate: Annotated[Optional[PatchAffiliateRequest], Field(description="Affiliate request to patch")] = None,
+        patch_affiliate_request: Annotated[Optional[PatchAffiliateRequest], Field(description="Affiliate request to patch")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7979,8 +7979,8 @@ class AffiliateApi:
 
         :param id: id (required)
         :type id: str
-        :param patch_affiliate: Affiliate request to patch
-        :type patch_affiliate: PatchAffiliateRequest
+        :param patch_affiliate_request: Affiliate request to patch
+        :type patch_affiliate_request: PatchAffiliateRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8005,7 +8005,7 @@ class AffiliateApi:
 
         _param = self._update_affiliate_using_patch_serialize(
             id=id,
-            patch_affiliate=patch_affiliate,
+            patch_affiliate_request=patch_affiliate_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8032,7 +8032,7 @@ class AffiliateApi:
     def update_affiliate_using_patch_without_preload_content(
         self,
         id: Annotated[StrictStr, Field(description="id")],
-        patch_affiliate: Annotated[Optional[PatchAffiliateRequest], Field(description="Affiliate request to patch")] = None,
+        patch_affiliate_request: Annotated[Optional[PatchAffiliateRequest], Field(description="Affiliate request to patch")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8052,8 +8052,8 @@ class AffiliateApi:
 
         :param id: id (required)
         :type id: str
-        :param patch_affiliate: Affiliate request to patch
-        :type patch_affiliate: PatchAffiliateRequest
+        :param patch_affiliate_request: Affiliate request to patch
+        :type patch_affiliate_request: PatchAffiliateRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8078,7 +8078,7 @@ class AffiliateApi:
 
         _param = self._update_affiliate_using_patch_serialize(
             id=id,
-            patch_affiliate=patch_affiliate,
+            patch_affiliate_request=patch_affiliate_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8100,7 +8100,7 @@ class AffiliateApi:
     def _update_affiliate_using_patch_serialize(
         self,
         id,
-        patch_affiliate,
+        patch_affiliate_request,
         _request_auth,
         _content_type,
         _headers,
@@ -8128,8 +8128,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if patch_affiliate is not None:
-            _body_params = patch_affiliate
+        if patch_affiliate_request is not None:
+            _body_params = patch_affiliate_request
 
 
         # set the HTTP header `Accept`
@@ -8180,7 +8180,7 @@ class AffiliateApi:
     def update_redirect_link_using_patch(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8200,8 +8200,8 @@ class AffiliateApi:
 
         :param redirect_id: redirect_id (required)
         :type redirect_id: str
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8226,7 +8226,7 @@ class AffiliateApi:
 
         _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8253,7 +8253,7 @@ class AffiliateApi:
     def update_redirect_link_using_patch_with_http_info(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8273,8 +8273,8 @@ class AffiliateApi:
 
         :param redirect_id: redirect_id (required)
         :type redirect_id: str
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8299,7 +8299,7 @@ class AffiliateApi:
 
         _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8326,7 +8326,7 @@ class AffiliateApi:
     def update_redirect_link_using_patch_without_preload_content(
         self,
         redirect_id: Annotated[StrictStr, Field(description="redirect_id")],
-        request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
+        create_or_patch_affiliate_link_request: Annotated[CreateOrPatchAffiliateLinkRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8346,8 +8346,8 @@ class AffiliateApi:
 
         :param redirect_id: redirect_id (required)
         :type redirect_id: str
-        :param request: request (required)
-        :type request: CreateOrPatchAffiliateLinkRequest
+        :param create_or_patch_affiliate_link_request: request (required)
+        :type create_or_patch_affiliate_link_request: CreateOrPatchAffiliateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8372,7 +8372,7 @@ class AffiliateApi:
 
         _param = self._update_redirect_link_using_patch_serialize(
             redirect_id=redirect_id,
-            request=request,
+            create_or_patch_affiliate_link_request=create_or_patch_affiliate_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8394,7 +8394,7 @@ class AffiliateApi:
     def _update_redirect_link_using_patch_serialize(
         self,
         redirect_id,
-        request,
+        create_or_patch_affiliate_link_request,
         _request_auth,
         _content_type,
         _headers,
@@ -8422,8 +8422,8 @@ class AffiliateApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_or_patch_affiliate_link_request is not None:
+            _body_params = create_or_patch_affiliate_link_request
 
 
         # set the HTTP header `Accept`

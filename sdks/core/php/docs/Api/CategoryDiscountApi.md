@@ -13,7 +13,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createDiscountUsingPOST()`
 
 ```php
-createDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+createDiscountUsingPOST($create_update_discount_request): \Com\Keap\Sdk\Core\Model\CategoryDiscount
 ```
 
 Create a Category Discount
@@ -32,10 +32,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CategoryDiscountApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+$create_update_discount_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
 
 try {
-    $result = $apiInstance->createDiscountUsingPOST($request);
+    $result = $apiInstance->createDiscountUsingPOST($create_update_discount_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoryDiscountApi->createDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +46,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+| **create_update_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -177,7 +177,7 @@ No authorization required
 ## `updateDiscountUsingPATCH()`
 
 ```php
-updateDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+updateDiscountUsingPATCH($discount_id, $create_update_discount_request, $update_mask): \Com\Keap\Sdk\Core\Model\CategoryDiscount
 ```
 
 Update a Category Discount
@@ -197,11 +197,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CategoryDiscountApi(
     new GuzzleHttp\Client()
 );
 $discount_id = 'discount_id_example'; // string | discount_id
-$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+$create_update_discount_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateDiscountUsingPATCH($discount_id, $request, $update_mask);
+    $result = $apiInstance->updateDiscountUsingPATCH($discount_id, $create_update_discount_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoryDiscountApi->updateDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -213,7 +213,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **discount_id** | **string**| discount_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+| **create_update_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

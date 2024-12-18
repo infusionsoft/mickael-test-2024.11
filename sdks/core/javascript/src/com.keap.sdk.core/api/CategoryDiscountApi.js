@@ -40,14 +40,14 @@ export default class CategoryDiscountApi {
     /**
      * Create a Category Discount
      * Create a Category Discount.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CategoryDiscount} and HTTP response
      */
-    createDiscountUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createDiscountUsingPOST");
+    createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest) {
+      let postBody = createUpdateDiscountRequest;
+      // verify the required parameter 'createUpdateDiscountRequest' is set
+      if (createUpdateDiscountRequest === undefined || createUpdateDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createUpdateDiscountRequest' when calling createDiscountUsingPOST");
       }
 
       let pathParams = {
@@ -73,11 +73,11 @@ export default class CategoryDiscountApi {
     /**
      * Create a Category Discount
      * Create a Category Discount.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CategoryDiscount}
      */
-    createDiscountUsingPOST(request) {
-      return this.createDiscountUsingPOSTWithHttpInfo(request)
+    createDiscountUsingPOST(createUpdateDiscountRequest) {
+      return this.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -184,21 +184,21 @@ export default class CategoryDiscountApi {
      * Update a Category Discount
      * Update a Category Discount.
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CategoryDiscount} and HTTP response
      */
-    updateDiscountUsingPATCHWithHttpInfo(discountId, request, opts) {
+    updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = createUpdateDiscountRequest;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
         throw new Error("Missing the required parameter 'discountId' when calling updateDiscountUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateDiscountUsingPATCH");
+      // verify the required parameter 'createUpdateDiscountRequest' is set
+      if (createUpdateDiscountRequest === undefined || createUpdateDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createUpdateDiscountRequest' when calling updateDiscountUsingPATCH");
       }
 
       let pathParams = {
@@ -227,13 +227,13 @@ export default class CategoryDiscountApi {
      * Update a Category Discount
      * Update a Category Discount.
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CategoryDiscount}
      */
-    updateDiscountUsingPATCH(discountId, request, opts) {
-      return this.updateDiscountUsingPATCHWithHttpInfo(discountId, request, opts)
+    updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, opts) {
+      return this.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

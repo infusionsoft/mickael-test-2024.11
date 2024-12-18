@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_note_custom_field_using_post1**
-> CustomFieldMetaData create_note_custom_field_using_post1(custom_field)
+> CustomFieldMetaData create_note_custom_field_using_post1(create_custom_field_request)
 
 Create a Custom Field
 
@@ -42,11 +42,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.NoteApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create a Custom Field
-        api_response = api_instance.create_note_custom_field_using_post1(custom_field)
+        api_response = api_instance.create_note_custom_field_using_post1(create_custom_field_request)
         print("The response of NoteApi->create_note_custom_field_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -59,7 +59,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -85,7 +85,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_note_using_post1**
-> Note create_note_using_post1(contact_id, request)
+> Note create_note_using_post1(contact_id, create_note_request)
 
 Create a Note
 
@@ -112,11 +112,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.NoteApi(api_client)
     contact_id = 'contact_id_example' # str | contact_id
-    request = keap_sdk_core_client.CreateNoteRequest() # CreateNoteRequest | request
+    create_note_request = keap_sdk_core_client.CreateNoteRequest() # CreateNoteRequest | request
 
     try:
         # Create a Note
-        api_response = api_instance.create_note_using_post1(contact_id, request)
+        api_response = api_instance.create_note_using_post1(contact_id, create_note_request)
         print("The response of NoteApi->create_note_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -130,7 +130,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_id** | **str**| contact_id | 
- **request** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | 
+ **create_note_request** | [**CreateNoteRequest**](CreateNoteRequest.md)| request | 
 
 ### Return type
 
@@ -588,7 +588,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_notes_custom_field_using_patch**
-> CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Custom Field
 
@@ -615,12 +615,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.NoteApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
-        api_response = api_instance.update_notes_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_notes_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of NoteApi->update_notes_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -634,7 +634,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

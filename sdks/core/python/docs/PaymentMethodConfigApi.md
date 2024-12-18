@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_payment_method_config_using_post**
-> PaymentMethodConfig create_payment_method_config_using_post(request)
+> PaymentMethodConfig create_payment_method_config_using_post(create_payment_method_config_request)
 
 Create Payment Method Configuration
 
@@ -34,11 +34,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.PaymentMethodConfigApi(api_client)
-    request = keap_sdk_core_client.CreatePaymentMethodConfigRequest() # CreatePaymentMethodConfigRequest | request
+    create_payment_method_config_request = keap_sdk_core_client.CreatePaymentMethodConfigRequest() # CreatePaymentMethodConfigRequest | request
 
     try:
         # Create Payment Method Configuration
-        api_response = api_instance.create_payment_method_config_using_post(request)
+        api_response = api_instance.create_payment_method_config_using_post(create_payment_method_config_request)
         print("The response of PaymentMethodConfigApi->create_payment_method_config_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -51,7 +51,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | 
+ **create_payment_method_config_request** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | 
 
 ### Return type
 

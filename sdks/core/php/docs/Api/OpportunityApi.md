@@ -21,7 +21,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createOpportunityCustomFieldsUsingPOST()`
 
 ```php
-createOpportunityCustomFieldsUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createOpportunityCustomFieldsUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Opportunity Custom Field
@@ -40,10 +40,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createOpportunityCustomFieldsUsingPOST($custom_field);
+    $result = $apiInstance->createOpportunityCustomFieldsUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OpportunityApi->createOpportunityCustomFieldsUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -76,7 +76,7 @@ No authorization required
 ## `createOpportunityStageUsingPOST()`
 
 ```php
-createOpportunityStageUsingPOST($opportunity_stage): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+createOpportunityStageUsingPOST($create_opportunity_stage_request): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
 ```
 
 Create an Opportunity Stage
@@ -95,10 +95,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$opportunity_stage = new \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest | opportunity
+$create_opportunity_stage_request = new \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest | opportunity
 
 try {
-    $result = $apiInstance->createOpportunityStageUsingPOST($opportunity_stage);
+    $result = $apiInstance->createOpportunityStageUsingPOST($create_opportunity_stage_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OpportunityApi->createOpportunityStageUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -109,7 +109,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **opportunity_stage** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest**](../Model/CreateOpportunityStageRequest.md)| opportunity | [optional] |
+| **create_opportunity_stage_request** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest**](../Model/CreateOpportunityStageRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -131,7 +131,7 @@ No authorization required
 ## `createOpportunityUsingPOST1()`
 
 ```php
-createOpportunityUsingPOST1($opportunity): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+createOpportunityUsingPOST1($create_opportunity_request): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Create an Opportunity
@@ -150,10 +150,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$opportunity = new \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest | opportunity
+$create_opportunity_request = new \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest | opportunity
 
 try {
-    $result = $apiInstance->createOpportunityUsingPOST1($opportunity);
+    $result = $apiInstance->createOpportunityUsingPOST1($create_opportunity_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OpportunityApi->createOpportunityUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -164,7 +164,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **opportunity** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityRequest**](../Model/CreateOpportunityRequest.md)| opportunity | [optional] |
+| **create_opportunity_request** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityRequest**](../Model/CreateOpportunityRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -528,7 +528,7 @@ No authorization required
 ## `updateOpportunityCustomFieldUsingPATCH()`
 
 ```php
-updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateOpportunityCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Opportunity's Custom Field
@@ -548,11 +548,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OpportunityApi->updateOpportunityCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -564,7 +564,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -587,7 +587,7 @@ No authorization required
 ## `updateOpportunityStageUsingPATCH()`
 
 ```php
-updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+updateOpportunityStageUsingPATCH($stage_id, $update_opportunity_stage_request, $update_mask): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
 ```
 
 Update an Opportunity Stage
@@ -607,11 +607,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
     new GuzzleHttp\Client()
 );
 $stage_id = 'stage_id_example'; // string | stage_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest | request
+$update_opportunity_stage_request = new \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityStageUsingPATCH($stage_id, $update_opportunity_stage_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OpportunityApi->updateOpportunityStageUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -623,7 +623,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **stage_id** | **string**| stage_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest**](../Model/UpdateOpportunityStageRequest.md)| request | |
+| **update_opportunity_stage_request** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest**](../Model/UpdateOpportunityStageRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -646,7 +646,7 @@ No authorization required
 ## `updateOpportunityUsingPATCH()`
 
 ```php
-updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+updateOpportunityUsingPATCH($opportunity_id, $patch_opportunity_request, $update_mask): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Update an opportunity
@@ -666,11 +666,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OpportunityApi(
     new GuzzleHttp\Client()
 );
 $opportunity_id = 'opportunity_id_example'; // string | opportunity_id
-$request = new \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest | request
+$patch_opportunity_request = new \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityUsingPATCH($opportunity_id, $patch_opportunity_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OpportunityApi->updateOpportunityUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -682,7 +682,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **opportunity_id** | **string**| opportunity_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\PatchOpportunityRequest**](../Model/PatchOpportunityRequest.md)| request | |
+| **patch_opportunity_request** | [**\Com\Keap\Sdk\Core\Model\PatchOpportunityRequest**](../Model/PatchOpportunityRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

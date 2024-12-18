@@ -108,24 +108,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Order&#39;s Custom Field
    * Adds a custom field of the specified type and options to the Order object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData createOrderCustomFieldUsingPOST(CreateCustomFieldRequest customField) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = createOrderCustomFieldUsingPOSTWithHttpInfo(customField);
+  public CustomFieldMetaData createOrderCustomFieldUsingPOST(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Order&#39;s Custom Field
    * Adds a custom field of the specified type and options to the Order object.
-   * @param customField customField (required)
+   * @param createCustomFieldRequest customField (required)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest customField) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createOrderCustomFieldUsingPOSTRequestBuilder(customField);
+  public ApiResponse<CustomFieldMetaData> createOrderCustomFieldUsingPOSTWithHttpInfo(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createOrderCustomFieldUsingPOSTRequestBuilder(createCustomFieldRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -165,10 +165,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createOrderCustomFieldUsingPOSTRequestBuilder(CreateCustomFieldRequest customField) throws ApiException {
-    // verify the required parameter 'customField' is set
-    if (customField == null) {
-      throw new ApiException(400, "Missing the required parameter 'customField' when calling createOrderCustomFieldUsingPOST");
+  private HttpRequest.Builder createOrderCustomFieldUsingPOSTRequestBuilder(CreateCustomFieldRequest createCustomFieldRequest) throws ApiException {
+    // verify the required parameter 'createCustomFieldRequest' is set
+    if (createCustomFieldRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createCustomFieldRequest' when calling createOrderCustomFieldUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -182,7 +182,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(customField);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createCustomFieldRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -297,24 +297,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Order
    * Create a one time Order with Order items.
-   * @param createOrderRequest createOrderRequest (required)
+   * @param restCreateOrderRequest createOrderRequest (required)
    * @return RestV2Order
    * @throws ApiException if fails to make API call
    */
-  public RestV2Order createOrderUsingPOST1(RestCreateOrderRequest createOrderRequest) throws ApiException {
-    ApiResponse<RestV2Order> localVarResponse = createOrderUsingPOST1WithHttpInfo(createOrderRequest);
+  public RestV2Order createOrderUsingPOST1(RestCreateOrderRequest restCreateOrderRequest) throws ApiException {
+    ApiResponse<RestV2Order> localVarResponse = createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Order
    * Create a one time Order with Order items.
-   * @param createOrderRequest createOrderRequest (required)
+   * @param restCreateOrderRequest createOrderRequest (required)
    * @return ApiResponse&lt;RestV2Order&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<RestV2Order> createOrderUsingPOST1WithHttpInfo(RestCreateOrderRequest createOrderRequest) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createOrderUsingPOST1RequestBuilder(createOrderRequest);
+  public ApiResponse<RestV2Order> createOrderUsingPOST1WithHttpInfo(RestCreateOrderRequest restCreateOrderRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createOrderUsingPOST1RequestBuilder(restCreateOrderRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -354,10 +354,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createOrderUsingPOST1RequestBuilder(RestCreateOrderRequest createOrderRequest) throws ApiException {
-    // verify the required parameter 'createOrderRequest' is set
-    if (createOrderRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'createOrderRequest' when calling createOrderUsingPOST1");
+  private HttpRequest.Builder createOrderUsingPOST1RequestBuilder(RestCreateOrderRequest restCreateOrderRequest) throws ApiException {
+    // verify the required parameter 'restCreateOrderRequest' is set
+    if (restCreateOrderRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'restCreateOrderRequest' when calling createOrderUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -371,7 +371,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createOrderRequest);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(restCreateOrderRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -975,12 +975,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates an Order
    * @param orderId order_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param order order (optional)
+   * @param restV2PatchOrderRequest order (optional)
    * @return RestV2Order
    * @throws ApiException if fails to make API call
    */
-  public RestV2Order patchOrderUsingPATCH(String orderId, List<String> updateMask, RestV2PatchOrderRequest order) throws ApiException {
-    ApiResponse<RestV2Order> localVarResponse = patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+  public RestV2Order patchOrderUsingPATCH(String orderId, List<String> updateMask, RestV2PatchOrderRequest restV2PatchOrderRequest) throws ApiException {
+    ApiResponse<RestV2Order> localVarResponse = patchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest);
     return localVarResponse.getData();
   }
 
@@ -989,12 +989,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates an Order
    * @param orderId order_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param order order (optional)
+   * @param restV2PatchOrderRequest order (optional)
    * @return ApiResponse&lt;RestV2Order&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<RestV2Order> patchOrderUsingPATCHWithHttpInfo(String orderId, List<String> updateMask, RestV2PatchOrderRequest order) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchOrderUsingPATCHRequestBuilder(orderId, updateMask, order);
+  public ApiResponse<RestV2Order> patchOrderUsingPATCHWithHttpInfo(String orderId, List<String> updateMask, RestV2PatchOrderRequest restV2PatchOrderRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchOrderUsingPATCHRequestBuilder(orderId, updateMask, restV2PatchOrderRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1034,7 +1034,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchOrderUsingPATCHRequestBuilder(String orderId, List<String> updateMask, RestV2PatchOrderRequest order) throws ApiException {
+  private HttpRequest.Builder patchOrderUsingPATCHRequestBuilder(String orderId, List<String> updateMask, RestV2PatchOrderRequest restV2PatchOrderRequest) throws ApiException {
     // verify the required parameter 'orderId' is set
     if (orderId == null) {
       throw new ApiException(400, "Missing the required parameter 'orderId' when calling patchOrderUsingPATCH");
@@ -1067,7 +1067,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(order);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(restV2PatchOrderRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -1164,13 +1164,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an Order&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Order object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return CustomFieldMetaData
    * @throws ApiException if fails to make API call
    */
-  public CustomFieldMetaData updateOrderCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<CustomFieldMetaData> localVarResponse = updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+  public CustomFieldMetaData updateOrderCustomFieldUsingPATCH(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<CustomFieldMetaData> localVarResponse = updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -1178,13 +1178,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an Order&#39;s Custom Field
    * Updates a custom field of the specified type and options to the Order object.
    * @param customFieldId custom_field_id (required)
-   * @param request request (required)
+   * @param updateCustomFieldMetaDataRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;CustomFieldMetaData&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateOrderCustomFieldUsingPATCHRequestBuilder(customFieldId, request, updateMask);
+  public ApiResponse<CustomFieldMetaData> updateOrderCustomFieldUsingPATCHWithHttpInfo(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateOrderCustomFieldUsingPATCHRequestBuilder(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1224,14 +1224,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateOrderCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateOrderCustomFieldUsingPATCHRequestBuilder(String customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
       throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling updateOrderCustomFieldUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateOrderCustomFieldUsingPATCH");
+    // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+    if (updateCustomFieldMetaDataRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateOrderCustomFieldUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -1261,7 +1261,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateCustomFieldMetaDataRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

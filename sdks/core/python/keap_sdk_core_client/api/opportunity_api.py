@@ -52,7 +52,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_custom_fields_using_post(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -70,8 +70,8 @@ class OpportunityApi:
 
         Adds a custom field of the specified type and options to the Opportunity object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -95,7 +95,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_custom_fields_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -120,7 +120,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_custom_fields_using_post_with_http_info(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -138,8 +138,8 @@ class OpportunityApi:
 
         Adds a custom field of the specified type and options to the Opportunity object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -163,7 +163,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_custom_fields_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -188,7 +188,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_custom_fields_using_post_without_preload_content(
         self,
-        custom_field: Annotated[CreateCustomFieldRequest, Field(description="customField")],
+        create_custom_field_request: Annotated[CreateCustomFieldRequest, Field(description="customField")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -206,8 +206,8 @@ class OpportunityApi:
 
         Adds a custom field of the specified type and options to the Opportunity object.
 
-        :param custom_field: customField (required)
-        :type custom_field: CreateCustomFieldRequest
+        :param create_custom_field_request: customField (required)
+        :type create_custom_field_request: CreateCustomFieldRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -231,7 +231,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_custom_fields_using_post_serialize(
-            custom_field=custom_field,
+            create_custom_field_request=create_custom_field_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -251,7 +251,7 @@ class OpportunityApi:
 
     def _create_opportunity_custom_fields_using_post_serialize(
         self,
-        custom_field,
+        create_custom_field_request,
         _request_auth,
         _content_type,
         _headers,
@@ -277,8 +277,8 @@ class OpportunityApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if custom_field is not None:
-            _body_params = custom_field
+        if create_custom_field_request is not None:
+            _body_params = create_custom_field_request
 
 
         # set the HTTP header `Accept`
@@ -328,7 +328,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_stage_using_post(
         self,
-        opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
+        create_opportunity_stage_request: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -346,8 +346,8 @@ class OpportunityApi:
 
         Creates a new Opportunity Stage
 
-        :param opportunity_stage: opportunity
-        :type opportunity_stage: CreateOpportunityStageRequest
+        :param create_opportunity_stage_request: opportunity
+        :type create_opportunity_stage_request: CreateOpportunityStageRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -371,7 +371,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_stage_using_post_serialize(
-            opportunity_stage=opportunity_stage,
+            create_opportunity_stage_request=create_opportunity_stage_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -396,7 +396,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_stage_using_post_with_http_info(
         self,
-        opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
+        create_opportunity_stage_request: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -414,8 +414,8 @@ class OpportunityApi:
 
         Creates a new Opportunity Stage
 
-        :param opportunity_stage: opportunity
-        :type opportunity_stage: CreateOpportunityStageRequest
+        :param create_opportunity_stage_request: opportunity
+        :type create_opportunity_stage_request: CreateOpportunityStageRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -439,7 +439,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_stage_using_post_serialize(
-            opportunity_stage=opportunity_stage,
+            create_opportunity_stage_request=create_opportunity_stage_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -464,7 +464,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_stage_using_post_without_preload_content(
         self,
-        opportunity_stage: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
+        create_opportunity_stage_request: Annotated[Optional[CreateOpportunityStageRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -482,8 +482,8 @@ class OpportunityApi:
 
         Creates a new Opportunity Stage
 
-        :param opportunity_stage: opportunity
-        :type opportunity_stage: CreateOpportunityStageRequest
+        :param create_opportunity_stage_request: opportunity
+        :type create_opportunity_stage_request: CreateOpportunityStageRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -507,7 +507,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_stage_using_post_serialize(
-            opportunity_stage=opportunity_stage,
+            create_opportunity_stage_request=create_opportunity_stage_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -527,7 +527,7 @@ class OpportunityApi:
 
     def _create_opportunity_stage_using_post_serialize(
         self,
-        opportunity_stage,
+        create_opportunity_stage_request,
         _request_auth,
         _content_type,
         _headers,
@@ -553,8 +553,8 @@ class OpportunityApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if opportunity_stage is not None:
-            _body_params = opportunity_stage
+        if create_opportunity_stage_request is not None:
+            _body_params = create_opportunity_stage_request
 
 
         # set the HTTP header `Accept`
@@ -604,7 +604,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_using_post1(
         self,
-        opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
+        create_opportunity_request: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -622,8 +622,8 @@ class OpportunityApi:
 
         Creates a new opportunity as the authenticated user.
 
-        :param opportunity: opportunity
-        :type opportunity: CreateOpportunityRequest
+        :param create_opportunity_request: opportunity
+        :type create_opportunity_request: CreateOpportunityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -647,7 +647,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_using_post1_serialize(
-            opportunity=opportunity,
+            create_opportunity_request=create_opportunity_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -672,7 +672,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_using_post1_with_http_info(
         self,
-        opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
+        create_opportunity_request: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -690,8 +690,8 @@ class OpportunityApi:
 
         Creates a new opportunity as the authenticated user.
 
-        :param opportunity: opportunity
-        :type opportunity: CreateOpportunityRequest
+        :param create_opportunity_request: opportunity
+        :type create_opportunity_request: CreateOpportunityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -715,7 +715,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_using_post1_serialize(
-            opportunity=opportunity,
+            create_opportunity_request=create_opportunity_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -740,7 +740,7 @@ class OpportunityApi:
     @validate_call
     def create_opportunity_using_post1_without_preload_content(
         self,
-        opportunity: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
+        create_opportunity_request: Annotated[Optional[CreateOpportunityRequest], Field(description="opportunity")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -758,8 +758,8 @@ class OpportunityApi:
 
         Creates a new opportunity as the authenticated user.
 
-        :param opportunity: opportunity
-        :type opportunity: CreateOpportunityRequest
+        :param create_opportunity_request: opportunity
+        :type create_opportunity_request: CreateOpportunityRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -783,7 +783,7 @@ class OpportunityApi:
         """ # noqa: E501
 
         _param = self._create_opportunity_using_post1_serialize(
-            opportunity=opportunity,
+            create_opportunity_request=create_opportunity_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -803,7 +803,7 @@ class OpportunityApi:
 
     def _create_opportunity_using_post1_serialize(
         self,
-        opportunity,
+        create_opportunity_request,
         _request_auth,
         _content_type,
         _headers,
@@ -829,8 +829,8 @@ class OpportunityApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if opportunity is not None:
-            _body_params = opportunity
+        if create_opportunity_request is not None:
+            _body_params = create_opportunity_request
 
 
         # set the HTTP header `Accept`
@@ -2601,7 +2601,7 @@ class OpportunityApi:
     def update_opportunity_custom_field_using_patch(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2622,8 +2622,8 @@ class OpportunityApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2650,7 +2650,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2678,7 +2678,7 @@ class OpportunityApi:
     def update_opportunity_custom_field_using_patch_with_http_info(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2699,8 +2699,8 @@ class OpportunityApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2727,7 +2727,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2755,7 +2755,7 @@ class OpportunityApi:
     def update_opportunity_custom_field_using_patch_without_preload_content(
         self,
         custom_field_id: Annotated[StrictStr, Field(description="custom_field_id")],
-        request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
+        update_custom_field_meta_data_request: Annotated[UpdateCustomFieldMetaDataRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2776,8 +2776,8 @@ class OpportunityApi:
 
         :param custom_field_id: custom_field_id (required)
         :type custom_field_id: str
-        :param request: request (required)
-        :type request: UpdateCustomFieldMetaDataRequest
+        :param update_custom_field_meta_data_request: request (required)
+        :type update_custom_field_meta_data_request: UpdateCustomFieldMetaDataRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2804,7 +2804,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_custom_field_using_patch_serialize(
             custom_field_id=custom_field_id,
-            request=request,
+            update_custom_field_meta_data_request=update_custom_field_meta_data_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2827,7 +2827,7 @@ class OpportunityApi:
     def _update_opportunity_custom_field_using_patch_serialize(
         self,
         custom_field_id,
-        request,
+        update_custom_field_meta_data_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -2861,8 +2861,8 @@ class OpportunityApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_custom_field_meta_data_request is not None:
+            _body_params = update_custom_field_meta_data_request
 
 
         # set the HTTP header `Accept`
@@ -2913,7 +2913,7 @@ class OpportunityApi:
     def update_opportunity_stage_using_patch(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
-        request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
+        update_opportunity_stage_request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -2934,8 +2934,8 @@ class OpportunityApi:
 
         :param stage_id: stage_id (required)
         :type stage_id: str
-        :param request: request (required)
-        :type request: UpdateOpportunityStageRequest
+        :param update_opportunity_stage_request: request (required)
+        :type update_opportunity_stage_request: UpdateOpportunityStageRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -2962,7 +2962,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_stage_using_patch_serialize(
             stage_id=stage_id,
-            request=request,
+            update_opportunity_stage_request=update_opportunity_stage_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -2990,7 +2990,7 @@ class OpportunityApi:
     def update_opportunity_stage_using_patch_with_http_info(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
-        request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
+        update_opportunity_stage_request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3011,8 +3011,8 @@ class OpportunityApi:
 
         :param stage_id: stage_id (required)
         :type stage_id: str
-        :param request: request (required)
-        :type request: UpdateOpportunityStageRequest
+        :param update_opportunity_stage_request: request (required)
+        :type update_opportunity_stage_request: UpdateOpportunityStageRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3039,7 +3039,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_stage_using_patch_serialize(
             stage_id=stage_id,
-            request=request,
+            update_opportunity_stage_request=update_opportunity_stage_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3067,7 +3067,7 @@ class OpportunityApi:
     def update_opportunity_stage_using_patch_without_preload_content(
         self,
         stage_id: Annotated[StrictStr, Field(description="stage_id")],
-        request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
+        update_opportunity_stage_request: Annotated[UpdateOpportunityStageRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3088,8 +3088,8 @@ class OpportunityApi:
 
         :param stage_id: stage_id (required)
         :type stage_id: str
-        :param request: request (required)
-        :type request: UpdateOpportunityStageRequest
+        :param update_opportunity_stage_request: request (required)
+        :type update_opportunity_stage_request: UpdateOpportunityStageRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3116,7 +3116,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_stage_using_patch_serialize(
             stage_id=stage_id,
-            request=request,
+            update_opportunity_stage_request=update_opportunity_stage_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3139,7 +3139,7 @@ class OpportunityApi:
     def _update_opportunity_stage_using_patch_serialize(
         self,
         stage_id,
-        request,
+        update_opportunity_stage_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -3173,8 +3173,8 @@ class OpportunityApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if update_opportunity_stage_request is not None:
+            _body_params = update_opportunity_stage_request
 
 
         # set the HTTP header `Accept`
@@ -3225,7 +3225,7 @@ class OpportunityApi:
     def update_opportunity_using_patch(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
-        request: Annotated[PatchOpportunityRequest, Field(description="request")],
+        patch_opportunity_request: Annotated[PatchOpportunityRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3246,8 +3246,8 @@ class OpportunityApi:
 
         :param opportunity_id: opportunity_id (required)
         :type opportunity_id: str
-        :param request: request (required)
-        :type request: PatchOpportunityRequest
+        :param patch_opportunity_request: request (required)
+        :type patch_opportunity_request: PatchOpportunityRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3274,7 +3274,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
-            request=request,
+            patch_opportunity_request=patch_opportunity_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3302,7 +3302,7 @@ class OpportunityApi:
     def update_opportunity_using_patch_with_http_info(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
-        request: Annotated[PatchOpportunityRequest, Field(description="request")],
+        patch_opportunity_request: Annotated[PatchOpportunityRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3323,8 +3323,8 @@ class OpportunityApi:
 
         :param opportunity_id: opportunity_id (required)
         :type opportunity_id: str
-        :param request: request (required)
-        :type request: PatchOpportunityRequest
+        :param patch_opportunity_request: request (required)
+        :type patch_opportunity_request: PatchOpportunityRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3351,7 +3351,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
-            request=request,
+            patch_opportunity_request=patch_opportunity_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3379,7 +3379,7 @@ class OpportunityApi:
     def update_opportunity_using_patch_without_preload_content(
         self,
         opportunity_id: Annotated[StrictStr, Field(description="opportunity_id")],
-        request: Annotated[PatchOpportunityRequest, Field(description="request")],
+        patch_opportunity_request: Annotated[PatchOpportunityRequest, Field(description="request")],
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.")] = None,
         _request_timeout: Union[
             None,
@@ -3400,8 +3400,8 @@ class OpportunityApi:
 
         :param opportunity_id: opportunity_id (required)
         :type opportunity_id: str
-        :param request: request (required)
-        :type request: PatchOpportunityRequest
+        :param patch_opportunity_request: request (required)
+        :type patch_opportunity_request: PatchOpportunityRequest
         :param update_mask: An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         :type update_mask: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -3428,7 +3428,7 @@ class OpportunityApi:
 
         _param = self._update_opportunity_using_patch_serialize(
             opportunity_id=opportunity_id,
-            request=request,
+            patch_opportunity_request=patch_opportunity_request,
             update_mask=update_mask,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -3451,7 +3451,7 @@ class OpportunityApi:
     def _update_opportunity_using_patch_serialize(
         self,
         opportunity_id,
-        request,
+        patch_opportunity_request,
         update_mask,
         _request_auth,
         _content_type,
@@ -3485,8 +3485,8 @@ class OpportunityApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if patch_opportunity_request is not None:
+            _body_params = patch_opportunity_request
 
 
         # set the HTTP header `Accept`

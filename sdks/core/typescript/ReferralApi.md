@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **createReferralUsingPOST**
-> Referral createReferralUsingPOST(request)
+> Referral createReferralUsingPOST(createReferralRequest)
 
 Creates a new referral partner referral on the provided contact
 
@@ -24,7 +24,7 @@ const apiInstance = new ReferralApi(configuration);
 
 const request: ReferralApiCreateReferralUsingPOSTRequest = {
     // request
-  request: {
+  createReferralRequest: {
     contactId: "contactId_example",
     description: "description_example",
     expirationTime: "expirationTime_example",
@@ -45,7 +45,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateReferralRequest**| request |
+ **createReferralRequest** | **CreateReferralRequest**| request |
 
 
 ### Return type

@@ -21,7 +21,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createUserUsingPOST1
 
-> User createUserUsingPOST1(user)
+> User createUserUsingPOST1(createUserRequestV2)
 
 Create a User
 
@@ -43,9 +43,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         UsersApi apiInstance = new UsersApi(defaultClient);
-        CreateUserRequestV2 user = new CreateUserRequestV2(); // CreateUserRequestV2 | user
+        CreateUserRequestV2 createUserRequestV2 = new CreateUserRequestV2(); // CreateUserRequestV2 | user
         try {
-            User result = apiInstance.createUserUsingPOST1(user);
+            User result = apiInstance.createUserUsingPOST1(createUserRequestV2);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UsersApi#createUserUsingPOST1");
@@ -63,7 +63,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
+| **createUserRequestV2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -88,7 +88,7 @@ No authorization required
 
 ## createUserUsingPOST1WithHttpInfo
 
-> ApiResponse<User> createUserUsingPOST1 createUserUsingPOST1WithHttpInfo(user)
+> ApiResponse<User> createUserUsingPOST1 createUserUsingPOST1WithHttpInfo(createUserRequestV2)
 
 Create a User
 
@@ -111,9 +111,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         UsersApi apiInstance = new UsersApi(defaultClient);
-        CreateUserRequestV2 user = new CreateUserRequestV2(); // CreateUserRequestV2 | user
+        CreateUserRequestV2 createUserRequestV2 = new CreateUserRequestV2(); // CreateUserRequestV2 | user
         try {
-            ApiResponse<User> response = apiInstance.createUserUsingPOST1WithHttpInfo(user);
+            ApiResponse<User> response = apiInstance.createUserUsingPOST1WithHttpInfo(createUserRequestV2);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -133,7 +133,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
+| **createUserRequestV2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -715,7 +715,7 @@ No authorization required
 
 ## patchUserUsingPATCH
 
-> User patchUserUsingPATCH(userId, updateMask, user)
+> User patchUserUsingPATCH(userId, updateMask, patchUserRequestV2)
 
 Update User
 
@@ -739,9 +739,9 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
+        PatchUserRequestV2 patchUserRequestV2 = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
-            User result = apiInstance.patchUserUsingPATCH(userId, updateMask, user);
+            User result = apiInstance.patchUserUsingPATCH(userId, updateMask, patchUserRequestV2);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UsersApi#patchUserUsingPATCH");
@@ -761,7 +761,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
-| **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
+| **patchUserRequestV2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -787,7 +787,7 @@ No authorization required
 
 ## patchUserUsingPATCHWithHttpInfo
 
-> ApiResponse<User> patchUserUsingPATCH patchUserUsingPATCHWithHttpInfo(userId, updateMask, user)
+> ApiResponse<User> patchUserUsingPATCH patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2)
 
 Update User
 
@@ -812,9 +812,9 @@ public class Example {
         UsersApi apiInstance = new UsersApi(defaultClient);
         String userId = "userId_example"; // String | user_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchUserRequestV2 user = new PatchUserRequestV2(); // PatchUserRequestV2 | user
+        PatchUserRequestV2 patchUserRequestV2 = new PatchUserRequestV2(); // PatchUserRequestV2 | user
         try {
-            ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
+            ApiResponse<User> response = apiInstance.patchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -836,7 +836,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **String**| user_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: address, company_name, email_address, family_name, fax_numbers, given_name, job_title, phone_numbers, time_zone, website] |
-| **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
+| **patchUserRequestV2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
 

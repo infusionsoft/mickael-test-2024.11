@@ -169,7 +169,7 @@ No authorization required
 ## `addCommissionProgramUsingPOST()`
 
 ```php
-addCommissionProgramUsingPOST($insert_commission_program): \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse
+addCommissionProgramUsingPOST($create_commission_program_request): \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse
 ```
 
 Create an Affiliate Commission Program
@@ -188,10 +188,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$insert_commission_program = new \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest | Commission Program to insert
+$create_commission_program_request = new \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest | Commission Program to insert
 
 try {
-    $result = $apiInstance->addCommissionProgramUsingPOST($insert_commission_program);
+    $result = $apiInstance->addCommissionProgramUsingPOST($create_commission_program_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->addCommissionProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -202,7 +202,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **insert_commission_program** | [**\Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest**](../Model/CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
+| **create_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest**](../Model/CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
 
 ### Return type
 
@@ -224,7 +224,7 @@ No authorization required
 ## `assignProductCommissionProgramUsingPOST()`
 
 ```php
-assignProductCommissionProgramUsingPOST($commission_program_id, $product_commission_program): \Com\Keap\Sdk\Core\Model\ProductCommissionProgram
+assignProductCommissionProgramUsingPOST($commission_program_id, $create_product_commission_program_request): \Com\Keap\Sdk\Core\Model\ProductCommissionProgram
 ```
 
 Assign a Product Commission Program
@@ -244,10 +244,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $commission_program_id = 'commission_program_id_example'; // string | commission_program_id
-$product_commission_program = new \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest | Product Commission Program
+$create_product_commission_program_request = new \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest | Product Commission Program
 
 try {
-    $result = $apiInstance->assignProductCommissionProgramUsingPOST($commission_program_id, $product_commission_program);
+    $result = $apiInstance->assignProductCommissionProgramUsingPOST($commission_program_id, $create_product_commission_program_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->assignProductCommissionProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -259,7 +259,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **commission_program_id** | **string**| commission_program_id | |
-| **product_commission_program** | [**\Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest**](../Model/CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
+| **create_product_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest**](../Model/CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
 
 ### Return type
 
@@ -281,7 +281,7 @@ No authorization required
 ## `assignSubscriptionCommissionProgramUsingPOST()`
 
 ```php
-assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $subscription_commission_program): \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram
+assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $create_subscription_commission_program_request): \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram
 ```
 
 Assign a Subscription Commission Program
@@ -301,10 +301,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $commission_program_id = 'commission_program_id_example'; // string | commission_program_id
-$subscription_commission_program = new \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+$create_subscription_commission_program_request = new \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
 
 try {
-    $result = $apiInstance->assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $subscription_commission_program);
+    $result = $apiInstance->assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $create_subscription_commission_program_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->assignSubscriptionCommissionProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -316,7 +316,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **commission_program_id** | **string**| commission_program_id | |
-| **subscription_commission_program** | [**\Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest**](../Model/CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
+| **create_subscription_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest**](../Model/CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
 
 ### Return type
 
@@ -394,7 +394,7 @@ No authorization required
 ## `createAffiliateCustomFieldUsingPOST()`
 
 ```php
-createAffiliateCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createAffiliateCustomFieldUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Affiliate Custom Field
@@ -413,10 +413,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createAffiliateCustomFieldUsingPOST($custom_field);
+    $result = $apiInstance->createAffiliateCustomFieldUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createAffiliateCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -427,7 +427,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -506,7 +506,7 @@ No authorization required
 ## `createDiscountUsingPOST()`
 
 ```php
-createDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+createDiscountUsingPOST($create_update_discount_request): \Com\Keap\Sdk\Core\Model\CategoryDiscount
 ```
 
 Create a Category Discount
@@ -525,10 +525,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+$create_update_discount_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
 
 try {
-    $result = $apiInstance->createDiscountUsingPOST($request);
+    $result = $apiInstance->createDiscountUsingPOST($create_update_discount_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -539,7 +539,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+| **create_update_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -561,7 +561,7 @@ No authorization required
 ## `createDiscountUsingPOST1()`
 
 ```php
-createDiscountUsingPOST1($request): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+createDiscountUsingPOST1($create_shipping_discount_request): \Com\Keap\Sdk\Core\Model\ShippingDiscount
 ```
 
 Create a Shipping Discount
@@ -580,10 +580,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest | request
+$create_shipping_discount_request = new \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest | request
 
 try {
-    $result = $apiInstance->createDiscountUsingPOST1($request);
+    $result = $apiInstance->createDiscountUsingPOST1($create_shipping_discount_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createDiscountUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -594,7 +594,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest**](../Model/CreateShippingDiscountRequest.md)| request | |
+| **create_shipping_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateShippingDiscountRequest**](../Model/CreateShippingDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -723,7 +723,7 @@ No authorization required
 ## `createLeadSourceUsingPOST()`
 
 ```php
-createLeadSourceUsingPOST($leadsource): \Com\Keap\Sdk\Core\Model\LeadSource
+createLeadSourceUsingPOST($create_lead_source_request): \Com\Keap\Sdk\Core\Model\LeadSource
 ```
 
 Create a Lead Source
@@ -742,10 +742,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$leadsource = new \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest(); // \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest | leadsource
+$create_lead_source_request = new \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest(); // \Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest | leadsource
 
 try {
-    $result = $apiInstance->createLeadSourceUsingPOST($leadsource);
+    $result = $apiInstance->createLeadSourceUsingPOST($create_lead_source_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createLeadSourceUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -756,7 +756,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **leadsource** | [**\Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest**](../Model/CreateLeadSourceRequest.md)| leadsource | [optional] |
+| **create_lead_source_request** | [**\Com\Keap\Sdk\Core\Model\CreateLeadSourceRequest**](../Model/CreateLeadSourceRequest.md)| leadsource | [optional] |
 
 ### Return type
 
@@ -778,7 +778,7 @@ No authorization required
 ## `createNoteCustomFieldUsingPOST1()`
 
 ```php
-createNoteCustomFieldUsingPOST1($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createNoteCustomFieldUsingPOST1($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create a Custom Field
@@ -797,10 +797,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createNoteCustomFieldUsingPOST1($custom_field);
+    $result = $apiInstance->createNoteCustomFieldUsingPOST1($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createNoteCustomFieldUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -811,7 +811,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -833,7 +833,7 @@ No authorization required
 ## `createOpportunityCustomFieldsUsingPOST()`
 
 ```php
-createOpportunityCustomFieldsUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createOpportunityCustomFieldsUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Opportunity Custom Field
@@ -852,10 +852,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createOpportunityCustomFieldsUsingPOST($custom_field);
+    $result = $apiInstance->createOpportunityCustomFieldsUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createOpportunityCustomFieldsUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -866,7 +866,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -888,7 +888,7 @@ No authorization required
 ## `createOpportunityStageUsingPOST()`
 
 ```php
-createOpportunityStageUsingPOST($opportunity_stage): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+createOpportunityStageUsingPOST($create_opportunity_stage_request): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
 ```
 
 Create an Opportunity Stage
@@ -907,10 +907,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$opportunity_stage = new \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest | opportunity
+$create_opportunity_stage_request = new \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest | opportunity
 
 try {
-    $result = $apiInstance->createOpportunityStageUsingPOST($opportunity_stage);
+    $result = $apiInstance->createOpportunityStageUsingPOST($create_opportunity_stage_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createOpportunityStageUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -921,7 +921,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **opportunity_stage** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest**](../Model/CreateOpportunityStageRequest.md)| opportunity | [optional] |
+| **create_opportunity_stage_request** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityStageRequest**](../Model/CreateOpportunityStageRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -943,7 +943,7 @@ No authorization required
 ## `createOpportunityUsingPOST1()`
 
 ```php
-createOpportunityUsingPOST1($opportunity): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+createOpportunityUsingPOST1($create_opportunity_request): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Create an Opportunity
@@ -962,10 +962,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$opportunity = new \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest | opportunity
+$create_opportunity_request = new \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\CreateOpportunityRequest | opportunity
 
 try {
-    $result = $apiInstance->createOpportunityUsingPOST1($opportunity);
+    $result = $apiInstance->createOpportunityUsingPOST1($create_opportunity_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createOpportunityUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -976,7 +976,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **opportunity** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityRequest**](../Model/CreateOpportunityRequest.md)| opportunity | [optional] |
+| **create_opportunity_request** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityRequest**](../Model/CreateOpportunityRequest.md)| opportunity | [optional] |
 
 ### Return type
 
@@ -998,7 +998,7 @@ No authorization required
 ## `createOrderCustomFieldUsingPOST()`
 
 ```php
-createOrderCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createOrderCustomFieldUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Order's Custom Field
@@ -1017,10 +1017,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createOrderCustomFieldUsingPOST($custom_field);
+    $result = $apiInstance->createOrderCustomFieldUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createOrderCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -1031,7 +1031,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -1110,7 +1110,7 @@ No authorization required
 ## `createOrderTotalDiscountUsingPOST()`
 
 ```php
-createOrderTotalDiscountUsingPOST($request): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+createOrderTotalDiscountUsingPOST($create_order_total_discount_request): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
 ```
 
 Create an Order Total Discount
@@ -1129,10 +1129,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest | request
+$create_order_total_discount_request = new \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest | request
 
 try {
-    $result = $apiInstance->createOrderTotalDiscountUsingPOST($request);
+    $result = $apiInstance->createOrderTotalDiscountUsingPOST($create_order_total_discount_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createOrderTotalDiscountUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -1143,7 +1143,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest**](../Model/CreateOrderTotalDiscountRequest.md)| request | |
+| **create_order_total_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateOrderTotalDiscountRequest**](../Model/CreateOrderTotalDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -1165,7 +1165,7 @@ No authorization required
 ## `createOrderUsingPOST1()`
 
 ```php
-createOrderUsingPOST1($create_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
+createOrderUsingPOST1($rest_create_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Create an Order
@@ -1184,10 +1184,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_order_request = new \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest | createOrderRequest
+$rest_create_order_request = new \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest | createOrderRequest
 
 try {
-    $result = $apiInstance->createOrderUsingPOST1($create_order_request);
+    $result = $apiInstance->createOrderUsingPOST1($rest_create_order_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createOrderUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -1198,7 +1198,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_order_request** | [**\Com\Keap\Sdk\Core\Model\RestCreateOrderRequest**](../Model/RestCreateOrderRequest.md)| createOrderRequest | |
+| **rest_create_order_request** | [**\Com\Keap\Sdk\Core\Model\RestCreateOrderRequest**](../Model/RestCreateOrderRequest.md)| createOrderRequest | |
 
 ### Return type
 
@@ -1275,7 +1275,7 @@ No authorization required
 ## `createRedirectLinkUsingPOST()`
 
 ```php
-createRedirectLinkUsingPOST($request): \Com\Keap\Sdk\Core\Model\AffiliateLink
+createRedirectLinkUsingPOST($create_or_patch_affiliate_link_request): \Com\Keap\Sdk\Core\Model\AffiliateLink
 ```
 
 Create an Affiliate Link
@@ -1294,10 +1294,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
+$create_or_patch_affiliate_link_request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
 
 try {
-    $result = $apiInstance->createRedirectLinkUsingPOST($request);
+    $result = $apiInstance->createRedirectLinkUsingPOST($create_or_patch_affiliate_link_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createRedirectLinkUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -1308,7 +1308,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **create_or_patch_affiliate_link_request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -1330,7 +1330,7 @@ No authorization required
 ## `createReferralUsingPOST()`
 
 ```php
-createReferralUsingPOST($request): \Com\Keap\Sdk\Core\Model\Referral
+createReferralUsingPOST($create_referral_request): \Com\Keap\Sdk\Core\Model\Referral
 ```
 
 Create a Referral
@@ -1349,10 +1349,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateReferralRequest(); // \Com\Keap\Sdk\Core\Model\CreateReferralRequest | request
+$create_referral_request = new \Com\Keap\Sdk\Core\Model\CreateReferralRequest(); // \Com\Keap\Sdk\Core\Model\CreateReferralRequest | request
 
 try {
-    $result = $apiInstance->createReferralUsingPOST($request);
+    $result = $apiInstance->createReferralUsingPOST($create_referral_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createReferralUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -1363,7 +1363,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateReferralRequest**](../Model/CreateReferralRequest.md)| request | |
+| **create_referral_request** | [**\Com\Keap\Sdk\Core\Model\CreateReferralRequest**](../Model/CreateReferralRequest.md)| request | |
 
 ### Return type
 
@@ -1385,7 +1385,7 @@ No authorization required
 ## `createSubscriptionCustomFieldUsingPOST()`
 
 ```php
-createSubscriptionCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createSubscriptionCustomFieldUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create a Subscription's Custom Field
@@ -1404,10 +1404,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createSubscriptionCustomFieldUsingPOST($custom_field);
+    $result = $apiInstance->createSubscriptionCustomFieldUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createSubscriptionCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -1418,7 +1418,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -1440,7 +1440,7 @@ No authorization required
 ## `createTaskCustomFieldUsingPOST1()`
 
 ```php
-createTaskCustomFieldUsingPOST1($custom_field): \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse
+createTaskCustomFieldUsingPOST1($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CreateCustomFieldResponse
 ```
 
 Create a Custom Field
@@ -1459,10 +1459,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createTaskCustomFieldUsingPOST1($custom_field);
+    $result = $apiInstance->createTaskCustomFieldUsingPOST1($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createTaskCustomFieldUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -1473,7 +1473,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -1495,7 +1495,7 @@ No authorization required
 ## `createTaskUsingPOST1()`
 
 ```php
-createTaskUsingPOST1($task): \Com\Keap\Sdk\Core\Model\Task
+createTaskUsingPOST1($create_task_request): \Com\Keap\Sdk\Core\Model\Task
 ```
 
 Create a Task
@@ -1514,10 +1514,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$task = new \Com\Keap\Sdk\Core\Model\CreateTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreateTaskRequest | task
+$create_task_request = new \Com\Keap\Sdk\Core\Model\CreateTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreateTaskRequest | task
 
 try {
-    $result = $apiInstance->createTaskUsingPOST1($task);
+    $result = $apiInstance->createTaskUsingPOST1($create_task_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createTaskUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -1528,7 +1528,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **task** | [**\Com\Keap\Sdk\Core\Model\CreateTaskRequest**](../Model/CreateTaskRequest.md)| task | [optional] |
+| **create_task_request** | [**\Com\Keap\Sdk\Core\Model\CreateTaskRequest**](../Model/CreateTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -1550,7 +1550,7 @@ No authorization required
 ## `createUserUsingPOST1()`
 
 ```php
-createUserUsingPOST1($user): \Com\Keap\Sdk\Core\Model\User
+createUserUsingPOST1($create_user_request_v2): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Create a User
@@ -1569,10 +1569,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$user = new \Com\Keap\Sdk\Core\Model\CreateUserRequestV2(); // \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 | user
+$create_user_request_v2 = new \Com\Keap\Sdk\Core\Model\CreateUserRequestV2(); // \Com\Keap\Sdk\Core\Model\CreateUserRequestV2 | user
 
 try {
-    $result = $apiInstance->createUserUsingPOST1($user);
+    $result = $apiInstance->createUserUsingPOST1($create_user_request_v2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->createUserUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -1583,7 +1583,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user** | [**\Com\Keap\Sdk\Core\Model\CreateUserRequestV2**](../Model/CreateUserRequestV2.md)| user | [optional] |
+| **create_user_request_v2** | [**\Com\Keap\Sdk\Core\Model\CreateUserRequestV2**](../Model/CreateUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -4670,7 +4670,7 @@ No authorization required
 ## `patchOrderUsingPATCH()`
 
 ```php
-patchOrderUsingPATCH($order_id, $update_mask, $order): \Com\Keap\Sdk\Core\Model\RestV2Order
+patchOrderUsingPATCH($order_id, $update_mask, $rest_v2_patch_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Update an Order
@@ -4691,10 +4691,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
 );
 $order_id = 'order_id_example'; // string | order_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$order = new \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest | order
+$rest_v2_patch_order_request = new \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest | order
 
 try {
-    $result = $apiInstance->patchOrderUsingPATCH($order_id, $update_mask, $order);
+    $result = $apiInstance->patchOrderUsingPATCH($order_id, $update_mask, $rest_v2_patch_order_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->patchOrderUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -4707,7 +4707,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **order_id** | **string**| order_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **order** | [**\Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest**](../Model/RestV2PatchOrderRequest.md)| order | [optional] |
+| **rest_v2_patch_order_request** | [**\Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest**](../Model/RestV2PatchOrderRequest.md)| order | [optional] |
 
 ### Return type
 
@@ -4847,7 +4847,7 @@ No authorization required
 ## `patchTaskUsingPATCH()`
 
 ```php
-patchTaskUsingPATCH($task_id, $update_mask, $task): \Com\Keap\Sdk\Core\Model\UpdateTaskResponse
+patchTaskUsingPATCH($task_id, $update_mask, $create_patch_task_request): \Com\Keap\Sdk\Core\Model\UpdateTaskResponse
 ```
 
 Update a Task
@@ -4868,10 +4868,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
 );
 $task_id = 'task_id_example'; // string | task_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$task = new \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest | task
+$create_patch_task_request = new \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest | task
 
 try {
-    $result = $apiInstance->patchTaskUsingPATCH($task_id, $update_mask, $task);
+    $result = $apiInstance->patchTaskUsingPATCH($task_id, $update_mask, $create_patch_task_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->patchTaskUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -4884,7 +4884,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **task_id** | **string**| task_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **task** | [**\Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest**](../Model/CreatePatchTaskRequest.md)| task | [optional] |
+| **create_patch_task_request** | [**\Com\Keap\Sdk\Core\Model\CreatePatchTaskRequest**](../Model/CreatePatchTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -4906,7 +4906,7 @@ No authorization required
 ## `patchUserUsingPATCH()`
 
 ```php
-patchUserUsingPATCH($user_id, $update_mask, $user): \Com\Keap\Sdk\Core\Model\User
+patchUserUsingPATCH($user_id, $update_mask, $patch_user_request_v2): \Com\Keap\Sdk\Core\Model\User
 ```
 
 Update User
@@ -4927,10 +4927,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
 );
 $user_id = 'user_id_example'; // string | user_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$user = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
+$patch_user_request_v2 = new \Com\Keap\Sdk\Core\Model\PatchUserRequestV2(); // \Com\Keap\Sdk\Core\Model\PatchUserRequestV2 | user
 
 try {
-    $result = $apiInstance->patchUserUsingPATCH($user_id, $update_mask, $user);
+    $result = $apiInstance->patchUserUsingPATCH($user_id, $update_mask, $patch_user_request_v2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->patchUserUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -4943,7 +4943,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **user_id** | **string**| user_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **user** | [**\Com\Keap\Sdk\Core\Model\PatchUserRequestV2**](../Model/PatchUserRequestV2.md)| user | [optional] |
+| **patch_user_request_v2** | [**\Com\Keap\Sdk\Core\Model\PatchUserRequestV2**](../Model/PatchUserRequestV2.md)| user | [optional] |
 
 ### Return type
 
@@ -4965,7 +4965,7 @@ No authorization required
 ## `removeAffiliateFromProgramUsingPOST()`
 
 ```php
-removeAffiliateFromProgramUsingPOST($id, $remove_from_program_request)
+removeAffiliateFromProgramUsingPOST($id, $affiliate_remove_from_program_request)
 ```
 
 Remove an Affiliate from a Commission Program
@@ -4985,10 +4985,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | id
-$remove_from_program_request = new \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest(); // \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+$affiliate_remove_from_program_request = new \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest(); // \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 
 try {
-    $apiInstance->removeAffiliateFromProgramUsingPOST($id, $remove_from_program_request);
+    $apiInstance->removeAffiliateFromProgramUsingPOST($id, $affiliate_remove_from_program_request);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->removeAffiliateFromProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
@@ -4999,7 +4999,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| id | |
-| **remove_from_program_request** | [**\Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest**](../Model/AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
+| **affiliate_remove_from_program_request** | [**\Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest**](../Model/AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
 
 ### Return type
 
@@ -5285,7 +5285,7 @@ No authorization required
 ## `updateAffiliateCustomFieldUsingPATCH()`
 
 ```php
-updateAffiliateCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Custom Field
@@ -5305,11 +5305,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateAffiliateCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateAffiliateCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5321,7 +5321,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5344,7 +5344,7 @@ No authorization required
 ## `updateDiscountUsingPATCH()`
 
 ```php
-updateDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CategoryDiscount
+updateDiscountUsingPATCH($discount_id, $create_update_discount_request, $update_mask): \Com\Keap\Sdk\Core\Model\CategoryDiscount
 ```
 
 Update a Category Discount
@@ -5364,11 +5364,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $discount_id = 'discount_id_example'; // string | discount_id
-$request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
+$create_update_discount_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateDiscountUsingPATCH($discount_id, $request, $update_mask);
+    $result = $apiInstance->updateDiscountUsingPATCH($discount_id, $create_update_discount_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5380,7 +5380,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **discount_id** | **string**| discount_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
+| **create_update_discount_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateDiscountRequest**](../Model/CreateUpdateDiscountRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5403,7 +5403,7 @@ No authorization required
 ## `updateDiscountUsingPATCH1()`
 
 ```php
-updateDiscountUsingPATCH1($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\ShippingDiscount
+updateDiscountUsingPATCH1($discount_id, $update_shipping_discount_request, $update_mask): \Com\Keap\Sdk\Core\Model\ShippingDiscount
 ```
 
 Update a Shipping Discount
@@ -5423,11 +5423,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $discount_id = 'discount_id_example'; // string | discount_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest | request
+$update_shipping_discount_request = new \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateDiscountUsingPATCH1($discount_id, $request, $update_mask);
+    $result = $apiInstance->updateDiscountUsingPATCH1($discount_id, $update_shipping_discount_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateDiscountUsingPATCH1: ', $e->getMessage(), PHP_EOL;
@@ -5439,7 +5439,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **discount_id** | **string**| discount_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest**](../Model/UpdateShippingDiscountRequest.md)| request | |
+| **update_shipping_discount_request** | [**\Com\Keap\Sdk\Core\Model\UpdateShippingDiscountRequest**](../Model/UpdateShippingDiscountRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5462,7 +5462,7 @@ No authorization required
 ## `updateNotesCustomFieldUsingPATCH()`
 
 ```php
-updateNotesCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Custom Field
@@ -5482,11 +5482,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateNotesCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateNotesCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5498,7 +5498,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5521,7 +5521,7 @@ No authorization required
 ## `updateOpportunityCustomFieldUsingPATCH()`
 
 ```php
-updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateOpportunityCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Opportunity's Custom Field
@@ -5541,11 +5541,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateOpportunityCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5557,7 +5557,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5580,7 +5580,7 @@ No authorization required
 ## `updateOpportunityStageUsingPATCH()`
 
 ```php
-updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
+updateOpportunityStageUsingPATCH($stage_id, $update_opportunity_stage_request, $update_mask): \Com\Keap\Sdk\Core\Model\RestOpportunityStage
 ```
 
 Update an Opportunity Stage
@@ -5600,11 +5600,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $stage_id = 'stage_id_example'; // string | stage_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest | request
+$update_opportunity_stage_request = new \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityStageUsingPATCH($stage_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityStageUsingPATCH($stage_id, $update_opportunity_stage_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateOpportunityStageUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5616,7 +5616,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **stage_id** | **string**| stage_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest**](../Model/UpdateOpportunityStageRequest.md)| request | |
+| **update_opportunity_stage_request** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageRequest**](../Model/UpdateOpportunityStageRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5639,7 +5639,7 @@ No authorization required
 ## `updateOpportunityUsingPATCH()`
 
 ```php
-updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
+updateOpportunityUsingPATCH($opportunity_id, $patch_opportunity_request, $update_mask): \Com\Keap\Sdk\Core\Model\RestV2Opportunity
 ```
 
 Update an opportunity
@@ -5659,11 +5659,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $opportunity_id = 'opportunity_id_example'; // string | opportunity_id
-$request = new \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest | request
+$patch_opportunity_request = new \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest(); // \Com\Keap\Sdk\Core\Model\PatchOpportunityRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOpportunityUsingPATCH($opportunity_id, $request, $update_mask);
+    $result = $apiInstance->updateOpportunityUsingPATCH($opportunity_id, $patch_opportunity_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateOpportunityUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5675,7 +5675,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **opportunity_id** | **string**| opportunity_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\PatchOpportunityRequest**](../Model/PatchOpportunityRequest.md)| request | |
+| **patch_opportunity_request** | [**\Com\Keap\Sdk\Core\Model\PatchOpportunityRequest**](../Model/PatchOpportunityRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5698,7 +5698,7 @@ No authorization required
 ## `updateOrderCustomFieldUsingPATCH()`
 
 ```php
-updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateOrderCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update an Order's Custom Field
@@ -5718,11 +5718,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateOrderCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateOrderCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5734,7 +5734,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5757,7 +5757,7 @@ No authorization required
 ## `updateOrderTotalDiscountUsingPATCH()`
 
 ```php
-updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
+updateOrderTotalDiscountUsingPATCH($discount_id, $update_order_total_discount_request, $update_mask): \Com\Keap\Sdk\Core\Model\OrderTotalDiscount
 ```
 
 Update an Order Total Discount
@@ -5777,11 +5777,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $discount_id = 'discount_id_example'; // string | discount_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest | request
+$update_order_total_discount_request = new \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOrderTotalDiscountUsingPATCH($discount_id, $request, $update_mask);
+    $result = $apiInstance->updateOrderTotalDiscountUsingPATCH($discount_id, $update_order_total_discount_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateOrderTotalDiscountUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5793,7 +5793,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **discount_id** | **string**| discount_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest**](../Model/UpdateOrderTotalDiscountRequest.md)| request | |
+| **update_order_total_discount_request** | [**\Com\Keap\Sdk\Core\Model\UpdateOrderTotalDiscountRequest**](../Model/UpdateOrderTotalDiscountRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5816,7 +5816,7 @@ No authorization required
 ## `updateRedirectLinkUsingPATCH()`
 
 ```php
-updateRedirectLinkUsingPATCH($redirect_id, $request): \Com\Keap\Sdk\Core\Model\AffiliateLink
+updateRedirectLinkUsingPATCH($redirect_id, $create_or_patch_affiliate_link_request): \Com\Keap\Sdk\Core\Model\AffiliateLink
 ```
 
 Update an Affiliate Link
@@ -5836,10 +5836,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $redirect_id = 'redirect_id_example'; // string | redirect_id
-$request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
+$create_or_patch_affiliate_link_request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
 
 try {
-    $result = $apiInstance->updateRedirectLinkUsingPATCH($redirect_id, $request);
+    $result = $apiInstance->updateRedirectLinkUsingPATCH($redirect_id, $create_or_patch_affiliate_link_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateRedirectLinkUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5851,7 +5851,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **redirect_id** | **string**| redirect_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **create_or_patch_affiliate_link_request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -5873,7 +5873,7 @@ No authorization required
 ## `updateSubscriptionCustomFieldUsingPATCH()`
 
 ```php
-updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Subscription's Custom Field
@@ -5893,11 +5893,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateSubscriptionCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateSubscriptionCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5909,7 +5909,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -5932,7 +5932,7 @@ No authorization required
 ## `updateTaskCustomFieldUsingPATCH()`
 
 ```php
-updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateTaskCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Task's Custom Field
@@ -5952,11 +5952,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateTaskCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateTaskCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreReleaseApi->updateTaskCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -5968,7 +5968,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

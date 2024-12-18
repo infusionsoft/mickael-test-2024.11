@@ -97,24 +97,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create Payment Method Configuration
    * Creates configuration details for rendering payment method components
-   * @param request request (required)
+   * @param createPaymentMethodConfigRequest request (required)
    * @return PaymentMethodConfig
    * @throws ApiException if fails to make API call
    */
-  public PaymentMethodConfig createPaymentMethodConfigUsingPOST(CreatePaymentMethodConfigRequest request) throws ApiException {
-    ApiResponse<PaymentMethodConfig> localVarResponse = createPaymentMethodConfigUsingPOSTWithHttpInfo(request);
+  public PaymentMethodConfig createPaymentMethodConfigUsingPOST(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest) throws ApiException {
+    ApiResponse<PaymentMethodConfig> localVarResponse = createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create Payment Method Configuration
    * Creates configuration details for rendering payment method components
-   * @param request request (required)
+   * @param createPaymentMethodConfigRequest request (required)
    * @return ApiResponse&lt;PaymentMethodConfig&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<PaymentMethodConfig> createPaymentMethodConfigUsingPOSTWithHttpInfo(CreatePaymentMethodConfigRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createPaymentMethodConfigUsingPOSTRequestBuilder(request);
+  public ApiResponse<PaymentMethodConfig> createPaymentMethodConfigUsingPOSTWithHttpInfo(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createPaymentMethodConfigUsingPOSTRequestBuilder(createPaymentMethodConfigRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -154,10 +154,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createPaymentMethodConfigUsingPOSTRequestBuilder(CreatePaymentMethodConfigRequest request) throws ApiException {
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createPaymentMethodConfigUsingPOST");
+  private HttpRequest.Builder createPaymentMethodConfigUsingPOSTRequestBuilder(CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest) throws ApiException {
+    // verify the required parameter 'createPaymentMethodConfigRequest' is set
+    if (createPaymentMethodConfigRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createPaymentMethodConfigRequest' when calling createPaymentMethodConfigUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -171,7 +171,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createPaymentMethodConfigRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

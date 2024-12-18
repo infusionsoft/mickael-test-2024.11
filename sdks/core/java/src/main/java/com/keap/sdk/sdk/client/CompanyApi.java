@@ -99,24 +99,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create a Company
    * Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
-   * @param company company (optional)
+   * @param createCompanyRequest company (optional)
    * @return Company
    * @throws ApiException if fails to make API call
    */
-  public Company createCompanyUsingPOST1(CreateCompanyRequest company) throws ApiException {
-    ApiResponse<Company> localVarResponse = createCompanyUsingPOST1WithHttpInfo(company);
+  public Company createCompanyUsingPOST1(CreateCompanyRequest createCompanyRequest) throws ApiException {
+    ApiResponse<Company> localVarResponse = createCompanyUsingPOST1WithHttpInfo(createCompanyRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create a Company
    * Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
-   * @param company company (optional)
+   * @param createCompanyRequest company (optional)
    * @return ApiResponse&lt;Company&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Company> createCompanyUsingPOST1WithHttpInfo(CreateCompanyRequest company) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createCompanyUsingPOST1RequestBuilder(company);
+  public ApiResponse<Company> createCompanyUsingPOST1WithHttpInfo(CreateCompanyRequest createCompanyRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createCompanyUsingPOST1RequestBuilder(createCompanyRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -156,7 +156,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createCompanyUsingPOST1RequestBuilder(CreateCompanyRequest company) throws ApiException {
+  private HttpRequest.Builder createCompanyUsingPOST1RequestBuilder(CreateCompanyRequest createCompanyRequest) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -169,7 +169,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(company);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createCompanyRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -492,12 +492,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Company with the values provided in the request
    * @param companyId company_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param company company (optional)
+   * @param patchCompanyRequest company (optional)
    * @return Company
    * @throws ApiException if fails to make API call
    */
-  public Company patchCompanyUsingPATCH(String companyId, List<String> updateMask, PatchCompanyRequest company) throws ApiException {
-    ApiResponse<Company> localVarResponse = patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company);
+  public Company patchCompanyUsingPATCH(String companyId, List<String> updateMask, PatchCompanyRequest patchCompanyRequest) throws ApiException {
+    ApiResponse<Company> localVarResponse = patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest);
     return localVarResponse.getData();
   }
 
@@ -506,12 +506,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Company with the values provided in the request
    * @param companyId company_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param company company (optional)
+   * @param patchCompanyRequest company (optional)
    * @return ApiResponse&lt;Company&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Company> patchCompanyUsingPATCHWithHttpInfo(String companyId, List<String> updateMask, PatchCompanyRequest company) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchCompanyUsingPATCHRequestBuilder(companyId, updateMask, company);
+  public ApiResponse<Company> patchCompanyUsingPATCHWithHttpInfo(String companyId, List<String> updateMask, PatchCompanyRequest patchCompanyRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchCompanyUsingPATCHRequestBuilder(companyId, updateMask, patchCompanyRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -551,7 +551,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchCompanyUsingPATCHRequestBuilder(String companyId, List<String> updateMask, PatchCompanyRequest company) throws ApiException {
+  private HttpRequest.Builder patchCompanyUsingPATCHRequestBuilder(String companyId, List<String> updateMask, PatchCompanyRequest patchCompanyRequest) throws ApiException {
     // verify the required parameter 'companyId' is set
     if (companyId == null) {
       throw new ApiException(400, "Missing the required parameter 'companyId' when calling patchCompanyUsingPATCH");
@@ -584,7 +584,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(company);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(patchCompanyRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

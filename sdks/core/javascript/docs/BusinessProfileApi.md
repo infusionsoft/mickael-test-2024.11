@@ -65,7 +65,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 let apiInstance = new KeapCoreServiceCoreSdk.BusinessProfileApi();
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
-  'businessProfile': new KeapCoreServiceCoreSdk.PatchBusinessProfileRequest() // PatchBusinessProfileRequest | businessProfile
+  'patchBusinessProfileRequest': new KeapCoreServiceCoreSdk.PatchBusinessProfileRequest() // PatchBusinessProfileRequest | businessProfile
 };
 apiInstance.patchBusinessProfileUsingPATCH(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -81,7 +81,7 @@ apiInstance.patchBusinessProfileUsingPATCH(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
- **businessProfile** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] 
+ **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] 
 
 ### Return type
 

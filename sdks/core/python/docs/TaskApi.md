@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_task_custom_field_using_post1**
-> CreateCustomFieldResponse create_task_custom_field_using_post1(custom_field)
+> CreateCustomFieldResponse create_task_custom_field_using_post1(create_custom_field_request)
 
 Create a Custom Field
 
@@ -42,11 +42,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TaskApi(api_client)
-    custom_field = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
+    create_custom_field_request = keap_sdk_core_client.CreateCustomFieldRequest() # CreateCustomFieldRequest | customField
 
     try:
         # Create a Custom Field
-        api_response = api_instance.create_task_custom_field_using_post1(custom_field)
+        api_response = api_instance.create_task_custom_field_using_post1(create_custom_field_request)
         print("The response of TaskApi->create_task_custom_field_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -59,7 +59,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_field** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **create_custom_field_request** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -85,7 +85,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_task_using_post1**
-> Task create_task_using_post1(task=task)
+> Task create_task_using_post1(create_task_request=create_task_request)
 
 Create a Task
 
@@ -111,11 +111,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TaskApi(api_client)
-    task = keap_sdk_core_client.CreateTaskRequest() # CreateTaskRequest | task (optional)
+    create_task_request = keap_sdk_core_client.CreateTaskRequest() # CreateTaskRequest | task (optional)
 
     try:
         # Create a Task
-        api_response = api_instance.create_task_using_post1(task=task)
+        api_response = api_instance.create_task_using_post1(create_task_request=create_task_request)
         print("The response of TaskApi->create_task_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -128,7 +128,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
+ **create_task_request** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -434,7 +434,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_task_using_patch**
-> UpdateTaskResponse patch_task_using_patch(task_id, update_mask=update_mask, task=task)
+> UpdateTaskResponse patch_task_using_patch(task_id, update_mask=update_mask, create_patch_task_request=create_patch_task_request)
 
 Update a Task
 
@@ -462,11 +462,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.TaskApi(api_client)
     task_id = 'task_id_example' # str | task_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    task = keap_sdk_core_client.CreatePatchTaskRequest() # CreatePatchTaskRequest | task (optional)
+    create_patch_task_request = keap_sdk_core_client.CreatePatchTaskRequest() # CreatePatchTaskRequest | task (optional)
 
     try:
         # Update a Task
-        api_response = api_instance.patch_task_using_patch(task_id, update_mask=update_mask, task=task)
+        api_response = api_instance.patch_task_using_patch(task_id, update_mask=update_mask, create_patch_task_request=create_patch_task_request)
         print("The response of TaskApi->patch_task_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **str**| task_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
+ **create_patch_task_request** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] 
 
 ### Return type
 
@@ -573,7 +573,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_task_custom_field_using_patch**
-> CustomFieldMetaData update_task_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+> CustomFieldMetaData update_task_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
 Update a Task's Custom Field
 
@@ -600,12 +600,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.TaskApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
-    request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
+    update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Task's Custom Field
-        api_response = api_instance.update_task_custom_field_using_patch(custom_field_id, request, update_mask=update_mask)
+        api_response = api_instance.update_task_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
         print("The response of TaskApi->update_task_custom_field_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -619,7 +619,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

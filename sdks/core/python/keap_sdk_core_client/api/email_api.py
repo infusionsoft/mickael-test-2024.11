@@ -48,7 +48,7 @@ class EmailApi:
     @validate_call
     def create_email_using_post1(
         self,
-        email_with_content: Annotated[CreateEmailSentRequest, Field(description="emailWithContent")],
+        create_email_sent_request: Annotated[CreateEmailSentRequest, Field(description="emailWithContent")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -66,8 +66,8 @@ class EmailApi:
 
         Creates a Record of an Email sent to a Contact
 
-        :param email_with_content: emailWithContent (required)
-        :type email_with_content: CreateEmailSentRequest
+        :param create_email_sent_request: emailWithContent (required)
+        :type create_email_sent_request: CreateEmailSentRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -91,7 +91,7 @@ class EmailApi:
         """ # noqa: E501
 
         _param = self._create_email_using_post1_serialize(
-            email_with_content=email_with_content,
+            create_email_sent_request=create_email_sent_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -116,7 +116,7 @@ class EmailApi:
     @validate_call
     def create_email_using_post1_with_http_info(
         self,
-        email_with_content: Annotated[CreateEmailSentRequest, Field(description="emailWithContent")],
+        create_email_sent_request: Annotated[CreateEmailSentRequest, Field(description="emailWithContent")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -134,8 +134,8 @@ class EmailApi:
 
         Creates a Record of an Email sent to a Contact
 
-        :param email_with_content: emailWithContent (required)
-        :type email_with_content: CreateEmailSentRequest
+        :param create_email_sent_request: emailWithContent (required)
+        :type create_email_sent_request: CreateEmailSentRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -159,7 +159,7 @@ class EmailApi:
         """ # noqa: E501
 
         _param = self._create_email_using_post1_serialize(
-            email_with_content=email_with_content,
+            create_email_sent_request=create_email_sent_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -184,7 +184,7 @@ class EmailApi:
     @validate_call
     def create_email_using_post1_without_preload_content(
         self,
-        email_with_content: Annotated[CreateEmailSentRequest, Field(description="emailWithContent")],
+        create_email_sent_request: Annotated[CreateEmailSentRequest, Field(description="emailWithContent")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -202,8 +202,8 @@ class EmailApi:
 
         Creates a Record of an Email sent to a Contact
 
-        :param email_with_content: emailWithContent (required)
-        :type email_with_content: CreateEmailSentRequest
+        :param create_email_sent_request: emailWithContent (required)
+        :type create_email_sent_request: CreateEmailSentRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -227,7 +227,7 @@ class EmailApi:
         """ # noqa: E501
 
         _param = self._create_email_using_post1_serialize(
-            email_with_content=email_with_content,
+            create_email_sent_request=create_email_sent_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -247,7 +247,7 @@ class EmailApi:
 
     def _create_email_using_post1_serialize(
         self,
-        email_with_content,
+        create_email_sent_request,
         _request_auth,
         _content_type,
         _headers,
@@ -273,8 +273,8 @@ class EmailApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if email_with_content is not None:
-            _body_params = email_with_content
+        if create_email_sent_request is not None:
+            _body_params = create_email_sent_request
 
 
         # set the HTTP header `Accept`

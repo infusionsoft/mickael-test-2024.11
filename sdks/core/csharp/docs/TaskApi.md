@@ -16,7 +16,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createtaskcustomfieldusingpost1"></a>
 # **CreateTaskCustomFieldUsingPOST1**
-> CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1 (CreateCustomFieldRequest customField)
+> CreateCustomFieldResponse CreateTaskCustomFieldUsingPOST1 (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -39,12 +39,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TaskApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create a Custom Field
-                CreateCustomFieldResponse result = apiInstance.CreateTaskCustomFieldUsingPOST1(customField);
+                CreateCustomFieldResponse result = apiInstance.CreateTaskCustomFieldUsingPOST1(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -65,7 +65,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Custom Field
-    ApiResponse<CreateCustomFieldResponse> response = apiInstance.CreateTaskCustomFieldUsingPOST1WithHttpInfo(customField);
+    ApiResponse<CreateCustomFieldResponse> response = apiInstance.CreateTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -82,7 +82,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -109,7 +109,7 @@ No authorization required
 
 <a id="createtaskusingpost1"></a>
 # **CreateTaskUsingPOST1**
-> Task CreateTaskUsingPOST1 (CreateTaskRequest? task = null)
+> Task CreateTaskUsingPOST1 (CreateTaskRequest? createTaskRequest = null)
 
 Create a Task
 
@@ -132,12 +132,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TaskApi(config);
-            var task = new CreateTaskRequest?(); // CreateTaskRequest? | task (optional) 
+            var createTaskRequest = new CreateTaskRequest?(); // CreateTaskRequest? | task (optional) 
 
             try
             {
                 // Create a Task
-                Task result = apiInstance.CreateTaskUsingPOST1(task);
+                Task result = apiInstance.CreateTaskUsingPOST1(createTaskRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -158,7 +158,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Task
-    ApiResponse<Task> response = apiInstance.CreateTaskUsingPOST1WithHttpInfo(task);
+    ApiResponse<Task> response = apiInstance.CreateTaskUsingPOST1WithHttpInfo(createTaskRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -175,7 +175,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **task** | [**CreateTaskRequest?**](CreateTaskRequest?.md) | task | [optional]  |
+| **createTaskRequest** | [**CreateTaskRequest?**](CreateTaskRequest?.md) | task | [optional]  |
 
 ### Return type
 
@@ -580,7 +580,7 @@ No authorization required
 
 <a id="patchtaskusingpatch"></a>
 # **PatchTaskUsingPATCH**
-> UpdateTaskResponse PatchTaskUsingPATCH (string taskId, List<string>? updateMask = null, CreatePatchTaskRequest? task = null)
+> UpdateTaskResponse PatchTaskUsingPATCH (string taskId, List<string>? updateMask = null, CreatePatchTaskRequest? createPatchTaskRequest = null)
 
 Update a Task
 
@@ -605,12 +605,12 @@ namespace Example
             var apiInstance = new TaskApi(config);
             var taskId = "taskId_example";  // string | task_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var task = new CreatePatchTaskRequest?(); // CreatePatchTaskRequest? | task (optional) 
+            var createPatchTaskRequest = new CreatePatchTaskRequest?(); // CreatePatchTaskRequest? | task (optional) 
 
             try
             {
                 // Update a Task
-                UpdateTaskResponse result = apiInstance.PatchTaskUsingPATCH(taskId, updateMask, task);
+                UpdateTaskResponse result = apiInstance.PatchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -631,7 +631,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Task
-    ApiResponse<UpdateTaskResponse> response = apiInstance.PatchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
+    ApiResponse<UpdateTaskResponse> response = apiInstance.PatchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -650,7 +650,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **taskId** | **string** | task_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **task** | [**CreatePatchTaskRequest?**](CreatePatchTaskRequest?.md) | task | [optional]  |
+| **createPatchTaskRequest** | [**CreatePatchTaskRequest?**](CreatePatchTaskRequest?.md) | task | [optional]  |
 
 ### Return type
 
@@ -767,7 +767,7 @@ No authorization required
 
 <a id="updatetaskcustomfieldusingpatch"></a>
 # **UpdateTaskCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateTaskCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Task's Custom Field
 
@@ -791,13 +791,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TaskApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Task's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -818,7 +818,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Task's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -836,7 +836,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type

@@ -139,16 +139,16 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createCompanyUsingPOST1($company = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
+    public function createCompanyUsingPOST1($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
-        list($response) = $this->createCompanyUsingPOST1WithHttpInfo($company, $contentType);
+        list($response) = $this->createCompanyUsingPOST1WithHttpInfo($create_company_request, $contentType);
         return $response;
     }
 
@@ -157,16 +157,16 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCompanyUsingPOST1WithHttpInfo($company = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
+    public function createCompanyUsingPOST1WithHttpInfo($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
-        $request = $this->createCompanyUsingPOST1Request($company, $contentType);
+        $request = $this->createCompanyUsingPOST1Request($create_company_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -352,15 +352,15 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCompanyUsingPOST1Async($company = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
+    public function createCompanyUsingPOST1Async($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
-        return $this->createCompanyUsingPOST1AsyncWithHttpInfo($company, $contentType)
+        return $this->createCompanyUsingPOST1AsyncWithHttpInfo($create_company_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -373,16 +373,16 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCompanyUsingPOST1AsyncWithHttpInfo($company = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
+    public function createCompanyUsingPOST1AsyncWithHttpInfo($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Company';
-        $request = $this->createCompanyUsingPOST1Request($company, $contentType);
+        $request = $this->createCompanyUsingPOST1Request($create_company_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -423,13 +423,13 @@ class CompanyApi
     /**
      * Create request for operation 'createCompanyUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createCompanyUsingPOST1Request($company = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
+    public function createCompanyUsingPOST1Request($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
 
 
@@ -452,12 +452,12 @@ class CompanyApi
         );
 
         // for model (json/xml)
-        if (isset($company)) {
+        if (isset($create_company_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($company));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_company_request));
             } else {
-                $httpBody = $company;
+                $httpBody = $create_company_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1560,8 +1560,8 @@ class CompanyApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1569,8 +1569,8 @@ class CompanyApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1578,8 +1578,8 @@ class CompanyApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -1587,8 +1587,8 @@ class CompanyApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -1655,16 +1655,16 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $patch_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCompanyUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchCompanyUsingPATCH($company_id, $update_mask = null, $company = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
+    public function patchCompanyUsingPATCH($company_id, $update_mask = null, $patch_company_request = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
     {
-        list($response) = $this->patchCompanyUsingPATCHWithHttpInfo($company_id, $update_mask, $company, $contentType);
+        list($response) = $this->patchCompanyUsingPATCHWithHttpInfo($company_id, $update_mask, $patch_company_request, $contentType);
         return $response;
     }
 
@@ -1675,16 +1675,16 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $patch_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCompanyUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchCompanyUsingPATCHWithHttpInfo($company_id, $update_mask = null, $company = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
+    public function patchCompanyUsingPATCHWithHttpInfo($company_id, $update_mask = null, $patch_company_request = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
     {
-        $request = $this->patchCompanyUsingPATCHRequest($company_id, $update_mask, $company, $contentType);
+        $request = $this->patchCompanyUsingPATCHRequest($company_id, $update_mask, $patch_company_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1907,15 +1907,15 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $patch_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCompanyUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchCompanyUsingPATCHAsync($company_id, $update_mask = null, $company = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
+    public function patchCompanyUsingPATCHAsync($company_id, $update_mask = null, $patch_company_request = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
     {
-        return $this->patchCompanyUsingPATCHAsyncWithHttpInfo($company_id, $update_mask, $company, $contentType)
+        return $this->patchCompanyUsingPATCHAsyncWithHttpInfo($company_id, $update_mask, $patch_company_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1930,16 +1930,16 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $patch_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCompanyUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchCompanyUsingPATCHAsyncWithHttpInfo($company_id, $update_mask = null, $company = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
+    public function patchCompanyUsingPATCHAsyncWithHttpInfo($company_id, $update_mask = null, $patch_company_request = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Company';
-        $request = $this->patchCompanyUsingPATCHRequest($company_id, $update_mask, $company, $contentType);
+        $request = $this->patchCompanyUsingPATCHRequest($company_id, $update_mask, $patch_company_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1982,13 +1982,13 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $company company (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\PatchCompanyRequest $patch_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCompanyUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchCompanyUsingPATCHRequest($company_id, $update_mask = null, $company = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
+    public function patchCompanyUsingPATCHRequest($company_id, $update_mask = null, $patch_company_request = null, string $contentType = self::contentTypes['patchCompanyUsingPATCH'][0])
     {
 
         // verify the required parameter 'company_id' is set
@@ -2036,12 +2036,12 @@ class CompanyApi
         );
 
         // for model (json/xml)
-        if (isset($company)) {
+        if (isset($patch_company_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($company));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patch_company_request));
             } else {
-                $httpBody = $company;
+                $httpBody = $patch_company_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -21,7 +21,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createOrderCustomFieldUsingPOST()`
 
 ```php
-createOrderCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createOrderCustomFieldUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Order's Custom Field
@@ -40,10 +40,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createOrderCustomFieldUsingPOST($custom_field);
+    $result = $apiInstance->createOrderCustomFieldUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->createOrderCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -133,7 +133,7 @@ No authorization required
 ## `createOrderUsingPOST1()`
 
 ```php
-createOrderUsingPOST1($create_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
+createOrderUsingPOST1($rest_create_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Create an Order
@@ -152,10 +152,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_order_request = new \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest | createOrderRequest
+$rest_create_order_request = new \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestCreateOrderRequest | createOrderRequest
 
 try {
-    $result = $apiInstance->createOrderUsingPOST1($create_order_request);
+    $result = $apiInstance->createOrderUsingPOST1($rest_create_order_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->createOrderUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -166,7 +166,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_order_request** | [**\Com\Keap\Sdk\Core\Model\RestCreateOrderRequest**](../Model/RestCreateOrderRequest.md)| createOrderRequest | |
+| **rest_create_order_request** | [**\Com\Keap\Sdk\Core\Model\RestCreateOrderRequest**](../Model/RestCreateOrderRequest.md)| createOrderRequest | |
 
 ### Return type
 
@@ -532,7 +532,7 @@ No authorization required
 ## `patchOrderUsingPATCH()`
 
 ```php
-patchOrderUsingPATCH($order_id, $update_mask, $order): \Com\Keap\Sdk\Core\Model\RestV2Order
+patchOrderUsingPATCH($order_id, $update_mask, $rest_v2_patch_order_request): \Com\Keap\Sdk\Core\Model\RestV2Order
 ```
 
 Update an Order
@@ -553,10 +553,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
 );
 $order_id = 'order_id_example'; // string | order_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$order = new \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest | order
+$rest_v2_patch_order_request = new \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest(); // \Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest | order
 
 try {
-    $result = $apiInstance->patchOrderUsingPATCH($order_id, $update_mask, $order);
+    $result = $apiInstance->patchOrderUsingPATCH($order_id, $update_mask, $rest_v2_patch_order_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->patchOrderUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -569,7 +569,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **order_id** | **string**| order_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **order** | [**\Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest**](../Model/RestV2PatchOrderRequest.md)| order | [optional] |
+| **rest_v2_patch_order_request** | [**\Com\Keap\Sdk\Core\Model\RestV2PatchOrderRequest**](../Model/RestV2PatchOrderRequest.md)| order | [optional] |
 
 ### Return type
 
@@ -643,7 +643,7 @@ No authorization required
 ## `updateOrderCustomFieldUsingPATCH()`
 
 ```php
-updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateOrderCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update an Order's Custom Field
@@ -663,11 +663,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\OrdersApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateOrderCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateOrderCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->updateOrderCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -679,7 +679,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type

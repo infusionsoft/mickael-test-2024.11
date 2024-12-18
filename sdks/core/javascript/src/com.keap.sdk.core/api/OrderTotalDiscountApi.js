@@ -42,14 +42,14 @@ export default class OrderTotalDiscountApi {
     /**
      * Create an Order Total Discount
      * Creates an Order Total Discount
-     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} createOrderTotalDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount} and HTTP response
      */
-    createOrderTotalDiscountUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createOrderTotalDiscountUsingPOST");
+    createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest) {
+      let postBody = createOrderTotalDiscountRequest;
+      // verify the required parameter 'createOrderTotalDiscountRequest' is set
+      if (createOrderTotalDiscountRequest === undefined || createOrderTotalDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createOrderTotalDiscountRequest' when calling createOrderTotalDiscountUsingPOST");
       }
 
       let pathParams = {
@@ -75,11 +75,11 @@ export default class OrderTotalDiscountApi {
     /**
      * Create an Order Total Discount
      * Creates an Order Total Discount
-     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} createOrderTotalDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount}
      */
-    createOrderTotalDiscountUsingPOST(request) {
-      return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(request)
+    createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest) {
+      return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -242,21 +242,21 @@ export default class OrderTotalDiscountApi {
      * Update an Order Total Discount
      * Updates an Order Total Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} updateOrderTotalDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount} and HTTP response
      */
-    updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, opts) {
+    updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateOrderTotalDiscountRequest;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
         throw new Error("Missing the required parameter 'discountId' when calling updateOrderTotalDiscountUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOrderTotalDiscountUsingPATCH");
+      // verify the required parameter 'updateOrderTotalDiscountRequest' is set
+      if (updateOrderTotalDiscountRequest === undefined || updateOrderTotalDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'updateOrderTotalDiscountRequest' when calling updateOrderTotalDiscountUsingPATCH");
       }
 
       let pathParams = {
@@ -285,13 +285,13 @@ export default class OrderTotalDiscountApi {
      * Update an Order Total Discount
      * Updates an Order Total Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} updateOrderTotalDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount}
      */
-    updateOrderTotalDiscountUsingPATCH(discountId, request, opts) {
-      return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, opts)
+    updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, opts) {
+      return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

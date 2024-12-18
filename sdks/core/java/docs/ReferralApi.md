@@ -11,7 +11,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createReferralUsingPOST
 
-> Referral createReferralUsingPOST(request)
+> Referral createReferralUsingPOST(createReferralRequest)
 
 Create a Referral
 
@@ -33,9 +33,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ReferralApi apiInstance = new ReferralApi(defaultClient);
-        CreateReferralRequest request = new CreateReferralRequest(); // CreateReferralRequest | request
+        CreateReferralRequest createReferralRequest = new CreateReferralRequest(); // CreateReferralRequest | request
         try {
-            Referral result = apiInstance.createReferralUsingPOST(request);
+            Referral result = apiInstance.createReferralUsingPOST(createReferralRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReferralApi#createReferralUsingPOST");
@@ -53,7 +53,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
+| **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
 
 ### Return type
 
@@ -78,7 +78,7 @@ No authorization required
 
 ## createReferralUsingPOSTWithHttpInfo
 
-> ApiResponse<Referral> createReferralUsingPOST createReferralUsingPOSTWithHttpInfo(request)
+> ApiResponse<Referral> createReferralUsingPOST createReferralUsingPOSTWithHttpInfo(createReferralRequest)
 
 Create a Referral
 
@@ -101,9 +101,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ReferralApi apiInstance = new ReferralApi(defaultClient);
-        CreateReferralRequest request = new CreateReferralRequest(); // CreateReferralRequest | request
+        CreateReferralRequest createReferralRequest = new CreateReferralRequest(); // CreateReferralRequest | request
         try {
-            ApiResponse<Referral> response = apiInstance.createReferralUsingPOSTWithHttpInfo(request);
+            ApiResponse<Referral> response = apiInstance.createReferralUsingPOSTWithHttpInfo(createReferralRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -123,7 +123,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
+| **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | |
 
 ### Return type
 

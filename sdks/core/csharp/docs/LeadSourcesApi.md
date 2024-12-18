@@ -9,7 +9,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createleadsourceusingpost"></a>
 # **CreateLeadSourceUsingPOST**
-> LeadSource CreateLeadSourceUsingPOST (CreateLeadSourceRequest? leadsource = null)
+> LeadSource CreateLeadSourceUsingPOST (CreateLeadSourceRequest? createLeadSourceRequest = null)
 
 Create a Lead Source
 
@@ -32,12 +32,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new LeadSourcesApi(config);
-            var leadsource = new CreateLeadSourceRequest?(); // CreateLeadSourceRequest? | leadsource (optional) 
+            var createLeadSourceRequest = new CreateLeadSourceRequest?(); // CreateLeadSourceRequest? | leadsource (optional) 
 
             try
             {
                 // Create a Lead Source
-                LeadSource result = apiInstance.CreateLeadSourceUsingPOST(leadsource);
+                LeadSource result = apiInstance.CreateLeadSourceUsingPOST(createLeadSourceRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -58,7 +58,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a Lead Source
-    ApiResponse<LeadSource> response = apiInstance.CreateLeadSourceUsingPOSTWithHttpInfo(leadsource);
+    ApiResponse<LeadSource> response = apiInstance.CreateLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -75,7 +75,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **leadsource** | [**CreateLeadSourceRequest?**](CreateLeadSourceRequest?.md) | leadsource | [optional]  |
+| **createLeadSourceRequest** | [**CreateLeadSourceRequest?**](CreateLeadSourceRequest?.md) | leadsource | [optional]  |
 
 ### Return type
 

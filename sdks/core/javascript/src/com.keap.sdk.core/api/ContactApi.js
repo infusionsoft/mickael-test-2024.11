@@ -50,14 +50,14 @@ export default class ContactApi {
     /**
      * Create a Contact Link type
      * Creates a new type of Contact Link.
-     * @param {module:com.keap.sdk.core/model/CreateContactLinkTypeRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateContactLinkTypeRequest} createContactLinkTypeRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ContactLinkType} and HTTP response
      */
-    createContactLinkTypeUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createContactLinkTypeUsingPOST");
+    createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest) {
+      let postBody = createContactLinkTypeRequest;
+      // verify the required parameter 'createContactLinkTypeRequest' is set
+      if (createContactLinkTypeRequest === undefined || createContactLinkTypeRequest === null) {
+        throw new Error("Missing the required parameter 'createContactLinkTypeRequest' when calling createContactLinkTypeUsingPOST");
       }
 
       let pathParams = {
@@ -83,11 +83,11 @@ export default class ContactApi {
     /**
      * Create a Contact Link type
      * Creates a new type of Contact Link.
-     * @param {module:com.keap.sdk.core/model/CreateContactLinkTypeRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateContactLinkTypeRequest} createContactLinkTypeRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ContactLinkType}
      */
-    createContactLinkTypeUsingPOST(request) {
-      return this.createContactLinkTypeUsingPOSTWithHttpInfo(request)
+    createContactLinkTypeUsingPOST(createContactLinkTypeRequest) {
+      return this.createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -98,12 +98,12 @@ export default class ContactApi {
      * Create a Contact
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} [contact] contact
+     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} [createPatchContactRequest] contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Contact} and HTTP response
      */
     createContactUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['contact'];
+      let postBody = opts['createPatchContactRequest'];
 
       let pathParams = {
       };
@@ -129,7 +129,7 @@ export default class ContactApi {
      * Create a Contact
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} opts.contact contact
+     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} opts.createPatchContactRequest contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Contact}
      */
     createContactUsingPOST1(opts) {
@@ -554,12 +554,12 @@ export default class ContactApi {
      * @param {String} contactId contact_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} [contact] contact
+     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} [createPatchContactRequest] contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Contact} and HTTP response
      */
     patchContactUsingPATCHWithHttpInfo(contactId, opts) {
       opts = opts || {};
-      let postBody = opts['contact'];
+      let postBody = opts['createPatchContactRequest'];
       // verify the required parameter 'contactId' is set
       if (contactId === undefined || contactId === null) {
         throw new Error("Missing the required parameter 'contactId' when calling patchContactUsingPATCH");
@@ -593,7 +593,7 @@ export default class ContactApi {
      * @param {String} contactId contact_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} opts.contact contact
+     * @param {module:com.keap.sdk.core/model/CreatePatchContactRequest} opts.createPatchContactRequest contact
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Contact}
      */
     patchContactUsingPATCH(contactId, opts) {

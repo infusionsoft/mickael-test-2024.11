@@ -35,7 +35,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createContactLinkTypeUsingPOST
 
-> ContactLinkType createContactLinkTypeUsingPOST(request)
+> ContactLinkType createContactLinkTypeUsingPOST(createContactLinkTypeRequest)
 
 Create a Contact Link type
 
@@ -57,9 +57,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
-        CreateContactLinkTypeRequest request = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
+        CreateContactLinkTypeRequest createContactLinkTypeRequest = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
         try {
-            ContactLinkType result = apiInstance.createContactLinkTypeUsingPOST(request);
+            ContactLinkType result = apiInstance.createContactLinkTypeUsingPOST(createContactLinkTypeRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ContactApi#createContactLinkTypeUsingPOST");
@@ -77,7 +77,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | |
+| **createContactLinkTypeRequest** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | |
 
 ### Return type
 
@@ -102,7 +102,7 @@ No authorization required
 
 ## createContactLinkTypeUsingPOSTWithHttpInfo
 
-> ApiResponse<ContactLinkType> createContactLinkTypeUsingPOST createContactLinkTypeUsingPOSTWithHttpInfo(request)
+> ApiResponse<ContactLinkType> createContactLinkTypeUsingPOST createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest)
 
 Create a Contact Link type
 
@@ -125,9 +125,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
-        CreateContactLinkTypeRequest request = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
+        CreateContactLinkTypeRequest createContactLinkTypeRequest = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
         try {
-            ApiResponse<ContactLinkType> response = apiInstance.createContactLinkTypeUsingPOSTWithHttpInfo(request);
+            ApiResponse<ContactLinkType> response = apiInstance.createContactLinkTypeUsingPOSTWithHttpInfo(createContactLinkTypeRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -147,7 +147,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | |
+| **createContactLinkTypeRequest** | [**CreateContactLinkTypeRequest**](CreateContactLinkTypeRequest.md)| request | |
 
 ### Return type
 
@@ -173,7 +173,7 @@ No authorization required
 
 ## createContactUsingPOST1
 
-> Contact createContactUsingPOST1(contact)
+> Contact createContactUsingPOST1(createPatchContactRequest)
 
 Create a Contact
 
@@ -195,9 +195,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
-        CreatePatchContactRequest contact = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
+        CreatePatchContactRequest createPatchContactRequest = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
         try {
-            Contact result = apiInstance.createContactUsingPOST1(contact);
+            Contact result = apiInstance.createContactUsingPOST1(createPatchContactRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ContactApi#createContactUsingPOST1");
@@ -215,7 +215,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
+| **createPatchContactRequest** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
 
 ### Return type
 
@@ -240,7 +240,7 @@ No authorization required
 
 ## createContactUsingPOST1WithHttpInfo
 
-> ApiResponse<Contact> createContactUsingPOST1 createContactUsingPOST1WithHttpInfo(contact)
+> ApiResponse<Contact> createContactUsingPOST1 createContactUsingPOST1WithHttpInfo(createPatchContactRequest)
 
 Create a Contact
 
@@ -263,9 +263,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
-        CreatePatchContactRequest contact = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
+        CreatePatchContactRequest createPatchContactRequest = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
         try {
-            ApiResponse<Contact> response = apiInstance.createContactUsingPOST1WithHttpInfo(contact);
+            ApiResponse<Contact> response = apiInstance.createContactUsingPOST1WithHttpInfo(createPatchContactRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -285,7 +285,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
+| **createPatchContactRequest** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
 
 ### Return type
 
@@ -1459,7 +1459,7 @@ No authorization required
 
 ## patchContactUsingPATCH
 
-> Contact patchContactUsingPATCH(contactId, updateMask, contact)
+> Contact patchContactUsingPATCH(contactId, updateMask, createPatchContactRequest)
 
 Update a Contact
 
@@ -1483,9 +1483,9 @@ public class Example {
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreatePatchContactRequest contact = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
+        CreatePatchContactRequest createPatchContactRequest = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
         try {
-            Contact result = apiInstance.patchContactUsingPATCH(contactId, updateMask, contact);
+            Contact result = apiInstance.patchContactUsingPATCH(contactId, updateMask, createPatchContactRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ContactApi#patchContactUsingPATCH");
@@ -1505,7 +1505,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: addresses, anniversary, birthday, company, contact_type, custom_fields, email_addresses, family_name, fax_numbers, given_name, job_title, lead_source_id, links, middle_name, notes, opt_in_reason, origin, owner_id, phone_numbers, preferred_locale, preferred_name, prefix, referral_code, social_accounts, source_type, spouse_name, suffix, time_zone, website, utm_parameters] |
-| **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
+| **createPatchContactRequest** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
 
 ### Return type
 
@@ -1531,7 +1531,7 @@ No authorization required
 
 ## patchContactUsingPATCHWithHttpInfo
 
-> ApiResponse<Contact> patchContactUsingPATCH patchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact)
+> ApiResponse<Contact> patchContactUsingPATCH patchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest)
 
 Update a Contact
 
@@ -1556,9 +1556,9 @@ public class Example {
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreatePatchContactRequest contact = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
+        CreatePatchContactRequest createPatchContactRequest = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
         try {
-            ApiResponse<Contact> response = apiInstance.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, contact);
+            ApiResponse<Contact> response = apiInstance.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1580,7 +1580,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: addresses, anniversary, birthday, company, contact_type, custom_fields, email_addresses, family_name, fax_numbers, given_name, job_title, lead_source_id, links, middle_name, notes, opt_in_reason, origin, owner_id, phone_numbers, preferred_locale, preferred_name, prefix, referral_code, social_accounts, source_type, spouse_name, suffix, time_zone, website, utm_parameters] |
-| **contact** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
+| **createPatchContactRequest** | [**CreatePatchContactRequest**](CreatePatchContactRequest.md)| contact | [optional] |
 
 ### Return type
 

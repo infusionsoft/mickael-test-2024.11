@@ -49,14 +49,14 @@ export default class NoteApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Note object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createNoteCustomFieldUsingPOST1WithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createNoteCustomFieldUsingPOST1");
+    createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createNoteCustomFieldUsingPOST1");
       }
 
       let pathParams = {
@@ -82,11 +82,11 @@ export default class NoteApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Note object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createNoteCustomFieldUsingPOST1(customField) {
-      return this.createNoteCustomFieldUsingPOST1WithHttpInfo(customField)
+    createNoteCustomFieldUsingPOST1(createCustomFieldRequest) {
+      return this.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -97,18 +97,18 @@ export default class NoteApi {
      * Create a Note
      * Creates a new Note.
      * @param {String} contactId contact_id
-     * @param {module:com.keap.sdk.core/model/CreateNoteRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateNoteRequest} createNoteRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Note} and HTTP response
      */
-    createNoteUsingPOST1WithHttpInfo(contactId, request) {
-      let postBody = request;
+    createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest) {
+      let postBody = createNoteRequest;
       // verify the required parameter 'contactId' is set
       if (contactId === undefined || contactId === null) {
         throw new Error("Missing the required parameter 'contactId' when calling createNoteUsingPOST1");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createNoteUsingPOST1");
+      // verify the required parameter 'createNoteRequest' is set
+      if (createNoteRequest === undefined || createNoteRequest === null) {
+        throw new Error("Missing the required parameter 'createNoteRequest' when calling createNoteUsingPOST1");
       }
 
       let pathParams = {
@@ -136,11 +136,11 @@ export default class NoteApi {
      * Create a Note
      * Creates a new Note.
      * @param {String} contactId contact_id
-     * @param {module:com.keap.sdk.core/model/CreateNoteRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateNoteRequest} createNoteRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Note}
      */
-    createNoteUsingPOST1(contactId, request) {
-      return this.createNoteUsingPOST1WithHttpInfo(contactId, request)
+    createNoteUsingPOST1(contactId, createNoteRequest) {
+      return this.createNoteUsingPOST1WithHttpInfo(contactId, createNoteRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -488,21 +488,21 @@ export default class NoteApi {
      * Update a Custom Field
      * Updates a custom field of the specified type and options to the Note object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateNotesCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateNotesCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateNotesCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -531,13 +531,13 @@ export default class NoteApi {
      * Update a Custom Field
      * Updates a custom field of the specified type and options to the Note object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateNotesCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

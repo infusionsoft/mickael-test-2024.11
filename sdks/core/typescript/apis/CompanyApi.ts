@@ -21,9 +21,9 @@ export class CompanyApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Company.`country_code` is required if `region` is specified.
      * Create a Company
-     * @param company company
+     * @param createCompanyRequest company
      */
-    public async createCompanyUsingPOST1(company?: CreateCompanyRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createCompanyUsingPOST1(createCompanyRequest?: CreateCompanyRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -41,7 +41,7 @@ export class CompanyApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(company, "CreateCompanyRequest", ""),
+            ObjectSerializer.serialize(createCompanyRequest, "CreateCompanyRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -196,9 +196,9 @@ export class CompanyApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Company
      * @param companyId company_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param company company
+     * @param patchCompanyRequest company
      */
-    public async patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, company?: PatchCompanyRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'companyId' is not null or undefined
@@ -232,7 +232,7 @@ export class CompanyApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(company, "PatchCompanyRequest", ""),
+            ObjectSerializer.serialize(patchCompanyRequest, "PatchCompanyRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

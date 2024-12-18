@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **createPaymentMethodConfigUsingPOST**
-> PaymentMethodConfig createPaymentMethodConfigUsingPOST(request)
+> PaymentMethodConfig createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest)
 
 Creates configuration details for rendering payment method components
 
@@ -24,7 +24,7 @@ const apiInstance = new PaymentMethodConfigApi(configuration);
 
 const request: PaymentMethodConfigApiCreatePaymentMethodConfigUsingPOSTRequest = {
     // request
-  request: {
+  createPaymentMethodConfigRequest: {
     contactId: "contactId_example",
   },
 };
@@ -38,7 +38,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreatePaymentMethodConfigRequest**| request |
+ **createPaymentMethodConfigRequest** | **CreatePaymentMethodConfigRequest**| request |
 
 
 ### Return type

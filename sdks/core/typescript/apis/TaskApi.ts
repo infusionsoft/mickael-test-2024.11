@@ -27,14 +27,14 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Task object.
      * Create a Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createTaskCustomFieldUsingPOST1(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createTaskCustomFieldUsingPOST1(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("TaskApi", "createTaskCustomFieldUsingPOST1", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("TaskApi", "createTaskCustomFieldUsingPOST1", "createCustomFieldRequest");
         }
 
 
@@ -52,7 +52,7 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -69,9 +69,9 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * Create a Task
-     * @param task task
+     * @param createTaskRequest task
      */
-    public async createTaskUsingPOST1(task?: CreateTaskRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createTaskUsingPOST1(createTaskRequest?: CreateTaskRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -89,7 +89,7 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(task, "CreateTaskRequest", ""),
+            ObjectSerializer.serialize(createTaskRequest, "CreateTaskRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -270,9 +270,9 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Task
      * @param taskId task_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param task task
+     * @param createPatchTaskRequest task
      */
-    public async patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, task?: CreatePatchTaskRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchTaskUsingPATCH(taskId: string, updateMask?: Array<string>, createPatchTaskRequest?: CreatePatchTaskRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'taskId' is not null or undefined
@@ -306,7 +306,7 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(task, "CreatePatchTaskRequest", ""),
+            ObjectSerializer.serialize(createPatchTaskRequest, "CreatePatchTaskRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -348,10 +348,10 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Task object.
      * Update a Task\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateTaskCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateTaskCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -360,9 +360,9 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("TaskApi", "updateTaskCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("TaskApi", "updateTaskCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -390,7 +390,7 @@ export class TaskApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

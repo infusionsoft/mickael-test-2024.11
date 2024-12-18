@@ -19,7 +19,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createopportunitycustomfieldsusingpost"></a>
 # **CreateOpportunityCustomFieldsUsingPOST**
-> CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateOpportunityCustomFieldsUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create an Opportunity Custom Field
 
@@ -42,12 +42,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OpportunityApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create an Opportunity Custom Field
-                CustomFieldMetaData result = apiInstance.CreateOpportunityCustomFieldsUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateOpportunityCustomFieldsUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -68,7 +68,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Opportunity Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -85,7 +85,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -112,7 +112,7 @@ No authorization required
 
 <a id="createopportunitystageusingpost"></a>
 # **CreateOpportunityStageUsingPOST**
-> RestOpportunityStage CreateOpportunityStageUsingPOST (CreateOpportunityStageRequest? opportunityStage = null)
+> RestOpportunityStage CreateOpportunityStageUsingPOST (CreateOpportunityStageRequest? createOpportunityStageRequest = null)
 
 Create an Opportunity Stage
 
@@ -135,12 +135,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OpportunityApi(config);
-            var opportunityStage = new CreateOpportunityStageRequest?(); // CreateOpportunityStageRequest? | opportunity (optional) 
+            var createOpportunityStageRequest = new CreateOpportunityStageRequest?(); // CreateOpportunityStageRequest? | opportunity (optional) 
 
             try
             {
                 // Create an Opportunity Stage
-                RestOpportunityStage result = apiInstance.CreateOpportunityStageUsingPOST(opportunityStage);
+                RestOpportunityStage result = apiInstance.CreateOpportunityStageUsingPOST(createOpportunityStageRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Opportunity Stage
-    ApiResponse<RestOpportunityStage> response = apiInstance.CreateOpportunityStageUsingPOSTWithHttpInfo(opportunityStage);
+    ApiResponse<RestOpportunityStage> response = apiInstance.CreateOpportunityStageUsingPOSTWithHttpInfo(createOpportunityStageRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -178,7 +178,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **opportunityStage** | [**CreateOpportunityStageRequest?**](CreateOpportunityStageRequest?.md) | opportunity | [optional]  |
+| **createOpportunityStageRequest** | [**CreateOpportunityStageRequest?**](CreateOpportunityStageRequest?.md) | opportunity | [optional]  |
 
 ### Return type
 
@@ -205,7 +205,7 @@ No authorization required
 
 <a id="createopportunityusingpost1"></a>
 # **CreateOpportunityUsingPOST1**
-> RestV2Opportunity CreateOpportunityUsingPOST1 (CreateOpportunityRequest? opportunity = null)
+> RestV2Opportunity CreateOpportunityUsingPOST1 (CreateOpportunityRequest? createOpportunityRequest = null)
 
 Create an Opportunity
 
@@ -228,12 +228,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OpportunityApi(config);
-            var opportunity = new CreateOpportunityRequest?(); // CreateOpportunityRequest? | opportunity (optional) 
+            var createOpportunityRequest = new CreateOpportunityRequest?(); // CreateOpportunityRequest? | opportunity (optional) 
 
             try
             {
                 // Create an Opportunity
-                RestV2Opportunity result = apiInstance.CreateOpportunityUsingPOST1(opportunity);
+                RestV2Opportunity result = apiInstance.CreateOpportunityUsingPOST1(createOpportunityRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -254,7 +254,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.CreateOpportunityUsingPOST1WithHttpInfo(opportunity);
+    ApiResponse<RestV2Opportunity> response = apiInstance.CreateOpportunityUsingPOST1WithHttpInfo(createOpportunityRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -271,7 +271,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **opportunity** | [**CreateOpportunityRequest?**](CreateOpportunityRequest?.md) | opportunity | [optional]  |
+| **createOpportunityRequest** | [**CreateOpportunityRequest?**](CreateOpportunityRequest?.md) | opportunity | [optional]  |
 
 ### Return type
 
@@ -868,7 +868,7 @@ No authorization required
 
 <a id="updateopportunitycustomfieldusingpatch"></a>
 # **UpdateOpportunityCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateOpportunityCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Opportunity's Custom Field
 
@@ -892,13 +892,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OpportunityApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Opportunity's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateOpportunityCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -919,7 +919,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Opportunity's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -937,7 +937,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -966,7 +966,7 @@ No authorization required
 
 <a id="updateopportunitystageusingpatch"></a>
 # **UpdateOpportunityStageUsingPATCH**
-> RestOpportunityStage UpdateOpportunityStageUsingPATCH (string stageId, UpdateOpportunityStageRequest request, List<string>? updateMask = null)
+> RestOpportunityStage UpdateOpportunityStageUsingPATCH (string stageId, UpdateOpportunityStageRequest updateOpportunityStageRequest, List<string>? updateMask = null)
 
 Update an Opportunity Stage
 
@@ -990,13 +990,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OpportunityApi(config);
             var stageId = "stageId_example";  // string | stage_id
-            var request = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
+            var updateOpportunityStageRequest = new UpdateOpportunityStageRequest(); // UpdateOpportunityStageRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an Opportunity Stage
-                RestOpportunityStage result = apiInstance.UpdateOpportunityStageUsingPATCH(stageId, request, updateMask);
+                RestOpportunityStage result = apiInstance.UpdateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1017,7 +1017,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Opportunity Stage
-    ApiResponse<RestOpportunityStage> response = apiInstance.UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, updateMask);
+    ApiResponse<RestOpportunityStage> response = apiInstance.UpdateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1035,7 +1035,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **stageId** | **string** | stage_id |  |
-| **request** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md) | request |  |
+| **updateOpportunityStageRequest** | [**UpdateOpportunityStageRequest**](UpdateOpportunityStageRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -1064,7 +1064,7 @@ No authorization required
 
 <a id="updateopportunityusingpatch"></a>
 # **UpdateOpportunityUsingPATCH**
-> RestV2Opportunity UpdateOpportunityUsingPATCH (string opportunityId, PatchOpportunityRequest request, List<string>? updateMask = null)
+> RestV2Opportunity UpdateOpportunityUsingPATCH (string opportunityId, PatchOpportunityRequest patchOpportunityRequest, List<string>? updateMask = null)
 
 Update an opportunity
 
@@ -1088,13 +1088,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OpportunityApi(config);
             var opportunityId = "opportunityId_example";  // string | opportunity_id
-            var request = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
+            var patchOpportunityRequest = new PatchOpportunityRequest(); // PatchOpportunityRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an opportunity
-                RestV2Opportunity result = apiInstance.UpdateOpportunityUsingPATCH(opportunityId, request, updateMask);
+                RestV2Opportunity result = apiInstance.UpdateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1115,7 +1115,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an opportunity
-    ApiResponse<RestV2Opportunity> response = apiInstance.UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, updateMask);
+    ApiResponse<RestV2Opportunity> response = apiInstance.UpdateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1133,7 +1133,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **opportunityId** | **string** | opportunity_id |  |
-| **request** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md) | request |  |
+| **patchOpportunityRequest** | [**PatchOpportunityRequest**](PatchOpportunityRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type

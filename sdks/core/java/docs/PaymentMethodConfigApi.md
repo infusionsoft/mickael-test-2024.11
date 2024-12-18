@@ -11,7 +11,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createPaymentMethodConfigUsingPOST
 
-> PaymentMethodConfig createPaymentMethodConfigUsingPOST(request)
+> PaymentMethodConfig createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest)
 
 Create Payment Method Configuration
 
@@ -33,9 +33,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PaymentMethodConfigApi apiInstance = new PaymentMethodConfigApi(defaultClient);
-        CreatePaymentMethodConfigRequest request = new CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
+        CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest = new CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
         try {
-            PaymentMethodConfig result = apiInstance.createPaymentMethodConfigUsingPOST(request);
+            PaymentMethodConfig result = apiInstance.createPaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PaymentMethodConfigApi#createPaymentMethodConfigUsingPOST");
@@ -53,7 +53,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | |
+| **createPaymentMethodConfigRequest** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | |
 
 ### Return type
 
@@ -78,7 +78,7 @@ No authorization required
 
 ## createPaymentMethodConfigUsingPOSTWithHttpInfo
 
-> ApiResponse<PaymentMethodConfig> createPaymentMethodConfigUsingPOST createPaymentMethodConfigUsingPOSTWithHttpInfo(request)
+> ApiResponse<PaymentMethodConfig> createPaymentMethodConfigUsingPOST createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest)
 
 Create Payment Method Configuration
 
@@ -101,9 +101,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         PaymentMethodConfigApi apiInstance = new PaymentMethodConfigApi(defaultClient);
-        CreatePaymentMethodConfigRequest request = new CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
+        CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest = new CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
         try {
-            ApiResponse<PaymentMethodConfig> response = apiInstance.createPaymentMethodConfigUsingPOSTWithHttpInfo(request);
+            ApiResponse<PaymentMethodConfig> response = apiInstance.createPaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -123,7 +123,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | |
+| **createPaymentMethodConfigRequest** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md)| request | |
 
 ### Return type
 

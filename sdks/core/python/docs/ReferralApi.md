@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_referral_using_post**
-> Referral create_referral_using_post(request)
+> Referral create_referral_using_post(create_referral_request)
 
 Create a Referral
 
@@ -34,11 +34,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.ReferralApi(api_client)
-    request = keap_sdk_core_client.CreateReferralRequest() # CreateReferralRequest | request
+    create_referral_request = keap_sdk_core_client.CreateReferralRequest() # CreateReferralRequest | request
 
     try:
         # Create a Referral
-        api_response = api_instance.create_referral_using_post(request)
+        api_response = api_instance.create_referral_using_post(create_referral_request)
         print("The response of ReferralApi->create_referral_using_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -51,7 +51,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
+ **create_referral_request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
 
 ### Return type
 

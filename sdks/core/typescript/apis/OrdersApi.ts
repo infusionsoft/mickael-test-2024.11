@@ -30,14 +30,14 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Order object.
      * Create an Order\'s Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createOrderCustomFieldUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOrderCustomFieldUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("OrdersApi", "createOrderCustomFieldUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("OrdersApi", "createOrderCustomFieldUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -55,7 +55,7 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -122,14 +122,14 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Create a one time Order with Order items.
      * Create an Order
-     * @param createOrderRequest createOrderRequest
+     * @param restCreateOrderRequest createOrderRequest
      */
-    public async createOrderUsingPOST1(createOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOrderUsingPOST1(restCreateOrderRequest: RestCreateOrderRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'createOrderRequest' is not null or undefined
-        if (createOrderRequest === null || createOrderRequest === undefined) {
-            throw new RequiredError("OrdersApi", "createOrderUsingPOST1", "createOrderRequest");
+        // verify required parameter 'restCreateOrderRequest' is not null or undefined
+        if (restCreateOrderRequest === null || restCreateOrderRequest === undefined) {
+            throw new RequiredError("OrdersApi", "createOrderUsingPOST1", "restCreateOrderRequest");
         }
 
 
@@ -147,7 +147,7 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(createOrderRequest, "RestCreateOrderRequest", ""),
+            ObjectSerializer.serialize(restCreateOrderRequest, "RestCreateOrderRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -424,9 +424,9 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
      * Update an Order
      * @param orderId order_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param order order
+     * @param restV2PatchOrderRequest order
      */
-    public async patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, order?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RequestContext> {
+    public async patchOrderUsingPATCH(orderId: string, updateMask?: Array<string>, restV2PatchOrderRequest?: RestV2PatchOrderRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'orderId' is not null or undefined
@@ -460,7 +460,7 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(order, "RestV2PatchOrderRequest", ""),
+            ObjectSerializer.serialize(restV2PatchOrderRequest, "RestV2PatchOrderRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -502,10 +502,10 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Order object.
      * Update an Order\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOrderCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOrderCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -514,9 +514,9 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("OrdersApi", "updateOrderCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("OrdersApi", "updateOrderCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -544,7 +544,7 @@ export class OrdersApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

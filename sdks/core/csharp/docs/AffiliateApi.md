@@ -127,7 +127,7 @@ No authorization required
 
 <a id="addaffiliateusingpost"></a>
 # **AddAffiliateUsingPOST**
-> RestAffiliate AddAffiliateUsingPOST (CreateAffiliateRequest? insertAffiliate = null)
+> RestAffiliate AddAffiliateUsingPOST (CreateAffiliateRequest? createAffiliateRequest = null)
 
 Create an Affiliate
 
@@ -150,12 +150,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
-            var insertAffiliate = new CreateAffiliateRequest?(); // CreateAffiliateRequest? | Affiliate request to insert (optional) 
+            var createAffiliateRequest = new CreateAffiliateRequest?(); // CreateAffiliateRequest? | Affiliate request to insert (optional) 
 
             try
             {
                 // Create an Affiliate
-                RestAffiliate result = apiInstance.AddAffiliateUsingPOST(insertAffiliate);
+                RestAffiliate result = apiInstance.AddAffiliateUsingPOST(createAffiliateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -176,7 +176,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate
-    ApiResponse<RestAffiliate> response = apiInstance.AddAffiliateUsingPOSTWithHttpInfo(insertAffiliate);
+    ApiResponse<RestAffiliate> response = apiInstance.AddAffiliateUsingPOSTWithHttpInfo(createAffiliateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -193,7 +193,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **insertAffiliate** | [**CreateAffiliateRequest?**](CreateAffiliateRequest?.md) | Affiliate request to insert | [optional]  |
+| **createAffiliateRequest** | [**CreateAffiliateRequest?**](CreateAffiliateRequest?.md) | Affiliate request to insert | [optional]  |
 
 ### Return type
 
@@ -220,7 +220,7 @@ No authorization required
 
 <a id="addcommissionprogramusingpost"></a>
 # **AddCommissionProgramUsingPOST**
-> AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST (CreateCommissionProgramRequest? insertCommissionProgram = null)
+> AffiliateCommissionProgramResponse AddCommissionProgramUsingPOST (CreateCommissionProgramRequest? createCommissionProgramRequest = null)
 
 Create an Affiliate Commission Program
 
@@ -243,12 +243,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
-            var insertCommissionProgram = new CreateCommissionProgramRequest?(); // CreateCommissionProgramRequest? | Commission Program to insert (optional) 
+            var createCommissionProgramRequest = new CreateCommissionProgramRequest?(); // CreateCommissionProgramRequest? | Commission Program to insert (optional) 
 
             try
             {
                 // Create an Affiliate Commission Program
-                AffiliateCommissionProgramResponse result = apiInstance.AddCommissionProgramUsingPOST(insertCommissionProgram);
+                AffiliateCommissionProgramResponse result = apiInstance.AddCommissionProgramUsingPOST(createCommissionProgramRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -269,7 +269,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate Commission Program
-    ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.AddCommissionProgramUsingPOSTWithHttpInfo(insertCommissionProgram);
+    ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.AddCommissionProgramUsingPOSTWithHttpInfo(createCommissionProgramRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -286,7 +286,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **insertCommissionProgram** | [**CreateCommissionProgramRequest?**](CreateCommissionProgramRequest?.md) | Commission Program to insert | [optional]  |
+| **createCommissionProgramRequest** | [**CreateCommissionProgramRequest?**](CreateCommissionProgramRequest?.md) | Commission Program to insert | [optional]  |
 
 ### Return type
 
@@ -313,7 +313,7 @@ No authorization required
 
 <a id="assignproductcommissionprogramusingpost"></a>
 # **AssignProductCommissionProgramUsingPOST**
-> ProductCommissionProgram AssignProductCommissionProgramUsingPOST (string commissionProgramId, CreateProductCommissionProgramRequest? productCommissionProgram = null)
+> ProductCommissionProgram AssignProductCommissionProgramUsingPOST (string commissionProgramId, CreateProductCommissionProgramRequest? createProductCommissionProgramRequest = null)
 
 Assign a Product Commission Program
 
@@ -337,12 +337,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
             var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
-            var productCommissionProgram = new CreateProductCommissionProgramRequest?(); // CreateProductCommissionProgramRequest? | Product Commission Program (optional) 
+            var createProductCommissionProgramRequest = new CreateProductCommissionProgramRequest?(); // CreateProductCommissionProgramRequest? | Product Commission Program (optional) 
 
             try
             {
                 // Assign a Product Commission Program
-                ProductCommissionProgram result = apiInstance.AssignProductCommissionProgramUsingPOST(commissionProgramId, productCommissionProgram);
+                ProductCommissionProgram result = apiInstance.AssignProductCommissionProgramUsingPOST(commissionProgramId, createProductCommissionProgramRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -363,7 +363,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Assign a Product Commission Program
-    ApiResponse<ProductCommissionProgram> response = apiInstance.AssignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, productCommissionProgram);
+    ApiResponse<ProductCommissionProgram> response = apiInstance.AssignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createProductCommissionProgramRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -381,7 +381,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **commissionProgramId** | **string** | commission_program_id |  |
-| **productCommissionProgram** | [**CreateProductCommissionProgramRequest?**](CreateProductCommissionProgramRequest?.md) | Product Commission Program | [optional]  |
+| **createProductCommissionProgramRequest** | [**CreateProductCommissionProgramRequest?**](CreateProductCommissionProgramRequest?.md) | Product Commission Program | [optional]  |
 
 ### Return type
 
@@ -408,7 +408,7 @@ No authorization required
 
 <a id="assignsubscriptioncommissionprogramusingpost"></a>
 # **AssignSubscriptionCommissionProgramUsingPOST**
-> SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST (string commissionProgramId, CreateSubscriptionCommissionProgramRequest? subscriptionCommissionProgram = null)
+> SubscriptionCommissionProgram AssignSubscriptionCommissionProgramUsingPOST (string commissionProgramId, CreateSubscriptionCommissionProgramRequest? createSubscriptionCommissionProgramRequest = null)
 
 Assign a Subscription Commission Program
 
@@ -432,12 +432,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
             var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
-            var subscriptionCommissionProgram = new CreateSubscriptionCommissionProgramRequest?(); // CreateSubscriptionCommissionProgramRequest? | Subscription Commission Program (optional) 
+            var createSubscriptionCommissionProgramRequest = new CreateSubscriptionCommissionProgramRequest?(); // CreateSubscriptionCommissionProgramRequest? | Subscription Commission Program (optional) 
 
             try
             {
                 // Assign a Subscription Commission Program
-                SubscriptionCommissionProgram result = apiInstance.AssignSubscriptionCommissionProgramUsingPOST(commissionProgramId, subscriptionCommissionProgram);
+                SubscriptionCommissionProgram result = apiInstance.AssignSubscriptionCommissionProgramUsingPOST(commissionProgramId, createSubscriptionCommissionProgramRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -458,7 +458,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Assign a Subscription Commission Program
-    ApiResponse<SubscriptionCommissionProgram> response = apiInstance.AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, subscriptionCommissionProgram);
+    ApiResponse<SubscriptionCommissionProgram> response = apiInstance.AssignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, createSubscriptionCommissionProgramRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -476,7 +476,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **commissionProgramId** | **string** | commission_program_id |  |
-| **subscriptionCommissionProgram** | [**CreateSubscriptionCommissionProgramRequest?**](CreateSubscriptionCommissionProgramRequest?.md) | Subscription Commission Program | [optional]  |
+| **createSubscriptionCommissionProgramRequest** | [**CreateSubscriptionCommissionProgramRequest?**](CreateSubscriptionCommissionProgramRequest?.md) | Subscription Commission Program | [optional]  |
 
 ### Return type
 
@@ -503,7 +503,7 @@ No authorization required
 
 <a id="createaffiliatecustomfieldusingpost"></a>
 # **CreateAffiliateCustomFieldUsingPOST**
-> CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateAffiliateCustomFieldUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create an Affiliate Custom Field
 
@@ -526,12 +526,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create an Affiliate Custom Field
-                CustomFieldMetaData result = apiInstance.CreateAffiliateCustomFieldUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateAffiliateCustomFieldUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -552,7 +552,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -569,7 +569,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -691,7 +691,7 @@ No authorization required
 
 <a id="createredirectlinkusingpost"></a>
 # **CreateRedirectLinkUsingPOST**
-> AffiliateLink CreateRedirectLinkUsingPOST (CreateOrPatchAffiliateLinkRequest request)
+> AffiliateLink CreateRedirectLinkUsingPOST (CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest)
 
 Create an Affiliate Link
 
@@ -714,12 +714,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
-            var request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+            var createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
 
             try
             {
                 // Create an Affiliate Link
-                AffiliateLink result = apiInstance.CreateRedirectLinkUsingPOST(request);
+                AffiliateLink result = apiInstance.CreateRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -740,7 +740,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Affiliate Link
-    ApiResponse<AffiliateLink> response = apiInstance.CreateRedirectLinkUsingPOSTWithHttpInfo(request);
+    ApiResponse<AffiliateLink> response = apiInstance.CreateRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -757,7 +757,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
 
 ### Return type
 
@@ -2313,7 +2313,7 @@ No authorization required
 
 <a id="removeaffiliatefromprogramusingpost"></a>
 # **RemoveAffiliateFromProgramUsingPOST**
-> void RemoveAffiliateFromProgramUsingPOST (string id, AffiliateRemoveFromProgramRequest removeFromProgramRequest)
+> void RemoveAffiliateFromProgramUsingPOST (string id, AffiliateRemoveFromProgramRequest affiliateRemoveFromProgramRequest)
 
 Remove an Affiliate from a Commission Program
 
@@ -2337,12 +2337,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
             var id = "id_example";  // string | id
-            var removeFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+            var affiliateRemoveFromProgramRequest = new AffiliateRemoveFromProgramRequest(); // AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 
             try
             {
                 // Remove an Affiliate from a Commission Program
-                apiInstance.RemoveAffiliateFromProgramUsingPOST(id, removeFromProgramRequest);
+                apiInstance.RemoveAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest);
             }
             catch (ApiException  e)
             {
@@ -2362,7 +2362,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Remove an Affiliate from a Commission Program
-    apiInstance.RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest);
+    apiInstance.RemoveAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest);
 }
 catch (ApiException e)
 {
@@ -2377,7 +2377,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | id |  |
-| **removeFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md) | removeFromProgramRequest |  |
+| **affiliateRemoveFromProgramRequest** | [**AffiliateRemoveFromProgramRequest**](AffiliateRemoveFromProgramRequest.md) | removeFromProgramRequest |  |
 
 ### Return type
 
@@ -2495,7 +2495,7 @@ No authorization required
 
 <a id="updateaffiliatecustomfieldusingpatch"></a>
 # **UpdateAffiliateCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateAffiliateCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update a Custom Field
 
@@ -2519,13 +2519,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update a Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateAffiliateCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2546,7 +2546,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2564,7 +2564,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
@@ -2593,7 +2593,7 @@ No authorization required
 
 <a id="updateaffiliateusingpatch"></a>
 # **UpdateAffiliateUsingPATCH**
-> RestAffiliate UpdateAffiliateUsingPATCH (string id, PatchAffiliateRequest? patchAffiliate = null)
+> RestAffiliate UpdateAffiliateUsingPATCH (string id, PatchAffiliateRequest? patchAffiliateRequest = null)
 
 Update an Affiliate
 
@@ -2617,12 +2617,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
             var id = "id_example";  // string | id
-            var patchAffiliate = new PatchAffiliateRequest?(); // PatchAffiliateRequest? | Affiliate request to patch (optional) 
+            var patchAffiliateRequest = new PatchAffiliateRequest?(); // PatchAffiliateRequest? | Affiliate request to patch (optional) 
 
             try
             {
                 // Update an Affiliate
-                RestAffiliate result = apiInstance.UpdateAffiliateUsingPATCH(id, patchAffiliate);
+                RestAffiliate result = apiInstance.UpdateAffiliateUsingPATCH(id, patchAffiliateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2643,7 +2643,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Affiliate
-    ApiResponse<RestAffiliate> response = apiInstance.UpdateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliate);
+    ApiResponse<RestAffiliate> response = apiInstance.UpdateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2661,7 +2661,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | id |  |
-| **patchAffiliate** | [**PatchAffiliateRequest?**](PatchAffiliateRequest?.md) | Affiliate request to patch | [optional]  |
+| **patchAffiliateRequest** | [**PatchAffiliateRequest?**](PatchAffiliateRequest?.md) | Affiliate request to patch | [optional]  |
 
 ### Return type
 
@@ -2689,7 +2689,7 @@ No authorization required
 
 <a id="updateredirectlinkusingpatch"></a>
 # **UpdateRedirectLinkUsingPATCH**
-> AffiliateLink UpdateRedirectLinkUsingPATCH (string redirectId, CreateOrPatchAffiliateLinkRequest request)
+> AffiliateLink UpdateRedirectLinkUsingPATCH (string redirectId, CreateOrPatchAffiliateLinkRequest createOrPatchAffiliateLinkRequest)
 
 Update an Affiliate Link
 
@@ -2713,12 +2713,12 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new AffiliateApi(config);
             var redirectId = "redirectId_example";  // string | redirect_id
-            var request = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
+            var createOrPatchAffiliateLinkRequest = new CreateOrPatchAffiliateLinkRequest(); // CreateOrPatchAffiliateLinkRequest | request
 
             try
             {
                 // Update an Affiliate Link
-                AffiliateLink result = apiInstance.UpdateRedirectLinkUsingPATCH(redirectId, request);
+                AffiliateLink result = apiInstance.UpdateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2739,7 +2739,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Affiliate Link
-    ApiResponse<AffiliateLink> response = apiInstance.UpdateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request);
+    ApiResponse<AffiliateLink> response = apiInstance.UpdateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2757,7 +2757,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **redirectId** | **string** | redirect_id |  |
-| **request** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
+| **createOrPatchAffiliateLinkRequest** | [**CreateOrPatchAffiliateLinkRequest**](CreateOrPatchAffiliateLinkRequest.md) | request |  |
 
 ### Return type
 

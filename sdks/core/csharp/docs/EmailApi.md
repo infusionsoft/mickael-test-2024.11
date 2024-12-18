@@ -13,7 +13,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createemailusingpost1"></a>
 # **CreateEmailUsingPOST1**
-> EmailSentWithContent CreateEmailUsingPOST1 (CreateEmailSentRequest emailWithContent)
+> EmailSentWithContent CreateEmailUsingPOST1 (CreateEmailSentRequest createEmailSentRequest)
 
 Create an Email Record
 
@@ -36,12 +36,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new EmailApi(config);
-            var emailWithContent = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
+            var createEmailSentRequest = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
 
             try
             {
                 // Create an Email Record
-                EmailSentWithContent result = apiInstance.CreateEmailUsingPOST1(emailWithContent);
+                EmailSentWithContent result = apiInstance.CreateEmailUsingPOST1(createEmailSentRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Email Record
-    ApiResponse<EmailSentWithContent> response = apiInstance.CreateEmailUsingPOST1WithHttpInfo(emailWithContent);
+    ApiResponse<EmailSentWithContent> response = apiInstance.CreateEmailUsingPOST1WithHttpInfo(createEmailSentRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,7 +79,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **emailWithContent** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md) | emailWithContent |  |
+| **createEmailSentRequest** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md) | emailWithContent |  |
 
 ### Return type
 

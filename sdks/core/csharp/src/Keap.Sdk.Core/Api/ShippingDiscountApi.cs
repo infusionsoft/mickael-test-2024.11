@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Shipping Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ShippingDiscount</returns>
-        ShippingDiscount CreateDiscountUsingPOST1(CreateShippingDiscountRequest request, int operationIndex = 0);
+        ShippingDiscount CreateDiscountUsingPOST1(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a Shipping Discount
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Shipping Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ShippingDiscount</returns>
-        ApiResponse<ShippingDiscount> CreateDiscountUsingPOST1WithHttpInfo(CreateShippingDiscountRequest request, int operationIndex = 0);
+        ApiResponse<ShippingDiscount> CreateDiscountUsingPOST1WithHttpInfo(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0);
         /// <summary>
         /// Delete a Shipping Discount
         /// </summary>
@@ -136,11 +136,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ShippingDiscount</returns>
-        ShippingDiscount UpdateDiscountUsingPATCH1(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ShippingDiscount UpdateDiscountUsingPATCH1(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Shipping Discount
@@ -150,11 +150,11 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ShippingDiscount</returns>
-        ApiResponse<ShippingDiscount> UpdateDiscountUsingPATCH1WithHttpInfo(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
+        ApiResponse<ShippingDiscount> UpdateDiscountUsingPATCH1WithHttpInfo(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -171,11 +171,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Shipping Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ShippingDiscount</returns>
-        System.Threading.Tasks.Task<ShippingDiscount> CreateDiscountUsingPOST1Async(CreateShippingDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ShippingDiscount> CreateDiscountUsingPOST1Async(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Shipping Discount
@@ -184,11 +184,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a Shipping Discount
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ShippingDiscount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShippingDiscount>> CreateDiscountUsingPOST1WithHttpInfoAsync(CreateShippingDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ShippingDiscount>> CreateDiscountUsingPOST1WithHttpInfoAsync(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Shipping Discount
         /// </summary>
@@ -280,12 +280,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ShippingDiscount</returns>
-        System.Threading.Tasks.Task<ShippingDiscount> UpdateDiscountUsingPATCH1Async(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ShippingDiscount> UpdateDiscountUsingPATCH1Async(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Shipping Discount
@@ -295,12 +295,12 @@ namespace Keap.Sdk.Core.Api
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ShippingDiscount)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShippingDiscount>> UpdateDiscountUsingPATCH1WithHttpInfoAsync(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ShippingDiscount>> UpdateDiscountUsingPATCH1WithHttpInfoAsync(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -425,12 +425,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Shipping Discount Creates a Shipping Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ShippingDiscount</returns>
-        public ShippingDiscount CreateDiscountUsingPOST1(CreateShippingDiscountRequest request, int operationIndex = 0)
+        public ShippingDiscount CreateDiscountUsingPOST1(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = CreateDiscountUsingPOST1WithHttpInfo(request);
+            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = CreateDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest);
             return localVarResponse.Data;
         }
 
@@ -438,15 +438,15 @@ namespace Keap.Sdk.Core.Api
         /// Create a Shipping Discount Creates a Shipping Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ShippingDiscount</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> CreateDiscountUsingPOST1WithHttpInfo(CreateShippingDiscountRequest request, int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> CreateDiscountUsingPOST1WithHttpInfo(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createShippingDiscountRequest' is set
+            if (createShippingDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ShippingDiscountApi->CreateDiscountUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createShippingDiscountRequest' when calling ShippingDiscountApi->CreateDiscountUsingPOST1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -472,7 +472,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createShippingDiscountRequest;
 
             localVarRequestOptions.Operation = "ShippingDiscountApi.CreateDiscountUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -496,13 +496,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Shipping Discount Creates a Shipping Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ShippingDiscount</returns>
-        public async System.Threading.Tasks.Task<ShippingDiscount> CreateDiscountUsingPOST1Async(CreateShippingDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ShippingDiscount> CreateDiscountUsingPOST1Async(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = await CreateDiscountUsingPOST1WithHttpInfoAsync(request, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = await CreateDiscountUsingPOST1WithHttpInfoAsync(createShippingDiscountRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -510,16 +510,16 @@ namespace Keap.Sdk.Core.Api
         /// Create a Shipping Discount Creates a Shipping Discount
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
+        /// <param name="createShippingDiscountRequest">request</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ShippingDiscount)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount>> CreateDiscountUsingPOST1WithHttpInfoAsync(CreateShippingDiscountRequest request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount>> CreateDiscountUsingPOST1WithHttpInfoAsync(CreateShippingDiscountRequest createShippingDiscountRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'createShippingDiscountRequest' is set
+            if (createShippingDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ShippingDiscountApi->CreateDiscountUsingPOST1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'createShippingDiscountRequest' when calling ShippingDiscountApi->CreateDiscountUsingPOST1");
             }
 
 
@@ -546,7 +546,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = createShippingDiscountRequest;
 
             localVarRequestOptions.Operation = "ShippingDiscountApi.CreateDiscountUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1044,13 +1044,13 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ShippingDiscount</returns>
-        public ShippingDiscount UpdateDiscountUsingPATCH1(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public ShippingDiscount UpdateDiscountUsingPATCH1(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = UpdateDiscountUsingPATCH1WithHttpInfo(discountId, request, updateMask);
+            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = UpdateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, updateMask);
             return localVarResponse.Data;
         }
 
@@ -1059,11 +1059,11 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ShippingDiscount</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> UpdateDiscountUsingPATCH1WithHttpInfo(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> UpdateDiscountUsingPATCH1WithHttpInfo(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
@@ -1071,10 +1071,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling ShippingDiscountApi->UpdateDiscountUsingPATCH1");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateShippingDiscountRequest' is set
+            if (updateShippingDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ShippingDiscountApi->UpdateDiscountUsingPATCH1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateShippingDiscountRequest' when calling ShippingDiscountApi->UpdateDiscountUsingPATCH1");
             }
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -1105,7 +1105,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateShippingDiscountRequest;
 
             localVarRequestOptions.Operation = "ShippingDiscountApi.UpdateDiscountUsingPATCH1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1130,14 +1130,14 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ShippingDiscount</returns>
-        public async System.Threading.Tasks.Task<ShippingDiscount> UpdateDiscountUsingPATCH1Async(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ShippingDiscount> UpdateDiscountUsingPATCH1Async(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = await UpdateDiscountUsingPATCH1WithHttpInfoAsync(discountId, request, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount> localVarResponse = await UpdateDiscountUsingPATCH1WithHttpInfoAsync(discountId, updateShippingDiscountRequest, updateMask, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1146,12 +1146,12 @@ namespace Keap.Sdk.Core.Api
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discountId">discount_id</param>
-        /// <param name="request">request</param>
+        /// <param name="updateShippingDiscountRequest">request</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ShippingDiscount)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount>> UpdateDiscountUsingPATCH1WithHttpInfoAsync(string discountId, UpdateShippingDiscountRequest request, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<ShippingDiscount>> UpdateDiscountUsingPATCH1WithHttpInfoAsync(string discountId, UpdateShippingDiscountRequest updateShippingDiscountRequest, List<string>? updateMask = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discountId' is set
             if (discountId == null)
@@ -1159,10 +1159,10 @@ namespace Keap.Sdk.Core.Api
                 throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'discountId' when calling ShippingDiscountApi->UpdateDiscountUsingPATCH1");
             }
 
-            // verify the required parameter 'request' is set
-            if (request == null)
+            // verify the required parameter 'updateShippingDiscountRequest' is set
+            if (updateShippingDiscountRequest == null)
             {
-                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'request' when calling ShippingDiscountApi->UpdateDiscountUsingPATCH1");
+                throw new Keap.Sdk.Core.Client.ApiException(400, "Missing required parameter 'updateShippingDiscountRequest' when calling ShippingDiscountApi->UpdateDiscountUsingPATCH1");
             }
 
 
@@ -1194,7 +1194,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = request;
+            localVarRequestOptions.Data = updateShippingDiscountRequest;
 
             localVarRequestOptions.Operation = "ShippingDiscountApi.UpdateDiscountUsingPATCH1";
             localVarRequestOptions.OperationIndex = operationIndex;

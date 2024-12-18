@@ -8,7 +8,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createpaymentmethodconfigusingpost"></a>
 # **CreatePaymentMethodConfigUsingPOST**
-> PaymentMethodConfig CreatePaymentMethodConfigUsingPOST (CreatePaymentMethodConfigRequest request)
+> PaymentMethodConfig CreatePaymentMethodConfigUsingPOST (CreatePaymentMethodConfigRequest createPaymentMethodConfigRequest)
 
 Create Payment Method Configuration
 
@@ -31,12 +31,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new PaymentMethodConfigApi(config);
-            var request = new CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
+            var createPaymentMethodConfigRequest = new CreatePaymentMethodConfigRequest(); // CreatePaymentMethodConfigRequest | request
 
             try
             {
                 // Create Payment Method Configuration
-                PaymentMethodConfig result = apiInstance.CreatePaymentMethodConfigUsingPOST(request);
+                PaymentMethodConfig result = apiInstance.CreatePaymentMethodConfigUsingPOST(createPaymentMethodConfigRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -57,7 +57,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create Payment Method Configuration
-    ApiResponse<PaymentMethodConfig> response = apiInstance.CreatePaymentMethodConfigUsingPOSTWithHttpInfo(request);
+    ApiResponse<PaymentMethodConfig> response = apiInstance.CreatePaymentMethodConfigUsingPOSTWithHttpInfo(createPaymentMethodConfigRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -74,7 +74,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md) | request |  |
+| **createPaymentMethodConfigRequest** | [**CreatePaymentMethodConfigRequest**](CreatePaymentMethodConfigRequest.md) | request |  |
 
 ### Return type
 

@@ -22,7 +22,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createContactLinkTypeUsingPOST()`
 
 ```php
-createContactLinkTypeUsingPOST($request): \Com\Keap\Sdk\Core\Model\ContactLinkType
+createContactLinkTypeUsingPOST($create_contact_link_type_request): \Com\Keap\Sdk\Core\Model\ContactLinkType
 ```
 
 Create a Contact Link type
@@ -41,10 +41,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest(); // \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest | request
+$create_contact_link_type_request = new \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest(); // \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest | request
 
 try {
-    $result = $apiInstance->createContactLinkTypeUsingPOST($request);
+    $result = $apiInstance->createContactLinkTypeUsingPOST($create_contact_link_type_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->createContactLinkTypeUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -55,7 +55,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest**](../Model/CreateContactLinkTypeRequest.md)| request | |
+| **create_contact_link_type_request** | [**\Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest**](../Model/CreateContactLinkTypeRequest.md)| request | |
 
 ### Return type
 
@@ -77,7 +77,7 @@ No authorization required
 ## `createContactUsingPOST1()`
 
 ```php
-createContactUsingPOST1($contact): \Com\Keap\Sdk\Core\Model\Contact
+createContactUsingPOST1($create_patch_contact_request): \Com\Keap\Sdk\Core\Model\Contact
 ```
 
 Create a Contact
@@ -96,10 +96,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$contact = new \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest | contact
+$create_patch_contact_request = new \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest | contact
 
 try {
-    $result = $apiInstance->createContactUsingPOST1($contact);
+    $result = $apiInstance->createContactUsingPOST1($create_patch_contact_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->createContactUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -110,7 +110,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contact** | [**\Com\Keap\Sdk\Core\Model\CreatePatchContactRequest**](../Model/CreatePatchContactRequest.md)| contact | [optional] |
+| **create_patch_contact_request** | [**\Com\Keap\Sdk\Core\Model\CreatePatchContactRequest**](../Model/CreatePatchContactRequest.md)| contact | [optional] |
 
 ### Return type
 
@@ -587,7 +587,7 @@ No authorization required
 ## `patchContactUsingPATCH()`
 
 ```php
-patchContactUsingPATCH($contact_id, $update_mask, $contact): \Com\Keap\Sdk\Core\Model\Contact
+patchContactUsingPATCH($contact_id, $update_mask, $create_patch_contact_request): \Com\Keap\Sdk\Core\Model\Contact
 ```
 
 Update a Contact
@@ -608,10 +608,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
 );
 $contact_id = 'contact_id_example'; // string | contact_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$contact = new \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest | contact
+$create_patch_contact_request = new \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest(); // \Com\Keap\Sdk\Core\Model\CreatePatchContactRequest | contact
 
 try {
-    $result = $apiInstance->patchContactUsingPATCH($contact_id, $update_mask, $contact);
+    $result = $apiInstance->patchContactUsingPATCH($contact_id, $update_mask, $create_patch_contact_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactApi->patchContactUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -624,7 +624,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **string**| contact_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **contact** | [**\Com\Keap\Sdk\Core\Model\CreatePatchContactRequest**](../Model/CreatePatchContactRequest.md)| contact | [optional] |
+| **create_patch_contact_request** | [**\Com\Keap\Sdk\Core\Model\CreatePatchContactRequest**](../Model/CreatePatchContactRequest.md)| contact | [optional] |
 
 ### Return type
 

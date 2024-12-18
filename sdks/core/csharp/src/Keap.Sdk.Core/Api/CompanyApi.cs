@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Company</returns>
-        Company CreateCompanyUsingPOST1(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0);
+        Company CreateCompanyUsingPOST1(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create a Company
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Company</returns>
-        ApiResponse<Company> CreateCompanyUsingPOST1WithHttpInfo(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0);
+        ApiResponse<Company> CreateCompanyUsingPOST1WithHttpInfo(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0);
         /// <summary>
         /// Delete a Company
         /// </summary>
@@ -139,10 +139,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Company</returns>
-        Company PatchCompanyUsingPATCH(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0);
+        Company PatchCompanyUsingPATCH(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Update a Company
@@ -153,10 +153,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Company</returns>
-        ApiResponse<Company> PatchCompanyUsingPATCHWithHttpInfo(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0);
+        ApiResponse<Company> PatchCompanyUsingPATCHWithHttpInfo(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -173,11 +173,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Company</returns>
-        System.Threading.Tasks.Task<Company> CreateCompanyUsingPOST1Async(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Company> CreateCompanyUsingPOST1Async(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Company
@@ -186,11 +186,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Company)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Company>> CreateCompanyUsingPOST1WithHttpInfoAsync(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Company>> CreateCompanyUsingPOST1WithHttpInfoAsync(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a Company
         /// </summary>
@@ -285,11 +285,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Company</returns>
-        System.Threading.Tasks.Task<Company> PatchCompanyUsingPATCHAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Company> PatchCompanyUsingPATCHAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a Company
@@ -300,11 +300,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Company)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Company>> PatchCompanyUsingPATCHWithHttpInfoAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Company>> PatchCompanyUsingPATCHWithHttpInfoAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -429,12 +429,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Company Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Company</returns>
-        public Company CreateCompanyUsingPOST1(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0)
+        public Company CreateCompanyUsingPOST1(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = CreateCompanyUsingPOST1WithHttpInfo(company);
+            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = CreateCompanyUsingPOST1WithHttpInfo(createCompanyRequest);
             return localVarResponse.Data;
         }
 
@@ -442,10 +442,10 @@ namespace Keap.Sdk.Core.Api
         /// Create a Company Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Company</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Company> CreateCompanyUsingPOST1WithHttpInfo(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Company> CreateCompanyUsingPOST1WithHttpInfo(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -470,7 +470,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = company;
+            localVarRequestOptions.Data = createCompanyRequest;
 
             localVarRequestOptions.Operation = "CompanyApi.CreateCompanyUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -494,13 +494,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Company Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Company</returns>
-        public async System.Threading.Tasks.Task<Company> CreateCompanyUsingPOST1Async(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Company> CreateCompanyUsingPOST1Async(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = await CreateCompanyUsingPOST1WithHttpInfoAsync(company, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = await CreateCompanyUsingPOST1WithHttpInfoAsync(createCompanyRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -508,11 +508,11 @@ namespace Keap.Sdk.Core.Api
         /// Create a Company Creates a new Company.&#x60;country_code&#x60; is required if &#x60;region&#x60; is specified.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="company">company (optional)</param>
+        /// <param name="createCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Company)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Company>> CreateCompanyUsingPOST1WithHttpInfoAsync(CreateCompanyRequest? company = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Company>> CreateCompanyUsingPOST1WithHttpInfoAsync(CreateCompanyRequest? createCompanyRequest = default(CreateCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -538,7 +538,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = company;
+            localVarRequestOptions.Data = createCompanyRequest;
 
             localVarRequestOptions.Operation = "CompanyApi.CreateCompanyUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1049,12 +1049,12 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Company</returns>
-        public Company PatchCompanyUsingPATCH(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0)
+        public Company PatchCompanyUsingPATCH(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = PatchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, company);
+            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = PatchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest);
             return localVarResponse.Data;
         }
 
@@ -1064,10 +1064,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Company</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<Company> PatchCompanyUsingPATCHWithHttpInfo(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<Company> PatchCompanyUsingPATCHWithHttpInfo(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0)
         {
             // verify the required parameter 'companyId' is set
             if (companyId == null)
@@ -1103,7 +1103,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = company;
+            localVarRequestOptions.Data = patchCompanyRequest;
 
             localVarRequestOptions.Operation = "CompanyApi.PatchCompanyUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1129,13 +1129,13 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Company</returns>
-        public async System.Threading.Tasks.Task<Company> PatchCompanyUsingPATCHAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Company> PatchCompanyUsingPATCHAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = await PatchCompanyUsingPATCHWithHttpInfoAsync(companyId, updateMask, company, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<Company> localVarResponse = await PatchCompanyUsingPATCHWithHttpInfoAsync(companyId, updateMask, patchCompanyRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1145,11 +1145,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="companyId">company_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="company">company (optional)</param>
+        /// <param name="patchCompanyRequest">company (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Company)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Company>> PatchCompanyUsingPATCHWithHttpInfoAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? company = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<Company>> PatchCompanyUsingPATCHWithHttpInfoAsync(string companyId, List<string>? updateMask = default(List<string>?), PatchCompanyRequest? patchCompanyRequest = default(PatchCompanyRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'companyId' is set
             if (companyId == null)
@@ -1186,7 +1186,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = company;
+            localVarRequestOptions.Data = patchCompanyRequest;
 
             localVarRequestOptions.Operation = "CompanyApi.PatchCompanyUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

@@ -17,7 +17,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createDiscountUsingPOST
 
-> CategoryDiscount createDiscountUsingPOST(request)
+> CategoryDiscount createDiscountUsingPOST(createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -39,9 +39,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         try {
-            CategoryDiscount result = apiInstance.createDiscountUsingPOST(request);
+            CategoryDiscount result = apiInstance.createDiscountUsingPOST(createUpdateDiscountRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CategoryDiscountApi#createDiscountUsingPOST");
@@ -59,7 +59,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -84,7 +84,7 @@ No authorization required
 
 ## createDiscountUsingPOSTWithHttpInfo
 
-> ApiResponse<CategoryDiscount> createDiscountUsingPOST createDiscountUsingPOSTWithHttpInfo(request)
+> ApiResponse<CategoryDiscount> createDiscountUsingPOST createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest)
 
 Create a Category Discount
 
@@ -107,9 +107,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         try {
-            ApiResponse<CategoryDiscount> response = apiInstance.createDiscountUsingPOSTWithHttpInfo(request);
+            ApiResponse<CategoryDiscount> response = apiInstance.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -129,7 +129,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 
 ### Return type
 
@@ -433,7 +433,7 @@ No authorization required
 
 ## updateDiscountUsingPATCH
 
-> CategoryDiscount updateDiscountUsingPATCH(discountId, request, updateMask)
+> CategoryDiscount updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask)
 
 Update a Category Discount
 
@@ -456,10 +456,10 @@ public class Example {
 
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CategoryDiscount result = apiInstance.updateDiscountUsingPATCH(discountId, request, updateMask);
+            CategoryDiscount result = apiInstance.updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CategoryDiscountApi#updateDiscountUsingPATCH");
@@ -478,7 +478,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
 
 ### Return type
@@ -505,7 +505,7 @@ No authorization required
 
 ## updateDiscountUsingPATCHWithHttpInfo
 
-> ApiResponse<CategoryDiscount> updateDiscountUsingPATCH updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask)
+> ApiResponse<CategoryDiscount> updateDiscountUsingPATCH updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask)
 
 Update a Category Discount
 
@@ -529,10 +529,10 @@ public class Example {
 
         CategoryDiscountApi apiInstance = new CategoryDiscountApi(defaultClient);
         String discountId = "discountId_example"; // String | discount_id
-        CreateUpdateDiscountRequest request = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
+        CreateUpdateDiscountRequest createUpdateDiscountRequest = new CreateUpdateDiscountRequest(); // CreateUpdateDiscountRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CategoryDiscount> response = apiInstance.updateDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+            ApiResponse<CategoryDiscount> response = apiInstance.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -553,7 +553,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **discountId** | **String**| discount_id | |
-| **request** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
+| **createUpdateDiscountRequest** | [**CreateUpdateDiscountRequest**](CreateUpdateDiscountRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: contact_id, order_items, order_title, order_time, order_type, promo_codes, lead_affiliate_id, sales_affiliate_id, shipping_address] |
 
 ### Return type

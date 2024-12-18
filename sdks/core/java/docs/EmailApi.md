@@ -21,7 +21,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createEmailUsingPOST1
 
-> EmailSentWithContent createEmailUsingPOST1(emailWithContent)
+> EmailSentWithContent createEmailUsingPOST1(createEmailSentRequest)
 
 Create an Email Record
 
@@ -43,9 +43,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
-        CreateEmailSentRequest emailWithContent = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
+        CreateEmailSentRequest createEmailSentRequest = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
         try {
-            EmailSentWithContent result = apiInstance.createEmailUsingPOST1(emailWithContent);
+            EmailSentWithContent result = apiInstance.createEmailUsingPOST1(createEmailSentRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EmailApi#createEmailUsingPOST1");
@@ -63,7 +63,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailWithContent** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | |
+| **createEmailSentRequest** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | |
 
 ### Return type
 
@@ -88,7 +88,7 @@ No authorization required
 
 ## createEmailUsingPOST1WithHttpInfo
 
-> ApiResponse<EmailSentWithContent> createEmailUsingPOST1 createEmailUsingPOST1WithHttpInfo(emailWithContent)
+> ApiResponse<EmailSentWithContent> createEmailUsingPOST1 createEmailUsingPOST1WithHttpInfo(createEmailSentRequest)
 
 Create an Email Record
 
@@ -111,9 +111,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
-        CreateEmailSentRequest emailWithContent = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
+        CreateEmailSentRequest createEmailSentRequest = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
         try {
-            ApiResponse<EmailSentWithContent> response = apiInstance.createEmailUsingPOST1WithHttpInfo(emailWithContent);
+            ApiResponse<EmailSentWithContent> response = apiInstance.createEmailUsingPOST1WithHttpInfo(createEmailSentRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -133,7 +133,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailWithContent** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | |
+| **createEmailSentRequest** | [**CreateEmailSentRequest**](CreateEmailSentRequest.md)| emailWithContent | |
 
 ### Return type
 

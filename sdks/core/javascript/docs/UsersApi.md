@@ -28,7 +28,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.UsersApi();
 let opts = {
-  'user': new KeapCoreServiceCoreSdk.CreateUserRequestV2() // CreateUserRequestV2 | user
+  'createUserRequestV2': new KeapCoreServiceCoreSdk.CreateUserRequestV2() // CreateUserRequestV2 | user
 };
 apiInstance.createUserUsingPOST1(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -43,7 +43,7 @@ apiInstance.createUserUsingPOST1(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
+ **createUserRequestV2** | [**CreateUserRequestV2**](CreateUserRequestV2.md)| user | [optional] 
 
 ### Return type
 
@@ -252,7 +252,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.UsersApi();
 let userId = "userId_example"; // String | user_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'user': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
+  'patchUserRequestV2': new KeapCoreServiceCoreSdk.PatchUserRequestV2() // PatchUserRequestV2 | user
 };
 apiInstance.patchUserUsingPATCH(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| user_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **user** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
+ **patchUserRequestV2** | [**PatchUserRequestV2**](PatchUserRequestV2.md)| user | [optional] 
 
 ### Return type
 

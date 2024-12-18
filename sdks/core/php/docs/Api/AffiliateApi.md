@@ -94,7 +94,7 @@ No authorization required
 ## `addAffiliateUsingPOST()`
 
 ```php
-addAffiliateUsingPOST($insert_affiliate): \Com\Keap\Sdk\Core\Model\RestAffiliate
+addAffiliateUsingPOST($create_affiliate_request): \Com\Keap\Sdk\Core\Model\RestAffiliate
 ```
 
 Create an Affiliate
@@ -113,10 +113,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$insert_affiliate = new \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest(); // \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest | Affiliate request to insert
+$create_affiliate_request = new \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest(); // \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest | Affiliate request to insert
 
 try {
-    $result = $apiInstance->addAffiliateUsingPOST($insert_affiliate);
+    $result = $apiInstance->addAffiliateUsingPOST($create_affiliate_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->addAffiliateUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -127,7 +127,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **insert_affiliate** | [**\Com\Keap\Sdk\Core\Model\CreateAffiliateRequest**](../Model/CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
+| **create_affiliate_request** | [**\Com\Keap\Sdk\Core\Model\CreateAffiliateRequest**](../Model/CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
 
 ### Return type
 
@@ -149,7 +149,7 @@ No authorization required
 ## `addCommissionProgramUsingPOST()`
 
 ```php
-addCommissionProgramUsingPOST($insert_commission_program): \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse
+addCommissionProgramUsingPOST($create_commission_program_request): \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse
 ```
 
 Create an Affiliate Commission Program
@@ -168,10 +168,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$insert_commission_program = new \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest | Commission Program to insert
+$create_commission_program_request = new \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest | Commission Program to insert
 
 try {
-    $result = $apiInstance->addCommissionProgramUsingPOST($insert_commission_program);
+    $result = $apiInstance->addCommissionProgramUsingPOST($create_commission_program_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->addCommissionProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -182,7 +182,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **insert_commission_program** | [**\Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest**](../Model/CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
+| **create_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\CreateCommissionProgramRequest**](../Model/CreateCommissionProgramRequest.md)| Commission Program to insert | [optional] |
 
 ### Return type
 
@@ -204,7 +204,7 @@ No authorization required
 ## `assignProductCommissionProgramUsingPOST()`
 
 ```php
-assignProductCommissionProgramUsingPOST($commission_program_id, $product_commission_program): \Com\Keap\Sdk\Core\Model\ProductCommissionProgram
+assignProductCommissionProgramUsingPOST($commission_program_id, $create_product_commission_program_request): \Com\Keap\Sdk\Core\Model\ProductCommissionProgram
 ```
 
 Assign a Product Commission Program
@@ -224,10 +224,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     new GuzzleHttp\Client()
 );
 $commission_program_id = 'commission_program_id_example'; // string | commission_program_id
-$product_commission_program = new \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest | Product Commission Program
+$create_product_commission_program_request = new \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest | Product Commission Program
 
 try {
-    $result = $apiInstance->assignProductCommissionProgramUsingPOST($commission_program_id, $product_commission_program);
+    $result = $apiInstance->assignProductCommissionProgramUsingPOST($commission_program_id, $create_product_commission_program_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->assignProductCommissionProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -239,7 +239,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **commission_program_id** | **string**| commission_program_id | |
-| **product_commission_program** | [**\Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest**](../Model/CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
+| **create_product_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\CreateProductCommissionProgramRequest**](../Model/CreateProductCommissionProgramRequest.md)| Product Commission Program | [optional] |
 
 ### Return type
 
@@ -261,7 +261,7 @@ No authorization required
 ## `assignSubscriptionCommissionProgramUsingPOST()`
 
 ```php
-assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $subscription_commission_program): \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram
+assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $create_subscription_commission_program_request): \Com\Keap\Sdk\Core\Model\SubscriptionCommissionProgram
 ```
 
 Assign a Subscription Commission Program
@@ -281,10 +281,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     new GuzzleHttp\Client()
 );
 $commission_program_id = 'commission_program_id_example'; // string | commission_program_id
-$subscription_commission_program = new \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
+$create_subscription_commission_program_request = new \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest | Subscription Commission Program
 
 try {
-    $result = $apiInstance->assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $subscription_commission_program);
+    $result = $apiInstance->assignSubscriptionCommissionProgramUsingPOST($commission_program_id, $create_subscription_commission_program_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->assignSubscriptionCommissionProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -296,7 +296,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **commission_program_id** | **string**| commission_program_id | |
-| **subscription_commission_program** | [**\Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest**](../Model/CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
+| **create_subscription_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\CreateSubscriptionCommissionProgramRequest**](../Model/CreateSubscriptionCommissionProgramRequest.md)| Subscription Commission Program | [optional] |
 
 ### Return type
 
@@ -318,7 +318,7 @@ No authorization required
 ## `createAffiliateCustomFieldUsingPOST()`
 
 ```php
-createAffiliateCustomFieldUsingPOST($custom_field): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+createAffiliateCustomFieldUsingPOST($create_custom_field_request): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Create an Affiliate Custom Field
@@ -337,10 +337,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$custom_field = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
+$create_custom_field_request = new \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest(); // \Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest | customField
 
 try {
-    $result = $apiInstance->createAffiliateCustomFieldUsingPOST($custom_field);
+    $result = $apiInstance->createAffiliateCustomFieldUsingPOST($create_custom_field_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->createAffiliateCustomFieldUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -351,7 +351,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **custom_field** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
+| **create_custom_field_request** | [**\Com\Keap\Sdk\Core\Model\CreateCustomFieldRequest**](../Model/CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -430,7 +430,7 @@ No authorization required
 ## `createRedirectLinkUsingPOST()`
 
 ```php
-createRedirectLinkUsingPOST($request): \Com\Keap\Sdk\Core\Model\AffiliateLink
+createRedirectLinkUsingPOST($create_or_patch_affiliate_link_request): \Com\Keap\Sdk\Core\Model\AffiliateLink
 ```
 
 Create an Affiliate Link
@@ -449,10 +449,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
+$create_or_patch_affiliate_link_request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
 
 try {
-    $result = $apiInstance->createRedirectLinkUsingPOST($request);
+    $result = $apiInstance->createRedirectLinkUsingPOST($create_or_patch_affiliate_link_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->createRedirectLinkUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -463,7 +463,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **create_or_patch_affiliate_link_request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 
@@ -1401,7 +1401,7 @@ No authorization required
 ## `removeAffiliateFromProgramUsingPOST()`
 
 ```php
-removeAffiliateFromProgramUsingPOST($id, $remove_from_program_request)
+removeAffiliateFromProgramUsingPOST($id, $affiliate_remove_from_program_request)
 ```
 
 Remove an Affiliate from a Commission Program
@@ -1421,10 +1421,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | id
-$remove_from_program_request = new \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest(); // \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest | removeFromProgramRequest
+$affiliate_remove_from_program_request = new \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest(); // \Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest | removeFromProgramRequest
 
 try {
-    $apiInstance->removeAffiliateFromProgramUsingPOST($id, $remove_from_program_request);
+    $apiInstance->removeAffiliateFromProgramUsingPOST($id, $affiliate_remove_from_program_request);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->removeAffiliateFromProgramUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
@@ -1435,7 +1435,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| id | |
-| **remove_from_program_request** | [**\Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest**](../Model/AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
+| **affiliate_remove_from_program_request** | [**\Com\Keap\Sdk\Core\Model\AffiliateRemoveFromProgramRequest**](../Model/AffiliateRemoveFromProgramRequest.md)| removeFromProgramRequest | |
 
 ### Return type
 
@@ -1513,7 +1513,7 @@ No authorization required
 ## `updateAffiliateCustomFieldUsingPATCH()`
 
 ```php
-updateAffiliateCustomFieldUsingPATCH($custom_field_id, $request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
+updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask): \Com\Keap\Sdk\Core\Model\CustomFieldMetaData
 ```
 
 Update a Custom Field
@@ -1533,11 +1533,11 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     new GuzzleHttp\Client()
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
-$request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
+$update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
 $update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
-    $result = $apiInstance->updateAffiliateCustomFieldUsingPATCH($custom_field_id, $request, $update_mask);
+    $result = $apiInstance->updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->updateAffiliateCustomFieldUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -1549,7 +1549,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
+| **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
@@ -1572,7 +1572,7 @@ No authorization required
 ## `updateAffiliateUsingPATCH()`
 
 ```php
-updateAffiliateUsingPATCH($id, $patch_affiliate): \Com\Keap\Sdk\Core\Model\RestAffiliate
+updateAffiliateUsingPATCH($id, $patch_affiliate_request): \Com\Keap\Sdk\Core\Model\RestAffiliate
 ```
 
 Update an Affiliate
@@ -1592,10 +1592,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | id
-$patch_affiliate = new \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest(); // \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest | Affiliate request to patch
+$patch_affiliate_request = new \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest(); // \Com\Keap\Sdk\Core\Model\PatchAffiliateRequest | Affiliate request to patch
 
 try {
-    $result = $apiInstance->updateAffiliateUsingPATCH($id, $patch_affiliate);
+    $result = $apiInstance->updateAffiliateUsingPATCH($id, $patch_affiliate_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->updateAffiliateUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -1607,7 +1607,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| id | |
-| **patch_affiliate** | [**\Com\Keap\Sdk\Core\Model\PatchAffiliateRequest**](../Model/PatchAffiliateRequest.md)| Affiliate request to patch | [optional] |
+| **patch_affiliate_request** | [**\Com\Keap\Sdk\Core\Model\PatchAffiliateRequest**](../Model/PatchAffiliateRequest.md)| Affiliate request to patch | [optional] |
 
 ### Return type
 
@@ -1629,7 +1629,7 @@ No authorization required
 ## `updateRedirectLinkUsingPATCH()`
 
 ```php
-updateRedirectLinkUsingPATCH($redirect_id, $request): \Com\Keap\Sdk\Core\Model\AffiliateLink
+updateRedirectLinkUsingPATCH($redirect_id, $create_or_patch_affiliate_link_request): \Com\Keap\Sdk\Core\Model\AffiliateLink
 ```
 
 Update an Affiliate Link
@@ -1649,10 +1649,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
     new GuzzleHttp\Client()
 );
 $redirect_id = 'redirect_id_example'; // string | redirect_id
-$request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
+$create_or_patch_affiliate_link_request = new \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest(); // \Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest | request
 
 try {
-    $result = $apiInstance->updateRedirectLinkUsingPATCH($redirect_id, $request);
+    $result = $apiInstance->updateRedirectLinkUsingPATCH($redirect_id, $create_or_patch_affiliate_link_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliateApi->updateRedirectLinkUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -1664,7 +1664,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **redirect_id** | **string**| redirect_id | |
-| **request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
+| **create_or_patch_affiliate_link_request** | [**\Com\Keap\Sdk\Core\Model\CreateOrPatchAffiliateLinkRequest**](../Model/CreateOrPatchAffiliateLinkRequest.md)| request | |
 
 ### Return type
 

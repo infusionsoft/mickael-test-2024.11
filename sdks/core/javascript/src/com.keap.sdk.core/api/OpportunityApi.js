@@ -49,14 +49,14 @@ export default class OpportunityApi {
     /**
      * Create an Opportunity Custom Field
      * Adds a custom field of the specified type and options to the Opportunity object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createOpportunityCustomFieldsUsingPOST");
+    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createOpportunityCustomFieldsUsingPOST");
       }
 
       let pathParams = {
@@ -82,11 +82,11 @@ export default class OpportunityApi {
     /**
      * Create an Opportunity Custom Field
      * Adds a custom field of the specified type and options to the Opportunity object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createOpportunityCustomFieldsUsingPOST(customField) {
-      return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField)
+    createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest) {
+      return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -97,12 +97,12 @@ export default class OpportunityApi {
      * Create an Opportunity Stage
      * Creates a new Opportunity Stage
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} [opportunityStage] opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} [createOpportunityStageRequest] opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage} and HTTP response
      */
     createOpportunityStageUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['opportunityStage'];
+      let postBody = opts['createOpportunityStageRequest'];
 
       let pathParams = {
       };
@@ -128,7 +128,7 @@ export default class OpportunityApi {
      * Create an Opportunity Stage
      * Creates a new Opportunity Stage
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} opts.opportunityStage opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} opts.createOpportunityStageRequest opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage}
      */
     createOpportunityStageUsingPOST(opts) {
@@ -143,12 +143,12 @@ export default class OpportunityApi {
      * Create an Opportunity
      * Creates a new opportunity as the authenticated user.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} [opportunity] opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} [createOpportunityRequest] opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
     createOpportunityUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['opportunity'];
+      let postBody = opts['createOpportunityRequest'];
 
       let pathParams = {
       };
@@ -174,7 +174,7 @@ export default class OpportunityApi {
      * Create an Opportunity
      * Creates a new opportunity as the authenticated user.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} opts.opportunity opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} opts.createOpportunityRequest opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
     createOpportunityUsingPOST1(opts) {
@@ -496,21 +496,21 @@ export default class OpportunityApi {
      * Update a Opportunity's Custom Field
      * Updates a custom field of the specified type and options to the Opportunity object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateOpportunityCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateOpportunityCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -539,13 +539,13 @@ export default class OpportunityApi {
      * Update a Opportunity's Custom Field
      * Updates a custom field of the specified type and options to the Opportunity object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -556,21 +556,21 @@ export default class OpportunityApi {
      * Update an Opportunity Stage
      * Updates specified values of a given Opportunity Stage
      * @param {String} stageId stage_id
-     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} updateOpportunityStageRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage} and HTTP response
      */
-    updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, opts) {
+    updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateOpportunityStageRequest;
       // verify the required parameter 'stageId' is set
       if (stageId === undefined || stageId === null) {
         throw new Error("Missing the required parameter 'stageId' when calling updateOpportunityStageUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityStageUsingPATCH");
+      // verify the required parameter 'updateOpportunityStageRequest' is set
+      if (updateOpportunityStageRequest === undefined || updateOpportunityStageRequest === null) {
+        throw new Error("Missing the required parameter 'updateOpportunityStageRequest' when calling updateOpportunityStageUsingPATCH");
       }
 
       let pathParams = {
@@ -599,13 +599,13 @@ export default class OpportunityApi {
      * Update an Opportunity Stage
      * Updates specified values of a given Opportunity Stage
      * @param {String} stageId stage_id
-     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} updateOpportunityStageRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage}
      */
-    updateOpportunityStageUsingPATCH(stageId, request, opts) {
-      return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, opts)
+    updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, opts) {
+      return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -616,21 +616,21 @@ export default class OpportunityApi {
      * Update an opportunity
      * Updates specified values of a given opportunity
      * @param {String} opportunityId opportunity_id
-     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} request request
+     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} patchOpportunityRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
-    updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, opts) {
+    updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = patchOpportunityRequest;
       // verify the required parameter 'opportunityId' is set
       if (opportunityId === undefined || opportunityId === null) {
         throw new Error("Missing the required parameter 'opportunityId' when calling updateOpportunityUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityUsingPATCH");
+      // verify the required parameter 'patchOpportunityRequest' is set
+      if (patchOpportunityRequest === undefined || patchOpportunityRequest === null) {
+        throw new Error("Missing the required parameter 'patchOpportunityRequest' when calling updateOpportunityUsingPATCH");
       }
 
       let pathParams = {
@@ -659,13 +659,13 @@ export default class OpportunityApi {
      * Update an opportunity
      * Updates specified values of a given opportunity
      * @param {String} opportunityId opportunity_id
-     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} request request
+     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} patchOpportunityRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
-    updateOpportunityUsingPATCH(opportunityId, request, opts) {
-      return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, opts)
+    updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, opts) {
+      return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -177,12 +177,12 @@ export default class PreReleaseApi {
      * Create an Affiliate Commission Program
      * Creates an Affiliate Commission Program
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateCommissionProgramRequest} [insertCommissionProgram] Commission Program to insert
+     * @param {module:com.keap.sdk.core/model/CreateCommissionProgramRequest} [createCommissionProgramRequest] Commission Program to insert
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateCommissionProgramResponse} and HTTP response
      */
     addCommissionProgramUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['insertCommissionProgram'];
+      let postBody = opts['createCommissionProgramRequest'];
 
       let pathParams = {
       };
@@ -208,7 +208,7 @@ export default class PreReleaseApi {
      * Create an Affiliate Commission Program
      * Creates an Affiliate Commission Program
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateCommissionProgramRequest} opts.insertCommissionProgram Commission Program to insert
+     * @param {module:com.keap.sdk.core/model/CreateCommissionProgramRequest} opts.createCommissionProgramRequest Commission Program to insert
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateCommissionProgramResponse}
      */
     addCommissionProgramUsingPOST(opts) {
@@ -224,12 +224,12 @@ export default class PreReleaseApi {
      * Assigns a Product Commission Program to a Product
      * @param {String} commissionProgramId commission_program_id
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateProductCommissionProgramRequest} [productCommissionProgram] Product Commission Program
+     * @param {module:com.keap.sdk.core/model/CreateProductCommissionProgramRequest} [createProductCommissionProgramRequest] Product Commission Program
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ProductCommissionProgram} and HTTP response
      */
     assignProductCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
-      let postBody = opts['productCommissionProgram'];
+      let postBody = opts['createProductCommissionProgramRequest'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
         throw new Error("Missing the required parameter 'commissionProgramId' when calling assignProductCommissionProgramUsingPOST");
@@ -261,7 +261,7 @@ export default class PreReleaseApi {
      * Assigns a Product Commission Program to a Product
      * @param {String} commissionProgramId commission_program_id
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateProductCommissionProgramRequest} opts.productCommissionProgram Product Commission Program
+     * @param {module:com.keap.sdk.core/model/CreateProductCommissionProgramRequest} opts.createProductCommissionProgramRequest Product Commission Program
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ProductCommissionProgram}
      */
     assignProductCommissionProgramUsingPOST(commissionProgramId, opts) {
@@ -277,12 +277,12 @@ export default class PreReleaseApi {
      * Assigns a Subscription Commission Program to a Subscription
      * @param {String} commissionProgramId commission_program_id
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateSubscriptionCommissionProgramRequest} [subscriptionCommissionProgram] Subscription Commission Program
+     * @param {module:com.keap.sdk.core/model/CreateSubscriptionCommissionProgramRequest} [createSubscriptionCommissionProgramRequest] Subscription Commission Program
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/SubscriptionCommissionProgram} and HTTP response
      */
     assignSubscriptionCommissionProgramUsingPOSTWithHttpInfo(commissionProgramId, opts) {
       opts = opts || {};
-      let postBody = opts['subscriptionCommissionProgram'];
+      let postBody = opts['createSubscriptionCommissionProgramRequest'];
       // verify the required parameter 'commissionProgramId' is set
       if (commissionProgramId === undefined || commissionProgramId === null) {
         throw new Error("Missing the required parameter 'commissionProgramId' when calling assignSubscriptionCommissionProgramUsingPOST");
@@ -314,7 +314,7 @@ export default class PreReleaseApi {
      * Assigns a Subscription Commission Program to a Subscription
      * @param {String} commissionProgramId commission_program_id
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateSubscriptionCommissionProgramRequest} opts.subscriptionCommissionProgram Subscription Commission Program
+     * @param {module:com.keap.sdk.core/model/CreateSubscriptionCommissionProgramRequest} opts.createSubscriptionCommissionProgramRequest Subscription Commission Program
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/SubscriptionCommissionProgram}
      */
     assignSubscriptionCommissionProgramUsingPOST(commissionProgramId, opts) {
@@ -382,14 +382,14 @@ export default class PreReleaseApi {
     /**
      * Create an Affiliate Custom Field
      * Creates a single Affiliate Custom Field
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createAffiliateCustomFieldUsingPOST");
+    createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createAffiliateCustomFieldUsingPOST");
       }
 
       let pathParams = {
@@ -415,11 +415,11 @@ export default class PreReleaseApi {
     /**
      * Create an Affiliate Custom Field
      * Creates a single Affiliate Custom Field
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createAffiliateCustomFieldUsingPOST(customField) {
-      return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(customField)
+    createAffiliateCustomFieldUsingPOST(createCustomFieldRequest) {
+      return this.createAffiliateCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -482,14 +482,14 @@ export default class PreReleaseApi {
     /**
      * Create a Category Discount
      * Create a Category Discount.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CategoryDiscount} and HTTP response
      */
-    createDiscountUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createDiscountUsingPOST");
+    createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest) {
+      let postBody = createUpdateDiscountRequest;
+      // verify the required parameter 'createUpdateDiscountRequest' is set
+      if (createUpdateDiscountRequest === undefined || createUpdateDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createUpdateDiscountRequest' when calling createDiscountUsingPOST");
       }
 
       let pathParams = {
@@ -515,11 +515,11 @@ export default class PreReleaseApi {
     /**
      * Create a Category Discount
      * Create a Category Discount.
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CategoryDiscount}
      */
-    createDiscountUsingPOST(request) {
-      return this.createDiscountUsingPOSTWithHttpInfo(request)
+    createDiscountUsingPOST(createUpdateDiscountRequest) {
+      return this.createDiscountUsingPOSTWithHttpInfo(createUpdateDiscountRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -529,14 +529,14 @@ export default class PreReleaseApi {
     /**
      * Create a Shipping Discount
      * Creates a Shipping Discount
-     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} createShippingDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ShippingDiscount} and HTTP response
      */
-    createDiscountUsingPOST1WithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createDiscountUsingPOST1");
+    createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest) {
+      let postBody = createShippingDiscountRequest;
+      // verify the required parameter 'createShippingDiscountRequest' is set
+      if (createShippingDiscountRequest === undefined || createShippingDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createShippingDiscountRequest' when calling createDiscountUsingPOST1");
       }
 
       let pathParams = {
@@ -562,11 +562,11 @@ export default class PreReleaseApi {
     /**
      * Create a Shipping Discount
      * Creates a Shipping Discount
-     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateShippingDiscountRequest} createShippingDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ShippingDiscount}
      */
-    createDiscountUsingPOST1(request) {
-      return this.createDiscountUsingPOST1WithHttpInfo(request)
+    createDiscountUsingPOST1(createShippingDiscountRequest) {
+      return this.createDiscountUsingPOST1WithHttpInfo(createShippingDiscountRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -669,12 +669,12 @@ export default class PreReleaseApi {
      * Create a Lead Source
      * Creates a new Lead Source
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} [leadsource] leadsource
+     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} [createLeadSourceRequest] leadsource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/LeadSource} and HTTP response
      */
     createLeadSourceUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['leadsource'];
+      let postBody = opts['createLeadSourceRequest'];
 
       let pathParams = {
       };
@@ -700,7 +700,7 @@ export default class PreReleaseApi {
      * Create a Lead Source
      * Creates a new Lead Source
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} opts.leadsource leadsource
+     * @param {module:com.keap.sdk.core/model/CreateLeadSourceRequest} opts.createLeadSourceRequest leadsource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/LeadSource}
      */
     createLeadSourceUsingPOST(opts) {
@@ -714,14 +714,14 @@ export default class PreReleaseApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Note object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createNoteCustomFieldUsingPOST1WithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createNoteCustomFieldUsingPOST1");
+    createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createNoteCustomFieldUsingPOST1");
       }
 
       let pathParams = {
@@ -747,11 +747,11 @@ export default class PreReleaseApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Note object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createNoteCustomFieldUsingPOST1(customField) {
-      return this.createNoteCustomFieldUsingPOST1WithHttpInfo(customField)
+    createNoteCustomFieldUsingPOST1(createCustomFieldRequest) {
+      return this.createNoteCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -761,14 +761,14 @@ export default class PreReleaseApi {
     /**
      * Create an Opportunity Custom Field
      * Adds a custom field of the specified type and options to the Opportunity object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createOpportunityCustomFieldsUsingPOST");
+    createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createOpportunityCustomFieldsUsingPOST");
       }
 
       let pathParams = {
@@ -794,11 +794,11 @@ export default class PreReleaseApi {
     /**
      * Create an Opportunity Custom Field
      * Adds a custom field of the specified type and options to the Opportunity object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createOpportunityCustomFieldsUsingPOST(customField) {
-      return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(customField)
+    createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest) {
+      return this.createOpportunityCustomFieldsUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -809,12 +809,12 @@ export default class PreReleaseApi {
      * Create an Opportunity Stage
      * Creates a new Opportunity Stage
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} [opportunityStage] opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} [createOpportunityStageRequest] opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage} and HTTP response
      */
     createOpportunityStageUsingPOSTWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['opportunityStage'];
+      let postBody = opts['createOpportunityStageRequest'];
 
       let pathParams = {
       };
@@ -840,7 +840,7 @@ export default class PreReleaseApi {
      * Create an Opportunity Stage
      * Creates a new Opportunity Stage
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} opts.opportunityStage opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityStageRequest} opts.createOpportunityStageRequest opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage}
      */
     createOpportunityStageUsingPOST(opts) {
@@ -855,12 +855,12 @@ export default class PreReleaseApi {
      * Create an Opportunity
      * Creates a new opportunity as the authenticated user.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} [opportunity] opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} [createOpportunityRequest] opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
     createOpportunityUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['opportunity'];
+      let postBody = opts['createOpportunityRequest'];
 
       let pathParams = {
       };
@@ -886,7 +886,7 @@ export default class PreReleaseApi {
      * Create an Opportunity
      * Creates a new opportunity as the authenticated user.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} opts.opportunity opportunity
+     * @param {module:com.keap.sdk.core/model/CreateOpportunityRequest} opts.createOpportunityRequest opportunity
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
     createOpportunityUsingPOST1(opts) {
@@ -900,14 +900,14 @@ export default class PreReleaseApi {
     /**
      * Create an Order's Custom Field
      * Adds a custom field of the specified type and options to the Order object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createOrderCustomFieldUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createOrderCustomFieldUsingPOST");
+    createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createOrderCustomFieldUsingPOST");
       }
 
       let pathParams = {
@@ -933,11 +933,11 @@ export default class PreReleaseApi {
     /**
      * Create an Order's Custom Field
      * Adds a custom field of the specified type and options to the Order object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createOrderCustomFieldUsingPOST(customField) {
-      return this.createOrderCustomFieldUsingPOSTWithHttpInfo(customField)
+    createOrderCustomFieldUsingPOST(createCustomFieldRequest) {
+      return this.createOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1001,14 +1001,14 @@ export default class PreReleaseApi {
     /**
      * Create an Order Total Discount
      * Creates an Order Total Discount
-     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} createOrderTotalDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount} and HTTP response
      */
-    createOrderTotalDiscountUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createOrderTotalDiscountUsingPOST");
+    createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest) {
+      let postBody = createOrderTotalDiscountRequest;
+      // verify the required parameter 'createOrderTotalDiscountRequest' is set
+      if (createOrderTotalDiscountRequest === undefined || createOrderTotalDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createOrderTotalDiscountRequest' when calling createOrderTotalDiscountUsingPOST");
       }
 
       let pathParams = {
@@ -1034,11 +1034,11 @@ export default class PreReleaseApi {
     /**
      * Create an Order Total Discount
      * Creates an Order Total Discount
-     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrderTotalDiscountRequest} createOrderTotalDiscountRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount}
      */
-    createOrderTotalDiscountUsingPOST(request) {
-      return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(request)
+    createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest) {
+      return this.createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1048,14 +1048,14 @@ export default class PreReleaseApi {
     /**
      * Create an Order
      * Create a one time Order with Order items.
-     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} createOrderRequest createOrderRequest
+     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} restCreateOrderRequest createOrderRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
-    createOrderUsingPOST1WithHttpInfo(createOrderRequest) {
-      let postBody = createOrderRequest;
-      // verify the required parameter 'createOrderRequest' is set
-      if (createOrderRequest === undefined || createOrderRequest === null) {
-        throw new Error("Missing the required parameter 'createOrderRequest' when calling createOrderUsingPOST1");
+    createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest) {
+      let postBody = restCreateOrderRequest;
+      // verify the required parameter 'restCreateOrderRequest' is set
+      if (restCreateOrderRequest === undefined || restCreateOrderRequest === null) {
+        throw new Error("Missing the required parameter 'restCreateOrderRequest' when calling createOrderUsingPOST1");
       }
 
       let pathParams = {
@@ -1081,11 +1081,11 @@ export default class PreReleaseApi {
     /**
      * Create an Order
      * Create a one time Order with Order items.
-     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} createOrderRequest createOrderRequest
+     * @param {module:com.keap.sdk.core/model/RestCreateOrderRequest} restCreateOrderRequest createOrderRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
-    createOrderUsingPOST1(createOrderRequest) {
-      return this.createOrderUsingPOST1WithHttpInfo(createOrderRequest)
+    createOrderUsingPOST1(restCreateOrderRequest) {
+      return this.createOrderUsingPOST1WithHttpInfo(restCreateOrderRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1142,14 +1142,14 @@ export default class PreReleaseApi {
     /**
      * Create an Affiliate Link
      * Creates a single Affiliate Link
-     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} createOrPatchAffiliateLinkRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateLink} and HTTP response
      */
-    createRedirectLinkUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createRedirectLinkUsingPOST");
+    createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest) {
+      let postBody = createOrPatchAffiliateLinkRequest;
+      // verify the required parameter 'createOrPatchAffiliateLinkRequest' is set
+      if (createOrPatchAffiliateLinkRequest === undefined || createOrPatchAffiliateLinkRequest === null) {
+        throw new Error("Missing the required parameter 'createOrPatchAffiliateLinkRequest' when calling createRedirectLinkUsingPOST");
       }
 
       let pathParams = {
@@ -1175,11 +1175,11 @@ export default class PreReleaseApi {
     /**
      * Create an Affiliate Link
      * Creates a single Affiliate Link
-     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} createOrPatchAffiliateLinkRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateLink}
      */
-    createRedirectLinkUsingPOST(request) {
-      return this.createRedirectLinkUsingPOSTWithHttpInfo(request)
+    createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest) {
+      return this.createRedirectLinkUsingPOSTWithHttpInfo(createOrPatchAffiliateLinkRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1189,14 +1189,14 @@ export default class PreReleaseApi {
     /**
      * Create a Referral
      * Creates a new referral partner referral on the provided contact
-     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} createReferralRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Referral} and HTTP response
      */
-    createReferralUsingPOSTWithHttpInfo(request) {
-      let postBody = request;
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling createReferralUsingPOST");
+    createReferralUsingPOSTWithHttpInfo(createReferralRequest) {
+      let postBody = createReferralRequest;
+      // verify the required parameter 'createReferralRequest' is set
+      if (createReferralRequest === undefined || createReferralRequest === null) {
+        throw new Error("Missing the required parameter 'createReferralRequest' when calling createReferralUsingPOST");
       }
 
       let pathParams = {
@@ -1222,11 +1222,11 @@ export default class PreReleaseApi {
     /**
      * Create a Referral
      * Creates a new referral partner referral on the provided contact
-     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateReferralRequest} createReferralRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Referral}
      */
-    createReferralUsingPOST(request) {
-      return this.createReferralUsingPOSTWithHttpInfo(request)
+    createReferralUsingPOST(createReferralRequest) {
+      return this.createReferralUsingPOSTWithHttpInfo(createReferralRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1236,14 +1236,14 @@ export default class PreReleaseApi {
     /**
      * Create a Subscription's Custom Field
      * Adds a custom field of the specified type and options to the Subscription object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createSubscriptionCustomFieldUsingPOST");
+    createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createSubscriptionCustomFieldUsingPOST");
       }
 
       let pathParams = {
@@ -1269,11 +1269,11 @@ export default class PreReleaseApi {
     /**
      * Create a Subscription's Custom Field
      * Adds a custom field of the specified type and options to the Subscription object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    createSubscriptionCustomFieldUsingPOST(customField) {
-      return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(customField)
+    createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest) {
+      return this.createSubscriptionCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1283,14 +1283,14 @@ export default class PreReleaseApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Task object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CreateCustomFieldResponse} and HTTP response
      */
-    createTaskCustomFieldUsingPOST1WithHttpInfo(customField) {
-      let postBody = customField;
-      // verify the required parameter 'customField' is set
-      if (customField === undefined || customField === null) {
-        throw new Error("Missing the required parameter 'customField' when calling createTaskCustomFieldUsingPOST1");
+    createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest) {
+      let postBody = createCustomFieldRequest;
+      // verify the required parameter 'createCustomFieldRequest' is set
+      if (createCustomFieldRequest === undefined || createCustomFieldRequest === null) {
+        throw new Error("Missing the required parameter 'createCustomFieldRequest' when calling createTaskCustomFieldUsingPOST1");
       }
 
       let pathParams = {
@@ -1316,11 +1316,11 @@ export default class PreReleaseApi {
     /**
      * Create a Custom Field
      * Adds a custom field of the specified type and options to the Task object.
-     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} customField customField
+     * @param {module:com.keap.sdk.core/model/CreateCustomFieldRequest} createCustomFieldRequest customField
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CreateCustomFieldResponse}
      */
-    createTaskCustomFieldUsingPOST1(customField) {
-      return this.createTaskCustomFieldUsingPOST1WithHttpInfo(customField)
+    createTaskCustomFieldUsingPOST1(createCustomFieldRequest) {
+      return this.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -1331,12 +1331,12 @@ export default class PreReleaseApi {
      * Create a Task
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} [task] task
+     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} [createTaskRequest] task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/Task} and HTTP response
      */
     createTaskUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['task'];
+      let postBody = opts['createTaskRequest'];
 
       let pathParams = {
       };
@@ -1362,7 +1362,7 @@ export default class PreReleaseApi {
      * Create a Task
      * Creates a new task as the authenticated user.   This endpoint does not currently support setting Custom Field values.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} opts.task task
+     * @param {module:com.keap.sdk.core/model/CreateTaskRequest} opts.createTaskRequest task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/Task}
      */
     createTaskUsingPOST1(opts) {
@@ -1377,12 +1377,12 @@ export default class PreReleaseApi {
      * Create a User
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} [user] user
+     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} [createUserRequestV2] user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
     createUserUsingPOST1WithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['user'];
+      let postBody = opts['createUserRequestV2'];
 
       let pathParams = {
       };
@@ -1408,7 +1408,7 @@ export default class PreReleaseApi {
      * Create a User
      * Creates a new user record. NB: Users will be invited to the application and remain in the \"Invited\" status until the user accepts the invite. \"Inactive\" users will not take up a user license.
      * @param {Object} opts Optional parameters
-     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} opts.user user
+     * @param {module:com.keap.sdk.core/model/CreateUserRequestV2} opts.createUserRequestV2 user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
     createUserUsingPOST1(opts) {
@@ -4164,12 +4164,12 @@ export default class PreReleaseApi {
      * @param {String} orderId order_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} [order] order
+     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} [restV2PatchOrderRequest] order
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Order} and HTTP response
      */
     patchOrderUsingPATCHWithHttpInfo(orderId, opts) {
       opts = opts || {};
-      let postBody = opts['order'];
+      let postBody = opts['restV2PatchOrderRequest'];
       // verify the required parameter 'orderId' is set
       if (orderId === undefined || orderId === null) {
         throw new Error("Missing the required parameter 'orderId' when calling patchOrderUsingPATCH");
@@ -4203,7 +4203,7 @@ export default class PreReleaseApi {
      * @param {String} orderId order_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} opts.order order
+     * @param {module:com.keap.sdk.core/model/RestV2PatchOrderRequest} opts.restV2PatchOrderRequest order
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Order}
      */
     patchOrderUsingPATCH(orderId, opts) {
@@ -4332,12 +4332,12 @@ export default class PreReleaseApi {
      * @param {String} taskId task_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} [task] task
+     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} [createPatchTaskRequest] task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/UpdateTaskResponse} and HTTP response
      */
     patchTaskUsingPATCHWithHttpInfo(taskId, opts) {
       opts = opts || {};
-      let postBody = opts['task'];
+      let postBody = opts['createPatchTaskRequest'];
       // verify the required parameter 'taskId' is set
       if (taskId === undefined || taskId === null) {
         throw new Error("Missing the required parameter 'taskId' when calling patchTaskUsingPATCH");
@@ -4371,7 +4371,7 @@ export default class PreReleaseApi {
      * @param {String} taskId task_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} opts.task task
+     * @param {module:com.keap.sdk.core/model/CreatePatchTaskRequest} opts.createPatchTaskRequest task
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/UpdateTaskResponse}
      */
     patchTaskUsingPATCH(taskId, opts) {
@@ -4388,12 +4388,12 @@ export default class PreReleaseApi {
      * @param {String} userId user_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} [user] user
+     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} [patchUserRequestV2] user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/User} and HTTP response
      */
     patchUserUsingPATCHWithHttpInfo(userId, opts) {
       opts = opts || {};
-      let postBody = opts['user'];
+      let postBody = opts['patchUserRequestV2'];
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling patchUserUsingPATCH");
@@ -4427,7 +4427,7 @@ export default class PreReleaseApi {
      * @param {String} userId user_id
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} opts.user user
+     * @param {module:com.keap.sdk.core/model/PatchUserRequestV2} opts.patchUserRequestV2 user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/User}
      */
     patchUserUsingPATCH(userId, opts) {
@@ -4442,18 +4442,18 @@ export default class PreReleaseApi {
      * Remove an Affiliate from a Commission Program
      * Removes an Affiliate from a Commission Program
      * @param {String} id id
-     * @param {module:com.keap.sdk.core/model/AffiliateRemoveFromProgramRequest} removeFromProgramRequest removeFromProgramRequest
+     * @param {module:com.keap.sdk.core/model/AffiliateRemoveFromProgramRequest} affiliateRemoveFromProgramRequest removeFromProgramRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest) {
-      let postBody = removeFromProgramRequest;
+    removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest) {
+      let postBody = affiliateRemoveFromProgramRequest;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling removeAffiliateFromProgramUsingPOST");
       }
-      // verify the required parameter 'removeFromProgramRequest' is set
-      if (removeFromProgramRequest === undefined || removeFromProgramRequest === null) {
-        throw new Error("Missing the required parameter 'removeFromProgramRequest' when calling removeAffiliateFromProgramUsingPOST");
+      // verify the required parameter 'affiliateRemoveFromProgramRequest' is set
+      if (affiliateRemoveFromProgramRequest === undefined || affiliateRemoveFromProgramRequest === null) {
+        throw new Error("Missing the required parameter 'affiliateRemoveFromProgramRequest' when calling removeAffiliateFromProgramUsingPOST");
       }
 
       let pathParams = {
@@ -4481,11 +4481,11 @@ export default class PreReleaseApi {
      * Remove an Affiliate from a Commission Program
      * Removes an Affiliate from a Commission Program
      * @param {String} id id
-     * @param {module:com.keap.sdk.core/model/AffiliateRemoveFromProgramRequest} removeFromProgramRequest removeFromProgramRequest
+     * @param {module:com.keap.sdk.core/model/AffiliateRemoveFromProgramRequest} affiliateRemoveFromProgramRequest removeFromProgramRequest
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    removeAffiliateFromProgramUsingPOST(id, removeFromProgramRequest) {
-      return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, removeFromProgramRequest)
+    removeAffiliateFromProgramUsingPOST(id, affiliateRemoveFromProgramRequest) {
+      return this.removeAffiliateFromProgramUsingPOSTWithHttpInfo(id, affiliateRemoveFromProgramRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -4714,21 +4714,21 @@ export default class PreReleaseApi {
      * Update a Custom Field
      * Updates a custom field of the specified type and options to the Affiliate object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateAffiliateCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateAffiliateCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateAffiliateCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -4757,13 +4757,13 @@ export default class PreReleaseApi {
      * Update a Custom Field
      * Updates a custom field of the specified type and options to the Affiliate object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateAffiliateCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -4774,21 +4774,21 @@ export default class PreReleaseApi {
      * Update a Category Discount
      * Update a Category Discount.
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CategoryDiscount} and HTTP response
      */
-    updateDiscountUsingPATCHWithHttpInfo(discountId, request, opts) {
+    updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = createUpdateDiscountRequest;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
         throw new Error("Missing the required parameter 'discountId' when calling updateDiscountUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateDiscountUsingPATCH");
+      // verify the required parameter 'createUpdateDiscountRequest' is set
+      if (createUpdateDiscountRequest === undefined || createUpdateDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'createUpdateDiscountRequest' when calling updateDiscountUsingPATCH");
       }
 
       let pathParams = {
@@ -4817,13 +4817,13 @@ export default class PreReleaseApi {
      * Update a Category Discount
      * Update a Category Discount.
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateUpdateDiscountRequest} createUpdateDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CategoryDiscount}
      */
-    updateDiscountUsingPATCH(discountId, request, opts) {
-      return this.updateDiscountUsingPATCHWithHttpInfo(discountId, request, opts)
+    updateDiscountUsingPATCH(discountId, createUpdateDiscountRequest, opts) {
+      return this.updateDiscountUsingPATCHWithHttpInfo(discountId, createUpdateDiscountRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -4834,21 +4834,21 @@ export default class PreReleaseApi {
      * Update a Shipping Discount
      * Updates a Shipping Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} updateShippingDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/ShippingDiscount} and HTTP response
      */
-    updateDiscountUsingPATCH1WithHttpInfo(discountId, request, opts) {
+    updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateShippingDiscountRequest;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
         throw new Error("Missing the required parameter 'discountId' when calling updateDiscountUsingPATCH1");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateDiscountUsingPATCH1");
+      // verify the required parameter 'updateShippingDiscountRequest' is set
+      if (updateShippingDiscountRequest === undefined || updateShippingDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'updateShippingDiscountRequest' when calling updateDiscountUsingPATCH1");
       }
 
       let pathParams = {
@@ -4877,13 +4877,13 @@ export default class PreReleaseApi {
      * Update a Shipping Discount
      * Updates a Shipping Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest} updateShippingDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/ShippingDiscount}
      */
-    updateDiscountUsingPATCH1(discountId, request, opts) {
-      return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, request, opts)
+    updateDiscountUsingPATCH1(discountId, updateShippingDiscountRequest, opts) {
+      return this.updateDiscountUsingPATCH1WithHttpInfo(discountId, updateShippingDiscountRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -4894,21 +4894,21 @@ export default class PreReleaseApi {
      * Update a Custom Field
      * Updates a custom field of the specified type and options to the Note object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateNotesCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateNotesCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateNotesCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -4937,13 +4937,13 @@ export default class PreReleaseApi {
      * Update a Custom Field
      * Updates a custom field of the specified type and options to the Note object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateNotesCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -4954,21 +4954,21 @@ export default class PreReleaseApi {
      * Update a Opportunity's Custom Field
      * Updates a custom field of the specified type and options to the Opportunity object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateOpportunityCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateOpportunityCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -4997,13 +4997,13 @@ export default class PreReleaseApi {
      * Update a Opportunity's Custom Field
      * Updates a custom field of the specified type and options to the Opportunity object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateOpportunityCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateOpportunityCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateOpportunityCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5014,21 +5014,21 @@ export default class PreReleaseApi {
      * Update an Opportunity Stage
      * Updates specified values of a given Opportunity Stage
      * @param {String} stageId stage_id
-     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} updateOpportunityStageRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage} and HTTP response
      */
-    updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, opts) {
+    updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateOpportunityStageRequest;
       // verify the required parameter 'stageId' is set
       if (stageId === undefined || stageId === null) {
         throw new Error("Missing the required parameter 'stageId' when calling updateOpportunityStageUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityStageUsingPATCH");
+      // verify the required parameter 'updateOpportunityStageRequest' is set
+      if (updateOpportunityStageRequest === undefined || updateOpportunityStageRequest === null) {
+        throw new Error("Missing the required parameter 'updateOpportunityStageRequest' when calling updateOpportunityStageUsingPATCH");
       }
 
       let pathParams = {
@@ -5057,13 +5057,13 @@ export default class PreReleaseApi {
      * Update an Opportunity Stage
      * Updates specified values of a given Opportunity Stage
      * @param {String} stageId stage_id
-     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOpportunityStageRequest} updateOpportunityStageRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestOpportunityStage}
      */
-    updateOpportunityStageUsingPATCH(stageId, request, opts) {
-      return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, request, opts)
+    updateOpportunityStageUsingPATCH(stageId, updateOpportunityStageRequest, opts) {
+      return this.updateOpportunityStageUsingPATCHWithHttpInfo(stageId, updateOpportunityStageRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5074,21 +5074,21 @@ export default class PreReleaseApi {
      * Update an opportunity
      * Updates specified values of a given opportunity
      * @param {String} opportunityId opportunity_id
-     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} request request
+     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} patchOpportunityRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity} and HTTP response
      */
-    updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, opts) {
+    updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = patchOpportunityRequest;
       // verify the required parameter 'opportunityId' is set
       if (opportunityId === undefined || opportunityId === null) {
         throw new Error("Missing the required parameter 'opportunityId' when calling updateOpportunityUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOpportunityUsingPATCH");
+      // verify the required parameter 'patchOpportunityRequest' is set
+      if (patchOpportunityRequest === undefined || patchOpportunityRequest === null) {
+        throw new Error("Missing the required parameter 'patchOpportunityRequest' when calling updateOpportunityUsingPATCH");
       }
 
       let pathParams = {
@@ -5117,13 +5117,13 @@ export default class PreReleaseApi {
      * Update an opportunity
      * Updates specified values of a given opportunity
      * @param {String} opportunityId opportunity_id
-     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} request request
+     * @param {module:com.keap.sdk.core/model/PatchOpportunityRequest} patchOpportunityRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/RestV2Opportunity}
      */
-    updateOpportunityUsingPATCH(opportunityId, request, opts) {
-      return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, request, opts)
+    updateOpportunityUsingPATCH(opportunityId, patchOpportunityRequest, opts) {
+      return this.updateOpportunityUsingPATCHWithHttpInfo(opportunityId, patchOpportunityRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5134,21 +5134,21 @@ export default class PreReleaseApi {
      * Update an Order's Custom Field
      * Updates a custom field of the specified type and options to the Order object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateOrderCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOrderCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateOrderCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -5177,13 +5177,13 @@ export default class PreReleaseApi {
      * Update an Order's Custom Field
      * Updates a custom field of the specified type and options to the Order object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateOrderCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5194,21 +5194,21 @@ export default class PreReleaseApi {
      * Update an Order Total Discount
      * Updates an Order Total Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} updateOrderTotalDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount} and HTTP response
      */
-    updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, opts) {
+    updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateOrderTotalDiscountRequest;
       // verify the required parameter 'discountId' is set
       if (discountId === undefined || discountId === null) {
         throw new Error("Missing the required parameter 'discountId' when calling updateOrderTotalDiscountUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateOrderTotalDiscountUsingPATCH");
+      // verify the required parameter 'updateOrderTotalDiscountRequest' is set
+      if (updateOrderTotalDiscountRequest === undefined || updateOrderTotalDiscountRequest === null) {
+        throw new Error("Missing the required parameter 'updateOrderTotalDiscountRequest' when calling updateOrderTotalDiscountUsingPATCH");
       }
 
       let pathParams = {
@@ -5237,13 +5237,13 @@ export default class PreReleaseApi {
      * Update an Order Total Discount
      * Updates an Order Total Discount
      * @param {String} discountId discount_id
-     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateOrderTotalDiscountRequest} updateOrderTotalDiscountRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/OrderTotalDiscount}
      */
-    updateOrderTotalDiscountUsingPATCH(discountId, request, opts) {
-      return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, opts)
+    updateOrderTotalDiscountUsingPATCH(discountId, updateOrderTotalDiscountRequest, opts) {
+      return this.updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5254,18 +5254,18 @@ export default class PreReleaseApi {
      * Update an Affiliate Link
      * Updates an Affiliate Link
      * @param {String} redirectId redirect_id
-     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} createOrPatchAffiliateLinkRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/AffiliateLink} and HTTP response
      */
-    updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request) {
-      let postBody = request;
+    updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest) {
+      let postBody = createOrPatchAffiliateLinkRequest;
       // verify the required parameter 'redirectId' is set
       if (redirectId === undefined || redirectId === null) {
         throw new Error("Missing the required parameter 'redirectId' when calling updateRedirectLinkUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateRedirectLinkUsingPATCH");
+      // verify the required parameter 'createOrPatchAffiliateLinkRequest' is set
+      if (createOrPatchAffiliateLinkRequest === undefined || createOrPatchAffiliateLinkRequest === null) {
+        throw new Error("Missing the required parameter 'createOrPatchAffiliateLinkRequest' when calling updateRedirectLinkUsingPATCH");
       }
 
       let pathParams = {
@@ -5293,11 +5293,11 @@ export default class PreReleaseApi {
      * Update an Affiliate Link
      * Updates an Affiliate Link
      * @param {String} redirectId redirect_id
-     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} request request
+     * @param {module:com.keap.sdk.core/model/CreateOrPatchAffiliateLinkRequest} createOrPatchAffiliateLinkRequest request
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/AffiliateLink}
      */
-    updateRedirectLinkUsingPATCH(redirectId, request) {
-      return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, request)
+    updateRedirectLinkUsingPATCH(redirectId, createOrPatchAffiliateLinkRequest) {
+      return this.updateRedirectLinkUsingPATCHWithHttpInfo(redirectId, createOrPatchAffiliateLinkRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5308,21 +5308,21 @@ export default class PreReleaseApi {
      * Update a Subscription's Custom Field
      * Updates a custom field of the specified type and options to the Subscription object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateSubscriptionCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateSubscriptionCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateSubscriptionCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -5351,13 +5351,13 @@ export default class PreReleaseApi {
      * Update a Subscription's Custom Field
      * Updates a custom field of the specified type and options to the Subscription object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateSubscriptionCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateSubscriptionCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateSubscriptionCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -5368,21 +5368,21 @@ export default class PreReleaseApi {
      * Update a Task's Custom Field
      * Updates a custom field of the specified type and options to the Task object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData} and HTTP response
      */
-    updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts) {
+    updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts) {
       opts = opts || {};
-      let postBody = request;
+      let postBody = updateCustomFieldMetaDataRequest;
       // verify the required parameter 'customFieldId' is set
       if (customFieldId === undefined || customFieldId === null) {
         throw new Error("Missing the required parameter 'customFieldId' when calling updateTaskCustomFieldUsingPATCH");
       }
-      // verify the required parameter 'request' is set
-      if (request === undefined || request === null) {
-        throw new Error("Missing the required parameter 'request' when calling updateTaskCustomFieldUsingPATCH");
+      // verify the required parameter 'updateCustomFieldMetaDataRequest' is set
+      if (updateCustomFieldMetaDataRequest === undefined || updateCustomFieldMetaDataRequest === null) {
+        throw new Error("Missing the required parameter 'updateCustomFieldMetaDataRequest' when calling updateTaskCustomFieldUsingPATCH");
       }
 
       let pathParams = {
@@ -5411,13 +5411,13 @@ export default class PreReleaseApi {
      * Update a Task's Custom Field
      * Updates a custom field of the specified type and options to the Task object.
      * @param {String} customFieldId custom_field_id
-     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} request request
+     * @param {module:com.keap.sdk.core/model/UpdateCustomFieldMetaDataRequest} updateCustomFieldMetaDataRequest request
      * @param {Object} opts Optional parameters
      * @param {Array.<module:com.keap.sdk.core/model/String>} opts.updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:com.keap.sdk.core/model/CustomFieldMetaData}
      */
-    updateTaskCustomFieldUsingPATCH(customFieldId, request, opts) {
-      return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, opts)
+    updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts) {
+      return this.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

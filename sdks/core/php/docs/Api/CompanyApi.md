@@ -14,7 +14,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 ## `createCompanyUsingPOST1()`
 
 ```php
-createCompanyUsingPOST1($company): \Com\Keap\Sdk\Core\Model\Company
+createCompanyUsingPOST1($create_company_request): \Com\Keap\Sdk\Core\Model\Company
 ```
 
 Create a Company
@@ -33,10 +33,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$company = new \Com\Keap\Sdk\Core\Model\CreateCompanyRequest(); // \Com\Keap\Sdk\Core\Model\CreateCompanyRequest | company
+$create_company_request = new \Com\Keap\Sdk\Core\Model\CreateCompanyRequest(); // \Com\Keap\Sdk\Core\Model\CreateCompanyRequest | company
 
 try {
-    $result = $apiInstance->createCompanyUsingPOST1($company);
+    $result = $apiInstance->createCompanyUsingPOST1($create_company_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CompanyApi->createCompanyUsingPOST1: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **company** | [**\Com\Keap\Sdk\Core\Model\CreateCompanyRequest**](../Model/CreateCompanyRequest.md)| company | [optional] |
+| **create_company_request** | [**\Com\Keap\Sdk\Core\Model\CreateCompanyRequest**](../Model/CreateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
@@ -243,7 +243,7 @@ No authorization required
 ## `patchCompanyUsingPATCH()`
 
 ```php
-patchCompanyUsingPATCH($company_id, $update_mask, $company): \Com\Keap\Sdk\Core\Model\Company
+patchCompanyUsingPATCH($company_id, $update_mask, $patch_company_request): \Com\Keap\Sdk\Core\Model\Company
 ```
 
 Update a Company
@@ -264,10 +264,10 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
 );
 $company_id = 'company_id_example'; // string | company_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$company = new \Com\Keap\Sdk\Core\Model\PatchCompanyRequest(); // \Com\Keap\Sdk\Core\Model\PatchCompanyRequest | company
+$patch_company_request = new \Com\Keap\Sdk\Core\Model\PatchCompanyRequest(); // \Com\Keap\Sdk\Core\Model\PatchCompanyRequest | company
 
 try {
-    $result = $apiInstance->patchCompanyUsingPATCH($company_id, $update_mask, $company);
+    $result = $apiInstance->patchCompanyUsingPATCH($company_id, $update_mask, $patch_company_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CompanyApi->patchCompanyUsingPATCH: ', $e->getMessage(), PHP_EOL;
@@ -280,7 +280,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **company_id** | **string**| company_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **company** | [**\Com\Keap\Sdk\Core\Model\PatchCompanyRequest**](../Model/PatchCompanyRequest.md)| company | [optional] |
+| **patch_company_request** | [**\Com\Keap\Sdk\Core\Model\PatchCompanyRequest**](../Model/PatchCompanyRequest.md)| company | [optional] |
 
 ### Return type
 

@@ -13,7 +13,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createuserusingpost1"></a>
 # **CreateUserUsingPOST1**
-> User CreateUserUsingPOST1 (CreateUserRequestV2? user = null)
+> User CreateUserUsingPOST1 (CreateUserRequestV2? createUserRequestV2 = null)
 
 Create a User
 
@@ -36,12 +36,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new UsersApi(config);
-            var user = new CreateUserRequestV2?(); // CreateUserRequestV2? | user (optional) 
+            var createUserRequestV2 = new CreateUserRequestV2?(); // CreateUserRequestV2? | user (optional) 
 
             try
             {
                 // Create a User
-                User result = apiInstance.CreateUserUsingPOST1(user);
+                User result = apiInstance.CreateUserUsingPOST1(createUserRequestV2);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create a User
-    ApiResponse<User> response = apiInstance.CreateUserUsingPOST1WithHttpInfo(user);
+    ApiResponse<User> response = apiInstance.CreateUserUsingPOST1WithHttpInfo(createUserRequestV2);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,7 +79,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **user** | [**CreateUserRequestV2?**](CreateUserRequestV2?.md) | user | [optional]  |
+| **createUserRequestV2** | [**CreateUserRequestV2?**](CreateUserRequestV2?.md) | user | [optional]  |
 
 ### Return type
 
@@ -479,7 +479,7 @@ No authorization required
 
 <a id="patchuserusingpatch"></a>
 # **PatchUserUsingPATCH**
-> User PatchUserUsingPATCH (string userId, List<string>? updateMask = null, PatchUserRequestV2? user = null)
+> User PatchUserUsingPATCH (string userId, List<string>? updateMask = null, PatchUserRequestV2? patchUserRequestV2 = null)
 
 Update User
 
@@ -504,12 +504,12 @@ namespace Example
             var apiInstance = new UsersApi(config);
             var userId = "userId_example";  // string | user_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var user = new PatchUserRequestV2?(); // PatchUserRequestV2? | user (optional) 
+            var patchUserRequestV2 = new PatchUserRequestV2?(); // PatchUserRequestV2? | user (optional) 
 
             try
             {
                 // Update User
-                User result = apiInstance.PatchUserUsingPATCH(userId, updateMask, user);
+                User result = apiInstance.PatchUserUsingPATCH(userId, updateMask, patchUserRequestV2);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -530,7 +530,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update User
-    ApiResponse<User> response = apiInstance.PatchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
+    ApiResponse<User> response = apiInstance.PatchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -549,7 +549,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **userId** | **string** | user_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **user** | [**PatchUserRequestV2?**](PatchUserRequestV2?.md) | user | [optional]  |
+| **patchUserRequestV2** | [**PatchUserRequestV2?**](PatchUserRequestV2?.md) | user | [optional]  |
 
 ### Return type
 

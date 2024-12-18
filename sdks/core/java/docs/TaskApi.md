@@ -27,7 +27,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 ## createTaskCustomFieldUsingPOST1
 
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -49,9 +49,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TaskApi apiInstance = new TaskApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            CreateCustomFieldResponse result = apiInstance.createTaskCustomFieldUsingPOST1(customField);
+            CreateCustomFieldResponse result = apiInstance.createTaskCustomFieldUsingPOST1(createCustomFieldRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TaskApi#createTaskCustomFieldUsingPOST1");
@@ -69,7 +69,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -94,7 +94,7 @@ No authorization required
 
 ## createTaskCustomFieldUsingPOST1WithHttpInfo
 
-> ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1 createTaskCustomFieldUsingPOST1WithHttpInfo(customField)
+> ApiResponse<CreateCustomFieldResponse> createTaskCustomFieldUsingPOST1 createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest)
 
 Create a Custom Field
 
@@ -117,9 +117,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TaskApi apiInstance = new TaskApi(defaultClient);
-        CreateCustomFieldRequest customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+        CreateCustomFieldRequest createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
         try {
-            ApiResponse<CreateCustomFieldResponse> response = apiInstance.createTaskCustomFieldUsingPOST1WithHttpInfo(customField);
+            ApiResponse<CreateCustomFieldResponse> response = apiInstance.createTaskCustomFieldUsingPOST1WithHttpInfo(createCustomFieldRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -139,7 +139,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | |
 
 ### Return type
 
@@ -165,7 +165,7 @@ No authorization required
 
 ## createTaskUsingPOST1
 
-> Task createTaskUsingPOST1(task)
+> Task createTaskUsingPOST1(createTaskRequest)
 
 Create a Task
 
@@ -187,9 +187,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TaskApi apiInstance = new TaskApi(defaultClient);
-        CreateTaskRequest task = new CreateTaskRequest(); // CreateTaskRequest | task
+        CreateTaskRequest createTaskRequest = new CreateTaskRequest(); // CreateTaskRequest | task
         try {
-            Task result = apiInstance.createTaskUsingPOST1(task);
+            Task result = apiInstance.createTaskUsingPOST1(createTaskRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TaskApi#createTaskUsingPOST1");
@@ -207,7 +207,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
+| **createTaskRequest** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -232,7 +232,7 @@ No authorization required
 
 ## createTaskUsingPOST1WithHttpInfo
 
-> ApiResponse<Task> createTaskUsingPOST1 createTaskUsingPOST1WithHttpInfo(task)
+> ApiResponse<Task> createTaskUsingPOST1 createTaskUsingPOST1WithHttpInfo(createTaskRequest)
 
 Create a Task
 
@@ -255,9 +255,9 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         TaskApi apiInstance = new TaskApi(defaultClient);
-        CreateTaskRequest task = new CreateTaskRequest(); // CreateTaskRequest | task
+        CreateTaskRequest createTaskRequest = new CreateTaskRequest(); // CreateTaskRequest | task
         try {
-            ApiResponse<Task> response = apiInstance.createTaskUsingPOST1WithHttpInfo(task);
+            ApiResponse<Task> response = apiInstance.createTaskUsingPOST1WithHttpInfo(createTaskRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -277,7 +277,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **task** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
+| **createTaskRequest** | [**CreateTaskRequest**](CreateTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -879,7 +879,7 @@ No authorization required
 
 ## patchTaskUsingPATCH
 
-> UpdateTaskResponse patchTaskUsingPATCH(taskId, updateMask, task)
+> UpdateTaskResponse patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest)
 
 Update a Task
 
@@ -903,9 +903,9 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreatePatchTaskRequest task = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
+        CreatePatchTaskRequest createPatchTaskRequest = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
         try {
-            UpdateTaskResponse result = apiInstance.patchTaskUsingPATCH(taskId, updateMask, task);
+            UpdateTaskResponse result = apiInstance.patchTaskUsingPATCH(taskId, updateMask, createPatchTaskRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TaskApi#patchTaskUsingPATCH");
@@ -925,7 +925,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **taskId** | **String**| task_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, title, description, type, priority, completion_time, due_time, remind_time_mins, assigned_to_user_id, contact_id, completed] |
-| **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
+| **createPatchTaskRequest** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -951,7 +951,7 @@ No authorization required
 
 ## patchTaskUsingPATCHWithHttpInfo
 
-> ApiResponse<UpdateTaskResponse> patchTaskUsingPATCH patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task)
+> ApiResponse<UpdateTaskResponse> patchTaskUsingPATCH patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest)
 
 Update a Task
 
@@ -976,9 +976,9 @@ public class Example {
         TaskApi apiInstance = new TaskApi(defaultClient);
         String taskId = "taskId_example"; // String | task_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreatePatchTaskRequest task = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
+        CreatePatchTaskRequest createPatchTaskRequest = new CreatePatchTaskRequest(); // CreatePatchTaskRequest | task
         try {
-            ApiResponse<UpdateTaskResponse> response = apiInstance.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, task);
+            ApiResponse<UpdateTaskResponse> response = apiInstance.patchTaskUsingPATCHWithHttpInfo(taskId, updateMask, createPatchTaskRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1000,7 +1000,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **taskId** | **String**| task_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, title, description, type, priority, completion_time, due_time, remind_time_mins, assigned_to_user_id, contact_id, completed] |
-| **task** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
+| **createPatchTaskRequest** | [**CreatePatchTaskRequest**](CreatePatchTaskRequest.md)| task | [optional] |
 
 ### Return type
 
@@ -1159,7 +1159,7 @@ No authorization required
 
 ## updateTaskCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Task&#39;s Custom Field
 
@@ -1182,10 +1182,10 @@ public class Example {
 
         TaskApi apiInstance = new TaskApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            CustomFieldMetaData result = apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, request, updateMask);
+            CustomFieldMetaData result = apiInstance.updateTaskCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TaskApi#updateTaskCustomFieldUsingPATCH");
@@ -1204,7 +1204,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
@@ -1231,7 +1231,7 @@ No authorization required
 
 ## updateTaskCustomFieldUsingPATCHWithHttpInfo
 
-> ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCH updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask)
+> ApiResponse<CustomFieldMetaData> updateTaskCustomFieldUsingPATCH updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
 
 Update a Task&#39;s Custom Field
 
@@ -1255,10 +1255,10 @@ public class Example {
 
         TaskApi apiInstance = new TaskApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
-        UpdateCustomFieldMetaDataRequest request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+        UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
-            ApiResponse<CustomFieldMetaData> response = apiInstance.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+            ApiResponse<CustomFieldMetaData> response = apiInstance.updateTaskCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -1279,7 +1279,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type

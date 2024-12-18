@@ -19,7 +19,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 <a id="createordercustomfieldusingpost"></a>
 # **CreateOrderCustomFieldUsingPOST**
-> CustomFieldMetaData CreateOrderCustomFieldUsingPOST (CreateCustomFieldRequest customField)
+> CustomFieldMetaData CreateOrderCustomFieldUsingPOST (CreateCustomFieldRequest createCustomFieldRequest)
 
 Create an Order's Custom Field
 
@@ -42,12 +42,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OrdersApi(config);
-            var customField = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+            var createCustomFieldRequest = new CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
 
             try
             {
                 // Create an Order's Custom Field
-                CustomFieldMetaData result = apiInstance.CreateOrderCustomFieldUsingPOST(customField);
+                CustomFieldMetaData result = apiInstance.CreateOrderCustomFieldUsingPOST(createCustomFieldRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -68,7 +68,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Order's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOrderCustomFieldUsingPOSTWithHttpInfo(customField);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.CreateOrderCustomFieldUsingPOSTWithHttpInfo(createCustomFieldRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -85,7 +85,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
+| **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md) | customField |  |
 
 ### Return type
 
@@ -207,7 +207,7 @@ No authorization required
 
 <a id="createorderusingpost1"></a>
 # **CreateOrderUsingPOST1**
-> RestV2Order CreateOrderUsingPOST1 (RestCreateOrderRequest createOrderRequest)
+> RestV2Order CreateOrderUsingPOST1 (RestCreateOrderRequest restCreateOrderRequest)
 
 Create an Order
 
@@ -230,12 +230,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OrdersApi(config);
-            var createOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+            var restCreateOrderRequest = new RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
 
             try
             {
                 // Create an Order
-                RestV2Order result = apiInstance.CreateOrderUsingPOST1(createOrderRequest);
+                RestV2Order result = apiInstance.CreateOrderUsingPOST1(restCreateOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -256,7 +256,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create an Order
-    ApiResponse<RestV2Order> response = apiInstance.CreateOrderUsingPOST1WithHttpInfo(createOrderRequest);
+    ApiResponse<RestV2Order> response = apiInstance.CreateOrderUsingPOST1WithHttpInfo(restCreateOrderRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -273,7 +273,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md) | createOrderRequest |  |
+| **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md) | createOrderRequest |  |
 
 ### Return type
 
@@ -871,7 +871,7 @@ No authorization required
 
 <a id="patchorderusingpatch"></a>
 # **PatchOrderUsingPATCH**
-> RestV2Order PatchOrderUsingPATCH (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? order = null)
+> RestV2Order PatchOrderUsingPATCH (string orderId, List<string>? updateMask = null, RestV2PatchOrderRequest? restV2PatchOrderRequest = null)
 
 Update an Order
 
@@ -896,12 +896,12 @@ namespace Example
             var apiInstance = new OrdersApi(config);
             var orderId = "orderId_example";  // string | order_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var order = new RestV2PatchOrderRequest?(); // RestV2PatchOrderRequest? | order (optional) 
+            var restV2PatchOrderRequest = new RestV2PatchOrderRequest?(); // RestV2PatchOrderRequest? | order (optional) 
 
             try
             {
                 // Update an Order
-                RestV2Order result = apiInstance.PatchOrderUsingPATCH(orderId, updateMask, order);
+                RestV2Order result = apiInstance.PatchOrderUsingPATCH(orderId, updateMask, restV2PatchOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -922,7 +922,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Order
-    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCHWithHttpInfo(orderId, updateMask, order);
+    ApiResponse<RestV2Order> response = apiInstance.PatchOrderUsingPATCHWithHttpInfo(orderId, updateMask, restV2PatchOrderRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -941,7 +941,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **orderId** | **string** | order_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **order** | [**RestV2PatchOrderRequest?**](RestV2PatchOrderRequest?.md) | order | [optional]  |
+| **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest?**](RestV2PatchOrderRequest?.md) | order | [optional]  |
 
 ### Return type
 
@@ -1058,7 +1058,7 @@ No authorization required
 
 <a id="updateordercustomfieldusingpatch"></a>
 # **UpdateOrderCustomFieldUsingPATCH**
-> CustomFieldMetaData UpdateOrderCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest request, List<string>? updateMask = null)
+> CustomFieldMetaData UpdateOrderCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
 
 Update an Order's Custom Field
 
@@ -1082,13 +1082,13 @@ namespace Example
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new OrdersApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
-            var request = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+            var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
                 // Update an Order's Custom Field
-                CustomFieldMetaData result = apiInstance.UpdateOrderCustomFieldUsingPATCH(customFieldId, request, updateMask);
+                CustomFieldMetaData result = apiInstance.UpdateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1109,7 +1109,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Order's Custom Field
-    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, request, updateMask);
+    ApiResponse<CustomFieldMetaData> response = apiInstance.UpdateOrderCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1127,7 +1127,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
-| **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
+| **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type

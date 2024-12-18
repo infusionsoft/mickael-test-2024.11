@@ -563,16 +563,16 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createTagCategoryUsingPOST1($request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
+    public function createTagCategoryUsingPOST1($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
-        list($response) = $this->createTagCategoryUsingPOST1WithHttpInfo($request, $contentType);
+        list($response) = $this->createTagCategoryUsingPOST1WithHttpInfo($create_update_tag_category_request, $contentType);
         return $response;
     }
 
@@ -581,16 +581,16 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTagCategoryUsingPOST1WithHttpInfo($request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
+    public function createTagCategoryUsingPOST1WithHttpInfo($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
-        $request = $this->createTagCategoryUsingPOST1Request($request, $contentType);
+        $request = $this->createTagCategoryUsingPOST1Request($create_update_tag_category_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -776,15 +776,15 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTagCategoryUsingPOST1Async($request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
+    public function createTagCategoryUsingPOST1Async($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
-        return $this->createTagCategoryUsingPOST1AsyncWithHttpInfo($request, $contentType)
+        return $this->createTagCategoryUsingPOST1AsyncWithHttpInfo($create_update_tag_category_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -797,16 +797,16 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTagCategoryUsingPOST1AsyncWithHttpInfo($request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
+    public function createTagCategoryUsingPOST1AsyncWithHttpInfo($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
-        $request = $this->createTagCategoryUsingPOST1Request($request, $contentType);
+        $request = $this->createTagCategoryUsingPOST1Request($create_update_tag_category_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -847,19 +847,19 @@ class TagsApi
     /**
      * Create request for operation 'createTagCategoryUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $request request (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTagCategoryUsingPOST1Request($request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
+    public function createTagCategoryUsingPOST1Request($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
 
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'create_update_tag_category_request' is set
+        if ($create_update_tag_category_request === null || (is_array($create_update_tag_category_request) && count($create_update_tag_category_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling createTagCategoryUsingPOST1'
+                'Missing the required parameter $create_update_tag_category_request when calling createTagCategoryUsingPOST1'
             );
         }
 
@@ -882,12 +882,12 @@ class TagsApi
         );
 
         // for model (json/xml)
-        if (isset($request)) {
+        if (isset($create_update_tag_category_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_tag_category_request));
             } else {
-                $httpBody = $request;
+                $httpBody = $create_update_tag_category_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -940,16 +940,16 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function createTagUsingPOST1($tag, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
+    public function createTagUsingPOST1($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
-        list($response) = $this->createTagUsingPOST1WithHttpInfo($tag, $contentType);
+        list($response) = $this->createTagUsingPOST1WithHttpInfo($create_update_tag_request, $contentType);
         return $response;
     }
 
@@ -958,16 +958,16 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTagUsingPOST1WithHttpInfo($tag, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
+    public function createTagUsingPOST1WithHttpInfo($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
-        $request = $this->createTagUsingPOST1Request($tag, $contentType);
+        $request = $this->createTagUsingPOST1Request($create_update_tag_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1153,15 +1153,15 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTagUsingPOST1Async($tag, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
+    public function createTagUsingPOST1Async($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
-        return $this->createTagUsingPOST1AsyncWithHttpInfo($tag, $contentType)
+        return $this->createTagUsingPOST1AsyncWithHttpInfo($create_update_tag_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1174,16 +1174,16 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTagUsingPOST1AsyncWithHttpInfo($tag, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
+    public function createTagUsingPOST1AsyncWithHttpInfo($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
-        $request = $this->createTagUsingPOST1Request($tag, $contentType);
+        $request = $this->createTagUsingPOST1Request($create_update_tag_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1224,19 +1224,19 @@ class TagsApi
     /**
      * Create request for operation 'createTagUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (required)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTagUsingPOST1Request($tag, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
+    public function createTagUsingPOST1Request($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
 
-        // verify the required parameter 'tag' is set
-        if ($tag === null || (is_array($tag) && count($tag) === 0)) {
+        // verify the required parameter 'create_update_tag_request' is set
+        if ($create_update_tag_request === null || (is_array($create_update_tag_request) && count($create_update_tag_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $tag when calling createTagUsingPOST1'
+                'Missing the required parameter $create_update_tag_request when calling createTagUsingPOST1'
             );
         }
 
@@ -1259,12 +1259,12 @@ class TagsApi
         );
 
         // for model (json/xml)
-        if (isset($tag)) {
+        if (isset($create_update_tag_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($tag));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_tag_request));
             } else {
-                $httpBody = $tag;
+                $httpBody = $create_update_tag_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3003,8 +3003,8 @@ class TagsApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3012,8 +3012,8 @@ class TagsApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3021,8 +3021,8 @@ class TagsApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3030,8 +3030,8 @@ class TagsApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3482,8 +3482,8 @@ class TagsApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3491,8 +3491,8 @@ class TagsApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3500,8 +3500,8 @@ class TagsApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3509,8 +3509,8 @@ class TagsApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -3949,8 +3949,8 @@ class TagsApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3958,8 +3958,8 @@ class TagsApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3967,8 +3967,8 @@ class TagsApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -3976,8 +3976,8 @@ class TagsApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -4408,8 +4408,8 @@ class TagsApi
             $filter,
             'filter', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -4417,8 +4417,8 @@ class TagsApi
             $order_by,
             'order_by', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -4426,8 +4426,8 @@ class TagsApi
             $page_size,
             'page_size', // param base name
             'integer', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
         // query params
@@ -4435,8 +4435,8 @@ class TagsApi
             $page_token,
             'page_token', // param base name
             'string', // openApiType
-            '', // style
-            false, // explode
+            'form', // style
+            true, // explode
             false // required
         ) ?? []);
 
@@ -4503,16 +4503,16 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $tag_category tagCategory (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchTagCategoryUsingPATCH($tag_category_id, $update_mask = null, $tag_category = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
+    public function patchTagCategoryUsingPATCH($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
     {
-        list($response) = $this->patchTagCategoryUsingPATCHWithHttpInfo($tag_category_id, $update_mask, $tag_category, $contentType);
+        list($response) = $this->patchTagCategoryUsingPATCHWithHttpInfo($tag_category_id, $update_mask, $create_update_tag_category_request, $contentType);
         return $response;
     }
 
@@ -4523,16 +4523,16 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $tag_category tagCategory (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchTagCategoryUsingPATCHWithHttpInfo($tag_category_id, $update_mask = null, $tag_category = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
+    public function patchTagCategoryUsingPATCHWithHttpInfo($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
     {
-        $request = $this->patchTagCategoryUsingPATCHRequest($tag_category_id, $update_mask, $tag_category, $contentType);
+        $request = $this->patchTagCategoryUsingPATCHRequest($tag_category_id, $update_mask, $create_update_tag_category_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4755,15 +4755,15 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $tag_category tagCategory (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTagCategoryUsingPATCHAsync($tag_category_id, $update_mask = null, $tag_category = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
+    public function patchTagCategoryUsingPATCHAsync($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
     {
-        return $this->patchTagCategoryUsingPATCHAsyncWithHttpInfo($tag_category_id, $update_mask, $tag_category, $contentType)
+        return $this->patchTagCategoryUsingPATCHAsyncWithHttpInfo($tag_category_id, $update_mask, $create_update_tag_category_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4778,16 +4778,16 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $tag_category tagCategory (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTagCategoryUsingPATCHAsyncWithHttpInfo($tag_category_id, $update_mask = null, $tag_category = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
+    public function patchTagCategoryUsingPATCHAsyncWithHttpInfo($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse';
-        $request = $this->patchTagCategoryUsingPATCHRequest($tag_category_id, $update_mask, $tag_category, $contentType);
+        $request = $this->patchTagCategoryUsingPATCHRequest($tag_category_id, $update_mask, $create_update_tag_category_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4830,13 +4830,13 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $tag_category tagCategory (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchTagCategoryUsingPATCHRequest($tag_category_id, $update_mask = null, $tag_category = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
+    public function patchTagCategoryUsingPATCHRequest($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['patchTagCategoryUsingPATCH'][0])
     {
 
         // verify the required parameter 'tag_category_id' is set
@@ -4884,12 +4884,12 @@ class TagsApi
         );
 
         // for model (json/xml)
-        if (isset($tag_category)) {
+        if (isset($create_update_tag_category_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($tag_category));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_tag_category_request));
             } else {
-                $httpBody = $tag_category;
+                $httpBody = $create_update_tag_category_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4944,16 +4944,16 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Com\Keap\Sdk\Core\Model\UpdateTagResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
      */
-    public function patchTagUsingPATCH($tag_id, $update_mask = null, $tag = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
+    public function patchTagUsingPATCH($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
     {
-        list($response) = $this->patchTagUsingPATCHWithHttpInfo($tag_id, $update_mask, $tag, $contentType);
+        list($response) = $this->patchTagUsingPATCHWithHttpInfo($tag_id, $update_mask, $create_update_tag_request, $contentType);
         return $response;
     }
 
@@ -4964,16 +4964,16 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Com\Keap\Sdk\Core\Model\UpdateTagResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchTagUsingPATCHWithHttpInfo($tag_id, $update_mask = null, $tag = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
+    public function patchTagUsingPATCHWithHttpInfo($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
     {
-        $request = $this->patchTagUsingPATCHRequest($tag_id, $update_mask, $tag, $contentType);
+        $request = $this->patchTagUsingPATCHRequest($tag_id, $update_mask, $create_update_tag_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5196,15 +5196,15 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTagUsingPATCHAsync($tag_id, $update_mask = null, $tag = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
+    public function patchTagUsingPATCHAsync($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
     {
-        return $this->patchTagUsingPATCHAsyncWithHttpInfo($tag_id, $update_mask, $tag, $contentType)
+        return $this->patchTagUsingPATCHAsyncWithHttpInfo($tag_id, $update_mask, $create_update_tag_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5219,16 +5219,16 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTagUsingPATCHAsyncWithHttpInfo($tag_id, $update_mask = null, $tag = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
+    public function patchTagUsingPATCHAsyncWithHttpInfo($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
     {
         $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTagResponse';
-        $request = $this->patchTagUsingPATCHRequest($tag_id, $update_mask, $tag, $contentType);
+        $request = $this->patchTagUsingPATCHRequest($tag_id, $update_mask, $create_update_tag_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5271,13 +5271,13 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $tag tag (optional)
+     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchTagUsingPATCHRequest($tag_id, $update_mask = null, $tag = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
+    public function patchTagUsingPATCHRequest($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['patchTagUsingPATCH'][0])
     {
 
         // verify the required parameter 'tag_id' is set
@@ -5325,12 +5325,12 @@ class TagsApi
         );
 
         // for model (json/xml)
-        if (isset($tag)) {
+        if (isset($create_update_tag_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($tag));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($create_update_tag_request));
             } else {
-                $httpBody = $tag;
+                $httpBody = $create_update_tag_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

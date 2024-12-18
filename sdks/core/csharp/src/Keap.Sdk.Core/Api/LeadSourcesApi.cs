@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Lead Source
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>LeadSource</returns>
-        LeadSource CreateLeadSourceUsingPOST(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0);
+        LeadSource CreateLeadSourceUsingPOST(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0);
 
         /// <summary>
         /// Create a Lead Source
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Lead Source
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of LeadSource</returns>
-        ApiResponse<LeadSource> CreateLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0);
+        ApiResponse<LeadSource> CreateLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0);
         /// <summary>
         /// List Lead Sources
         /// </summary>
@@ -96,11 +96,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Lead Source
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of LeadSource</returns>
-        System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOSTAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOSTAsync(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a Lead Source
@@ -109,11 +109,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new Lead Source
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (LeadSource)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LeadSource>> CreateLeadSourceUsingPOSTWithHttpInfoAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<LeadSource>> CreateLeadSourceUsingPOSTWithHttpInfoAsync(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Lead Sources
         /// </summary>
@@ -269,12 +269,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a Lead Source Creates a new Lead Source
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>LeadSource</returns>
-        public LeadSource CreateLeadSourceUsingPOST(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0)
+        public LeadSource CreateLeadSourceUsingPOST(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = CreateLeadSourceUsingPOSTWithHttpInfo(leadsource);
+            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = CreateLeadSourceUsingPOSTWithHttpInfo(createLeadSourceRequest);
             return localVarResponse.Data;
         }
 
@@ -282,10 +282,10 @@ namespace Keap.Sdk.Core.Api
         /// Create a Lead Source Creates a new Lead Source
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of LeadSource</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<LeadSource> CreateLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<LeadSource> CreateLeadSourceUsingPOSTWithHttpInfo(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -310,7 +310,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = leadsource;
+            localVarRequestOptions.Data = createLeadSourceRequest;
 
             localVarRequestOptions.Operation = "LeadSourcesApi.CreateLeadSourceUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -334,13 +334,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a Lead Source Creates a new Lead Source
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of LeadSource</returns>
-        public async System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOSTAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<LeadSource> CreateLeadSourceUsingPOSTAsync(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = await CreateLeadSourceUsingPOSTWithHttpInfoAsync(leadsource, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<LeadSource> localVarResponse = await CreateLeadSourceUsingPOSTWithHttpInfoAsync(createLeadSourceRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -348,11 +348,11 @@ namespace Keap.Sdk.Core.Api
         /// Create a Lead Source Creates a new Lead Source
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leadsource">leadsource (optional)</param>
+        /// <param name="createLeadSourceRequest">leadsource (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (LeadSource)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<LeadSource>> CreateLeadSourceUsingPOSTWithHttpInfoAsync(CreateLeadSourceRequest? leadsource = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<LeadSource>> CreateLeadSourceUsingPOSTWithHttpInfoAsync(CreateLeadSourceRequest? createLeadSourceRequest = default(CreateLeadSourceRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -378,7 +378,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = leadsource;
+            localVarRequestOptions.Data = createLeadSourceRequest;
 
             localVarRequestOptions.Operation = "LeadSourcesApi.CreateLeadSourceUsingPOST";
             localVarRequestOptions.OperationIndex = operationIndex;

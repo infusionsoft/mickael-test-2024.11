@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## createOrderCustomFieldUsingPOST
 
-> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(createCustomFieldRequest)
 
 Create an Order&#39;s Custom Field
 
@@ -33,8 +33,8 @@ Adds a custom field of the specified type and options to the Order object.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
-let customField = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
-apiInstance.createOrderCustomFieldUsingPOST(customField).then((data) => {
+let createCustomFieldRequest = new KeapCoreServiceCoreSdk.CreateCustomFieldRequest(); // CreateCustomFieldRequest | customField
+apiInstance.createOrderCustomFieldUsingPOST(createCustomFieldRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -47,7 +47,7 @@ apiInstance.createOrderCustomFieldUsingPOST(customField).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
+ **createCustomFieldRequest** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)| customField | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ No authorization required
 
 ## createOrderUsingPOST1
 
-> RestV2Order createOrderUsingPOST1(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(restCreateOrderRequest)
 
 Create an Order
 
@@ -123,8 +123,8 @@ Create a one time Order with Order items.
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
-let createOrderRequest = new KeapCoreServiceCoreSdk.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
-apiInstance.createOrderUsingPOST1(createOrderRequest).then((data) => {
+let restCreateOrderRequest = new KeapCoreServiceCoreSdk.RestCreateOrderRequest(); // RestCreateOrderRequest | createOrderRequest
+apiInstance.createOrderUsingPOST1(restCreateOrderRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -137,7 +137,7 @@ apiInstance.createOrderUsingPOST1(createOrderRequest).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | 
+ **restCreateOrderRequest** | [**RestCreateOrderRequest**](RestCreateOrderRequest.md)| createOrderRequest | 
 
 ### Return type
 
@@ -454,7 +454,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let orderId = "orderId_example"; // String | order_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'order': new KeapCoreServiceCoreSdk.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
+  'restV2PatchOrderRequest': new KeapCoreServiceCoreSdk.RestV2PatchOrderRequest() // RestV2PatchOrderRequest | order
 };
 apiInstance.patchOrderUsingPATCH(orderId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **String**| order_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **order** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
+ **restV2PatchOrderRequest** | [**RestV2PatchOrderRequest**](RestV2PatchOrderRequest.md)| order | [optional] 
 
 ### Return type
 
@@ -529,7 +529,7 @@ No authorization required
 
 ## updateOrderCustomFieldUsingPATCH
 
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, request, opts)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
 
 Update an Order&#39;s Custom Field
 
@@ -542,11 +542,11 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.OrdersApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
-let request = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
+let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
   'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
-apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, opts).then((data) => {
+apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -560,7 +560,7 @@ apiInstance.updateOrderCustomFieldUsingPATCH(customFieldId, request, opts).then(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
- **request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
+ **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type

@@ -99,24 +99,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create an Order Total Discount
    * Creates an Order Total Discount
-   * @param request request (required)
+   * @param createOrderTotalDiscountRequest request (required)
    * @return OrderTotalDiscount
    * @throws ApiException if fails to make API call
    */
-  public OrderTotalDiscount createOrderTotalDiscountUsingPOST(CreateOrderTotalDiscountRequest request) throws ApiException {
-    ApiResponse<OrderTotalDiscount> localVarResponse = createOrderTotalDiscountUsingPOSTWithHttpInfo(request);
+  public OrderTotalDiscount createOrderTotalDiscountUsingPOST(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest) throws ApiException {
+    ApiResponse<OrderTotalDiscount> localVarResponse = createOrderTotalDiscountUsingPOSTWithHttpInfo(createOrderTotalDiscountRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create an Order Total Discount
    * Creates an Order Total Discount
-   * @param request request (required)
+   * @param createOrderTotalDiscountRequest request (required)
    * @return ApiResponse&lt;OrderTotalDiscount&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOSTWithHttpInfo(CreateOrderTotalDiscountRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createOrderTotalDiscountUsingPOSTRequestBuilder(request);
+  public ApiResponse<OrderTotalDiscount> createOrderTotalDiscountUsingPOSTWithHttpInfo(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createOrderTotalDiscountUsingPOSTRequestBuilder(createOrderTotalDiscountRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -156,10 +156,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createOrderTotalDiscountUsingPOSTRequestBuilder(CreateOrderTotalDiscountRequest request) throws ApiException {
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createOrderTotalDiscountUsingPOST");
+  private HttpRequest.Builder createOrderTotalDiscountUsingPOSTRequestBuilder(CreateOrderTotalDiscountRequest createOrderTotalDiscountRequest) throws ApiException {
+    // verify the required parameter 'createOrderTotalDiscountRequest' is set
+    if (createOrderTotalDiscountRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createOrderTotalDiscountRequest' when calling createOrderTotalDiscountUsingPOST");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -173,7 +173,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createOrderTotalDiscountRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -474,13 +474,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an Order Total Discount
    * Updates an Order Total Discount
    * @param discountId discount_id (required)
-   * @param request request (required)
+   * @param updateOrderTotalDiscountRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return OrderTotalDiscount
    * @throws ApiException if fails to make API call
    */
-  public OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(String discountId, UpdateOrderTotalDiscountRequest request, List<String> updateMask) throws ApiException {
-    ApiResponse<OrderTotalDiscount> localVarResponse = updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, request, updateMask);
+  public OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(String discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<String> updateMask) throws ApiException {
+    ApiResponse<OrderTotalDiscount> localVarResponse = updateOrderTotalDiscountUsingPATCHWithHttpInfo(discountId, updateOrderTotalDiscountRequest, updateMask);
     return localVarResponse.getData();
   }
 
@@ -488,13 +488,13 @@ import io.github.resilience4j.retry.Retry;
    * Update an Order Total Discount
    * Updates an Order Total Discount
    * @param discountId discount_id (required)
-   * @param request request (required)
+   * @param updateOrderTotalDiscountRequest request (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
    * @return ApiResponse&lt;OrderTotalDiscount&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCHWithHttpInfo(String discountId, UpdateOrderTotalDiscountRequest request, List<String> updateMask) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = updateOrderTotalDiscountUsingPATCHRequestBuilder(discountId, request, updateMask);
+  public ApiResponse<OrderTotalDiscount> updateOrderTotalDiscountUsingPATCHWithHttpInfo(String discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<String> updateMask) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = updateOrderTotalDiscountUsingPATCHRequestBuilder(discountId, updateOrderTotalDiscountRequest, updateMask);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -534,14 +534,14 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder updateOrderTotalDiscountUsingPATCHRequestBuilder(String discountId, UpdateOrderTotalDiscountRequest request, List<String> updateMask) throws ApiException {
+  private HttpRequest.Builder updateOrderTotalDiscountUsingPATCHRequestBuilder(String discountId, UpdateOrderTotalDiscountRequest updateOrderTotalDiscountRequest, List<String> updateMask) throws ApiException {
     // verify the required parameter 'discountId' is set
     if (discountId == null) {
       throw new ApiException(400, "Missing the required parameter 'discountId' when calling updateOrderTotalDiscountUsingPATCH");
     }
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling updateOrderTotalDiscountUsingPATCH");
+    // verify the required parameter 'updateOrderTotalDiscountRequest' is set
+    if (updateOrderTotalDiscountRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateOrderTotalDiscountRequest' when calling updateOrderTotalDiscountUsingPATCH");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -571,7 +571,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(updateOrderTotalDiscountRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

@@ -44,7 +44,7 @@ class LeadSourcesApi:
     @validate_call
     def create_lead_source_using_post(
         self,
-        leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
+        create_lead_source_request: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -62,8 +62,8 @@ class LeadSourcesApi:
 
         Creates a new Lead Source
 
-        :param leadsource: leadsource
-        :type leadsource: CreateLeadSourceRequest
+        :param create_lead_source_request: leadsource
+        :type create_lead_source_request: CreateLeadSourceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -87,7 +87,7 @@ class LeadSourcesApi:
         """ # noqa: E501
 
         _param = self._create_lead_source_using_post_serialize(
-            leadsource=leadsource,
+            create_lead_source_request=create_lead_source_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -112,7 +112,7 @@ class LeadSourcesApi:
     @validate_call
     def create_lead_source_using_post_with_http_info(
         self,
-        leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
+        create_lead_source_request: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -130,8 +130,8 @@ class LeadSourcesApi:
 
         Creates a new Lead Source
 
-        :param leadsource: leadsource
-        :type leadsource: CreateLeadSourceRequest
+        :param create_lead_source_request: leadsource
+        :type create_lead_source_request: CreateLeadSourceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -155,7 +155,7 @@ class LeadSourcesApi:
         """ # noqa: E501
 
         _param = self._create_lead_source_using_post_serialize(
-            leadsource=leadsource,
+            create_lead_source_request=create_lead_source_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -180,7 +180,7 @@ class LeadSourcesApi:
     @validate_call
     def create_lead_source_using_post_without_preload_content(
         self,
-        leadsource: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
+        create_lead_source_request: Annotated[Optional[CreateLeadSourceRequest], Field(description="leadsource")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -198,8 +198,8 @@ class LeadSourcesApi:
 
         Creates a new Lead Source
 
-        :param leadsource: leadsource
-        :type leadsource: CreateLeadSourceRequest
+        :param create_lead_source_request: leadsource
+        :type create_lead_source_request: CreateLeadSourceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -223,7 +223,7 @@ class LeadSourcesApi:
         """ # noqa: E501
 
         _param = self._create_lead_source_using_post_serialize(
-            leadsource=leadsource,
+            create_lead_source_request=create_lead_source_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -243,7 +243,7 @@ class LeadSourcesApi:
 
     def _create_lead_source_using_post_serialize(
         self,
-        leadsource,
+        create_lead_source_request,
         _request_auth,
         _content_type,
         _headers,
@@ -269,8 +269,8 @@ class LeadSourcesApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if leadsource is not None:
-            _body_params = leadsource
+        if create_lead_source_request is not None:
+            _body_params = create_lead_source_request
 
 
         # set the HTTP header `Accept`

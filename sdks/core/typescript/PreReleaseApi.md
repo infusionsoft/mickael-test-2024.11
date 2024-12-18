@@ -187,7 +187,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiAddCommissionProgramUsingPOSTRequest = {
     // Commission Program to insert (optional)
-  insertCommissionProgram: {
+  createCommissionProgramRequest: {
     name: "Fitness program",
     notes: "20% default commission",
     priority: 100,
@@ -203,7 +203,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **insertCommissionProgram** | **CreateCommissionProgramRequest**| Commission Program to insert |
+ **createCommissionProgramRequest** | **CreateCommissionProgramRequest**| Commission Program to insert |
 
 
 ### Return type
@@ -248,7 +248,7 @@ const request: PreReleaseApiAssignProductCommissionProgramUsingPOSTRequest = {
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Product Commission Program (optional)
-  productCommissionProgram: {
+  createProductCommissionProgramRequest: {
     dollarAmount: "dollarAmount_example",
     percentage: "percentage_example",
     productId: "productId_example",
@@ -264,7 +264,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productCommissionProgram** | **CreateProductCommissionProgramRequest**| Product Commission Program |
+ **createProductCommissionProgramRequest** | **CreateProductCommissionProgramRequest**| Product Commission Program |
  **commissionProgramId** | [**string**] | commission_program_id | defaults to undefined
 
 
@@ -310,7 +310,7 @@ const request: PreReleaseApiAssignSubscriptionCommissionProgramUsingPOSTRequest 
     // commission_program_id
   commissionProgramId: "commission_program_id_example",
     // Subscription Commission Program (optional)
-  subscriptionCommissionProgram: {
+  createSubscriptionCommissionProgramRequest: {
     dollarAmount: "dollarAmount_example",
     percentage: "percentage_example",
     subscriptionId: "subscriptionId_example",
@@ -326,7 +326,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscriptionCommissionProgram** | **CreateSubscriptionCommissionProgramRequest**| Subscription Commission Program |
+ **createSubscriptionCommissionProgramRequest** | **CreateSubscriptionCommissionProgramRequest**| Subscription Commission Program |
  **commissionProgramId** | [**string**] | commission_program_id | defaults to undefined
 
 
@@ -414,7 +414,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createAffiliateCustomFieldUsingPOST**
-> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createAffiliateCustomFieldUsingPOST(createCustomFieldRequest)
 
 Creates a single Affiliate Custom Field
 
@@ -430,7 +430,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateAffiliateCustomFieldUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -453,7 +453,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -541,7 +541,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createDiscountUsingPOST**
-> CategoryDiscount createDiscountUsingPOST(request)
+> CategoryDiscount createDiscountUsingPOST(createUpdateDiscountRequest)
 
 Create a Category Discount.
 
@@ -557,7 +557,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateDiscountUsingPOSTRequest = {
     // request
-  request: {
+  createUpdateDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -593,7 +593,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateUpdateDiscountRequest**| request |
+ **createUpdateDiscountRequest** | **CreateUpdateDiscountRequest**| request |
 
 
 ### Return type
@@ -620,7 +620,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createDiscountUsingPOST1**
-> ShippingDiscount createDiscountUsingPOST1(request)
+> ShippingDiscount createDiscountUsingPOST1(createShippingDiscountRequest)
 
 Creates a Shipping Discount
 
@@ -636,7 +636,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateDiscountUsingPOST1Request = {
     // request
-  request: {
+  createShippingDiscountRequest: {
     criteria: [
       {
         code: "code_example",
@@ -669,7 +669,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateShippingDiscountRequest**| request |
+ **createShippingDiscountRequest** | **CreateShippingDiscountRequest**| request |
 
 
 ### Return type
@@ -866,7 +866,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateLeadSourceUsingPOSTRequest = {
     // leadsource (optional)
-  leadsource: {
+  createLeadSourceRequest: {
     category: {
       id: "id_example",
       name: "name_example",
@@ -891,7 +891,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **leadsource** | **CreateLeadSourceRequest**| leadsource |
+ **createLeadSourceRequest** | **CreateLeadSourceRequest**| leadsource |
 
 
 ### Return type
@@ -918,7 +918,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createNoteCustomFieldUsingPOST1**
-> CustomFieldMetaData createNoteCustomFieldUsingPOST1(customField)
+> CustomFieldMetaData createNoteCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Note object.
 
@@ -934,7 +934,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateNoteCustomFieldUsingPOST1Request = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -957,7 +957,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -984,7 +984,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createOpportunityCustomFieldsUsingPOST**
-> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(customField)
+> CustomFieldMetaData createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Opportunity object.
 
@@ -1000,7 +1000,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateOpportunityCustomFieldsUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -1023,7 +1023,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -1066,7 +1066,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateOpportunityStageUsingPOSTRequest = {
     // opportunity (optional)
-  opportunityStage: {
+  createOpportunityStageRequest: {
     checklistItems: [
       {
         description: "description_example",
@@ -1090,7 +1090,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunityStage** | **CreateOpportunityStageRequest**| opportunity |
+ **createOpportunityStageRequest** | **CreateOpportunityStageRequest**| opportunity |
 
 
 ### Return type
@@ -1133,7 +1133,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateOpportunityUsingPOST1Request = {
     // opportunity (optional)
-  opportunity: {
+  createOpportunityRequest: {
     affiliateId: "affiliateId_example",
     contactId: "contactId_example",
     customFields: [
@@ -1164,7 +1164,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity** | **CreateOpportunityRequest**| opportunity |
+ **createOpportunityRequest** | **CreateOpportunityRequest**| opportunity |
 
 
 ### Return type
@@ -1191,7 +1191,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createOrderCustomFieldUsingPOST**
-> CustomFieldMetaData createOrderCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createOrderCustomFieldUsingPOST(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Order object.
 
@@ -1207,7 +1207,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateOrderCustomFieldUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -1230,7 +1230,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -1321,7 +1321,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createOrderTotalDiscountUsingPOST**
-> OrderTotalDiscount createOrderTotalDiscountUsingPOST(request)
+> OrderTotalDiscount createOrderTotalDiscountUsingPOST(createOrderTotalDiscountRequest)
 
 Creates an Order Total Discount
 
@@ -1337,7 +1337,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateOrderTotalDiscountUsingPOSTRequest = {
     // request
-  request: {
+  createOrderTotalDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -1372,7 +1372,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateOrderTotalDiscountRequest**| request |
+ **createOrderTotalDiscountRequest** | **CreateOrderTotalDiscountRequest**| request |
 
 
 ### Return type
@@ -1399,7 +1399,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createOrderUsingPOST1**
-> RestV2Order createOrderUsingPOST1(createOrderRequest)
+> RestV2Order createOrderUsingPOST1(restCreateOrderRequest)
 
 Create a one time Order with Order items.
 
@@ -1415,7 +1415,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateOrderUsingPOST1Request = {
     // createOrderRequest
-  createOrderRequest: {
+  restCreateOrderRequest: {
     contactId: "contactId_example",
     leadAffiliateId: "leadAffiliateId_example",
     orderItems: [
@@ -1461,7 +1461,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrderRequest** | **RestCreateOrderRequest**| createOrderRequest |
+ **restCreateOrderRequest** | **RestCreateOrderRequest**| createOrderRequest |
 
 
 ### Return type
@@ -1557,7 +1557,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createRedirectLinkUsingPOST**
-> AffiliateLink createRedirectLinkUsingPOST(request)
+> AffiliateLink createRedirectLinkUsingPOST(createOrPatchAffiliateLinkRequest)
 
 Creates a single Affiliate Link
 
@@ -1573,7 +1573,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateRedirectLinkUsingPOSTRequest = {
     // request
-  request: {
+  createOrPatchAffiliateLinkRequest: {
     affiliateId: "1",
     code: "fP100",
     name: "Fitness Program",
@@ -1593,7 +1593,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateOrPatchAffiliateLinkRequest**| request |
+ **createOrPatchAffiliateLinkRequest** | **CreateOrPatchAffiliateLinkRequest**| request |
 
 
 ### Return type
@@ -1620,7 +1620,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createReferralUsingPOST**
-> Referral createReferralUsingPOST(request)
+> Referral createReferralUsingPOST(createReferralRequest)
 
 Creates a new referral partner referral on the provided contact
 
@@ -1636,7 +1636,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateReferralUsingPOSTRequest = {
     // request
-  request: {
+  createReferralRequest: {
     contactId: "contactId_example",
     description: "description_example",
     expirationTime: "expirationTime_example",
@@ -1657,7 +1657,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateReferralRequest**| request |
+ **createReferralRequest** | **CreateReferralRequest**| request |
 
 
 ### Return type
@@ -1684,7 +1684,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createSubscriptionCustomFieldUsingPOST**
-> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(customField)
+> CustomFieldMetaData createSubscriptionCustomFieldUsingPOST(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Subscription object.
 
@@ -1700,7 +1700,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateSubscriptionCustomFieldUsingPOSTRequest = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -1723,7 +1723,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -1750,7 +1750,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createTaskCustomFieldUsingPOST1**
-> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(customField)
+> CreateCustomFieldResponse createTaskCustomFieldUsingPOST1(createCustomFieldRequest)
 
 Adds a custom field of the specified type and options to the Task object.
 
@@ -1766,7 +1766,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateTaskCustomFieldUsingPOST1Request = {
     // customField
-  customField: {
+  createCustomFieldRequest: {
     fieldType: "CURRENCY",
     groupId: "groupId_example",
     label: "label_example",
@@ -1789,7 +1789,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customField** | **CreateCustomFieldRequest**| customField |
+ **createCustomFieldRequest** | **CreateCustomFieldRequest**| customField |
 
 
 ### Return type
@@ -1832,7 +1832,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateTaskUsingPOST1Request = {
     // task (optional)
-  task: {
+  createTaskRequest: {
     assignedToUserId: "assignedToUserId_example",
     completed: true,
     completionTime: "completionTime_example",
@@ -1855,7 +1855,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | **CreateTaskRequest**| task |
+ **createTaskRequest** | **CreateTaskRequest**| task |
 
 
 ### Return type
@@ -1898,7 +1898,7 @@ const apiInstance = new PreReleaseApi(configuration);
 
 const request: PreReleaseApiCreateUserUsingPOST1Request = {
     // user (optional)
-  user: {
+  createUserRequestV2: {
     admin: true,
     emailAddress: {
       email: "email_example",
@@ -1919,7 +1919,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **CreateUserRequestV2**| user |
+ **createUserRequestV2** | **CreateUserRequestV2**| user |
 
 
 ### Return type
@@ -5169,7 +5169,7 @@ const request: PreReleaseApiPatchOrderUsingPATCHRequest = {
     "contact_id",
   ],
     // order (optional)
-  order: {
+  restV2PatchOrderRequest: {
     contactId: "contactId_example",
     leadAffiliateId: "leadAffiliateId_example",
     orderTime: "orderTime_example",
@@ -5206,7 +5206,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order** | **RestV2PatchOrderRequest**| order |
+ **restV2PatchOrderRequest** | **RestV2PatchOrderRequest**| order |
  **orderId** | [**string**] | order_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -5394,7 +5394,7 @@ const request: PreReleaseApiPatchTaskUsingPATCHRequest = {
     "id",
   ],
     // task (optional)
-  task: {
+  createPatchTaskRequest: {
     assignedToUserId: "assignedToUserId_example",
     completed: true,
     completionTime: "completionTime_example",
@@ -5417,7 +5417,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task** | **CreatePatchTaskRequest**| task |
+ **createPatchTaskRequest** | **CreatePatchTaskRequest**| task |
  **taskId** | [**string**] | task_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -5469,7 +5469,7 @@ const request: PreReleaseApiPatchUserUsingPATCHRequest = {
     "address",
   ],
     // user (optional)
-  user: {
+  patchUserRequestV2: {
     address: {
       country: "United States of America",
       countryCode: "USA",
@@ -5521,7 +5521,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **PatchUserRequestV2**| user |
+ **patchUserRequestV2** | **PatchUserRequestV2**| user |
  **userId** | [**string**] | user_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -5551,7 +5551,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **removeAffiliateFromProgramUsingPOST**
-> void removeAffiliateFromProgramUsingPOST(removeFromProgramRequest)
+> void removeAffiliateFromProgramUsingPOST(affiliateRemoveFromProgramRequest)
 
 Removes an Affiliate from a Commission Program
 
@@ -5569,7 +5569,7 @@ const request: PreReleaseApiRemoveAffiliateFromProgramUsingPOSTRequest = {
     // id
   id: "id_example",
     // removeFromProgramRequest
-  removeFromProgramRequest: {
+  affiliateRemoveFromProgramRequest: {
     affiliateProgramId: "affiliateProgramId_example",
   },
 };
@@ -5583,7 +5583,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **removeFromProgramRequest** | **AffiliateRemoveFromProgramRequest**| removeFromProgramRequest |
+ **affiliateRemoveFromProgramRequest** | **AffiliateRemoveFromProgramRequest**| removeFromProgramRequest |
  **id** | [**string**] | id | defaults to undefined
 
 
@@ -5868,7 +5868,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateAffiliateCustomFieldUsingPATCH**
-> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateAffiliateCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Affiliate object.
 
@@ -5886,7 +5886,7 @@ const request: PreReleaseApiUpdateAffiliateCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -5912,7 +5912,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -5942,7 +5942,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateDiscountUsingPATCH**
-> CategoryDiscount updateDiscountUsingPATCH(request)
+> CategoryDiscount updateDiscountUsingPATCH(createUpdateDiscountRequest)
 
 Update a Category Discount.
 
@@ -5960,7 +5960,7 @@ const request: PreReleaseApiUpdateDiscountUsingPATCHRequest = {
     // discount_id
   discountId: "discount_id_example",
     // request
-  request: {
+  createUpdateDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -6000,7 +6000,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateUpdateDiscountRequest**| request |
+ **createUpdateDiscountRequest** | **CreateUpdateDiscountRequest**| request |
  **discountId** | [**string**] | discount_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6030,7 +6030,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateDiscountUsingPATCH1**
-> ShippingDiscount updateDiscountUsingPATCH1(request)
+> ShippingDiscount updateDiscountUsingPATCH1(updateShippingDiscountRequest)
 
 Updates a Shipping Discount
 
@@ -6048,7 +6048,7 @@ const request: PreReleaseApiUpdateDiscountUsingPATCH1Request = {
     // discount_id
   discountId: "discount_id_example",
     // request
-  request: {
+  updateShippingDiscountRequest: {
     criteria: [
       {
         code: "code_example",
@@ -6085,7 +6085,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateShippingDiscountRequest**| request |
+ **updateShippingDiscountRequest** | **UpdateShippingDiscountRequest**| request |
  **discountId** | [**string**] | discount_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6115,7 +6115,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateNotesCustomFieldUsingPATCH**
-> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateNotesCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Note object.
 
@@ -6133,7 +6133,7 @@ const request: PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -6159,7 +6159,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6189,7 +6189,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOpportunityCustomFieldUsingPATCH**
-> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateOpportunityCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Opportunity object.
 
@@ -6207,7 +6207,7 @@ const request: PreReleaseApiUpdateOpportunityCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -6233,7 +6233,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6263,7 +6263,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOpportunityStageUsingPATCH**
-> RestOpportunityStage updateOpportunityStageUsingPATCH(request)
+> RestOpportunityStage updateOpportunityStageUsingPATCH(updateOpportunityStageRequest)
 
 Updates specified values of a given Opportunity Stage
 
@@ -6281,7 +6281,7 @@ const request: PreReleaseApiUpdateOpportunityStageUsingPATCHRequest = {
     // stage_id
   stageId: "stage_id_example",
     // request
-  request: {
+  updateOpportunityStageRequest: {
     checklistItems: [
       {
         description: "description_example",
@@ -6310,7 +6310,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateOpportunityStageRequest**| request |
+ **updateOpportunityStageRequest** | **UpdateOpportunityStageRequest**| request |
  **stageId** | [**string**] | stage_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6340,7 +6340,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOpportunityUsingPATCH**
-> RestV2Opportunity updateOpportunityUsingPATCH(request)
+> RestV2Opportunity updateOpportunityUsingPATCH(patchOpportunityRequest)
 
 Updates specified values of a given opportunity
 
@@ -6358,7 +6358,7 @@ const request: PreReleaseApiUpdateOpportunityUsingPATCHRequest = {
     // opportunity_id
   opportunityId: "opportunity_id_example",
     // request
-  request: {
+  patchOpportunityRequest: {
     affiliateId: "affiliateId_example",
     contactId: "contactId_example",
     customFields: [
@@ -6393,7 +6393,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **PatchOpportunityRequest**| request |
+ **patchOpportunityRequest** | **PatchOpportunityRequest**| request |
  **opportunityId** | [**string**] | opportunity_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6423,7 +6423,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOrderCustomFieldUsingPATCH**
-> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateOrderCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Order object.
 
@@ -6441,7 +6441,7 @@ const request: PreReleaseApiUpdateOrderCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -6467,7 +6467,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6497,7 +6497,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateOrderTotalDiscountUsingPATCH**
-> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(request)
+> OrderTotalDiscount updateOrderTotalDiscountUsingPATCH(updateOrderTotalDiscountRequest)
 
 Updates an Order Total Discount
 
@@ -6515,7 +6515,7 @@ const request: PreReleaseApiUpdateOrderTotalDiscountUsingPATCHRequest = {
     // discount_id
   discountId: "discount_id_example",
     // request
-  request: {
+  updateOrderTotalDiscountRequest: {
     applyToCommissions: true,
     criteria: [
       {
@@ -6554,7 +6554,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateOrderTotalDiscountRequest**| request |
+ **updateOrderTotalDiscountRequest** | **UpdateOrderTotalDiscountRequest**| request |
  **discountId** | [**string**] | discount_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6584,7 +6584,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateRedirectLinkUsingPATCH**
-> AffiliateLink updateRedirectLinkUsingPATCH(request)
+> AffiliateLink updateRedirectLinkUsingPATCH(createOrPatchAffiliateLinkRequest)
 
 Updates an Affiliate Link
 
@@ -6602,7 +6602,7 @@ const request: PreReleaseApiUpdateRedirectLinkUsingPATCHRequest = {
     // redirect_id
   redirectId: "redirect_id_example",
     // request
-  request: {
+  createOrPatchAffiliateLinkRequest: {
     affiliateId: "1",
     code: "fP100",
     name: "Fitness Program",
@@ -6622,7 +6622,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **CreateOrPatchAffiliateLinkRequest**| request |
+ **createOrPatchAffiliateLinkRequest** | **CreateOrPatchAffiliateLinkRequest**| request |
  **redirectId** | [**string**] | redirect_id | defaults to undefined
 
 
@@ -6651,7 +6651,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateSubscriptionCustomFieldUsingPATCH**
-> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateSubscriptionCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Subscription object.
 
@@ -6669,7 +6669,7 @@ const request: PreReleaseApiUpdateSubscriptionCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -6695,7 +6695,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
@@ -6725,7 +6725,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **updateTaskCustomFieldUsingPATCH**
-> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(request)
+> CustomFieldMetaData updateTaskCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
 Updates a custom field of the specified type and options to the Task object.
 
@@ -6743,7 +6743,7 @@ const request: PreReleaseApiUpdateTaskCustomFieldUsingPATCHRequest = {
     // custom_field_id
   customFieldId: "custom_field_id_example",
     // request
-  request: {
+  updateCustomFieldMetaDataRequest: {
     groupId: "groupId_example",
     label: "label_example",
     options: [
@@ -6769,7 +6769,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | **UpdateCustomFieldMetaDataRequest**| request |
+ **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

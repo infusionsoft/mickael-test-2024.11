@@ -116,7 +116,7 @@ No authorization required
 
 <a id="createtagcategoryusingpost1"></a>
 # **CreateTagCategoryUsingPOST1**
-> Tag CreateTagCategoryUsingPOST1 (CreateUpdateTagCategoryRequest request)
+> Tag CreateTagCategoryUsingPOST1 (CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest)
 
 Create Tag Category
 
@@ -139,12 +139,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TagsApi(config);
-            var request = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
+            var createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
 
             try
             {
                 // Create Tag Category
-                Tag result = apiInstance.CreateTagCategoryUsingPOST1(request);
+                Tag result = apiInstance.CreateTagCategoryUsingPOST1(createUpdateTagCategoryRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -165,7 +165,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create Tag Category
-    ApiResponse<Tag> response = apiInstance.CreateTagCategoryUsingPOST1WithHttpInfo(request);
+    ApiResponse<Tag> response = apiInstance.CreateTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -182,7 +182,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md) | request |  |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md) | request |  |
 
 ### Return type
 
@@ -209,7 +209,7 @@ No authorization required
 
 <a id="createtagusingpost1"></a>
 # **CreateTagUsingPOST1**
-> Tag CreateTagUsingPOST1 (CreateUpdateTagRequest tag)
+> Tag CreateTagUsingPOST1 (CreateUpdateTagRequest createUpdateTagRequest)
 
 Create Tag
 
@@ -232,12 +232,12 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new TagsApi(config);
-            var tag = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+            var createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
 
             try
             {
                 // Create Tag
-                Tag result = apiInstance.CreateTagUsingPOST1(tag);
+                Tag result = apiInstance.CreateTagUsingPOST1(createUpdateTagRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,7 +258,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create Tag
-    ApiResponse<Tag> response = apiInstance.CreateTagUsingPOST1WithHttpInfo(tag);
+    ApiResponse<Tag> response = apiInstance.CreateTagUsingPOST1WithHttpInfo(createUpdateTagRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -275,7 +275,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **tag** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md) | tag |  |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md) | tag |  |
 
 ### Return type
 
@@ -1074,7 +1074,7 @@ No authorization required
 
 <a id="patchtagcategoryusingpatch"></a>
 # **PatchTagCategoryUsingPATCH**
-> UpdateTagCategoryResponse PatchTagCategoryUsingPATCH (string tagCategoryId, List<string>? updateMask = null, CreateUpdateTagCategoryRequest? tagCategory = null)
+> UpdateTagCategoryResponse PatchTagCategoryUsingPATCH (string tagCategoryId, List<string>? updateMask = null, CreateUpdateTagCategoryRequest? createUpdateTagCategoryRequest = null)
 
 Update a Tag Category
 
@@ -1099,12 +1099,12 @@ namespace Example
             var apiInstance = new TagsApi(config);
             var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var tagCategory = new CreateUpdateTagCategoryRequest?(); // CreateUpdateTagCategoryRequest? | tagCategory (optional) 
+            var createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest?(); // CreateUpdateTagCategoryRequest? | tagCategory (optional) 
 
             try
             {
                 // Update a Tag Category
-                UpdateTagCategoryResponse result = apiInstance.PatchTagCategoryUsingPATCH(tagCategoryId, updateMask, tagCategory);
+                UpdateTagCategoryResponse result = apiInstance.PatchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1125,7 +1125,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Tag Category
-    ApiResponse<UpdateTagCategoryResponse> response = apiInstance.PatchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory);
+    ApiResponse<UpdateTagCategoryResponse> response = apiInstance.PatchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1144,7 +1144,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **tagCategoryId** | **string** | tag_category_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **tagCategory** | [**CreateUpdateTagCategoryRequest?**](CreateUpdateTagCategoryRequest?.md) | tagCategory | [optional]  |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest?**](CreateUpdateTagCategoryRequest?.md) | tagCategory | [optional]  |
 
 ### Return type
 
@@ -1172,7 +1172,7 @@ No authorization required
 
 <a id="patchtagusingpatch"></a>
 # **PatchTagUsingPATCH**
-> UpdateTagResponse PatchTagUsingPATCH (string tagId, List<string>? updateMask = null, CreateUpdateTagRequest? tag = null)
+> UpdateTagResponse PatchTagUsingPATCH (string tagId, List<string>? updateMask = null, CreateUpdateTagRequest? createUpdateTagRequest = null)
 
 Update a Tag
 
@@ -1197,12 +1197,12 @@ namespace Example
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var tag = new CreateUpdateTagRequest?(); // CreateUpdateTagRequest? | tag (optional) 
+            var createUpdateTagRequest = new CreateUpdateTagRequest?(); // CreateUpdateTagRequest? | tag (optional) 
 
             try
             {
                 // Update a Tag
-                UpdateTagResponse result = apiInstance.PatchTagUsingPATCH(tagId, updateMask, tag);
+                UpdateTagResponse result = apiInstance.PatchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1223,7 +1223,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update a Tag
-    ApiResponse<UpdateTagResponse> response = apiInstance.PatchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag);
+    ApiResponse<UpdateTagResponse> response = apiInstance.PatchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1242,7 +1242,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **tagId** | **string** | tag_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **tag** | [**CreateUpdateTagRequest?**](CreateUpdateTagRequest?.md) | tag | [optional]  |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest?**](CreateUpdateTagRequest?.md) | tag | [optional]  |
 
 ### Return type
 

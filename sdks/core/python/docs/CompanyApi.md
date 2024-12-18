@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_company_using_post1**
-> Company create_company_using_post1(company=company)
+> Company create_company_using_post1(create_company_request=create_company_request)
 
 Create a Company
 
@@ -38,11 +38,11 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.CompanyApi(api_client)
-    company = keap_sdk_core_client.CreateCompanyRequest() # CreateCompanyRequest | company (optional)
+    create_company_request = keap_sdk_core_client.CreateCompanyRequest() # CreateCompanyRequest | company (optional)
 
     try:
         # Create a Company
-        api_response = api_instance.create_company_using_post1(company=company)
+        api_response = api_instance.create_company_using_post1(create_company_request=create_company_request)
         print("The response of CompanyApi->create_company_using_post1:\n")
         pprint(api_response)
     except Exception as e:
@@ -55,7 +55,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] 
+ **create_company_request** | [**CreateCompanyRequest**](CreateCompanyRequest.md)| company | [optional] 
 
 ### Return type
 
@@ -295,7 +295,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_company_using_patch**
-> Company patch_company_using_patch(company_id, update_mask=update_mask, company=company)
+> Company patch_company_using_patch(company_id, update_mask=update_mask, patch_company_request=patch_company_request)
 
 Update a Company
 
@@ -323,11 +323,11 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.CompanyApi(api_client)
     company_id = 'company_id_example' # str | company_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    company = keap_sdk_core_client.PatchCompanyRequest() # PatchCompanyRequest | company (optional)
+    patch_company_request = keap_sdk_core_client.PatchCompanyRequest() # PatchCompanyRequest | company (optional)
 
     try:
         # Update a Company
-        api_response = api_instance.patch_company_using_patch(company_id, update_mask=update_mask, company=company)
+        api_response = api_instance.patch_company_using_patch(company_id, update_mask=update_mask, patch_company_request=patch_company_request)
         print("The response of CompanyApi->patch_company_using_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**| company_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **company** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] 
+ **patch_company_request** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] 
 
 ### Return type
 

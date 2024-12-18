@@ -205,24 +205,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create Tag Category
    * Creates a new Tag Category.
-   * @param request request (required)
+   * @param createUpdateTagCategoryRequest request (required)
    * @return Tag
    * @throws ApiException if fails to make API call
    */
-  public Tag createTagCategoryUsingPOST1(CreateUpdateTagCategoryRequest request) throws ApiException {
-    ApiResponse<Tag> localVarResponse = createTagCategoryUsingPOST1WithHttpInfo(request);
+  public Tag createTagCategoryUsingPOST1(CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest) throws ApiException {
+    ApiResponse<Tag> localVarResponse = createTagCategoryUsingPOST1WithHttpInfo(createUpdateTagCategoryRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create Tag Category
    * Creates a new Tag Category.
-   * @param request request (required)
+   * @param createUpdateTagCategoryRequest request (required)
    * @return ApiResponse&lt;Tag&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Tag> createTagCategoryUsingPOST1WithHttpInfo(CreateUpdateTagCategoryRequest request) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createTagCategoryUsingPOST1RequestBuilder(request);
+  public ApiResponse<Tag> createTagCategoryUsingPOST1WithHttpInfo(CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createTagCategoryUsingPOST1RequestBuilder(createUpdateTagCategoryRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -262,10 +262,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createTagCategoryUsingPOST1RequestBuilder(CreateUpdateTagCategoryRequest request) throws ApiException {
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      throw new ApiException(400, "Missing the required parameter 'request' when calling createTagCategoryUsingPOST1");
+  private HttpRequest.Builder createTagCategoryUsingPOST1RequestBuilder(CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest) throws ApiException {
+    // verify the required parameter 'createUpdateTagCategoryRequest' is set
+    if (createUpdateTagCategoryRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createUpdateTagCategoryRequest' when calling createTagCategoryUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -279,7 +279,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(request);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUpdateTagCategoryRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -296,24 +296,24 @@ import io.github.resilience4j.retry.Retry;
   /**
    * Create Tag
    * Creates a new Tag
-   * @param tag tag (required)
+   * @param createUpdateTagRequest tag (required)
    * @return Tag
    * @throws ApiException if fails to make API call
    */
-  public Tag createTagUsingPOST1(CreateUpdateTagRequest tag) throws ApiException {
-    ApiResponse<Tag> localVarResponse = createTagUsingPOST1WithHttpInfo(tag);
+  public Tag createTagUsingPOST1(CreateUpdateTagRequest createUpdateTagRequest) throws ApiException {
+    ApiResponse<Tag> localVarResponse = createTagUsingPOST1WithHttpInfo(createUpdateTagRequest);
     return localVarResponse.getData();
   }
 
   /**
    * Create Tag
    * Creates a new Tag
-   * @param tag tag (required)
+   * @param createUpdateTagRequest tag (required)
    * @return ApiResponse&lt;Tag&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Tag> createTagUsingPOST1WithHttpInfo(CreateUpdateTagRequest tag) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createTagUsingPOST1RequestBuilder(tag);
+  public ApiResponse<Tag> createTagUsingPOST1WithHttpInfo(CreateUpdateTagRequest createUpdateTagRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createTagUsingPOST1RequestBuilder(createUpdateTagRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -353,10 +353,10 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder createTagUsingPOST1RequestBuilder(CreateUpdateTagRequest tag) throws ApiException {
-    // verify the required parameter 'tag' is set
-    if (tag == null) {
-      throw new ApiException(400, "Missing the required parameter 'tag' when calling createTagUsingPOST1");
+  private HttpRequest.Builder createTagUsingPOST1RequestBuilder(CreateUpdateTagRequest createUpdateTagRequest) throws ApiException {
+    // verify the required parameter 'createUpdateTagRequest' is set
+    if (createUpdateTagRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'createUpdateTagRequest' when calling createTagUsingPOST1");
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
@@ -370,7 +370,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(tag);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUpdateTagRequest);
       localVarRequestBuilder.method("POST", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -1185,12 +1185,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Tag Category with only the values provided in the request
    * @param tagCategoryId tag_category_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param tagCategory tagCategory (optional)
+   * @param createUpdateTagCategoryRequest tagCategory (optional)
    * @return UpdateTagCategoryResponse
    * @throws ApiException if fails to make API call
    */
-  public UpdateTagCategoryResponse patchTagCategoryUsingPATCH(String tagCategoryId, List<String> updateMask, CreateUpdateTagCategoryRequest tagCategory) throws ApiException {
-    ApiResponse<UpdateTagCategoryResponse> localVarResponse = patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, tagCategory);
+  public UpdateTagCategoryResponse patchTagCategoryUsingPATCH(String tagCategoryId, List<String> updateMask, CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest) throws ApiException {
+    ApiResponse<UpdateTagCategoryResponse> localVarResponse = patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
     return localVarResponse.getData();
   }
 
@@ -1199,12 +1199,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Tag Category with only the values provided in the request
    * @param tagCategoryId tag_category_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param tagCategory tagCategory (optional)
+   * @param createUpdateTagCategoryRequest tagCategory (optional)
    * @return ApiResponse&lt;UpdateTagCategoryResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<UpdateTagCategoryResponse> patchTagCategoryUsingPATCHWithHttpInfo(String tagCategoryId, List<String> updateMask, CreateUpdateTagCategoryRequest tagCategory) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchTagCategoryUsingPATCHRequestBuilder(tagCategoryId, updateMask, tagCategory);
+  public ApiResponse<UpdateTagCategoryResponse> patchTagCategoryUsingPATCHWithHttpInfo(String tagCategoryId, List<String> updateMask, CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchTagCategoryUsingPATCHRequestBuilder(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1244,7 +1244,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchTagCategoryUsingPATCHRequestBuilder(String tagCategoryId, List<String> updateMask, CreateUpdateTagCategoryRequest tagCategory) throws ApiException {
+  private HttpRequest.Builder patchTagCategoryUsingPATCHRequestBuilder(String tagCategoryId, List<String> updateMask, CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest) throws ApiException {
     // verify the required parameter 'tagCategoryId' is set
     if (tagCategoryId == null) {
       throw new ApiException(400, "Missing the required parameter 'tagCategoryId' when calling patchTagCategoryUsingPATCH");
@@ -1277,7 +1277,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(tagCategory);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUpdateTagCategoryRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);
@@ -1296,12 +1296,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Tag with only the values provided in the request
    * @param tagId tag_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param tag tag (optional)
+   * @param createUpdateTagRequest tag (optional)
    * @return UpdateTagResponse
    * @throws ApiException if fails to make API call
    */
-  public UpdateTagResponse patchTagUsingPATCH(String tagId, List<String> updateMask, CreateUpdateTagRequest tag) throws ApiException {
-    ApiResponse<UpdateTagResponse> localVarResponse = patchTagUsingPATCHWithHttpInfo(tagId, updateMask, tag);
+  public UpdateTagResponse patchTagUsingPATCH(String tagId, List<String> updateMask, CreateUpdateTagRequest createUpdateTagRequest) throws ApiException {
+    ApiResponse<UpdateTagResponse> localVarResponse = patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
     return localVarResponse.getData();
   }
 
@@ -1310,12 +1310,12 @@ import io.github.resilience4j.retry.Retry;
    * Updates a Tag with only the values provided in the request
    * @param tagId tag_id (required)
    * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-   * @param tag tag (optional)
+   * @param createUpdateTagRequest tag (optional)
    * @return ApiResponse&lt;UpdateTagResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<UpdateTagResponse> patchTagUsingPATCHWithHttpInfo(String tagId, List<String> updateMask, CreateUpdateTagRequest tag) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = patchTagUsingPATCHRequestBuilder(tagId, updateMask, tag);
+  public ApiResponse<UpdateTagResponse> patchTagUsingPATCHWithHttpInfo(String tagId, List<String> updateMask, CreateUpdateTagRequest createUpdateTagRequest) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = patchTagUsingPATCHRequestBuilder(tagId, updateMask, createUpdateTagRequest);
 
     CheckedSupplier<HttpResponse<InputStream>> responseSupplier = () ->
       memberVarHttpClient.send(
@@ -1355,7 +1355,7 @@ import io.github.resilience4j.retry.Retry;
     }
   }
 
-  private HttpRequest.Builder patchTagUsingPATCHRequestBuilder(String tagId, List<String> updateMask, CreateUpdateTagRequest tag) throws ApiException {
+  private HttpRequest.Builder patchTagUsingPATCHRequestBuilder(String tagId, List<String> updateMask, CreateUpdateTagRequest createUpdateTagRequest) throws ApiException {
     // verify the required parameter 'tagId' is set
     if (tagId == null) {
       throw new ApiException(400, "Missing the required parameter 'tagId' when calling patchTagUsingPATCH");
@@ -1388,7 +1388,7 @@ import io.github.resilience4j.retry.Retry;
     localVarRequestBuilder.header("Authorization", "Bearer " + this.accessTokenSupplier.get());
 
     try {
-      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(tag);
+      byte[] localVarPostBody = memberVarObjectMapper.writeValueAsBytes(createUpdateTagRequest);
       localVarRequestBuilder.method("PATCH", HttpRequest.BodyPublishers.ofByteArray(localVarPostBody));
     } catch (IOException e) {
       throw new ApiException(e);

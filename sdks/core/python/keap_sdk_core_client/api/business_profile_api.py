@@ -295,7 +295,7 @@ class BusinessProfileApi:
     def patch_business_profile_using_patch(
         self,
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.")] = None,
-        business_profile: Annotated[Optional[PatchBusinessProfileRequest], Field(description="businessProfile")] = None,
+        patch_business_profile_request: Annotated[Optional[PatchBusinessProfileRequest], Field(description="businessProfile")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -315,8 +315,8 @@ class BusinessProfileApi:
 
         :param update_mask: An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param business_profile: businessProfile
-        :type business_profile: PatchBusinessProfileRequest
+        :param patch_business_profile_request: businessProfile
+        :type patch_business_profile_request: PatchBusinessProfileRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -341,7 +341,7 @@ class BusinessProfileApi:
 
         _param = self._patch_business_profile_using_patch_serialize(
             update_mask=update_mask,
-            business_profile=business_profile,
+            patch_business_profile_request=patch_business_profile_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -368,7 +368,7 @@ class BusinessProfileApi:
     def patch_business_profile_using_patch_with_http_info(
         self,
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.")] = None,
-        business_profile: Annotated[Optional[PatchBusinessProfileRequest], Field(description="businessProfile")] = None,
+        patch_business_profile_request: Annotated[Optional[PatchBusinessProfileRequest], Field(description="businessProfile")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -388,8 +388,8 @@ class BusinessProfileApi:
 
         :param update_mask: An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param business_profile: businessProfile
-        :type business_profile: PatchBusinessProfileRequest
+        :param patch_business_profile_request: businessProfile
+        :type patch_business_profile_request: PatchBusinessProfileRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -414,7 +414,7 @@ class BusinessProfileApi:
 
         _param = self._patch_business_profile_using_patch_serialize(
             update_mask=update_mask,
-            business_profile=business_profile,
+            patch_business_profile_request=patch_business_profile_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -441,7 +441,7 @@ class BusinessProfileApi:
     def patch_business_profile_using_patch_without_preload_content(
         self,
         update_mask: Annotated[Optional[List[StrictStr]], Field(description="An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.")] = None,
-        business_profile: Annotated[Optional[PatchBusinessProfileRequest], Field(description="businessProfile")] = None,
+        patch_business_profile_request: Annotated[Optional[PatchBusinessProfileRequest], Field(description="businessProfile")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -461,8 +461,8 @@ class BusinessProfileApi:
 
         :param update_mask: An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
         :type update_mask: List[str]
-        :param business_profile: businessProfile
-        :type business_profile: PatchBusinessProfileRequest
+        :param patch_business_profile_request: businessProfile
+        :type patch_business_profile_request: PatchBusinessProfileRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -487,7 +487,7 @@ class BusinessProfileApi:
 
         _param = self._patch_business_profile_using_patch_serialize(
             update_mask=update_mask,
-            business_profile=business_profile,
+            patch_business_profile_request=patch_business_profile_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -509,7 +509,7 @@ class BusinessProfileApi:
     def _patch_business_profile_using_patch_serialize(
         self,
         update_mask,
-        business_profile,
+        patch_business_profile_request,
         _request_auth,
         _content_type,
         _headers,
@@ -540,8 +540,8 @@ class BusinessProfileApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if business_profile is not None:
-            _body_params = business_profile
+        if patch_business_profile_request is not None:
+            _body_params = patch_business_profile_request
 
 
         # set the HTTP header `Accept`

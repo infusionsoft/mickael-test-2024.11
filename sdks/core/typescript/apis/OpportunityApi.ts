@@ -28,14 +28,14 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Adds a custom field of the specified type and options to the Opportunity object.
      * Create an Opportunity Custom Field
-     * @param customField customField
+     * @param createCustomFieldRequest customField
      */
-    public async createOpportunityCustomFieldsUsingPOST(customField: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOpportunityCustomFieldsUsingPOST(createCustomFieldRequest: CreateCustomFieldRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
-        // verify required parameter 'customField' is not null or undefined
-        if (customField === null || customField === undefined) {
-            throw new RequiredError("OpportunityApi", "createOpportunityCustomFieldsUsingPOST", "customField");
+        // verify required parameter 'createCustomFieldRequest' is not null or undefined
+        if (createCustomFieldRequest === null || createCustomFieldRequest === undefined) {
+            throw new RequiredError("OpportunityApi", "createOpportunityCustomFieldsUsingPOST", "createCustomFieldRequest");
         }
 
 
@@ -53,7 +53,7 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(customField, "CreateCustomFieldRequest", ""),
+            ObjectSerializer.serialize(createCustomFieldRequest, "CreateCustomFieldRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -70,9 +70,9 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new Opportunity Stage
      * Create an Opportunity Stage
-     * @param opportunityStage opportunity
+     * @param createOpportunityStageRequest opportunity
      */
-    public async createOpportunityStageUsingPOST(opportunityStage?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOpportunityStageUsingPOST(createOpportunityStageRequest?: CreateOpportunityStageRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -90,7 +90,7 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(opportunityStage, "CreateOpportunityStageRequest", ""),
+            ObjectSerializer.serialize(createOpportunityStageRequest, "CreateOpportunityStageRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -107,9 +107,9 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Creates a new opportunity as the authenticated user.
      * Create an Opportunity
-     * @param opportunity opportunity
+     * @param createOpportunityRequest opportunity
      */
-    public async createOpportunityUsingPOST1(opportunity?: CreateOpportunityRequest, _options?: Configuration): Promise<RequestContext> {
+    public async createOpportunityUsingPOST1(createOpportunityRequest?: CreateOpportunityRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -127,7 +127,7 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(opportunity, "CreateOpportunityRequest", ""),
+            ObjectSerializer.serialize(createOpportunityRequest, "CreateOpportunityRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -387,10 +387,10 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
      * Updates a custom field of the specified type and options to the Opportunity object.
      * Update a Opportunity\'s Custom Field
      * @param customFieldId custom_field_id
-     * @param request request
+     * @param updateCustomFieldMetaDataRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOpportunityCustomFieldUsingPATCH(customFieldId: string, request: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOpportunityCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'customFieldId' is not null or undefined
@@ -399,9 +399,9 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("OpportunityApi", "updateOpportunityCustomFieldUsingPATCH", "request");
+        // verify required parameter 'updateCustomFieldMetaDataRequest' is not null or undefined
+        if (updateCustomFieldMetaDataRequest === null || updateCustomFieldMetaDataRequest === undefined) {
+            throw new RequiredError("OpportunityApi", "updateOpportunityCustomFieldUsingPATCH", "updateCustomFieldMetaDataRequest");
         }
 
 
@@ -429,7 +429,7 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateCustomFieldMetaDataRequest", ""),
+            ObjectSerializer.serialize(updateCustomFieldMetaDataRequest, "UpdateCustomFieldMetaDataRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -447,10 +447,10 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
      * Updates specified values of a given Opportunity Stage
      * Update an Opportunity Stage
      * @param stageId stage_id
-     * @param request request
+     * @param updateOpportunityStageRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOpportunityStageUsingPATCH(stageId: string, request: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOpportunityStageUsingPATCH(stageId: string, updateOpportunityStageRequest: UpdateOpportunityStageRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'stageId' is not null or undefined
@@ -459,9 +459,9 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("OpportunityApi", "updateOpportunityStageUsingPATCH", "request");
+        // verify required parameter 'updateOpportunityStageRequest' is not null or undefined
+        if (updateOpportunityStageRequest === null || updateOpportunityStageRequest === undefined) {
+            throw new RequiredError("OpportunityApi", "updateOpportunityStageUsingPATCH", "updateOpportunityStageRequest");
         }
 
 
@@ -489,7 +489,7 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "UpdateOpportunityStageRequest", ""),
+            ObjectSerializer.serialize(updateOpportunityStageRequest, "UpdateOpportunityStageRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -507,10 +507,10 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
      * Updates specified values of a given opportunity
      * Update an opportunity
      * @param opportunityId opportunity_id
-     * @param request request
+     * @param patchOpportunityRequest request
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public async updateOpportunityUsingPATCH(opportunityId: string, request: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
+    public async updateOpportunityUsingPATCH(opportunityId: string, patchOpportunityRequest: PatchOpportunityRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'opportunityId' is not null or undefined
@@ -519,9 +519,9 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         }
 
 
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new RequiredError("OpportunityApi", "updateOpportunityUsingPATCH", "request");
+        // verify required parameter 'patchOpportunityRequest' is not null or undefined
+        if (patchOpportunityRequest === null || patchOpportunityRequest === undefined) {
+            throw new RequiredError("OpportunityApi", "updateOpportunityUsingPATCH", "patchOpportunityRequest");
         }
 
 
@@ -549,7 +549,7 @@ export class OpportunityApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(request, "PatchOpportunityRequest", ""),
+            ObjectSerializer.serialize(patchOpportunityRequest, "PatchOpportunityRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);

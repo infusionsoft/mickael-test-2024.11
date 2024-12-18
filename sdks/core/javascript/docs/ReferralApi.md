@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## createReferralUsingPOST
 
-> Referral createReferralUsingPOST(request)
+> Referral createReferralUsingPOST(createReferralRequest)
 
 Create a Referral
 
@@ -22,8 +22,8 @@ Creates a new referral partner referral on the provided contact
 import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.ReferralApi();
-let request = new KeapCoreServiceCoreSdk.CreateReferralRequest(); // CreateReferralRequest | request
-apiInstance.createReferralUsingPOST(request).then((data) => {
+let createReferralRequest = new KeapCoreServiceCoreSdk.CreateReferralRequest(); // CreateReferralRequest | request
+apiInstance.createReferralUsingPOST(createReferralRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -36,7 +36,7 @@ apiInstance.createReferralUsingPOST(request).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
+ **createReferralRequest** | [**CreateReferralRequest**](CreateReferralRequest.md)| request | 
 
 ### Return type
 

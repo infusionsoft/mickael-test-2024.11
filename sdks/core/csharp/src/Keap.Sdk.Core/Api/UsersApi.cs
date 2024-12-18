@@ -35,10 +35,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        User CreateUserUsingPOST1(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0);
+        User CreateUserUsingPOST1(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0);
 
         /// <summary>
         /// Create a User
@@ -47,10 +47,10 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> CreateUserUsingPOST1WithHttpInfo(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0);
+        ApiResponse<User> CreateUserUsingPOST1WithHttpInfo(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0);
         /// <summary>
         /// Get User
         /// </summary>
@@ -152,10 +152,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        User PatchUserUsingPATCH(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0);
+        User PatchUserUsingPATCH(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0);
 
         /// <summary>
         /// Update User
@@ -166,10 +166,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> PatchUserUsingPATCHWithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0);
+        ApiResponse<User> PatchUserUsingPATCHWithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -186,11 +186,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> CreateUserUsingPOST1Async(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<User> CreateUserUsingPOST1Async(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a User
@@ -199,11 +199,11 @@ namespace Keap.Sdk.Core.Api
         /// Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </remarks>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> CreateUserUsingPOST1WithHttpInfoAsync(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<User>> CreateUserUsingPOST1WithHttpInfoAsync(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get User
         /// </summary>
@@ -313,11 +313,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> PatchUserUsingPATCHAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<User> PatchUserUsingPATCHAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update User
@@ -328,11 +328,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserUsingPATCHWithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserUsingPATCHWithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -457,12 +457,12 @@ namespace Keap.Sdk.Core.Api
         /// Create a User Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        public User CreateUserUsingPOST1(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0)
+        public User CreateUserUsingPOST1(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = CreateUserUsingPOST1WithHttpInfo(user);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = CreateUserUsingPOST1WithHttpInfo(createUserRequestV2);
             return localVarResponse.Data;
         }
 
@@ -470,10 +470,10 @@ namespace Keap.Sdk.Core.Api
         /// Create a User Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<User> CreateUserUsingPOST1WithHttpInfo(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<User> CreateUserUsingPOST1WithHttpInfo(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0)
         {
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
 
@@ -498,7 +498,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = user;
+            localVarRequestOptions.Data = createUserRequestV2;
 
             localVarRequestOptions.Operation = "UsersApi.CreateUserUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -522,13 +522,13 @@ namespace Keap.Sdk.Core.Api
         /// Create a User Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> CreateUserUsingPOST1Async(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<User> CreateUserUsingPOST1Async(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await CreateUserUsingPOST1WithHttpInfoAsync(user, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await CreateUserUsingPOST1WithHttpInfoAsync(createUserRequestV2, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -536,11 +536,11 @@ namespace Keap.Sdk.Core.Api
         /// Create a User Creates a new user record. NB: Users will be invited to the application and remain in the \&quot;Invited\&quot; status until the user accepts the invite. \&quot;Inactive\&quot; users will not take up a user license.
         /// </summary>
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="user">user (optional)</param>
+        /// <param name="createUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> CreateUserUsingPOST1WithHttpInfoAsync(CreateUserRequestV2? user = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> CreateUserUsingPOST1WithHttpInfoAsync(CreateUserRequestV2? createUserRequestV2 = default(CreateUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Keap.Sdk.Core.Client.RequestOptions localVarRequestOptions = new Keap.Sdk.Core.Client.RequestOptions();
@@ -566,7 +566,7 @@ namespace Keap.Sdk.Core.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = user;
+            localVarRequestOptions.Data = createUserRequestV2;
 
             localVarRequestOptions.Operation = "UsersApi.CreateUserUsingPOST1";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1157,12 +1157,12 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>User</returns>
-        public User PatchUserUsingPATCH(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0)
+        public User PatchUserUsingPATCH(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0)
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = PatchUserUsingPATCHWithHttpInfo(userId, updateMask, user);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = PatchUserUsingPATCHWithHttpInfo(userId, updateMask, patchUserRequestV2);
             return localVarResponse.Data;
         }
 
@@ -1172,10 +1172,10 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of User</returns>
-        public Keap.Sdk.Core.Client.ApiResponse<User> PatchUserUsingPATCHWithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0)
+        public Keap.Sdk.Core.Client.ApiResponse<User> PatchUserUsingPATCHWithHttpInfo(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1211,7 +1211,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = user;
+            localVarRequestOptions.Data = patchUserRequestV2;
 
             localVarRequestOptions.Operation = "UsersApi.PatchUserUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1237,13 +1237,13 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> PatchUserUsingPATCHAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<User> PatchUserUsingPATCHAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await PatchUserUsingPATCHWithHttpInfoAsync(userId, updateMask, user, operationIndex, cancellationToken).ConfigureAwait(false);
+            Keap.Sdk.Core.Client.ApiResponse<User> localVarResponse = await PatchUserUsingPATCHWithHttpInfoAsync(userId, updateMask, patchUserRequestV2, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1253,11 +1253,11 @@ namespace Keap.Sdk.Core.Api
         /// <exception cref="Keap.Sdk.Core.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
         /// <param name="updateMask">An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)</param>
-        /// <param name="user">user (optional)</param>
+        /// <param name="patchUserRequestV2">user (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> PatchUserUsingPATCHWithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? user = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Keap.Sdk.Core.Client.ApiResponse<User>> PatchUserUsingPATCHWithHttpInfoAsync(string userId, List<string>? updateMask = default(List<string>?), PatchUserRequestV2? patchUserRequestV2 = default(PatchUserRequestV2?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1294,7 +1294,7 @@ namespace Keap.Sdk.Core.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Keap.Sdk.Core.Client.ClientUtils.ParameterToMultiMap("multi", "update_mask", updateMask));
             }
-            localVarRequestOptions.Data = user;
+            localVarRequestOptions.Data = patchUserRequestV2;
 
             localVarRequestOptions.Operation = "UsersApi.PatchUserUsingPATCH";
             localVarRequestOptions.OperationIndex = operationIndex;

@@ -42,7 +42,7 @@ class ReferralApi:
     @validate_call
     def create_referral_using_post(
         self,
-        request: Annotated[CreateReferralRequest, Field(description="request")],
+        create_referral_request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -60,8 +60,8 @@ class ReferralApi:
 
         Creates a new referral partner referral on the provided contact
 
-        :param request: request (required)
-        :type request: CreateReferralRequest
+        :param create_referral_request: request (required)
+        :type create_referral_request: CreateReferralRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -85,7 +85,7 @@ class ReferralApi:
         """ # noqa: E501
 
         _param = self._create_referral_using_post_serialize(
-            request=request,
+            create_referral_request=create_referral_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -110,7 +110,7 @@ class ReferralApi:
     @validate_call
     def create_referral_using_post_with_http_info(
         self,
-        request: Annotated[CreateReferralRequest, Field(description="request")],
+        create_referral_request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -128,8 +128,8 @@ class ReferralApi:
 
         Creates a new referral partner referral on the provided contact
 
-        :param request: request (required)
-        :type request: CreateReferralRequest
+        :param create_referral_request: request (required)
+        :type create_referral_request: CreateReferralRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -153,7 +153,7 @@ class ReferralApi:
         """ # noqa: E501
 
         _param = self._create_referral_using_post_serialize(
-            request=request,
+            create_referral_request=create_referral_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -178,7 +178,7 @@ class ReferralApi:
     @validate_call
     def create_referral_using_post_without_preload_content(
         self,
-        request: Annotated[CreateReferralRequest, Field(description="request")],
+        create_referral_request: Annotated[CreateReferralRequest, Field(description="request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -196,8 +196,8 @@ class ReferralApi:
 
         Creates a new referral partner referral on the provided contact
 
-        :param request: request (required)
-        :type request: CreateReferralRequest
+        :param create_referral_request: request (required)
+        :type create_referral_request: CreateReferralRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -221,7 +221,7 @@ class ReferralApi:
         """ # noqa: E501
 
         _param = self._create_referral_using_post_serialize(
-            request=request,
+            create_referral_request=create_referral_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -241,7 +241,7 @@ class ReferralApi:
 
     def _create_referral_using_post_serialize(
         self,
-        request,
+        create_referral_request,
         _request_auth,
         _content_type,
         _headers,
@@ -267,8 +267,8 @@ class ReferralApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if request is not None:
-            _body_params = request
+        if create_referral_request is not None:
+            _body_params = create_referral_request
 
 
         # set the HTTP header `Accept`

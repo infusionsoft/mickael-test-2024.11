@@ -865,7 +865,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -955,7 +955,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **202** | Accepted |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -1045,7 +1045,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -2520,7 +2520,7 @@ namespace Example
             var apiInstance = new AffiliateApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
             var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
@@ -2565,7 +2565,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
 

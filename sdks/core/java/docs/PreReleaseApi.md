@@ -8,6 +8,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**addAffiliateToProgramUsingPOSTWithHttpInfo**](PreReleaseApi.md#addAffiliateToProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program |
 | [**addCommissionProgramUsingPOST**](PreReleaseApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program |
 | [**addCommissionProgramUsingPOSTWithHttpInfo**](PreReleaseApi.md#addCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program |
+| [**adjustInventoryUsingPOST**](PreReleaseApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product |
+| [**adjustInventoryUsingPOSTWithHttpInfo**](PreReleaseApi.md#adjustInventoryUsingPOSTWithHttpInfo) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product |
 | [**assignProductCommissionProgramUsingPOST**](PreReleaseApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program |
 | [**assignProductCommissionProgramUsingPOSTWithHttpInfo**](PreReleaseApi.md#assignProductCommissionProgramUsingPOSTWithHttpInfo) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program |
 | [**assignSubscriptionCommissionProgramUsingPOST**](PreReleaseApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program |
@@ -22,10 +24,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**createDiscountUsingPOSTWithHttpInfo**](PreReleaseApi.md#createDiscountUsingPOSTWithHttpInfo) | **POST** /v2/discounts/productCategories | Create a Category Discount |
 | [**createDiscountUsingPOST1**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
 | [**createDiscountUsingPOST1WithHttpInfo**](PreReleaseApi.md#createDiscountUsingPOST1WithHttpInfo) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
+| [**createFileUsingPOST1**](PreReleaseApi.md#createFileUsingPOST1) | **POST** /v2/files | Create a file |
+| [**createFileUsingPOST1WithHttpInfo**](PreReleaseApi.md#createFileUsingPOST1WithHttpInfo) | **POST** /v2/files | Create a file |
 | [**createFunnelIntegrationUsingPOST**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**createFunnelIntegrationUsingPOSTWithHttpInfo**](PreReleaseApi.md#createFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**createIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
 | [**createIntegrationTriggerEventUsingPOSTWithHttpInfo**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**createLeadSourceCategoryUsingPOST**](PreReleaseApi.md#createLeadSourceCategoryUsingPOST) | **POST** /v2/leadSourceCategories | Create a Lead Source Category |
+| [**createLeadSourceCategoryUsingPOSTWithHttpInfo**](PreReleaseApi.md#createLeadSourceCategoryUsingPOSTWithHttpInfo) | **POST** /v2/leadSourceCategories | Create a Lead Source Category |
 | [**createLeadSourceUsingPOST**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source |
 | [**createLeadSourceUsingPOSTWithHttpInfo**](PreReleaseApi.md#createLeadSourceUsingPOSTWithHttpInfo) | **POST** /v2/leadsources | Create a Lead Source |
 | [**createNoteCustomFieldUsingPOST1**](PreReleaseApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field |
@@ -68,8 +74,12 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**deleteDiscountUsingDELETE1WithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETE1WithHttpInfo) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 | [**deleteDiscountUsingDELETE2**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
 | [**deleteDiscountUsingDELETE2WithHttpInfo**](PreReleaseApi.md#deleteDiscountUsingDELETE2WithHttpInfo) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
+| [**deleteFileUsingDELETE1**](PreReleaseApi.md#deleteFileUsingDELETE1) | **DELETE** /v2/files/{file_id} | Delete a file |
+| [**deleteFileUsingDELETE1WithHttpInfo**](PreReleaseApi.md#deleteFileUsingDELETE1WithHttpInfo) | **DELETE** /v2/files/{file_id} | Delete a file |
 | [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
 | [**deleteFunnelIntegrationUsingPOSTWithHttpInfo**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOSTWithHttpInfo) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**deleteLeadSourceCategoryUsingDELETE**](PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETE) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category |
+| [**deleteLeadSourceCategoryUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETEWithHttpInfo) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category |
 | [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**deleteOpportunityStageUsingDELETEWithHttpInfo**](PreReleaseApi.md#deleteOpportunityStageUsingDELETEWithHttpInfo) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
@@ -102,6 +112,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**getDiscountUsingGETWithHttpInfo**](PreReleaseApi.md#getDiscountUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 | [**getDiscountUsingGET1**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
 | [**getDiscountUsingGET1WithHttpInfo**](PreReleaseApi.md#getDiscountUsingGET1WithHttpInfo) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
+| [**getFileDataUsingGET**](PreReleaseApi.md#getFileDataUsingGET) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data |
+| [**getFileDataUsingGETWithHttpInfo**](PreReleaseApi.md#getFileDataUsingGETWithHttpInfo) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data |
+| [**getFileUsingGET1**](PreReleaseApi.md#getFileUsingGET1) | **GET** /v2/files/{file_id} | Retrieve a file |
+| [**getFileUsingGET1WithHttpInfo**](PreReleaseApi.md#getFileUsingGET1WithHttpInfo) | **GET** /v2/files/{file_id} | Retrieve a file |
+| [**getLeadScoreDetailsUsingGET**](PreReleaseApi.md#getLeadScoreDetailsUsingGET) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact |
+| [**getLeadScoreDetailsUsingGETWithHttpInfo**](PreReleaseApi.md#getLeadScoreDetailsUsingGETWithHttpInfo) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact |
+| [**getLeadSourceCategoryUsingGET**](PreReleaseApi.md#getLeadSourceCategoryUsingGET) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category |
+| [**getLeadSourceCategoryUsingGETWithHttpInfo**](PreReleaseApi.md#getLeadSourceCategoryUsingGETWithHttpInfo) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category |
 | [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityStageUsingGETWithHttpInfo**](PreReleaseApi.md#getOpportunityStageUsingGETWithHttpInfo) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
@@ -126,10 +144,14 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**listAffiliateCommissionProgramsUsingGETWithHttpInfo**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGETWithHttpInfo) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs |
 | [**listAffiliateLinksUsingGET**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links |
 | [**listAffiliateLinksUsingGETWithHttpInfo**](PreReleaseApi.md#listAffiliateLinksUsingGETWithHttpInfo) | **GET** /v2/affiliates/redirects | List Affiliate Links |
+| [**listCategoryDiscountsUsingGET**](PreReleaseApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts |
+| [**listCategoryDiscountsUsingGETWithHttpInfo**](PreReleaseApi.md#listCategoryDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/productCategories | List Category Discounts |
 | [**listCountriesUsingGET2**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries |
 | [**listCountriesUsingGET2WithHttpInfo**](PreReleaseApi.md#listCountriesUsingGET2WithHttpInfo) | **GET** /v2/locales/countries | List Countries |
 | [**listDiscountsUsingGET**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
 | [**listDiscountsUsingGETWithHttpInfo**](PreReleaseApi.md#listDiscountsUsingGETWithHttpInfo) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
+| [**listFilesUsingGET1**](PreReleaseApi.md#listFilesUsingGET1) | **GET** /v2/files | List all files |
+| [**listFilesUsingGET1WithHttpInfo**](PreReleaseApi.md#listFilesUsingGET1WithHttpInfo) | **GET** /v2/files | List all files |
 | [**listLandingPagesUsingGET**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages |
 | [**listLandingPagesUsingGETWithHttpInfo**](PreReleaseApi.md#listLandingPagesUsingGETWithHttpInfo) | **GET** /v2/landingpages | List Landing Pages |
 | [**listLeadSourcesUsingGET**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources |
@@ -194,6 +216,8 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**updateDiscountUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateDiscountUsingPATCHWithHttpInfo) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
 | [**updateDiscountUsingPATCH1**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
 | [**updateDiscountUsingPATCH1WithHttpInfo**](PreReleaseApi.md#updateDiscountUsingPATCH1WithHttpInfo) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
+| [**updateFileUsingPATCH**](PreReleaseApi.md#updateFileUsingPATCH) | **PATCH** /v2/files/{file_id} | Update a file |
+| [**updateFileUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateFileUsingPATCHWithHttpInfo) | **PATCH** /v2/files/{file_id} | Update a file |
 | [**updateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateNotesCustomFieldUsingPATCHWithHttpInfo**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCHWithHttpInfo) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
@@ -489,6 +513,148 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
+## adjustInventoryUsingPOST
+
+> RestV2Product adjustInventoryUsingPOST(productId, updateProductInventoryRequest)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String productId = "productId_example"; // String | product_id
+        UpdateProductInventoryRequest updateProductInventoryRequest = new UpdateProductInventoryRequest(); // UpdateProductInventoryRequest | updateProductInventoryRequest
+        try {
+            RestV2Product result = apiInstance.adjustInventoryUsingPOST(productId, updateProductInventoryRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#adjustInventoryUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **productId** | **String**| product_id | |
+| **updateProductInventoryRequest** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md)| updateProductInventoryRequest | |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## adjustInventoryUsingPOSTWithHttpInfo
+
+> ApiResponse<RestV2Product> adjustInventoryUsingPOST adjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String productId = "productId_example"; // String | product_id
+        UpdateProductInventoryRequest updateProductInventoryRequest = new UpdateProductInventoryRequest(); // UpdateProductInventoryRequest | updateProductInventoryRequest
+        try {
+            ApiResponse<RestV2Product> response = apiInstance.adjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#adjustInventoryUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **productId** | **String**| product_id | |
+| **updateProductInventoryRequest** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md)| updateProductInventoryRequest | |
+
+### Return type
+
+ApiResponse<[**RestV2Product**](RestV2Product.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
@@ -1473,6 +1639,144 @@ No authorization required
 | **403** | Forbidden |  -  |
 
 
+## createFileUsingPOST1
+
+> FileMetadata createFileUsingPOST1(createFileRequest)
+
+Create a file
+
+Creates a file and uploads it
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateFileRequest createFileRequest = new CreateFileRequest(); // CreateFileRequest | request
+        try {
+            FileMetadata result = apiInstance.createFileUsingPOST1(createFileRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createFileUsingPOST1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createFileRequest** | [**CreateFileRequest**](CreateFileRequest.md)| request | |
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createFileUsingPOST1WithHttpInfo
+
+> ApiResponse<FileMetadata> createFileUsingPOST1 createFileUsingPOST1WithHttpInfo(createFileRequest)
+
+Create a file
+
+Creates a file and uploads it
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateFileRequest createFileRequest = new CreateFileRequest(); // CreateFileRequest | request
+        try {
+            ApiResponse<FileMetadata> response = apiInstance.createFileUsingPOST1WithHttpInfo(createFileRequest);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createFileUsingPOST1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createFileRequest** | [**CreateFileRequest**](CreateFileRequest.md)| request | |
+
+### Return type
+
+ApiResponse<[**FileMetadata**](FileMetadata.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
 ## createFunnelIntegrationUsingPOST
 
 > void createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
@@ -1739,6 +2043,144 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+
+## createLeadSourceCategoryUsingPOST
+
+> LeadSourceCategory createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest)
+
+Create a Lead Source Category
+
+Create a Lead Source Category.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateUpdateLeadSourceCategoryRequest createUpdateLeadSourceCategoryRequest = new CreateUpdateLeadSourceCategoryRequest(); // CreateUpdateLeadSourceCategoryRequest | leadSourceCategory
+        try {
+            LeadSourceCategory result = apiInstance.createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createLeadSourceCategoryUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createUpdateLeadSourceCategoryRequest** | [**CreateUpdateLeadSourceCategoryRequest**](CreateUpdateLeadSourceCategoryRequest.md)| leadSourceCategory | [optional] |
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+## createLeadSourceCategoryUsingPOSTWithHttpInfo
+
+> ApiResponse<LeadSourceCategory> createLeadSourceCategoryUsingPOST createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest)
+
+Create a Lead Source Category
+
+Create a Lead Source Category.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        CreateUpdateLeadSourceCategoryRequest createUpdateLeadSourceCategoryRequest = new CreateUpdateLeadSourceCategoryRequest(); // CreateUpdateLeadSourceCategoryRequest | leadSourceCategory
+        try {
+            ApiResponse<LeadSourceCategory> response = apiInstance.createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#createLeadSourceCategoryUsingPOST");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createUpdateLeadSourceCategoryRequest** | [**CreateUpdateLeadSourceCategoryRequest**](CreateUpdateLeadSourceCategoryRequest.md)| leadSourceCategory | [optional] |
+
+### Return type
+
+ApiResponse<[**LeadSourceCategory**](LeadSourceCategory.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
@@ -4017,7 +4459,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -4087,7 +4529,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -4155,7 +4597,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **202** | Accepted |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -4225,7 +4667,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **202** | Accepted |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -4645,6 +5087,144 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## deleteFileUsingDELETE1
+
+> void deleteFileUsingDELETE1(fileId)
+
+Delete a file
+
+Deletes a specified file
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        try {
+            apiInstance.deleteFileUsingDELETE1(fileId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteFileUsingDELETE1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteFileUsingDELETE1WithHttpInfo
+
+> ApiResponse<Void> deleteFileUsingDELETE1 deleteFileUsingDELETE1WithHttpInfo(fileId)
+
+Delete a file
+
+Deletes a specified file
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteFileUsingDELETE1WithHttpInfo(fileId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteFileUsingDELETE1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## deleteFunnelIntegrationUsingPOST
 
 > void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
@@ -4779,6 +5359,144 @@ No authorization required
 | **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
+
+
+## deleteLeadSourceCategoryUsingDELETE
+
+> void deleteLeadSourceCategoryUsingDELETE(categoryId)
+
+Delete a Lead Source Category
+
+Deletes the specified Lead Source Category.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String categoryId = "categoryId_example"; // String | category_id
+        try {
+            apiInstance.deleteLeadSourceCategoryUsingDELETE(categoryId);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteLeadSourceCategoryUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **String**| category_id | |
+
+### Return type
+
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## deleteLeadSourceCategoryUsingDELETEWithHttpInfo
+
+> ApiResponse<Void> deleteLeadSourceCategoryUsingDELETE deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId)
+
+Delete a Lead Source Category
+
+Deletes the specified Lead Source Category.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String categoryId = "categoryId_example"; // String | category_id
+        try {
+            ApiResponse<Void> response = apiInstance.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#deleteLeadSourceCategoryUsingDELETE");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **String**| category_id | |
+
+### Return type
+
+
+ApiResponse<Void>
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
 
 
 ## deleteOpportunityStageUsingDELETE
@@ -5671,7 +6389,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -5741,7 +6459,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -6991,6 +7709,566 @@ public class Example {
 ### Return type
 
 ApiResponse<[**ShippingDiscount**](ShippingDiscount.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## getFileDataUsingGET
+
+> byte[] getFileDataUsingGET(fileId)
+
+Retrieve a file&#39;s data
+
+Retrieves a file&#39;s data
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        try {
+            byte[] result = apiInstance.getFileDataUsingGET(fileId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getFileDataUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+
+### Return type
+
+**byte[]**
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getFileDataUsingGETWithHttpInfo
+
+> ApiResponse<byte[]> getFileDataUsingGET getFileDataUsingGETWithHttpInfo(fileId)
+
+Retrieve a file&#39;s data
+
+Retrieves a file&#39;s data
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        try {
+            ApiResponse<byte[]> response = apiInstance.getFileDataUsingGETWithHttpInfo(fileId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getFileDataUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+
+### Return type
+
+ApiResponse<**byte[]**>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## getFileUsingGET1
+
+> FileMetadata getFileUsingGET1(fileId)
+
+Retrieve a file
+
+Retrieves a file
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        try {
+            FileMetadata result = apiInstance.getFileUsingGET1(fileId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getFileUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getFileUsingGET1WithHttpInfo
+
+> ApiResponse<FileMetadata> getFileUsingGET1 getFileUsingGET1WithHttpInfo(fileId)
+
+Retrieve a file
+
+Retrieves a file
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        try {
+            ApiResponse<FileMetadata> response = apiInstance.getFileUsingGET1WithHttpInfo(fileId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getFileUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+
+### Return type
+
+ApiResponse<[**FileMetadata**](FileMetadata.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## getLeadScoreDetailsUsingGET
+
+> LeadScore getLeadScoreDetailsUsingGET(contactId)
+
+Retrieve Lead Score of a Contact
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String contactId = "contactId_example"; // String | contact_id
+        try {
+            LeadScore result = apiInstance.getLeadScoreDetailsUsingGET(contactId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getLeadScoreDetailsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **String**| contact_id | |
+
+### Return type
+
+[**LeadScore**](LeadScore.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getLeadScoreDetailsUsingGETWithHttpInfo
+
+> ApiResponse<LeadScore> getLeadScoreDetailsUsingGET getLeadScoreDetailsUsingGETWithHttpInfo(contactId)
+
+Retrieve Lead Score of a Contact
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String contactId = "contactId_example"; // String | contact_id
+        try {
+            ApiResponse<LeadScore> response = apiInstance.getLeadScoreDetailsUsingGETWithHttpInfo(contactId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getLeadScoreDetailsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **String**| contact_id | |
+
+### Return type
+
+ApiResponse<[**LeadScore**](LeadScore.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## getLeadSourceCategoryUsingGET
+
+> LeadSourceCategory getLeadSourceCategoryUsingGET(categoryId)
+
+Retrieve a Lead Source Category
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String categoryId = "categoryId_example"; // String | category_id
+        try {
+            LeadSourceCategory result = apiInstance.getLeadSourceCategoryUsingGET(categoryId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getLeadSourceCategoryUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **String**| category_id | |
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## getLeadSourceCategoryUsingGETWithHttpInfo
+
+> ApiResponse<LeadSourceCategory> getLeadSourceCategoryUsingGET getLeadSourceCategoryUsingGETWithHttpInfo(categoryId)
+
+Retrieve a Lead Source Category
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String categoryId = "categoryId_example"; // String | category_id
+        try {
+            ApiResponse<LeadSourceCategory> response = apiInstance.getLeadSourceCategoryUsingGETWithHttpInfo(categoryId);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#getLeadSourceCategoryUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **String**| category_id | |
+
+### Return type
+
+ApiResponse<[**LeadSourceCategory**](LeadSourceCategory.md)>
 
 
 ### Authorization
@@ -8707,6 +9985,158 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## listCategoryDiscountsUsingGET
+
+> ListCategoryDiscountsResponse listCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4`
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListCategoryDiscountsResponse result = apiInstance.listCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listCategoryDiscountsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listCategoryDiscountsUsingGETWithHttpInfo
+
+> ApiResponse<ListCategoryDiscountsResponse> listCategoryDiscountsUsingGET listCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4`
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListCategoryDiscountsResponse> response = apiInstance.listCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listCategoryDiscountsUsingGET");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## listCountriesUsingGET2
 
 > ListCountriesResponse listCountriesUsingGET2()
@@ -8971,6 +10401,158 @@ public class Example {
 ### Return type
 
 ApiResponse<[**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## listFilesUsingGET1
+
+> ListFilesResponse listFilesUsingGET1(filter, orderBy, pageSize, pageToken)
+
+List all files
+
+Retrieves all files
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ListFilesResponse result = apiInstance.listFilesUsingGET1(filter, orderBy, pageSize, pageToken);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listFilesUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+[**ListFilesResponse**](ListFilesResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## listFilesUsingGET1WithHttpInfo
+
+> ApiResponse<ListFilesResponse> listFilesUsingGET1 listFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken)
+
+List all files
+
+Retrieves all files
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String filter = "filter_example"; // String | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS` 
+        String orderBy = "orderBy_example"; // String | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+        Integer pageSize = 0; // Integer | Total number of items to return per page
+        String pageToken = "pageToken_example"; // String | Page token
+        try {
+            ApiResponse<ListFilesResponse> response = apiInstance.listFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#listFilesUsingGET1");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **String**| Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60;  | [optional] |
+| **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  | [optional] |
+| **pageSize** | **Integer**| Total number of items to return per page | [optional] |
+| **pageToken** | **String**| Page token | [optional] |
+
+### Return type
+
+ApiResponse<[**ListFilesResponse**](ListFilesResponse.md)>
 
 
 ### Authorization
@@ -10436,7 +12018,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | Created |  -  |
+| **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -10513,7 +12095,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | Created |  -  |
+| **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -13269,7 +14851,7 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
         UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
             CustomFieldMetaData result = apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
@@ -13291,7 +14873,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
 
@@ -13342,7 +14924,7 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
         UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
             ApiResponse<CustomFieldMetaData> response = apiInstance.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
@@ -13366,7 +14948,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
 
@@ -13687,6 +15269,154 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
+## updateFileUsingPATCH
+
+> FileMetadata updateFileUsingPATCH(fileId, updateFileRequest, updateMask)
+
+Update a file
+
+Updates a file
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        UpdateFileRequest updateFileRequest = new UpdateFileRequest(); // UpdateFileRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            FileMetadata result = apiInstance.updateFileUsingPATCH(fileId, updateFileRequest, updateMask);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateFileUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+| **updateFileRequest** | [**UpdateFileRequest**](UpdateFileRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: file, file_name, is_public] |
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateFileUsingPATCHWithHttpInfo
+
+> ApiResponse<FileMetadata> updateFileUsingPATCH updateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask)
+
+Update a file
+
+Updates a file
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.PreReleaseApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+
+        PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
+        String fileId = "fileId_example"; // String | file_id
+        UpdateFileRequest updateFileRequest = new UpdateFileRequest(); // UpdateFileRequest | request
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        try {
+            ApiResponse<FileMetadata> response = apiInstance.updateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PreReleaseApi#updateFileUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileId** | **String**| file_id | |
+| **updateFileRequest** | [**UpdateFileRequest**](UpdateFileRequest.md)| request | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: file, file_name, is_public] |
+
+### Return type
+
+ApiResponse<[**FileMetadata**](FileMetadata.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
 ## updateNotesCustomFieldUsingPATCH
 
 > CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask)
@@ -13713,7 +15443,7 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
         UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
             CustomFieldMetaData result = apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println(result);
@@ -13735,7 +15465,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
 
@@ -13786,7 +15516,7 @@ public class Example {
         PreReleaseApi apiInstance = new PreReleaseApi(defaultClient);
         String customFieldId = "customFieldId_example"; // String | custom_field_id
         UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         try {
             ApiResponse<CustomFieldMetaData> response = apiInstance.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask);
             System.out.println("Status code: " + response.getStatusCode());
@@ -13810,7 +15540,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **customFieldId** | **String**| custom_field_id | |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: group_id, label, options] |
 
 ### Return type
 

@@ -11,11 +11,62 @@ import {SecurityAuthentication} from '../auth/auth';
 import { CreateProductRequest } from '../models/CreateProductRequest';
 import { ListProductsResponse } from '../models/ListProductsResponse';
 import { RestV2Product } from '../models/RestV2Product';
+import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 
 /**
  * no description
  */
 export class ProductApiRequestFactory extends BaseAPIRequestFactory {
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public async adjustInventoryUsingPOST(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Promise<RequestContext> {
+        let _config = _options || this.configuration;
+
+        // verify required parameter 'productId' is not null or undefined
+        if (productId === null || productId === undefined) {
+            throw new RequiredError("ProductApi", "adjustInventoryUsingPOST", "productId");
+        }
+
+
+        // verify required parameter 'updateProductInventoryRequest' is not null or undefined
+        if (updateProductInventoryRequest === null || updateProductInventoryRequest === undefined) {
+            throw new RequiredError("ProductApi", "adjustInventoryUsingPOST", "updateProductInventoryRequest");
+        }
+
+
+        // Path Params
+        const localVarPath = '/v2/products/{product_id}:adjustInventory'
+            .replace('{' + 'product_id' + '}', encodeURIComponent(String(productId)));
+
+        // Make Request Context
+        const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.POST);
+        requestContext.setHeaderParam("Accept", "application/json, */*;q=0.8")
+
+
+        // Body Params
+        const contentType = ObjectSerializer.getPreferredMediaType([
+            "application/json"
+        ]);
+        requestContext.setHeaderParam("Content-Type", contentType);
+        const serializedBody = ObjectSerializer.stringify(
+            ObjectSerializer.serialize(updateProductInventoryRequest, "UpdateProductInventoryRequest", ""),
+            contentType
+        );
+        requestContext.setBody(serializedBody);
+
+        
+        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        if (defaultAuth?.applySecurityAuthentication) {
+            await defaultAuth?.applySecurityAuthentication(requestContext);
+        }
+
+        return requestContext;
+    }
 
     /**
      * Creates a new product
@@ -183,6 +234,49 @@ export class ProductApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
+     * @params response Response returned by the server for a request to adjustInventoryUsingPOST
+     * @throws ApiException if the response code was not in [200, 299]
+     */
+     public async adjustInventoryUsingPOSTWithHttpInfo(response: ResponseContext): Promise<HttpInfo<RestV2Product >> {
+        const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: RestV2Product = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestV2Product", ""
+            ) as RestV2Product;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+        if (isCodeInRange("401", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Unauthorized", body, response.headers);
+        }
+        if (isCodeInRange("403", response.httpStatusCode)) {
+            const body: Error = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Error", ""
+            ) as Error;
+            throw new ApiException<Error>(response.httpStatusCode, "Forbidden", body, response.headers);
+        }
+
+        // Work around for missing responses in specification, e.g. for petstore.yaml
+        if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
+            const body: RestV2Product = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "RestV2Product", ""
+            ) as RestV2Product;
+            return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
+        }
+
+        throw new ApiException<string | Blob | undefined>(response.httpStatusCode, "Unknown API Status Code!", await response.getBodyAsAny(), response.headers);
+    }
+
+    /**
+     * Unwraps the actual response sent by the server from the response context and deserializes the response content
+     * to the expected objects
+     *
      * @params response Response returned by the server for a request to createProductUsingPOST1
      * @throws ApiException if the response code was not in [200, 299]
      */
@@ -327,7 +421,7 @@ export class ProductApiResponseProcessor {
      */
      public async listProductsUsingGET1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<ListProductsResponse >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("201", response.httpStatusCode)) {
+        if (isCodeInRange("200", response.httpStatusCode)) {
             const body: ListProductsResponse = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "ListProductsResponse", ""

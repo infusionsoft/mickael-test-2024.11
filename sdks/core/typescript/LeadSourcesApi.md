@@ -27,6 +27,7 @@ const request: LeadSourcesApiCreateLeadSourceUsingPOSTRequest = {
     // leadsource (optional)
   createLeadSourceRequest: {
     category: {
+      description: "description_example",
       id: "id_example",
       name: "name_example",
     },

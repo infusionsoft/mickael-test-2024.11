@@ -82,7 +82,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\BusinessProfileApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 $patch_business_profile_request = new \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest(); // \Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest | businessProfile
 
 try {
@@ -97,7 +97,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 | **patch_business_profile_request** | [**\Com\Keap\Sdk\Core\Model\PatchBusinessProfileRequest**](../Model/PatchBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type

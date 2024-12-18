@@ -178,7 +178,7 @@ export class AutomationCategoryApiResponseProcessor {
      */
      public async createCategoryUsingPOSTWithHttpInfo(response: ResponseContext): Promise<HttpInfo<AutomationCategory >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("200", response.httpStatusCode)) {
+        if (isCodeInRange("201", response.httpStatusCode)) {
             const body: AutomationCategory = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "AutomationCategory", ""

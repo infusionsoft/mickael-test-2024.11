@@ -4,11 +4,73 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**adjustInventoryUsingPOST**](ProductApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 [**createProductUsingPOST1**](ProductApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
 [**deleteProductUsingDELETE1**](ProductApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
 [**getProductUsingGET**](ProductApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
 [**listProductsUsingGET1**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
 
+
+# **adjustInventoryUsingPOST**
+> RestV2Product adjustInventoryUsingPOST(updateProductInventoryRequest)
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+
+```typescript
+import { createConfiguration, ProductApi } from '';
+import type { ProductApiAdjustInventoryUsingPOSTRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new ProductApi(configuration);
+
+const request: ProductApiAdjustInventoryUsingPOSTRequest = {
+    // product_id
+  productId: "product_id_example",
+    // updateProductInventoryRequest
+  updateProductInventoryRequest: {
+    quantity: 1,
+    type: "INCREASE",
+  },
+};
+
+const data = await apiInstance.adjustInventoryUsingPOST(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateProductInventoryRequest** | **UpdateProductInventoryRequest**| updateProductInventoryRequest |
+ **productId** | [**string**] | product_id | defaults to undefined
+
+
+### Return type
+
+**RestV2Product**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **createProductUsingPOST1**
 > RestV2Product createProductUsingPOST1(createProductRequest)
@@ -249,7 +311,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Created |  -  |
+**200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |

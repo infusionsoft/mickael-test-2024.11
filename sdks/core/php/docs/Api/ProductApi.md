@@ -4,11 +4,69 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**adjustInventoryUsingPOST()**](ProductApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product |
 | [**createProductUsingPOST1()**](ProductApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product |
 | [**deleteProductUsingDELETE1()**](ProductApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product |
 | [**getProductUsingGET()**](ProductApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product |
 | [**listProductsUsingGET1()**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products |
 
+
+## `adjustInventoryUsingPOST()`
+
+```php
+adjustInventoryUsingPOST($product_id, $update_product_inventory_request): \Com\Keap\Sdk\Core\Model\RestV2Product
+```
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\ProductApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$product_id = 'product_id_example'; // string | product_id
+$update_product_inventory_request = new \Com\Keap\Sdk\Core\Model\UpdateProductInventoryRequest(); // \Com\Keap\Sdk\Core\Model\UpdateProductInventoryRequest | updateProductInventoryRequest
+
+try {
+    $result = $apiInstance->adjustInventoryUsingPOST($product_id, $update_product_inventory_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductApi->adjustInventoryUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **product_id** | **string**| product_id | |
+| **update_product_inventory_request** | [**\Com\Keap\Sdk\Core\Model\UpdateProductInventoryRequest**](../Model/UpdateProductInventoryRequest.md)| updateProductInventoryRequest | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestV2Product**](../Model/RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `createProductUsingPOST1()`
 

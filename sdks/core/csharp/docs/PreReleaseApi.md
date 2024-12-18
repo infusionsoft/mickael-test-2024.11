@@ -6,6 +6,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 |--------|--------------|-------------|
 | [**AddAffiliateToProgramUsingPOST**](PreReleaseApi.md#addaffiliatetoprogramusingpost) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program |
 | [**AddCommissionProgramUsingPOST**](PreReleaseApi.md#addcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program |
+| [**AdjustInventoryUsingPOST**](PreReleaseApi.md#adjustinventoryusingpost) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product |
 | [**AssignProductCommissionProgramUsingPOST**](PreReleaseApi.md#assignproductcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program |
 | [**AssignSubscriptionCommissionProgramUsingPOST**](PreReleaseApi.md#assignsubscriptioncommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program |
 | [**CancelSubscriptionUsingPOST**](PreReleaseApi.md#cancelsubscriptionusingpost) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
@@ -13,8 +14,10 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createdefaultcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program |
 | [**CreateDiscountUsingPOST**](PreReleaseApi.md#creatediscountusingpost) | **POST** /v2/discounts/productCategories | Create a Category Discount |
 | [**CreateDiscountUsingPOST1**](PreReleaseApi.md#creatediscountusingpost1) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
+| [**CreateFileUsingPOST1**](PreReleaseApi.md#createfileusingpost1) | **POST** /v2/files | Create a file |
 | [**CreateFunnelIntegrationUsingPOST**](PreReleaseApi.md#createfunnelintegrationusingpost) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**CreateIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createintegrationtriggereventusingpost) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**CreateLeadSourceCategoryUsingPOST**](PreReleaseApi.md#createleadsourcecategoryusingpost) | **POST** /v2/leadSourceCategories | Create a Lead Source Category |
 | [**CreateLeadSourceUsingPOST**](PreReleaseApi.md#createleadsourceusingpost) | **POST** /v2/leadsources | Create a Lead Source |
 | [**CreateNoteCustomFieldUsingPOST1**](PreReleaseApi.md#createnotecustomfieldusingpost1) | **POST** /v2/notes/model/customFields | Create a Custom Field |
 | [**CreateOpportunityCustomFieldsUsingPOST**](PreReleaseApi.md#createopportunitycustomfieldsusingpost) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
@@ -36,7 +39,9 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**DeleteDiscountUsingDELETE**](PreReleaseApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**DeleteDiscountUsingDELETE1**](PreReleaseApi.md#deletediscountusingdelete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 | [**DeleteDiscountUsingDELETE2**](PreReleaseApi.md#deletediscountusingdelete2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
+| [**DeleteFileUsingDELETE1**](PreReleaseApi.md#deletefileusingdelete1) | **DELETE** /v2/files/{file_id} | Delete a file |
 | [**DeleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**DeleteLeadSourceCategoryUsingDELETE**](PreReleaseApi.md#deleteleadsourcecategoryusingdelete) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category |
 | [**DeleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteopportunitystageusingdelete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**DeleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteopportunityusingdelete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
 | [**DeleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteordercustomfieldusingdelete) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field |
@@ -53,6 +58,10 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**GetContactsBySearchTermUsingGET**](PreReleaseApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts |
 | [**GetDiscountUsingGET**](PreReleaseApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 | [**GetDiscountUsingGET1**](PreReleaseApi.md#getdiscountusingget1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
+| [**GetFileDataUsingGET**](PreReleaseApi.md#getfiledatausingget) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data |
+| [**GetFileUsingGET1**](PreReleaseApi.md#getfileusingget1) | **GET** /v2/files/{file_id} | Retrieve a file |
+| [**GetLeadScoreDetailsUsingGET**](PreReleaseApi.md#getleadscoredetailsusingget) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact |
+| [**GetLeadSourceCategoryUsingGET**](PreReleaseApi.md#getleadsourcecategoryusingget) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category |
 | [**GetOpportunityStageUsingGET**](PreReleaseApi.md#getopportunitystageusingget) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**GetOpportunityUsingGET1**](PreReleaseApi.md#getopportunityusingget1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
 | [**GetOrderTotalDiscountUsingGET**](PreReleaseApi.md#getordertotaldiscountusingget) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount |
@@ -65,8 +74,10 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**GetUserSignatureUsingGET1**](PreReleaseApi.md#getusersignatureusingget1) | **GET** /v2/users/{user_id}/signature | Get User email signature |
 | [**ListAffiliateCommissionProgramsUsingGET**](PreReleaseApi.md#listaffiliatecommissionprogramsusingget) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs |
 | [**ListAffiliateLinksUsingGET**](PreReleaseApi.md#listaffiliatelinksusingget) | **GET** /v2/affiliates/redirects | List Affiliate Links |
+| [**ListCategoryDiscountsUsingGET**](PreReleaseApi.md#listcategorydiscountsusingget) | **GET** /v2/discounts/productCategories | List Category Discounts |
 | [**ListCountriesUsingGET2**](PreReleaseApi.md#listcountriesusingget2) | **GET** /v2/locales/countries | List Countries |
 | [**ListDiscountsUsingGET**](PreReleaseApi.md#listdiscountsusingget) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
+| [**ListFilesUsingGET1**](PreReleaseApi.md#listfilesusingget1) | **GET** /v2/files | List all files |
 | [**ListLandingPagesUsingGET**](PreReleaseApi.md#listlandingpagesusingget) | **GET** /v2/landingpages | List Landing Pages |
 | [**ListLeadSourcesUsingGET**](PreReleaseApi.md#listleadsourcesusingget) | **GET** /v2/leadsources | List Lead Sources |
 | [**ListMerchantsUsingGET**](PreReleaseApi.md#listmerchantsusingget) | **GET** /v2/merchants | List Merchant accounts |
@@ -99,6 +110,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**UpdateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateaffiliatecustomfieldusingpatch) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**UpdateDiscountUsingPATCH**](PreReleaseApi.md#updatediscountusingpatch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
 | [**UpdateDiscountUsingPATCH1**](PreReleaseApi.md#updatediscountusingpatch1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
+| [**UpdateFileUsingPATCH**](PreReleaseApi.md#updatefileusingpatch) | **PATCH** /v2/files/{file_id} | Update a file |
 | [**UpdateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updatenotescustomfieldusingpatch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**UpdateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateopportunitycustomfieldusingpatch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
 | [**UpdateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateopportunitystageusingpatch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
@@ -288,6 +300,101 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="adjustinventoryusingpost"></a>
+# **AdjustInventoryUsingPOST**
+> RestV2Product AdjustInventoryUsingPOST (string productId, UpdateProductInventoryRequest updateProductInventoryRequest)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class AdjustInventoryUsingPOSTExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var productId = "productId_example";  // string | product_id
+            var updateProductInventoryRequest = new UpdateProductInventoryRequest(); // UpdateProductInventoryRequest | updateProductInventoryRequest
+
+            try
+            {
+                // Adjust Inventory of a Product
+                RestV2Product result = apiInstance.AdjustInventoryUsingPOST(productId, updateProductInventoryRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.AdjustInventoryUsingPOST: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the AdjustInventoryUsingPOSTWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Adjust Inventory of a Product
+    ApiResponse<RestV2Product> response = apiInstance.AdjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.AdjustInventoryUsingPOSTWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **productId** | **string** | product_id |  |
+| **updateProductInventoryRequest** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md) | updateProductInventoryRequest |  |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
@@ -948,6 +1055,99 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="createfileusingpost1"></a>
+# **CreateFileUsingPOST1**
+> FileMetadata CreateFileUsingPOST1 (CreateFileRequest createFileRequest)
+
+Create a file
+
+Creates a file and uploads it
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateFileUsingPOST1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var createFileRequest = new CreateFileRequest(); // CreateFileRequest | request
+
+            try
+            {
+                // Create a file
+                FileMetadata result = apiInstance.CreateFileUsingPOST1(createFileRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.CreateFileUsingPOST1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateFileUsingPOST1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a file
+    ApiResponse<FileMetadata> response = apiInstance.CreateFileUsingPOST1WithHttpInfo(createFileRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.CreateFileUsingPOST1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createFileRequest** | [**CreateFileRequest**](CreateFileRequest.md) | request |  |
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="createfunnelintegrationusingpost"></a>
 # **CreateFunnelIntegrationUsingPOST**
 > void CreateFunnelIntegrationUsingPOST (CreateFunnelIntegrationRequest createFunnelIntegrationRequest)
@@ -1123,6 +1323,99 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="createleadsourcecategoryusingpost"></a>
+# **CreateLeadSourceCategoryUsingPOST**
+> LeadSourceCategory CreateLeadSourceCategoryUsingPOST (CreateUpdateLeadSourceCategoryRequest? createUpdateLeadSourceCategoryRequest = null)
+
+Create a Lead Source Category
+
+Create a Lead Source Category.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class CreateLeadSourceCategoryUsingPOSTExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var createUpdateLeadSourceCategoryRequest = new CreateUpdateLeadSourceCategoryRequest?(); // CreateUpdateLeadSourceCategoryRequest? | leadSourceCategory (optional) 
+
+            try
+            {
+                // Create a Lead Source Category
+                LeadSourceCategory result = apiInstance.CreateLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.CreateLeadSourceCategoryUsingPOST: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreateLeadSourceCategoryUsingPOSTWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a Lead Source Category
+    ApiResponse<LeadSourceCategory> response = apiInstance.CreateLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.CreateLeadSourceCategoryUsingPOSTWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createUpdateLeadSourceCategoryRequest** | [**CreateUpdateLeadSourceCategoryRequest?**](CreateUpdateLeadSourceCategoryRequest?.md) | leadSourceCategory | [optional]  |
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 
@@ -2701,7 +2994,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -2791,7 +3084,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **202** | Accepted |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -3068,6 +3361,96 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="deletefileusingdelete1"></a>
+# **DeleteFileUsingDELETE1**
+> void DeleteFileUsingDELETE1 (string fileId)
+
+Delete a file
+
+Deletes a specified file
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteFileUsingDELETE1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var fileId = "fileId_example";  // string | file_id
+
+            try
+            {
+                // Delete a file
+                apiInstance.DeleteFileUsingDELETE1(fileId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteFileUsingDELETE1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteFileUsingDELETE1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete a file
+    apiInstance.DeleteFileUsingDELETE1WithHttpInfo(fileId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteFileUsingDELETE1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fileId** | **string** | file_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="deletefunnelintegrationusingpost"></a>
 # **DeleteFunnelIntegrationUsingPOST**
 > void DeleteFunnelIntegrationUsingPOST (DeleteFunnelIntegrationRequest deleteFunnelIntegrationRequest)
@@ -3154,6 +3537,96 @@ No authorization required
 | **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="deleteleadsourcecategoryusingdelete"></a>
+# **DeleteLeadSourceCategoryUsingDELETE**
+> void DeleteLeadSourceCategoryUsingDELETE (string categoryId)
+
+Delete a Lead Source Category
+
+Deletes the specified Lead Source Category.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class DeleteLeadSourceCategoryUsingDELETEExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var categoryId = "categoryId_example";  // string | category_id
+
+            try
+            {
+                // Delete a Lead Source Category
+                apiInstance.DeleteLeadSourceCategoryUsingDELETE(categoryId);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.DeleteLeadSourceCategoryUsingDELETE: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteLeadSourceCategoryUsingDELETEWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete a Lead Source Category
+    apiInstance.DeleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.DeleteLeadSourceCategoryUsingDELETEWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryId** | **string** | category_id |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3780,7 +4253,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -4607,6 +5080,382 @@ catch (ApiException e)
 ### Return type
 
 [**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getfiledatausingget"></a>
+# **GetFileDataUsingGET**
+> byte[] GetFileDataUsingGET (string fileId)
+
+Retrieve a file's data
+
+Retrieves a file's data
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetFileDataUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var fileId = "fileId_example";  // string | file_id
+
+            try
+            {
+                // Retrieve a file's data
+                byte[] result = apiInstance.GetFileDataUsingGET(fileId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetFileDataUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetFileDataUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve a file's data
+    ApiResponse<byte[]> response = apiInstance.GetFileDataUsingGETWithHttpInfo(fileId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetFileDataUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fileId** | **string** | file_id |  |
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getfileusingget1"></a>
+# **GetFileUsingGET1**
+> FileMetadata GetFileUsingGET1 (string fileId)
+
+Retrieve a file
+
+Retrieves a file
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetFileUsingGET1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var fileId = "fileId_example";  // string | file_id
+
+            try
+            {
+                // Retrieve a file
+                FileMetadata result = apiInstance.GetFileUsingGET1(fileId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetFileUsingGET1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetFileUsingGET1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve a file
+    ApiResponse<FileMetadata> response = apiInstance.GetFileUsingGET1WithHttpInfo(fileId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetFileUsingGET1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fileId** | **string** | file_id |  |
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getleadscoredetailsusingget"></a>
+# **GetLeadScoreDetailsUsingGET**
+> LeadScore GetLeadScoreDetailsUsingGET (string contactId)
+
+Retrieve Lead Score of a Contact
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetLeadScoreDetailsUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var contactId = "contactId_example";  // string | contact_id
+
+            try
+            {
+                // Retrieve Lead Score of a Contact
+                LeadScore result = apiInstance.GetLeadScoreDetailsUsingGET(contactId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetLeadScoreDetailsUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetLeadScoreDetailsUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Lead Score of a Contact
+    ApiResponse<LeadScore> response = apiInstance.GetLeadScoreDetailsUsingGETWithHttpInfo(contactId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetLeadScoreDetailsUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **contactId** | **string** | contact_id |  |
+
+### Return type
+
+[**LeadScore**](LeadScore.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getleadsourcecategoryusingget"></a>
+# **GetLeadSourceCategoryUsingGET**
+> LeadSourceCategory GetLeadSourceCategoryUsingGET (string categoryId)
+
+Retrieve a Lead Source Category
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class GetLeadSourceCategoryUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var categoryId = "categoryId_example";  // string | category_id
+
+            try
+            {
+                // Retrieve a Lead Source Category
+                LeadSourceCategory result = apiInstance.GetLeadSourceCategoryUsingGET(categoryId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.GetLeadSourceCategoryUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetLeadSourceCategoryUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve a Lead Source Category
+    ApiResponse<LeadSourceCategory> response = apiInstance.GetLeadSourceCategoryUsingGETWithHttpInfo(categoryId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.GetLeadSourceCategoryUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryId** | **string** | category_id |  |
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
 
 ### Authorization
 
@@ -5763,6 +6612,106 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="listcategorydiscountsusingget"></a>
+# **ListCategoryDiscountsUsingGET**
+> ListCategoryDiscountsResponse ListCategoryDiscountsUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListCategoryDiscountsUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var filter = "filter_example";  // string? | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4` (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List Category Discounts
+                ListCategoryDiscountsResponse result = apiInstance.ListCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListCategoryDiscountsUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListCategoryDiscountsUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Category Discounts
+    ApiResponse<ListCategoryDiscountsResponse> response = apiInstance.ListCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListCategoryDiscountsUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="listcountriesusingget2"></a>
 # **ListCountriesUsingGET2**
 > ListCountriesResponse ListCountriesUsingGET2 ()
@@ -5931,6 +6880,106 @@ catch (ApiException e)
 ### Return type
 
 [**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listfilesusingget1"></a>
+# **ListFilesUsingGET1**
+> ListFilesResponse ListFilesUsingGET1 (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List all files
+
+Retrieves all files
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListFilesUsingGET1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var filter = "filter_example";  // string? | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS`  (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List all files
+                ListFilesResponse result = apiInstance.ListFilesUsingGET1(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.ListFilesUsingGET1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListFilesUsingGET1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List all files
+    ApiResponse<ListFilesResponse> response = apiInstance.ListFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.ListFilesUsingGET1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60;  | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListFilesResponse**](ListFilesResponse.md)
 
 ### Authorization
 
@@ -6949,7 +7998,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | Created |  -  |
+| **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
@@ -8790,7 +9839,7 @@ namespace Example
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
             var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
@@ -8835,7 +9884,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
 
@@ -9057,6 +10106,104 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="updatefileusingpatch"></a>
+# **UpdateFileUsingPATCH**
+> FileMetadata UpdateFileUsingPATCH (string fileId, UpdateFileRequest updateFileRequest, List<string>? updateMask = null)
+
+Update a file
+
+Updates a file
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateFileUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new PreReleaseApi(config);
+            var fileId = "fileId_example";  // string | file_id
+            var updateFileRequest = new UpdateFileRequest(); // UpdateFileRequest | request
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update a file
+                FileMetadata result = apiInstance.UpdateFileUsingPATCH(fileId, updateFileRequest, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PreReleaseApi.UpdateFileUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateFileUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a file
+    ApiResponse<FileMetadata> response = apiInstance.UpdateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PreReleaseApi.UpdateFileUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fileId** | **string** | file_id |  |
+| **updateFileRequest** | [**UpdateFileRequest**](UpdateFileRequest.md) | request |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="updatenotescustomfieldusingpatch"></a>
 # **UpdateNotesCustomFieldUsingPATCH**
 > CustomFieldMetaData UpdateNotesCustomFieldUsingPATCH (string customFieldId, UpdateCustomFieldMetaDataRequest updateCustomFieldMetaDataRequest, List<string>? updateMask = null)
@@ -9084,7 +10231,7 @@ namespace Example
             var apiInstance = new PreReleaseApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
             var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
@@ -9129,7 +10276,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
 

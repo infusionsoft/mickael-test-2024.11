@@ -4,11 +4,58 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**adjustInventoryUsingPOST**](ProductApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 [**createProductUsingPOST1**](ProductApi.md#createProductUsingPOST1) | **POST** /v2/products | Create a Product
 [**deleteProductUsingDELETE1**](ProductApi.md#deleteProductUsingDELETE1) | **DELETE** /v2/products/{product_id} | Delete a Product
 [**getProductUsingGET**](ProductApi.md#getProductUsingGET) | **GET** /v2/products/{product_id} | Get a Product
 [**listProductsUsingGET1**](ProductApi.md#listProductsUsingGET1) | **GET** /v2/products | List Products
 
+
+
+## adjustInventoryUsingPOST
+
+> RestV2Product adjustInventoryUsingPOST(productId, updateProductInventoryRequest)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.ProductApi();
+let productId = "productId_example"; // String | product_id
+let updateProductInventoryRequest = new KeapCoreServiceCoreSdk.UpdateProductInventoryRequest(); // UpdateProductInventoryRequest | updateProductInventoryRequest
+apiInstance.adjustInventoryUsingPOST(productId, updateProductInventoryRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | **String**| product_id | 
+ **updateProductInventoryRequest** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md)| updateProductInventoryRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## createProductUsingPOST1

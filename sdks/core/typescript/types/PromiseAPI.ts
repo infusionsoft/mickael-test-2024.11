@@ -71,6 +71,7 @@ import { CreateCustomFieldResponse } from '../models/CreateCustomFieldResponse';
 import { CreateDefaultCommissionProgramRequest } from '../models/CreateDefaultCommissionProgramRequest';
 import { CreateEmailSentRequest } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
+import { CreateFileRequest } from '../models/CreateFileRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
 import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
@@ -93,6 +94,7 @@ import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubs
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
 import { CreateUpdateDiscountRequest } from '../models/CreateUpdateDiscountRequest';
+import { CreateUpdateLeadSourceCategoryRequest } from '../models/CreateUpdateLeadSourceCategoryRequest';
 import { CreateUpdateTagCategoryRequest } from '../models/CreateUpdateTagCategoryRequest';
 import { CreateUpdateTagRequest } from '../models/CreateUpdateTagRequest';
 import { CreateUserRequestV2 } from '../models/CreateUserRequestV2';
@@ -116,6 +118,7 @@ import { EmailSentCreateError } from '../models/EmailSentCreateError';
 import { EmailSentWithContent } from '../models/EmailSentWithContent';
 import { EmailsSentList } from '../models/EmailsSentList';
 import { FaxNumber } from '../models/FaxNumber';
+import { FileMetadata } from '../models/FileMetadata';
 import { FunnelIntegrationAction } from '../models/FunnelIntegrationAction';
 import { FunnelIntegrationHttpRequest } from '../models/FunnelIntegrationHttpRequest';
 import { FunnelIntegrationSchemaField } from '../models/FunnelIntegrationSchemaField';
@@ -133,6 +136,7 @@ import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment } from '../models/InvoiceOrderPayment';
 import { Item } from '../models/Item';
 import { LandingPage } from '../models/LandingPage';
+import { LeadScore } from '../models/LeadScore';
 import { LeadSource } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
 import { Link } from '../models/Link';
@@ -146,11 +150,13 @@ import { ListAutomationIdsResponse } from '../models/ListAutomationIdsResponse';
 import { ListAutomationResponse } from '../models/ListAutomationResponse';
 import { ListBasicContactResponse } from '../models/ListBasicContactResponse';
 import { ListCampaignsResponse } from '../models/ListCampaignsResponse';
+import { ListCategoryDiscountsResponse } from '../models/ListCategoryDiscountsResponse';
 import { ListCompaniesResponse } from '../models/ListCompaniesResponse';
 import { ListContactLinkTypesResponse } from '../models/ListContactLinkTypesResponse';
 import { ListContactLinksResponse } from '../models/ListContactLinksResponse';
 import { ListContactsResponse } from '../models/ListContactsResponse';
 import { ListCountriesResponse } from '../models/ListCountriesResponse';
+import { ListFilesResponse } from '../models/ListFilesResponse';
 import { ListLandingPagesResponse } from '../models/ListLandingPagesResponse';
 import { ListLeadSourcesResponse } from '../models/ListLeadSourcesResponse';
 import { ListNoteTemplateResponse } from '../models/ListNoteTemplateResponse';
@@ -180,6 +186,7 @@ import { NoteTemplate } from '../models/NoteTemplate';
 import { ObjectModel } from '../models/ObjectModel';
 import { OpportunityContact } from '../models/OpportunityContact';
 import { OpportunityStage } from '../models/OpportunityStage';
+import { OrderItemProduct } from '../models/OrderItemProduct';
 import { OrderItemTax } from '../models/OrderItemTax';
 import { OrderTotalDiscount } from '../models/OrderTotalDiscount';
 import { Origin } from '../models/Origin';
@@ -201,6 +208,7 @@ import { PhoneNumber } from '../models/PhoneNumber';
 import { ProductCommission } from '../models/ProductCommission';
 import { ProductCommissionProgram } from '../models/ProductCommissionProgram';
 import { ProductFixedOption } from '../models/ProductFixedOption';
+import { ProductInventory } from '../models/ProductInventory';
 import { ProductOptions } from '../models/ProductOptions';
 import { ProductVariableSetting } from '../models/ProductVariableSetting';
 import { Provinces } from '../models/Provinces';
@@ -216,7 +224,6 @@ import { RestEmailAddress } from '../models/RestEmailAddress';
 import { RestOpportunityStage } from '../models/RestOpportunityStage';
 import { RestPaymentGateway } from '../models/RestPaymentGateway';
 import { RestPaymentMethod } from '../models/RestPaymentMethod';
-import { RestProduct } from '../models/RestProduct';
 import { RestProductOption } from '../models/RestProductOption';
 import { RestProductOptionValue } from '../models/RestProductOptionValue';
 import { RestSubscriptionPlan } from '../models/RestSubscriptionPlan';
@@ -248,11 +255,13 @@ import { Throwable } from '../models/Throwable';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
+import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
 import { UpdateOpportunityStageChecklistItem } from '../models/UpdateOpportunityStageChecklistItem';
 import { UpdateOpportunityStageRequest } from '../models/UpdateOpportunityStageRequest';
 import { UpdateOrderTotalDiscountRequest } from '../models/UpdateOrderTotalDiscountRequest';
+import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
@@ -849,7 +858,7 @@ export class PromiseAffiliateApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         const result = this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -861,7 +870,7 @@ export class PromiseAffiliateApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
         const result = this.api.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -1208,7 +1217,7 @@ export class PromiseBusinessProfileApi {
     /**
      * Updates Business Profile information.
      * Update Business Profile
-     * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param [patchBusinessProfileRequest] businessProfile
      */
     public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
@@ -1219,7 +1228,7 @@ export class PromiseBusinessProfileApi {
     /**
      * Updates Business Profile information.
      * Update Business Profile
-     * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param [patchBusinessProfileRequest] businessProfile
      */
     public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<GetBusinessProfileResponse> {
@@ -1418,6 +1427,32 @@ export class PromiseCategoryDiscountApi {
      */
     public getDiscountUsingGET(discountId: string, _options?: Configuration): Promise<CategoryDiscount> {
         const result = this.api.getDiscountUsingGET(discountId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGETWithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<HttpInfo<ListCategoryDiscountsResponse>> {
+        const result = this.api.listCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<ListCategoryDiscountsResponse> {
+        const result = this.api.listCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken, _options);
         return result.toPromise();
     }
 
@@ -2080,6 +2115,155 @@ export class PromiseEmailAddressApi {
 
 
 
+import { ObservableFilesApi } from './ObservableAPI';
+
+import { FilesApiRequestFactory, FilesApiResponseProcessor} from "../apis/FilesApi";
+export class PromiseFilesApi {
+    private api: ObservableFilesApi
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: FilesApiRequestFactory,
+        responseProcessor?: FilesApiResponseProcessor
+    ) {
+        this.api = new ObservableFilesApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1WithHttpInfo(createFileRequest: CreateFileRequest, _options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        const result = this.api.createFileUsingPOST1WithHttpInfo(createFileRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1(createFileRequest: CreateFileRequest, _options?: Configuration): Promise<FileMetadata> {
+        const result = this.api.createFileUsingPOST1(createFileRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1WithHttpInfo(fileId: string, _options?: Configuration): Promise<HttpInfo<void>> {
+        const result = this.api.deleteFileUsingDELETE1WithHttpInfo(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1(fileId: string, _options?: Configuration): Promise<void> {
+        const result = this.api.deleteFileUsingDELETE1(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGETWithHttpInfo(fileId: string, _options?: Configuration): Promise<HttpInfo<string>> {
+        const result = this.api.getFileDataUsingGETWithHttpInfo(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGET(fileId: string, _options?: Configuration): Promise<string> {
+        const result = this.api.getFileDataUsingGET(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1WithHttpInfo(fileId: string, _options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        const result = this.api.getFileUsingGET1WithHttpInfo(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1(fileId: string, _options?: Configuration): Promise<FileMetadata> {
+        const result = this.api.getFileUsingGET1(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1WithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<HttpInfo<ListFilesResponse>> {
+        const result = this.api.listFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<ListFilesResponse> {
+        const result = this.api.listFilesUsingGET1(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCHWithHttpInfo(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        const result = this.api.updateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCH(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Promise<FileMetadata> {
+        const result = this.api.updateFileUsingPATCH(fileId, updateFileRequest, updateMask, _options);
+        return result.toPromise();
+    }
+
+
+}
+
+
+
 import { ObservableFreeTrialDiscountApi } from './ObservableAPI';
 
 import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor} from "../apis/FreeTrialDiscountApi";
@@ -2233,6 +2417,124 @@ export class PromiseLandingPagesApi {
      */
     public listLandingPagesUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<ListLandingPagesResponse> {
         const result = this.api.listLandingPagesUsingGET(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+
+}
+
+
+
+import { ObservableLeadScoreApi } from './ObservableAPI';
+
+import { LeadScoreApiRequestFactory, LeadScoreApiResponseProcessor} from "../apis/LeadScoreApi";
+export class PromiseLeadScoreApi {
+    private api: ObservableLeadScoreApi
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: LeadScoreApiRequestFactory,
+        responseProcessor?: LeadScoreApiResponseProcessor
+    ) {
+        this.api = new ObservableLeadScoreApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGETWithHttpInfo(contactId: string, _options?: Configuration): Promise<HttpInfo<LeadScore>> {
+        const result = this.api.getLeadScoreDetailsUsingGETWithHttpInfo(contactId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGET(contactId: string, _options?: Configuration): Promise<LeadScore> {
+        const result = this.api.getLeadScoreDetailsUsingGET(contactId, _options);
+        return result.toPromise();
+    }
+
+
+}
+
+
+
+import { ObservableLeadSourceCategoriesApi } from './ObservableAPI';
+
+import { LeadSourceCategoriesApiRequestFactory, LeadSourceCategoriesApiResponseProcessor} from "../apis/LeadSourceCategoriesApi";
+export class PromiseLeadSourceCategoriesApi {
+    private api: ObservableLeadSourceCategoriesApi
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: LeadSourceCategoriesApiRequestFactory,
+        responseProcessor?: LeadSourceCategoriesApiResponseProcessor
+    ) {
+        this.api = new ObservableLeadSourceCategoriesApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        const result = this.api.createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Promise<LeadSourceCategory> {
+        const result = this.api.createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId: string, _options?: Configuration): Promise<HttpInfo<void>> {
+        const result = this.api.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETE(categoryId: string, _options?: Configuration): Promise<void> {
+        const result = this.api.deleteLeadSourceCategoryUsingDELETE(categoryId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGETWithHttpInfo(categoryId: string, _options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        const result = this.api.getLeadSourceCategoryUsingGETWithHttpInfo(categoryId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGET(categoryId: string, _options?: Configuration): Promise<LeadSourceCategory> {
+        const result = this.api.getLeadSourceCategoryUsingGET(categoryId, _options);
         return result.toPromise();
     }
 
@@ -2582,7 +2884,7 @@ export class PromiseNoteApi {
      * @param contactId contact_id
      * @param noteId note_id
      * @param updateNoteRequest updateNoteRequest
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNoteUsingPATCHWithHttpInfo(contactId: string, noteId: string, updateNoteRequest: UpdateNoteRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<UpdateNoteResponse>> {
         const result = this.api.updateNoteUsingPATCHWithHttpInfo(contactId, noteId, updateNoteRequest, updateMask, _options);
@@ -2595,7 +2897,7 @@ export class PromiseNoteApi {
      * @param contactId contact_id
      * @param noteId note_id
      * @param updateNoteRequest updateNoteRequest
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNoteUsingPATCH(contactId: string, noteId: string, updateNoteRequest: UpdateNoteRequest, updateMask?: Array<string>, _options?: Configuration): Promise<UpdateNoteResponse> {
         const result = this.api.updateNoteUsingPATCH(contactId, noteId, updateNoteRequest, updateMask, _options);
@@ -2607,7 +2909,7 @@ export class PromiseNoteApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         const result = this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -2619,7 +2921,7 @@ export class PromiseNoteApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
         const result = this.api.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -3424,6 +3726,28 @@ export class PromisePreReleaseApi {
     }
 
     /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOSTWithHttpInfo(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Promise<HttpInfo<RestV2Product>> {
+        const result = this.api.adjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOST(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Promise<RestV2Product> {
+        const result = this.api.adjustInventoryUsingPOST(productId, updateProductInventoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
@@ -3572,6 +3896,26 @@ export class PromisePreReleaseApi {
     }
 
     /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1WithHttpInfo(createFileRequest: CreateFileRequest, _options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        const result = this.api.createFileUsingPOST1WithHttpInfo(createFileRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1(createFileRequest: CreateFileRequest, _options?: Configuration): Promise<FileMetadata> {
+        const result = this.api.createFileUsingPOST1(createFileRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Allows a list of both triggers / goals, and actions / sequence items to be installed at the same time.
      * Create Funnel Integrations into the app.
      * @param createFunnelIntegrationRequest createFunnelIntegrationRequest
@@ -3606,6 +3950,26 @@ export class PromisePreReleaseApi {
      */
     public createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents: CreateFunnelIntegrationTriggerEvents, _options?: Configuration): Promise<Array<FunnelIntegrationTriggerResultDTO>> {
         const result = this.api.createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        const result = this.api.createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Promise<LeadSourceCategory> {
+        const result = this.api.createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest, _options);
         return result.toPromise();
     }
 
@@ -4032,6 +4396,26 @@ export class PromisePreReleaseApi {
     }
 
     /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1WithHttpInfo(fileId: string, _options?: Configuration): Promise<HttpInfo<void>> {
+        const result = this.api.deleteFileUsingDELETE1WithHttpInfo(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1(fileId: string, _options?: Configuration): Promise<void> {
+        const result = this.api.deleteFileUsingDELETE1(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Deletes all triggers / goals, and actions / sequence items for the given funnel integration
      * Deletes Funnel Integrations from the app.
      * @param deleteFunnelIntegrationRequest deleteFunnelIntegrationRequest
@@ -4048,6 +4432,26 @@ export class PromisePreReleaseApi {
      */
     public deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest: DeleteFunnelIntegrationRequest, _options?: Configuration): Promise<void> {
         const result = this.api.deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId: string, _options?: Configuration): Promise<HttpInfo<void>> {
+        const result = this.api.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETE(categoryId: string, _options?: Configuration): Promise<void> {
+        const result = this.api.deleteLeadSourceCategoryUsingDELETE(categoryId, _options);
         return result.toPromise();
     }
 
@@ -4378,6 +4782,86 @@ export class PromisePreReleaseApi {
     }
 
     /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGETWithHttpInfo(fileId: string, _options?: Configuration): Promise<HttpInfo<string>> {
+        const result = this.api.getFileDataUsingGETWithHttpInfo(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGET(fileId: string, _options?: Configuration): Promise<string> {
+        const result = this.api.getFileDataUsingGET(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1WithHttpInfo(fileId: string, _options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        const result = this.api.getFileUsingGET1WithHttpInfo(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1(fileId: string, _options?: Configuration): Promise<FileMetadata> {
+        const result = this.api.getFileUsingGET1(fileId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGETWithHttpInfo(contactId: string, _options?: Configuration): Promise<HttpInfo<LeadScore>> {
+        const result = this.api.getLeadScoreDetailsUsingGETWithHttpInfo(contactId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGET(contactId: string, _options?: Configuration): Promise<LeadScore> {
+        const result = this.api.getLeadScoreDetailsUsingGET(contactId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGETWithHttpInfo(categoryId: string, _options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        const result = this.api.getLeadSourceCategoryUsingGETWithHttpInfo(categoryId, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGET(categoryId: string, _options?: Configuration): Promise<LeadSourceCategory> {
+        const result = this.api.getLeadSourceCategoryUsingGET(categoryId, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Retrieves the specified Opportunity Stage
      * Retrieve an Opportunity Stage
      * @param stageId stage_id
@@ -4628,6 +5112,32 @@ export class PromisePreReleaseApi {
     }
 
     /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGETWithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<HttpInfo<ListCategoryDiscountsResponse>> {
+        const result = this.api.listCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<ListCategoryDiscountsResponse> {
+        const result = this.api.listCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
      * List Countries
      */
     public listCountriesUsingGET2WithHttpInfo(_options?: Configuration): Promise<HttpInfo<ListCountriesResponse>> {
@@ -4668,6 +5178,32 @@ export class PromisePreReleaseApi {
      */
     public listDiscountsUsingGET(fields?: Array<string>, filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<ListShippingDiscountsResponse> {
         const result = this.api.listDiscountsUsingGET(fields, filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1WithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<HttpInfo<ListFilesResponse>> {
+        const result = this.api.listFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Promise<ListFilesResponse> {
+        const result = this.api.listFilesUsingGET1(filter, orderBy, pageSize, pageToken, _options);
         return result.toPromise();
     }
 
@@ -5366,7 +5902,7 @@ export class PromisePreReleaseApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         const result = this.api.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -5378,7 +5914,7 @@ export class PromisePreReleaseApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
         const result = this.api.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -5434,11 +5970,35 @@ export class PromisePreReleaseApi {
     }
 
     /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCHWithHttpInfo(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        const result = this.api.updateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCH(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Promise<FileMetadata> {
+        const result = this.api.updateFileUsingPATCH(fileId, updateFileRequest, updateMask, _options);
+        return result.toPromise();
+    }
+
+    /**
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<CustomFieldMetaData>> {
         const result = this.api.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -5450,7 +6010,7 @@ export class PromisePreReleaseApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<CustomFieldMetaData> {
         const result = this.api.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -5664,6 +6224,28 @@ export class PromiseProductApi {
         responseProcessor?: ProductApiResponseProcessor
     ) {
         this.api = new ObservableProductApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOSTWithHttpInfo(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Promise<HttpInfo<RestV2Product>> {
+        const result = this.api.adjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOST(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Promise<RestV2Product> {
+        const result = this.api.adjustInventoryUsingPOST(productId, updateProductInventoryRequest, _options);
+        return result.toPromise();
     }
 
     /**

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **numberOfPayments** | **Number** |  | [optional] 
 **orderItemTaxes** | [**[OrderItemTax]**](OrderItemTax.md) |  | [optional] 
 **price** | **Number** |  | [optional] 
-**product** | [**RestProduct**](RestProduct.md) |  | [optional] 
+**product** | [**OrderItemProduct**](OrderItemProduct.md) |  | [optional] 
 **quantity** | **Number** |  | [optional] 
 **special** | [**Discount**](Discount.md) |  | [optional] 
 **subscription** | [**RestV2Subscription**](RestV2Subscription.md) |  | [optional] 

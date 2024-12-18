@@ -100,7 +100,7 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.BusinessProfileApi(api_client)
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
     patch_business_profile_request = keap_sdk_core_client.PatchBusinessProfileRequest() # PatchBusinessProfileRequest | businessProfile (optional)
 
     try:
@@ -118,7 +118,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
  **patch_business_profile_request** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] 
 
 ### Return type

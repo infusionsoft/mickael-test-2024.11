@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_affiliate_to_program_using_post**](PreReleaseApi.md#add_affiliate_to_program_using_post) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 [**add_commission_program_using_post**](PreReleaseApi.md#add_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
+[**adjust_inventory_using_post**](PreReleaseApi.md#adjust_inventory_using_post) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 [**assign_product_commission_program_using_post**](PreReleaseApi.md#assign_product_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
 [**assign_subscription_commission_program_using_post**](PreReleaseApi.md#assign_subscription_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
 [**cancel_subscription_using_post**](PreReleaseApi.md#cancel_subscription_using_post) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
@@ -13,8 +14,10 @@ Method | HTTP request | Description
 [**create_default_commission_program_using_post**](PreReleaseApi.md#create_default_commission_program_using_post) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
 [**create_discount_using_post**](PreReleaseApi.md#create_discount_using_post) | **POST** /v2/discounts/productCategories | Create a Category Discount
 [**create_discount_using_post1**](PreReleaseApi.md#create_discount_using_post1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
+[**create_file_using_post1**](PreReleaseApi.md#create_file_using_post1) | **POST** /v2/files | Create a file
 [**create_funnel_integration_using_post**](PreReleaseApi.md#create_funnel_integration_using_post) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 [**create_integration_trigger_event_using_post**](PreReleaseApi.md#create_integration_trigger_event_using_post) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+[**create_lead_source_category_using_post**](PreReleaseApi.md#create_lead_source_category_using_post) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
 [**create_lead_source_using_post**](PreReleaseApi.md#create_lead_source_using_post) | **POST** /v2/leadsources | Create a Lead Source
 [**create_note_custom_field_using_post1**](PreReleaseApi.md#create_note_custom_field_using_post1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 [**create_opportunity_custom_fields_using_post**](PreReleaseApi.md#create_opportunity_custom_fields_using_post) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
@@ -36,7 +39,9 @@ Method | HTTP request | Description
 [**delete_discount_using_delete**](PreReleaseApi.md#delete_discount_using_delete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**delete_discount_using_delete1**](PreReleaseApi.md#delete_discount_using_delete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 [**delete_discount_using_delete2**](PreReleaseApi.md#delete_discount_using_delete2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
+[**delete_file_using_delete1**](PreReleaseApi.md#delete_file_using_delete1) | **DELETE** /v2/files/{file_id} | Delete a file
 [**delete_funnel_integration_using_post**](PreReleaseApi.md#delete_funnel_integration_using_post) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+[**delete_lead_source_category_using_delete**](PreReleaseApi.md#delete_lead_source_category_using_delete) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
 [**delete_opportunity_stage_using_delete**](PreReleaseApi.md#delete_opportunity_stage_using_delete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**delete_opportunity_using_delete**](PreReleaseApi.md#delete_opportunity_using_delete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
 [**delete_order_custom_field_using_delete**](PreReleaseApi.md#delete_order_custom_field_using_delete) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
@@ -53,6 +58,10 @@ Method | HTTP request | Description
 [**get_contacts_by_search_term_using_get**](PreReleaseApi.md#get_contacts_by_search_term_using_get) | **GET** /v2/contacts:search | Search for Contacts
 [**get_discount_using_get**](PreReleaseApi.md#get_discount_using_get) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 [**get_discount_using_get1**](PreReleaseApi.md#get_discount_using_get1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
+[**get_file_data_using_get**](PreReleaseApi.md#get_file_data_using_get) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
+[**get_file_using_get1**](PreReleaseApi.md#get_file_using_get1) | **GET** /v2/files/{file_id} | Retrieve a file
+[**get_lead_score_details_using_get**](PreReleaseApi.md#get_lead_score_details_using_get) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
+[**get_lead_source_category_using_get**](PreReleaseApi.md#get_lead_source_category_using_get) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
 [**get_opportunity_stage_using_get**](PreReleaseApi.md#get_opportunity_stage_using_get) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**get_opportunity_using_get1**](PreReleaseApi.md#get_opportunity_using_get1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 [**get_order_total_discount_using_get**](PreReleaseApi.md#get_order_total_discount_using_get) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
@@ -65,8 +74,10 @@ Method | HTTP request | Description
 [**get_user_signature_using_get1**](PreReleaseApi.md#get_user_signature_using_get1) | **GET** /v2/users/{user_id}/signature | Get User email signature
 [**list_affiliate_commission_programs_using_get**](PreReleaseApi.md#list_affiliate_commission_programs_using_get) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 [**list_affiliate_links_using_get**](PreReleaseApi.md#list_affiliate_links_using_get) | **GET** /v2/affiliates/redirects | List Affiliate Links
+[**list_category_discounts_using_get**](PreReleaseApi.md#list_category_discounts_using_get) | **GET** /v2/discounts/productCategories | List Category Discounts
 [**list_countries_using_get2**](PreReleaseApi.md#list_countries_using_get2) | **GET** /v2/locales/countries | List Countries
 [**list_discounts_using_get**](PreReleaseApi.md#list_discounts_using_get) | **GET** /v2/discounts/shipping | List all Shipping Discounts
+[**list_files_using_get1**](PreReleaseApi.md#list_files_using_get1) | **GET** /v2/files | List all files
 [**list_landing_pages_using_get**](PreReleaseApi.md#list_landing_pages_using_get) | **GET** /v2/landingpages | List Landing Pages
 [**list_lead_sources_using_get**](PreReleaseApi.md#list_lead_sources_using_get) | **GET** /v2/leadsources | List Lead Sources
 [**list_merchants_using_get**](PreReleaseApi.md#list_merchants_using_get) | **GET** /v2/merchants | List Merchant accounts
@@ -99,6 +110,7 @@ Method | HTTP request | Description
 [**update_affiliate_custom_field_using_patch**](PreReleaseApi.md#update_affiliate_custom_field_using_patch) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 [**update_discount_using_patch**](PreReleaseApi.md#update_discount_using_patch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 [**update_discount_using_patch1**](PreReleaseApi.md#update_discount_using_patch1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
+[**update_file_using_patch**](PreReleaseApi.md#update_file_using_patch) | **PATCH** /v2/files/{file_id} | Update a file
 [**update_notes_custom_field_using_patch**](PreReleaseApi.md#update_notes_custom_field_using_patch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 [**update_opportunity_custom_field_using_patch**](PreReleaseApi.md#update_opportunity_custom_field_using_patch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
 [**update_opportunity_stage_using_patch**](PreReleaseApi.md#update_opportunity_stage_using_patch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
@@ -242,6 +254,77 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **adjust_inventory_using_post**
+> RestV2Product adjust_inventory_using_post(product_id, update_product_inventory_request)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.rest_v2_product import RestV2Product
+from keap_sdk_core_client.models.update_product_inventory_request import UpdateProductInventoryRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    product_id = 'product_id_example' # str | product_id
+    update_product_inventory_request = keap_sdk_core_client.UpdateProductInventoryRequest() # UpdateProductInventoryRequest | updateProductInventoryRequest
+
+    try:
+        # Adjust Inventory of a Product
+        api_response = api_instance.adjust_inventory_using_post(product_id, update_product_inventory_request)
+        print("The response of PreReleaseApi->adjust_inventory_using_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->adjust_inventory_using_post: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**| product_id | 
+ **update_product_inventory_request** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md)| updateProductInventoryRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 
@@ -735,6 +818,75 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_file_using_post1**
+> FileMetadata create_file_using_post1(create_file_request)
+
+Create a file
+
+Creates a file and uploads it
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_file_request import CreateFileRequest
+from keap_sdk_core_client.models.file_metadata import FileMetadata
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    create_file_request = keap_sdk_core_client.CreateFileRequest() # CreateFileRequest | request
+
+    try:
+        # Create a file
+        api_response = api_instance.create_file_using_post1(create_file_request)
+        print("The response of PreReleaseApi->create_file_using_post1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->create_file_using_post1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_file_request** | [**CreateFileRequest**](CreateFileRequest.md)| request | 
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, multipart/form-data
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_funnel_integration_using_post**
 > create_funnel_integration_using_post(create_funnel_integration_request)
 
@@ -863,6 +1015,75 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_lead_source_category_using_post**
+> LeadSourceCategory create_lead_source_category_using_post(create_update_lead_source_category_request=create_update_lead_source_category_request)
+
+Create a Lead Source Category
+
+Create a Lead Source Category.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_update_lead_source_category_request import CreateUpdateLeadSourceCategoryRequest
+from keap_sdk_core_client.models.lead_source_category import LeadSourceCategory
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    create_update_lead_source_category_request = keap_sdk_core_client.CreateUpdateLeadSourceCategoryRequest() # CreateUpdateLeadSourceCategoryRequest | leadSourceCategory (optional)
+
+    try:
+        # Create a Lead Source Category
+        api_response = api_instance.create_lead_source_category_using_post(create_update_lead_source_category_request=create_update_lead_source_category_request)
+        print("The response of PreReleaseApi->create_lead_source_category_using_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->create_lead_source_category_using_post: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_update_lead_source_category_request** | [**CreateUpdateLeadSourceCategoryRequest**](CreateUpdateLeadSourceCategoryRequest.md)| leadSourceCategory | [optional] 
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 
@@ -2033,7 +2254,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -2099,7 +2320,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Accepted |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -2304,6 +2525,72 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_file_using_delete1**
+> delete_file_using_delete1(file_id)
+
+Delete a file
+
+Deletes a specified file
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    file_id = 'file_id_example' # str | file_id
+
+    try:
+        # Delete a file
+        api_instance.delete_file_using_delete1(file_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_file_using_delete1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **str**| file_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_funnel_integration_using_post**
 > delete_funnel_integration_using_post(delete_funnel_integration_request)
 
@@ -2367,6 +2654,72 @@ No authorization required
 **200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_lead_source_category_using_delete**
+> delete_lead_source_category_using_delete(category_id)
+
+Delete a Lead Source Category
+
+Deletes the specified Lead Source Category.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    category_id = 'category_id_example' # str | category_id
+
+    try:
+        # Delete a Lead Source Category
+        api_instance.delete_lead_source_category_using_delete(category_id)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->delete_lead_source_category_using_delete: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **str**| category_id | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2825,7 +3178,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -3430,6 +3783,281 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ShippingDiscount**](ShippingDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_file_data_using_get**
+> bytearray get_file_data_using_get(file_id)
+
+Retrieve a file's data
+
+Retrieves a file's data
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    file_id = 'file_id_example' # str | file_id
+
+    try:
+        # Retrieve a file's data
+        api_response = api_instance.get_file_data_using_get(file_id)
+        print("The response of PreReleaseApi->get_file_data_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_file_data_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **str**| file_id | 
+
+### Return type
+
+**bytearray**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_file_using_get1**
+> FileMetadata get_file_using_get1(file_id)
+
+Retrieve a file
+
+Retrieves a file
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.file_metadata import FileMetadata
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    file_id = 'file_id_example' # str | file_id
+
+    try:
+        # Retrieve a file
+        api_response = api_instance.get_file_using_get1(file_id)
+        print("The response of PreReleaseApi->get_file_using_get1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_file_using_get1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **str**| file_id | 
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_lead_score_details_using_get**
+> LeadScore get_lead_score_details_using_get(contact_id)
+
+Retrieve Lead Score of a Contact
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.lead_score import LeadScore
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    contact_id = 'contact_id_example' # str | contact_id
+
+    try:
+        # Retrieve Lead Score of a Contact
+        api_response = api_instance.get_lead_score_details_using_get(contact_id)
+        print("The response of PreReleaseApi->get_lead_score_details_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_lead_score_details_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_id** | **str**| contact_id | 
+
+### Return type
+
+[**LeadScore**](LeadScore.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_lead_source_category_using_get**
+> LeadSourceCategory get_lead_source_category_using_get(category_id)
+
+Retrieve a Lead Source Category
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.lead_source_category import LeadSourceCategory
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    category_id = 'category_id_example' # str | category_id
+
+    try:
+        # Retrieve a Lead Source Category
+        api_response = api_instance.get_lead_source_category_using_get(category_id)
+        print("The response of PreReleaseApi->get_lead_source_category_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->get_lead_source_category_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **str**| category_id | 
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
 
 ### Authorization
 
@@ -4286,6 +4914,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_category_discounts_using_get**
+> ListCategoryDiscountsResponse list_category_discounts_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_category_discounts_response import ListCategoryDiscountsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    filter = 'filter_example' # str | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4` (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # List Category Discounts
+        api_response = api_instance.list_category_discounts_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_category_discounts_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_category_discounts_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **str**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] 
+ **order_by** | **str**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_countries_using_get2**
 > ListCountriesResponse list_countries_using_get2()
 
@@ -4405,6 +5108,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_files_using_get1**
+> ListFilesResponse list_files_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+List all files
+
+Retrieves all files
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_files_response import ListFilesResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    filter = 'filter_example' # str | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS`  (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # List all files
+        api_response = api_instance.list_files_using_get1(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of PreReleaseApi->list_files_using_get1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->list_files_using_get1: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **str**| Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60;  | [optional] 
+ **order_by** | **str**| Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListFilesResponse**](ListFilesResponse.md)
 
 ### Authorization
 
@@ -5173,7 +5951,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Created |  -  |
+**200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -6556,7 +7334,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
     update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
@@ -6575,7 +7353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
  **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 
@@ -6749,6 +7527,80 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_file_using_patch**
+> FileMetadata update_file_using_patch(file_id, update_file_request, update_mask=update_mask)
+
+Update a file
+
+Updates a file
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.file_metadata import FileMetadata
+from keap_sdk_core_client.models.update_file_request import UpdateFileRequest
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
+    file_id = 'file_id_example' # str | file_id
+    update_file_request = keap_sdk_core_client.UpdateFileRequest() # UpdateFileRequest | request
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+
+    try:
+        # Update a file
+        api_response = api_instance.update_file_using_patch(file_id, update_file_request, update_mask=update_mask)
+        print("The response of PreReleaseApi->update_file_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PreReleaseApi->update_file_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **str**| file_id | 
+ **update_file_request** | [**UpdateFileRequest**](UpdateFileRequest.md)| request | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, multipart/form-data
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_notes_custom_field_using_patch**
 > CustomFieldMetaData update_notes_custom_field_using_patch(custom_field_id, update_custom_field_meta_data_request, update_mask=update_mask)
 
@@ -6778,7 +7630,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.PreReleaseApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
     update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
@@ -6797,7 +7649,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
  **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 

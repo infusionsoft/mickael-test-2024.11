@@ -472,7 +472,7 @@ const request: NoteApiUpdateNoteUsingPATCHRequest = {
     type: "type_example",
     userId: "userId_example",
   },
-    // An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "contact_id",
   ],
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
  **updateNoteRequest** | **UpdateNoteRequest**| updateNoteRequest |
  **contactId** | [**string**] | contact_id | defaults to undefined
  **noteId** | [**string**] | note_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type
@@ -547,7 +547,7 @@ const request: NoteApiUpdateNotesCustomFieldUsingPATCHRequest = {
       },
     ],
   },
-    // An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "group_id",
   ],
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type

@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nextPageToken** | **String** |  | [optional] 
-**products** | [**[RestProduct]**](RestProduct.md) |  | [optional] 
+**products** | [**[RestV2Product]**](RestV2Product.md) |  | [optional] 
 
 

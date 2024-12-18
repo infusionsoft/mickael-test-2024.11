@@ -4,10 +4,106 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
+| [**AdjustInventoryUsingPOST**](ProductApi.md#adjustinventoryusingpost) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product |
 | [**CreateProductUsingPOST1**](ProductApi.md#createproductusingpost1) | **POST** /v2/products | Create a Product |
 | [**DeleteProductUsingDELETE1**](ProductApi.md#deleteproductusingdelete1) | **DELETE** /v2/products/{product_id} | Delete a Product |
 | [**GetProductUsingGET**](ProductApi.md#getproductusingget) | **GET** /v2/products/{product_id} | Get a Product |
 | [**ListProductsUsingGET1**](ProductApi.md#listproductsusingget1) | **GET** /v2/products | List Products |
+
+<a id="adjustinventoryusingpost"></a>
+# **AdjustInventoryUsingPOST**
+> RestV2Product AdjustInventoryUsingPOST (string productId, UpdateProductInventoryRequest updateProductInventoryRequest)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class AdjustInventoryUsingPOSTExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new ProductApi(config);
+            var productId = "productId_example";  // string | product_id
+            var updateProductInventoryRequest = new UpdateProductInventoryRequest(); // UpdateProductInventoryRequest | updateProductInventoryRequest
+
+            try
+            {
+                // Adjust Inventory of a Product
+                RestV2Product result = apiInstance.AdjustInventoryUsingPOST(productId, updateProductInventoryRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ProductApi.AdjustInventoryUsingPOST: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the AdjustInventoryUsingPOSTWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Adjust Inventory of a Product
+    ApiResponse<RestV2Product> response = apiInstance.AdjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProductApi.AdjustInventoryUsingPOSTWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **productId** | **string** | product_id |  |
+| **updateProductInventoryRequest** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md) | updateProductInventoryRequest |  |
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="createproductusingpost1"></a>
 # **CreateProductUsingPOST1**
@@ -379,7 +475,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | Created |  -  |
+| **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |

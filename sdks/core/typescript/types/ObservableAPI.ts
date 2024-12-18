@@ -72,6 +72,7 @@ import { CreateCustomFieldResponse } from '../models/CreateCustomFieldResponse';
 import { CreateDefaultCommissionProgramRequest } from '../models/CreateDefaultCommissionProgramRequest';
 import { CreateEmailSentRequest } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
+import { CreateFileRequest } from '../models/CreateFileRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
 import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
@@ -94,6 +95,7 @@ import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubs
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
 import { CreateUpdateDiscountRequest } from '../models/CreateUpdateDiscountRequest';
+import { CreateUpdateLeadSourceCategoryRequest } from '../models/CreateUpdateLeadSourceCategoryRequest';
 import { CreateUpdateTagCategoryRequest } from '../models/CreateUpdateTagCategoryRequest';
 import { CreateUpdateTagRequest } from '../models/CreateUpdateTagRequest';
 import { CreateUserRequestV2 } from '../models/CreateUserRequestV2';
@@ -117,6 +119,7 @@ import { EmailSentCreateError } from '../models/EmailSentCreateError';
 import { EmailSentWithContent } from '../models/EmailSentWithContent';
 import { EmailsSentList } from '../models/EmailsSentList';
 import { FaxNumber } from '../models/FaxNumber';
+import { FileMetadata } from '../models/FileMetadata';
 import { FunnelIntegrationAction } from '../models/FunnelIntegrationAction';
 import { FunnelIntegrationHttpRequest } from '../models/FunnelIntegrationHttpRequest';
 import { FunnelIntegrationSchemaField } from '../models/FunnelIntegrationSchemaField';
@@ -134,6 +137,7 @@ import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment } from '../models/InvoiceOrderPayment';
 import { Item } from '../models/Item';
 import { LandingPage } from '../models/LandingPage';
+import { LeadScore } from '../models/LeadScore';
 import { LeadSource } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
 import { Link } from '../models/Link';
@@ -147,11 +151,13 @@ import { ListAutomationIdsResponse } from '../models/ListAutomationIdsResponse';
 import { ListAutomationResponse } from '../models/ListAutomationResponse';
 import { ListBasicContactResponse } from '../models/ListBasicContactResponse';
 import { ListCampaignsResponse } from '../models/ListCampaignsResponse';
+import { ListCategoryDiscountsResponse } from '../models/ListCategoryDiscountsResponse';
 import { ListCompaniesResponse } from '../models/ListCompaniesResponse';
 import { ListContactLinkTypesResponse } from '../models/ListContactLinkTypesResponse';
 import { ListContactLinksResponse } from '../models/ListContactLinksResponse';
 import { ListContactsResponse } from '../models/ListContactsResponse';
 import { ListCountriesResponse } from '../models/ListCountriesResponse';
+import { ListFilesResponse } from '../models/ListFilesResponse';
 import { ListLandingPagesResponse } from '../models/ListLandingPagesResponse';
 import { ListLeadSourcesResponse } from '../models/ListLeadSourcesResponse';
 import { ListNoteTemplateResponse } from '../models/ListNoteTemplateResponse';
@@ -181,6 +187,7 @@ import { NoteTemplate } from '../models/NoteTemplate';
 import { ObjectModel } from '../models/ObjectModel';
 import { OpportunityContact } from '../models/OpportunityContact';
 import { OpportunityStage } from '../models/OpportunityStage';
+import { OrderItemProduct } from '../models/OrderItemProduct';
 import { OrderItemTax } from '../models/OrderItemTax';
 import { OrderTotalDiscount } from '../models/OrderTotalDiscount';
 import { Origin } from '../models/Origin';
@@ -202,6 +209,7 @@ import { PhoneNumber } from '../models/PhoneNumber';
 import { ProductCommission } from '../models/ProductCommission';
 import { ProductCommissionProgram } from '../models/ProductCommissionProgram';
 import { ProductFixedOption } from '../models/ProductFixedOption';
+import { ProductInventory } from '../models/ProductInventory';
 import { ProductOptions } from '../models/ProductOptions';
 import { ProductVariableSetting } from '../models/ProductVariableSetting';
 import { Provinces } from '../models/Provinces';
@@ -217,7 +225,6 @@ import { RestEmailAddress } from '../models/RestEmailAddress';
 import { RestOpportunityStage } from '../models/RestOpportunityStage';
 import { RestPaymentGateway } from '../models/RestPaymentGateway';
 import { RestPaymentMethod } from '../models/RestPaymentMethod';
-import { RestProduct } from '../models/RestProduct';
 import { RestProductOption } from '../models/RestProductOption';
 import { RestProductOptionValue } from '../models/RestProductOptionValue';
 import { RestSubscriptionPlan } from '../models/RestSubscriptionPlan';
@@ -249,11 +256,13 @@ import { Throwable } from '../models/Throwable';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
+import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
 import { UpdateOpportunityStageChecklistItem } from '../models/UpdateOpportunityStageChecklistItem';
 import { UpdateOpportunityStageRequest } from '../models/UpdateOpportunityStageRequest';
 import { UpdateOrderTotalDiscountRequest } from '../models/UpdateOrderTotalDiscountRequest';
+import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
@@ -1191,7 +1200,7 @@ export class ObservableAffiliateApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
         const requestContextPromise = this.requestFactory.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -1217,7 +1226,7 @@ export class ObservableAffiliateApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
         return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
@@ -1729,7 +1738,7 @@ export class ObservableBusinessProfileApi {
     /**
      * Updates Business Profile information.
      * Update Business Profile
-     * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param [patchBusinessProfileRequest] businessProfile
      */
     public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Observable<HttpInfo<GetBusinessProfileResponse>> {
@@ -1754,7 +1763,7 @@ export class ObservableBusinessProfileApi {
     /**
      * Updates Business Profile information.
      * Update Business Profile
-     * @param [updateMask] An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param [patchBusinessProfileRequest] businessProfile
      */
     public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Observable<GetBusinessProfileResponse> {
@@ -2042,6 +2051,45 @@ export class ObservableCategoryDiscountApi {
      */
     public getDiscountUsingGET(discountId: string, _options?: Configuration): Observable<CategoryDiscount> {
         return this.getDiscountUsingGETWithHttpInfo(discountId, _options).pipe(map((apiResponse: HttpInfo<CategoryDiscount>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGETWithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<HttpInfo<ListCategoryDiscountsResponse>> {
+        const requestContextPromise = this.requestFactory.listCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listCategoryDiscountsUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<ListCategoryDiscountsResponse> {
+        return this.listCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken, _options).pipe(map((apiResponse: HttpInfo<ListCategoryDiscountsResponse>) => apiResponse.data));
     }
 
     /**
@@ -3047,6 +3095,232 @@ export class ObservableEmailAddressApi {
 
 }
 
+import { FilesApiRequestFactory, FilesApiResponseProcessor} from "../apis/FilesApi";
+export class ObservableFilesApi {
+    private requestFactory: FilesApiRequestFactory;
+    private responseProcessor: FilesApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: FilesApiRequestFactory,
+        responseProcessor?: FilesApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new FilesApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new FilesApiResponseProcessor();
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1WithHttpInfo(createFileRequest: CreateFileRequest, _options?: Configuration): Observable<HttpInfo<FileMetadata>> {
+        const requestContextPromise = this.requestFactory.createFileUsingPOST1(createFileRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createFileUsingPOST1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1(createFileRequest: CreateFileRequest, _options?: Configuration): Observable<FileMetadata> {
+        return this.createFileUsingPOST1WithHttpInfo(createFileRequest, _options).pipe(map((apiResponse: HttpInfo<FileMetadata>) => apiResponse.data));
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1WithHttpInfo(fileId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteFileUsingDELETE1(fileId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteFileUsingDELETE1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1(fileId: string, _options?: Configuration): Observable<void> {
+        return this.deleteFileUsingDELETE1WithHttpInfo(fileId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGETWithHttpInfo(fileId: string, _options?: Configuration): Observable<HttpInfo<string>> {
+        const requestContextPromise = this.requestFactory.getFileDataUsingGET(fileId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getFileDataUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGET(fileId: string, _options?: Configuration): Observable<string> {
+        return this.getFileDataUsingGETWithHttpInfo(fileId, _options).pipe(map((apiResponse: HttpInfo<string>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1WithHttpInfo(fileId: string, _options?: Configuration): Observable<HttpInfo<FileMetadata>> {
+        const requestContextPromise = this.requestFactory.getFileUsingGET1(fileId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getFileUsingGET1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1(fileId: string, _options?: Configuration): Observable<FileMetadata> {
+        return this.getFileUsingGET1WithHttpInfo(fileId, _options).pipe(map((apiResponse: HttpInfo<FileMetadata>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1WithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<HttpInfo<ListFilesResponse>> {
+        const requestContextPromise = this.requestFactory.listFilesUsingGET1(filter, orderBy, pageSize, pageToken, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listFilesUsingGET1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<ListFilesResponse> {
+        return this.listFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken, _options).pipe(map((apiResponse: HttpInfo<ListFilesResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCHWithHttpInfo(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<FileMetadata>> {
+        const requestContextPromise = this.requestFactory.updateFileUsingPATCH(fileId, updateFileRequest, updateMask, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateFileUsingPATCHWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCH(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Observable<FileMetadata> {
+        return this.updateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<FileMetadata>) => apiResponse.data));
+    }
+
+}
+
 import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor} from "../apis/FreeTrialDiscountApi";
 export class ObservableFreeTrialDiscountApi {
     private requestFactory: FreeTrialDiscountApiRequestFactory;
@@ -3266,6 +3540,174 @@ export class ObservableLandingPagesApi {
      */
     public listLandingPagesUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<ListLandingPagesResponse> {
         return this.listLandingPagesUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken, _options).pipe(map((apiResponse: HttpInfo<ListLandingPagesResponse>) => apiResponse.data));
+    }
+
+}
+
+import { LeadScoreApiRequestFactory, LeadScoreApiResponseProcessor} from "../apis/LeadScoreApi";
+export class ObservableLeadScoreApi {
+    private requestFactory: LeadScoreApiRequestFactory;
+    private responseProcessor: LeadScoreApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: LeadScoreApiRequestFactory,
+        responseProcessor?: LeadScoreApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new LeadScoreApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new LeadScoreApiResponseProcessor();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGETWithHttpInfo(contactId: string, _options?: Configuration): Observable<HttpInfo<LeadScore>> {
+        const requestContextPromise = this.requestFactory.getLeadScoreDetailsUsingGET(contactId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLeadScoreDetailsUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGET(contactId: string, _options?: Configuration): Observable<LeadScore> {
+        return this.getLeadScoreDetailsUsingGETWithHttpInfo(contactId, _options).pipe(map((apiResponse: HttpInfo<LeadScore>) => apiResponse.data));
+    }
+
+}
+
+import { LeadSourceCategoriesApiRequestFactory, LeadSourceCategoriesApiResponseProcessor} from "../apis/LeadSourceCategoriesApi";
+export class ObservableLeadSourceCategoriesApi {
+    private requestFactory: LeadSourceCategoriesApiRequestFactory;
+    private responseProcessor: LeadSourceCategoriesApiResponseProcessor;
+    private configuration: Configuration;
+
+    public constructor(
+        configuration: Configuration,
+        requestFactory?: LeadSourceCategoriesApiRequestFactory,
+        responseProcessor?: LeadSourceCategoriesApiResponseProcessor
+    ) {
+        this.configuration = configuration;
+        this.requestFactory = requestFactory || new LeadSourceCategoriesApiRequestFactory(configuration);
+        this.responseProcessor = responseProcessor || new LeadSourceCategoriesApiResponseProcessor();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Observable<HttpInfo<LeadSourceCategory>> {
+        const requestContextPromise = this.requestFactory.createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createLeadSourceCategoryUsingPOSTWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Observable<LeadSourceCategory> {
+        return this.createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest, _options).pipe(map((apiResponse: HttpInfo<LeadSourceCategory>) => apiResponse.data));
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteLeadSourceCategoryUsingDELETE(categoryId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETE(categoryId: string, _options?: Configuration): Observable<void> {
+        return this.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGETWithHttpInfo(categoryId: string, _options?: Configuration): Observable<HttpInfo<LeadSourceCategory>> {
+        const requestContextPromise = this.requestFactory.getLeadSourceCategoryUsingGET(categoryId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLeadSourceCategoryUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGET(categoryId: string, _options?: Configuration): Observable<LeadSourceCategory> {
+        return this.getLeadSourceCategoryUsingGETWithHttpInfo(categoryId, _options).pipe(map((apiResponse: HttpInfo<LeadSourceCategory>) => apiResponse.data));
     }
 
 }
@@ -3766,7 +4208,7 @@ export class ObservableNoteApi {
      * @param contactId contact_id
      * @param noteId note_id
      * @param updateNoteRequest updateNoteRequest
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNoteUsingPATCHWithHttpInfo(contactId: string, noteId: string, updateNoteRequest: UpdateNoteRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<UpdateNoteResponse>> {
         const requestContextPromise = this.requestFactory.updateNoteUsingPATCH(contactId, noteId, updateNoteRequest, updateMask, _options);
@@ -3793,7 +4235,7 @@ export class ObservableNoteApi {
      * @param contactId contact_id
      * @param noteId note_id
      * @param updateNoteRequest updateNoteRequest
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNoteUsingPATCH(contactId: string, noteId: string, updateNoteRequest: UpdateNoteRequest, updateMask?: Array<string>, _options?: Configuration): Observable<UpdateNoteResponse> {
         return this.updateNoteUsingPATCHWithHttpInfo(contactId, noteId, updateNoteRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<UpdateNoteResponse>) => apiResponse.data));
@@ -3804,7 +4246,7 @@ export class ObservableNoteApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
         const requestContextPromise = this.requestFactory.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -3830,7 +4272,7 @@ export class ObservableNoteApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
         return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
@@ -5045,6 +5487,41 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOSTWithHttpInfo(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Observable<HttpInfo<RestV2Product>> {
+        const requestContextPromise = this.requestFactory.adjustInventoryUsingPOST(productId, updateProductInventoryRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.adjustInventoryUsingPOSTWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOST(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Observable<RestV2Product> {
+        return this.adjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Product>) => apiResponse.data));
+    }
+
+    /**
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param commissionProgramId commission_program_id
@@ -5284,6 +5761,39 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1WithHttpInfo(createFileRequest: CreateFileRequest, _options?: Configuration): Observable<HttpInfo<FileMetadata>> {
+        const requestContextPromise = this.requestFactory.createFileUsingPOST1(createFileRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createFileUsingPOST1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param createFileRequest request
+     */
+    public createFileUsingPOST1(createFileRequest: CreateFileRequest, _options?: Configuration): Observable<FileMetadata> {
+        return this.createFileUsingPOST1WithHttpInfo(createFileRequest, _options).pipe(map((apiResponse: HttpInfo<FileMetadata>) => apiResponse.data));
+    }
+
+    /**
      * Allows a list of both triggers / goals, and actions / sequence items to be installed at the same time.
      * Create Funnel Integrations into the app.
      * @param createFunnelIntegrationRequest createFunnelIntegrationRequest
@@ -5345,6 +5855,39 @@ export class ObservablePreReleaseApi {
      */
     public createIntegrationTriggerEventUsingPOST(createFunnelIntegrationTriggerEvents: CreateFunnelIntegrationTriggerEvents, _options?: Configuration): Observable<Array<FunnelIntegrationTriggerResultDTO>> {
         return this.createIntegrationTriggerEventUsingPOSTWithHttpInfo(createFunnelIntegrationTriggerEvents, _options).pipe(map((apiResponse: HttpInfo<Array<FunnelIntegrationTriggerResultDTO>>) => apiResponse.data));
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Observable<HttpInfo<LeadSourceCategory>> {
+        const requestContextPromise = this.requestFactory.createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createLeadSourceCategoryUsingPOSTWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param [createUpdateLeadSourceCategoryRequest] leadSourceCategory
+     */
+    public createLeadSourceCategoryUsingPOST(createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest, _options?: Configuration): Observable<LeadSourceCategory> {
+        return this.createLeadSourceCategoryUsingPOSTWithHttpInfo(createUpdateLeadSourceCategoryRequest, _options).pipe(map((apiResponse: HttpInfo<LeadSourceCategory>) => apiResponse.data));
     }
 
     /**
@@ -6043,6 +6586,39 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1WithHttpInfo(fileId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteFileUsingDELETE1(fileId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteFileUsingDELETE1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param fileId file_id
+     */
+    public deleteFileUsingDELETE1(fileId: string, _options?: Configuration): Observable<void> {
+        return this.deleteFileUsingDELETE1WithHttpInfo(fileId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
      * Deletes all triggers / goals, and actions / sequence items for the given funnel integration
      * Deletes Funnel Integrations from the app.
      * @param deleteFunnelIntegrationRequest deleteFunnelIntegrationRequest
@@ -6073,6 +6649,39 @@ export class ObservablePreReleaseApi {
      */
     public deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest: DeleteFunnelIntegrationRequest, _options?: Configuration): Observable<void> {
         return this.deleteFunnelIntegrationUsingPOSTWithHttpInfo(deleteFunnelIntegrationRequest, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId: string, _options?: Configuration): Observable<HttpInfo<void>> {
+        const requestContextPromise = this.requestFactory.deleteLeadSourceCategoryUsingDELETE(categoryId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param categoryId category_id
+     */
+    public deleteLeadSourceCategoryUsingDELETE(categoryId: string, _options?: Configuration): Observable<void> {
+        return this.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(categoryId, _options).pipe(map((apiResponse: HttpInfo<void>) => apiResponse.data));
     }
 
     /**
@@ -6610,6 +7219,138 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGETWithHttpInfo(fileId: string, _options?: Configuration): Observable<HttpInfo<string>> {
+        const requestContextPromise = this.requestFactory.getFileDataUsingGET(fileId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getFileDataUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param fileId file_id
+     */
+    public getFileDataUsingGET(fileId: string, _options?: Configuration): Observable<string> {
+        return this.getFileDataUsingGETWithHttpInfo(fileId, _options).pipe(map((apiResponse: HttpInfo<string>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1WithHttpInfo(fileId: string, _options?: Configuration): Observable<HttpInfo<FileMetadata>> {
+        const requestContextPromise = this.requestFactory.getFileUsingGET1(fileId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getFileUsingGET1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param fileId file_id
+     */
+    public getFileUsingGET1(fileId: string, _options?: Configuration): Observable<FileMetadata> {
+        return this.getFileUsingGET1WithHttpInfo(fileId, _options).pipe(map((apiResponse: HttpInfo<FileMetadata>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGETWithHttpInfo(contactId: string, _options?: Configuration): Observable<HttpInfo<LeadScore>> {
+        const requestContextPromise = this.requestFactory.getLeadScoreDetailsUsingGET(contactId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLeadScoreDetailsUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param contactId contact_id
+     */
+    public getLeadScoreDetailsUsingGET(contactId: string, _options?: Configuration): Observable<LeadScore> {
+        return this.getLeadScoreDetailsUsingGETWithHttpInfo(contactId, _options).pipe(map((apiResponse: HttpInfo<LeadScore>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGETWithHttpInfo(categoryId: string, _options?: Configuration): Observable<HttpInfo<LeadSourceCategory>> {
+        const requestContextPromise = this.requestFactory.getLeadSourceCategoryUsingGET(categoryId, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getLeadSourceCategoryUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param categoryId category_id
+     */
+    public getLeadSourceCategoryUsingGET(categoryId: string, _options?: Configuration): Observable<LeadSourceCategory> {
+        return this.getLeadSourceCategoryUsingGETWithHttpInfo(categoryId, _options).pipe(map((apiResponse: HttpInfo<LeadSourceCategory>) => apiResponse.data));
+    }
+
+    /**
      * Retrieves the specified Opportunity Stage
      * Retrieve an Opportunity Stage
      * @param stageId stage_id
@@ -7016,6 +7757,45 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGETWithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<HttpInfo<ListCategoryDiscountsResponse>> {
+        const requestContextPromise = this.requestFactory.listCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listCategoryDiscountsUsingGETWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param [filter] Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listCategoryDiscountsUsingGET(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<ListCategoryDiscountsResponse> {
+        return this.listCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken, _options).pipe(map((apiResponse: HttpInfo<ListCategoryDiscountsResponse>) => apiResponse.data));
+    }
+
+    /**
      * List Countries
      */
     public listCountriesUsingGET2WithHttpInfo(_options?: Configuration): Observable<HttpInfo<ListCountriesResponse>> {
@@ -7083,6 +7863,45 @@ export class ObservablePreReleaseApi {
      */
     public listDiscountsUsingGET(fields?: Array<string>, filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<ListShippingDiscountsResponse> {
         return this.listDiscountsUsingGETWithHttpInfo(fields, filter, orderBy, pageSize, pageToken, _options).pipe(map((apiResponse: HttpInfo<ListShippingDiscountsResponse>) => apiResponse.data));
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1WithHttpInfo(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<HttpInfo<ListFilesResponse>> {
+        const requestContextPromise = this.requestFactory.listFilesUsingGET1(filter, orderBy, pageSize, pageToken, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.listFilesUsingGET1WithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param [filter] Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * @param [orderBy] Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * @param [pageSize] Total number of items to return per page
+     * @param [pageToken] Page token
+     */
+    public listFilesUsingGET1(filter?: string, orderBy?: string, pageSize?: number, pageToken?: string, _options?: Configuration): Observable<ListFilesResponse> {
+        return this.listFilesUsingGET1WithHttpInfo(filter, orderBy, pageSize, pageToken, _options).pipe(map((apiResponse: HttpInfo<ListFilesResponse>) => apiResponse.data));
     }
 
     /**
@@ -8157,7 +8976,7 @@ export class ObservablePreReleaseApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
         const requestContextPromise = this.requestFactory.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -8183,7 +9002,7 @@ export class ObservablePreReleaseApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
         return this.updateAffiliateCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
@@ -8264,11 +9083,48 @@ export class ObservablePreReleaseApi {
     }
 
     /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCHWithHttpInfo(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<FileMetadata>> {
+        const requestContextPromise = this.requestFactory.updateFileUsingPATCH(fileId, updateFileRequest, updateMask, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.updateFileUsingPATCHWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param fileId file_id
+     * @param updateFileRequest request
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateFileUsingPATCH(fileId: string, updateFileRequest: UpdateFileRequest, updateMask?: Array<string>, _options?: Configuration): Observable<FileMetadata> {
+        return this.updateFileUsingPATCHWithHttpInfo(fileId, updateFileRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<FileMetadata>) => apiResponse.data));
+    }
+
+    /**
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<HttpInfo<CustomFieldMetaData>> {
         const requestContextPromise = this.requestFactory.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options);
@@ -8294,7 +9150,7 @@ export class ObservablePreReleaseApi {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param [updateMask] An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Observable<CustomFieldMetaData> {
         return this.updateNotesCustomFieldUsingPATCHWithHttpInfo(customFieldId, updateCustomFieldMetaDataRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<CustomFieldMetaData>) => apiResponse.data));
@@ -8610,6 +9466,41 @@ export class ObservableProductApi {
         this.configuration = configuration;
         this.requestFactory = requestFactory || new ProductApiRequestFactory(configuration);
         this.responseProcessor = responseProcessor || new ProductApiResponseProcessor();
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOSTWithHttpInfo(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Observable<HttpInfo<RestV2Product>> {
+        const requestContextPromise = this.requestFactory.adjustInventoryUsingPOST(productId, updateProductInventoryRequest, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (const middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (const middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.adjustInventoryUsingPOSTWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param productId product_id
+     * @param updateProductInventoryRequest updateProductInventoryRequest
+     */
+    public adjustInventoryUsingPOST(productId: string, updateProductInventoryRequest: UpdateProductInventoryRequest, _options?: Configuration): Observable<RestV2Product> {
+        return this.adjustInventoryUsingPOSTWithHttpInfo(productId, updateProductInventoryRequest, _options).pipe(map((apiResponse: HttpInfo<RestV2Product>) => apiResponse.data));
     }
 
     /**

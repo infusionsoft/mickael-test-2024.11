@@ -1181,7 +1181,7 @@ export class AffiliateApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public async updateAffiliateCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
@@ -1684,7 +1684,7 @@ export class AffiliateApiResponseProcessor {
      */
      public async deleteAffiliateCommissionProgramUsingDELETEWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("200", response.httpStatusCode)) {
+        if (isCodeInRange("204", response.httpStatusCode)) {
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
         }
         if (isCodeInRange("401", response.httpStatusCode)) {
@@ -1730,7 +1730,7 @@ export class AffiliateApiResponseProcessor {
      */
      public async deleteAffiliateUsingDELETEWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("202", response.httpStatusCode)) {
+        if (isCodeInRange("204", response.httpStatusCode)) {
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
         }
         if (isCodeInRange("401", response.httpStatusCode)) {
@@ -1776,7 +1776,7 @@ export class AffiliateApiResponseProcessor {
      */
      public async deleteRedirectLinkUsingDELETEWithHttpInfo(response: ResponseContext): Promise<HttpInfo<void >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("200", response.httpStatusCode)) {
+        if (isCodeInRange("204", response.httpStatusCode)) {
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, undefined);
         }
         if (isCodeInRange("401", response.httpStatusCode)) {

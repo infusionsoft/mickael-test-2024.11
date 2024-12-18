@@ -121,7 +121,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
             var apiInstance = new BusinessProfileApi(config);
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
             var patchBusinessProfileRequest = new PatchBusinessProfileRequest?(); // PatchBusinessProfileRequest? | businessProfile (optional) 
 
             try
@@ -165,7 +165,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 | **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest?**](PatchBusinessProfileRequest?.md) | businessProfile | [optional]  |
 
 ### Return type

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next_page_token** | **str** |  | [optional] 
-**products** | [**List[RestProduct]**](RestProduct.md) |  | [optional] 
+**products** | [**List[RestV2Product]**](RestV2Product.md) |  | [optional] 
 
 ## Example
 

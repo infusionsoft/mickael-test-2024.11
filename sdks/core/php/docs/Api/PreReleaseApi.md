@@ -6,6 +6,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | ------------- | ------------- | ------------- |
 | [**addAffiliateToProgramUsingPOST()**](PreReleaseApi.md#addAffiliateToProgramUsingPOST) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program |
 | [**addCommissionProgramUsingPOST()**](PreReleaseApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program |
+| [**adjustInventoryUsingPOST()**](PreReleaseApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product |
 | [**assignProductCommissionProgramUsingPOST()**](PreReleaseApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program |
 | [**assignSubscriptionCommissionProgramUsingPOST()**](PreReleaseApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program |
 | [**cancelSubscriptionUsingPOST()**](PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription |
@@ -13,8 +14,10 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**createDefaultCommissionProgramUsingPOST()**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program |
 | [**createDiscountUsingPOST()**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount |
 | [**createDiscountUsingPOST1()**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount |
+| [**createFileUsingPOST1()**](PreReleaseApi.md#createFileUsingPOST1) | **POST** /v2/files | Create a file |
 | [**createFunnelIntegrationUsingPOST()**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app. |
 | [**createIntegrationTriggerEventUsingPOST()**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal |
+| [**createLeadSourceCategoryUsingPOST()**](PreReleaseApi.md#createLeadSourceCategoryUsingPOST) | **POST** /v2/leadSourceCategories | Create a Lead Source Category |
 | [**createLeadSourceUsingPOST()**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source |
 | [**createNoteCustomFieldUsingPOST1()**](PreReleaseApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field |
 | [**createOpportunityCustomFieldsUsingPOST()**](PreReleaseApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field |
@@ -36,7 +39,9 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**deleteDiscountUsingDELETE()**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**deleteDiscountUsingDELETE1()**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount |
 | [**deleteDiscountUsingDELETE2()**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount |
+| [**deleteFileUsingDELETE1()**](PreReleaseApi.md#deleteFileUsingDELETE1) | **DELETE** /v2/files/{file_id} | Delete a file |
 | [**deleteFunnelIntegrationUsingPOST()**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app. |
+| [**deleteLeadSourceCategoryUsingDELETE()**](PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETE) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category |
 | [**deleteOpportunityStageUsingDELETE()**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage |
 | [**deleteOpportunityUsingDELETE()**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity |
 | [**deleteOrderCustomFieldUsingDELETE()**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field |
@@ -53,6 +58,10 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**getContactsBySearchTermUsingGET()**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts |
 | [**getDiscountUsingGET()**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
 | [**getDiscountUsingGET1()**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount |
+| [**getFileDataUsingGET()**](PreReleaseApi.md#getFileDataUsingGET) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data |
+| [**getFileUsingGET1()**](PreReleaseApi.md#getFileUsingGET1) | **GET** /v2/files/{file_id} | Retrieve a file |
+| [**getLeadScoreDetailsUsingGET()**](PreReleaseApi.md#getLeadScoreDetailsUsingGET) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact |
+| [**getLeadSourceCategoryUsingGET()**](PreReleaseApi.md#getLeadSourceCategoryUsingGET) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category |
 | [**getOpportunityStageUsingGET()**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage |
 | [**getOpportunityUsingGET1()**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity |
 | [**getOrderTotalDiscountUsingGET()**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount |
@@ -65,8 +74,10 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**getUserSignatureUsingGET1()**](PreReleaseApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature |
 | [**listAffiliateCommissionProgramsUsingGET()**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs |
 | [**listAffiliateLinksUsingGET()**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links |
+| [**listCategoryDiscountsUsingGET()**](PreReleaseApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts |
 | [**listCountriesUsingGET2()**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries |
 | [**listDiscountsUsingGET()**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts |
+| [**listFilesUsingGET1()**](PreReleaseApi.md#listFilesUsingGET1) | **GET** /v2/files | List all files |
 | [**listLandingPagesUsingGET()**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages |
 | [**listLeadSourcesUsingGET()**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources |
 | [**listMerchantsUsingGET()**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts |
@@ -99,6 +110,7 @@ All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if th
 | [**updateAffiliateCustomFieldUsingPATCH()**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateDiscountUsingPATCH()**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
 | [**updateDiscountUsingPATCH1()**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount |
+| [**updateFileUsingPATCH()**](PreReleaseApi.md#updateFileUsingPATCH) | **PATCH** /v2/files/{file_id} | Update a file |
 | [**updateNotesCustomFieldUsingPATCH()**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field |
 | [**updateOpportunityCustomFieldUsingPATCH()**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field |
 | [**updateOpportunityStageUsingPATCH()**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage |
@@ -207,6 +219,63 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse**](../Model/AffiliateCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `adjustInventoryUsingPOST()`
+
+```php
+adjustInventoryUsingPOST($product_id, $update_product_inventory_request): \Com\Keap\Sdk\Core\Model\RestV2Product
+```
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$product_id = 'product_id_example'; // string | product_id
+$update_product_inventory_request = new \Com\Keap\Sdk\Core\Model\UpdateProductInventoryRequest(); // \Com\Keap\Sdk\Core\Model\UpdateProductInventoryRequest | updateProductInventoryRequest
+
+try {
+    $result = $apiInstance->adjustInventoryUsingPOST($product_id, $update_product_inventory_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->adjustInventoryUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **product_id** | **string**| product_id | |
+| **update_product_inventory_request** | [**\Com\Keap\Sdk\Core\Model\UpdateProductInventoryRequest**](../Model/UpdateProductInventoryRequest.md)| updateProductInventoryRequest | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\RestV2Product**](../Model/RestV2Product.md)
 
 ### Authorization
 
@@ -613,6 +682,61 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createFileUsingPOST1()`
+
+```php
+createFileUsingPOST1($create_file_request): \Com\Keap\Sdk\Core\Model\FileMetadata
+```
+
+Create a file
+
+Creates a file and uploads it
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$create_file_request = new \Com\Keap\Sdk\Core\Model\CreateFileRequest(); // \Com\Keap\Sdk\Core\Model\CreateFileRequest | request
+
+try {
+    $result = $apiInstance->createFileUsingPOST1($create_file_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->createFileUsingPOST1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_file_request** | [**\Com\Keap\Sdk\Core\Model\CreateFileRequest**](../Model/CreateFileRequest.md)| request | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\FileMetadata**](../Model/FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`, `multipart/form-data`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `createFunnelIntegrationUsingPOST()`
 
 ```php
@@ -706,6 +830,61 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\FunnelIntegrationTriggerResultDTO[]**](../Model/FunnelIntegrationTriggerResultDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createLeadSourceCategoryUsingPOST()`
+
+```php
+createLeadSourceCategoryUsingPOST($create_update_lead_source_category_request): \Com\Keap\Sdk\Core\Model\LeadSourceCategory
+```
+
+Create a Lead Source Category
+
+Create a Lead Source Category.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$create_update_lead_source_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateLeadSourceCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateLeadSourceCategoryRequest | leadSourceCategory
+
+try {
+    $result = $apiInstance->createLeadSourceCategoryUsingPOST($create_update_lead_source_category_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->createLeadSourceCategoryUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_update_lead_source_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateLeadSourceCategoryRequest**](../Model/CreateUpdateLeadSourceCategoryRequest.md)| leadSourceCategory | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\LeadSourceCategory**](../Model/LeadSourceCategory.md)
 
 ### Authorization
 
@@ -1872,6 +2051,60 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteFileUsingDELETE1()`
+
+```php
+deleteFileUsingDELETE1($file_id)
+```
+
+Delete a file
+
+Deletes a specified file
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$file_id = 'file_id_example'; // string | file_id
+
+try {
+    $apiInstance->deleteFileUsingDELETE1($file_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->deleteFileUsingDELETE1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **file_id** | **string**| file_id | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `deleteFunnelIntegrationUsingPOST()`
 
 ```php
@@ -1920,6 +2153,60 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteLeadSourceCategoryUsingDELETE()`
+
+```php
+deleteLeadSourceCategoryUsingDELETE($category_id)
+```
+
+Delete a Lead Source Category
+
+Deletes the specified Lead Source Category.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$category_id = 'category_id_example'; // string | category_id
+
+try {
+    $apiInstance->deleteLeadSourceCategoryUsingDELETE($category_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->deleteLeadSourceCategoryUsingDELETE: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **category_id** | **string**| category_id | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -2802,6 +3089,226 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFileDataUsingGET()`
+
+```php
+getFileDataUsingGET($file_id): string
+```
+
+Retrieve a file's data
+
+Retrieves a file's data
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$file_id = 'file_id_example'; // string | file_id
+
+try {
+    $result = $apiInstance->getFileDataUsingGET($file_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getFileDataUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **file_id** | **string**| file_id | |
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getFileUsingGET1()`
+
+```php
+getFileUsingGET1($file_id): \Com\Keap\Sdk\Core\Model\FileMetadata
+```
+
+Retrieve a file
+
+Retrieves a file
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$file_id = 'file_id_example'; // string | file_id
+
+try {
+    $result = $apiInstance->getFileUsingGET1($file_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getFileUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **file_id** | **string**| file_id | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\FileMetadata**](../Model/FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getLeadScoreDetailsUsingGET()`
+
+```php
+getLeadScoreDetailsUsingGET($contact_id): \Com\Keap\Sdk\Core\Model\LeadScore
+```
+
+Retrieve Lead Score of a Contact
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$contact_id = 'contact_id_example'; // string | contact_id
+
+try {
+    $result = $apiInstance->getLeadScoreDetailsUsingGET($contact_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getLeadScoreDetailsUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contact_id** | **string**| contact_id | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\LeadScore**](../Model/LeadScore.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getLeadSourceCategoryUsingGET()`
+
+```php
+getLeadSourceCategoryUsingGET($category_id): \Com\Keap\Sdk\Core\Model\LeadSourceCategory
+```
+
+Retrieve a Lead Source Category
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$category_id = 'category_id_example'; // string | category_id
+
+try {
+    $result = $apiInstance->getLeadSourceCategoryUsingGET($category_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->getLeadSourceCategoryUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **category_id** | **string**| category_id | |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\LeadSourceCategory**](../Model/LeadSourceCategory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getOpportunityStageUsingGET()`
 
 ```php
@@ -3471,6 +3978,67 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listCategoryDiscountsUsingGET()`
+
+```php
+listCategoryDiscountsUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListCategoryDiscountsResponse
+```
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4`
+$order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listCategoryDiscountsUsingGET($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listCategoryDiscountsUsingGET: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] |
+| **order_by** | **string**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListCategoryDiscountsResponse**](../Model/ListCategoryDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `listCountriesUsingGET2()`
 
 ```php
@@ -3570,6 +4138,67 @@ try {
 ### Return type
 
 [**\Com\Keap\Sdk\Core\Model\ListShippingDiscountsResponse**](../Model/ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listFilesUsingGET1()`
+
+```php
+listFilesUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListFilesResponse
+```
+
+List all files
+
+Retrieves all files
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter = 'filter_example'; // string | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS`
+$order_by = 'order_by_example'; // string | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc
+$page_size = 0; // int | Total number of items to return per page
+$page_token = 'page_token_example'; // string | Page token
+
+try {
+    $result = $apiInstance->listFilesUsingGET1($filter, $order_by, $page_size, $page_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->listFilesUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**| Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; | [optional] |
+| **order_by** | **string**| Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc | [optional] |
+| **page_size** | **int**| Total number of items to return per page | [optional] |
+| **page_token** | **string**| Page token | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\ListFilesResponse**](../Model/ListFilesResponse.md)
 
 ### Authorization
 
@@ -5306,7 +5935,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
 $update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
     $result = $apiInstance->updateAffiliateCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
@@ -5322,7 +5951,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
 | **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
 
@@ -5459,6 +6088,65 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateFileUsingPATCH()`
+
+```php
+updateFileUsingPATCH($file_id, $update_file_request, $update_mask): \Com\Keap\Sdk\Core\Model\FileMetadata
+```
+
+Update a file
+
+Updates a file
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$file_id = 'file_id_example'; // string | file_id
+$update_file_request = new \Com\Keap\Sdk\Core\Model\UpdateFileRequest(); // \Com\Keap\Sdk\Core\Model\UpdateFileRequest | request
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+
+try {
+    $result = $apiInstance->updateFileUsingPATCH($file_id, $update_file_request, $update_mask);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreReleaseApi->updateFileUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **file_id** | **string**| file_id | |
+| **update_file_request** | [**\Com\Keap\Sdk\Core\Model\UpdateFileRequest**](../Model/UpdateFileRequest.md)| request | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\FileMetadata**](../Model/FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`, `multipart/form-data`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `updateNotesCustomFieldUsingPATCH()`
 
 ```php
@@ -5483,7 +6171,7 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\PreReleaseApi(
 );
 $custom_field_id = 'custom_field_id_example'; // string | custom_field_id
 $update_custom_field_meta_data_request = new \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest | request
-$update_mask = array('update_mask_example'); // string[] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
     $result = $apiInstance->updateNotesCustomFieldUsingPATCH($custom_field_id, $update_custom_field_meta_data_request, $update_mask);
@@ -5499,7 +6187,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **custom_field_id** | **string**| custom_field_id | |
 | **update_custom_field_meta_data_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCustomFieldMetaDataRequest**](../Model/UpdateCustomFieldMetaDataRequest.md)| request | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
 

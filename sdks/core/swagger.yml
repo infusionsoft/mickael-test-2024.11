@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: Keap REST Core Service
-  version: 2.70.0.751586-hf-202412120145
+  version: 2.70.0.752995
   title: Keap REST API
   termsOfService: https://keap.com/legal
   contact:
@@ -15,13 +15,13 @@ tags:
   - name: Affiliate
     description: Rest Affiliate Controller
   - name: Automation
-    description: Automations-Endpoint
+    description: Rest Automation Controller
   - name: AutomationCategory
     description: Rest Automation Category Controller
   - name: Business Profile
-    description: Business-Profile-Endpoint
+    description: Rest Business Profile Controller
   - name: Campaign
-    description: Campaigns-Endpoint
+    description: Rest Campaign Controller
   - name: Category Discount
     description: Rest Category Discount Controller
   - name: Company
@@ -32,14 +32,20 @@ tags:
     description: Rest Email Controller
   - name: Email Address
     description: Rest Api Email Address Controller
+  - name: Files
+    description: Rest File Controller
   - name: Free Trial Discount
     description: Rest Free Trial Discount Controller
   - name: FunnelIntegration
-    description: Funnel Integrations
+    description: Rest Funnel Integration Endpoint
   - name: Landing Pages
     description: Rest Landing Page Controller
+  - name: Lead Source Categories
+    description: Rest Lead Source Category Controller
   - name: Lead Sources
     description: Rest Lead Source Controller
+  - name: LeadScore
+    description: Rest Contact Lead Score Controller
   - name: Locale
     description: Rest Locale Controller
   - name: Merchant
@@ -55,13 +61,13 @@ tags:
   - name: PaymentMethodConfig
     description: Rest Payment Method Config Controller
   - name: Product
-    description: Product-V2-Endpoint
+    description: Rest Product Controller
   - name: Referral
-    description: Referrals-V2-Endpoint
+    description: Rest Referral Controller
   - name: Reporting
     description: Rest Reporting Controller
   - name: Sales
-    description: Sale-V2-Endpoint
+    description: Rest Sales Controller
   - name: Settings
     description: Rest Setting Controller
   - name: Shipping
@@ -605,8 +611,8 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: OK
+        '204':
+          description: No Content
         '401':
           description: Unauthorized
           content:
@@ -772,8 +778,8 @@ paths:
         - name: update_mask
           in: query
           description: >-
-            An optional list of fields to be updated. If set, only the provided
-            properties will be updated and others will be skipped.
+            An optional list of properties to be updated. If set, only the
+            provided properties will be updated and others will be skipped.
           required: false
           allowEmptyValue: false
           explode: true
@@ -973,8 +979,8 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: OK
+        '204':
+          description: No Content
         '401':
           description: Unauthorized
           content:
@@ -1302,8 +1308,8 @@ paths:
           schema:
             type: string
       responses:
-        '202':
-          description: Accepted
+        '204':
+          description: No Content
         '401':
           description: Unauthorized
           content:
@@ -1491,8 +1497,8 @@ paths:
         description: createAutomationCategoryRequest
         required: true
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
@@ -1979,9 +1985,8 @@ paths:
         - name: update_mask
           in: query
           description: >-
-            An optional list of fields to be updated. If set, only the fields
-            provided in the update_mask will be updated and others will be
-            skipped.
+            An optional list of properties to be updated. If set, only the
+            provided properties will be updated and others will be skipped.
           required: false
           allowEmptyValue: false
           explode: true
@@ -2514,6 +2519,47 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Company'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/contact/{contact_id}/leadScore:
+    get:
+      tags:
+        - Pre-Release
+        - LeadScore
+      summary: Retrieve Lead Score of a Contact
+      description: Retrieves information about the Lead Score of a Contact
+      operationId: getLeadScoreDetailsUsingGET
+      parameters:
+        - name: contact_id
+          in: path
+          description: contact_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LeadScore'
         '401':
           description: Unauthorized
           content:
@@ -3243,8 +3289,8 @@ paths:
         - name: update_mask
           in: query
           description: >-
-            An optional list of fields to be updated. If set, only the provided
-            properties will be updated and others will be skipped.
+            An optional list of properties to be updated. If set, only the
+            provided properties will be updated and others will be skipped.
           required: false
           allowEmptyValue: false
           explode: true
@@ -3732,6 +3778,88 @@ paths:
                 $ref: '#/components/schemas/Error'
       deprecated: false
   /v2/discounts/productCategories:
+    get:
+      tags:
+        - Pre-Release
+        - Category Discount
+      summary: List Category Discounts
+      description: Retrieve a list of Category Discounts.
+      operationId: listCategoryDiscountsUsingGET
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter to apply, the allowed field is:
+
+            - (String) product_category_id
+
+            You will need to apply the `==` operator to check the equality of
+            the filter with your searched
+
+            word, in the encoded form `%3D%3D`. For the filters listed above,
+            here are some examples:
+
+            - `filter=product_category_id%3D%3D4`
+          required: false
+          schema:
+            type: string
+        - name: order_by
+          in: query
+          description: |-
+            Attribute and direction to order items.
+            One of the following fields:
+            - id
+            - name
+            One of the following directions:
+            - asc
+            - desc
+          required: false
+          schema:
+            type: string
+        - name: page_size
+          in: query
+          description: Total number of items to return per page
+          required: false
+          example: 0
+          schema:
+            type: integer
+            format: int32
+            minimum: 1
+            maximum: 1000
+            exclusiveMinimum: false
+            exclusiveMaximum: false
+        - name: page_token
+          in: query
+          description: Page token
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListCategoryDiscountsResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
     post:
       tags:
         - Pre-Release
@@ -4218,10 +4346,15 @@ paths:
 
 
         You may opt-in or mark an email address as _Marketable_ by including the
-        following field in the request JSON with an opt-in reason. (This field
-        is also shown in the complete request body sample.) The reason you
-        provide here will help with compliance. Example reasons: "Customer
-        opted-in through webform", "Company gave explicit permission."
+        following field in the request JSON
+
+        with an opt-in reason. (This field is also shown in the complete request
+        body sample.)
+
+        The reason you provide here will help with compliance.
+
+        Example reasons: "Customer opted-in through webform", "Company gave
+        explicit permission."
 
 
         ```json
@@ -4231,8 +4364,9 @@ paths:
         ```
 
         Note that the email address status will only be updated to `Unconfirmed`
-        (marketable) for email addresses that are currently in the following
-        states:
+        (marketable) for email addresses
+
+        that are currently in the following states:
 
         - `Unengaged Marketable`
 
@@ -4493,6 +4627,325 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
       deprecated: false
+  /v2/files:
+    get:
+      tags:
+        - Pre-Release
+        - Files
+      summary: List all files
+      description: Retrieves all files
+      operationId: listFilesUsingGET_1
+      parameters:
+        - name: filter
+          in: query
+          description: >
+            Filter to apply, allowed fields are:
+
+            - (Boolean) is_public
+
+            - (String) contact_id
+
+            - (String) user_id
+
+            - (String) category
+
+            - (String) file_box_type
+
+
+            You will need to apply the `==` operator to check the equality of
+            one of the filters with your searched
+
+            word, in the encoded form `%3D%3D`. For the filters listed above,
+            here are some examples:
+
+            - `filter=contact_id%3D%3D123`
+
+            - `filter=category%3D%3DATTACHMENTS`
+
+            - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS`
+          required: false
+          schema:
+            type: string
+        - name: order_by
+          in: query
+          description: |
+            Attribute and direction to order items.
+            One of the following fields:
+            - file_name
+            - updated_time
+            - ...
+            One of the following directions:
+            - asc
+            - desc
+          required: false
+          schema:
+            type: string
+        - name: page_size
+          in: query
+          description: Total number of items to return per page
+          required: false
+          example: 0
+          schema:
+            type: integer
+            format: int32
+            minimum: 1
+            maximum: 1000
+            exclusiveMinimum: false
+            exclusiveMaximum: false
+        - name: page_token
+          in: query
+          description: Page token
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListFilesResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+    post:
+      tags:
+        - Pre-Release
+        - Files
+      summary: Create a file
+      description: Creates a file and uploads it
+      operationId: createFileUsingPOST_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFileRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CreateFileRequest'
+        description: request
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileMetadata'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/files/{file_id}:
+    get:
+      tags:
+        - Pre-Release
+        - Files
+      summary: Retrieve a file
+      description: Retrieves a file
+      operationId: getFileUsingGET_1
+      parameters:
+        - name: file_id
+          in: path
+          description: file_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileMetadata'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+    delete:
+      tags:
+        - Pre-Release
+        - Files
+      summary: Delete a file
+      description: Deletes a specified file
+      operationId: deleteFileUsingDELETE_1
+      parameters:
+        - name: file_id
+          in: path
+          description: file_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No Content
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+    patch:
+      tags:
+        - Pre-Release
+        - Files
+      summary: Update a file
+      description: Updates a file
+      operationId: updateFileUsingPATCH
+      parameters:
+        - name: file_id
+          in: path
+          description: file_id
+          required: true
+          schema:
+            type: string
+        - name: update_mask
+          in: query
+          description: >-
+            An optional list of properties to be updated. If set, only the
+            provided properties will be updated and others will be skipped.
+          required: false
+          allowEmptyValue: false
+          explode: true
+          schema:
+            type: array
+            items:
+              type: string
+            enum:
+              - file
+              - file_name
+              - is_public
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateFileRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UpdateFileRequest'
+        description: request
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileMetadata'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/files/{file_id}:data:
+    get:
+      tags:
+        - Pre-Release
+        - Files
+      summary: Retrieve a file's data
+      description: Retrieves a file's data
+      operationId: getFileDataUsingGET
+      parameters:
+        - name: file_id
+          in: path
+          description: file_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+                format: byte
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
   /v2/funnelIntegration:
     post:
       tags:
@@ -4641,6 +5094,117 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListLandingPagesResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/leadSourceCategories:
+    post:
+      tags:
+        - Pre-Release
+        - Lead Source Categories
+      summary: Create a Lead Source Category
+      description: Create a Lead Source Category.
+      operationId: createLeadSourceCategoryUsingPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUpdateLeadSourceCategoryRequest'
+        description: leadSourceCategory
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LeadSourceCategory'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/leadSourceCategories/{category_id}:
+    get:
+      tags:
+        - Pre-Release
+        - Lead Source Categories
+      summary: Retrieve a Lead Source Category
+      description: Retrieves a single Lead Source Category for a given id
+      operationId: getLeadSourceCategoryUsingGET
+      parameters:
+        - name: category_id
+          in: path
+          description: category_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LeadSourceCategory'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+    delete:
+      tags:
+        - Pre-Release
+        - Lead Source Categories
+      summary: Delete a Lead Source Category
+      description: Deletes the specified Lead Source Category.
+      operationId: deleteLeadSourceCategoryUsingDELETE
+      parameters:
+        - name: category_id
+          in: path
+          description: category_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No Content
         '401':
           description: Unauthorized
           content:
@@ -5009,8 +5573,8 @@ paths:
         - name: update_mask
           in: query
           description: >-
-            An optional list of fields to be updated. If set, only the provided
-            properties will be updated and others will be skipped.
+            An optional list of properties to be updated. If set, only the
+            provided properties will be updated and others will be skipped.
           required: false
           allowEmptyValue: false
           explode: true
@@ -6471,8 +7035,8 @@ paths:
           schema:
             type: string
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
@@ -6602,6 +7166,48 @@ paths:
                 $ref: '#/components/schemas/Error'
         '404':
           description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/products/{product_id}:adjustInventory:
+    post:
+      tags:
+        - Pre-Release
+        - Product
+      summary: Adjust Inventory of a Product
+      description: Increase or decrease the quantity of the Product
+      operationId: adjustInventoryUsingPOST
+      parameters:
+        - name: product_id
+          in: path
+          description: product_id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProductInventoryRequest'
+        description: updateProductInventoryRequest
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestV2Product'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
           content:
             application/json:
               schema:
@@ -9896,6 +10502,25 @@ components:
           items:
             $ref: '#/components/schemas/CreateEmailSentRequest'
       title: CreateEmailsSentRequest
+    CreateFileRequest:
+      type: object
+      required:
+        - contact_id
+        - file_name
+      properties:
+        contact_id:
+          type: string
+        file_association:
+          type: string
+          enum:
+            - CONTACT
+            - USER
+            - COMPANY
+        file_name:
+          type: string
+        is_public:
+          type: boolean
+      title: CreateFileRequest
     CreateFunnelIntegrationRequest:
       type: object
       properties:
@@ -10517,6 +11142,14 @@ components:
           items:
             type: string
       title: CreateUpdateDiscountRequest
+    CreateUpdateLeadSourceCategoryRequest:
+      type: object
+      properties:
+        description:
+          type: string
+        name:
+          type: string
+      title: CreateUpdateLeadSourceCategoryRequest
     CreateUpdateTagCategoryRequest:
       type: object
       properties:
@@ -10967,6 +11600,63 @@ components:
         type:
           type: string
       title: FaxNumber
+    FileMetadata:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - ATTACHMENTS
+            - CART
+            - DOCUMENTS
+            - HIDDEN
+            - INVOICE
+            - LOGO
+            - TICKETS
+            - WEB_FORM
+            - FUNNEL
+        contact_id:
+          type: string
+        created_by_id:
+          type: string
+        created_time:
+          type: string
+        download_url:
+          type: string
+        file_box_type:
+          type: string
+          enum:
+            - APPLICATION
+            - IMAGE
+            - FAX
+            - ATTACHMENT
+            - TICKET
+            - CONTACT
+            - DIGITAL_PRODUCT
+            - IMPORT
+            - HIDDEN
+            - WEB_FORM
+            - STYLED_CART
+            - RESAMPLED_IMAGE
+            - TEMPLATE_THUMBNAIL
+            - FUNNEL
+            - LOGO_THUMBNAIL
+            - UNLAYER
+            - BRANDING_CENTER_LOGO
+        file_name:
+          type: string
+        file_size:
+          type: integer
+          format: int64
+        id:
+          type: string
+        is_public:
+          type: boolean
+        remote_file_key:
+          type: string
+        updated_time:
+          type: string
+      title: FileMetadata
     FunnelIntegrationAction:
       type: object
       properties:
@@ -11394,6 +12084,14 @@ components:
         title:
           type: string
       title: LandingPage
+    LeadScore:
+      type: object
+      properties:
+        last_updated:
+          type: string
+        score:
+          type: string
+      title: LeadScore
     LeadSource:
       type: object
       properties:
@@ -11421,6 +12119,8 @@ components:
     LeadSourceCategory:
       type: object
       properties:
+        description:
+          type: string
         id:
           type: string
         name:
@@ -11552,6 +12252,16 @@ components:
         next_page_token:
           type: string
       title: ListCampaignsResponse
+    ListCategoryDiscountsResponse:
+      type: object
+      properties:
+        discounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategoryDiscount'
+        next_page_token:
+          type: string
+      title: ListCategoryDiscountsResponse
     ListCompaniesResponse:
       type: object
       properties:
@@ -11603,6 +12313,16 @@ components:
           items:
             $ref: '#/components/schemas/Country'
       title: ListCountriesResponse
+    ListFilesResponse:
+      type: object
+      properties:
+        files:
+          type: array
+          items:
+            $ref: '#/components/schemas/FileMetadata'
+        next_page_token:
+          type: string
+      title: ListFilesResponse
     ListLandingPagesResponse:
       type: object
       properties:
@@ -11705,7 +12425,7 @@ components:
         products:
           type: array
           items:
-            $ref: '#/components/schemas/RestProduct'
+            $ref: '#/components/schemas/RestV2Product'
       title: ListProductsResponse
     ListProvincesResponse:
       type: object
@@ -11973,6 +12693,49 @@ components:
           items:
             type: string
       title: OpportunityStage
+    OrderItemProduct:
+      type: object
+      properties:
+        created_time:
+          type: string
+        description:
+          type: string
+        id:
+          type: string
+        last_updated_time:
+          type: string
+        name:
+          type: string
+        product_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/RestProductOption'
+        product_price:
+          type: number
+          format: double
+        product_short_description:
+          type: string
+        shippable:
+          type: boolean
+        sku:
+          type: string
+        status:
+          type: string
+          enum:
+            - INACTIVE
+            - ACTIVE
+        subscription_only:
+          type: boolean
+        subscription_plans:
+          type: array
+          items:
+            $ref: '#/components/schemas/RestSubscriptionPlan'
+        taxable:
+          type: boolean
+        url:
+          type: string
+          description: The url is the permalink to the resource
+      title: OrderItemProduct
     OrderItemTax:
       type: object
       properties:
@@ -12356,6 +13119,24 @@ components:
           type: string
           description: The displayable label given to the option
       title: ProductFixedOption
+    ProductInventory:
+      type: object
+      properties:
+        email_for_inventory_notifications:
+          type: string
+          description: The email address for notifications about inventory
+        inventory_count:
+          type: integer
+          format: int32
+          description: The current inventory count for this product
+        inventory_limit:
+          type: integer
+          format: int32
+          description: The inventory limit for this product
+        out_of_stock_enabled:
+          type: boolean
+          description: The flag to enable out of stock inventory
+      title: ProductInventory
     ProductOptions:
       type: object
       properties:
@@ -12646,17 +13427,6 @@ components:
         processorType:
           type: string
       title: RestPaymentMethod
-    RestProduct:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        price:
-          type: number
-          format: double
-      title: RestProduct
     RestProductOption:
       type: object
       properties:
@@ -12947,7 +13717,7 @@ components:
           type: number
           format: double
         product:
-          $ref: '#/components/schemas/RestProduct'
+          $ref: '#/components/schemas/OrderItemProduct'
         quantity:
           type: integer
           format: int32
@@ -13035,6 +13805,8 @@ components:
         id:
           type: string
           description: The product ID
+        inventory:
+          $ref: '#/components/schemas/ProductInventory'
         name:
           type: string
           description: Product name
@@ -13452,6 +14224,14 @@ components:
         reason:
           type: string
       title: UpdateEmailAddress
+    UpdateFileRequest:
+      type: object
+      properties:
+        file_name:
+          type: string
+        is_public:
+          type: boolean
+      title: UpdateFileRequest
     UpdateNoteRequest:
       type: object
       required:
@@ -13560,6 +14340,18 @@ components:
         name:
           type: string
       title: UpdateOrderTotalDiscountRequest
+    UpdateProductInventoryRequest:
+      type: object
+      properties:
+        quantity:
+          type: integer
+          format: int32
+        type:
+          type: string
+          enum:
+            - INCREASE
+            - DECREASE
+      title: UpdateProductInventoryRequest
     UpdateShippingDiscountRequest:
       type: object
       properties:

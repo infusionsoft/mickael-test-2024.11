@@ -71,6 +71,7 @@ import { CreateCustomFieldResponse } from '../models/CreateCustomFieldResponse';
 import { CreateDefaultCommissionProgramRequest } from '../models/CreateDefaultCommissionProgramRequest';
 import { CreateEmailSentRequest } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
+import { CreateFileRequest } from '../models/CreateFileRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
 import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
@@ -93,6 +94,7 @@ import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubs
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
 import { CreateUpdateDiscountRequest } from '../models/CreateUpdateDiscountRequest';
+import { CreateUpdateLeadSourceCategoryRequest } from '../models/CreateUpdateLeadSourceCategoryRequest';
 import { CreateUpdateTagCategoryRequest } from '../models/CreateUpdateTagCategoryRequest';
 import { CreateUpdateTagRequest } from '../models/CreateUpdateTagRequest';
 import { CreateUserRequestV2 } from '../models/CreateUserRequestV2';
@@ -116,6 +118,7 @@ import { EmailSentCreateError } from '../models/EmailSentCreateError';
 import { EmailSentWithContent } from '../models/EmailSentWithContent';
 import { EmailsSentList } from '../models/EmailsSentList';
 import { FaxNumber } from '../models/FaxNumber';
+import { FileMetadata } from '../models/FileMetadata';
 import { FunnelIntegrationAction } from '../models/FunnelIntegrationAction';
 import { FunnelIntegrationHttpRequest } from '../models/FunnelIntegrationHttpRequest';
 import { FunnelIntegrationSchemaField } from '../models/FunnelIntegrationSchemaField';
@@ -133,6 +136,7 @@ import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment } from '../models/InvoiceOrderPayment';
 import { Item } from '../models/Item';
 import { LandingPage } from '../models/LandingPage';
+import { LeadScore } from '../models/LeadScore';
 import { LeadSource } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
 import { Link } from '../models/Link';
@@ -146,11 +150,13 @@ import { ListAutomationIdsResponse } from '../models/ListAutomationIdsResponse';
 import { ListAutomationResponse } from '../models/ListAutomationResponse';
 import { ListBasicContactResponse } from '../models/ListBasicContactResponse';
 import { ListCampaignsResponse } from '../models/ListCampaignsResponse';
+import { ListCategoryDiscountsResponse } from '../models/ListCategoryDiscountsResponse';
 import { ListCompaniesResponse } from '../models/ListCompaniesResponse';
 import { ListContactLinkTypesResponse } from '../models/ListContactLinkTypesResponse';
 import { ListContactLinksResponse } from '../models/ListContactLinksResponse';
 import { ListContactsResponse } from '../models/ListContactsResponse';
 import { ListCountriesResponse } from '../models/ListCountriesResponse';
+import { ListFilesResponse } from '../models/ListFilesResponse';
 import { ListLandingPagesResponse } from '../models/ListLandingPagesResponse';
 import { ListLeadSourcesResponse } from '../models/ListLeadSourcesResponse';
 import { ListNoteTemplateResponse } from '../models/ListNoteTemplateResponse';
@@ -180,6 +186,7 @@ import { NoteTemplate } from '../models/NoteTemplate';
 import { ObjectModel } from '../models/ObjectModel';
 import { OpportunityContact } from '../models/OpportunityContact';
 import { OpportunityStage } from '../models/OpportunityStage';
+import { OrderItemProduct } from '../models/OrderItemProduct';
 import { OrderItemTax } from '../models/OrderItemTax';
 import { OrderTotalDiscount } from '../models/OrderTotalDiscount';
 import { Origin } from '../models/Origin';
@@ -201,6 +208,7 @@ import { PhoneNumber } from '../models/PhoneNumber';
 import { ProductCommission } from '../models/ProductCommission';
 import { ProductCommissionProgram } from '../models/ProductCommissionProgram';
 import { ProductFixedOption } from '../models/ProductFixedOption';
+import { ProductInventory } from '../models/ProductInventory';
 import { ProductOptions } from '../models/ProductOptions';
 import { ProductVariableSetting } from '../models/ProductVariableSetting';
 import { Provinces } from '../models/Provinces';
@@ -216,7 +224,6 @@ import { RestEmailAddress } from '../models/RestEmailAddress';
 import { RestOpportunityStage } from '../models/RestOpportunityStage';
 import { RestPaymentGateway } from '../models/RestPaymentGateway';
 import { RestPaymentMethod } from '../models/RestPaymentMethod';
-import { RestProduct } from '../models/RestProduct';
 import { RestProductOption } from '../models/RestProductOption';
 import { RestProductOptionValue } from '../models/RestProductOptionValue';
 import { RestSubscriptionPlan } from '../models/RestSubscriptionPlan';
@@ -248,11 +255,13 @@ import { Throwable } from '../models/Throwable';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
+import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
 import { UpdateOpportunityStageChecklistItem } from '../models/UpdateOpportunityStageChecklistItem';
 import { UpdateOpportunityStageRequest } from '../models/UpdateOpportunityStageRequest';
 import { UpdateOrderTotalDiscountRequest } from '../models/UpdateOrderTotalDiscountRequest';
+import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
@@ -713,7 +722,7 @@ export interface AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest {
      */
     updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
-     * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof AffiliateApiupdateAffiliateCustomFieldUsingPATCH
@@ -1659,7 +1668,7 @@ export interface BusinessProfileApiGetBusinessProfileUsingGETRequest {
 
 export interface BusinessProfileApiPatchBusinessProfileUsingPATCHRequest {
     /**
-     * An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof BusinessProfileApipatchBusinessProfileUsingPATCH
@@ -1930,6 +1939,39 @@ export interface CategoryDiscountApiGetDiscountUsingGETRequest {
     discountId: string
 }
 
+export interface CategoryDiscountApiListCategoryDiscountsUsingGETRequest {
+    /**
+     * Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * Defaults to: undefined
+     * @type string
+     * @memberof CategoryDiscountApilistCategoryDiscountsUsingGET
+     */
+    filter?: string
+    /**
+     * Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * Defaults to: undefined
+     * @type string
+     * @memberof CategoryDiscountApilistCategoryDiscountsUsingGET
+     */
+    orderBy?: string
+    /**
+     * Total number of items to return per page
+     * Minimum: 1
+     * Maximum: 1000
+     * Defaults to: undefined
+     * @type number
+     * @memberof CategoryDiscountApilistCategoryDiscountsUsingGET
+     */
+    pageSize?: number
+    /**
+     * Page token
+     * Defaults to: undefined
+     * @type string
+     * @memberof CategoryDiscountApilistCategoryDiscountsUsingGET
+     */
+    pageToken?: string
+}
+
 export interface CategoryDiscountApiUpdateDiscountUsingPATCHRequest {
     /**
      * discount_id
@@ -2012,6 +2054,24 @@ export class ObjectCategoryDiscountApi {
      */
     public getDiscountUsingGET(param: CategoryDiscountApiGetDiscountUsingGETRequest, options?: Configuration): Promise<CategoryDiscount> {
         return this.api.getDiscountUsingGET(param.discountId,  options).toPromise();
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param param the request object
+     */
+    public listCategoryDiscountsUsingGETWithHttpInfo(param: CategoryDiscountApiListCategoryDiscountsUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListCategoryDiscountsResponse>> {
+        return this.api.listCategoryDiscountsUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param param the request object
+     */
+    public listCategoryDiscountsUsingGET(param: CategoryDiscountApiListCategoryDiscountsUsingGETRequest = {}, options?: Configuration): Promise<ListCategoryDiscountsResponse> {
+        return this.api.listCategoryDiscountsUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
     /**
@@ -2921,6 +2981,221 @@ export class ObjectEmailAddressApi {
 
 }
 
+import { ObservableFilesApi } from "./ObservableAPI";
+import { FilesApiRequestFactory, FilesApiResponseProcessor} from "../apis/FilesApi";
+
+export interface FilesApiCreateFileUsingPOST1Request {
+    /**
+     * request
+     * @type CreateFileRequest
+     * @memberof FilesApicreateFileUsingPOST1
+     */
+    createFileRequest: CreateFileRequest
+}
+
+export interface FilesApiDeleteFileUsingDELETE1Request {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApideleteFileUsingDELETE1
+     */
+    fileId: string
+}
+
+export interface FilesApiGetFileDataUsingGETRequest {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApigetFileDataUsingGET
+     */
+    fileId: string
+}
+
+export interface FilesApiGetFileUsingGET1Request {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApigetFileUsingGET1
+     */
+    fileId: string
+}
+
+export interface FilesApiListFilesUsingGET1Request {
+    /**
+     * Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApilistFilesUsingGET1
+     */
+    filter?: string
+    /**
+     * Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApilistFilesUsingGET1
+     */
+    orderBy?: string
+    /**
+     * Total number of items to return per page
+     * Minimum: 1
+     * Maximum: 1000
+     * Defaults to: undefined
+     * @type number
+     * @memberof FilesApilistFilesUsingGET1
+     */
+    pageSize?: number
+    /**
+     * Page token
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApilistFilesUsingGET1
+     */
+    pageToken?: string
+}
+
+export interface FilesApiUpdateFileUsingPATCHRequest {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof FilesApiupdateFileUsingPATCH
+     */
+    fileId: string
+    /**
+     * request
+     * @type UpdateFileRequest
+     * @memberof FilesApiupdateFileUsingPATCH
+     */
+    updateFileRequest: UpdateFileRequest
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof FilesApiupdateFileUsingPATCH
+     */
+    updateMask?: Array<string>
+}
+
+export class ObjectFilesApi {
+    private api: ObservableFilesApi
+
+    public constructor(configuration: Configuration, requestFactory?: FilesApiRequestFactory, responseProcessor?: FilesApiResponseProcessor) {
+        this.api = new ObservableFilesApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param param the request object
+     */
+    public createFileUsingPOST1WithHttpInfo(param: FilesApiCreateFileUsingPOST1Request, options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        return this.api.createFileUsingPOST1WithHttpInfo(param.createFileRequest,  options).toPromise();
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param param the request object
+     */
+    public createFileUsingPOST1(param: FilesApiCreateFileUsingPOST1Request, options?: Configuration): Promise<FileMetadata> {
+        return this.api.createFileUsingPOST1(param.createFileRequest,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param param the request object
+     */
+    public deleteFileUsingDELETE1WithHttpInfo(param: FilesApiDeleteFileUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteFileUsingDELETE1WithHttpInfo(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param param the request object
+     */
+    public deleteFileUsingDELETE1(param: FilesApiDeleteFileUsingDELETE1Request, options?: Configuration): Promise<void> {
+        return this.api.deleteFileUsingDELETE1(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param param the request object
+     */
+    public getFileDataUsingGETWithHttpInfo(param: FilesApiGetFileDataUsingGETRequest, options?: Configuration): Promise<HttpInfo<string>> {
+        return this.api.getFileDataUsingGETWithHttpInfo(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param param the request object
+     */
+    public getFileDataUsingGET(param: FilesApiGetFileDataUsingGETRequest, options?: Configuration): Promise<string> {
+        return this.api.getFileDataUsingGET(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param param the request object
+     */
+    public getFileUsingGET1WithHttpInfo(param: FilesApiGetFileUsingGET1Request, options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        return this.api.getFileUsingGET1WithHttpInfo(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param param the request object
+     */
+    public getFileUsingGET1(param: FilesApiGetFileUsingGET1Request, options?: Configuration): Promise<FileMetadata> {
+        return this.api.getFileUsingGET1(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param param the request object
+     */
+    public listFilesUsingGET1WithHttpInfo(param: FilesApiListFilesUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListFilesResponse>> {
+        return this.api.listFilesUsingGET1WithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param param the request object
+     */
+    public listFilesUsingGET1(param: FilesApiListFilesUsingGET1Request = {}, options?: Configuration): Promise<ListFilesResponse> {
+        return this.api.listFilesUsingGET1(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param param the request object
+     */
+    public updateFileUsingPATCHWithHttpInfo(param: FilesApiUpdateFileUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        return this.api.updateFileUsingPATCHWithHttpInfo(param.fileId, param.updateFileRequest, param.updateMask,  options).toPromise();
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param param the request object
+     */
+    public updateFileUsingPATCH(param: FilesApiUpdateFileUsingPATCHRequest, options?: Configuration): Promise<FileMetadata> {
+        return this.api.updateFileUsingPATCH(param.fileId, param.updateFileRequest, param.updateMask,  options).toPromise();
+    }
+
+}
+
 import { ObservableFreeTrialDiscountApi } from "./ObservableAPI";
 import { FreeTrialDiscountApiRequestFactory, FreeTrialDiscountApiResponseProcessor} from "../apis/FreeTrialDiscountApi";
 
@@ -3111,6 +3386,141 @@ export class ObjectLandingPagesApi {
      */
     public listLandingPagesUsingGET(param: LandingPagesApiListLandingPagesUsingGETRequest = {}, options?: Configuration): Promise<ListLandingPagesResponse> {
         return this.api.listLandingPagesUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+}
+
+import { ObservableLeadScoreApi } from "./ObservableAPI";
+import { LeadScoreApiRequestFactory, LeadScoreApiResponseProcessor} from "../apis/LeadScoreApi";
+
+export interface LeadScoreApiGetLeadScoreDetailsUsingGETRequest {
+    /**
+     * contact_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof LeadScoreApigetLeadScoreDetailsUsingGET
+     */
+    contactId: string
+}
+
+export class ObjectLeadScoreApi {
+    private api: ObservableLeadScoreApi
+
+    public constructor(configuration: Configuration, requestFactory?: LeadScoreApiRequestFactory, responseProcessor?: LeadScoreApiResponseProcessor) {
+        this.api = new ObservableLeadScoreApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param param the request object
+     */
+    public getLeadScoreDetailsUsingGETWithHttpInfo(param: LeadScoreApiGetLeadScoreDetailsUsingGETRequest, options?: Configuration): Promise<HttpInfo<LeadScore>> {
+        return this.api.getLeadScoreDetailsUsingGETWithHttpInfo(param.contactId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param param the request object
+     */
+    public getLeadScoreDetailsUsingGET(param: LeadScoreApiGetLeadScoreDetailsUsingGETRequest, options?: Configuration): Promise<LeadScore> {
+        return this.api.getLeadScoreDetailsUsingGET(param.contactId,  options).toPromise();
+    }
+
+}
+
+import { ObservableLeadSourceCategoriesApi } from "./ObservableAPI";
+import { LeadSourceCategoriesApiRequestFactory, LeadSourceCategoriesApiResponseProcessor} from "../apis/LeadSourceCategoriesApi";
+
+export interface LeadSourceCategoriesApiCreateLeadSourceCategoryUsingPOSTRequest {
+    /**
+     * leadSourceCategory
+     * @type CreateUpdateLeadSourceCategoryRequest
+     * @memberof LeadSourceCategoriesApicreateLeadSourceCategoryUsingPOST
+     */
+    createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest
+}
+
+export interface LeadSourceCategoriesApiDeleteLeadSourceCategoryUsingDELETERequest {
+    /**
+     * category_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof LeadSourceCategoriesApideleteLeadSourceCategoryUsingDELETE
+     */
+    categoryId: string
+}
+
+export interface LeadSourceCategoriesApiGetLeadSourceCategoryUsingGETRequest {
+    /**
+     * category_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof LeadSourceCategoriesApigetLeadSourceCategoryUsingGET
+     */
+    categoryId: string
+}
+
+export class ObjectLeadSourceCategoriesApi {
+    private api: ObservableLeadSourceCategoriesApi
+
+    public constructor(configuration: Configuration, requestFactory?: LeadSourceCategoriesApiRequestFactory, responseProcessor?: LeadSourceCategoriesApiResponseProcessor) {
+        this.api = new ObservableLeadSourceCategoriesApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param param the request object
+     */
+    public createLeadSourceCategoryUsingPOSTWithHttpInfo(param: LeadSourceCategoriesApiCreateLeadSourceCategoryUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        return this.api.createLeadSourceCategoryUsingPOSTWithHttpInfo(param.createUpdateLeadSourceCategoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param param the request object
+     */
+    public createLeadSourceCategoryUsingPOST(param: LeadSourceCategoriesApiCreateLeadSourceCategoryUsingPOSTRequest = {}, options?: Configuration): Promise<LeadSourceCategory> {
+        return this.api.createLeadSourceCategoryUsingPOST(param.createUpdateLeadSourceCategoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param param the request object
+     */
+    public deleteLeadSourceCategoryUsingDELETEWithHttpInfo(param: LeadSourceCategoriesApiDeleteLeadSourceCategoryUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(param.categoryId,  options).toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param param the request object
+     */
+    public deleteLeadSourceCategoryUsingDELETE(param: LeadSourceCategoriesApiDeleteLeadSourceCategoryUsingDELETERequest, options?: Configuration): Promise<void> {
+        return this.api.deleteLeadSourceCategoryUsingDELETE(param.categoryId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param param the request object
+     */
+    public getLeadSourceCategoryUsingGETWithHttpInfo(param: LeadSourceCategoriesApiGetLeadSourceCategoryUsingGETRequest, options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        return this.api.getLeadSourceCategoryUsingGETWithHttpInfo(param.categoryId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param param the request object
+     */
+    public getLeadSourceCategoryUsingGET(param: LeadSourceCategoriesApiGetLeadSourceCategoryUsingGETRequest, options?: Configuration): Promise<LeadSourceCategory> {
+        return this.api.getLeadSourceCategoryUsingGET(param.categoryId,  options).toPromise();
     }
 
 }
@@ -3485,7 +3895,7 @@ export interface NoteApiUpdateNoteUsingPATCHRequest {
      */
     updateNoteRequest: UpdateNoteRequest
     /**
-     * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof NoteApiupdateNoteUsingPATCH
@@ -3508,7 +3918,7 @@ export interface NoteApiUpdateNotesCustomFieldUsingPATCHRequest {
      */
     updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
-     * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof NoteApiupdateNotesCustomFieldUsingPATCH
@@ -4808,6 +5218,22 @@ export interface PreReleaseApiAddCommissionProgramUsingPOSTRequest {
     createCommissionProgramRequest?: CreateCommissionProgramRequest
 }
 
+export interface PreReleaseApiAdjustInventoryUsingPOSTRequest {
+    /**
+     * product_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApiadjustInventoryUsingPOST
+     */
+    productId: string
+    /**
+     * updateProductInventoryRequest
+     * @type UpdateProductInventoryRequest
+     * @memberof PreReleaseApiadjustInventoryUsingPOST
+     */
+    updateProductInventoryRequest: UpdateProductInventoryRequest
+}
+
 export interface PreReleaseApiAssignProductCommissionProgramUsingPOSTRequest {
     /**
      * commission_program_id
@@ -4899,6 +5325,15 @@ export interface PreReleaseApiCreateDiscountUsingPOST1Request {
     createShippingDiscountRequest: CreateShippingDiscountRequest
 }
 
+export interface PreReleaseApiCreateFileUsingPOST1Request {
+    /**
+     * request
+     * @type CreateFileRequest
+     * @memberof PreReleaseApicreateFileUsingPOST1
+     */
+    createFileRequest: CreateFileRequest
+}
+
 export interface PreReleaseApiCreateFunnelIntegrationUsingPOSTRequest {
     /**
      * createFunnelIntegrationRequest
@@ -4915,6 +5350,15 @@ export interface PreReleaseApiCreateIntegrationTriggerEventUsingPOSTRequest {
      * @memberof PreReleaseApicreateIntegrationTriggerEventUsingPOST
      */
     createFunnelIntegrationTriggerEvents: CreateFunnelIntegrationTriggerEvents
+}
+
+export interface PreReleaseApiCreateLeadSourceCategoryUsingPOSTRequest {
+    /**
+     * leadSourceCategory
+     * @type CreateUpdateLeadSourceCategoryRequest
+     * @memberof PreReleaseApicreateLeadSourceCategoryUsingPOST
+     */
+    createUpdateLeadSourceCategoryRequest?: CreateUpdateLeadSourceCategoryRequest
 }
 
 export interface PreReleaseApiCreateLeadSourceUsingPOSTRequest {
@@ -5118,6 +5562,16 @@ export interface PreReleaseApiDeleteDiscountUsingDELETE2Request {
     discountId: string
 }
 
+export interface PreReleaseApiDeleteFileUsingDELETE1Request {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApideleteFileUsingDELETE1
+     */
+    fileId: string
+}
+
 export interface PreReleaseApiDeleteFunnelIntegrationUsingPOSTRequest {
     /**
      * deleteFunnelIntegrationRequest
@@ -5125,6 +5579,16 @@ export interface PreReleaseApiDeleteFunnelIntegrationUsingPOSTRequest {
      * @memberof PreReleaseApideleteFunnelIntegrationUsingPOST
      */
     deleteFunnelIntegrationRequest: DeleteFunnelIntegrationRequest
+}
+
+export interface PreReleaseApiDeleteLeadSourceCategoryUsingDELETERequest {
+    /**
+     * category_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApideleteLeadSourceCategoryUsingDELETE
+     */
+    categoryId: string
 }
 
 export interface PreReleaseApiDeleteOpportunityStageUsingDELETERequest {
@@ -5310,6 +5774,46 @@ export interface PreReleaseApiGetDiscountUsingGET1Request {
     discountId: string
 }
 
+export interface PreReleaseApiGetFileDataUsingGETRequest {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApigetFileDataUsingGET
+     */
+    fileId: string
+}
+
+export interface PreReleaseApiGetFileUsingGET1Request {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApigetFileUsingGET1
+     */
+    fileId: string
+}
+
+export interface PreReleaseApiGetLeadScoreDetailsUsingGETRequest {
+    /**
+     * contact_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApigetLeadScoreDetailsUsingGET
+     */
+    contactId: string
+}
+
+export interface PreReleaseApiGetLeadSourceCategoryUsingGETRequest {
+    /**
+     * category_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApigetLeadSourceCategoryUsingGET
+     */
+    categoryId: string
+}
+
 export interface PreReleaseApiGetOpportunityStageUsingGETRequest {
     /**
      * stage_id
@@ -5469,6 +5973,39 @@ export interface PreReleaseApiListAffiliateLinksUsingGETRequest {
     pageToken?: string
 }
 
+export interface PreReleaseApiListCategoryDiscountsUsingGETRequest {
+    /**
+     * Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60;
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApilistCategoryDiscountsUsingGET
+     */
+    filter?: string
+    /**
+     * Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApilistCategoryDiscountsUsingGET
+     */
+    orderBy?: string
+    /**
+     * Total number of items to return per page
+     * Minimum: 1
+     * Maximum: 1000
+     * Defaults to: undefined
+     * @type number
+     * @memberof PreReleaseApilistCategoryDiscountsUsingGET
+     */
+    pageSize?: number
+    /**
+     * Page token
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApilistCategoryDiscountsUsingGET
+     */
+    pageToken?: string
+}
+
 export interface PreReleaseApiListCountriesUsingGET2Request {
 }
 
@@ -5508,6 +6045,39 @@ export interface PreReleaseApiListDiscountsUsingGETRequest {
      * Defaults to: undefined
      * @type string
      * @memberof PreReleaseApilistDiscountsUsingGET
+     */
+    pageToken?: string
+}
+
+export interface PreReleaseApiListFilesUsingGET1Request {
+    /**
+     * Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60; 
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApilistFilesUsingGET1
+     */
+    filter?: string
+    /**
+     * Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApilistFilesUsingGET1
+     */
+    orderBy?: string
+    /**
+     * Total number of items to return per page
+     * Minimum: 1
+     * Maximum: 1000
+     * Defaults to: undefined
+     * @type number
+     * @memberof PreReleaseApilistFilesUsingGET1
+     */
+    pageSize?: number
+    /**
+     * Page token
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApilistFilesUsingGET1
      */
     pageToken?: string
 }
@@ -6229,7 +6799,7 @@ export interface PreReleaseApiUpdateAffiliateCustomFieldUsingPATCHRequest {
      */
     updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
-     * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof PreReleaseApiupdateAffiliateCustomFieldUsingPATCH
@@ -6283,6 +6853,29 @@ export interface PreReleaseApiUpdateDiscountUsingPATCH1Request {
     updateMask?: Array<string>
 }
 
+export interface PreReleaseApiUpdateFileUsingPATCHRequest {
+    /**
+     * file_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof PreReleaseApiupdateFileUsingPATCH
+     */
+    fileId: string
+    /**
+     * request
+     * @type UpdateFileRequest
+     * @memberof PreReleaseApiupdateFileUsingPATCH
+     */
+    updateFileRequest: UpdateFileRequest
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof PreReleaseApiupdateFileUsingPATCH
+     */
+    updateMask?: Array<string>
+}
+
 export interface PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest {
     /**
      * custom_field_id
@@ -6298,7 +6891,7 @@ export interface PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest {
      */
     updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest
     /**
-     * An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof PreReleaseApiupdateNotesCustomFieldUsingPATCH
@@ -6527,6 +7120,24 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param param the request object
+     */
+    public adjustInventoryUsingPOSTWithHttpInfo(param: PreReleaseApiAdjustInventoryUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestV2Product>> {
+        return this.api.adjustInventoryUsingPOSTWithHttpInfo(param.productId, param.updateProductInventoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param param the request object
+     */
+    public adjustInventoryUsingPOST(param: PreReleaseApiAdjustInventoryUsingPOSTRequest, options?: Configuration): Promise<RestV2Product> {
+        return this.api.adjustInventoryUsingPOST(param.productId, param.updateProductInventoryRequest,  options).toPromise();
+    }
+
+    /**
      * Assigns a Product Commission Program to a Product
      * Assign a Product Commission Program
      * @param param the request object
@@ -6653,6 +7264,24 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param param the request object
+     */
+    public createFileUsingPOST1WithHttpInfo(param: PreReleaseApiCreateFileUsingPOST1Request, options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        return this.api.createFileUsingPOST1WithHttpInfo(param.createFileRequest,  options).toPromise();
+    }
+
+    /**
+     * Creates a file and uploads it
+     * Create a file
+     * @param param the request object
+     */
+    public createFileUsingPOST1(param: PreReleaseApiCreateFileUsingPOST1Request, options?: Configuration): Promise<FileMetadata> {
+        return this.api.createFileUsingPOST1(param.createFileRequest,  options).toPromise();
+    }
+
+    /**
      * Allows a list of both triggers / goals, and actions / sequence items to be installed at the same time.
      * Create Funnel Integrations into the app.
      * @param param the request object
@@ -6684,6 +7313,24 @@ export class ObjectPreReleaseApi {
      */
     public createIntegrationTriggerEventUsingPOST(param: PreReleaseApiCreateIntegrationTriggerEventUsingPOSTRequest, options?: Configuration): Promise<Array<FunnelIntegrationTriggerResultDTO>> {
         return this.api.createIntegrationTriggerEventUsingPOST(param.createFunnelIntegrationTriggerEvents,  options).toPromise();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param param the request object
+     */
+    public createLeadSourceCategoryUsingPOSTWithHttpInfo(param: PreReleaseApiCreateLeadSourceCategoryUsingPOSTRequest = {}, options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        return this.api.createLeadSourceCategoryUsingPOSTWithHttpInfo(param.createUpdateLeadSourceCategoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Create a Lead Source Category.
+     * Create a Lead Source Category
+     * @param param the request object
+     */
+    public createLeadSourceCategoryUsingPOST(param: PreReleaseApiCreateLeadSourceCategoryUsingPOSTRequest = {}, options?: Configuration): Promise<LeadSourceCategory> {
+        return this.api.createLeadSourceCategoryUsingPOST(param.createUpdateLeadSourceCategoryRequest,  options).toPromise();
     }
 
     /**
@@ -7065,6 +7712,24 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Deletes a specified file
+     * Delete a file
+     * @param param the request object
+     */
+    public deleteFileUsingDELETE1WithHttpInfo(param: PreReleaseApiDeleteFileUsingDELETE1Request, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteFileUsingDELETE1WithHttpInfo(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Deletes a specified file
+     * Delete a file
+     * @param param the request object
+     */
+    public deleteFileUsingDELETE1(param: PreReleaseApiDeleteFileUsingDELETE1Request, options?: Configuration): Promise<void> {
+        return this.api.deleteFileUsingDELETE1(param.fileId,  options).toPromise();
+    }
+
+    /**
      * Deletes all triggers / goals, and actions / sequence items for the given funnel integration
      * Deletes Funnel Integrations from the app.
      * @param param the request object
@@ -7080,6 +7745,24 @@ export class ObjectPreReleaseApi {
      */
     public deleteFunnelIntegrationUsingPOST(param: PreReleaseApiDeleteFunnelIntegrationUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.deleteFunnelIntegrationUsingPOST(param.deleteFunnelIntegrationRequest,  options).toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param param the request object
+     */
+    public deleteLeadSourceCategoryUsingDELETEWithHttpInfo(param: PreReleaseApiDeleteLeadSourceCategoryUsingDELETERequest, options?: Configuration): Promise<HttpInfo<void>> {
+        return this.api.deleteLeadSourceCategoryUsingDELETEWithHttpInfo(param.categoryId,  options).toPromise();
+    }
+
+    /**
+     * Deletes the specified Lead Source Category.
+     * Delete a Lead Source Category
+     * @param param the request object
+     */
+    public deleteLeadSourceCategoryUsingDELETE(param: PreReleaseApiDeleteLeadSourceCategoryUsingDELETERequest, options?: Configuration): Promise<void> {
+        return this.api.deleteLeadSourceCategoryUsingDELETE(param.categoryId,  options).toPromise();
     }
 
     /**
@@ -7371,6 +8054,78 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param param the request object
+     */
+    public getFileDataUsingGETWithHttpInfo(param: PreReleaseApiGetFileDataUsingGETRequest, options?: Configuration): Promise<HttpInfo<string>> {
+        return this.api.getFileDataUsingGETWithHttpInfo(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file\'s data
+     * Retrieve a file\'s data
+     * @param param the request object
+     */
+    public getFileDataUsingGET(param: PreReleaseApiGetFileDataUsingGETRequest, options?: Configuration): Promise<string> {
+        return this.api.getFileDataUsingGET(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param param the request object
+     */
+    public getFileUsingGET1WithHttpInfo(param: PreReleaseApiGetFileUsingGET1Request, options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        return this.api.getFileUsingGET1WithHttpInfo(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a file
+     * Retrieve a file
+     * @param param the request object
+     */
+    public getFileUsingGET1(param: PreReleaseApiGetFileUsingGET1Request, options?: Configuration): Promise<FileMetadata> {
+        return this.api.getFileUsingGET1(param.fileId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param param the request object
+     */
+    public getLeadScoreDetailsUsingGETWithHttpInfo(param: PreReleaseApiGetLeadScoreDetailsUsingGETRequest, options?: Configuration): Promise<HttpInfo<LeadScore>> {
+        return this.api.getLeadScoreDetailsUsingGETWithHttpInfo(param.contactId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves information about the Lead Score of a Contact
+     * Retrieve Lead Score of a Contact
+     * @param param the request object
+     */
+    public getLeadScoreDetailsUsingGET(param: PreReleaseApiGetLeadScoreDetailsUsingGETRequest, options?: Configuration): Promise<LeadScore> {
+        return this.api.getLeadScoreDetailsUsingGET(param.contactId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param param the request object
+     */
+    public getLeadSourceCategoryUsingGETWithHttpInfo(param: PreReleaseApiGetLeadSourceCategoryUsingGETRequest, options?: Configuration): Promise<HttpInfo<LeadSourceCategory>> {
+        return this.api.getLeadSourceCategoryUsingGETWithHttpInfo(param.categoryId,  options).toPromise();
+    }
+
+    /**
+     * Retrieves a single Lead Source Category for a given id
+     * Retrieve a Lead Source Category
+     * @param param the request object
+     */
+    public getLeadSourceCategoryUsingGET(param: PreReleaseApiGetLeadSourceCategoryUsingGETRequest, options?: Configuration): Promise<LeadSourceCategory> {
+        return this.api.getLeadSourceCategoryUsingGET(param.categoryId,  options).toPromise();
+    }
+
+    /**
      * Retrieves the specified Opportunity Stage
      * Retrieve an Opportunity Stage
      * @param param the request object
@@ -7587,6 +8342,24 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param param the request object
+     */
+    public listCategoryDiscountsUsingGETWithHttpInfo(param: PreReleaseApiListCategoryDiscountsUsingGETRequest = {}, options?: Configuration): Promise<HttpInfo<ListCategoryDiscountsResponse>> {
+        return this.api.listCategoryDiscountsUsingGETWithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Retrieve a list of Category Discounts.
+     * List Category Discounts
+     * @param param the request object
+     */
+    public listCategoryDiscountsUsingGET(param: PreReleaseApiListCategoryDiscountsUsingGETRequest = {}, options?: Configuration): Promise<ListCategoryDiscountsResponse> {
+        return this.api.listCategoryDiscountsUsingGET(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
      * List Countries
      * @param param the request object
      */
@@ -7618,6 +8391,24 @@ export class ObjectPreReleaseApi {
      */
     public listDiscountsUsingGET(param: PreReleaseApiListDiscountsUsingGETRequest = {}, options?: Configuration): Promise<ListShippingDiscountsResponse> {
         return this.api.listDiscountsUsingGET(param.fields, param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param param the request object
+     */
+    public listFilesUsingGET1WithHttpInfo(param: PreReleaseApiListFilesUsingGET1Request = {}, options?: Configuration): Promise<HttpInfo<ListFilesResponse>> {
+        return this.api.listFilesUsingGET1WithHttpInfo(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
+    }
+
+    /**
+     * Retrieves all files
+     * List all files
+     * @param param the request object
+     */
+    public listFilesUsingGET1(param: PreReleaseApiListFilesUsingGET1Request = {}, options?: Configuration): Promise<ListFilesResponse> {
+        return this.api.listFilesUsingGET1(param.filter, param.orderBy, param.pageSize, param.pageToken,  options).toPromise();
     }
 
     /**
@@ -8195,6 +8986,24 @@ export class ObjectPreReleaseApi {
     }
 
     /**
+     * Updates a file
+     * Update a file
+     * @param param the request object
+     */
+    public updateFileUsingPATCHWithHttpInfo(param: PreReleaseApiUpdateFileUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<FileMetadata>> {
+        return this.api.updateFileUsingPATCHWithHttpInfo(param.fileId, param.updateFileRequest, param.updateMask,  options).toPromise();
+    }
+
+    /**
+     * Updates a file
+     * Update a file
+     * @param param the request object
+     */
+    public updateFileUsingPATCH(param: PreReleaseApiUpdateFileUsingPATCHRequest, options?: Configuration): Promise<FileMetadata> {
+        return this.api.updateFileUsingPATCH(param.fileId, param.updateFileRequest, param.updateMask,  options).toPromise();
+    }
+
+    /**
      * Updates a custom field of the specified type and options to the Note object.
      * Update a Custom Field
      * @param param the request object
@@ -8361,6 +9170,22 @@ export class ObjectPreReleaseApi {
 import { ObservableProductApi } from "./ObservableAPI";
 import { ProductApiRequestFactory, ProductApiResponseProcessor} from "../apis/ProductApi";
 
+export interface ProductApiAdjustInventoryUsingPOSTRequest {
+    /**
+     * product_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof ProductApiadjustInventoryUsingPOST
+     */
+    productId: string
+    /**
+     * updateProductInventoryRequest
+     * @type UpdateProductInventoryRequest
+     * @memberof ProductApiadjustInventoryUsingPOST
+     */
+    updateProductInventoryRequest: UpdateProductInventoryRequest
+}
+
 export interface ProductApiCreateProductUsingPOST1Request {
     /**
      * createProductRequest
@@ -8428,6 +9253,24 @@ export class ObjectProductApi {
 
     public constructor(configuration: Configuration, requestFactory?: ProductApiRequestFactory, responseProcessor?: ProductApiResponseProcessor) {
         this.api = new ObservableProductApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param param the request object
+     */
+    public adjustInventoryUsingPOSTWithHttpInfo(param: ProductApiAdjustInventoryUsingPOSTRequest, options?: Configuration): Promise<HttpInfo<RestV2Product>> {
+        return this.api.adjustInventoryUsingPOSTWithHttpInfo(param.productId, param.updateProductInventoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Increase or decrease the quantity of the Product
+     * Adjust Inventory of a Product
+     * @param param the request object
+     */
+    public adjustInventoryUsingPOST(param: ProductApiAdjustInventoryUsingPOSTRequest, options?: Configuration): Promise<RestV2Product> {
+        return this.api.adjustInventoryUsingPOST(param.productId, param.updateProductInventoryRequest,  options).toPromise();
     }
 
     /**

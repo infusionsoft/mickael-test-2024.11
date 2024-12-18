@@ -577,7 +577,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -633,7 +633,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Accepted |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -689,7 +689,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -1654,7 +1654,7 @@ const request: AffiliateApiUpdateAffiliateCustomFieldUsingPATCHRequest = {
       },
     ],
   },
-    // An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "group_id",
   ],
@@ -1671,7 +1671,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type

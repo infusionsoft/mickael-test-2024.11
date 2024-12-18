@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **number_of_payments** | **int** |  | [optional]
 **order_item_taxes** | [**\Com\Keap\Sdk\Core\Model\OrderItemTax[]**](OrderItemTax.md) |  | [optional]
 **price** | **float** |  | [optional]
-**product** | [**\Com\Keap\Sdk\Core\Model\RestProduct**](RestProduct.md) |  | [optional]
+**product** | [**\Com\Keap\Sdk\Core\Model\OrderItemProduct**](OrderItemProduct.md) |  | [optional]
 **quantity** | **int** |  | [optional]
 **special** | [**\Com\Keap\Sdk\Core\Model\Discount**](Discount.md) |  | [optional]
 **subscription** | [**\Com\Keap\Sdk\Core\Model\RestV2Subscription**](RestV2Subscription.md) |  | [optional]

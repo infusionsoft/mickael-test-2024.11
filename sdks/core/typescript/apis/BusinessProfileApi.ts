@@ -43,7 +43,7 @@ export class BusinessProfileApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Updates Business Profile information.
      * Update Business Profile
-     * @param updateMask An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * @param patchBusinessProfileRequest businessProfile
      */
     public async patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<RequestContext> {

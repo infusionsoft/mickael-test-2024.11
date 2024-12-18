@@ -362,7 +362,7 @@ let contactId = "contactId_example"; // String | contact_id
 let noteId = "noteId_example"; // String | note_id
 let updateNoteRequest = new KeapCoreServiceCoreSdk.UpdateNoteRequest(); // UpdateNoteRequest | updateNoteRequest
 let opts = {
-  'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
 apiInstance.updateNoteUsingPATCH(contactId, noteId, updateNoteRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
  **contactId** | **String**| contact_id | 
  **noteId** | **String**| note_id | 
  **updateNoteRequest** | [**UpdateNoteRequest**](UpdateNoteRequest.md)| updateNoteRequest | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 
@@ -413,7 +413,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.NoteApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
 let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
-  'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
 apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
  **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 

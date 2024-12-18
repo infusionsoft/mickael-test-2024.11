@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 *CategoryDiscountApi* | [**createDiscountUsingPOST**](docs/Api/CategoryDiscountApi.md#creatediscountusingpost) | **POST** /v2/discounts/productCategories | Create a Category Discount
 *CategoryDiscountApi* | [**deleteDiscountUsingDELETE**](docs/Api/CategoryDiscountApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 *CategoryDiscountApi* | [**getDiscountUsingGET**](docs/Api/CategoryDiscountApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+*CategoryDiscountApi* | [**listCategoryDiscountsUsingGET**](docs/Api/CategoryDiscountApi.md#listcategorydiscountsusingget) | **GET** /v2/discounts/productCategories | List Category Discounts
 *CategoryDiscountApi* | [**updateDiscountUsingPATCH**](docs/Api/CategoryDiscountApi.md#updatediscountusingpatch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 *CompanyApi* | [**createCompanyUsingPOST1**](docs/Api/CompanyApi.md#createcompanyusingpost1) | **POST** /v2/companies | Create a Company
 *CompanyApi* | [**deleteCompanyUsingDELETE**](docs/Api/CompanyApi.md#deletecompanyusingdelete) | **DELETE** /v2/companies/{company_id} | Delete a Company
@@ -147,11 +148,21 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**sendEmailUsingPOST1**](docs/Api/EmailApi.md#sendemailusingpost1) | **POST** /v2/emails:send | Send an Email
 *EmailAddressApi* | [**getEmailAddressStatusUsingGET**](docs/Api/EmailAddressApi.md#getemailaddressstatususingget) | **GET** /v2/emailAddresses/{email} | Retrieve an Email Address status
 *EmailAddressApi* | [**updateEmailAddressOptStatusUsingPUT**](docs/Api/EmailAddressApi.md#updateemailaddressoptstatususingput) | **PUT** /v2/emailAddresses/{email} | Update an Email Address opt-in status
+*FilesApi* | [**createFileUsingPOST1**](docs/Api/FilesApi.md#createfileusingpost1) | **POST** /v2/files | Create a file
+*FilesApi* | [**deleteFileUsingDELETE1**](docs/Api/FilesApi.md#deletefileusingdelete1) | **DELETE** /v2/files/{file_id} | Delete a file
+*FilesApi* | [**getFileDataUsingGET**](docs/Api/FilesApi.md#getfiledatausingget) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
+*FilesApi* | [**getFileUsingGET1**](docs/Api/FilesApi.md#getfileusingget1) | **GET** /v2/files/{file_id} | Retrieve a file
+*FilesApi* | [**listFilesUsingGET1**](docs/Api/FilesApi.md#listfilesusingget1) | **GET** /v2/files | List all files
+*FilesApi* | [**updateFileUsingPATCH**](docs/Api/FilesApi.md#updatefileusingpatch) | **PATCH** /v2/files/{file_id} | Update a file
 *FreeTrialDiscountApi* | [**deleteDiscountUsingDELETE1**](docs/Api/FreeTrialDiscountApi.md#deletediscountusingdelete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 *FunnelIntegrationApi* | [**createFunnelIntegrationUsingPOST**](docs/Api/FunnelIntegrationApi.md#createfunnelintegrationusingpost) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 *FunnelIntegrationApi* | [**createIntegrationTriggerEventUsingPOST**](docs/Api/FunnelIntegrationApi.md#createintegrationtriggereventusingpost) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
 *FunnelIntegrationApi* | [**deleteFunnelIntegrationUsingPOST**](docs/Api/FunnelIntegrationApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
 *LandingPagesApi* | [**listLandingPagesUsingGET**](docs/Api/LandingPagesApi.md#listlandingpagesusingget) | **GET** /v2/landingpages | List Landing Pages
+*LeadScoreApi* | [**getLeadScoreDetailsUsingGET**](docs/Api/LeadScoreApi.md#getleadscoredetailsusingget) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
+*LeadSourceCategoriesApi* | [**createLeadSourceCategoryUsingPOST**](docs/Api/LeadSourceCategoriesApi.md#createleadsourcecategoryusingpost) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
+*LeadSourceCategoriesApi* | [**deleteLeadSourceCategoryUsingDELETE**](docs/Api/LeadSourceCategoriesApi.md#deleteleadsourcecategoryusingdelete) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
+*LeadSourceCategoriesApi* | [**getLeadSourceCategoryUsingGET**](docs/Api/LeadSourceCategoriesApi.md#getleadsourcecategoryusingget) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
 *LeadSourcesApi* | [**createLeadSourceUsingPOST**](docs/Api/LeadSourcesApi.md#createleadsourceusingpost) | **POST** /v2/leadsources | Create a Lead Source
 *LeadSourcesApi* | [**listLeadSourcesUsingGET**](docs/Api/LeadSourcesApi.md#listleadsourcesusingget) | **GET** /v2/leadsources | List Lead Sources
 *LocaleApi* | [**listCountriesUsingGET2**](docs/Api/LocaleApi.md#listcountriesusingget2) | **GET** /v2/locales/countries | List Countries
@@ -198,6 +209,7 @@ Class | Method | HTTP request | Description
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOST**](docs/Api/PaymentMethodConfigApi.md#createpaymentmethodconfigusingpost) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
 *PreReleaseApi* | [**addAffiliateToProgramUsingPOST**](docs/Api/PreReleaseApi.md#addaffiliatetoprogramusingpost) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 *PreReleaseApi* | [**addCommissionProgramUsingPOST**](docs/Api/PreReleaseApi.md#addcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
+*PreReleaseApi* | [**adjustInventoryUsingPOST**](docs/Api/PreReleaseApi.md#adjustinventoryusingpost) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 *PreReleaseApi* | [**assignProductCommissionProgramUsingPOST**](docs/Api/PreReleaseApi.md#assignproductcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
 *PreReleaseApi* | [**assignSubscriptionCommissionProgramUsingPOST**](docs/Api/PreReleaseApi.md#assignsubscriptioncommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
 *PreReleaseApi* | [**cancelSubscriptionUsingPOST**](docs/Api/PreReleaseApi.md#cancelsubscriptionusingpost) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
@@ -205,8 +217,10 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**createDefaultCommissionProgramUsingPOST**](docs/Api/PreReleaseApi.md#createdefaultcommissionprogramusingpost) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
 *PreReleaseApi* | [**createDiscountUsingPOST**](docs/Api/PreReleaseApi.md#creatediscountusingpost) | **POST** /v2/discounts/productCategories | Create a Category Discount
 *PreReleaseApi* | [**createDiscountUsingPOST1**](docs/Api/PreReleaseApi.md#creatediscountusingpost1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
+*PreReleaseApi* | [**createFileUsingPOST1**](docs/Api/PreReleaseApi.md#createfileusingpost1) | **POST** /v2/files | Create a file
 *PreReleaseApi* | [**createFunnelIntegrationUsingPOST**](docs/Api/PreReleaseApi.md#createfunnelintegrationusingpost) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 *PreReleaseApi* | [**createIntegrationTriggerEventUsingPOST**](docs/Api/PreReleaseApi.md#createintegrationtriggereventusingpost) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+*PreReleaseApi* | [**createLeadSourceCategoryUsingPOST**](docs/Api/PreReleaseApi.md#createleadsourcecategoryusingpost) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
 *PreReleaseApi* | [**createLeadSourceUsingPOST**](docs/Api/PreReleaseApi.md#createleadsourceusingpost) | **POST** /v2/leadsources | Create a Lead Source
 *PreReleaseApi* | [**createNoteCustomFieldUsingPOST1**](docs/Api/PreReleaseApi.md#createnotecustomfieldusingpost1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 *PreReleaseApi* | [**createOpportunityCustomFieldsUsingPOST**](docs/Api/PreReleaseApi.md#createopportunitycustomfieldsusingpost) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
@@ -228,7 +242,9 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**deleteDiscountUsingDELETE**](docs/Api/PreReleaseApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 *PreReleaseApi* | [**deleteDiscountUsingDELETE1**](docs/Api/PreReleaseApi.md#deletediscountusingdelete1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 *PreReleaseApi* | [**deleteDiscountUsingDELETE2**](docs/Api/PreReleaseApi.md#deletediscountusingdelete2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
+*PreReleaseApi* | [**deleteFileUsingDELETE1**](docs/Api/PreReleaseApi.md#deletefileusingdelete1) | **DELETE** /v2/files/{file_id} | Delete a file
 *PreReleaseApi* | [**deleteFunnelIntegrationUsingPOST**](docs/Api/PreReleaseApi.md#deletefunnelintegrationusingpost) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+*PreReleaseApi* | [**deleteLeadSourceCategoryUsingDELETE**](docs/Api/PreReleaseApi.md#deleteleadsourcecategoryusingdelete) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
 *PreReleaseApi* | [**deleteOpportunityStageUsingDELETE**](docs/Api/PreReleaseApi.md#deleteopportunitystageusingdelete) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 *PreReleaseApi* | [**deleteOpportunityUsingDELETE**](docs/Api/PreReleaseApi.md#deleteopportunityusingdelete) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
 *PreReleaseApi* | [**deleteOrderCustomFieldUsingDELETE**](docs/Api/PreReleaseApi.md#deleteordercustomfieldusingdelete) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
@@ -245,6 +261,10 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**getContactsBySearchTermUsingGET**](docs/Api/PreReleaseApi.md#getcontactsbysearchtermusingget) | **GET** /v2/contacts:search | Search for Contacts
 *PreReleaseApi* | [**getDiscountUsingGET**](docs/Api/PreReleaseApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 *PreReleaseApi* | [**getDiscountUsingGET1**](docs/Api/PreReleaseApi.md#getdiscountusingget1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
+*PreReleaseApi* | [**getFileDataUsingGET**](docs/Api/PreReleaseApi.md#getfiledatausingget) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
+*PreReleaseApi* | [**getFileUsingGET1**](docs/Api/PreReleaseApi.md#getfileusingget1) | **GET** /v2/files/{file_id} | Retrieve a file
+*PreReleaseApi* | [**getLeadScoreDetailsUsingGET**](docs/Api/PreReleaseApi.md#getleadscoredetailsusingget) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
+*PreReleaseApi* | [**getLeadSourceCategoryUsingGET**](docs/Api/PreReleaseApi.md#getleadsourcecategoryusingget) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
 *PreReleaseApi* | [**getOpportunityStageUsingGET**](docs/Api/PreReleaseApi.md#getopportunitystageusingget) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 *PreReleaseApi* | [**getOpportunityUsingGET1**](docs/Api/PreReleaseApi.md#getopportunityusingget1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 *PreReleaseApi* | [**getOrderTotalDiscountUsingGET**](docs/Api/PreReleaseApi.md#getordertotaldiscountusingget) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
@@ -257,8 +277,10 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**getUserSignatureUsingGET1**](docs/Api/PreReleaseApi.md#getusersignatureusingget1) | **GET** /v2/users/{user_id}/signature | Get User email signature
 *PreReleaseApi* | [**listAffiliateCommissionProgramsUsingGET**](docs/Api/PreReleaseApi.md#listaffiliatecommissionprogramsusingget) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 *PreReleaseApi* | [**listAffiliateLinksUsingGET**](docs/Api/PreReleaseApi.md#listaffiliatelinksusingget) | **GET** /v2/affiliates/redirects | List Affiliate Links
+*PreReleaseApi* | [**listCategoryDiscountsUsingGET**](docs/Api/PreReleaseApi.md#listcategorydiscountsusingget) | **GET** /v2/discounts/productCategories | List Category Discounts
 *PreReleaseApi* | [**listCountriesUsingGET2**](docs/Api/PreReleaseApi.md#listcountriesusingget2) | **GET** /v2/locales/countries | List Countries
 *PreReleaseApi* | [**listDiscountsUsingGET**](docs/Api/PreReleaseApi.md#listdiscountsusingget) | **GET** /v2/discounts/shipping | List all Shipping Discounts
+*PreReleaseApi* | [**listFilesUsingGET1**](docs/Api/PreReleaseApi.md#listfilesusingget1) | **GET** /v2/files | List all files
 *PreReleaseApi* | [**listLandingPagesUsingGET**](docs/Api/PreReleaseApi.md#listlandingpagesusingget) | **GET** /v2/landingpages | List Landing Pages
 *PreReleaseApi* | [**listLeadSourcesUsingGET**](docs/Api/PreReleaseApi.md#listleadsourcesusingget) | **GET** /v2/leadsources | List Lead Sources
 *PreReleaseApi* | [**listMerchantsUsingGET**](docs/Api/PreReleaseApi.md#listmerchantsusingget) | **GET** /v2/merchants | List Merchant accounts
@@ -291,6 +313,7 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**updateAffiliateCustomFieldUsingPATCH**](docs/Api/PreReleaseApi.md#updateaffiliatecustomfieldusingpatch) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 *PreReleaseApi* | [**updateDiscountUsingPATCH**](docs/Api/PreReleaseApi.md#updatediscountusingpatch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 *PreReleaseApi* | [**updateDiscountUsingPATCH1**](docs/Api/PreReleaseApi.md#updatediscountusingpatch1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
+*PreReleaseApi* | [**updateFileUsingPATCH**](docs/Api/PreReleaseApi.md#updatefileusingpatch) | **PATCH** /v2/files/{file_id} | Update a file
 *PreReleaseApi* | [**updateNotesCustomFieldUsingPATCH**](docs/Api/PreReleaseApi.md#updatenotescustomfieldusingpatch) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 *PreReleaseApi* | [**updateOpportunityCustomFieldUsingPATCH**](docs/Api/PreReleaseApi.md#updateopportunitycustomfieldusingpatch) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
 *PreReleaseApi* | [**updateOpportunityStageUsingPATCH**](docs/Api/PreReleaseApi.md#updateopportunitystageusingpatch) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
@@ -300,6 +323,7 @@ Class | Method | HTTP request | Description
 *PreReleaseApi* | [**updateRedirectLinkUsingPATCH**](docs/Api/PreReleaseApi.md#updateredirectlinkusingpatch) | **PATCH** /v2/affiliates/redirects/{redirect_id} | Update an Affiliate Link
 *PreReleaseApi* | [**updateSubscriptionCustomFieldUsingPATCH**](docs/Api/PreReleaseApi.md#updatesubscriptioncustomfieldusingpatch) | **PATCH** /v2/subscriptions/model/customFields/{custom_field_id} | Update a Subscription&#39;s Custom Field
 *PreReleaseApi* | [**updateTaskCustomFieldUsingPATCH**](docs/Api/PreReleaseApi.md#updatetaskcustomfieldusingpatch) | **PATCH** /v2/tasks/model/customFields/{custom_field_id} | Update a Task&#39;s Custom Field
+*ProductApi* | [**adjustInventoryUsingPOST**](docs/Api/ProductApi.md#adjustinventoryusingpost) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 *ProductApi* | [**createProductUsingPOST1**](docs/Api/ProductApi.md#createproductusingpost1) | **POST** /v2/products | Create a Product
 *ProductApi* | [**deleteProductUsingDELETE1**](docs/Api/ProductApi.md#deleteproductusingdelete1) | **DELETE** /v2/products/{product_id} | Delete a Product
 *ProductApi* | [**getProductUsingGET**](docs/Api/ProductApi.md#getproductusingget) | **GET** /v2/products/{product_id} | Get a Product
@@ -425,6 +449,7 @@ Class | Method | HTTP request | Description
 - [CreateDefaultCommissionProgramRequest](docs/Model/CreateDefaultCommissionProgramRequest.md)
 - [CreateEmailSentRequest](docs/Model/CreateEmailSentRequest.md)
 - [CreateEmailsSentRequest](docs/Model/CreateEmailsSentRequest.md)
+- [CreateFileRequest](docs/Model/CreateFileRequest.md)
 - [CreateFunnelIntegrationRequest](docs/Model/CreateFunnelIntegrationRequest.md)
 - [CreateFunnelIntegrationTriggerEvents](docs/Model/CreateFunnelIntegrationTriggerEvents.md)
 - [CreateLeadSourceRequest](docs/Model/CreateLeadSourceRequest.md)
@@ -447,6 +472,7 @@ Class | Method | HTTP request | Description
 - [CreateSubscriptionV2](docs/Model/CreateSubscriptionV2.md)
 - [CreateTaskRequest](docs/Model/CreateTaskRequest.md)
 - [CreateUpdateDiscountRequest](docs/Model/CreateUpdateDiscountRequest.md)
+- [CreateUpdateLeadSourceCategoryRequest](docs/Model/CreateUpdateLeadSourceCategoryRequest.md)
 - [CreateUpdateTagCategoryRequest](docs/Model/CreateUpdateTagCategoryRequest.md)
 - [CreateUpdateTagRequest](docs/Model/CreateUpdateTagRequest.md)
 - [CreateUserRequestV2](docs/Model/CreateUserRequestV2.md)
@@ -471,6 +497,7 @@ Class | Method | HTTP request | Description
 - [EmailsSentList](docs/Model/EmailsSentList.md)
 - [Error](docs/Model/Error.md)
 - [FaxNumber](docs/Model/FaxNumber.md)
+- [FileMetadata](docs/Model/FileMetadata.md)
 - [FunnelIntegrationAction](docs/Model/FunnelIntegrationAction.md)
 - [FunnelIntegrationHttpRequest](docs/Model/FunnelIntegrationHttpRequest.md)
 - [FunnelIntegrationSchemaField](docs/Model/FunnelIntegrationSchemaField.md)
@@ -488,6 +515,7 @@ Class | Method | HTTP request | Description
 - [InvoiceOrderPayment](docs/Model/InvoiceOrderPayment.md)
 - [Item](docs/Model/Item.md)
 - [LandingPage](docs/Model/LandingPage.md)
+- [LeadScore](docs/Model/LeadScore.md)
 - [LeadSource](docs/Model/LeadSource.md)
 - [LeadSourceCategory](docs/Model/LeadSourceCategory.md)
 - [Link](docs/Model/Link.md)
@@ -501,11 +529,13 @@ Class | Method | HTTP request | Description
 - [ListAutomationResponse](docs/Model/ListAutomationResponse.md)
 - [ListBasicContactResponse](docs/Model/ListBasicContactResponse.md)
 - [ListCampaignsResponse](docs/Model/ListCampaignsResponse.md)
+- [ListCategoryDiscountsResponse](docs/Model/ListCategoryDiscountsResponse.md)
 - [ListCompaniesResponse](docs/Model/ListCompaniesResponse.md)
 - [ListContactLinkTypesResponse](docs/Model/ListContactLinkTypesResponse.md)
 - [ListContactLinksResponse](docs/Model/ListContactLinksResponse.md)
 - [ListContactsResponse](docs/Model/ListContactsResponse.md)
 - [ListCountriesResponse](docs/Model/ListCountriesResponse.md)
+- [ListFilesResponse](docs/Model/ListFilesResponse.md)
 - [ListLandingPagesResponse](docs/Model/ListLandingPagesResponse.md)
 - [ListLeadSourcesResponse](docs/Model/ListLeadSourcesResponse.md)
 - [ListNoteTemplateResponse](docs/Model/ListNoteTemplateResponse.md)
@@ -534,6 +564,7 @@ Class | Method | HTTP request | Description
 - [ObjectModel](docs/Model/ObjectModel.md)
 - [OpportunityContact](docs/Model/OpportunityContact.md)
 - [OpportunityStage](docs/Model/OpportunityStage.md)
+- [OrderItemProduct](docs/Model/OrderItemProduct.md)
 - [OrderItemTax](docs/Model/OrderItemTax.md)
 - [OrderTotalDiscount](docs/Model/OrderTotalDiscount.md)
 - [Origin](docs/Model/Origin.md)
@@ -555,6 +586,7 @@ Class | Method | HTTP request | Description
 - [ProductCommission](docs/Model/ProductCommission.md)
 - [ProductCommissionProgram](docs/Model/ProductCommissionProgram.md)
 - [ProductFixedOption](docs/Model/ProductFixedOption.md)
+- [ProductInventory](docs/Model/ProductInventory.md)
 - [ProductOptions](docs/Model/ProductOptions.md)
 - [ProductVariableSetting](docs/Model/ProductVariableSetting.md)
 - [Provinces](docs/Model/Provinces.md)
@@ -570,7 +602,6 @@ Class | Method | HTTP request | Description
 - [RestOpportunityStage](docs/Model/RestOpportunityStage.md)
 - [RestPaymentGateway](docs/Model/RestPaymentGateway.md)
 - [RestPaymentMethod](docs/Model/RestPaymentMethod.md)
-- [RestProduct](docs/Model/RestProduct.md)
 - [RestProductOption](docs/Model/RestProductOption.md)
 - [RestProductOptionValue](docs/Model/RestProductOptionValue.md)
 - [RestSubscriptionPlan](docs/Model/RestSubscriptionPlan.md)
@@ -602,11 +633,13 @@ Class | Method | HTTP request | Description
 - [UpdateAutomationCategoryRequest](docs/Model/UpdateAutomationCategoryRequest.md)
 - [UpdateCustomFieldMetaDataRequest](docs/Model/UpdateCustomFieldMetaDataRequest.md)
 - [UpdateEmailAddress](docs/Model/UpdateEmailAddress.md)
+- [UpdateFileRequest](docs/Model/UpdateFileRequest.md)
 - [UpdateNoteRequest](docs/Model/UpdateNoteRequest.md)
 - [UpdateNoteResponse](docs/Model/UpdateNoteResponse.md)
 - [UpdateOpportunityStageChecklistItem](docs/Model/UpdateOpportunityStageChecklistItem.md)
 - [UpdateOpportunityStageRequest](docs/Model/UpdateOpportunityStageRequest.md)
 - [UpdateOrderTotalDiscountRequest](docs/Model/UpdateOrderTotalDiscountRequest.md)
+- [UpdateProductInventoryRequest](docs/Model/UpdateProductInventoryRequest.md)
 - [UpdateShippingDiscountRequest](docs/Model/UpdateShippingDiscountRequest.md)
 - [UpdateTagCategoryResponse](docs/Model/UpdateTagCategoryResponse.md)
 - [UpdateTagResponse](docs/Model/UpdateTagResponse.md)
@@ -640,7 +673,7 @@ api@keap.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.70.0.751586-hf-202412120145`
+- API version: `2.70.0.752995`
     - Package version: `0.0.48`
     - Generator version: `7.10.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

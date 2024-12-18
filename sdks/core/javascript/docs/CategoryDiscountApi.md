@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createDiscountUsingPOST**](CategoryDiscountApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
 [**deleteDiscountUsingDELETE**](CategoryDiscountApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**getDiscountUsingGET**](CategoryDiscountApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**listCategoryDiscountsUsingGET**](CategoryDiscountApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts
 [**updateDiscountUsingPATCH**](CategoryDiscountApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 
 
@@ -132,6 +133,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listCategoryDiscountsUsingGET
+
+> ListCategoryDiscountsResponse listCategoryDiscountsUsingGET(opts)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.CategoryDiscountApi();
+let opts = {
+  'filter': "filter_example", // String | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4`
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listCategoryDiscountsUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
 
 ### Authorization
 

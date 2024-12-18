@@ -709,7 +709,7 @@ namespace Example
             var contactId = "contactId_example";  // string | contact_id
             var noteId = "noteId_example";  // string | note_id
             var updateNoteRequest = new UpdateNoteRequest(); // UpdateNoteRequest | updateNoteRequest
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
@@ -755,7 +755,7 @@ catch (ApiException e)
 | **contactId** | **string** | contact_id |  |
 | **noteId** | **string** | note_id |  |
 | **updateNoteRequest** | [**UpdateNoteRequest**](UpdateNoteRequest.md) | updateNoteRequest |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
 
@@ -808,7 +808,7 @@ namespace Example
             var apiInstance = new NoteApi(config);
             var customFieldId = "customFieldId_example";  // string | custom_field_id
             var updateCustomFieldMetaDataRequest = new UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
-            var updateMask = new List<string>?(); // List<string>? | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
 
             try
             {
@@ -853,7 +853,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **customFieldId** | **string** | custom_field_id |  |
 | **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md) | request |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
 
 ### Return type
 

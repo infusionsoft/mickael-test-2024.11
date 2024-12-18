@@ -541,7 +541,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     contact_id = 'contact_id_example' # str | contact_id
     note_id = 'note_id_example' # str | note_id
     update_note_request = keap_sdk_core_client.UpdateNoteRequest() # UpdateNoteRequest | updateNoteRequest
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Note
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
  **contact_id** | **str**| contact_id | 
  **note_id** | **str**| note_id | 
  **update_note_request** | [**UpdateNoteRequest**](UpdateNoteRequest.md)| updateNoteRequest | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 
@@ -616,7 +616,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.NoteApi(api_client)
     custom_field_id = 'custom_field_id_example' # str | custom_field_id
     update_custom_field_meta_data_request = keap_sdk_core_client.UpdateCustomFieldMetaDataRequest() # UpdateCustomFieldMetaDataRequest | request
-    update_mask = ['update_mask_example'] # List[str] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
         # Update a Custom Field
@@ -635,7 +635,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_field_id** | **str**| custom_field_id | 
  **update_custom_field_meta_data_request** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
- **update_mask** | [**List[str]**](str.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 

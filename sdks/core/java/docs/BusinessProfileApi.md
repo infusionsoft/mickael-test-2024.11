@@ -167,7 +167,7 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         PatchBusinessProfileRequest patchBusinessProfileRequest = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
         try {
             GetBusinessProfileResponse result = apiInstance.patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest);
@@ -188,7 +188,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
 | **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
@@ -238,7 +238,7 @@ public class Example {
         defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped.
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
         PatchBusinessProfileRequest patchBusinessProfileRequest = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
         try {
             ApiResponse<GetBusinessProfileResponse> response = apiInstance.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
@@ -261,7 +261,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
 | **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type

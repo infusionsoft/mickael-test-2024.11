@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**nextPageToken** | **String** |  |  [optional] |
-|**products** | [**List&lt;RestProduct&gt;**](RestProduct.md) |  |  [optional] |
+|**products** | [**List&lt;RestV2Product&gt;**](RestV2Product.md) |  |  [optional] |
 
 
 ## Implemented Interfaces

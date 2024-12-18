@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addAffiliateToProgramUsingPOST**](PreReleaseApi.md#addAffiliateToProgramUsingPOST) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 [**addCommissionProgramUsingPOST**](PreReleaseApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
+[**adjustInventoryUsingPOST**](PreReleaseApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 [**assignProductCommissionProgramUsingPOST**](PreReleaseApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
 [**assignSubscriptionCommissionProgramUsingPOST**](PreReleaseApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
 [**cancelSubscriptionUsingPOST**](PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
@@ -13,8 +14,10 @@ Method | HTTP request | Description
 [**createDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
 [**createDiscountUsingPOST**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
 [**createDiscountUsingPOST1**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
+[**createFileUsingPOST1**](PreReleaseApi.md#createFileUsingPOST1) | **POST** /v2/files | Create a file
 [**createFunnelIntegrationUsingPOST**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 [**createIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+[**createLeadSourceCategoryUsingPOST**](PreReleaseApi.md#createLeadSourceCategoryUsingPOST) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
 [**createLeadSourceUsingPOST**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
 [**createNoteCustomFieldUsingPOST1**](PreReleaseApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 [**createOpportunityCustomFieldsUsingPOST**](PreReleaseApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
@@ -36,7 +39,9 @@ Method | HTTP request | Description
 [**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 [**deleteDiscountUsingDELETE2**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
+[**deleteFileUsingDELETE1**](PreReleaseApi.md#deleteFileUsingDELETE1) | **DELETE** /v2/files/{file_id} | Delete a file
 [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+[**deleteLeadSourceCategoryUsingDELETE**](PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETE) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
 [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
 [**deleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order\&#39;s Custom Field
@@ -53,6 +58,10 @@ Method | HTTP request | Description
 [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 [**getDiscountUsingGET1**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
+[**getFileDataUsingGET**](PreReleaseApi.md#getFileDataUsingGET) | **GET** /v2/files/{file_id}:data | Retrieve a file\&#39;s data
+[**getFileUsingGET1**](PreReleaseApi.md#getFileUsingGET1) | **GET** /v2/files/{file_id} | Retrieve a file
+[**getLeadScoreDetailsUsingGET**](PreReleaseApi.md#getLeadScoreDetailsUsingGET) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
+[**getLeadSourceCategoryUsingGET**](PreReleaseApi.md#getLeadSourceCategoryUsingGET) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
 [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 [**getOrderTotalDiscountUsingGET**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
@@ -65,8 +74,10 @@ Method | HTTP request | Description
 [**getUserSignatureUsingGET1**](PreReleaseApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature
 [**listAffiliateCommissionProgramsUsingGET**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 [**listAffiliateLinksUsingGET**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
+[**listCategoryDiscountsUsingGET**](PreReleaseApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts
 [**listCountriesUsingGET2**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
 [**listDiscountsUsingGET**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts
+[**listFilesUsingGET1**](PreReleaseApi.md#listFilesUsingGET1) | **GET** /v2/files | List all files
 [**listLandingPagesUsingGET**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
 [**listLeadSourcesUsingGET**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
 [**listMerchantsUsingGET**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts
@@ -99,6 +110,7 @@ Method | HTTP request | Description
 [**updateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateDiscountUsingPATCH**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 [**updateDiscountUsingPATCH1**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
+[**updateFileUsingPATCH**](PreReleaseApi.md#updateFileUsingPATCH) | **PATCH** /v2/files/{file_id} | Update a file
 [**updateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity\&#39;s Custom Field
 [**updateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
@@ -224,6 +236,67 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **adjustInventoryUsingPOST**
+> RestV2Product adjustInventoryUsingPOST(updateProductInventoryRequest)
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiAdjustInventoryUsingPOSTRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiAdjustInventoryUsingPOSTRequest = {
+    // product_id
+  productId: "product_id_example",
+    // updateProductInventoryRequest
+  updateProductInventoryRequest: {
+    quantity: 1,
+    type: "INCREASE",
+  },
+};
+
+const data = await apiInstance.adjustInventoryUsingPOST(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateProductInventoryRequest** | **UpdateProductInventoryRequest**| updateProductInventoryRequest |
+ **productId** | [**string**] | product_id | defaults to undefined
+
+
+### Return type
+
+**RestV2Product**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 
@@ -695,6 +768,66 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **createFileUsingPOST1**
+> FileMetadata createFileUsingPOST1(createFileRequest)
+
+Creates a file and uploads it
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiCreateFileUsingPOST1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiCreateFileUsingPOST1Request = {
+    // request
+  createFileRequest: {
+    contactId: "contactId_example",
+    fileAssociation: "CONTACT",
+    fileName: "fileName_example",
+    isPublic: true,
+  },
+};
+
+const data = await apiInstance.createFileUsingPOST1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createFileRequest** | **CreateFileRequest**| request |
+
+
+### Return type
+
+**FileMetadata**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **createFunnelIntegrationUsingPOST**
 > void createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
 
@@ -849,6 +982,64 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **createLeadSourceCategoryUsingPOST**
+> LeadSourceCategory createLeadSourceCategoryUsingPOST()
+
+Create a Lead Source Category.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiCreateLeadSourceCategoryUsingPOSTRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiCreateLeadSourceCategoryUsingPOSTRequest = {
+    // leadSourceCategory (optional)
+  createUpdateLeadSourceCategoryRequest: {
+    description: "description_example",
+    name: "name_example",
+  },
+};
+
+const data = await apiInstance.createLeadSourceCategoryUsingPOST(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createUpdateLeadSourceCategoryRequest** | **CreateUpdateLeadSourceCategoryRequest**| leadSourceCategory |
+
+
+### Return type
+
+**LeadSourceCategory**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **createLeadSourceUsingPOST**
 > LeadSource createLeadSourceUsingPOST()
 
@@ -868,6 +1059,7 @@ const request: PreReleaseApiCreateLeadSourceUsingPOSTRequest = {
     // leadsource (optional)
   createLeadSourceRequest: {
     category: {
+      description: "description_example",
       id: "id_example",
       name: "name_example",
     },
@@ -1994,7 +2186,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -2050,7 +2242,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**202** | Accepted |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -2225,6 +2417,62 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **deleteFileUsingDELETE1**
+> void deleteFileUsingDELETE1()
+
+Deletes a specified file
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteFileUsingDELETE1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteFileUsingDELETE1Request = {
+    // file_id
+  fileId: "file_id_example",
+};
+
+const data = await apiInstance.deleteFileUsingDELETE1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | [**string**] | file_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **deleteFunnelIntegrationUsingPOST**
 > void deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
 
@@ -2287,6 +2535,62 @@ No authorization required
 **200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **deleteLeadSourceCategoryUsingDELETE**
+> void deleteLeadSourceCategoryUsingDELETE()
+
+Deletes the specified Lead Source Category.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiDeleteLeadSourceCategoryUsingDELETERequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiDeleteLeadSourceCategoryUsingDELETERequest = {
+    // category_id
+  categoryId: "category_id_example",
+};
+
+const data = await apiInstance.deleteLeadSourceCategoryUsingDELETE(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categoryId** | [**string**] | category_id | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No Content |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2675,7 +2979,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -3170,6 +3474,230 @@ Name | Type | Description  | Notes
 ### Return type
 
 **ShippingDiscount**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getFileDataUsingGET**
+> string getFileDataUsingGET()
+
+Retrieves a file\'s data
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetFileDataUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetFileDataUsingGETRequest = {
+    // file_id
+  fileId: "file_id_example",
+};
+
+const data = await apiInstance.getFileDataUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | [**string**] | file_id | defaults to undefined
+
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getFileUsingGET1**
+> FileMetadata getFileUsingGET1()
+
+Retrieves a file
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetFileUsingGET1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetFileUsingGET1Request = {
+    // file_id
+  fileId: "file_id_example",
+};
+
+const data = await apiInstance.getFileUsingGET1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | [**string**] | file_id | defaults to undefined
+
+
+### Return type
+
+**FileMetadata**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getLeadScoreDetailsUsingGET**
+> LeadScore getLeadScoreDetailsUsingGET()
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetLeadScoreDetailsUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetLeadScoreDetailsUsingGETRequest = {
+    // contact_id
+  contactId: "contact_id_example",
+};
+
+const data = await apiInstance.getLeadScoreDetailsUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contactId** | [**string**] | contact_id | defaults to undefined
+
+
+### Return type
+
+**LeadScore**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **getLeadSourceCategoryUsingGET**
+> LeadSourceCategory getLeadSourceCategoryUsingGET()
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiGetLeadSourceCategoryUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiGetLeadSourceCategoryUsingGETRequest = {
+    // category_id
+  categoryId: "category_id_example",
+};
+
+const data = await apiInstance.getLeadSourceCategoryUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categoryId** | [**string**] | category_id | defaults to undefined
+
+
+### Return type
+
+**LeadSourceCategory**
 
 ### Authorization
 
@@ -3874,6 +4402,71 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **listCategoryDiscountsUsingGET**
+> ListCategoryDiscountsResponse listCategoryDiscountsUsingGET()
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListCategoryDiscountsUsingGETRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListCategoryDiscountsUsingGETRequest = {
+    // Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4` (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listCategoryDiscountsUsingGET(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**string**] | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListCategoryDiscountsResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **listCountriesUsingGET2**
 > ListCountriesResponse listCountriesUsingGET2()
 
@@ -3971,6 +4564,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 **ListShippingDiscountsResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **listFilesUsingGET1**
+> ListFilesResponse listFilesUsingGET1()
+
+Retrieves all files
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiListFilesUsingGET1Request } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiListFilesUsingGET1Request = {
+    // Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS`  (optional)
+  filter: "filter_example",
+    // Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  (optional)
+  orderBy: "order_by_example",
+    // Total number of items to return per page (optional)
+  pageSize: 0,
+    // Page token (optional)
+  pageToken: "page_token_example",
+};
+
+const data = await apiInstance.listFilesUsingGET1(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**string**] | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60;  | (optional) defaults to undefined
+ **orderBy** | [**string**] | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  | (optional) defaults to undefined
+ **pageSize** | [**number**] | Total number of items to return per page | (optional) defaults to undefined
+ **pageToken** | [**string**] | Page token | (optional) defaults to undefined
+
+
+### Return type
+
+**ListFilesResponse**
 
 ### Authorization
 
@@ -4643,7 +5301,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Created |  -  |
+**200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
 **404** | Not Found |  -  |
@@ -5897,7 +6555,7 @@ const request: PreReleaseApiUpdateAffiliateCustomFieldUsingPATCHRequest = {
       },
     ],
   },
-    // An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "group_id",
   ],
@@ -5914,7 +6572,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type
@@ -6114,6 +6772,73 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **updateFileUsingPATCH**
+> FileMetadata updateFileUsingPATCH(updateFileRequest)
+
+Updates a file
+
+### Example
+
+
+```typescript
+import { createConfiguration, PreReleaseApi } from '';
+import type { PreReleaseApiUpdateFileUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new PreReleaseApi(configuration);
+
+const request: PreReleaseApiUpdateFileUsingPATCHRequest = {
+    // file_id
+  fileId: "file_id_example",
+    // request
+  updateFileRequest: {
+    fileName: "fileName_example",
+    isPublic: true,
+  },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "file",
+  ],
+};
+
+const data = await apiInstance.updateFileUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateFileRequest** | **UpdateFileRequest**| request |
+ **fileId** | [**string**] | file_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**FileMetadata**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **updateNotesCustomFieldUsingPATCH**
 > CustomFieldMetaData updateNotesCustomFieldUsingPATCH(updateCustomFieldMetaDataRequest)
 
@@ -6144,7 +6869,7 @@ const request: PreReleaseApiUpdateNotesCustomFieldUsingPATCHRequest = {
       },
     ],
   },
-    // An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "group_id",
   ],
@@ -6161,7 +6886,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldMetaDataRequest** | **UpdateCustomFieldMetaDataRequest**| request |
  **customFieldId** | [**string**] | custom_field_id | defaults to undefined
- **updateMask** |  | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type

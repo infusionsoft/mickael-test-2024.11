@@ -19,7 +19,7 @@
 |**numberOfPayments** | **Integer** |  |  [optional] |
 |**orderItemTaxes** | [**List&lt;OrderItemTax&gt;**](OrderItemTax.md) |  |  [optional] |
 |**price** | **Double** |  |  [optional] |
-|**product** | [**RestProduct**](RestProduct.md) |  |  [optional] |
+|**product** | [**OrderItemProduct**](OrderItemProduct.md) |  |  [optional] |
 |**quantity** | **Integer** |  |  [optional] |
 |**special** | [**Discount**](Discount.md) |  |  [optional] |
 |**subscription** | [**RestV2Subscription**](RestV2Subscription.md) |  |  [optional] |

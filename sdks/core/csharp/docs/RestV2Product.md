@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **CountryTaxable** | **bool** | If country-based taxes should be applied to this product | [optional] 
 **Description** | **string** | Product long description | [optional] 
 **Id** | **string** | The product ID | [optional] 
+**Inventory** | [**ProductInventory**](ProductInventory.md) |  | [optional] 
 **Name** | **string** | Product name | [optional] 
 **Options** | [**List&lt;ProductOptions&gt;**](ProductOptions.md) | List of product options. Can be empty. | [optional] 
 **Price** | [**CurrencyValue**](CurrencyValue.md) |  | [optional] 

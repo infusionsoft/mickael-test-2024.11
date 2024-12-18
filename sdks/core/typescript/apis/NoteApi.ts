@@ -339,7 +339,7 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
      * @param contactId contact_id
      * @param noteId note_id
      * @param updateNoteRequest updateNoteRequest
-     * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public async updateNoteUsingPATCH(contactId: string, noteId: string, updateNoteRequest: UpdateNoteRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
@@ -406,7 +406,7 @@ export class NoteApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Custom Field
      * @param customFieldId custom_field_id
      * @param updateCustomFieldMetaDataRequest request
-     * @param updateMask An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
     public async updateNotesCustomFieldUsingPATCH(customFieldId: string, updateCustomFieldMetaDataRequest: UpdateCustomFieldMetaDataRequest, updateMask?: Array<string>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;

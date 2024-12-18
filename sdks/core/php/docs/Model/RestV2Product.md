@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **country_taxable** | **bool** | If country-based taxes should be applied to this product | [optional]
 **description** | **string** | Product long description | [optional]
 **id** | **string** | The product ID | [optional]
+**inventory** | [**\Com\Keap\Sdk\Core\Model\ProductInventory**](ProductInventory.md) |  | [optional]
 **name** | **string** | Product name | [optional]
 **options** | [**\Com\Keap\Sdk\Core\Model\ProductOptions[]**](ProductOptions.md) | List of product options. Can be empty. | [optional]
 **price** | [**\Com\Keap\Sdk\Core\Model\CurrencyValue**](CurrencyValue.md) |  | [optional]

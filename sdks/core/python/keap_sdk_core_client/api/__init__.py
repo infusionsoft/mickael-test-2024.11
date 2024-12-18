@@ -11,9 +11,12 @@ from keap_sdk_core_client.api.company_api import CompanyApi
 from keap_sdk_core_client.api.contact_api import ContactApi
 from keap_sdk_core_client.api.email_api import EmailApi
 from keap_sdk_core_client.api.email_address_api import EmailAddressApi
+from keap_sdk_core_client.api.files_api import FilesApi
 from keap_sdk_core_client.api.free_trial_discount_api import FreeTrialDiscountApi
 from keap_sdk_core_client.api.funnel_integration_api import FunnelIntegrationApi
 from keap_sdk_core_client.api.landing_pages_api import LandingPagesApi
+from keap_sdk_core_client.api.lead_score_api import LeadScoreApi
+from keap_sdk_core_client.api.lead_source_categories_api import LeadSourceCategoriesApi
 from keap_sdk_core_client.api.lead_sources_api import LeadSourcesApi
 from keap_sdk_core_client.api.locale_api import LocaleApi
 from keap_sdk_core_client.api.merchant_api import MerchantApi

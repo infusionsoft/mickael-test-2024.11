@@ -73,7 +73,7 @@ const configuration = createConfiguration();
 const apiInstance = new BusinessProfileApi(configuration);
 
 const request: BusinessProfileApiPatchBusinessProfileUsingPATCHRequest = {
-    // An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. (optional)
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
   updateMask: [
     "name",
   ],
@@ -110,7 +110,7 @@ console.log('API called successfully. Returned data:', data);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **patchBusinessProfileRequest** | **PatchBusinessProfileRequest**| businessProfile |
- **updateMask** |  | An optional list of fields to be updated. If set, only the fields provided in the update_mask will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type

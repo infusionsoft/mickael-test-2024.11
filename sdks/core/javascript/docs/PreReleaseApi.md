@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addAffiliateToProgramUsingPOST**](PreReleaseApi.md#addAffiliateToProgramUsingPOST) | **POST** /v2/affiliates/{id}:assignToProgram | Assign Affiliate to Commission program
 [**addCommissionProgramUsingPOST**](PreReleaseApi.md#addCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms | Create an Affiliate Commission Program
+[**adjustInventoryUsingPOST**](PreReleaseApi.md#adjustInventoryUsingPOST) | **POST** /v2/products/{product_id}:adjustInventory | Adjust Inventory of a Product
 [**assignProductCommissionProgramUsingPOST**](PreReleaseApi.md#assignProductCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/productCommissionProgram/{commission_program_id} | Assign a Product Commission Program
 [**assignSubscriptionCommissionProgramUsingPOST**](PreReleaseApi.md#assignSubscriptionCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/subscriptionCommissionProgram/{commission_program_id} | Assign a Subscription Commission Program
 [**cancelSubscriptionUsingPOST**](PreReleaseApi.md#cancelSubscriptionUsingPOST) | **POST** /v2/subscriptions/{subscription_id}:deactivate | Cancel Subscription
@@ -13,8 +14,10 @@ Method | HTTP request | Description
 [**createDefaultCommissionProgramUsingPOST**](PreReleaseApi.md#createDefaultCommissionProgramUsingPOST) | **POST** /v2/affiliates/commissionPrograms/defaultCommissionProgram/{commission_program_id} | Create a Default Commission Program
 [**createDiscountUsingPOST**](PreReleaseApi.md#createDiscountUsingPOST) | **POST** /v2/discounts/productCategories | Create a Category Discount
 [**createDiscountUsingPOST1**](PreReleaseApi.md#createDiscountUsingPOST1) | **POST** /v2/discounts/shipping | Create a Shipping Discount
+[**createFileUsingPOST1**](PreReleaseApi.md#createFileUsingPOST1) | **POST** /v2/files | Create a file
 [**createFunnelIntegrationUsingPOST**](PreReleaseApi.md#createFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration | Create Funnel Integrations into the app.
 [**createIntegrationTriggerEventUsingPOST**](PreReleaseApi.md#createIntegrationTriggerEventUsingPOST) | **POST** /v2/funnelIntegration/trigger | Achieve Funnel Integration Trigger Goal
+[**createLeadSourceCategoryUsingPOST**](PreReleaseApi.md#createLeadSourceCategoryUsingPOST) | **POST** /v2/leadSourceCategories | Create a Lead Source Category
 [**createLeadSourceUsingPOST**](PreReleaseApi.md#createLeadSourceUsingPOST) | **POST** /v2/leadsources | Create a Lead Source
 [**createNoteCustomFieldUsingPOST1**](PreReleaseApi.md#createNoteCustomFieldUsingPOST1) | **POST** /v2/notes/model/customFields | Create a Custom Field
 [**createOpportunityCustomFieldsUsingPOST**](PreReleaseApi.md#createOpportunityCustomFieldsUsingPOST) | **POST** /v2/opportunities/model/customFields | Create an Opportunity Custom Field
@@ -36,7 +39,9 @@ Method | HTTP request | Description
 [**deleteDiscountUsingDELETE**](PreReleaseApi.md#deleteDiscountUsingDELETE) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**deleteDiscountUsingDELETE1**](PreReleaseApi.md#deleteDiscountUsingDELETE1) | **DELETE** /v2/discounts/freeTrials/{discount_id} | Delete a Free Trial Discount
 [**deleteDiscountUsingDELETE2**](PreReleaseApi.md#deleteDiscountUsingDELETE2) | **DELETE** /v2/discounts/shipping/{discount_id} | Delete a Shipping Discount
+[**deleteFileUsingDELETE1**](PreReleaseApi.md#deleteFileUsingDELETE1) | **DELETE** /v2/files/{file_id} | Delete a file
 [**deleteFunnelIntegrationUsingPOST**](PreReleaseApi.md#deleteFunnelIntegrationUsingPOST) | **POST** /v2/funnelIntegration/uninstall | Deletes Funnel Integrations from the app.
+[**deleteLeadSourceCategoryUsingDELETE**](PreReleaseApi.md#deleteLeadSourceCategoryUsingDELETE) | **DELETE** /v2/leadSourceCategories/{category_id} | Delete a Lead Source Category
 [**deleteOpportunityStageUsingDELETE**](PreReleaseApi.md#deleteOpportunityStageUsingDELETE) | **DELETE** /v2/opportunities/stages/{stage_id} | Delete an Opportunity Stage
 [**deleteOpportunityUsingDELETE**](PreReleaseApi.md#deleteOpportunityUsingDELETE) | **DELETE** /v2/opportunities/{opportunity_id} | Delete an Opportunity
 [**deleteOrderCustomFieldUsingDELETE**](PreReleaseApi.md#deleteOrderCustomFieldUsingDELETE) | **DELETE** /v2/orders/model/customFields/{custom_field_id} | Delete an Order&#39;s Custom Field
@@ -53,6 +58,10 @@ Method | HTTP request | Description
 [**getContactsBySearchTermUsingGET**](PreReleaseApi.md#getContactsBySearchTermUsingGET) | **GET** /v2/contacts:search | Search for Contacts
 [**getDiscountUsingGET**](PreReleaseApi.md#getDiscountUsingGET) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
 [**getDiscountUsingGET1**](PreReleaseApi.md#getDiscountUsingGET1) | **GET** /v2/discounts/shipping/{discount_id} | Retrieve a Shipping Discount
+[**getFileDataUsingGET**](PreReleaseApi.md#getFileDataUsingGET) | **GET** /v2/files/{file_id}:data | Retrieve a file&#39;s data
+[**getFileUsingGET1**](PreReleaseApi.md#getFileUsingGET1) | **GET** /v2/files/{file_id} | Retrieve a file
+[**getLeadScoreDetailsUsingGET**](PreReleaseApi.md#getLeadScoreDetailsUsingGET) | **GET** /v2/contact/{contact_id}/leadScore | Retrieve Lead Score of a Contact
+[**getLeadSourceCategoryUsingGET**](PreReleaseApi.md#getLeadSourceCategoryUsingGET) | **GET** /v2/leadSourceCategories/{category_id} | Retrieve a Lead Source Category
 [**getOpportunityStageUsingGET**](PreReleaseApi.md#getOpportunityStageUsingGET) | **GET** /v2/opportunities/stages/{stage_id} | Retrieve an Opportunity Stage
 [**getOpportunityUsingGET1**](PreReleaseApi.md#getOpportunityUsingGET1) | **GET** /v2/opportunities/{opportunity_id} | Retrieve a Opportunity
 [**getOrderTotalDiscountUsingGET**](PreReleaseApi.md#getOrderTotalDiscountUsingGET) | **GET** /v2/discounts/orderTotals/{discount_id} | Retrieve an Order Total Discount
@@ -65,8 +74,10 @@ Method | HTTP request | Description
 [**getUserSignatureUsingGET1**](PreReleaseApi.md#getUserSignatureUsingGET1) | **GET** /v2/users/{user_id}/signature | Get User email signature
 [**listAffiliateCommissionProgramsUsingGET**](PreReleaseApi.md#listAffiliateCommissionProgramsUsingGET) | **GET** /v2/affiliates/commissionPrograms | List Affiliate Commission Programs
 [**listAffiliateLinksUsingGET**](PreReleaseApi.md#listAffiliateLinksUsingGET) | **GET** /v2/affiliates/redirects | List Affiliate Links
+[**listCategoryDiscountsUsingGET**](PreReleaseApi.md#listCategoryDiscountsUsingGET) | **GET** /v2/discounts/productCategories | List Category Discounts
 [**listCountriesUsingGET2**](PreReleaseApi.md#listCountriesUsingGET2) | **GET** /v2/locales/countries | List Countries
 [**listDiscountsUsingGET**](PreReleaseApi.md#listDiscountsUsingGET) | **GET** /v2/discounts/shipping | List all Shipping Discounts
+[**listFilesUsingGET1**](PreReleaseApi.md#listFilesUsingGET1) | **GET** /v2/files | List all files
 [**listLandingPagesUsingGET**](PreReleaseApi.md#listLandingPagesUsingGET) | **GET** /v2/landingpages | List Landing Pages
 [**listLeadSourcesUsingGET**](PreReleaseApi.md#listLeadSourcesUsingGET) | **GET** /v2/leadsources | List Lead Sources
 [**listMerchantsUsingGET**](PreReleaseApi.md#listMerchantsUsingGET) | **GET** /v2/merchants | List Merchant accounts
@@ -99,6 +110,7 @@ Method | HTTP request | Description
 [**updateAffiliateCustomFieldUsingPATCH**](PreReleaseApi.md#updateAffiliateCustomFieldUsingPATCH) | **PATCH** /v2/affiliates/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateDiscountUsingPATCH**](PreReleaseApi.md#updateDiscountUsingPATCH) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 [**updateDiscountUsingPATCH1**](PreReleaseApi.md#updateDiscountUsingPATCH1) | **PATCH** /v2/discounts/shipping/{discount_id} | Update a Shipping Discount
+[**updateFileUsingPATCH**](PreReleaseApi.md#updateFileUsingPATCH) | **PATCH** /v2/files/{file_id} | Update a file
 [**updateNotesCustomFieldUsingPATCH**](PreReleaseApi.md#updateNotesCustomFieldUsingPATCH) | **PATCH** /v2/notes/model/customFields/{custom_field_id} | Update a Custom Field
 [**updateOpportunityCustomFieldUsingPATCH**](PreReleaseApi.md#updateOpportunityCustomFieldUsingPATCH) | **PATCH** /v2/opportunities/model/customFields/{custom_field_id} | Update a Opportunity&#39;s Custom Field
 [**updateOpportunityStageUsingPATCH**](PreReleaseApi.md#updateOpportunityStageUsingPATCH) | **PATCH** /v2/opportunities/stages/{stage_id} | Update an Opportunity Stage
@@ -192,6 +204,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AffiliateCommissionProgramResponse**](AffiliateCommissionProgramResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## adjustInventoryUsingPOST
+
+> RestV2Product adjustInventoryUsingPOST(productId, updateProductInventoryRequest)
+
+Adjust Inventory of a Product
+
+Increase or decrease the quantity of the Product
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let productId = "productId_example"; // String | product_id
+let updateProductInventoryRequest = new KeapCoreServiceCoreSdk.UpdateProductInventoryRequest(); // UpdateProductInventoryRequest | updateProductInventoryRequest
+apiInstance.adjustInventoryUsingPOST(productId, updateProductInventoryRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productId** | **String**| product_id | 
+ **updateProductInventoryRequest** | [**UpdateProductInventoryRequest**](UpdateProductInventoryRequest.md)| updateProductInventoryRequest | 
+
+### Return type
+
+[**RestV2Product**](RestV2Product.md)
 
 ### Authorization
 
@@ -525,6 +583,50 @@ No authorization required
 - **Accept**: application/json
 
 
+## createFileUsingPOST1
+
+> FileMetadata createFileUsingPOST1(createFileRequest)
+
+Create a file
+
+Creates a file and uploads it
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let createFileRequest = new KeapCoreServiceCoreSdk.CreateFileRequest(); // CreateFileRequest | request
+apiInstance.createFileUsingPOST1(createFileRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createFileRequest** | [**CreateFileRequest**](CreateFileRequest.md)| request | 
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+
 ## createFunnelIntegrationUsingPOST
 
 > createFunnelIntegrationUsingPOST(createFunnelIntegrationRequest)
@@ -600,6 +702,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[FunnelIntegrationTriggerResultDTO]**](FunnelIntegrationTriggerResultDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createLeadSourceCategoryUsingPOST
+
+> LeadSourceCategory createLeadSourceCategoryUsingPOST(opts)
+
+Create a Lead Source Category
+
+Create a Lead Source Category.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'createUpdateLeadSourceCategoryRequest': new KeapCoreServiceCoreSdk.CreateUpdateLeadSourceCategoryRequest() // CreateUpdateLeadSourceCategoryRequest | leadSourceCategory
+};
+apiInstance.createLeadSourceCategoryUsingPOST(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createUpdateLeadSourceCategoryRequest** | [**CreateUpdateLeadSourceCategoryRequest**](CreateUpdateLeadSourceCategoryRequest.md)| leadSourceCategory | [optional] 
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
 
 ### Authorization
 
@@ -1547,6 +1695,50 @@ No authorization required
 - **Accept**: application/json
 
 
+## deleteFileUsingDELETE1
+
+> deleteFileUsingDELETE1(fileId)
+
+Delete a file
+
+Deletes a specified file
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let fileId = "fileId_example"; // String | file_id
+apiInstance.deleteFileUsingDELETE1(fileId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | **String**| file_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## deleteFunnelIntegrationUsingPOST
 
 > deleteFunnelIntegrationUsingPOST(deleteFunnelIntegrationRequest)
@@ -1588,6 +1780,50 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## deleteLeadSourceCategoryUsingDELETE
+
+> deleteLeadSourceCategoryUsingDELETE(categoryId)
+
+Delete a Lead Source Category
+
+Deletes the specified Lead Source Category.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let categoryId = "categoryId_example"; // String | category_id
+apiInstance.deleteLeadSourceCategoryUsingDELETE(categoryId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categoryId** | **String**| category_id | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -2301,6 +2537,182 @@ No authorization required
 - **Accept**: application/json
 
 
+## getFileDataUsingGET
+
+> Blob getFileDataUsingGET(fileId)
+
+Retrieve a file&#39;s data
+
+Retrieves a file&#39;s data
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let fileId = "fileId_example"; // String | file_id
+apiInstance.getFileDataUsingGET(fileId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | **String**| file_id | 
+
+### Return type
+
+**Blob**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getFileUsingGET1
+
+> FileMetadata getFileUsingGET1(fileId)
+
+Retrieve a file
+
+Retrieves a file
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let fileId = "fileId_example"; // String | file_id
+apiInstance.getFileUsingGET1(fileId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | **String**| file_id | 
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getLeadScoreDetailsUsingGET
+
+> LeadScore getLeadScoreDetailsUsingGET(contactId)
+
+Retrieve Lead Score of a Contact
+
+Retrieves information about the Lead Score of a Contact
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let contactId = "contactId_example"; // String | contact_id
+apiInstance.getLeadScoreDetailsUsingGET(contactId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contactId** | **String**| contact_id | 
+
+### Return type
+
+[**LeadScore**](LeadScore.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getLeadSourceCategoryUsingGET
+
+> LeadSourceCategory getLeadSourceCategoryUsingGET(categoryId)
+
+Retrieve a Lead Source Category
+
+Retrieves a single Lead Source Category for a given id
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let categoryId = "categoryId_example"; // String | category_id
+apiInstance.getLeadSourceCategoryUsingGET(categoryId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categoryId** | **String**| category_id | 
+
+### Return type
+
+[**LeadSourceCategory**](LeadSourceCategory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getOpportunityStageUsingGET
 
 > RestOpportunityStage getOpportunityStageUsingGET(stageId)
@@ -2841,6 +3253,58 @@ No authorization required
 - **Accept**: application/json
 
 
+## listCategoryDiscountsUsingGET
+
+> ListCategoryDiscountsResponse listCategoryDiscountsUsingGET(opts)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'filter': "filter_example", // String | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4`
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listCategoryDiscountsUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listCountriesUsingGET2
 
 > ListCountriesResponse listCountriesUsingGET2()
@@ -2922,6 +3386,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListShippingDiscountsResponse**](ListShippingDiscountsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listFilesUsingGET1
+
+> ListFilesResponse listFilesUsingGET1(opts)
+
+List all files
+
+Retrieves all files
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let opts = {
+  'filter': "filter_example", // String | Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the `==` operator to check the equality of one of the filters with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=contact_id%3D%3D123` - `filter=category%3D%3DATTACHMENTS` - `filter=file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS` 
+  'orderBy': "orderBy_example", // String | Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc 
+  'pageSize': 0, // Number | Total number of items to return per page
+  'pageToken': "pageToken_example" // String | Page token
+};
+apiInstance.listFilesUsingGET1(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filter to apply, allowed fields are: - (Boolean) is_public - (String) contact_id - (String) user_id - (String) category - (String) file_box_type  You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;contact_id%3D%3D123&#x60; - &#x60;filter&#x3D;category%3D%3DATTACHMENTS&#x60; - &#x60;filter&#x3D;file_box_type%3D%3DTICKET%3Bcategory%3D%3DATTACHMENTS&#x60;  | [optional] 
+ **orderBy** | **String**| Attribute and direction to order items. One of the following fields: - file_name - updated_time - ... One of the following directions: - asc - desc  | [optional] 
+ **pageSize** | **Number**| Total number of items to return per page | [optional] 
+ **pageToken** | **String**| Page token | [optional] 
+
+### Return type
+
+[**ListFilesResponse**](ListFilesResponse.md)
 
 ### Authorization
 
@@ -4368,7 +4884,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
 let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
-  'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
 apiInstance.updateAffiliateCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -4385,7 +4901,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
  **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 
@@ -4501,6 +5017,56 @@ No authorization required
 - **Accept**: application/json
 
 
+## updateFileUsingPATCH
+
+> FileMetadata updateFileUsingPATCH(fileId, updateFileRequest, opts)
+
+Update a file
+
+Updates a file
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
+let fileId = "fileId_example"; // String | file_id
+let updateFileRequest = new KeapCoreServiceCoreSdk.UpdateFileRequest(); // UpdateFileRequest | request
+let opts = {
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+};
+apiInstance.updateFileUsingPATCH(fileId, updateFileRequest, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileId** | **String**| file_id | 
+ **updateFileRequest** | [**UpdateFileRequest**](UpdateFileRequest.md)| request | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+
+### Return type
+
+[**FileMetadata**](FileMetadata.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
+
+
 ## updateNotesCustomFieldUsingPATCH
 
 > CustomFieldMetaData updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts)
@@ -4518,7 +5084,7 @@ let apiInstance = new KeapCoreServiceCoreSdk.PreReleaseApi();
 let customFieldId = "customFieldId_example"; // String | custom_field_id
 let updateCustomFieldMetaDataRequest = new KeapCoreServiceCoreSdk.UpdateCustomFieldMetaDataRequest(); // UpdateCustomFieldMetaDataRequest | request
 let opts = {
-  'updateMask': ["null"] // [String] | An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'updateMask': ["null"] // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 };
 apiInstance.updateNotesCustomFieldUsingPATCH(customFieldId, updateCustomFieldMetaDataRequest, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -4535,7 +5101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customFieldId** | **String**| custom_field_id | 
  **updateCustomFieldMetaDataRequest** | [**UpdateCustomFieldMetaDataRequest**](UpdateCustomFieldMetaDataRequest.md)| request | 
- **updateMask** | [**[String]**](String.md)| An optional list of fields to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 

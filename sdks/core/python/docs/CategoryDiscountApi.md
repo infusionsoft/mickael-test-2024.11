@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_discount_using_post**](CategoryDiscountApi.md#create_discount_using_post) | **POST** /v2/discounts/productCategories | Create a Category Discount
 [**delete_discount_using_delete**](CategoryDiscountApi.md#delete_discount_using_delete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount
 [**get_discount_using_get**](CategoryDiscountApi.md#get_discount_using_get) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount
+[**list_category_discounts_using_get**](CategoryDiscountApi.md#list_category_discounts_using_get) | **GET** /v2/discounts/productCategories | List Category Discounts
 [**update_discount_using_patch**](CategoryDiscountApi.md#update_discount_using_patch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount
 
 
@@ -193,6 +194,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_category_discounts_using_get**
+> ListCategoryDiscountsResponse list_category_discounts_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.list_category_discounts_response import ListCategoryDiscountsResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.infusionsoft.com/crm/rest/app"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.CategoryDiscountApi(api_client)
+    filter = 'filter_example' # str | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4` (optional)
+    order_by = 'order_by_example' # str | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc (optional)
+    page_size = 0 # int | Total number of items to return per page (optional)
+    page_token = 'page_token_example' # str | Page token (optional)
+
+    try:
+        # List Category Discounts
+        api_response = api_instance.list_category_discounts_using_get(filter=filter, order_by=order_by, page_size=page_size, page_token=page_token)
+        print("The response of CategoryDiscountApi->list_category_discounts_using_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CategoryDiscountApi->list_category_discounts_using_get: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **str**| Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional] 
+ **order_by** | **str**| Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional] 
+ **page_size** | **int**| Total number of items to return per page | [optional] 
+ **page_token** | **str**| Page token | [optional] 
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
 
 ### Authorization
 

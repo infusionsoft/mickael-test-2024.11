@@ -7,6 +7,7 @@ All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
 | [**CreateDiscountUsingPOST**](CategoryDiscountApi.md#creatediscountusingpost) | **POST** /v2/discounts/productCategories | Create a Category Discount |
 | [**DeleteDiscountUsingDELETE**](CategoryDiscountApi.md#deletediscountusingdelete) | **DELETE** /v2/discounts/productCategories/{discount_id} | Delete a Category Discount |
 | [**GetDiscountUsingGET**](CategoryDiscountApi.md#getdiscountusingget) | **GET** /v2/discounts/productCategories/{discount_id} | Retrieve a Category Discount |
+| [**ListCategoryDiscountsUsingGET**](CategoryDiscountApi.md#listcategorydiscountsusingget) | **GET** /v2/discounts/productCategories | List Category Discounts |
 | [**UpdateDiscountUsingPATCH**](CategoryDiscountApi.md#updatediscountusingpatch) | **PATCH** /v2/discounts/productCategories/{discount_id} | Update a Category Discount |
 
 <a id="creatediscountusingpost"></a>
@@ -265,6 +266,106 @@ catch (ApiException e)
 ### Return type
 
 [**CategoryDiscount**](CategoryDiscount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listcategorydiscountsusingget"></a>
+# **ListCategoryDiscountsUsingGET**
+> ListCategoryDiscountsResponse ListCategoryDiscountsUsingGET (string? filter = null, string? orderBy = null, int? pageSize = null, string? pageToken = null)
+
+List Category Discounts
+
+Retrieve a list of Category Discounts.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class ListCategoryDiscountsUsingGETExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            var apiInstance = new CategoryDiscountApi(config);
+            var filter = "filter_example";  // string? | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the `==` operator to check the equality of the filter with your searched word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples: - `filter=product_category_id%3D%3D4` (optional) 
+            var orderBy = "orderBy_example";  // string? | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc (optional) 
+            var pageSize = 0;  // int? | Total number of items to return per page (optional) 
+            var pageToken = "pageToken_example";  // string? | Page token (optional) 
+
+            try
+            {
+                // List Category Discounts
+                ListCategoryDiscountsResponse result = apiInstance.ListCategoryDiscountsUsingGET(filter, orderBy, pageSize, pageToken);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CategoryDiscountApi.ListCategoryDiscountsUsingGET: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListCategoryDiscountsUsingGETWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Category Discounts
+    ApiResponse<ListCategoryDiscountsResponse> response = apiInstance.ListCategoryDiscountsUsingGETWithHttpInfo(filter, orderBy, pageSize, pageToken);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CategoryDiscountApi.ListCategoryDiscountsUsingGETWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filter** | **string?** | Filter to apply, the allowed field is: - (String) product_category_id You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples: - &#x60;filter&#x3D;product_category_id%3D%3D4&#x60; | [optional]  |
+| **orderBy** | **string?** | Attribute and direction to order items. One of the following fields: - id - name One of the following directions: - asc - desc | [optional]  |
+| **pageSize** | **int?** | Total number of items to return per page | [optional]  |
+| **pageToken** | **string?** | Page token | [optional]  |
+
+### Return type
+
+[**ListCategoryDiscountsResponse**](ListCategoryDiscountsResponse.md)
 
 ### Authorization
 

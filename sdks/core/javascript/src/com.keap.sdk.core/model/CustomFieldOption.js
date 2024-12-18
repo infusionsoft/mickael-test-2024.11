@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomFieldOption model module.
  * @module com.keap.sdk.core/model/CustomFieldOption
- * @version 0.0.50
+ * @version 0.0.51
  */
 class CustomFieldOption {
     /**

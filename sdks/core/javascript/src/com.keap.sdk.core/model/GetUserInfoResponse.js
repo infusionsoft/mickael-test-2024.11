@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetUserInfoResponse model module.
  * @module com.keap.sdk.core/model/GetUserInfoResponse
- * @version 0.0.50
+ * @version 0.0.51
  */
 class GetUserInfoResponse {
     /**

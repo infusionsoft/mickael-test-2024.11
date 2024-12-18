@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleNote model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleNote
- * @version 0.0.50
+ * @version 0.0.51
  */
 class ApplicationConfigurationModuleNote {
     /**

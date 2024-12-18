@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LeadScore model module.
  * @module com.keap.sdk.core/model/LeadScore
- * @version 0.0.50
+ * @version 0.0.51
  */
 class LeadScore {
     /**

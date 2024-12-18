@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keap.Sdk.Core", "src\Keap.Sdk.Core\Keap.Sdk.Core.csproj", "{6F42369C-22EF-43FB-A0D3-07CABD8685CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keap.Sdk.Core", "src\Keap.Sdk.Core\Keap.Sdk.Core.csproj", "{C9C93A18-2225-40F9-9757-B65CEF7CEE18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,10 +10,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6F42369C-22EF-43FB-A0D3-07CABD8685CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F42369C-22EF-43FB-A0D3-07CABD8685CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F42369C-22EF-43FB-A0D3-07CABD8685CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F42369C-22EF-43FB-A0D3-07CABD8685CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C93A18-2225-40F9-9757-B65CEF7CEE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C93A18-2225-40F9-9757-B65CEF7CEE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C93A18-2225-40F9-9757-B65CEF7CEE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C93A18-2225-40F9-9757-B65CEF7CEE18}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

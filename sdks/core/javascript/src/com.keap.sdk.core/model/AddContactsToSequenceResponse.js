@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddContactsToSequenceResponse model module.
  * @module com.keap.sdk.core/model/AddContactsToSequenceResponse
- * @version 0.0.47
+ * @version 0.0.48
  */
 class AddContactsToSequenceResponse {
     /**

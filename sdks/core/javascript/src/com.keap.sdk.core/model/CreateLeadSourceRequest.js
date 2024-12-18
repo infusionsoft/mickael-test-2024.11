@@ -17,7 +17,7 @@ import LeadSourceCategory from './LeadSourceCategory';
 /**
  * The CreateLeadSourceRequest model module.
  * @module com.keap.sdk.core/model/CreateLeadSourceRequest
- * @version 0.0.49
+ * @version 0.0.50
  */
 class CreateLeadSourceRequest {
     /**

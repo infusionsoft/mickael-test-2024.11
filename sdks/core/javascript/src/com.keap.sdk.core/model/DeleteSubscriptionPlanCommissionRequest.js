@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteSubscriptionPlanCommissionRequest model module.
  * @module com.keap.sdk.core/model/DeleteSubscriptionPlanCommissionRequest
- * @version 0.0.49
+ * @version 0.0.50
  */
 class DeleteSubscriptionPlanCommissionRequest {
     /**

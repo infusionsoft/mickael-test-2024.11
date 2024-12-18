@@ -17,7 +17,7 @@ import CreateEmailSentRequest from './CreateEmailSentRequest';
 /**
  * The CreateEmailsSentRequest model module.
  * @module com.keap.sdk.core/model/CreateEmailsSentRequest
- * @version 0.0.49
+ * @version 0.0.50
  */
 class CreateEmailsSentRequest {
     /**

@@ -24,7 +24,7 @@ import UpdateAutomationCategoryRequest from '../model/UpdateAutomationCategoryRe
 /**
 * Automation service.
 * @module com.keap.sdk.core/api/AutomationApi
-* @version 0.0.49
+* @version 0.0.50
 */
 export default class AutomationApi {
 

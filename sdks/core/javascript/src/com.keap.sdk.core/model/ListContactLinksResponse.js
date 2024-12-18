@@ -17,7 +17,7 @@ import ContactLink from './ContactLink';
 /**
  * The ListContactLinksResponse model module.
  * @module com.keap.sdk.core/model/ListContactLinksResponse
- * @version 0.0.49
+ * @version 0.0.50
  */
 class ListContactLinksResponse {
     /**

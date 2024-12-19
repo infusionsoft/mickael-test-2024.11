@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FunnelIntegrationHttpRequest model module.
  * @module com.keap.sdk.core/model/FunnelIntegrationHttpRequest
- * @version 0.0.54
+ * @version 0.0.55
  */
 class FunnelIntegrationHttpRequest {
     /**

@@ -18,7 +18,7 @@ import Deal from './Deal';
 /**
  * The StageDealListResponse model module.
  * @module com.keap.sdk.core/model/StageDealListResponse
- * @version 0.0.60
+ * @version 0.0.61
  */
 class StageDealListResponse {
     /**

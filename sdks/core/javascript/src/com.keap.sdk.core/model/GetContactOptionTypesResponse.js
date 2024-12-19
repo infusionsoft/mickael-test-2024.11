@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetContactOptionTypesResponse model module.
  * @module com.keap.sdk.core/model/GetContactOptionTypesResponse
- * @version 0.0.60
+ * @version 0.0.61
  */
 class GetContactOptionTypesResponse {
     /**

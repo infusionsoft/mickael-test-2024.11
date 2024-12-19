@@ -29,7 +29,7 @@ import ApplicationConfigurationModuleTemplate from './ApplicationConfigurationMo
 /**
  * The GetSettingsResponse model module.
  * @module com.keap.sdk.core/model/GetSettingsResponse
- * @version 0.0.58
+ * @version 0.0.59
  */
 class GetSettingsResponse {
     /**

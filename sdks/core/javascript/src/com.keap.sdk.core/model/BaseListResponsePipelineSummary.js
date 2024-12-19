@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BaseListResponsePipelineSummary model module.
  * @module com.keap.sdk.core/model/BaseListResponsePipelineSummary
- * @version 0.0.58
+ * @version 0.0.59
  */
 class BaseListResponsePipelineSummary {
     /**

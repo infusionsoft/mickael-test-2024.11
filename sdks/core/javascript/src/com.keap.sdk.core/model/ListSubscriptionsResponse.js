@@ -17,7 +17,7 @@ import RestSubscriptionV2 from './RestSubscriptionV2';
 /**
  * The ListSubscriptionsResponse model module.
  * @module com.keap.sdk.core/model/ListSubscriptionsResponse
- * @version 0.0.56
+ * @version 0.0.57
  */
 class ListSubscriptionsResponse {
     /**

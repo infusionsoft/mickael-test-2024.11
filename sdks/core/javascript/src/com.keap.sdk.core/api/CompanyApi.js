@@ -22,7 +22,7 @@ import PatchCompanyRequest from '../model/PatchCompanyRequest';
 /**
 * Company service.
 * @module com.keap.sdk.core/api/CompanyApi
-* @version 0.0.56
+* @version 0.0.57
 */
 export default class CompanyApi {
 

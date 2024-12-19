@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateRestOrderItemRequest model module.
  * @module com.keap.sdk.core/model/CreateRestOrderItemRequest
- * @version 0.0.59
+ * @version 0.0.60
  */
 class CreateRestOrderItemRequest {
     /**

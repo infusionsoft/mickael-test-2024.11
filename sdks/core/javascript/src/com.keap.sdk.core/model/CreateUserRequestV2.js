@@ -17,7 +17,7 @@ import EmailAddressRequest from './EmailAddressRequest';
 /**
  * The CreateUserRequestV2 model module.
  * @module com.keap.sdk.core/model/CreateUserRequestV2
- * @version 0.0.59
+ * @version 0.0.60
  */
 class CreateUserRequestV2 {
     /**

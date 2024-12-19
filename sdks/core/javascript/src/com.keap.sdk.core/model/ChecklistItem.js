@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChecklistItem model module.
  * @module com.keap.sdk.core/model/ChecklistItem
- * @version 0.0.57
+ * @version 0.0.58
  */
 class ChecklistItem {
     /**

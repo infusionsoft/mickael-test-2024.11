@@ -25,7 +25,7 @@ import Error from '../model/Error';
 /**
 * Email service.
 * @module com.keap.sdk.core/api/EmailApi
-* @version 0.0.57
+* @version 0.0.58
 */
 export default class EmailApi {
 

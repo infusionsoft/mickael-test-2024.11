@@ -18,7 +18,7 @@ import Throwable from './Throwable';
 /**
  * The Error model module.
  * @module com.keap.sdk.core/model/Error
- * @version 0.0.57
+ * @version 0.0.58
  */
 class Error {
     /**

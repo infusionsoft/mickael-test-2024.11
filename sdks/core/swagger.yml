@@ -4155,6 +4155,64 @@ paths:
 servers:
 - url: https://api.keap.com/crm/rest
 components:
+  requestBodies:
+    CreateOrPatchAffiliateLinkRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateOrPatchAffiliateLinkRequest'
+      description: request
+      required: true
+    CreatePatchContactRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreatePatchContactRequest'
+      description: contact
+    CreateUpdateDiscountRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateUpdateDiscountRequest'
+      description: request
+      required: true
+    LinkContactsRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LinkContactsRequest'
+      description: linkContactsRequest
+      required: true
+    CreateCustomFieldRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateCustomFieldRequest'
+      description: customField
+      required: true
+    UpdateCustomFieldMetaDataRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateCustomFieldMetaDataRequest'
+      description: request
+      required: true
+    ApplyRemoveTagRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApplyRemoveTagRequest'
+      description: applyRemoveTagRequest
+      required: true
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.infusionsoft.com/app/oauth/authorize
+          tokenUrl: https://api.infusionsoft.com/token
+          scopes: {
+            }
   schemas:
     AddContactsToSequenceRequest:
       type: object
@@ -4719,6 +4777,48 @@ components:
         user_name:
           type: string
       title: AutomationLockStatus
+    BaseListResponse_DealNote_:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token for the next page of results.
+      description: The list responses.
+    BaseListResponse_Deal_:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token for the next page of results.
+      description: The list responses.
+    BaseListResponse_PipelineSummary_:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token for the next page of results.
+      description: The list responses.
+    BaseListResponse_Pipeline_:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token for the next page of results.
+      description: The list responses.
+    BaseListResponse_Stage_:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token for the next page of results.
+      description: The list responses.
+    BaseModel:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+      description: Base class for all models. Provides a unique identifier.
     BasicCompany:
       type: object
       properties:
@@ -5295,6 +5395,25 @@ components:
         custom_field:
           $ref: '#/components/schemas/CustomFieldMetaData'
       title: CreateCustomFieldResponse
+    CreateDealNoteRequest:
+      required:
+      - body
+      - created_by
+      type: object
+      properties:
+        body:
+          maxLength: 5000
+          minLength: 1
+          type: string
+          description: The body of the note. Must not be blank and must be between
+            1 and 5000 characters.
+        created_by:
+          maxLength: 255
+          minLength: 1
+          type: string
+          description: The creator of the note. Must not be blank and must be between
+            1 and 255 characters.
+      description: Request model for creating a deal note.
     CreateDefaultCommissionProgramRequest:
       type: object
       properties:
@@ -5758,6 +5877,25 @@ components:
           type: integer
           format: int64
       title: CreatePaymentRequest
+    CreatePipelineRequest:
+      required:
+      - name
+      - stages
+      type: object
+      properties:
+        name:
+          maxLength: 255
+          minLength: 1
+          type: string
+          description: The name of the pipeline.
+        stages:
+          maxItems: 100
+          minItems: 1
+          type: array
+          description: The stages of the pipeline.
+          items:
+            type: string
+      description: Request for creating a pipeline.
     CreateProductCommissionProgramRequest:
       type: object
       properties:
@@ -5888,6 +6026,21 @@ components:
         name:
           type: string
       title: CreateShippingDiscountRequest
+    CreateStageRequest:
+      required:
+      - name
+      - pipeline_id
+      type: object
+      properties:
+        name:
+          minLength: 1
+          type: string
+          description: The name of the stage.
+        pipeline_id:
+          minLength: 1
+          type: string
+          description: The ID of the pipeline to which the stage belongs.
+      description: Request for creating a stage.
     CreateSubscriptionCommissionProgramRequest:
       type: object
       properties:
@@ -6138,6 +6291,150 @@ components:
         id:
           type: string
       title: CustomFieldValue
+    Deal:
+      type: object
+      description: Represents a deal.
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
+      - required:
+        - contacts
+        - name
+        - owners
+        - stage
+        - stage_assignment_time
+        - status
+        - task_ids
+        - value
+        properties:
+          name:
+            minLength: 1
+            type: string
+            description: The name of the deal. This field is required and must have
+              at least one character.
+          value:
+            description: The monetary value of the deal. This field is required and
+              must be valid.
+            allOf:
+            - $ref: '#/components/schemas/Money'
+            - description: ''
+          contacts:
+            type: array
+            description: The list of contacts associated with the deal. This field
+              is required.
+            items:
+              $ref: '#/components/schemas/DealContact'
+          stage:
+            description: The stage of the deal. This field is required and must be
+              valid.
+            allOf:
+            - $ref: '#/components/schemas/Stage'
+            - description: ''
+          stage_assignment_time:
+            type: string
+            description: The time when the deal was assigned to the current stage.
+              This field is required.
+            format: date-time
+          owners:
+            type: array
+            description: The list of owners of the deal. This field is required.
+            items:
+              $ref: '#/components/schemas/Owner'
+          owner_id:
+            type: string
+            description: The ID of the owner of the deal. This field is optional.
+            nullable: true
+          task_ids:
+            type: array
+            description: The list of task IDs associated with the deal. This field
+              is required.
+            items:
+              type: string
+          order_id:
+            type: string
+            description: The order of the deal. This field is optional.
+            nullable: true
+          status:
+            type: string
+            description: The status of the deal. This field is required.
+          estimated_close_time:
+            type: string
+            description: The estimated close time of the deal. This field is optional.
+            format: date-time
+            nullable: true
+          closed_time:
+            type: string
+            description: The actual close time of the deal. This field is optional.
+            format: date-time
+            nullable: true
+          custom_fields:
+            allOf:
+            - type: object
+              additionalProperties: true
+              description: The custom fields associated with the deal. This field
+                is optional.
+            - description: The custom fields associated with the deal. This field
+                is optional.
+              nullable: true
+    DealContact:
+      type: object
+      description: Represents a contact entity in the system. Extends the BaseModel
+        class.
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
+      - required:
+        - primary_contact
+        properties:
+          primary_contact:
+            type: boolean
+            description: Indicates if this contact is the primary contact. This field
+              is required.
+    DealNote:
+      type: object
+      description: A model representing a note associated with a deal.
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
+      - properties:
+          deal_id:
+            type: string
+            description: The ID of the deal associated with the note.
+          body:
+            type: string
+            description: The body content of the note.
+          created_by:
+            type: string
+            description: The ID of the user who created the note.
+          created_time:
+            type: string
+            description: The timestamp when the note was created. Formatted as a string
+              according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
+            format: date-time
+          modified_time:
+            type: string
+            description: The timestamp when the note was last modified. Formatted
+              as a string according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
+            format: date-time
+    DealNoteListResponse:
+      type: object
+      description: Response model for a list of deal notes.
+      allOf:
+      - $ref: '#/components/schemas/BaseListResponse_DealNote_'
+      - properties:
+          next_page_token:
+            type: string
+            description: Token for the next page of results.
+          notes:
+            type: array
+            description: The list of Note entities.
+            items:
+              $ref: '#/components/schemas/DealNote'
+    DealStatus:
+      type: string
+      description: Enum representing the status of a deal.
+      enum:
+      - UNKNOWN_COULD_NOT_DESERIALIZE
+      - ACTIVE
+      - WON
+      - LOST
     DefaultCommission:
       type: object
       properties:
@@ -7434,6 +7731,20 @@ components:
           items:
             $ref: '#/components/schemas/User'
       title: ListUserResponse
+    Money:
+      required:
+      - amount
+      - currency
+      type: object
+      properties:
+        amount:
+          type: number
+          description: The amount of money. This field is required.
+          format: double
+        currency:
+          type: string
+          description: The currency of the money. This field is required.
+      description: Represents a monetary value with an amount and currency.
     Note:
       type: object
       properties:
@@ -7644,6 +7955,12 @@ components:
         ip_address:
           type: string
       title: OriginRequest
+    Owner:
+      type: object
+      description: Represents an owner entity in the system. Extends the BaseModel
+        class.
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
     PatchAffiliateRequest:
       type: object
       required:
@@ -7921,6 +8238,120 @@ components:
         type:
           type: string
       title: PhoneNumber
+    Pipeline:
+      type: object
+      description: A pipeline
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
+      - properties:
+          name:
+            type: string
+            description: The name of the pipeline.
+          stages:
+            type: array
+            description: The list of stages in the pipeline.
+            items:
+              $ref: '#/components/schemas/Stage'
+    PipelineListResponse:
+      type: object
+      description: Response for a list of pipelines.
+      allOf:
+      - $ref: '#/components/schemas/BaseListResponse_Pipeline_'
+      - properties:
+          next_page_token:
+            type: string
+            description: Token for the next page of results.
+          pipelines:
+            type: array
+            description: The list of pipelines.
+            items:
+              $ref: '#/components/schemas/Pipeline'
+    PipelineOutcomeLabel:
+      required:
+      - value
+      type: object
+      properties:
+        value:
+          description: The status of the deal. This field is required.
+          allOf:
+          - $ref: '#/components/schemas/DealStatus'
+        label:
+          minLength: 1
+          type: string
+          description: The label for the outcome. This field is optional but must
+            have at least one character if provided.
+          nullable: true
+      description: Represents a label for a pipeline outcome.
+    PipelineOutcomeLabelListResponse:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token for the next page of results.
+        outcome_labels:
+          type: array
+          description: The list of outcome labels.
+          items:
+            $ref: '#/components/schemas/PipelineOutcomeLabel'
+      description: Represents a response containing a list of pipeline outcome labels.
+    PipelineStageListResponse:
+      type: object
+      description: Response for a list of stages.
+      allOf:
+      - $ref: '#/components/schemas/BaseListResponse_Stage_'
+      - properties:
+          next_page_token:
+            type: string
+            description: Token for the next page of results.
+          stages:
+            type: array
+            description: The list of stages.
+            items:
+              $ref: '#/components/schemas/Stage'
+    PipelineSummariesListResponse:
+      type: object
+      description: Response for a list of pipeline summaries.
+      allOf:
+      - $ref: '#/components/schemas/BaseListResponse_PipelineSummary_'
+      - properties:
+          next_page_token:
+            type: string
+            description: Token for the next page of results.
+          pipeline_summaries:
+            type: array
+            description: The list of pipeline summaries.
+            items:
+              $ref: '#/components/schemas/PipelineSummary'
+    PipelineSummary:
+      type: object
+      description: Represents a summary of a pipeline.
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
+      - required:
+        - pipeline_name
+        properties:
+          pipeline_id:
+            pattern: ^\d+$
+            type: string
+            description: The ID of the pipeline. Can be null and must be a string
+              of digits if present.
+            nullable: true
+          pipeline_name:
+            maxLength: 255
+            minLength: 1
+            type: string
+            description: The name of the pipeline. Must be a non-null string with
+              a length between 1 and 255 characters.
+          stat_total_deal_count:
+            type: integer
+            description: The total count of deals in the pipeline. Can be null.
+            format: int32
+            nullable: true
+          stat_new_deal_count:
+            type: integer
+            description: The count of new deals in the pipeline. Can be null.
+            format: int32
+            nullable: true
     ProductCommission:
       type: object
       properties:
@@ -8859,6 +9290,32 @@ components:
         nativeMethod:
           type: boolean
       title: StackTraceElement
+    Stage:
+      type: object
+      description: Represents a stage in a pipeline.
+      allOf:
+      - $ref: '#/components/schemas/BaseModel'
+      - properties:
+          name:
+            type: string
+            description: The name of the stage.
+          pipeline_id:
+            type: string
+            description: The ID of the pipeline.
+    StageDealListResponse:
+      type: object
+      description: Response for a list of deals in a stage.
+      allOf:
+      - $ref: '#/components/schemas/BaseListResponse_Deal_'
+      - properties:
+          next_page_token:
+            type: string
+            description: Token for the next page of results.
+          deals:
+            type: array
+            description: The list of deals in a stage.
+            items:
+              $ref: '#/components/schemas/Deal'
     StageDetails:
       type: object
       properties:
@@ -8876,6 +9333,20 @@ components:
           type: integer
           format: int32
       title: StageDetails
+    StageListResponse:
+      type: object
+      description: Response for a list of stages.
+      allOf:
+      - $ref: '#/components/schemas/BaseListResponse_Stage_'
+      - properties:
+          next_page_token:
+            type: string
+            description: Token for the next page of results.
+          stages:
+            type: array
+            description: The list of stages.
+            items:
+              $ref: '#/components/schemas/Stage'
     SubscriptionCommission:
       type: object
       properties:
@@ -9044,6 +9515,18 @@ components:
           items:
             $ref: '#/components/schemas/CustomFieldOption'
       title: UpdateCustomFieldMetaDataRequest
+    UpdateDealNoteRequest:
+      required:
+      - body
+      type: object
+      properties:
+        body:
+          maxLength: 5000
+          minLength: 1
+          type: string
+          description: The body of the note. Must not be blank and must be between
+            1 and 5000 characters.
+      description: Request model for updating a deal note.
     UpdateEmailAddress:
       type: object
       required:
@@ -9170,6 +9653,28 @@ components:
         name:
           type: string
       title: UpdateOrderTotalDiscountRequest
+    UpdateOutcomeLabelsRequest:
+      required:
+      - outcome_labels
+      type: object
+      properties:
+        outcome_labels:
+          type: array
+          description: List of outcome labels to be updated.
+          items:
+            $ref: '#/components/schemas/PipelineOutcomeLabel'
+      description: Represents a request to update outcome labels for a pipeline.
+    UpdatePipelineRequest:
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          maxLength: 255
+          minLength: 1
+          type: string
+          description: The name of the pipeline.
+      description: Request for updating a pipeline.
     UpdateProductInventoryRequest:
       type: object
       properties:
@@ -9202,6 +9707,35 @@ components:
         name:
           type: string
       title: UpdateShippingDiscountRequest
+    UpdateStageRequest:
+      required:
+      - name
+      - next_stage_id
+      - pipeline_id
+      - previous_stage_id
+      type: object
+      properties:
+        name:
+          minLength: 1
+          type: string
+          description: The name of the stage.
+          nullable: true
+        previous_stage_id:
+          minLength: 1
+          type: string
+          description: The ID of the previous stage.
+          nullable: true
+        next_stage_id:
+          minLength: 1
+          type: string
+          description: The ID of the next stage.
+          nullable: true
+        pipeline_id:
+          minLength: 1
+          type: string
+          description: The ID of the pipeline.
+          nullable: true
+      description: Request for updating a stage.
     UpdateTagCategoryResponse:
       type: object
       properties:
@@ -9333,540 +9867,3 @@ components:
         website:
           type: string
       title: User
-    BaseListResponse_DealNote_:
-      type: object
-      properties:
-        next_page_token:
-          type: string
-          description: Token for the next page of results.
-      description: The list responses.
-    BaseListResponse_Deal_:
-      type: object
-      properties:
-        next_page_token:
-          type: string
-          description: Token for the next page of results.
-      description: The list responses.
-    BaseListResponse_PipelineSummary_:
-      type: object
-      properties:
-        next_page_token:
-          type: string
-          description: Token for the next page of results.
-      description: The list responses.
-    BaseListResponse_Pipeline_:
-      type: object
-      properties:
-        next_page_token:
-          type: string
-          description: Token for the next page of results.
-      description: The list responses.
-    BaseListResponse_Stage_:
-      type: object
-      properties:
-        next_page_token:
-          type: string
-          description: Token for the next page of results.
-      description: The list responses.
-    BaseModel:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique identifier for the model.
-      description: Base class for all models. Provides a unique identifier.
-    CreateDealNoteRequest:
-      required:
-      - body
-      - created_by
-      type: object
-      properties:
-        body:
-          maxLength: 5000
-          minLength: 1
-          type: string
-          description: The body of the note. Must not be blank and must be between
-            1 and 5000 characters.
-        created_by:
-          maxLength: 255
-          minLength: 1
-          type: string
-          description: The creator of the note. Must not be blank and must be between
-            1 and 255 characters.
-      description: Request model for creating a deal note.
-    CreatePipelineRequest:
-      required:
-      - name
-      - stages
-      type: object
-      properties:
-        name:
-          maxLength: 255
-          minLength: 1
-          type: string
-          description: The name of the pipeline.
-        stages:
-          maxItems: 100
-          minItems: 1
-          type: array
-          description: The stages of the pipeline.
-          items:
-            type: string
-      description: Request for creating a pipeline.
-    CreateStageRequest:
-      required:
-      - name
-      - pipeline_id
-      type: object
-      properties:
-        name:
-          minLength: 1
-          type: string
-          description: The name of the stage.
-        pipeline_id:
-          minLength: 1
-          type: string
-          description: The ID of the pipeline to which the stage belongs.
-      description: Request for creating a stage.
-    Deal:
-      type: object
-      description: Represents a deal.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - required:
-        - contacts
-        - name
-        - owners
-        - stage
-        - stage_assignment_time
-        - status
-        - task_ids
-        - value
-        properties:
-          name:
-            minLength: 1
-            type: string
-            description: The name of the deal. This field is required and must have
-              at least one character.
-          value:
-            description: The monetary value of the deal. This field is required and
-              must be valid.
-            allOf:
-            - $ref: '#/components/schemas/Money'
-            - description: ''
-          contacts:
-            type: array
-            description: The list of contacts associated with the deal. This field
-              is required.
-            items:
-              $ref: '#/components/schemas/DealContact'
-          stage:
-            description: The stage of the deal. This field is required and must be
-              valid.
-            allOf:
-            - $ref: '#/components/schemas/Stage'
-            - description: ''
-          stage_assignment_time:
-            type: string
-            description: The time when the deal was assigned to the current stage.
-              This field is required.
-            format: date-time
-          owners:
-            type: array
-            description: The list of owners of the deal. This field is required.
-            items:
-              $ref: '#/components/schemas/Owner'
-          owner_id:
-            type: string
-            description: The ID of the owner of the deal. This field is optional.
-            nullable: true
-          task_ids:
-            type: array
-            description: The list of task IDs associated with the deal. This field
-              is required.
-            items:
-              type: string
-          order_id:
-            type: string
-            description: The order of the deal. This field is optional.
-            nullable: true
-          status:
-            type: string
-            description: The status of the deal. This field is required.
-          estimated_close_time:
-            type: string
-            description: The estimated close time of the deal. This field is optional.
-            format: date-time
-            nullable: true
-          closed_time:
-            type: string
-            description: The actual close time of the deal. This field is optional.
-            format: date-time
-            nullable: true
-          custom_fields:
-            allOf:
-            - type: object
-              additionalProperties: true
-              description: The custom fields associated with the deal. This field
-                is optional.
-            - description: The custom fields associated with the deal. This field
-                is optional.
-              nullable: true
-    DealContact:
-      type: object
-      description: Represents a contact entity in the system. Extends the BaseModel
-        class.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - required:
-        - primary_contact
-        properties:
-          primary_contact:
-            type: boolean
-            description: Indicates if this contact is the primary contact. This field
-              is required.
-    DealNote:
-      type: object
-      description: A model representing a note associated with a deal.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          deal_id:
-            type: string
-            description: The ID of the deal associated with the note.
-          body:
-            type: string
-            description: The body content of the note.
-          created_by:
-            type: string
-            description: The ID of the user who created the note.
-          created_time:
-            type: string
-            description: The timestamp when the note was created. Formatted as a string
-              according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
-            format: date-time
-          modified_time:
-            type: string
-            description: The timestamp when the note was last modified. Formatted
-              as a string according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
-            format: date-time
-    DealNoteListResponse:
-      type: object
-      description: Response model for a list of deal notes.
-      allOf:
-      - $ref: '#/components/schemas/BaseListResponse_DealNote_'
-      - properties:
-          next_page_token:
-            type: string
-            description: Token for the next page of results.
-          notes:
-            type: array
-            description: The list of Note entities.
-            items:
-              $ref: '#/components/schemas/DealNote'
-    DealStatus:
-      type: string
-      description: Enum representing the status of a deal.
-      enum:
-      - UNKNOWN_COULD_NOT_DESERIALIZE
-      - ACTIVE
-      - WON
-      - LOST
-    Money:
-      required:
-      - amount
-      - currency
-      type: object
-      properties:
-        amount:
-          type: number
-          description: The amount of money. This field is required.
-          format: double
-        currency:
-          type: string
-          description: The currency of the money. This field is required.
-      description: Represents a monetary value with an amount and currency.
-    Owner:
-      type: object
-      description: Represents an owner entity in the system. Extends the BaseModel
-        class.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-    Pipeline:
-      type: object
-      description: A pipeline
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          name:
-            type: string
-            description: The name of the pipeline.
-          stages:
-            type: array
-            description: The list of stages in the pipeline.
-            items:
-              $ref: '#/components/schemas/Stage'
-    PipelineListResponse:
-      type: object
-      description: Response for a list of pipelines.
-      allOf:
-      - $ref: '#/components/schemas/BaseListResponse_Pipeline_'
-      - properties:
-          next_page_token:
-            type: string
-            description: Token for the next page of results.
-          pipelines:
-            type: array
-            description: The list of pipelines.
-            items:
-              $ref: '#/components/schemas/Pipeline'
-    PipelineOutcomeLabel:
-      required:
-      - value
-      type: object
-      properties:
-        value:
-          description: The status of the deal. This field is required.
-          allOf:
-          - $ref: '#/components/schemas/DealStatus'
-        label:
-          minLength: 1
-          type: string
-          description: The label for the outcome. This field is optional but must
-            have at least one character if provided.
-          nullable: true
-      description: Represents a label for a pipeline outcome.
-    PipelineOutcomeLabelListResponse:
-      type: object
-      properties:
-        next_page_token:
-          type: string
-          description: Token for the next page of results.
-        outcome_labels:
-          type: array
-          description: The list of outcome labels.
-          items:
-            $ref: '#/components/schemas/PipelineOutcomeLabel'
-      description: Represents a response containing a list of pipeline outcome labels.
-    PipelineStageListResponse:
-      type: object
-      description: Response for a list of stages.
-      allOf:
-      - $ref: '#/components/schemas/BaseListResponse_Stage_'
-      - properties:
-          next_page_token:
-            type: string
-            description: Token for the next page of results.
-          stages:
-            type: array
-            description: The list of stages.
-            items:
-              $ref: '#/components/schemas/Stage'
-    PipelineSummariesListResponse:
-      type: object
-      description: Response for a list of pipeline summaries.
-      allOf:
-      - $ref: '#/components/schemas/BaseListResponse_PipelineSummary_'
-      - properties:
-          next_page_token:
-            type: string
-            description: Token for the next page of results.
-          pipeline_summaries:
-            type: array
-            description: The list of pipeline summaries.
-            items:
-              $ref: '#/components/schemas/PipelineSummary'
-    PipelineSummary:
-      type: object
-      description: Represents a summary of a pipeline.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - required:
-        - pipeline_name
-        properties:
-          pipeline_id:
-            pattern: ^\d+$
-            type: string
-            description: The ID of the pipeline. Can be null and must be a string
-              of digits if present.
-            nullable: true
-          pipeline_name:
-            maxLength: 255
-            minLength: 1
-            type: string
-            description: The name of the pipeline. Must be a non-null string with
-              a length between 1 and 255 characters.
-          stat_total_deal_count:
-            type: integer
-            description: The total count of deals in the pipeline. Can be null.
-            format: int32
-            nullable: true
-          stat_new_deal_count:
-            type: integer
-            description: The count of new deals in the pipeline. Can be null.
-            format: int32
-            nullable: true
-    Stage:
-      type: object
-      description: Represents a stage in a pipeline.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          name:
-            type: string
-            description: The name of the stage.
-          pipeline_id:
-            type: string
-            description: The ID of the pipeline.
-    StageDealListResponse:
-      type: object
-      description: Response for a list of deals in a stage.
-      allOf:
-      - $ref: '#/components/schemas/BaseListResponse_Deal_'
-      - properties:
-          next_page_token:
-            type: string
-            description: Token for the next page of results.
-          deals:
-            type: array
-            description: The list of deals in a stage.
-            items:
-              $ref: '#/components/schemas/Deal'
-    StageListResponse:
-      type: object
-      description: Response for a list of stages.
-      allOf:
-      - $ref: '#/components/schemas/BaseListResponse_Stage_'
-      - properties:
-          next_page_token:
-            type: string
-            description: Token for the next page of results.
-          stages:
-            type: array
-            description: The list of stages.
-            items:
-              $ref: '#/components/schemas/Stage'
-    UpdateDealNoteRequest:
-      required:
-      - body
-      type: object
-      properties:
-        body:
-          maxLength: 5000
-          minLength: 1
-          type: string
-          description: The body of the note. Must not be blank and must be between
-            1 and 5000 characters.
-      description: Request model for updating a deal note.
-    UpdateOutcomeLabelsRequest:
-      required:
-      - outcome_labels
-      type: object
-      properties:
-        outcome_labels:
-          type: array
-          description: List of outcome labels to be updated.
-          items:
-            $ref: '#/components/schemas/PipelineOutcomeLabel'
-      description: Represents a request to update outcome labels for a pipeline.
-    UpdatePipelineRequest:
-      required:
-      - name
-      type: object
-      properties:
-        name:
-          maxLength: 255
-          minLength: 1
-          type: string
-          description: The name of the pipeline.
-      description: Request for updating a pipeline.
-    UpdateStageRequest:
-      required:
-      - name
-      - next_stage_id
-      - pipeline_id
-      - previous_stage_id
-      type: object
-      properties:
-        name:
-          minLength: 1
-          type: string
-          description: The name of the stage.
-          nullable: true
-        previous_stage_id:
-          minLength: 1
-          type: string
-          description: The ID of the previous stage.
-          nullable: true
-        next_stage_id:
-          minLength: 1
-          type: string
-          description: The ID of the next stage.
-          nullable: true
-        pipeline_id:
-          minLength: 1
-          type: string
-          description: The ID of the pipeline.
-          nullable: true
-      description: Request for updating a stage.
-  responses: null
-  parameters: null
-  requestBodies:
-    CreateOrPatchAffiliateLinkRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/CreateOrPatchAffiliateLinkRequest'
-      description: request
-      required: true
-    CreatePatchContactRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/CreatePatchContactRequest'
-      description: contact
-    CreateUpdateDiscountRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/CreateUpdateDiscountRequest'
-      description: request
-      required: true
-    LinkContactsRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/LinkContactsRequest'
-      description: linkContactsRequest
-      required: true
-    CreateCustomFieldRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/CreateCustomFieldRequest'
-      description: customField
-      required: true
-    UpdateCustomFieldMetaDataRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/UpdateCustomFieldMetaDataRequest'
-      description: request
-      required: true
-    ApplyRemoveTagRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ApplyRemoveTagRequest'
-      description: applyRemoveTagRequest
-      required: true
-  headers: null
-  securitySchemes:
-    oauth2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://accounts.infusionsoft.com/app/oauth/authorize
-          tokenUrl: https://api.infusionsoft.com/token
-          scopes: {
-            }

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DealAllOfCustomFields model module.
  * @module com.keap.sdk.core/model/DealAllOfCustomFields
- * @version 0.0.53
+ * @version 0.0.54
  */
 class DealAllOfCustomFields {
     /**

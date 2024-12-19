@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateProductInventoryRequest model module.
  * @module com.keap.sdk.core/model/UpdateProductInventoryRequest
- * @version 0.0.53
+ * @version 0.0.54
  */
 class UpdateProductInventoryRequest {
     /**

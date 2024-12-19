@@ -17,7 +17,7 @@ import BaseModel from './BaseModel';
 /**
  * The DealNote model module.
  * @module com.keap.sdk.core/model/DealNote
- * @version 0.0.53
+ * @version 0.0.54
  */
 class DealNote {
     /**

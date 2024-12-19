@@ -17,7 +17,7 @@ import CardInfo from './CardInfo';
 /**
  * The RestPaymentMethod model module.
  * @module com.keap.sdk.core/model/RestPaymentMethod
- * @version 0.0.53
+ * @version 0.0.54
  */
 class RestPaymentMethod {
     /**

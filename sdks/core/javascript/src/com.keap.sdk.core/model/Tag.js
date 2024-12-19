@@ -17,7 +17,7 @@ import CategoryReference from './CategoryReference';
 /**
  * The Tag model module.
  * @module com.keap.sdk.core/model/Tag
- * @version 0.0.52
+ * @version 0.0.53
  */
 class Tag {
     /**

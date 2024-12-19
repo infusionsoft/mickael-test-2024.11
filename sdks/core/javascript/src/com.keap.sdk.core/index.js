@@ -53,6 +53,12 @@ import ApplyTagsResponse from './model/ApplyTagsResponse';
 import Automation from './model/Automation';
 import AutomationCategory from './model/AutomationCategory';
 import AutomationLockStatus from './model/AutomationLockStatus';
+import BaseListResponseDeal from './model/BaseListResponseDeal';
+import BaseListResponseDealNote from './model/BaseListResponseDealNote';
+import BaseListResponsePipeline from './model/BaseListResponsePipeline';
+import BaseListResponsePipelineSummary from './model/BaseListResponsePipelineSummary';
+import BaseListResponseStage from './model/BaseListResponseStage';
+import BaseModel from './model/BaseModel';
 import BasicCompany from './model/BasicCompany';
 import BasicContact from './model/BasicContact';
 import BasicUser from './model/BasicUser';
@@ -80,6 +86,7 @@ import CreateContactUtmPropertiesRequest from './model/CreateContactUtmPropertie
 import CreateCustomFieldOptionRequest from './model/CreateCustomFieldOptionRequest';
 import CreateCustomFieldRequest from './model/CreateCustomFieldRequest';
 import CreateCustomFieldResponse from './model/CreateCustomFieldResponse';
+import CreateDealNoteRequest from './model/CreateDealNoteRequest';
 import CreateDefaultCommissionProgramRequest from './model/CreateDefaultCommissionProgramRequest';
 import CreateEmailSentRequest from './model/CreateEmailSentRequest';
 import CreateEmailsSentRequest from './model/CreateEmailsSentRequest';
@@ -97,11 +104,13 @@ import CreatePatchContactRequest from './model/CreatePatchContactRequest';
 import CreatePatchTaskRequest from './model/CreatePatchTaskRequest';
 import CreatePaymentMethodConfigRequest from './model/CreatePaymentMethodConfigRequest';
 import CreatePaymentRequest from './model/CreatePaymentRequest';
+import CreatePipelineRequest from './model/CreatePipelineRequest';
 import CreateProductCommissionProgramRequest from './model/CreateProductCommissionProgramRequest';
 import CreateProductRequest from './model/CreateProductRequest';
 import CreateReferralRequest from './model/CreateReferralRequest';
 import CreateRestOrderItemRequest from './model/CreateRestOrderItemRequest';
 import CreateShippingDiscountRequest from './model/CreateShippingDiscountRequest';
+import CreateStageRequest from './model/CreateStageRequest';
 import CreateSubscriptionCommissionProgramRequest from './model/CreateSubscriptionCommissionProgramRequest';
 import CreateSubscriptionV2 from './model/CreateSubscriptionV2';
 import CreateTaskRequest from './model/CreateTaskRequest';
@@ -115,6 +124,14 @@ import CustomField from './model/CustomField';
 import CustomFieldMetaData from './model/CustomFieldMetaData';
 import CustomFieldOption from './model/CustomFieldOption';
 import CustomFieldValue from './model/CustomFieldValue';
+import Deal from './model/Deal';
+import DealAllOfCustomFields from './model/DealAllOfCustomFields';
+import DealAllOfStage from './model/DealAllOfStage';
+import DealAllOfValue from './model/DealAllOfValue';
+import DealContact from './model/DealContact';
+import DealNote from './model/DealNote';
+import DealNoteListResponse from './model/DealNoteListResponse';
+import DealStatus from './model/DealStatus';
 import DefaultCommission from './model/DefaultCommission';
 import DeleteEmailsRequest from './model/DeleteEmailsRequest';
 import DeleteEmailsResponse from './model/DeleteEmailsResponse';
@@ -193,6 +210,7 @@ import ListTaggedContactsResponse from './model/ListTaggedContactsResponse';
 import ListTagsResponse from './model/ListTagsResponse';
 import ListTasksResponse from './model/ListTasksResponse';
 import ListUserResponse from './model/ListUserResponse';
+import Money from './model/Money';
 import Note from './model/Note';
 import NoteTemplate from './model/NoteTemplate';
 import ObjectModel from './model/ObjectModel';
@@ -203,6 +221,7 @@ import OrderItemTax from './model/OrderItemTax';
 import OrderTotalDiscount from './model/OrderTotalDiscount';
 import Origin from './model/Origin';
 import OriginRequest from './model/OriginRequest';
+import Owner from './model/Owner';
 import PatchAffiliateRequest from './model/PatchAffiliateRequest';
 import PatchBusinessProfileRequest from './model/PatchBusinessProfileRequest';
 import PatchCommissionProgramRequest from './model/PatchCommissionProgramRequest';
@@ -217,6 +236,13 @@ import PaymentMethodList from './model/PaymentMethodList';
 import PaymentPlan from './model/PaymentPlan';
 import PaymentResult from './model/PaymentResult';
 import PhoneNumber from './model/PhoneNumber';
+import Pipeline from './model/Pipeline';
+import PipelineListResponse from './model/PipelineListResponse';
+import PipelineOutcomeLabel from './model/PipelineOutcomeLabel';
+import PipelineOutcomeLabelListResponse from './model/PipelineOutcomeLabelListResponse';
+import PipelineStageListResponse from './model/PipelineStageListResponse';
+import PipelineSummariesListResponse from './model/PipelineSummariesListResponse';
+import PipelineSummary from './model/PipelineSummary';
 import ProductCommission from './model/ProductCommission';
 import ProductCommissionProgram from './model/ProductCommissionProgram';
 import ProductFixedOption from './model/ProductFixedOption';
@@ -256,7 +282,10 @@ import ShippingInformation from './model/ShippingInformation';
 import ShippingMethod from './model/ShippingMethod';
 import SocialAccount from './model/SocialAccount';
 import StackTraceElement from './model/StackTraceElement';
+import Stage from './model/Stage';
+import StageDealListResponse from './model/StageDealListResponse';
 import StageDetails from './model/StageDetails';
+import StageListResponse from './model/StageListResponse';
 import SubscriptionCommission from './model/SubscriptionCommission';
 import SubscriptionCommissionProgram from './model/SubscriptionCommissionProgram';
 import SubscriptionPlan from './model/SubscriptionPlan';
@@ -266,6 +295,7 @@ import Task from './model/Task';
 import Throwable from './model/Throwable';
 import UpdateAutomationCategoryRequest from './model/UpdateAutomationCategoryRequest';
 import UpdateCustomFieldMetaDataRequest from './model/UpdateCustomFieldMetaDataRequest';
+import UpdateDealNoteRequest from './model/UpdateDealNoteRequest';
 import UpdateEmailAddress from './model/UpdateEmailAddress';
 import UpdateFileRequest from './model/UpdateFileRequest';
 import UpdateNoteRequest from './model/UpdateNoteRequest';
@@ -273,8 +303,11 @@ import UpdateNoteResponse from './model/UpdateNoteResponse';
 import UpdateOpportunityStageChecklistItem from './model/UpdateOpportunityStageChecklistItem';
 import UpdateOpportunityStageRequest from './model/UpdateOpportunityStageRequest';
 import UpdateOrderTotalDiscountRequest from './model/UpdateOrderTotalDiscountRequest';
+import UpdateOutcomeLabelsRequest from './model/UpdateOutcomeLabelsRequest';
+import UpdatePipelineRequest from './model/UpdatePipelineRequest';
 import UpdateProductInventoryRequest from './model/UpdateProductInventoryRequest';
 import UpdateShippingDiscountRequest from './model/UpdateShippingDiscountRequest';
+import UpdateStageRequest from './model/UpdateStageRequest';
 import UpdateTagCategoryResponse from './model/UpdateTagCategoryResponse';
 import UpdateTagResponse from './model/UpdateTagResponse';
 import UpdateTaskResponse from './model/UpdateTaskResponse';
@@ -286,14 +319,17 @@ import BusinessProfileApi from './api/BusinessProfileApi';
 import CampaignApi from './api/CampaignApi';
 import CompanyApi from './api/CompanyApi';
 import ContactApi from './api/ContactApi';
+import DealsApi from './api/DealsApi';
 import EmailApi from './api/EmailApi';
 import EmailAddressApi from './api/EmailAddressApi';
 import NoteApi from './api/NoteApi';
 import OrdersApi from './api/OrdersApi';
 import PaymentMethodConfigApi from './api/PaymentMethodConfigApi';
+import PipelinesApi from './api/PipelinesApi';
 import ReportingApi from './api/ReportingApi';
 import SalesApi from './api/SalesApi';
 import SettingsApi from './api/SettingsApi';
+import StagesApi from './api/StagesApi';
 import SubscriptionsApi from './api/SubscriptionsApi';
 import TagsApi from './api/TagsApi';
 
@@ -327,7 +363,7 @@ import TagsApi from './api/TagsApi';
 * </pre>
 * </p>
 * @module com.keap.sdk.core/index
-* @version 0.0.52
+* @version 0.0.53
 */
 export {
     /**
@@ -577,6 +613,42 @@ export {
     AutomationLockStatus,
 
     /**
+     * The BaseListResponseDeal model constructor.
+     * @property {module:com.keap.sdk.core/model/BaseListResponseDeal}
+     */
+    BaseListResponseDeal,
+
+    /**
+     * The BaseListResponseDealNote model constructor.
+     * @property {module:com.keap.sdk.core/model/BaseListResponseDealNote}
+     */
+    BaseListResponseDealNote,
+
+    /**
+     * The BaseListResponsePipeline model constructor.
+     * @property {module:com.keap.sdk.core/model/BaseListResponsePipeline}
+     */
+    BaseListResponsePipeline,
+
+    /**
+     * The BaseListResponsePipelineSummary model constructor.
+     * @property {module:com.keap.sdk.core/model/BaseListResponsePipelineSummary}
+     */
+    BaseListResponsePipelineSummary,
+
+    /**
+     * The BaseListResponseStage model constructor.
+     * @property {module:com.keap.sdk.core/model/BaseListResponseStage}
+     */
+    BaseListResponseStage,
+
+    /**
+     * The BaseModel model constructor.
+     * @property {module:com.keap.sdk.core/model/BaseModel}
+     */
+    BaseModel,
+
+    /**
      * The BasicCompany model constructor.
      * @property {module:com.keap.sdk.core/model/BasicCompany}
      */
@@ -739,6 +811,12 @@ export {
     CreateCustomFieldResponse,
 
     /**
+     * The CreateDealNoteRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/CreateDealNoteRequest}
+     */
+    CreateDealNoteRequest,
+
+    /**
      * The CreateDefaultCommissionProgramRequest model constructor.
      * @property {module:com.keap.sdk.core/model/CreateDefaultCommissionProgramRequest}
      */
@@ -841,6 +919,12 @@ export {
     CreatePaymentRequest,
 
     /**
+     * The CreatePipelineRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/CreatePipelineRequest}
+     */
+    CreatePipelineRequest,
+
+    /**
      * The CreateProductCommissionProgramRequest model constructor.
      * @property {module:com.keap.sdk.core/model/CreateProductCommissionProgramRequest}
      */
@@ -869,6 +953,12 @@ export {
      * @property {module:com.keap.sdk.core/model/CreateShippingDiscountRequest}
      */
     CreateShippingDiscountRequest,
+
+    /**
+     * The CreateStageRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/CreateStageRequest}
+     */
+    CreateStageRequest,
 
     /**
      * The CreateSubscriptionCommissionProgramRequest model constructor.
@@ -947,6 +1037,54 @@ export {
      * @property {module:com.keap.sdk.core/model/CustomFieldValue}
      */
     CustomFieldValue,
+
+    /**
+     * The Deal model constructor.
+     * @property {module:com.keap.sdk.core/model/Deal}
+     */
+    Deal,
+
+    /**
+     * The DealAllOfCustomFields model constructor.
+     * @property {module:com.keap.sdk.core/model/DealAllOfCustomFields}
+     */
+    DealAllOfCustomFields,
+
+    /**
+     * The DealAllOfStage model constructor.
+     * @property {module:com.keap.sdk.core/model/DealAllOfStage}
+     */
+    DealAllOfStage,
+
+    /**
+     * The DealAllOfValue model constructor.
+     * @property {module:com.keap.sdk.core/model/DealAllOfValue}
+     */
+    DealAllOfValue,
+
+    /**
+     * The DealContact model constructor.
+     * @property {module:com.keap.sdk.core/model/DealContact}
+     */
+    DealContact,
+
+    /**
+     * The DealNote model constructor.
+     * @property {module:com.keap.sdk.core/model/DealNote}
+     */
+    DealNote,
+
+    /**
+     * The DealNoteListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/DealNoteListResponse}
+     */
+    DealNoteListResponse,
+
+    /**
+     * The DealStatus model constructor.
+     * @property {module:com.keap.sdk.core/model/DealStatus}
+     */
+    DealStatus,
 
     /**
      * The DefaultCommission model constructor.
@@ -1417,6 +1555,12 @@ export {
     ListUserResponse,
 
     /**
+     * The Money model constructor.
+     * @property {module:com.keap.sdk.core/model/Money}
+     */
+    Money,
+
+    /**
      * The Note model constructor.
      * @property {module:com.keap.sdk.core/model/Note}
      */
@@ -1475,6 +1619,12 @@ export {
      * @property {module:com.keap.sdk.core/model/OriginRequest}
      */
     OriginRequest,
+
+    /**
+     * The Owner model constructor.
+     * @property {module:com.keap.sdk.core/model/Owner}
+     */
+    Owner,
 
     /**
      * The PatchAffiliateRequest model constructor.
@@ -1559,6 +1709,48 @@ export {
      * @property {module:com.keap.sdk.core/model/PhoneNumber}
      */
     PhoneNumber,
+
+    /**
+     * The Pipeline model constructor.
+     * @property {module:com.keap.sdk.core/model/Pipeline}
+     */
+    Pipeline,
+
+    /**
+     * The PipelineListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/PipelineListResponse}
+     */
+    PipelineListResponse,
+
+    /**
+     * The PipelineOutcomeLabel model constructor.
+     * @property {module:com.keap.sdk.core/model/PipelineOutcomeLabel}
+     */
+    PipelineOutcomeLabel,
+
+    /**
+     * The PipelineOutcomeLabelListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/PipelineOutcomeLabelListResponse}
+     */
+    PipelineOutcomeLabelListResponse,
+
+    /**
+     * The PipelineStageListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/PipelineStageListResponse}
+     */
+    PipelineStageListResponse,
+
+    /**
+     * The PipelineSummariesListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/PipelineSummariesListResponse}
+     */
+    PipelineSummariesListResponse,
+
+    /**
+     * The PipelineSummary model constructor.
+     * @property {module:com.keap.sdk.core/model/PipelineSummary}
+     */
+    PipelineSummary,
 
     /**
      * The ProductCommission model constructor.
@@ -1795,10 +1987,28 @@ export {
     StackTraceElement,
 
     /**
+     * The Stage model constructor.
+     * @property {module:com.keap.sdk.core/model/Stage}
+     */
+    Stage,
+
+    /**
+     * The StageDealListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/StageDealListResponse}
+     */
+    StageDealListResponse,
+
+    /**
      * The StageDetails model constructor.
      * @property {module:com.keap.sdk.core/model/StageDetails}
      */
     StageDetails,
+
+    /**
+     * The StageListResponse model constructor.
+     * @property {module:com.keap.sdk.core/model/StageListResponse}
+     */
+    StageListResponse,
 
     /**
      * The SubscriptionCommission model constructor.
@@ -1855,6 +2065,12 @@ export {
     UpdateCustomFieldMetaDataRequest,
 
     /**
+     * The UpdateDealNoteRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/UpdateDealNoteRequest}
+     */
+    UpdateDealNoteRequest,
+
+    /**
      * The UpdateEmailAddress model constructor.
      * @property {module:com.keap.sdk.core/model/UpdateEmailAddress}
      */
@@ -1897,6 +2113,18 @@ export {
     UpdateOrderTotalDiscountRequest,
 
     /**
+     * The UpdateOutcomeLabelsRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/UpdateOutcomeLabelsRequest}
+     */
+    UpdateOutcomeLabelsRequest,
+
+    /**
+     * The UpdatePipelineRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/UpdatePipelineRequest}
+     */
+    UpdatePipelineRequest,
+
+    /**
      * The UpdateProductInventoryRequest model constructor.
      * @property {module:com.keap.sdk.core/model/UpdateProductInventoryRequest}
      */
@@ -1907,6 +2135,12 @@ export {
      * @property {module:com.keap.sdk.core/model/UpdateShippingDiscountRequest}
      */
     UpdateShippingDiscountRequest,
+
+    /**
+     * The UpdateStageRequest model constructor.
+     * @property {module:com.keap.sdk.core/model/UpdateStageRequest}
+     */
+    UpdateStageRequest,
 
     /**
      * The UpdateTagCategoryResponse model constructor.
@@ -1975,6 +2209,12 @@ export {
     ContactApi,
 
     /**
+    * The DealsApi service constructor.
+    * @property {module:com.keap.sdk.core/api/DealsApi}
+    */
+    DealsApi,
+
+    /**
     * The EmailApi service constructor.
     * @property {module:com.keap.sdk.core/api/EmailApi}
     */
@@ -2005,6 +2245,12 @@ export {
     PaymentMethodConfigApi,
 
     /**
+    * The PipelinesApi service constructor.
+    * @property {module:com.keap.sdk.core/api/PipelinesApi}
+    */
+    PipelinesApi,
+
+    /**
     * The ReportingApi service constructor.
     * @property {module:com.keap.sdk.core/api/ReportingApi}
     */
@@ -2021,6 +2267,12 @@ export {
     * @property {module:com.keap.sdk.core/api/SettingsApi}
     */
     SettingsApi,
+
+    /**
+    * The StagesApi service constructor.
+    * @property {module:com.keap.sdk.core/api/StagesApi}
+    */
+    StagesApi,
 
     /**
     * The SubscriptionsApi service constructor.

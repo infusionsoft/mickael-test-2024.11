@@ -14,7 +14,7 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-__version__ = "0.0.52"
+__version__ = "0.0.53"
 
 # import apis into sdk package
 from keap_sdk_core_client.api.affiliate_api import AffiliateApi
@@ -24,14 +24,17 @@ from keap_sdk_core_client.api.business_profile_api import BusinessProfileApi
 from keap_sdk_core_client.api.campaign_api import CampaignApi
 from keap_sdk_core_client.api.company_api import CompanyApi
 from keap_sdk_core_client.api.contact_api import ContactApi
+from keap_sdk_core_client.api.deals_api import DealsApi
 from keap_sdk_core_client.api.email_api import EmailApi
 from keap_sdk_core_client.api.email_address_api import EmailAddressApi
 from keap_sdk_core_client.api.note_api import NoteApi
 from keap_sdk_core_client.api.orders_api import OrdersApi
 from keap_sdk_core_client.api.payment_method_config_api import PaymentMethodConfigApi
+from keap_sdk_core_client.api.pipelines_api import PipelinesApi
 from keap_sdk_core_client.api.reporting_api import ReportingApi
 from keap_sdk_core_client.api.sales_api import SalesApi
 from keap_sdk_core_client.api.settings_api import SettingsApi
+from keap_sdk_core_client.api.stages_api import StagesApi
 from keap_sdk_core_client.api.subscriptions_api import SubscriptionsApi
 from keap_sdk_core_client.api.tags_api import TagsApi
 
@@ -87,6 +90,12 @@ from keap_sdk_core_client.models.apply_tags_response import ApplyTagsResponse
 from keap_sdk_core_client.models.automation import Automation
 from keap_sdk_core_client.models.automation_category import AutomationCategory
 from keap_sdk_core_client.models.automation_lock_status import AutomationLockStatus
+from keap_sdk_core_client.models.base_list_response_deal import BaseListResponseDeal
+from keap_sdk_core_client.models.base_list_response_deal_note import BaseListResponseDealNote
+from keap_sdk_core_client.models.base_list_response_pipeline import BaseListResponsePipeline
+from keap_sdk_core_client.models.base_list_response_pipeline_summary import BaseListResponsePipelineSummary
+from keap_sdk_core_client.models.base_list_response_stage import BaseListResponseStage
+from keap_sdk_core_client.models.base_model import BaseModel
 from keap_sdk_core_client.models.basic_company import BasicCompany
 from keap_sdk_core_client.models.basic_contact import BasicContact
 from keap_sdk_core_client.models.basic_user import BasicUser
@@ -114,6 +123,7 @@ from keap_sdk_core_client.models.create_contact_utm_properties_request import Cr
 from keap_sdk_core_client.models.create_custom_field_option_request import CreateCustomFieldOptionRequest
 from keap_sdk_core_client.models.create_custom_field_request import CreateCustomFieldRequest
 from keap_sdk_core_client.models.create_custom_field_response import CreateCustomFieldResponse
+from keap_sdk_core_client.models.create_deal_note_request import CreateDealNoteRequest
 from keap_sdk_core_client.models.create_default_commission_program_request import CreateDefaultCommissionProgramRequest
 from keap_sdk_core_client.models.create_email_sent_request import CreateEmailSentRequest
 from keap_sdk_core_client.models.create_emails_sent_request import CreateEmailsSentRequest
@@ -131,11 +141,13 @@ from keap_sdk_core_client.models.create_patch_contact_request import CreatePatch
 from keap_sdk_core_client.models.create_patch_task_request import CreatePatchTaskRequest
 from keap_sdk_core_client.models.create_payment_method_config_request import CreatePaymentMethodConfigRequest
 from keap_sdk_core_client.models.create_payment_request import CreatePaymentRequest
+from keap_sdk_core_client.models.create_pipeline_request import CreatePipelineRequest
 from keap_sdk_core_client.models.create_product_commission_program_request import CreateProductCommissionProgramRequest
 from keap_sdk_core_client.models.create_product_request import CreateProductRequest
 from keap_sdk_core_client.models.create_referral_request import CreateReferralRequest
 from keap_sdk_core_client.models.create_rest_order_item_request import CreateRestOrderItemRequest
 from keap_sdk_core_client.models.create_shipping_discount_request import CreateShippingDiscountRequest
+from keap_sdk_core_client.models.create_stage_request import CreateStageRequest
 from keap_sdk_core_client.models.create_subscription_commission_program_request import CreateSubscriptionCommissionProgramRequest
 from keap_sdk_core_client.models.create_subscription_v2 import CreateSubscriptionV2
 from keap_sdk_core_client.models.create_task_request import CreateTaskRequest
@@ -149,6 +161,14 @@ from keap_sdk_core_client.models.custom_field import CustomField
 from keap_sdk_core_client.models.custom_field_meta_data import CustomFieldMetaData
 from keap_sdk_core_client.models.custom_field_option import CustomFieldOption
 from keap_sdk_core_client.models.custom_field_value import CustomFieldValue
+from keap_sdk_core_client.models.deal import Deal
+from keap_sdk_core_client.models.deal_all_of_custom_fields import DealAllOfCustomFields
+from keap_sdk_core_client.models.deal_all_of_stage import DealAllOfStage
+from keap_sdk_core_client.models.deal_all_of_value import DealAllOfValue
+from keap_sdk_core_client.models.deal_contact import DealContact
+from keap_sdk_core_client.models.deal_note import DealNote
+from keap_sdk_core_client.models.deal_note_list_response import DealNoteListResponse
+from keap_sdk_core_client.models.deal_status import DealStatus
 from keap_sdk_core_client.models.default_commission import DefaultCommission
 from keap_sdk_core_client.models.delete_emails_request import DeleteEmailsRequest
 from keap_sdk_core_client.models.delete_emails_response import DeleteEmailsResponse
@@ -227,6 +247,7 @@ from keap_sdk_core_client.models.list_tagged_contacts_response import ListTagged
 from keap_sdk_core_client.models.list_tags_response import ListTagsResponse
 from keap_sdk_core_client.models.list_tasks_response import ListTasksResponse
 from keap_sdk_core_client.models.list_user_response import ListUserResponse
+from keap_sdk_core_client.models.money import Money
 from keap_sdk_core_client.models.note import Note
 from keap_sdk_core_client.models.note_template import NoteTemplate
 from keap_sdk_core_client.models.object_model import ObjectModel
@@ -237,6 +258,7 @@ from keap_sdk_core_client.models.order_item_tax import OrderItemTax
 from keap_sdk_core_client.models.order_total_discount import OrderTotalDiscount
 from keap_sdk_core_client.models.origin import Origin
 from keap_sdk_core_client.models.origin_request import OriginRequest
+from keap_sdk_core_client.models.owner import Owner
 from keap_sdk_core_client.models.patch_affiliate_request import PatchAffiliateRequest
 from keap_sdk_core_client.models.patch_business_profile_request import PatchBusinessProfileRequest
 from keap_sdk_core_client.models.patch_commission_program_request import PatchCommissionProgramRequest
@@ -251,6 +273,13 @@ from keap_sdk_core_client.models.payment_method_list import PaymentMethodList
 from keap_sdk_core_client.models.payment_plan import PaymentPlan
 from keap_sdk_core_client.models.payment_result import PaymentResult
 from keap_sdk_core_client.models.phone_number import PhoneNumber
+from keap_sdk_core_client.models.pipeline import Pipeline
+from keap_sdk_core_client.models.pipeline_list_response import PipelineListResponse
+from keap_sdk_core_client.models.pipeline_outcome_label import PipelineOutcomeLabel
+from keap_sdk_core_client.models.pipeline_outcome_label_list_response import PipelineOutcomeLabelListResponse
+from keap_sdk_core_client.models.pipeline_stage_list_response import PipelineStageListResponse
+from keap_sdk_core_client.models.pipeline_summaries_list_response import PipelineSummariesListResponse
+from keap_sdk_core_client.models.pipeline_summary import PipelineSummary
 from keap_sdk_core_client.models.product_commission import ProductCommission
 from keap_sdk_core_client.models.product_commission_program import ProductCommissionProgram
 from keap_sdk_core_client.models.product_fixed_option import ProductFixedOption
@@ -290,7 +319,10 @@ from keap_sdk_core_client.models.shipping_information import ShippingInformation
 from keap_sdk_core_client.models.shipping_method import ShippingMethod
 from keap_sdk_core_client.models.social_account import SocialAccount
 from keap_sdk_core_client.models.stack_trace_element import StackTraceElement
+from keap_sdk_core_client.models.stage import Stage
+from keap_sdk_core_client.models.stage_deal_list_response import StageDealListResponse
 from keap_sdk_core_client.models.stage_details import StageDetails
+from keap_sdk_core_client.models.stage_list_response import StageListResponse
 from keap_sdk_core_client.models.subscription_commission import SubscriptionCommission
 from keap_sdk_core_client.models.subscription_commission_program import SubscriptionCommissionProgram
 from keap_sdk_core_client.models.subscription_plan import SubscriptionPlan
@@ -300,6 +332,7 @@ from keap_sdk_core_client.models.task import Task
 from keap_sdk_core_client.models.throwable import Throwable
 from keap_sdk_core_client.models.update_automation_category_request import UpdateAutomationCategoryRequest
 from keap_sdk_core_client.models.update_custom_field_meta_data_request import UpdateCustomFieldMetaDataRequest
+from keap_sdk_core_client.models.update_deal_note_request import UpdateDealNoteRequest
 from keap_sdk_core_client.models.update_email_address import UpdateEmailAddress
 from keap_sdk_core_client.models.update_file_request import UpdateFileRequest
 from keap_sdk_core_client.models.update_note_request import UpdateNoteRequest
@@ -307,8 +340,11 @@ from keap_sdk_core_client.models.update_note_response import UpdateNoteResponse
 from keap_sdk_core_client.models.update_opportunity_stage_checklist_item import UpdateOpportunityStageChecklistItem
 from keap_sdk_core_client.models.update_opportunity_stage_request import UpdateOpportunityStageRequest
 from keap_sdk_core_client.models.update_order_total_discount_request import UpdateOrderTotalDiscountRequest
+from keap_sdk_core_client.models.update_outcome_labels_request import UpdateOutcomeLabelsRequest
+from keap_sdk_core_client.models.update_pipeline_request import UpdatePipelineRequest
 from keap_sdk_core_client.models.update_product_inventory_request import UpdateProductInventoryRequest
 from keap_sdk_core_client.models.update_shipping_discount_request import UpdateShippingDiscountRequest
+from keap_sdk_core_client.models.update_stage_request import UpdateStageRequest
 from keap_sdk_core_client.models.update_tag_category_response import UpdateTagCategoryResponse
 from keap_sdk_core_client.models.update_tag_response import UpdateTagResponse
 from keap_sdk_core_client.models.update_task_response import UpdateTaskResponse

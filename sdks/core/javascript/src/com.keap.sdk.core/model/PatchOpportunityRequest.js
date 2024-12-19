@@ -17,7 +17,7 @@ import CustomField from './CustomField';
 /**
  * The PatchOpportunityRequest model module.
  * @module com.keap.sdk.core/model/PatchOpportunityRequest
- * @version 0.0.52
+ * @version 0.0.53
  */
 class PatchOpportunityRequest {
     /**

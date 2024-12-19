@@ -1,0 +1,9 @@
+# KeapCoreServiceCoreSdk.BaseModel
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique identifier for the model. | [optional] 
+
+

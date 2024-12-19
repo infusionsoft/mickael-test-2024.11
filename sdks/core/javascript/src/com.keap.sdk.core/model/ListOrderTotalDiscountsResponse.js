@@ -17,7 +17,7 @@ import OrderTotalDiscount from './OrderTotalDiscount';
 /**
  * The ListOrderTotalDiscountsResponse model module.
  * @module com.keap.sdk.core/model/ListOrderTotalDiscountsResponse
- * @version 0.0.52
+ * @version 0.0.53
  */
 class ListOrderTotalDiscountsResponse {
     /**

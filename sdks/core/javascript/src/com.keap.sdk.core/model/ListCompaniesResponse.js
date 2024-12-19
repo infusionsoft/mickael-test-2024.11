@@ -17,7 +17,7 @@ import Company from './Company';
 /**
  * The ListCompaniesResponse model module.
  * @module com.keap.sdk.core/model/ListCompaniesResponse
- * @version 0.0.52
+ * @version 0.0.53
  */
 class ListCompaniesResponse {
     /**

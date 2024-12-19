@@ -20,7 +20,7 @@ import PaymentResult from '../model/PaymentResult';
 /**
 * Orders service.
 * @module com.keap.sdk.core/api/OrdersApi
-* @version 0.0.55
+* @version 0.0.56
 */
 export default class OrdersApi {
 

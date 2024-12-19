@@ -26,7 +26,7 @@ import SocialAccount from './SocialAccount';
 /**
  * The Contact model module.
  * @module com.keap.sdk.core/model/Contact
- * @version 0.0.55
+ * @version 0.0.56
  */
 class Contact {
     /**

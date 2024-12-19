@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleTask model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleTask
- * @version 0.0.55
+ * @version 0.0.56
  */
 class ApplicationConfigurationModuleTask {
     /**

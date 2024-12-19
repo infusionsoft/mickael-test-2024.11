@@ -19,7 +19,7 @@ import ReportExecutionResult from '../model/ReportExecutionResult';
 /**
 * Reporting service.
 * @module com.keap.sdk.core/api/ReportingApi
-* @version 0.0.55
+* @version 0.0.56
 */
 export default class ReportingApi {
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetApplicationEnabledStatusResponse model module.
  * @module com.keap.sdk.core/model/GetApplicationEnabledStatusResponse
- * @version 0.0.55
+ * @version 0.0.56
  */
 class GetApplicationEnabledStatusResponse {
     /**

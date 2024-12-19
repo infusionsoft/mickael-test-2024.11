@@ -1,6 +1,6 @@
 # EmailApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -40,7 +40,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         CreateEmailSentRequest createEmailSentRequest = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
@@ -108,7 +108,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         CreateEmailSentRequest createEmailSentRequest = new CreateEmailSentRequest(); // CreateEmailSentRequest | emailWithContent
@@ -178,7 +178,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         CreateEmailsSentRequest createEmailsSentRequest = new CreateEmailsSentRequest(); // CreateEmailsSentRequest | Email records to persist, with content.
@@ -246,7 +246,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         CreateEmailsSentRequest createEmailsSentRequest = new CreateEmailsSentRequest(); // CreateEmailsSentRequest | Email records to persist, with content.
@@ -316,7 +316,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         String id = "id_example"; // String | id
@@ -384,7 +384,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         String id = "id_example"; // String | id
@@ -454,7 +454,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         DeleteEmailsRequest deleteEmailsRequest = new DeleteEmailsRequest(); // DeleteEmailsRequest | deleteEmailsRequest
@@ -522,7 +522,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         DeleteEmailsRequest deleteEmailsRequest = new DeleteEmailsRequest(); // DeleteEmailsRequest | deleteEmailsRequest
@@ -592,7 +592,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         String id = "id_example"; // String | id
@@ -661,7 +661,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         String id = "id_example"; // String | id
@@ -732,7 +732,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         EmailSendRequest emailSendRequest = new EmailSendRequest(); // EmailSendRequest | emailSendRequest
@@ -799,7 +799,7 @@ import com.keap.sdk.sdk.client.EmailApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailApi apiInstance = new EmailApi(defaultClient);
         EmailSendRequest emailSendRequest = new EmailSendRequest(); // EmailSendRequest | emailSendRequest

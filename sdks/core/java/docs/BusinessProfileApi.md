@@ -1,6 +1,6 @@
 # BusinessProfileApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -32,7 +32,7 @@ import com.keap.sdk.sdk.client.BusinessProfileApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         try {
@@ -97,7 +97,7 @@ import com.keap.sdk.sdk.client.BusinessProfileApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         try {
@@ -164,7 +164,7 @@ import com.keap.sdk.sdk.client.BusinessProfileApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
@@ -235,7 +235,7 @@ import com.keap.sdk.sdk.client.BusinessProfileApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.

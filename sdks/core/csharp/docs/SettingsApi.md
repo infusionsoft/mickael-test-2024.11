@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.SettingsApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -31,7 +31,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new SettingsApi(config);
             var fields = new List<string>?(); // List<string>? | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. (optional) 
 
@@ -125,7 +125,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new SettingsApi(config);
 
             try
@@ -214,7 +214,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new SettingsApi(config);
 
             try

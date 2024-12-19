@@ -1,6 +1,6 @@
 # AffiliateApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -36,7 +36,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         CreateAffiliateRequest createAffiliateRequest = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
@@ -104,7 +104,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         CreateAffiliateRequest createAffiliateRequest = new CreateAffiliateRequest(); // CreateAffiliateRequest | Affiliate request to insert
@@ -174,7 +174,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
@@ -243,7 +243,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
@@ -314,7 +314,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
@@ -387,7 +387,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String commissionProgramId = "commissionProgramId_example"; // String | commission_program_id
@@ -462,7 +462,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id
@@ -533,7 +533,7 @@ import com.keap.sdk.sdk.client.AffiliateApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AffiliateApi apiInstance = new AffiliateApi(defaultClient);
         String id = "id_example"; // String | id

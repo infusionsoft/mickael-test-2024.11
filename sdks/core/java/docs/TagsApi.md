@@ -1,6 +1,6 @@
 # TagsApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -56,7 +56,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -126,7 +126,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -198,7 +198,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
@@ -266,7 +266,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
@@ -336,7 +336,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
@@ -404,7 +404,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
@@ -474,7 +474,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
@@ -542,7 +542,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
@@ -612,7 +612,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -680,7 +680,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -750,7 +750,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
@@ -819,7 +819,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
@@ -890,7 +890,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -959,7 +959,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1030,7 +1030,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1107,7 +1107,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1186,7 +1186,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1263,7 +1263,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1342,7 +1342,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String filter = "filter_example"; // String | Search filter to apply to results
@@ -1417,7 +1417,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String filter = "filter_example"; // String | Search filter to apply to results
@@ -1494,7 +1494,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String filter = "filter_example"; // String | Search filter to apply to results
@@ -1569,7 +1569,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String filter = "filter_example"; // String | Search filter to apply to results
@@ -1646,7 +1646,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
@@ -1719,7 +1719,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
@@ -1794,7 +1794,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1867,7 +1867,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -1942,7 +1942,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id
@@ -2011,7 +2011,7 @@ import com.keap.sdk.sdk.client.TagsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         TagsApi apiInstance = new TagsApi(defaultClient);
         String tagId = "tagId_example"; // String | tag_id

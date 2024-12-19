@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.51</version>
+  <version>0.0.52</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.51"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.52"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.51.jar`
+- `target/core-service-core-java-sdk-0.0.52.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -104,7 +104,7 @@ public class AffiliateApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -187,7 +187,7 @@ class Configuration:
     ) -> None:
         """Constructor
         """
-        self._base_path = "https://api.infusionsoft.com/crm/rest/app" if host is None else host
+        self._base_path = "https://api.keap.com/crm/rest" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -503,7 +503,7 @@ class Configuration:
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 2.70.0.752995\n"\
-               "SDK Package Version: 0.0.51".\
+               "SDK Package Version: 0.0.52".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self) -> List[HostSetting]:
@@ -513,7 +513,7 @@ class Configuration:
         """
         return [
             {
-                'url': "https://api.infusionsoft.com/crm/rest/app",
+                'url': "https://api.keap.com/crm/rest",
                 'description': "No description provided",
             }
         ]

@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.AffiliateApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -32,7 +32,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new AffiliateApi(config);
             var createAffiliateRequest = new CreateAffiliateRequest?(); // CreateAffiliateRequest? | Affiliate request to insert (optional) 
 
@@ -125,7 +125,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new AffiliateApi(config);
             var id = "id_example";  // string | id
 
@@ -219,7 +219,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new AffiliateApi(config);
             var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
             var patchCommissionProgramRequest = new PatchCommissionProgramRequest(); // PatchCommissionProgramRequest | patchCommissionProgramRequest
@@ -317,7 +317,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new AffiliateApi(config);
             var id = "id_example";  // string | id
             var patchAffiliateRequest = new PatchAffiliateRequest?(); // PatchAffiliateRequest? | Affiliate request to patch (optional) 

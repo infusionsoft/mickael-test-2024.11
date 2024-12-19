@@ -1,6 +1,6 @@
 # SubscriptionsApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -30,7 +30,7 @@ import com.keap.sdk.sdk.client.SubscriptionsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
         CreateSubscriptionV2 createSubscriptionV2 = new CreateSubscriptionV2(); // CreateSubscriptionV2 | createSubscriptionV2
@@ -98,7 +98,7 @@ import com.keap.sdk.sdk.client.SubscriptionsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SubscriptionsApi apiInstance = new SubscriptionsApi(defaultClient);
         CreateSubscriptionV2 createSubscriptionV2 = new CreateSubscriptionV2(); // CreateSubscriptionV2 | createSubscriptionV2

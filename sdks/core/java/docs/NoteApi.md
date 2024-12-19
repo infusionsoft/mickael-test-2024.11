@@ -1,6 +1,6 @@
 # NoteApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -38,7 +38,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -108,7 +108,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -180,7 +180,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -250,7 +250,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -322,7 +322,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -393,7 +393,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -466,7 +466,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -543,7 +543,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -622,7 +622,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -697,7 +697,7 @@ import com.keap.sdk.sdk.client.NoteApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         NoteApi apiInstance = new NoteApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id

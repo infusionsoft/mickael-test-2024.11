@@ -1,6 +1,6 @@
 # keap_sdk_core_client.ContactApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,10 +35,10 @@ from keap_sdk_core_client.models.create_contact_link_type_request import CreateC
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -104,10 +104,10 @@ from keap_sdk_core_client.models.create_patch_contact_request import CreatePatch
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -171,10 +171,10 @@ import keap_sdk_core_client
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -238,10 +238,10 @@ from keap_sdk_core_client.models.contact import Contact
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -310,10 +310,10 @@ from keap_sdk_core_client.models.link_contacts_request import LinkContactsReques
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -378,10 +378,10 @@ from keap_sdk_core_client.models.list_contact_link_types_response import ListCon
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -453,10 +453,10 @@ from keap_sdk_core_client.models.list_contact_links_response import ListContactL
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -522,10 +522,10 @@ from keap_sdk_core_client.models.list_contacts_response import ListContactsRespo
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -599,10 +599,10 @@ from keap_sdk_core_client.models.payment_method_list import PaymentMethodList
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -669,10 +669,10 @@ from keap_sdk_core_client.models.create_patch_contact_request import CreatePatch
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -742,10 +742,10 @@ from keap_sdk_core_client.models.object_model import ObjectModel
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client
@@ -807,10 +807,10 @@ from keap_sdk_core_client.models.link_contacts_request import LinkContactsReques
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.infusionsoft.com/crm/rest/app
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
 # See configuration.py for a list of all supported configuration parameters.
 configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.infusionsoft.com/crm/rest/app"
+    host = "https://api.keap.com/crm/rest"
 )
 
 # Enter a context with an instance of the API client

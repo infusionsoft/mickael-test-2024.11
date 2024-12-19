@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.ReportingApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -29,7 +29,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ReportingApi(config);
             var reportId = "reportId_example";  // string | The unique identifier of the report (Saved Search) to execute
             var fields = "fields_example";  // string? | Comma-separated list of fields to return (or do not supply a value to return all) (optional) 

@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.ContactApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -40,7 +40,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var createContactLinkTypeRequest = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
 
@@ -133,7 +133,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var createPatchContactRequest = new CreatePatchContactRequest?(); // CreatePatchContactRequest? | contact (optional) 
 
@@ -226,7 +226,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var contactId = "contactId_example";  // string | contact_id
 
@@ -316,7 +316,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var fields = new List<string>?(); // List<string>? | Comma-delimited list of Contact properties to include in the response. (Available fields are: `score_value`, `addresses`, `anniversary`, `birthday`, `company`, `contact_type`, `custom_fields`, `create_time`, `email_addresses`, `fax_numbers`, `job_title`, `update_time`, `create_time`, `leadsource_id`,`middle_name`, `origin`, `owner_id`, `phone_numbers`, `preferred_locale`, `preferred_name`,`prefix`, `relationships`, `social_accounts`, `source_type`, `spouse_name`, `suffix`, `time_zone`,`website`, `tag_ids`, `utm_parameters`) (optional) 
@@ -412,7 +412,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var linkContactsRequest = new LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
 
@@ -505,7 +505,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var filter = "name";  // string? | Search filter to apply to results. Formatted as (unencoded) ?filter=name==expectedValue (optional) 
             var orderBy = "orderBy_example";  // string? |  (optional) 
@@ -605,7 +605,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var contactId = "contactId_example";  // string | contact_id
 
@@ -699,7 +699,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var fields = new List<string>?(); // List<string>? | Comma-delimited list of Contact properties to include in the response. (Available fields are: `score_value`, `addresses`, `anniversary`, `birthday`, `company`, `contact_type`, `custom_fields`, `create_time`, `email_addresses`, `fax_numbers`, `job_title`, `update_time`, `create_time`, `leadsource_id`,`middle_name`, `origin`, `owner_id`, `phone_numbers`, `preferred_locale`, `preferred_name`,`prefix`, `relationships`, `social_accounts`, `source_type`, `spouse_name`, `suffix`, `time_zone`,`website`, `tag_ids`, `utm_parameters`) (optional) 
             var filter = "filter_example";  // string? | Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:   - `filter=given_name%3D%3DMary`  - `filter=company_id%3D%3D123`  - `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith`   (optional) 
@@ -801,7 +801,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var contactId = 789L;  // long | contact_id
 
@@ -895,7 +895,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
@@ -993,7 +993,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
 
             try
@@ -1082,7 +1082,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var linkContactsRequest = new LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
 

@@ -1,6 +1,6 @@
 # CompanyApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -38,7 +38,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         CreateCompanyRequest createCompanyRequest = new CreateCompanyRequest(); // CreateCompanyRequest | company
@@ -106,7 +106,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         CreateCompanyRequest createCompanyRequest = new CreateCompanyRequest(); // CreateCompanyRequest | company
@@ -176,7 +176,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
@@ -244,7 +244,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
@@ -314,7 +314,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
@@ -385,7 +385,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
@@ -458,7 +458,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Company properties to include in the response. (Fields such as `notes`, `fax_number` and `custom_fields` aren't included, by default.)
@@ -535,7 +535,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Company properties to include in the response. (Fields such as `notes`, `fax_number` and `custom_fields` aren't included, by default.)
@@ -614,7 +614,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
@@ -687,7 +687,7 @@ import com.keap.sdk.sdk.client.CompanyApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id

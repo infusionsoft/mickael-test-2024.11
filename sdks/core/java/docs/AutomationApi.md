@@ -1,6 +1,6 @@
 # AutomationApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -40,7 +40,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String automationId = "automationId_example"; // String | automation_id
@@ -112,7 +112,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String automationId = "automationId_example"; // String | automation_id
@@ -186,7 +186,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         List<Long> automationIds = Arrays.asList(); // List<Long> | automation_ids
@@ -254,7 +254,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         List<Long> automationIds = Arrays.asList(); // List<Long> | automation_ids
@@ -324,7 +324,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String automationId = "automationId_example"; // String | automation_id
@@ -393,7 +393,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String automationId = "automationId_example"; // String | automation_id
@@ -464,7 +464,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String filter = "filter_example"; // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.   - `filter=name%3D%3DSpring Automation`  - `filter=name%3D%3DTag New Contacts`  
@@ -541,7 +541,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String filter = "filter_example"; // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.   - `filter=name%3D%3DSpring Automation`  - `filter=name%3D%3DTag New Contacts`  
@@ -620,7 +620,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String filter = "filter_example"; // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.   - `filter=name%3D%3DSpring Automation`  - `filter=name%3D%3DTag New Contacts`  
@@ -697,7 +697,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         String filter = "filter_example"; // String | Filter to apply, allowed fields are:   - (String) name    You will need to apply the `==` operator to check the equality of the filter with your searched  text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.   - `filter=name%3D%3DSpring Automation`  - `filter=name%3D%3DTag New Contacts`  
@@ -776,7 +776,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         UpdateAutomationCategoryRequest updateAutomationCategoryRequest = new UpdateAutomationCategoryRequest(); // UpdateAutomationCategoryRequest | updateAutomationCategoryRequest
@@ -844,7 +844,7 @@ import com.keap.sdk.sdk.client.AutomationApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         AutomationApi apiInstance = new AutomationApi(defaultClient);
         UpdateAutomationCategoryRequest updateAutomationCategoryRequest = new UpdateAutomationCategoryRequest(); // UpdateAutomationCategoryRequest | updateAutomationCategoryRequest

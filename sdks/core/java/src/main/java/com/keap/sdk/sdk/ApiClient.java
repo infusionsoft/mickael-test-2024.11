@@ -227,7 +227,7 @@ import java.util.Objects;
   }
 
   protected String getDefaultBaseUri() {
-    return "https://api.infusionsoft.com/crm/rest/app";
+    return "https://api.keap.com/crm/rest";
   }
 
   protected HttpClient.Builder createDefaultHttpClientBuilder() {

@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.EmailAddressApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new EmailAddressApi(config);
             var email = "email_example";  // string | email
 
@@ -124,7 +124,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new EmailAddressApi(config);
             var email = "email_example";  // string | email
             var updateEmailAddress = new UpdateEmailAddress(); // UpdateEmailAddress | updateEmailAddress

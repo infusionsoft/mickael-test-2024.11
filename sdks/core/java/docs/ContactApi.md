@@ -1,6 +1,6 @@
 # ContactApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -52,7 +52,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         CreateContactLinkTypeRequest createContactLinkTypeRequest = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
@@ -120,7 +120,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         CreateContactLinkTypeRequest createContactLinkTypeRequest = new CreateContactLinkTypeRequest(); // CreateContactLinkTypeRequest | request
@@ -190,7 +190,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         CreatePatchContactRequest createPatchContactRequest = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
@@ -258,7 +258,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         CreatePatchContactRequest createPatchContactRequest = new CreatePatchContactRequest(); // CreatePatchContactRequest | contact
@@ -328,7 +328,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -396,7 +396,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -466,7 +466,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -537,7 +537,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -610,7 +610,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         LinkContactsRequest linkContactsRequest = new LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
@@ -678,7 +678,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         LinkContactsRequest linkContactsRequest = new LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
@@ -748,7 +748,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String filter = "name"; // String | Search filter to apply to results. Formatted as (unencoded) ?filter=name==expectedValue
@@ -823,7 +823,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String filter = "name"; // String | Search filter to apply to results. Formatted as (unencoded) ?filter=name==expectedValue
@@ -900,7 +900,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -969,7 +969,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -1040,7 +1040,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: `score_value`, `addresses`, `anniversary`, `birthday`, `company`, `contact_type`, `custom_fields`, `create_time`, `email_addresses`, `fax_numbers`, `job_title`, `update_time`, `create_time`, `leadsource_id`,`middle_name`, `origin`, `owner_id`, `phone_numbers`, `preferred_locale`, `preferred_name`,`prefix`, `relationships`, `social_accounts`, `source_type`, `spouse_name`, `suffix`, `time_zone`,`website`, `tag_ids`, `utm_parameters`)
@@ -1117,7 +1117,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: `score_value`, `addresses`, `anniversary`, `birthday`, `company`, `contact_type`, `custom_fields`, `create_time`, `email_addresses`, `fax_numbers`, `job_title`, `update_time`, `create_time`, `leadsource_id`,`middle_name`, `origin`, `owner_id`, `phone_numbers`, `preferred_locale`, `preferred_name`,`prefix`, `relationships`, `social_accounts`, `source_type`, `spouse_name`, `suffix`, `time_zone`,`website`, `tag_ids`, `utm_parameters`)
@@ -1196,7 +1196,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         Long contactId = 56L; // Long | contact_id
@@ -1265,7 +1265,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         Long contactId = 56L; // Long | contact_id
@@ -1336,7 +1336,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -1409,7 +1409,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
@@ -1484,7 +1484,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         try {
@@ -1549,7 +1549,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         try {
@@ -1616,7 +1616,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         LinkContactsRequest linkContactsRequest = new LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest
@@ -1683,7 +1683,7 @@ import com.keap.sdk.sdk.client.ContactApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         LinkContactsRequest linkContactsRequest = new LinkContactsRequest(); // LinkContactsRequest | linkContactsRequest

@@ -1,6 +1,6 @@
 # SettingsApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -34,7 +34,7 @@ import com.keap.sdk.sdk.client.SettingsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
         List<String> fields = Arrays.asList(); // List<String> | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
@@ -103,7 +103,7 @@ import com.keap.sdk.sdk.client.SettingsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
         List<String> fields = Arrays.asList(); // List<String> | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
@@ -174,7 +174,7 @@ import com.keap.sdk.sdk.client.SettingsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
         try {
@@ -239,7 +239,7 @@ import com.keap.sdk.sdk.client.SettingsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
         try {
@@ -306,7 +306,7 @@ import com.keap.sdk.sdk.client.SettingsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
         try {
@@ -371,7 +371,7 @@ import com.keap.sdk.sdk.client.SettingsApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
         try {

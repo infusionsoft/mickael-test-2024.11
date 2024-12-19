@@ -1,6 +1,6 @@
 # EmailAddressApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -32,7 +32,7 @@ import com.keap.sdk.sdk.client.EmailAddressApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailAddressApi apiInstance = new EmailAddressApi(defaultClient);
         String email = "email_example"; // String | email
@@ -101,7 +101,7 @@ import com.keap.sdk.sdk.client.EmailAddressApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailAddressApi apiInstance = new EmailAddressApi(defaultClient);
         String email = "email_example"; // String | email
@@ -172,7 +172,7 @@ import com.keap.sdk.sdk.client.EmailAddressApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailAddressApi apiInstance = new EmailAddressApi(defaultClient);
         String email = "email_example"; // String | email
@@ -243,7 +243,7 @@ import com.keap.sdk.sdk.client.EmailAddressApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         EmailAddressApi apiInstance = new EmailAddressApi(defaultClient);
         String email = "email_example"; // String | email

@@ -3446,7 +3446,7 @@ paths:
                 $ref: '#/components/schemas/Error'
       deprecated: false
 servers:
-- url: https://api.infusionsoft.com/crm/rest/app
+- url: https://api.keap.com/crm/rest
 components:
   requestBodies:
     CreateOrPatchAffiliateLinkRequest:

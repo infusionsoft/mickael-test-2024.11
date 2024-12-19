@@ -16,7 +16,7 @@ import superagent from "superagent";
 
 /**
 * @module com.keap.sdk.core/ApiClient
-* @version 0.0.51
+* @version 0.0.52
 */
 
 /**
@@ -32,11 +32,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://api.infusionsoft.com/crm/rest/app') {
+    constructor(basePath = 'https://api.keap.com/crm/rest') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api.infusionsoft.com/crm/rest/app
+         * @default https://api.keap.com/crm/rest
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -54,7 +54,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'core-service-core-javascript/0.0.51'
+            'User-Agent': 'core-service-core-javascript/0.0.52'
         };
 
         /**
@@ -596,7 +596,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://api.infusionsoft.com/crm/rest/app",
+              'url': "https://api.keap.com/crm/rest",
               'description': "No description provided",
             }
       ];

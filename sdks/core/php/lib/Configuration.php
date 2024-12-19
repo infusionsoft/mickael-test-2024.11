@@ -93,14 +93,14 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://api.infusionsoft.com/crm/rest/app';
+    protected $host = 'https://api.keap.com/crm/rest';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
      *
      * @var string
      */
-    protected $userAgent = 'core-service-core-php/0.0.51';
+    protected $userAgent = 'core-service-core-php/0.0.52';
 
     /**
      * Debug switch (default set to false)
@@ -433,7 +433,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 2.70.0.752995' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.0.51' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.0.52' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;
@@ -473,7 +473,7 @@ class Configuration
     {
         return [
             [
-                "url" => "https://api.infusionsoft.com/crm/rest/app",
+                "url" => "https://api.keap.com/crm/rest",
                 "description" => "No description provided",
             ]
         ];

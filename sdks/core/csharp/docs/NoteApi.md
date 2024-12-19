@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.NoteApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -33,7 +33,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new NoteApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var createNoteRequest = new CreateNoteRequest(); // CreateNoteRequest | request
@@ -128,7 +128,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new NoteApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var noteId = "noteId_example";  // string | note_id
@@ -220,7 +220,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new NoteApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var noteId = "noteId_example";  // string | note_id
@@ -316,7 +316,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new NoteApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
@@ -418,7 +418,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new NoteApi(config);
             var contactId = "contactId_example";  // string | contact_id
             var noteId = "noteId_example";  // string | note_id

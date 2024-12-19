@@ -1,6 +1,6 @@
 # OrdersApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -30,7 +30,7 @@ import com.keap.sdk.sdk.client.OrdersApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id
@@ -100,7 +100,7 @@ import com.keap.sdk.sdk.client.OrdersApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.infusionsoft.com/crm/rest/app");
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         OrdersApi apiInstance = new OrdersApi(defaultClient);
         String orderId = "orderId_example"; // String | order_id

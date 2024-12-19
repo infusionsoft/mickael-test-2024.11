@@ -35,7 +35,7 @@ namespace Keap.Sdk.Core.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.0.51";
+        public const string Version = "0.0.52";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -119,8 +119,8 @@ namespace Keap.Sdk.Core.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.51");
-            BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.52");
+            BasePath = "https://api.keap.com/crm/rest";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -128,7 +128,7 @@ namespace Keap.Sdk.Core.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", "https://api.infusionsoft.com/crm/rest/app"},
+                        {"url", "https://api.keap.com/crm/rest"},
                         {"description", "No description provided"},
                     }
                 }
@@ -149,7 +149,7 @@ namespace Keap.Sdk.Core.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "https://api.infusionsoft.com/crm/rest/app") : this()
+            string basePath = "https://api.keap.com/crm/rest") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");
@@ -572,7 +572,7 @@ namespace Keap.Sdk.Core.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.70.0.752995\n";
-            report += "    SDK Package Version: 0.0.51\n";
+            report += "    SDK Package Version: 0.0.52\n";
 
             return report;
         }

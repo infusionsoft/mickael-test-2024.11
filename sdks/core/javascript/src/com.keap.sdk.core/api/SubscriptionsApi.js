@@ -20,7 +20,7 @@ import RestSubscriptionV2 from '../model/RestSubscriptionV2';
 /**
 * Subscriptions service.
 * @module com.keap.sdk.core/api/SubscriptionsApi
-* @version 0.0.51
+* @version 0.0.52
 */
 export default class SubscriptionsApi {
 

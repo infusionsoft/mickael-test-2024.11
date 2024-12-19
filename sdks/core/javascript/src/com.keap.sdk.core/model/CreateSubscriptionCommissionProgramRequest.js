@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateSubscriptionCommissionProgramRequest model module.
  * @module com.keap.sdk.core/model/CreateSubscriptionCommissionProgramRequest
- * @version 0.0.51
+ * @version 0.0.52
  */
 class CreateSubscriptionCommissionProgramRequest {
     /**

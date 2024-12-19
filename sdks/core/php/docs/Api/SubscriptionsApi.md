@@ -1,6 +1,6 @@
 # Com\Keap\Sdk\Core\SubscriptionsApi
 
-All URIs are relative to https://api.infusionsoft.com/crm/rest/app, except if the operation defines another base path.
+All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |

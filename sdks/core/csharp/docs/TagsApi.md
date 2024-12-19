@@ -1,6 +1,6 @@
 # Keap.Sdk.Core.Api.TagsApi
 
-All URIs are relative to *https://api.infusionsoft.com/crm/rest/app*
+All URIs are relative to *https://api.keap.com/crm/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -42,7 +42,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
             var applyRemoveTagRequest = new ApplyRemoveTagRequest(); // ApplyRemoveTagRequest | applyRemoveTagRequest
@@ -137,7 +137,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | request
 
@@ -230,7 +230,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
 
@@ -323,7 +323,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
 
@@ -413,7 +413,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
 
@@ -503,7 +503,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
 
@@ -597,7 +597,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
 
@@ -691,7 +691,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
             var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
@@ -793,7 +793,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
             var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
@@ -895,7 +895,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
             var orderBy = "orderBy_example";  // string? | Attribute and direction to order items by. E.g. `given_name desc` (optional) 
@@ -995,7 +995,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var filter = "filter_example";  // string? | Search filter to apply to results (optional) 
             var orderBy = "orderBy_example";  // string? | Attribute and direction to order items by. E.g. `given_name desc` (optional) 
@@ -1095,7 +1095,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
@@ -1193,7 +1193,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
@@ -1291,7 +1291,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.infusionsoft.com/crm/rest/app";
+            config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new TagsApi(config);
             var tagId = "tagId_example";  // string | tag_id
             var applyRemoveTagRequest = new ApplyRemoveTagRequest(); // ApplyRemoveTagRequest | applyRemoveTagRequest

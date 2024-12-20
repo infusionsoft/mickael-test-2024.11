@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CardInfo model module.
  * @module com.keap.sdk.core/model/CardInfo
- * @version 0.0.61
+ * @version 0.0.62
  */
 class CardInfo {
     /**

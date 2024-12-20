@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateAddToProgramRequest model module.
  * @module com.keap.sdk.core/model/AffiliateAddToProgramRequest
- * @version 0.0.61
+ * @version 0.0.62
  */
 class AffiliateAddToProgramRequest {
     /**

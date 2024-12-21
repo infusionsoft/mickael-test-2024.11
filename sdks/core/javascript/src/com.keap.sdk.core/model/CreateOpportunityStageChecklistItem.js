@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateOpportunityStageChecklistItem model module.
  * @module com.keap.sdk.core/model/CreateOpportunityStageChecklistItem
- * @version 0.0.62
+ * @version 0.0.63
  */
 class CreateOpportunityStageChecklistItem {
     /**

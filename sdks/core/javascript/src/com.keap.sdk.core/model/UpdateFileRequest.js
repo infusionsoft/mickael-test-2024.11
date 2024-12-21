@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateFileRequest model module.
  * @module com.keap.sdk.core/model/UpdateFileRequest
- * @version 0.0.62
+ * @version 0.0.63
  */
 class UpdateFileRequest {
     /**

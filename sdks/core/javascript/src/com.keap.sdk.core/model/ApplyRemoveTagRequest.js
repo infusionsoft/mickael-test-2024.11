@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplyRemoveTagRequest model module.
  * @module com.keap.sdk.core/model/ApplyRemoveTagRequest
- * @version 0.0.64
+ * @version 0.0.65
  */
 class ApplyRemoveTagRequest {
     /**

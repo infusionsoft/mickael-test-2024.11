@@ -18,7 +18,7 @@ import ApplicationFeaturesEnabled from './ApplicationFeaturesEnabled';
 /**
  * The ApplicationConfigurationModuleApplication model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleApplication
- * @version 0.0.64
+ * @version 0.0.65
  */
 class ApplicationConfigurationModuleApplication {
     /**

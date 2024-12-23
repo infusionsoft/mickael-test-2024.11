@@ -20,7 +20,7 @@ import UpdateEmailAddress from '../model/UpdateEmailAddress';
 /**
 * EmailAddress service.
 * @module com.keap.sdk.core/api/EmailAddressApi
-* @version 0.0.64
+* @version 0.0.65
 */
 export default class EmailAddressApi {
 

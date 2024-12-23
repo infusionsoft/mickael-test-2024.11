@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BaseListResponseDealNote model module.
  * @module com.keap.sdk.core/model/BaseListResponseDealNote
- * @version 0.0.64
+ * @version 0.0.65
  */
 class BaseListResponseDealNote {
     /**

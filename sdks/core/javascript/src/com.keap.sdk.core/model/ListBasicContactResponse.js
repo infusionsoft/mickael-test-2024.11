@@ -17,7 +17,7 @@ import BasicContact from './BasicContact';
 /**
  * The ListBasicContactResponse model module.
  * @module com.keap.sdk.core/model/ListBasicContactResponse
- * @version 0.0.64
+ * @version 0.0.65
  */
 class ListBasicContactResponse {
     /**

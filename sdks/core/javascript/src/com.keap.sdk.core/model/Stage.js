@@ -17,7 +17,7 @@ import BaseModel from './BaseModel';
 /**
  * The Stage model module.
  * @module com.keap.sdk.core/model/Stage
- * @version 0.0.64
+ * @version 0.0.65
  */
 class Stage {
     /**

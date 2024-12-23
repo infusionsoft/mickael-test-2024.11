@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAutomationCategoryRequest model module.
  * @module com.keap.sdk.core/model/UpdateAutomationCategoryRequest
- * @version 0.0.64
+ * @version 0.0.65
  */
 class UpdateAutomationCategoryRequest {
     /**

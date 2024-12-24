@@ -17,7 +17,7 @@ import RestProductOptionValue from './RestProductOptionValue';
 /**
  * The RestProductOption model module.
  * @module com.keap.sdk.core/model/RestProductOption
- * @version 0.0.65
+ * @version 0.0.66
  */
 class RestProductOption {
     /**

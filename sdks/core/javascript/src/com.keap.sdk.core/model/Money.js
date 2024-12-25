@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Money model module.
  * @module com.keap.sdk.core/model/Money
- * @version 0.0.66
+ * @version 0.0.67
  */
 class Money {
     /**

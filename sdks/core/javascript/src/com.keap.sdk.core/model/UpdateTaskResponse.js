@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateTaskResponse model module.
  * @module com.keap.sdk.core/model/UpdateTaskResponse
- * @version 0.0.67
+ * @version 0.0.68
  */
 class UpdateTaskResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SaveAutomationCategoryRequest model module.
  * @module com.keap.sdk.core/model/SaveAutomationCategoryRequest
- * @version 0.0.67
+ * @version 0.0.68
  */
 class SaveAutomationCategoryRequest {
     /**

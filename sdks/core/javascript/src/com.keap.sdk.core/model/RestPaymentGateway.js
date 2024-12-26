@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestPaymentGateway model module.
  * @module com.keap.sdk.core/model/RestPaymentGateway
- * @version 0.0.67
+ * @version 0.0.68
  */
 class RestPaymentGateway {
     /**

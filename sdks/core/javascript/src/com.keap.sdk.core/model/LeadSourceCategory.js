@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LeadSourceCategory model module.
  * @module com.keap.sdk.core/model/LeadSourceCategory
- * @version 0.0.67
+ * @version 0.0.68
  */
 class LeadSourceCategory {
     /**

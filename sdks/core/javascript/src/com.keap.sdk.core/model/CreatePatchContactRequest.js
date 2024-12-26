@@ -25,7 +25,7 @@ import SocialAccount from './SocialAccount';
 /**
  * The CreatePatchContactRequest model module.
  * @module com.keap.sdk.core/model/CreatePatchContactRequest
- * @version 0.0.67
+ * @version 0.0.68
  */
 class CreatePatchContactRequest {
     /**

@@ -17,7 +17,7 @@ import EmailSendRequestAttachment from './EmailSendRequestAttachment';
 /**
  * The EmailSendRequest model module.
  * @module com.keap.sdk.core/model/EmailSendRequest
- * @version 0.0.67
+ * @version 0.0.68
  */
 class EmailSendRequest {
     /**

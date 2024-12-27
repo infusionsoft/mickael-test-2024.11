@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InvoiceOrderPayment model module.
  * @module com.keap.sdk.core/model/InvoiceOrderPayment
- * @version 0.0.68
+ * @version 0.0.69
  */
 class InvoiceOrderPayment {
     /**

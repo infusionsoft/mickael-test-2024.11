@@ -17,7 +17,7 @@ import BasicUser from './BasicUser';
 /**
  * The Note model module.
  * @module com.keap.sdk.core/model/Note
- * @version 0.0.68
+ * @version 0.0.69
  */
 class Note {
     /**

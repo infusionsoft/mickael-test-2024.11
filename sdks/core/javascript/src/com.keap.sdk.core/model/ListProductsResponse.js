@@ -17,7 +17,7 @@ import RestV2Product from './RestV2Product';
 /**
  * The ListProductsResponse model module.
  * @module com.keap.sdk.core/model/ListProductsResponse
- * @version 0.0.68
+ * @version 0.0.69
  */
 class ListProductsResponse {
     /**

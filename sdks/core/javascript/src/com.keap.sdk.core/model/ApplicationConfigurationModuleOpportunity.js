@@ -17,7 +17,7 @@ import ApplicationConfigurationModuleOpportunityStates from './ApplicationConfig
 /**
  * The ApplicationConfigurationModuleOpportunity model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleOpportunity
- * @version 0.0.68
+ * @version 0.0.69
  */
 class ApplicationConfigurationModuleOpportunity {
     /**

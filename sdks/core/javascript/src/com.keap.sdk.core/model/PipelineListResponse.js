@@ -18,7 +18,7 @@ import Pipeline from './Pipeline';
 /**
  * The PipelineListResponse model module.
  * @module com.keap.sdk.core/model/PipelineListResponse
- * @version 0.0.69
+ * @version 0.0.70
  */
 class PipelineListResponse {
     /**

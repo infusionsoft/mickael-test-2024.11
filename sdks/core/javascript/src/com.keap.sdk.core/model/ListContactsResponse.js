@@ -17,7 +17,7 @@ import Contact from './Contact';
 /**
  * The ListContactsResponse model module.
  * @module com.keap.sdk.core/model/ListContactsResponse
- * @version 0.0.69
+ * @version 0.0.70
  */
 class ListContactsResponse {
     /**

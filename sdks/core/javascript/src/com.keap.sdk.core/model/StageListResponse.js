@@ -18,7 +18,7 @@ import Stage from './Stage';
 /**
  * The StageListResponse model module.
  * @module com.keap.sdk.core/model/StageListResponse
- * @version 0.0.69
+ * @version 0.0.70
  */
 class StageListResponse {
     /**

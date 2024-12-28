@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateNoteRequest model module.
  * @module com.keap.sdk.core/model/UpdateNoteRequest
- * @version 0.0.69
+ * @version 0.0.70
  */
 class UpdateNoteRequest {
     /**

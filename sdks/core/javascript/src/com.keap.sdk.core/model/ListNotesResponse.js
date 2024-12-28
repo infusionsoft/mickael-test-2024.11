@@ -17,7 +17,7 @@ import Note from './Note';
 /**
  * The ListNotesResponse model module.
  * @module com.keap.sdk.core/model/ListNotesResponse
- * @version 0.0.69
+ * @version 0.0.70
  */
 class ListNotesResponse {
     /**

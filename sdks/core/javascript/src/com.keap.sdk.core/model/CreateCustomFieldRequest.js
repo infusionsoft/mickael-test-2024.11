@@ -17,7 +17,7 @@ import CreateCustomFieldOptionRequest from './CreateCustomFieldOptionRequest';
 /**
  * The CreateCustomFieldRequest model module.
  * @module com.keap.sdk.core/model/CreateCustomFieldRequest
- * @version 0.0.69
+ * @version 0.0.70
  */
 class CreateCustomFieldRequest {
     /**

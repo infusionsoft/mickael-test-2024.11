@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ShippingMethod model module.
  * @module com.keap.sdk.core/model/ShippingMethod
- * @version 0.0.69
+ * @version 0.0.70
  */
 class ShippingMethod {
     /**

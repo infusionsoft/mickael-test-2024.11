@@ -17,7 +17,7 @@ import AutomationCategory from './AutomationCategory';
 /**
  * The ListAutomationCategoryResponse model module.
  * @module com.keap.sdk.core/model/ListAutomationCategoryResponse
- * @version 0.0.70
+ * @version 0.0.71
  */
 class ListAutomationCategoryResponse {
     /**

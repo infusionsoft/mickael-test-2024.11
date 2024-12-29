@@ -17,7 +17,7 @@ import Money from './Money';
 /**
  * The DealAllOfValue model module.
  * @module com.keap.sdk.core/model/DealAllOfValue
- * @version 0.0.70
+ * @version 0.0.71
  */
 class DealAllOfValue {
     /**

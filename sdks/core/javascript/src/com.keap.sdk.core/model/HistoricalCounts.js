@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The HistoricalCounts model module.
  * @module com.keap.sdk.core/model/HistoricalCounts
- * @version 0.0.70
+ * @version 0.0.71
  */
 class HistoricalCounts {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleTemplate model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleTemplate
- * @version 0.0.71
+ * @version 0.0.72
  */
 class ApplicationConfigurationModuleTemplate {
     /**

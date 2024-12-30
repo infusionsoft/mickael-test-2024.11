@@ -17,7 +17,7 @@ import BasicUser from './BasicUser';
 /**
  * The GetNoteResponse model module.
  * @module com.keap.sdk.core/model/GetNoteResponse
- * @version 0.0.71
+ * @version 0.0.72
  */
 class GetNoteResponse {
     /**

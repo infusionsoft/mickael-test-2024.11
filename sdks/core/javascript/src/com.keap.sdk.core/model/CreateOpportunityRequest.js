@@ -17,7 +17,7 @@ import CustomField from './CustomField';
 /**
  * The CreateOpportunityRequest model module.
  * @module com.keap.sdk.core/model/CreateOpportunityRequest
- * @version 0.0.71
+ * @version 0.0.72
  */
 class CreateOpportunityRequest {
     /**

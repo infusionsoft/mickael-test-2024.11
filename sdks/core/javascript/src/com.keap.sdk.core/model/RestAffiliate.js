@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestAffiliate model module.
  * @module com.keap.sdk.core/model/RestAffiliate
- * @version 0.0.71
+ * @version 0.0.72
  */
 class RestAffiliate {
     /**

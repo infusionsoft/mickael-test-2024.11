@@ -18,7 +18,7 @@ import Stage from './Stage';
 /**
  * The Pipeline model module.
  * @module com.keap.sdk.core/model/Pipeline
- * @version 0.0.71
+ * @version 0.0.72
  */
 class Pipeline {
     /**

@@ -22,7 +22,7 @@ import UpdateStageRequest from '../model/UpdateStageRequest';
 /**
 * Stages service.
 * @module com.keap.sdk.core/api/StagesApi
-* @version 0.0.71
+* @version 0.0.72
 */
 export default class StagesApi {
 

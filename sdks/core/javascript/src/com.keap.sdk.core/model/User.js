@@ -21,7 +21,7 @@ import SocialAccount from './SocialAccount';
 /**
  * The User model module.
  * @module com.keap.sdk.core/model/User
- * @version 0.0.72
+ * @version 0.0.73
  */
 class User {
     /**

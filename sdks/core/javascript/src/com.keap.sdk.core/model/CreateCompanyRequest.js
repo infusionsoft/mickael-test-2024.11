@@ -21,7 +21,7 @@ import PhoneNumber from './PhoneNumber';
 /**
  * The CreateCompanyRequest model module.
  * @module com.keap.sdk.core/model/CreateCompanyRequest
- * @version 0.0.72
+ * @version 0.0.73
  */
 class CreateCompanyRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OpportunityContact model module.
  * @module com.keap.sdk.core/model/OpportunityContact
- * @version 0.0.72
+ * @version 0.0.73
  */
 class OpportunityContact {
     /**

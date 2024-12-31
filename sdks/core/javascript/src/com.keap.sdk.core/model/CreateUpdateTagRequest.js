@@ -17,7 +17,7 @@ import CategoryReference from './CategoryReference';
 /**
  * The CreateUpdateTagRequest model module.
  * @module com.keap.sdk.core/model/CreateUpdateTagRequest
- * @version 0.0.72
+ * @version 0.0.73
  */
 class CreateUpdateTagRequest {
     /**

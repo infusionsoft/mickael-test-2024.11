@@ -17,7 +17,7 @@ import RestPaymentGateway from './RestPaymentGateway';
 /**
  * The PaymentPlan model module.
  * @module com.keap.sdk.core/model/PaymentPlan
- * @version 0.0.72
+ * @version 0.0.73
  */
 class PaymentPlan {
     /**

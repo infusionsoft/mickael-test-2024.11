@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DefaultCommission model module.
  * @module com.keap.sdk.core/model/DefaultCommission
- * @version 0.0.73
+ * @version 0.0.74
  */
 class DefaultCommission {
     /**

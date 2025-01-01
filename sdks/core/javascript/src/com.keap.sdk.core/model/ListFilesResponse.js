@@ -17,7 +17,7 @@ import FileMetadata from './FileMetadata';
 /**
  * The ListFilesResponse model module.
  * @module com.keap.sdk.core/model/ListFilesResponse
- * @version 0.0.73
+ * @version 0.0.74
  */
 class ListFilesResponse {
     /**

@@ -23,7 +23,7 @@ import RestAffiliate from '../model/RestAffiliate';
 /**
 * Affiliate service.
 * @module com.keap.sdk.core/api/AffiliateApi
-* @version 0.0.74
+* @version 0.0.75
 */
 export default class AffiliateApi {
 

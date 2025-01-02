@@ -30,7 +30,7 @@ import UpdateTagResponse from '../model/UpdateTagResponse';
 /**
 * Tags service.
 * @module com.keap.sdk.core/api/TagsApi
-* @version 0.0.74
+* @version 0.0.75
 */
 export default class TagsApi {
 

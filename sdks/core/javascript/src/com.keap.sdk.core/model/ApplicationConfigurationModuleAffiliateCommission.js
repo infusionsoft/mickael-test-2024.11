@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleAffiliateCommission model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleAffiliateCommission
- * @version 0.0.75
+ * @version 0.0.76
  */
 class ApplicationConfigurationModuleAffiliateCommission {
     /**

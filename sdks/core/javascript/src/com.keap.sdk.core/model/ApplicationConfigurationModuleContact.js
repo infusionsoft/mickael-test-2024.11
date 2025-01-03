@@ -17,7 +17,7 @@ import ApplicationConfigurationModuleContactAddressLabels from './ApplicationCon
 /**
  * The ApplicationConfigurationModuleContact model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleContact
- * @version 0.0.75
+ * @version 0.0.76
  */
 class ApplicationConfigurationModuleContact {
     /**

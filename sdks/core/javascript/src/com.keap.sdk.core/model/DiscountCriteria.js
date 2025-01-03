@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DiscountCriteria model module.
  * @module com.keap.sdk.core/model/DiscountCriteria
- * @version 0.0.75
+ * @version 0.0.76
  */
 class DiscountCriteria {
     /**

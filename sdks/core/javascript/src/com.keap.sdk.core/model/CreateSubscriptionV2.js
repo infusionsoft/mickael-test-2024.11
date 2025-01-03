@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateSubscriptionV2 model module.
  * @module com.keap.sdk.core/model/CreateSubscriptionV2
- * @version 0.0.75
+ * @version 0.0.76
  */
 class CreateSubscriptionV2 {
     /**

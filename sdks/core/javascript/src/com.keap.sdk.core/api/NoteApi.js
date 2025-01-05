@@ -24,7 +24,7 @@ import UpdateNoteResponse from '../model/UpdateNoteResponse';
 /**
 * Note service.
 * @module com.keap.sdk.core/api/NoteApi
-* @version 0.0.77
+* @version 0.0.78
 */
 export default class NoteApi {
 

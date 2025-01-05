@@ -17,7 +17,7 @@ import AffiliateProgramV2 from './AffiliateProgramV2';
 /**
  * The ListAffiliateCommissionProgramsResponse model module.
  * @module com.keap.sdk.core/model/ListAffiliateCommissionProgramsResponse
- * @version 0.0.77
+ * @version 0.0.78
  */
 class ListAffiliateCommissionProgramsResponse {
     /**

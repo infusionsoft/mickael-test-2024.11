@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FaxNumber model module.
  * @module com.keap.sdk.core/model/FaxNumber
- * @version 0.0.77
+ * @version 0.0.78
  */
 class FaxNumber {
     /**

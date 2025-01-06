@@ -17,7 +17,7 @@ import HistoricalCounts from './HistoricalCounts';
 /**
  * The Goal model module.
  * @module com.keap.sdk.core/model/Goal
- * @version 0.0.78
+ * @version 0.0.79
  */
 class Goal {
     /**

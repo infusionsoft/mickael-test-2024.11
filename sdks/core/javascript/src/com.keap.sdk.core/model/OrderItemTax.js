@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderItemTax model module.
  * @module com.keap.sdk.core/model/OrderItemTax
- * @version 0.0.79
+ * @version 0.0.80
  */
 class OrderItemTax {
     /**

@@ -24,7 +24,7 @@ import RemoveContactsFromSequenceResponse from '../model/RemoveContactsFromSeque
 /**
 * Campaign service.
 * @module com.keap.sdk.core/api/CampaignApi
-* @version 0.0.80
+* @version 0.0.81
 */
 export default class CampaignApi {
 

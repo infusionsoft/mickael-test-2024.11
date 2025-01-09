@@ -15,9 +15,9 @@ Method | HTTP request | Description
 [**list_contacts_with_tag_id_using_get**](TagsApi.md#list_contacts_with_tag_id_using_get) | **GET** /v2/tags/{tag_id}/contacts | List Tagged Contacts
 [**list_tag_categories_using_get**](TagsApi.md#list_tag_categories_using_get) | **GET** /v2/tags/categories | List Tag Categories
 [**list_tags_using_get1**](TagsApi.md#list_tags_using_get1) | **GET** /v2/tags | List Tags
-[**patch_tag_category_using_patch**](TagsApi.md#patch_tag_category_using_patch) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
-[**patch_tag_using_patch**](TagsApi.md#patch_tag_using_patch) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 [**remove_tags_using_post**](TagsApi.md#remove_tags_using_post) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
+[**update_tag_category_using_patch**](TagsApi.md#update_tag_category_using_patch) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
+[**update_tag_using_patch**](TagsApi.md#update_tag_using_patch) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 
 
 # **apply_tags_using_post**
@@ -803,154 +803,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_tag_category_using_patch**
-> UpdateTagCategoryResponse patch_tag_category_using_patch(tag_category_id, update_mask=update_mask, create_update_tag_category_request=create_update_tag_category_request)
-
-Update a Tag Category
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-
-
-```python
-import keap_sdk_core_client
-from keap_sdk_core_client.models.create_update_tag_category_request import CreateUpdateTagCategoryRequest
-from keap_sdk_core_client.models.update_tag_category_response import UpdateTagCategoryResponse
-from keap_sdk_core_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.keap.com/crm/rest
-# See configuration.py for a list of all supported configuration parameters.
-configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.keap.com/crm/rest"
-)
-
-# Enter a context with an instance of the API client
-with keap_sdk_core_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = keap_sdk_core_client.TagsApi(api_client)
-    tag_category_id = 'tag_category_id_example' # str | tag_category_id
-    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    create_update_tag_category_request = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | tagCategory (optional)
-
-    try:
-        # Update a Tag Category
-        api_response = api_instance.patch_tag_category_using_patch(tag_category_id, update_mask=update_mask, create_update_tag_category_request=create_update_tag_category_request)
-        print("The response of TagsApi->patch_tag_category_using_patch:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling TagsApi->patch_tag_category_using_patch: %s\n" % e)
-```
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tag_category_id** | **str**| tag_category_id | 
- **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **create_update_tag_category_request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
-
-### Return type
-
-[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **patch_tag_using_patch**
-> UpdateTagResponse patch_tag_using_patch(tag_id, update_mask=update_mask, create_update_tag_request=create_update_tag_request)
-
-Update a Tag
-
-Updates a Tag with only the values provided in the request
-
-### Example
-
-
-```python
-import keap_sdk_core_client
-from keap_sdk_core_client.models.create_update_tag_request import CreateUpdateTagRequest
-from keap_sdk_core_client.models.update_tag_response import UpdateTagResponse
-from keap_sdk_core_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.keap.com/crm/rest
-# See configuration.py for a list of all supported configuration parameters.
-configuration = keap_sdk_core_client.Configuration(
-    host = "https://api.keap.com/crm/rest"
-)
-
-# Enter a context with an instance of the API client
-with keap_sdk_core_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = keap_sdk_core_client.TagsApi(api_client)
-    tag_id = 'tag_id_example' # str | tag_id
-    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    create_update_tag_request = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag (optional)
-
-    try:
-        # Update a Tag
-        api_response = api_instance.patch_tag_using_patch(tag_id, update_mask=update_mask, create_update_tag_request=create_update_tag_request)
-        print("The response of TagsApi->patch_tag_using_patch:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling TagsApi->patch_tag_using_patch: %s\n" % e)
-```
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tag_id** | **str**| tag_id | 
- **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **create_update_tag_request** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
-
-### Return type
-
-[**UpdateTagResponse**](UpdateTagResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **remove_tags_using_post**
 > remove_tags_using_post(tag_id, apply_remove_tag_request)
 
@@ -1016,6 +868,154 @@ No authorization required
 **204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_tag_category_using_patch**
+> UpdateTagCategoryResponse update_tag_category_using_patch(tag_category_id, update_mask=update_mask, create_update_tag_category_request=create_update_tag_category_request)
+
+Update a Tag Category
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_update_tag_category_request import CreateUpdateTagCategoryRequest
+from keap_sdk_core_client.models.update_tag_category_response import UpdateTagCategoryResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.keap.com/crm/rest"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.TagsApi(api_client)
+    tag_category_id = 'tag_category_id_example' # str | tag_category_id
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    create_update_tag_category_request = keap_sdk_core_client.CreateUpdateTagCategoryRequest() # CreateUpdateTagCategoryRequest | tagCategory (optional)
+
+    try:
+        # Update a Tag Category
+        api_response = api_instance.update_tag_category_using_patch(tag_category_id, update_mask=update_mask, create_update_tag_category_request=create_update_tag_category_request)
+        print("The response of TagsApi->update_tag_category_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TagsApi->update_tag_category_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tag_category_id** | **str**| tag_category_id | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **create_update_tag_category_request** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
+
+### Return type
+
+[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_tag_using_patch**
+> UpdateTagResponse update_tag_using_patch(tag_id, update_mask=update_mask, create_update_tag_request=create_update_tag_request)
+
+Update a Tag
+
+Updates a Tag with only the values provided in the request
+
+### Example
+
+
+```python
+import keap_sdk_core_client
+from keap_sdk_core_client.models.create_update_tag_request import CreateUpdateTagRequest
+from keap_sdk_core_client.models.update_tag_response import UpdateTagResponse
+from keap_sdk_core_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.keap.com/crm/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = keap_sdk_core_client.Configuration(
+    host = "https://api.keap.com/crm/rest"
+)
+
+# Enter a context with an instance of the API client
+with keap_sdk_core_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = keap_sdk_core_client.TagsApi(api_client)
+    tag_id = 'tag_id_example' # str | tag_id
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    create_update_tag_request = keap_sdk_core_client.CreateUpdateTagRequest() # CreateUpdateTagRequest | tag (optional)
+
+    try:
+        # Update a Tag
+        api_response = api_instance.update_tag_using_patch(tag_id, update_mask=update_mask, create_update_tag_request=create_update_tag_request)
+        print("The response of TagsApi->update_tag_using_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TagsApi->update_tag_using_patch: %s\n" % e)
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tag_id** | **str**| tag_id | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **create_update_tag_request** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
+
+### Return type
+
+[**UpdateTagResponse**](UpdateTagResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

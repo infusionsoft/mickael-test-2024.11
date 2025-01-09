@@ -5,7 +5,7 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**GetBusinessProfileUsingGET**](BusinessProfileApi.md#getbusinessprofileusingget) | **GET** /v2/businessProfile | Retrieve Business Profile |
-| [**PatchBusinessProfileUsingPATCH**](BusinessProfileApi.md#patchbusinessprofileusingpatch) | **PATCH** /v2/businessProfile | Update Business Profile |
+| [**UpdateBusinessProfileUsingPATCH**](BusinessProfileApi.md#updatebusinessprofileusingpatch) | **PATCH** /v2/businessProfile | Update Business Profile |
 
 <a id="getbusinessprofileusingget"></a>
 # **GetBusinessProfileUsingGET**
@@ -96,9 +96,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchbusinessprofileusingpatch"></a>
-# **PatchBusinessProfileUsingPATCH**
-> GetBusinessProfileResponse PatchBusinessProfileUsingPATCH (List<string>? updateMask = null, PatchBusinessProfileRequest? patchBusinessProfileRequest = null)
+<a id="updatebusinessprofileusingpatch"></a>
+# **UpdateBusinessProfileUsingPATCH**
+> GetBusinessProfileResponse UpdateBusinessProfileUsingPATCH (List<string>? updateMask = null, UpdateBusinessProfileRequest? updateBusinessProfileRequest = null)
 
 Update Business Profile
 
@@ -114,7 +114,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class PatchBusinessProfileUsingPATCHExample
+    public class UpdateBusinessProfileUsingPATCHExample
     {
         public static void Main()
         {
@@ -122,17 +122,17 @@ namespace Example
             config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new BusinessProfileApi(config);
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var patchBusinessProfileRequest = new PatchBusinessProfileRequest?(); // PatchBusinessProfileRequest? | businessProfile (optional) 
+            var updateBusinessProfileRequest = new UpdateBusinessProfileRequest?(); // UpdateBusinessProfileRequest? | businessProfile (optional) 
 
             try
             {
                 // Update Business Profile
-                GetBusinessProfileResponse result = apiInstance.PatchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest);
+                GetBusinessProfileResponse result = apiInstance.UpdateBusinessProfileUsingPATCH(updateMask, updateBusinessProfileRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BusinessProfileApi.PatchBusinessProfileUsingPATCH: " + e.Message);
+                Debug.Print("Exception when calling BusinessProfileApi.UpdateBusinessProfileUsingPATCH: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -141,21 +141,21 @@ namespace Example
 }
 ```
 
-#### Using the PatchBusinessProfileUsingPATCHWithHttpInfo variant
+#### Using the UpdateBusinessProfileUsingPATCHWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update Business Profile
-    ApiResponse<GetBusinessProfileResponse> response = apiInstance.PatchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
+    ApiResponse<GetBusinessProfileResponse> response = apiInstance.UpdateBusinessProfileUsingPATCHWithHttpInfo(updateMask, updateBusinessProfileRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BusinessProfileApi.PatchBusinessProfileUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BusinessProfileApi.UpdateBusinessProfileUsingPATCHWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -166,7 +166,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest?**](PatchBusinessProfileRequest?.md) | businessProfile | [optional]  |
+| **updateBusinessProfileRequest** | [**UpdateBusinessProfileRequest?**](UpdateBusinessProfileRequest?.md) | businessProfile | [optional]  |
 
 ### Return type
 

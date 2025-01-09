@@ -38,6 +38,7 @@ import { ApplicationConfigurationModuleTemplate } from '../models/ApplicationCon
 import { ApplicationFeaturesEnabled } from '../models/ApplicationFeaturesEnabled';
 import { ApplyRemoveTagRequest } from '../models/ApplyRemoveTagRequest';
 import { ApplyTagsResponse } from '../models/ApplyTagsResponse';
+import { AssignProductsRequest } from '../models/AssignProductsRequest';
 import { Automation } from '../models/Automation';
 import { AutomationCategory } from '../models/AutomationCategory';
 import { AutomationLockStatus } from '../models/AutomationLockStatus';
@@ -67,6 +68,7 @@ import { ContactUtmResponse } from '../models/ContactUtmResponse';
 import { Country } from '../models/Country';
 import { CreateAffiliateRequest } from '../models/CreateAffiliateRequest';
 import { CreateAutomationCategoryRequest } from '../models/CreateAutomationCategoryRequest';
+import { CreateCategoryDiscountRequest } from '../models/CreateCategoryDiscountRequest';
 import { CreateCommissionProgramRequest } from '../models/CreateCommissionProgramRequest';
 import { CreateCompanyRequest } from '../models/CreateCompanyRequest';
 import { CreateContactLinkTypeRequest } from '../models/CreateContactLinkTypeRequest';
@@ -86,14 +88,15 @@ import { CreateNoteRequest } from '../models/CreateNoteRequest';
 import { CreateOpportunityRequest } from '../models/CreateOpportunityRequest';
 import { CreateOpportunityStageChecklistItem } from '../models/CreateOpportunityStageChecklistItem';
 import { CreateOpportunityStageRequest } from '../models/CreateOpportunityStageRequest';
-import { CreateOrPatchAffiliateLinkRequest } from '../models/CreateOrPatchAffiliateLinkRequest';
+import { CreateOrUpdateAffiliateLinkRequest } from '../models/CreateOrUpdateAffiliateLinkRequest';
 import { CreateOrderTotalDiscountRequest } from '../models/CreateOrderTotalDiscountRequest';
-import { CreatePatchContactRequest } from '../models/CreatePatchContactRequest';
-import { CreatePatchTaskRequest } from '../models/CreatePatchTaskRequest';
 import { CreatePaymentMethodConfigRequest } from '../models/CreatePaymentMethodConfigRequest';
 import { CreatePaymentRequest } from '../models/CreatePaymentRequest';
 import { CreatePipelineRequest } from '../models/CreatePipelineRequest';
+import { CreateProductCategoryRequest } from '../models/CreateProductCategoryRequest';
 import { CreateProductCommissionProgramRequest } from '../models/CreateProductCommissionProgramRequest';
+import { CreateProductDiscountRequest } from '../models/CreateProductDiscountRequest';
+import { CreateProductInterestBundleRequest } from '../models/CreateProductInterestBundleRequest';
 import { CreateProductRequest } from '../models/CreateProductRequest';
 import { CreateReferralRequest } from '../models/CreateReferralRequest';
 import { CreateRestOrderItemRequest } from '../models/CreateRestOrderItemRequest';
@@ -102,10 +105,11 @@ import { CreateStageRequest } from '../models/CreateStageRequest';
 import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubscriptionCommissionProgramRequest';
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
-import { CreateUpdateDiscountRequest } from '../models/CreateUpdateDiscountRequest';
+import { CreateUpdateContactRequest } from '../models/CreateUpdateContactRequest';
 import { CreateUpdateLeadSourceCategoryRequest } from '../models/CreateUpdateLeadSourceCategoryRequest';
 import { CreateUpdateTagCategoryRequest } from '../models/CreateUpdateTagCategoryRequest';
 import { CreateUpdateTagRequest } from '../models/CreateUpdateTagRequest';
+import { CreateUpdateTaskRequest } from '../models/CreateUpdateTaskRequest';
 import { CreateUserRequestV2 } from '../models/CreateUserRequestV2';
 import { CurrencyValue } from '../models/CurrencyValue';
 import { CustomField } from '../models/CustomField';
@@ -175,6 +179,7 @@ import { ListContactsResponse } from '../models/ListContactsResponse';
 import { ListCountriesResponse } from '../models/ListCountriesResponse';
 import { ListFilesResponse } from '../models/ListFilesResponse';
 import { ListLandingPagesResponse } from '../models/ListLandingPagesResponse';
+import { ListLeadSourceCategoriesResponse } from '../models/ListLeadSourceCategoriesResponse';
 import { ListLeadSourcesResponse } from '../models/ListLeadSourcesResponse';
 import { ListNoteTemplateResponse } from '../models/ListNoteTemplateResponse';
 import { ListNotesResponse } from '../models/ListNotesResponse';
@@ -183,6 +188,7 @@ import { ListOpportunityStagesResponse } from '../models/ListOpportunityStagesRe
 import { ListOrderPaymentsResponse } from '../models/ListOrderPaymentsResponse';
 import { ListOrderTotalDiscountsResponse } from '../models/ListOrderTotalDiscountsResponse';
 import { ListOrders } from '../models/ListOrders';
+import { ListProductCategoriesResponse } from '../models/ListProductCategoriesResponse';
 import { ListProductsResponse } from '../models/ListProductsResponse';
 import { ListProvincesResponse } from '../models/ListProvincesResponse';
 import { ListRestMerchantAccountResponse } from '../models/ListRestMerchantAccountResponse';
@@ -210,15 +216,6 @@ import { OrderTotalDiscount } from '../models/OrderTotalDiscount';
 import { Origin } from '../models/Origin';
 import { OriginRequest } from '../models/OriginRequest';
 import { Owner } from '../models/Owner';
-import { PatchAffiliateRequest } from '../models/PatchAffiliateRequest';
-import { PatchBusinessProfileRequest } from '../models/PatchBusinessProfileRequest';
-import { PatchCommissionProgramRequest } from '../models/PatchCommissionProgramRequest';
-import { PatchCompanyRequest } from '../models/PatchCompanyRequest';
-import { PatchDefaultCommissionProgramRequest } from '../models/PatchDefaultCommissionProgramRequest';
-import { PatchOpportunityRequest } from '../models/PatchOpportunityRequest';
-import { PatchProductCommissionProgramRequest } from '../models/PatchProductCommissionProgramRequest';
-import { PatchSubscriptionCommissionProgramRequest } from '../models/PatchSubscriptionCommissionProgramRequest';
-import { PatchUserRequestV2 } from '../models/PatchUserRequestV2';
 import { PaymentMethodConfig } from '../models/PaymentMethodConfig';
 import { PaymentMethodList } from '../models/PaymentMethodList';
 import { PaymentPlan } from '../models/PaymentPlan';
@@ -231,9 +228,13 @@ import { PipelineOutcomeLabelListResponse } from '../models/PipelineOutcomeLabel
 import { PipelineStageListResponse } from '../models/PipelineStageListResponse';
 import { PipelineSummariesListResponse } from '../models/PipelineSummariesListResponse';
 import { PipelineSummary } from '../models/PipelineSummary';
+import { ProductCategory } from '../models/ProductCategory';
 import { ProductCommission } from '../models/ProductCommission';
 import { ProductCommissionProgram } from '../models/ProductCommissionProgram';
+import { ProductDiscount } from '../models/ProductDiscount';
 import { ProductFixedOption } from '../models/ProductFixedOption';
+import { ProductInterest } from '../models/ProductInterest';
+import { ProductInterestBundle } from '../models/ProductInterestBundle';
 import { ProductInventory } from '../models/ProductInventory';
 import { ProductOptions } from '../models/ProductOptions';
 import { ProductVariableSetting } from '../models/ProductVariableSetting';
@@ -257,7 +258,6 @@ import { RestSubscriptionV2 } from '../models/RestSubscriptionV2';
 import { RestV2Opportunity } from '../models/RestV2Opportunity';
 import { RestV2Order } from '../models/RestV2Order';
 import { RestV2OrderItem } from '../models/RestV2OrderItem';
-import { RestV2PatchOrderRequest } from '../models/RestV2PatchOrderRequest';
 import { RestV2Product } from '../models/RestV2Product';
 import { RestV2Subscription } from '../models/RestV2Subscription';
 import { RestV2User } from '../models/RestV2User';
@@ -277,28 +277,43 @@ import { StageListResponse } from '../models/StageListResponse';
 import { SubscriptionCommission } from '../models/SubscriptionCommission';
 import { SubscriptionCommissionProgram } from '../models/SubscriptionCommissionProgram';
 import { SubscriptionPlan } from '../models/SubscriptionPlan';
+import { SubscriptionPlanInterest } from '../models/SubscriptionPlanInterest';
 import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { UpdateAffiliateRequest } from '../models/UpdateAffiliateRequest';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
+import { UpdateBusinessProfileRequest } from '../models/UpdateBusinessProfileRequest';
+import { UpdateCategoryDiscountRequest } from '../models/UpdateCategoryDiscountRequest';
+import { UpdateCommissionProgramRequest } from '../models/UpdateCommissionProgramRequest';
+import { UpdateCompanyRequest } from '../models/UpdateCompanyRequest';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
 import { UpdateDealNoteRequest } from '../models/UpdateDealNoteRequest';
+import { UpdateDefaultCommissionProgramRequest } from '../models/UpdateDefaultCommissionProgramRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
 import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
+import { UpdateOpportunityRequestV2 } from '../models/UpdateOpportunityRequestV2';
 import { UpdateOpportunityStageChecklistItem } from '../models/UpdateOpportunityStageChecklistItem';
 import { UpdateOpportunityStageRequest } from '../models/UpdateOpportunityStageRequest';
+import { UpdateOrderItemRequest } from '../models/UpdateOrderItemRequest';
+import { UpdateOrderRequest } from '../models/UpdateOrderRequest';
 import { UpdateOrderTotalDiscountRequest } from '../models/UpdateOrderTotalDiscountRequest';
 import { UpdateOutcomeLabelsRequest } from '../models/UpdateOutcomeLabelsRequest';
 import { UpdatePipelineRequest } from '../models/UpdatePipelineRequest';
+import { UpdateProductCategoryRequest } from '../models/UpdateProductCategoryRequest';
+import { UpdateProductCommissionProgramRequest } from '../models/UpdateProductCommissionProgramRequest';
 import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
+import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
+import { UpdateSubscriptionRequest } from '../models/UpdateSubscriptionRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
 import { UpdateTaskResponse } from '../models/UpdateTaskResponse';
+import { UpdateUserRequest } from '../models/UpdateUserRequest';
 import { User } from '../models/User';
 import { ObservableAffiliateApi } from './ObservableAPI';
 
@@ -355,26 +370,13 @@ export class PromiseAffiliateApi {
     }
 
     /**
-     * Updates the properties of an Affiliate Commission Program
-     * Update a Affiliate Commission Program
-     * @param commissionProgramId commission_program_id
-     * @param patchCommissionProgramRequest patchCommissionProgramRequest
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Updates a single Affiliate
+     * Update an Affiliate
+     * @param id id
+     * @param [updateAffiliateRequest] Request to update an affiliate
      */
-    public patchCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId: string, patchCommissionProgramRequest: PatchCommissionProgramRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
-        const result = this.api.patchCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, patchCommissionProgramRequest, updateMask, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Updates the properties of an Affiliate Commission Program
-     * Update a Affiliate Commission Program
-     * @param commissionProgramId commission_program_id
-     * @param patchCommissionProgramRequest patchCommissionProgramRequest
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     */
-    public patchCommissionProgramUsingPATCH(commissionProgramId: string, patchCommissionProgramRequest: PatchCommissionProgramRequest, updateMask?: Array<string>, _options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
-        const result = this.api.patchCommissionProgramUsingPATCH(commissionProgramId, patchCommissionProgramRequest, updateMask, _options);
+    public updateAffiliateUsingPATCHWithHttpInfo(id: string, updateAffiliateRequest?: UpdateAffiliateRequest, _options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
+        const result = this.api.updateAffiliateUsingPATCHWithHttpInfo(id, updateAffiliateRequest, _options);
         return result.toPromise();
     }
 
@@ -382,21 +384,34 @@ export class PromiseAffiliateApi {
      * Updates a single Affiliate
      * Update an Affiliate
      * @param id id
-     * @param [patchAffiliateRequest] Affiliate request to patch
+     * @param [updateAffiliateRequest] Request to update an affiliate
      */
-    public updateAffiliateUsingPATCHWithHttpInfo(id: string, patchAffiliateRequest?: PatchAffiliateRequest, _options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
-        const result = this.api.updateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest, _options);
+    public updateAffiliateUsingPATCH(id: string, updateAffiliateRequest?: UpdateAffiliateRequest, _options?: Configuration): Promise<RestAffiliate> {
+        const result = this.api.updateAffiliateUsingPATCH(id, updateAffiliateRequest, _options);
         return result.toPromise();
     }
 
     /**
-     * Updates a single Affiliate
-     * Update an Affiliate
-     * @param id id
-     * @param [patchAffiliateRequest] Affiliate request to patch
+     * Updates the properties of an Affiliate Commission Program
+     * Update a Affiliate Commission Program
+     * @param commissionProgramId commission_program_id
+     * @param updateCommissionProgramRequest updateCommissionProgramRequest
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      */
-    public updateAffiliateUsingPATCH(id: string, patchAffiliateRequest?: PatchAffiliateRequest, _options?: Configuration): Promise<RestAffiliate> {
-        const result = this.api.updateAffiliateUsingPATCH(id, patchAffiliateRequest, _options);
+    public updateCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId: string, updateCommissionProgramRequest: UpdateCommissionProgramRequest, updateMask?: Array<string>, _options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
+        const result = this.api.updateCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, updateCommissionProgramRequest, updateMask, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates the properties of an Affiliate Commission Program
+     * Update a Affiliate Commission Program
+     * @param commissionProgramId commission_program_id
+     * @param updateCommissionProgramRequest updateCommissionProgramRequest
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     */
+    public updateCommissionProgramUsingPATCH(commissionProgramId: string, updateCommissionProgramRequest: UpdateCommissionProgramRequest, updateMask?: Array<string>, _options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
+        const result = this.api.updateCommissionProgramUsingPATCH(commissionProgramId, updateCommissionProgramRequest, updateMask, _options);
         return result.toPromise();
     }
 
@@ -697,10 +712,10 @@ export class PromiseBusinessProfileApi {
      * Updates Business Profile information.
      * Update Business Profile
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [patchBusinessProfileRequest] businessProfile
+     * @param [updateBusinessProfileRequest] businessProfile
      */
-    public patchBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
-        const result = this.api.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest, _options);
+    public updateBusinessProfileUsingPATCHWithHttpInfo(updateMask?: Array<string>, updateBusinessProfileRequest?: UpdateBusinessProfileRequest, _options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
+        const result = this.api.updateBusinessProfileUsingPATCHWithHttpInfo(updateMask, updateBusinessProfileRequest, _options);
         return result.toPromise();
     }
 
@@ -708,10 +723,10 @@ export class PromiseBusinessProfileApi {
      * Updates Business Profile information.
      * Update Business Profile
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [patchBusinessProfileRequest] businessProfile
+     * @param [updateBusinessProfileRequest] businessProfile
      */
-    public patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<GetBusinessProfileResponse> {
-        const result = this.api.patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest, _options);
+    public updateBusinessProfileUsingPATCH(updateMask?: Array<string>, updateBusinessProfileRequest?: UpdateBusinessProfileRequest, _options?: Configuration): Promise<GetBusinessProfileResponse> {
+        const result = this.api.updateBusinessProfileUsingPATCH(updateMask, updateBusinessProfileRequest, _options);
         return result.toPromise();
     }
 
@@ -944,10 +959,10 @@ export class PromiseCompanyApi {
      * Update a Company
      * @param companyId company_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [patchCompanyRequest] company
+     * @param [updateCompanyRequest] company
      */
-    public patchCompanyUsingPATCHWithHttpInfo(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Promise<HttpInfo<Company>> {
-        const result = this.api.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest, _options);
+    public updateCompanyUsingPATCH1WithHttpInfo(companyId: string, updateMask?: Array<string>, updateCompanyRequest?: UpdateCompanyRequest, _options?: Configuration): Promise<HttpInfo<Company>> {
+        const result = this.api.updateCompanyUsingPATCH1WithHttpInfo(companyId, updateMask, updateCompanyRequest, _options);
         return result.toPromise();
     }
 
@@ -956,10 +971,10 @@ export class PromiseCompanyApi {
      * Update a Company
      * @param companyId company_id
      * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [patchCompanyRequest] company
+     * @param [updateCompanyRequest] company
      */
-    public patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Promise<Company> {
-        const result = this.api.patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest, _options);
+    public updateCompanyUsingPATCH1(companyId: string, updateMask?: Array<string>, updateCompanyRequest?: UpdateCompanyRequest, _options?: Configuration): Promise<Company> {
+        const result = this.api.updateCompanyUsingPATCH1(companyId, updateMask, updateCompanyRequest, _options);
         return result.toPromise();
     }
 
@@ -1005,20 +1020,20 @@ export class PromiseContactApi {
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param [createPatchContactRequest] contact
+     * @param [createUpdateContactRequest] contact
      */
-    public createContactUsingPOST1WithHttpInfo(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
-        const result = this.api.createContactUsingPOST1WithHttpInfo(createPatchContactRequest, _options);
+    public createContactUsingPOST1WithHttpInfo(createUpdateContactRequest?: CreateUpdateContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
+        const result = this.api.createContactUsingPOST1WithHttpInfo(createUpdateContactRequest, _options);
         return result.toPromise();
     }
 
     /**
      * Creates a new Contact. *Note:* Contact must contain at least one item in `email_addresses` or `phone_numbers` and `country_code` is required if `region` is specified.
      * Create a Contact
-     * @param [createPatchContactRequest] contact
+     * @param [createUpdateContactRequest] contact
      */
-    public createContactUsingPOST1(createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<Contact> {
-        const result = this.api.createContactUsingPOST1(createPatchContactRequest, _options);
+    public createContactUsingPOST1(createUpdateContactRequest?: CreateUpdateContactRequest, _options?: Configuration): Promise<Contact> {
+        const result = this.api.createContactUsingPOST1(createUpdateContactRequest, _options);
         return result.toPromise();
     }
 
@@ -1046,7 +1061,7 @@ export class PromiseContactApi {
      * Retrieves a single Contact
      * Retrieve a Contact
      * @param contactId contact_id
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: &#x60;score_value&#x60;, &#x60;addresses&#x60;, &#x60;anniversary&#x60;, &#x60;birthday&#x60;, &#x60;company&#x60;, &#x60;contact_type&#x60;, &#x60;custom_fields&#x60;, &#x60;create_time&#x60;, &#x60;email_addresses&#x60;, &#x60;fax_numbers&#x60;, &#x60;job_title&#x60;, &#x60;update_time&#x60;, &#x60;create_time&#x60;, &#x60;leadsource_id&#x60;,&#x60;middle_name&#x60;, &#x60;origin&#x60;, &#x60;owner_id&#x60;, &#x60;phone_numbers&#x60;, &#x60;preferred_locale&#x60;, &#x60;preferred_name&#x60;,&#x60;prefix&#x60;, &#x60;relationships&#x60;, &#x60;social_accounts&#x60;, &#x60;source_type&#x60;, &#x60;spouse_name&#x60;, &#x60;suffix&#x60;, &#x60;time_zone&#x60;,&#x60;website&#x60;, &#x60;tag_ids&#x60;, &#x60;utm_parameters&#x60;)
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
      */
     public getContactUsingGET1WithHttpInfo(contactId: string, fields?: Array<string>, _options?: Configuration): Promise<HttpInfo<Contact>> {
         const result = this.api.getContactUsingGET1WithHttpInfo(contactId, fields, _options);
@@ -1057,7 +1072,7 @@ export class PromiseContactApi {
      * Retrieves a single Contact
      * Retrieve a Contact
      * @param contactId contact_id
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: &#x60;score_value&#x60;, &#x60;addresses&#x60;, &#x60;anniversary&#x60;, &#x60;birthday&#x60;, &#x60;company&#x60;, &#x60;contact_type&#x60;, &#x60;custom_fields&#x60;, &#x60;create_time&#x60;, &#x60;email_addresses&#x60;, &#x60;fax_numbers&#x60;, &#x60;job_title&#x60;, &#x60;update_time&#x60;, &#x60;create_time&#x60;, &#x60;leadsource_id&#x60;,&#x60;middle_name&#x60;, &#x60;origin&#x60;, &#x60;owner_id&#x60;, &#x60;phone_numbers&#x60;, &#x60;preferred_locale&#x60;, &#x60;preferred_name&#x60;,&#x60;prefix&#x60;, &#x60;relationships&#x60;, &#x60;social_accounts&#x60;, &#x60;source_type&#x60;, &#x60;spouse_name&#x60;, &#x60;suffix&#x60;, &#x60;time_zone&#x60;,&#x60;website&#x60;, &#x60;tag_ids&#x60;, &#x60;utm_parameters&#x60;)
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
      */
     public getContactUsingGET1(contactId: string, fields?: Array<string>, _options?: Configuration): Promise<Contact> {
         const result = this.api.getContactUsingGET1(contactId, fields, _options);
@@ -1133,7 +1148,7 @@ export class PromiseContactApi {
     /**
      * Retrieves a list of Contacts
      * List Contacts
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: &#x60;score_value&#x60;, &#x60;addresses&#x60;, &#x60;anniversary&#x60;, &#x60;birthday&#x60;, &#x60;company&#x60;, &#x60;contact_type&#x60;, &#x60;custom_fields&#x60;, &#x60;create_time&#x60;, &#x60;email_addresses&#x60;, &#x60;fax_numbers&#x60;, &#x60;job_title&#x60;, &#x60;update_time&#x60;, &#x60;create_time&#x60;, &#x60;leadsource_id&#x60;,&#x60;middle_name&#x60;, &#x60;origin&#x60;, &#x60;owner_id&#x60;, &#x60;phone_numbers&#x60;, &#x60;preferred_locale&#x60;, &#x60;preferred_name&#x60;,&#x60;prefix&#x60;, &#x60;relationships&#x60;, &#x60;social_accounts&#x60;, &#x60;source_type&#x60;, &#x60;spouse_name&#x60;, &#x60;suffix&#x60;, &#x60;time_zone&#x60;,&#x60;website&#x60;, &#x60;tag_ids&#x60;, &#x60;utm_parameters&#x60;)
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
      * @param [filter] Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc
      * @param [pageSize] Total number of items to return per page
@@ -1147,7 +1162,7 @@ export class PromiseContactApi {
     /**
      * Retrieves a list of Contacts
      * List Contacts
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: &#x60;score_value&#x60;, &#x60;addresses&#x60;, &#x60;anniversary&#x60;, &#x60;birthday&#x60;, &#x60;company&#x60;, &#x60;contact_type&#x60;, &#x60;custom_fields&#x60;, &#x60;create_time&#x60;, &#x60;email_addresses&#x60;, &#x60;fax_numbers&#x60;, &#x60;job_title&#x60;, &#x60;update_time&#x60;, &#x60;create_time&#x60;, &#x60;leadsource_id&#x60;,&#x60;middle_name&#x60;, &#x60;origin&#x60;, &#x60;owner_id&#x60;, &#x60;phone_numbers&#x60;, &#x60;preferred_locale&#x60;, &#x60;preferred_name&#x60;,&#x60;prefix&#x60;, &#x60;relationships&#x60;, &#x60;social_accounts&#x60;, &#x60;source_type&#x60;, &#x60;spouse_name&#x60;, &#x60;suffix&#x60;, &#x60;time_zone&#x60;,&#x60;website&#x60;, &#x60;tag_ids&#x60;, &#x60;utm_parameters&#x60;)
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
      * @param [filter] Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc
      * @param [pageSize] Total number of items to return per page
@@ -1175,30 +1190,6 @@ export class PromiseContactApi {
      */
     public listPaymentMethodsUsingGET(contactId: number, _options?: Configuration): Promise<PaymentMethodList> {
         const result = this.api.listPaymentMethodsUsingGET(contactId, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Updates a Contact
-     * Update a Contact
-     * @param contactId contact_id
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [createPatchContactRequest] contact
-     */
-    public patchContactUsingPATCHWithHttpInfo(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
-        const result = this.api.patchContactUsingPATCHWithHttpInfo(contactId, updateMask, createPatchContactRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Updates a Contact
-     * Update a Contact
-     * @param contactId contact_id
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [createPatchContactRequest] contact
-     */
-    public patchContactUsingPATCH(contactId: string, updateMask?: Array<string>, createPatchContactRequest?: CreatePatchContactRequest, _options?: Configuration): Promise<Contact> {
-        const result = this.api.patchContactUsingPATCH(contactId, updateMask, createPatchContactRequest, _options);
         return result.toPromise();
     }
 
@@ -1237,6 +1228,30 @@ export class PromiseContactApi {
      */
     public unlinkContactsUsingPOST(linkContactsRequest: LinkContactsRequest, _options?: Configuration): Promise<void> {
         const result = this.api.unlinkContactsUsingPOST(linkContactsRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a Contact
+     * Update a Contact
+     * @param contactId contact_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [createUpdateContactRequest] contact
+     */
+    public updateContactUsingPATCHWithHttpInfo(contactId: string, updateMask?: Array<string>, createUpdateContactRequest?: CreateUpdateContactRequest, _options?: Configuration): Promise<HttpInfo<Contact>> {
+        const result = this.api.updateContactUsingPATCHWithHttpInfo(contactId, updateMask, createUpdateContactRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a Contact
+     * Update a Contact
+     * @param contactId contact_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [createUpdateContactRequest] contact
+     */
+    public updateContactUsingPATCH(contactId: string, updateMask?: Array<string>, createUpdateContactRequest?: CreateUpdateContactRequest, _options?: Configuration): Promise<Contact> {
+        const result = this.api.updateContactUsingPATCH(contactId, updateMask, createUpdateContactRequest, _options);
         return result.toPromise();
     }
 
@@ -2656,54 +2671,6 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Updates a Tag Category with only the values provided in the request
-     * Update a Tag Category
-     * @param tagCategoryId tag_category_id
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [createUpdateTagCategoryRequest] tagCategory
-     */
-    public patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
-        const result = this.api.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Updates a Tag Category with only the values provided in the request
-     * Update a Tag Category
-     * @param tagCategoryId tag_category_id
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [createUpdateTagCategoryRequest] tagCategory
-     */
-    public patchTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<UpdateTagCategoryResponse> {
-        const result = this.api.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Updates a Tag with only the values provided in the request
-     * Update a Tag
-     * @param tagId tag_id
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [createUpdateTagRequest] tag
-     */
-    public patchTagUsingPATCHWithHttpInfo(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
-        const result = this.api.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * Updates a Tag with only the values provided in the request
-     * Update a Tag
-     * @param tagId tag_id
-     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param [createUpdateTagRequest] tag
-     */
-    public patchTagUsingPATCH(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<UpdateTagResponse> {
-        const result = this.api.patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
      * Removes a Tag from a list of Contacts.
      * Remove Tags
      * @param tagId tag_id
@@ -2722,6 +2689,54 @@ export class PromiseTagsApi {
      */
     public removeTagsUsingPOST(tagId: string, applyRemoveTagRequest: ApplyRemoveTagRequest, _options?: Configuration): Promise<void> {
         const result = this.api.removeTagsUsingPOST(tagId, applyRemoveTagRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a Tag Category with only the values provided in the request
+     * Update a Tag Category
+     * @param tagCategoryId tag_category_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [createUpdateTagCategoryRequest] tagCategory
+     */
+    public updateTagCategoryUsingPATCHWithHttpInfo(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
+        const result = this.api.updateTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a Tag Category with only the values provided in the request
+     * Update a Tag Category
+     * @param tagCategoryId tag_category_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [createUpdateTagCategoryRequest] tagCategory
+     */
+    public updateTagCategoryUsingPATCH(tagCategoryId: string, updateMask?: Array<string>, createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest, _options?: Configuration): Promise<UpdateTagCategoryResponse> {
+        const result = this.api.updateTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a Tag with only the values provided in the request
+     * Update a Tag
+     * @param tagId tag_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [createUpdateTagRequest] tag
+     */
+    public updateTagUsingPATCHWithHttpInfo(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
+        const result = this.api.updateTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Updates a Tag with only the values provided in the request
+     * Update a Tag
+     * @param tagId tag_id
+     * @param [updateMask] An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * @param [createUpdateTagRequest] tag
+     */
+    public updateTagUsingPATCH(tagId: string, updateMask?: Array<string>, createUpdateTagRequest?: CreateUpdateTagRequest, _options?: Configuration): Promise<UpdateTagResponse> {
+        const result = this.api.updateTagUsingPATCH(tagId, updateMask, createUpdateTagRequest, _options);
         return result.toPromise();
     }
 

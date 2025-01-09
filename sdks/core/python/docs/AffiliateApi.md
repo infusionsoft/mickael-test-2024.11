@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_affiliate_using_post**](AffiliateApi.md#add_affiliate_using_post) | **POST** /v2/affiliates | Create an Affiliate
 [**get_affiliate_using_get1**](AffiliateApi.md#get_affiliate_using_get1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
-[**patch_commission_program_using_patch**](AffiliateApi.md#patch_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 [**update_affiliate_using_patch**](AffiliateApi.md#update_affiliate_using_patch) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
+[**update_commission_program_using_patch**](AffiliateApi.md#update_commission_program_using_patch) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 
 
 # **add_affiliate_using_post**
@@ -148,20 +148,20 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_commission_program_using_patch**
-> AffiliateCommissionProgramResponse patch_commission_program_using_patch(commission_program_id, patch_commission_program_request, update_mask=update_mask)
+# **update_affiliate_using_patch**
+> RestAffiliate update_affiliate_using_patch(id, update_affiliate_request=update_affiliate_request)
 
-Update a Affiliate Commission Program
+Update an Affiliate
 
-Updates the properties of an Affiliate Commission Program
+Updates a single Affiliate
 
 ### Example
 
 
 ```python
 import keap_sdk_core_client
-from keap_sdk_core_client.models.affiliate_commission_program_response import AffiliateCommissionProgramResponse
-from keap_sdk_core_client.models.patch_commission_program_request import PatchCommissionProgramRequest
+from keap_sdk_core_client.models.rest_affiliate import RestAffiliate
+from keap_sdk_core_client.models.update_affiliate_request import UpdateAffiliateRequest
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
@@ -175,17 +175,16 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
-    commission_program_id = 'commission_program_id_example' # str | commission_program_id
-    patch_commission_program_request = keap_sdk_core_client.PatchCommissionProgramRequest() # PatchCommissionProgramRequest | patchCommissionProgramRequest
-    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+    id = 'id_example' # str | id
+    update_affiliate_request = keap_sdk_core_client.UpdateAffiliateRequest() # UpdateAffiliateRequest | Request to update an affiliate (optional)
 
     try:
-        # Update a Affiliate Commission Program
-        api_response = api_instance.patch_commission_program_using_patch(commission_program_id, patch_commission_program_request, update_mask=update_mask)
-        print("The response of AffiliateApi->patch_commission_program_using_patch:\n")
+        # Update an Affiliate
+        api_response = api_instance.update_affiliate_using_patch(id, update_affiliate_request=update_affiliate_request)
+        print("The response of AffiliateApi->update_affiliate_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->patch_commission_program_using_patch: %s\n" % e)
+        print("Exception when calling AffiliateApi->update_affiliate_using_patch: %s\n" % e)
 ```
 
 
@@ -194,13 +193,12 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **commission_program_id** | **str**| commission_program_id | 
- **patch_commission_program_request** | [**PatchCommissionProgramRequest**](PatchCommissionProgramRequest.md)| patchCommissionProgramRequest | 
- **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **id** | **str**| id | 
+ **update_affiliate_request** | [**UpdateAffiliateRequest**](UpdateAffiliateRequest.md)| Request to update an affiliate | [optional] 
 
 ### Return type
 
-[**AffiliateCommissionProgramResponse**](AffiliateCommissionProgramResponse.md)
+[**RestAffiliate**](RestAffiliate.md)
 
 ### Authorization
 
@@ -222,20 +220,20 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_affiliate_using_patch**
-> RestAffiliate update_affiliate_using_patch(id, patch_affiliate_request=patch_affiliate_request)
+# **update_commission_program_using_patch**
+> AffiliateCommissionProgramResponse update_commission_program_using_patch(commission_program_id, update_commission_program_request, update_mask=update_mask)
 
-Update an Affiliate
+Update a Affiliate Commission Program
 
-Updates a single Affiliate
+Updates the properties of an Affiliate Commission Program
 
 ### Example
 
 
 ```python
 import keap_sdk_core_client
-from keap_sdk_core_client.models.patch_affiliate_request import PatchAffiliateRequest
-from keap_sdk_core_client.models.rest_affiliate import RestAffiliate
+from keap_sdk_core_client.models.affiliate_commission_program_response import AffiliateCommissionProgramResponse
+from keap_sdk_core_client.models.update_commission_program_request import UpdateCommissionProgramRequest
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
@@ -249,16 +247,17 @@ configuration = keap_sdk_core_client.Configuration(
 with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.AffiliateApi(api_client)
-    id = 'id_example' # str | id
-    patch_affiliate_request = keap_sdk_core_client.PatchAffiliateRequest() # PatchAffiliateRequest | Affiliate request to patch (optional)
+    commission_program_id = 'commission_program_id_example' # str | commission_program_id
+    update_commission_program_request = keap_sdk_core_client.UpdateCommissionProgramRequest() # UpdateCommissionProgramRequest | updateCommissionProgramRequest
+    update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
 
     try:
-        # Update an Affiliate
-        api_response = api_instance.update_affiliate_using_patch(id, patch_affiliate_request=patch_affiliate_request)
-        print("The response of AffiliateApi->update_affiliate_using_patch:\n")
+        # Update a Affiliate Commission Program
+        api_response = api_instance.update_commission_program_using_patch(commission_program_id, update_commission_program_request, update_mask=update_mask)
+        print("The response of AffiliateApi->update_commission_program_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AffiliateApi->update_affiliate_using_patch: %s\n" % e)
+        print("Exception when calling AffiliateApi->update_commission_program_using_patch: %s\n" % e)
 ```
 
 
@@ -267,12 +266,13 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| id | 
- **patch_affiliate_request** | [**PatchAffiliateRequest**](PatchAffiliateRequest.md)| Affiliate request to patch | [optional] 
+ **commission_program_id** | **str**| commission_program_id | 
+ **update_commission_program_request** | [**UpdateCommissionProgramRequest**](UpdateCommissionProgramRequest.md)| updateCommissionProgramRequest | 
+ **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
 
 ### Return type
 
-[**RestAffiliate**](RestAffiliate.md)
+[**AffiliateCommissionProgramResponse**](AffiliateCommissionProgramResponse.md)
 
 ### Authorization
 

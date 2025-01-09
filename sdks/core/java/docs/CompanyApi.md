@@ -12,8 +12,8 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 | [**getCompanyUsingGET1WithHttpInfo**](CompanyApi.md#getCompanyUsingGET1WithHttpInfo) | **GET** /v2/companies/{company_id} | Retrieve a Company |
 | [**listCompaniesUsingGET1**](CompanyApi.md#listCompaniesUsingGET1) | **GET** /v2/companies | List Companies |
 | [**listCompaniesUsingGET1WithHttpInfo**](CompanyApi.md#listCompaniesUsingGET1WithHttpInfo) | **GET** /v2/companies | List Companies |
-| [**patchCompanyUsingPATCH**](CompanyApi.md#patchCompanyUsingPATCH) | **PATCH** /v2/companies/{company_id} | Update a Company |
-| [**patchCompanyUsingPATCHWithHttpInfo**](CompanyApi.md#patchCompanyUsingPATCHWithHttpInfo) | **PATCH** /v2/companies/{company_id} | Update a Company |
+| [**updateCompanyUsingPATCH1**](CompanyApi.md#updateCompanyUsingPATCH1) | **PATCH** /v2/companies/{company_id} | Update a Company |
+| [**updateCompanyUsingPATCH1WithHttpInfo**](CompanyApi.md#updateCompanyUsingPATCH1WithHttpInfo) | **PATCH** /v2/companies/{company_id} | Update a Company |
 
 
 
@@ -593,9 +593,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## patchCompanyUsingPATCH
+## updateCompanyUsingPATCH1
 
-> Company patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest)
+> Company updateCompanyUsingPATCH1(companyId, updateMask, updateCompanyRequest)
 
 Update a Company
 
@@ -619,12 +619,12 @@ public class Example {
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchCompanyRequest patchCompanyRequest = new PatchCompanyRequest(); // PatchCompanyRequest | company
+        UpdateCompanyRequest updateCompanyRequest = new UpdateCompanyRequest(); // UpdateCompanyRequest | company
         try {
-            Company result = apiInstance.patchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest);
+            Company result = apiInstance.updateCompanyUsingPATCH1(companyId, updateMask, updateCompanyRequest);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CompanyApi#patchCompanyUsingPATCH");
+            System.err.println("Exception when calling CompanyApi#updateCompanyUsingPATCH1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -641,7 +641,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **companyId** | **String**| company_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, company_name, address, phone_number, fax_number, email_address, notes, website, custom_fields, create_time, update_time] |
-| **patchCompanyRequest** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] |
+| **updateCompanyRequest** | [**UpdateCompanyRequest**](UpdateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
@@ -665,9 +665,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## patchCompanyUsingPATCHWithHttpInfo
+## updateCompanyUsingPATCH1WithHttpInfo
 
-> ApiResponse<Company> patchCompanyUsingPATCH patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest)
+> ApiResponse<Company> updateCompanyUsingPATCH1 updateCompanyUsingPATCH1WithHttpInfo(companyId, updateMask, updateCompanyRequest)
 
 Update a Company
 
@@ -692,14 +692,14 @@ public class Example {
         CompanyApi apiInstance = new CompanyApi(defaultClient);
         String companyId = "companyId_example"; // String | company_id
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchCompanyRequest patchCompanyRequest = new PatchCompanyRequest(); // PatchCompanyRequest | company
+        UpdateCompanyRequest updateCompanyRequest = new UpdateCompanyRequest(); // UpdateCompanyRequest | company
         try {
-            ApiResponse<Company> response = apiInstance.patchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest);
+            ApiResponse<Company> response = apiInstance.updateCompanyUsingPATCH1WithHttpInfo(companyId, updateMask, updateCompanyRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling CompanyApi#patchCompanyUsingPATCH");
+            System.err.println("Exception when calling CompanyApi#updateCompanyUsingPATCH1");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -716,7 +716,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **companyId** | **String**| company_id | |
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: id, company_name, address, phone_number, fax_number, email_address, notes, website, custom_fields, create_time, update_time] |
-| **patchCompanyRequest** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] |
+| **updateCompanyRequest** | [**UpdateCompanyRequest**](UpdateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 

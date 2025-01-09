@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**delete_company_using_delete**](CompanyApi.md#delete_company_using_delete) | **DELETE** /v2/companies/{company_id} | Delete a Company
 [**get_company_using_get1**](CompanyApi.md#get_company_using_get1) | **GET** /v2/companies/{company_id} | Retrieve a Company
 [**list_companies_using_get1**](CompanyApi.md#list_companies_using_get1) | **GET** /v2/companies | List Companies
-[**patch_company_using_patch**](CompanyApi.md#patch_company_using_patch) | **PATCH** /v2/companies/{company_id} | Update a Company
+[**update_company_using_patch1**](CompanyApi.md#update_company_using_patch1) | **PATCH** /v2/companies/{company_id} | Update a Company
 
 
 # **create_company_using_post1**
@@ -294,8 +294,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_company_using_patch**
-> Company patch_company_using_patch(company_id, update_mask=update_mask, patch_company_request=patch_company_request)
+# **update_company_using_patch1**
+> Company update_company_using_patch1(company_id, update_mask=update_mask, update_company_request=update_company_request)
 
 Update a Company
 
@@ -307,7 +307,7 @@ Updates a Company with the values provided in the request
 ```python
 import keap_sdk_core_client
 from keap_sdk_core_client.models.company import Company
-from keap_sdk_core_client.models.patch_company_request import PatchCompanyRequest
+from keap_sdk_core_client.models.update_company_request import UpdateCompanyRequest
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
@@ -323,15 +323,15 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     api_instance = keap_sdk_core_client.CompanyApi(api_client)
     company_id = 'company_id_example' # str | company_id
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    patch_company_request = keap_sdk_core_client.PatchCompanyRequest() # PatchCompanyRequest | company (optional)
+    update_company_request = keap_sdk_core_client.UpdateCompanyRequest() # UpdateCompanyRequest | company (optional)
 
     try:
         # Update a Company
-        api_response = api_instance.patch_company_using_patch(company_id, update_mask=update_mask, patch_company_request=patch_company_request)
-        print("The response of CompanyApi->patch_company_using_patch:\n")
+        api_response = api_instance.update_company_using_patch1(company_id, update_mask=update_mask, update_company_request=update_company_request)
+        print("The response of CompanyApi->update_company_using_patch1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CompanyApi->patch_company_using_patch: %s\n" % e)
+        print("Exception when calling CompanyApi->update_company_using_patch1: %s\n" % e)
 ```
 
 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**| company_id | 
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **patch_company_request** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] 
+ **update_company_request** | [**UpdateCompanyRequest**](UpdateCompanyRequest.md)| company | [optional] 
 
 ### Return type
 

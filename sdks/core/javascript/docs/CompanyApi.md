@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteCompanyUsingDELETE**](CompanyApi.md#deleteCompanyUsingDELETE) | **DELETE** /v2/companies/{company_id} | Delete a Company
 [**getCompanyUsingGET1**](CompanyApi.md#getCompanyUsingGET1) | **GET** /v2/companies/{company_id} | Retrieve a Company
 [**listCompaniesUsingGET1**](CompanyApi.md#listCompaniesUsingGET1) | **GET** /v2/companies | List Companies
-[**patchCompanyUsingPATCH**](CompanyApi.md#patchCompanyUsingPATCH) | **PATCH** /v2/companies/{company_id} | Update a Company
+[**updateCompanyUsingPATCH1**](CompanyApi.md#updateCompanyUsingPATCH1) | **PATCH** /v2/companies/{company_id} | Update a Company
 
 
 
@@ -204,9 +204,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## patchCompanyUsingPATCH
+## updateCompanyUsingPATCH1
 
-> Company patchCompanyUsingPATCH(companyId, opts)
+> Company updateCompanyUsingPATCH1(companyId, opts)
 
 Update a Company
 
@@ -221,9 +221,9 @@ let apiInstance = new KeapCoreServiceCoreSdk.CompanyApi();
 let companyId = "companyId_example"; // String | company_id
 let opts = {
   'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'patchCompanyRequest': new KeapCoreServiceCoreSdk.PatchCompanyRequest() // PatchCompanyRequest | company
+  'updateCompanyRequest': new KeapCoreServiceCoreSdk.UpdateCompanyRequest() // UpdateCompanyRequest | company
 };
-apiInstance.patchCompanyUsingPATCH(companyId, opts).then((data) => {
+apiInstance.updateCompanyUsingPATCH1(companyId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**| company_id | 
  **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **patchCompanyRequest** | [**PatchCompanyRequest**](PatchCompanyRequest.md)| company | [optional] 
+ **updateCompanyRequest** | [**UpdateCompanyRequest**](UpdateCompanyRequest.md)| company | [optional] 
 
 ### Return type
 

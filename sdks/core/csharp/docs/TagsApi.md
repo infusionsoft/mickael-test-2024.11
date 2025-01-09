@@ -15,9 +15,9 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 | [**ListContactsWithTagIdUsingGET**](TagsApi.md#listcontactswithtagidusingget) | **GET** /v2/tags/{tag_id}/contacts | List Tagged Contacts |
 | [**ListTagCategoriesUsingGET**](TagsApi.md#listtagcategoriesusingget) | **GET** /v2/tags/categories | List Tag Categories |
 | [**ListTagsUsingGET1**](TagsApi.md#listtagsusingget1) | **GET** /v2/tags | List Tags |
-| [**PatchTagCategoryUsingPATCH**](TagsApi.md#patchtagcategoryusingpatch) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
-| [**PatchTagUsingPATCH**](TagsApi.md#patchtagusingpatch) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
 | [**RemoveTagsUsingPOST**](TagsApi.md#removetagsusingpost) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags |
+| [**UpdateTagCategoryUsingPATCH**](TagsApi.md#updatetagcategoryusingpatch) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
+| [**UpdateTagUsingPATCH**](TagsApi.md#updatetagusingpatch) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
 
 <a id="applytagsusingpost"></a>
 # **ApplyTagsUsingPOST**
@@ -1072,202 +1072,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchtagcategoryusingpatch"></a>
-# **PatchTagCategoryUsingPATCH**
-> UpdateTagCategoryResponse PatchTagCategoryUsingPATCH (string tagCategoryId, List<string>? updateMask = null, CreateUpdateTagCategoryRequest? createUpdateTagCategoryRequest = null)
-
-Update a Tag Category
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Keap.Sdk.Core.Api;
-using Keap.Sdk.Core.Client;
-using Keap.Sdk.Core.Model;
-
-namespace Example
-{
-    public class PatchTagCategoryUsingPATCHExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.keap.com/crm/rest";
-            var apiInstance = new TagsApi(config);
-            var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
-            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest?(); // CreateUpdateTagCategoryRequest? | tagCategory (optional) 
-
-            try
-            {
-                // Update a Tag Category
-                UpdateTagCategoryResponse result = apiInstance.PatchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling TagsApi.PatchTagCategoryUsingPATCH: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PatchTagCategoryUsingPATCHWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Update a Tag Category
-    ApiResponse<UpdateTagCategoryResponse> response = apiInstance.PatchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling TagsApi.PatchTagCategoryUsingPATCHWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **tagCategoryId** | **string** | tag_category_id |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest?**](CreateUpdateTagCategoryRequest?.md) | tagCategory | [optional]  |
-
-### Return type
-
-[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="patchtagusingpatch"></a>
-# **PatchTagUsingPATCH**
-> UpdateTagResponse PatchTagUsingPATCH (string tagId, List<string>? updateMask = null, CreateUpdateTagRequest? createUpdateTagRequest = null)
-
-Update a Tag
-
-Updates a Tag with only the values provided in the request
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Keap.Sdk.Core.Api;
-using Keap.Sdk.Core.Client;
-using Keap.Sdk.Core.Model;
-
-namespace Example
-{
-    public class PatchTagUsingPATCHExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.keap.com/crm/rest";
-            var apiInstance = new TagsApi(config);
-            var tagId = "tagId_example";  // string | tag_id
-            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var createUpdateTagRequest = new CreateUpdateTagRequest?(); // CreateUpdateTagRequest? | tag (optional) 
-
-            try
-            {
-                // Update a Tag
-                UpdateTagResponse result = apiInstance.PatchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling TagsApi.PatchTagUsingPATCH: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PatchTagUsingPATCHWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Update a Tag
-    ApiResponse<UpdateTagResponse> response = apiInstance.PatchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling TagsApi.PatchTagUsingPATCHWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **tagId** | **string** | tag_id |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **createUpdateTagRequest** | [**CreateUpdateTagRequest?**](CreateUpdateTagRequest?.md) | tag | [optional]  |
-
-### Return type
-
-[**UpdateTagResponse**](UpdateTagResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="removetagsusingpost"></a>
 # **RemoveTagsUsingPOST**
 > void RemoveTagsUsingPOST (string tagId, ApplyRemoveTagRequest applyRemoveTagRequest)
@@ -1356,6 +1160,202 @@ No authorization required
 | **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="updatetagcategoryusingpatch"></a>
+# **UpdateTagCategoryUsingPATCH**
+> UpdateTagCategoryResponse UpdateTagCategoryUsingPATCH (string tagCategoryId, List<string>? updateMask = null, CreateUpdateTagCategoryRequest? createUpdateTagCategoryRequest = null)
+
+Update a Tag Category
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateTagCategoryUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.keap.com/crm/rest";
+            var apiInstance = new TagsApi(config);
+            var tagCategoryId = "tagCategoryId_example";  // string | tag_category_id
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest?(); // CreateUpdateTagCategoryRequest? | tagCategory (optional) 
+
+            try
+            {
+                // Update a Tag Category
+                UpdateTagCategoryResponse result = apiInstance.UpdateTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TagsApi.UpdateTagCategoryUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateTagCategoryUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a Tag Category
+    ApiResponse<UpdateTagCategoryResponse> response = apiInstance.UpdateTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling TagsApi.UpdateTagCategoryUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **tagCategoryId** | **string** | tag_category_id |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest?**](CreateUpdateTagCategoryRequest?.md) | tagCategory | [optional]  |
+
+### Return type
+
+[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="updatetagusingpatch"></a>
+# **UpdateTagUsingPATCH**
+> UpdateTagResponse UpdateTagUsingPATCH (string tagId, List<string>? updateMask = null, CreateUpdateTagRequest? createUpdateTagRequest = null)
+
+Update a Tag
+
+Updates a Tag with only the values provided in the request
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateTagUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.keap.com/crm/rest";
+            var apiInstance = new TagsApi(config);
+            var tagId = "tagId_example";  // string | tag_id
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+            var createUpdateTagRequest = new CreateUpdateTagRequest?(); // CreateUpdateTagRequest? | tag (optional) 
+
+            try
+            {
+                // Update a Tag
+                UpdateTagResponse result = apiInstance.UpdateTagUsingPATCH(tagId, updateMask, createUpdateTagRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TagsApi.UpdateTagUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateTagUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a Tag
+    ApiResponse<UpdateTagResponse> response = apiInstance.UpdateTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling TagsApi.UpdateTagUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **tagId** | **string** | tag_id |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest?**](CreateUpdateTagRequest?.md) | tag | [optional]  |
+
+### Return type
+
+[**UpdateTagResponse**](UpdateTagResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

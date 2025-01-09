@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.752995
+- API version: 2.70.0.762682-hf-202501071525
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.81</version>
+  <version>0.0.82</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.81"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.82"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.81.jar`
+- `target/core-service-core-java-sdk-0.0.82.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -112,10 +112,10 @@ Class | Method | HTTP request | Description
 *AffiliateApi* | [**addAffiliateUsingPOSTWithHttpInfo**](docs/AffiliateApi.md#addAffiliateUsingPOSTWithHttpInfo) | **POST** /v2/affiliates | Create an Affiliate
 *AffiliateApi* | [**getAffiliateUsingGET1**](docs/AffiliateApi.md#getAffiliateUsingGET1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
 *AffiliateApi* | [**getAffiliateUsingGET1WithHttpInfo**](docs/AffiliateApi.md#getAffiliateUsingGET1WithHttpInfo) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
-*AffiliateApi* | [**patchCommissionProgramUsingPATCH**](docs/AffiliateApi.md#patchCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
-*AffiliateApi* | [**patchCommissionProgramUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#patchCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 *AffiliateApi* | [**updateAffiliateUsingPATCH**](docs/AffiliateApi.md#updateAffiliateUsingPATCH) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
 *AffiliateApi* | [**updateAffiliateUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#updateAffiliateUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
+*AffiliateApi* | [**updateCommissionProgramUsingPATCH**](docs/AffiliateApi.md#updateCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
+*AffiliateApi* | [**updateCommissionProgramUsingPATCHWithHttpInfo**](docs/AffiliateApi.md#updateCommissionProgramUsingPATCHWithHttpInfo) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 *AutomationApi* | [**addContactsToAutomationSequenceUsingPOST**](docs/AutomationApi.md#addContactsToAutomationSequenceUsingPOST) | **POST** /v2/automations/{automation_id}/sequences/{sequence_id}:addContacts | Add Contacts to an Automation Sequence
 *AutomationApi* | [**addContactsToAutomationSequenceUsingPOSTWithHttpInfo**](docs/AutomationApi.md#addContactsToAutomationSequenceUsingPOSTWithHttpInfo) | **POST** /v2/automations/{automation_id}/sequences/{sequence_id}:addContacts | Add Contacts to an Automation Sequence
 *AutomationApi* | [**deleteAutomationUsingDELETE**](docs/AutomationApi.md#deleteAutomationUsingDELETE) | **DELETE** /v2/automations | Delete an Automation
@@ -138,8 +138,8 @@ Class | Method | HTTP request | Description
 *AutomationCategoryApi* | [**saveCategoryUsingPUTWithHttpInfo**](docs/AutomationCategoryApi.md#saveCategoryUsingPUTWithHttpInfo) | **PUT** /v2/automationCategory | Save automation category
 *BusinessProfileApi* | [**getBusinessProfileUsingGET**](docs/BusinessProfileApi.md#getBusinessProfileUsingGET) | **GET** /v2/businessProfile | Retrieve Business Profile
 *BusinessProfileApi* | [**getBusinessProfileUsingGETWithHttpInfo**](docs/BusinessProfileApi.md#getBusinessProfileUsingGETWithHttpInfo) | **GET** /v2/businessProfile | Retrieve Business Profile
-*BusinessProfileApi* | [**patchBusinessProfileUsingPATCH**](docs/BusinessProfileApi.md#patchBusinessProfileUsingPATCH) | **PATCH** /v2/businessProfile | Update Business Profile
-*BusinessProfileApi* | [**patchBusinessProfileUsingPATCHWithHttpInfo**](docs/BusinessProfileApi.md#patchBusinessProfileUsingPATCHWithHttpInfo) | **PATCH** /v2/businessProfile | Update Business Profile
+*BusinessProfileApi* | [**updateBusinessProfileUsingPATCH**](docs/BusinessProfileApi.md#updateBusinessProfileUsingPATCH) | **PATCH** /v2/businessProfile | Update Business Profile
+*BusinessProfileApi* | [**updateBusinessProfileUsingPATCHWithHttpInfo**](docs/BusinessProfileApi.md#updateBusinessProfileUsingPATCHWithHttpInfo) | **PATCH** /v2/businessProfile | Update Business Profile
 *CampaignApi* | [**addContactsToCampaignSequenceUsingPOST1**](docs/CampaignApi.md#addContactsToCampaignSequenceUsingPOST1) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:addContacts | Add Contacts to Campaign Sequence
 *CampaignApi* | [**addContactsToCampaignSequenceUsingPOST1WithHttpInfo**](docs/CampaignApi.md#addContactsToCampaignSequenceUsingPOST1WithHttpInfo) | **POST** /v2/campaigns/{campaign_id}/sequences/{sequence_id}:addContacts | Add Contacts to Campaign Sequence
 *CampaignApi* | [**getCampaignUsingGET1**](docs/CampaignApi.md#getCampaignUsingGET1) | **GET** /v2/campaigns/{campaign_id} | Retrieve a Campaign
@@ -156,8 +156,8 @@ Class | Method | HTTP request | Description
 *CompanyApi* | [**getCompanyUsingGET1WithHttpInfo**](docs/CompanyApi.md#getCompanyUsingGET1WithHttpInfo) | **GET** /v2/companies/{company_id} | Retrieve a Company
 *CompanyApi* | [**listCompaniesUsingGET1**](docs/CompanyApi.md#listCompaniesUsingGET1) | **GET** /v2/companies | List Companies
 *CompanyApi* | [**listCompaniesUsingGET1WithHttpInfo**](docs/CompanyApi.md#listCompaniesUsingGET1WithHttpInfo) | **GET** /v2/companies | List Companies
-*CompanyApi* | [**patchCompanyUsingPATCH**](docs/CompanyApi.md#patchCompanyUsingPATCH) | **PATCH** /v2/companies/{company_id} | Update a Company
-*CompanyApi* | [**patchCompanyUsingPATCHWithHttpInfo**](docs/CompanyApi.md#patchCompanyUsingPATCHWithHttpInfo) | **PATCH** /v2/companies/{company_id} | Update a Company
+*CompanyApi* | [**updateCompanyUsingPATCH1**](docs/CompanyApi.md#updateCompanyUsingPATCH1) | **PATCH** /v2/companies/{company_id} | Update a Company
+*CompanyApi* | [**updateCompanyUsingPATCH1WithHttpInfo**](docs/CompanyApi.md#updateCompanyUsingPATCH1WithHttpInfo) | **PATCH** /v2/companies/{company_id} | Update a Company
 *ContactApi* | [**createContactLinkTypeUsingPOST**](docs/ContactApi.md#createContactLinkTypeUsingPOST) | **POST** /v2/contacts/links/types | Create a Contact Link type
 *ContactApi* | [**createContactLinkTypeUsingPOSTWithHttpInfo**](docs/ContactApi.md#createContactLinkTypeUsingPOSTWithHttpInfo) | **POST** /v2/contacts/links/types | Create a Contact Link type
 *ContactApi* | [**createContactUsingPOST1**](docs/ContactApi.md#createContactUsingPOST1) | **POST** /v2/contacts | Create a Contact
@@ -176,12 +176,12 @@ Class | Method | HTTP request | Description
 *ContactApi* | [**listContactsUsingGET1WithHttpInfo**](docs/ContactApi.md#listContactsUsingGET1WithHttpInfo) | **GET** /v2/contacts | List Contacts
 *ContactApi* | [**listPaymentMethodsUsingGET**](docs/ContactApi.md#listPaymentMethodsUsingGET) | **GET** /v2/contacts/{contact_id}/paymentMethods | Retrieve Payment Methods
 *ContactApi* | [**listPaymentMethodsUsingGETWithHttpInfo**](docs/ContactApi.md#listPaymentMethodsUsingGETWithHttpInfo) | **GET** /v2/contacts/{contact_id}/paymentMethods | Retrieve Payment Methods
-*ContactApi* | [**patchContactUsingPATCH**](docs/ContactApi.md#patchContactUsingPATCH) | **PATCH** /v2/contacts/{contact_id} | Update a Contact
-*ContactApi* | [**patchContactUsingPATCHWithHttpInfo**](docs/ContactApi.md#patchContactUsingPATCHWithHttpInfo) | **PATCH** /v2/contacts/{contact_id} | Update a Contact
 *ContactApi* | [**retrieveContactModelUsingGET1**](docs/ContactApi.md#retrieveContactModelUsingGET1) | **GET** /v2/contacts/model | Retrieve Contact Model
 *ContactApi* | [**retrieveContactModelUsingGET1WithHttpInfo**](docs/ContactApi.md#retrieveContactModelUsingGET1WithHttpInfo) | **GET** /v2/contacts/model | Retrieve Contact Model
 *ContactApi* | [**unlinkContactsUsingPOST**](docs/ContactApi.md#unlinkContactsUsingPOST) | **POST** /v2/contacts:unlink | Delete Link between two Contacts
 *ContactApi* | [**unlinkContactsUsingPOSTWithHttpInfo**](docs/ContactApi.md#unlinkContactsUsingPOSTWithHttpInfo) | **POST** /v2/contacts:unlink | Delete Link between two Contacts
+*ContactApi* | [**updateContactUsingPATCH**](docs/ContactApi.md#updateContactUsingPATCH) | **PATCH** /v2/contacts/{contact_id} | Update a Contact
+*ContactApi* | [**updateContactUsingPATCHWithHttpInfo**](docs/ContactApi.md#updateContactUsingPATCHWithHttpInfo) | **PATCH** /v2/contacts/{contact_id} | Update a Contact
 *DealsApi* | [**createNote**](docs/DealsApi.md#createNote) | **POST** /v2/deals/{id}/notes | Creates a new note for a specific deal.
 *DealsApi* | [**createNoteWithHttpInfo**](docs/DealsApi.md#createNoteWithHttpInfo) | **POST** /v2/deals/{id}/notes | Creates a new note for a specific deal.
 *DealsApi* | [**delete**](docs/DealsApi.md#delete) | **DELETE** /v2/deals/-/notes/{note_id} | Deletes a specific deal note by its ID.
@@ -286,12 +286,12 @@ Class | Method | HTTP request | Description
 *TagsApi* | [**listTagCategoriesUsingGETWithHttpInfo**](docs/TagsApi.md#listTagCategoriesUsingGETWithHttpInfo) | **GET** /v2/tags/categories | List Tag Categories
 *TagsApi* | [**listTagsUsingGET1**](docs/TagsApi.md#listTagsUsingGET1) | **GET** /v2/tags | List Tags
 *TagsApi* | [**listTagsUsingGET1WithHttpInfo**](docs/TagsApi.md#listTagsUsingGET1WithHttpInfo) | **GET** /v2/tags | List Tags
-*TagsApi* | [**patchTagCategoryUsingPATCH**](docs/TagsApi.md#patchTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
-*TagsApi* | [**patchTagCategoryUsingPATCHWithHttpInfo**](docs/TagsApi.md#patchTagCategoryUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
-*TagsApi* | [**patchTagUsingPATCH**](docs/TagsApi.md#patchTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag
-*TagsApi* | [**patchTagUsingPATCHWithHttpInfo**](docs/TagsApi.md#patchTagUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 *TagsApi* | [**removeTagsUsingPOST**](docs/TagsApi.md#removeTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
 *TagsApi* | [**removeTagsUsingPOSTWithHttpInfo**](docs/TagsApi.md#removeTagsUsingPOSTWithHttpInfo) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
+*TagsApi* | [**updateTagCategoryUsingPATCH**](docs/TagsApi.md#updateTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
+*TagsApi* | [**updateTagCategoryUsingPATCHWithHttpInfo**](docs/TagsApi.md#updateTagCategoryUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
+*TagsApi* | [**updateTagUsingPATCH**](docs/TagsApi.md#updateTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag
+*TagsApi* | [**updateTagUsingPATCHWithHttpInfo**](docs/TagsApi.md#updateTagUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 
 
 ## Documentation for Models
@@ -333,6 +333,7 @@ Class | Method | HTTP request | Description
  - [ApplicationFeaturesEnabled](docs/ApplicationFeaturesEnabled.md)
  - [ApplyRemoveTagRequest](docs/ApplyRemoveTagRequest.md)
  - [ApplyTagsResponse](docs/ApplyTagsResponse.md)
+ - [AssignProductsRequest](docs/AssignProductsRequest.md)
  - [Automation](docs/Automation.md)
  - [AutomationCategory](docs/AutomationCategory.md)
  - [AutomationLockStatus](docs/AutomationLockStatus.md)
@@ -362,6 +363,7 @@ Class | Method | HTTP request | Description
  - [Country](docs/Country.md)
  - [CreateAffiliateRequest](docs/CreateAffiliateRequest.md)
  - [CreateAutomationCategoryRequest](docs/CreateAutomationCategoryRequest.md)
+ - [CreateCategoryDiscountRequest](docs/CreateCategoryDiscountRequest.md)
  - [CreateCommissionProgramRequest](docs/CreateCommissionProgramRequest.md)
  - [CreateCompanyRequest](docs/CreateCompanyRequest.md)
  - [CreateContactLinkTypeRequest](docs/CreateContactLinkTypeRequest.md)
@@ -381,14 +383,15 @@ Class | Method | HTTP request | Description
  - [CreateOpportunityRequest](docs/CreateOpportunityRequest.md)
  - [CreateOpportunityStageChecklistItem](docs/CreateOpportunityStageChecklistItem.md)
  - [CreateOpportunityStageRequest](docs/CreateOpportunityStageRequest.md)
- - [CreateOrPatchAffiliateLinkRequest](docs/CreateOrPatchAffiliateLinkRequest.md)
+ - [CreateOrUpdateAffiliateLinkRequest](docs/CreateOrUpdateAffiliateLinkRequest.md)
  - [CreateOrderTotalDiscountRequest](docs/CreateOrderTotalDiscountRequest.md)
- - [CreatePatchContactRequest](docs/CreatePatchContactRequest.md)
- - [CreatePatchTaskRequest](docs/CreatePatchTaskRequest.md)
  - [CreatePaymentMethodConfigRequest](docs/CreatePaymentMethodConfigRequest.md)
  - [CreatePaymentRequest](docs/CreatePaymentRequest.md)
  - [CreatePipelineRequest](docs/CreatePipelineRequest.md)
+ - [CreateProductCategoryRequest](docs/CreateProductCategoryRequest.md)
  - [CreateProductCommissionProgramRequest](docs/CreateProductCommissionProgramRequest.md)
+ - [CreateProductDiscountRequest](docs/CreateProductDiscountRequest.md)
+ - [CreateProductInterestBundleRequest](docs/CreateProductInterestBundleRequest.md)
  - [CreateProductRequest](docs/CreateProductRequest.md)
  - [CreateReferralRequest](docs/CreateReferralRequest.md)
  - [CreateRestOrderItemRequest](docs/CreateRestOrderItemRequest.md)
@@ -397,10 +400,11 @@ Class | Method | HTTP request | Description
  - [CreateSubscriptionCommissionProgramRequest](docs/CreateSubscriptionCommissionProgramRequest.md)
  - [CreateSubscriptionV2](docs/CreateSubscriptionV2.md)
  - [CreateTaskRequest](docs/CreateTaskRequest.md)
- - [CreateUpdateDiscountRequest](docs/CreateUpdateDiscountRequest.md)
+ - [CreateUpdateContactRequest](docs/CreateUpdateContactRequest.md)
  - [CreateUpdateLeadSourceCategoryRequest](docs/CreateUpdateLeadSourceCategoryRequest.md)
  - [CreateUpdateTagCategoryRequest](docs/CreateUpdateTagCategoryRequest.md)
  - [CreateUpdateTagRequest](docs/CreateUpdateTagRequest.md)
+ - [CreateUpdateTaskRequest](docs/CreateUpdateTaskRequest.md)
  - [CreateUserRequestV2](docs/CreateUserRequestV2.md)
  - [CurrencyValue](docs/CurrencyValue.md)
  - [CustomField](docs/CustomField.md)
@@ -471,6 +475,7 @@ Class | Method | HTTP request | Description
  - [ListCountriesResponse](docs/ListCountriesResponse.md)
  - [ListFilesResponse](docs/ListFilesResponse.md)
  - [ListLandingPagesResponse](docs/ListLandingPagesResponse.md)
+ - [ListLeadSourceCategoriesResponse](docs/ListLeadSourceCategoriesResponse.md)
  - [ListLeadSourcesResponse](docs/ListLeadSourcesResponse.md)
  - [ListNoteTemplateResponse](docs/ListNoteTemplateResponse.md)
  - [ListNotesResponse](docs/ListNotesResponse.md)
@@ -479,6 +484,7 @@ Class | Method | HTTP request | Description
  - [ListOrderPaymentsResponse](docs/ListOrderPaymentsResponse.md)
  - [ListOrderTotalDiscountsResponse](docs/ListOrderTotalDiscountsResponse.md)
  - [ListOrders](docs/ListOrders.md)
+ - [ListProductCategoriesResponse](docs/ListProductCategoriesResponse.md)
  - [ListProductsResponse](docs/ListProductsResponse.md)
  - [ListProvincesResponse](docs/ListProvincesResponse.md)
  - [ListRestMerchantAccountResponse](docs/ListRestMerchantAccountResponse.md)
@@ -505,15 +511,6 @@ Class | Method | HTTP request | Description
  - [Origin](docs/Origin.md)
  - [OriginRequest](docs/OriginRequest.md)
  - [Owner](docs/Owner.md)
- - [PatchAffiliateRequest](docs/PatchAffiliateRequest.md)
- - [PatchBusinessProfileRequest](docs/PatchBusinessProfileRequest.md)
- - [PatchCommissionProgramRequest](docs/PatchCommissionProgramRequest.md)
- - [PatchCompanyRequest](docs/PatchCompanyRequest.md)
- - [PatchDefaultCommissionProgramRequest](docs/PatchDefaultCommissionProgramRequest.md)
- - [PatchOpportunityRequest](docs/PatchOpportunityRequest.md)
- - [PatchProductCommissionProgramRequest](docs/PatchProductCommissionProgramRequest.md)
- - [PatchSubscriptionCommissionProgramRequest](docs/PatchSubscriptionCommissionProgramRequest.md)
- - [PatchUserRequestV2](docs/PatchUserRequestV2.md)
  - [PaymentMethodConfig](docs/PaymentMethodConfig.md)
  - [PaymentMethodList](docs/PaymentMethodList.md)
  - [PaymentPlan](docs/PaymentPlan.md)
@@ -526,9 +523,13 @@ Class | Method | HTTP request | Description
  - [PipelineStageListResponse](docs/PipelineStageListResponse.md)
  - [PipelineSummariesListResponse](docs/PipelineSummariesListResponse.md)
  - [PipelineSummary](docs/PipelineSummary.md)
+ - [ProductCategory](docs/ProductCategory.md)
  - [ProductCommission](docs/ProductCommission.md)
  - [ProductCommissionProgram](docs/ProductCommissionProgram.md)
+ - [ProductDiscount](docs/ProductDiscount.md)
  - [ProductFixedOption](docs/ProductFixedOption.md)
+ - [ProductInterest](docs/ProductInterest.md)
+ - [ProductInterestBundle](docs/ProductInterestBundle.md)
  - [ProductInventory](docs/ProductInventory.md)
  - [ProductOptions](docs/ProductOptions.md)
  - [ProductVariableSetting](docs/ProductVariableSetting.md)
@@ -552,7 +553,6 @@ Class | Method | HTTP request | Description
  - [RestV2Opportunity](docs/RestV2Opportunity.md)
  - [RestV2Order](docs/RestV2Order.md)
  - [RestV2OrderItem](docs/RestV2OrderItem.md)
- - [RestV2PatchOrderRequest](docs/RestV2PatchOrderRequest.md)
  - [RestV2Product](docs/RestV2Product.md)
  - [RestV2Subscription](docs/RestV2Subscription.md)
  - [RestV2User](docs/RestV2User.md)
@@ -572,28 +572,43 @@ Class | Method | HTTP request | Description
  - [SubscriptionCommission](docs/SubscriptionCommission.md)
  - [SubscriptionCommissionProgram](docs/SubscriptionCommissionProgram.md)
  - [SubscriptionPlan](docs/SubscriptionPlan.md)
+ - [SubscriptionPlanInterest](docs/SubscriptionPlanInterest.md)
  - [Tag](docs/Tag.md)
  - [TaggedCompany](docs/TaggedCompany.md)
  - [Task](docs/Task.md)
  - [Throwable](docs/Throwable.md)
+ - [UpdateAffiliateRequest](docs/UpdateAffiliateRequest.md)
  - [UpdateAutomationCategoryRequest](docs/UpdateAutomationCategoryRequest.md)
+ - [UpdateBusinessProfileRequest](docs/UpdateBusinessProfileRequest.md)
+ - [UpdateCategoryDiscountRequest](docs/UpdateCategoryDiscountRequest.md)
+ - [UpdateCommissionProgramRequest](docs/UpdateCommissionProgramRequest.md)
+ - [UpdateCompanyRequest](docs/UpdateCompanyRequest.md)
  - [UpdateCustomFieldMetaDataRequest](docs/UpdateCustomFieldMetaDataRequest.md)
  - [UpdateDealNoteRequest](docs/UpdateDealNoteRequest.md)
+ - [UpdateDefaultCommissionProgramRequest](docs/UpdateDefaultCommissionProgramRequest.md)
  - [UpdateEmailAddress](docs/UpdateEmailAddress.md)
  - [UpdateFileRequest](docs/UpdateFileRequest.md)
  - [UpdateNoteRequest](docs/UpdateNoteRequest.md)
  - [UpdateNoteResponse](docs/UpdateNoteResponse.md)
+ - [UpdateOpportunityRequestV2](docs/UpdateOpportunityRequestV2.md)
  - [UpdateOpportunityStageChecklistItem](docs/UpdateOpportunityStageChecklistItem.md)
  - [UpdateOpportunityStageRequest](docs/UpdateOpportunityStageRequest.md)
+ - [UpdateOrderItemRequest](docs/UpdateOrderItemRequest.md)
+ - [UpdateOrderRequest](docs/UpdateOrderRequest.md)
  - [UpdateOrderTotalDiscountRequest](docs/UpdateOrderTotalDiscountRequest.md)
  - [UpdateOutcomeLabelsRequest](docs/UpdateOutcomeLabelsRequest.md)
  - [UpdatePipelineRequest](docs/UpdatePipelineRequest.md)
+ - [UpdateProductCategoryRequest](docs/UpdateProductCategoryRequest.md)
+ - [UpdateProductCommissionProgramRequest](docs/UpdateProductCommissionProgramRequest.md)
  - [UpdateProductInventoryRequest](docs/UpdateProductInventoryRequest.md)
  - [UpdateShippingDiscountRequest](docs/UpdateShippingDiscountRequest.md)
  - [UpdateStageRequest](docs/UpdateStageRequest.md)
+ - [UpdateSubscriptionCommissionProgramRequest](docs/UpdateSubscriptionCommissionProgramRequest.md)
+ - [UpdateSubscriptionRequest](docs/UpdateSubscriptionRequest.md)
  - [UpdateTagCategoryResponse](docs/UpdateTagCategoryResponse.md)
  - [UpdateTagResponse](docs/UpdateTagResponse.md)
  - [UpdateTaskResponse](docs/UpdateTaskResponse.md)
+ - [UpdateUserRequest](docs/UpdateUserRequest.md)
  - [User](docs/User.md)
 
 

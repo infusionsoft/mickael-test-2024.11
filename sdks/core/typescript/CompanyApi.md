@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteCompanyUsingDELETE**](CompanyApi.md#deleteCompanyUsingDELETE) | **DELETE** /v2/companies/{company_id} | Delete a Company
 [**getCompanyUsingGET1**](CompanyApi.md#getCompanyUsingGET1) | **GET** /v2/companies/{company_id} | Retrieve a Company
 [**listCompaniesUsingGET1**](CompanyApi.md#listCompaniesUsingGET1) | **GET** /v2/companies | List Companies
-[**patchCompanyUsingPATCH**](CompanyApi.md#patchCompanyUsingPATCH) | **PATCH** /v2/companies/{company_id} | Update a Company
+[**updateCompanyUsingPATCH1**](CompanyApi.md#updateCompanyUsingPATCH1) | **PATCH** /v2/companies/{company_id} | Update a Company
 
 
 # **createCompanyUsingPOST1**
@@ -294,8 +294,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchCompanyUsingPATCH**
-> Company patchCompanyUsingPATCH()
+# **updateCompanyUsingPATCH1**
+> Company updateCompanyUsingPATCH1()
 
 Updates a Company with the values provided in the request
 
@@ -304,12 +304,12 @@ Updates a Company with the values provided in the request
 
 ```typescript
 import { createConfiguration, CompanyApi } from '';
-import type { CompanyApiPatchCompanyUsingPATCHRequest } from '';
+import type { CompanyApiUpdateCompanyUsingPATCH1Request } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new CompanyApi(configuration);
 
-const request: CompanyApiPatchCompanyUsingPATCHRequest = {
+const request: CompanyApiUpdateCompanyUsingPATCH1Request = {
     // company_id
   companyId: "company_id_example",
     // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
@@ -317,7 +317,7 @@ const request: CompanyApiPatchCompanyUsingPATCHRequest = {
     "id",
   ],
     // company (optional)
-  patchCompanyRequest: {
+  updateCompanyRequest: {
     address: {
       country: "United States of America",
       countryCode: "USA",
@@ -361,7 +361,7 @@ const request: CompanyApiPatchCompanyUsingPATCHRequest = {
   },
 };
 
-const data = await apiInstance.patchCompanyUsingPATCH(request);
+const data = await apiInstance.updateCompanyUsingPATCH1(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -370,7 +370,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patchCompanyRequest** | **PatchCompanyRequest**| company |
+ **updateCompanyRequest** | **UpdateCompanyRequest**| company |
  **companyId** | [**string**] | company_id | defaults to undefined
  **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 

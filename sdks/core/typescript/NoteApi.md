@@ -31,6 +31,7 @@ const request: NoteApiCreateNoteUsingPOST1Request = {
   contactId: "contact_id_example",
     // request
   createNoteRequest: {
+    isPinned: true,
     text: "text_example",
     title: "title_example",
     type: "type_example",
@@ -283,6 +284,7 @@ const request: NoteApiUpdateNoteUsingPATCHRequest = {
     // updateNoteRequest
   updateNoteRequest: {
     contactId: "contactId_example",
+    isPinned: true,
     text: "text_example",
     title: "title_example",
     type: "type_example",

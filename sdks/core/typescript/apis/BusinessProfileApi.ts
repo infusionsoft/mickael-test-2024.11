@@ -9,7 +9,7 @@ import {SecurityAuthentication} from '../auth/auth';
 
 
 import { GetBusinessProfileResponse } from '../models/GetBusinessProfileResponse';
-import { PatchBusinessProfileRequest } from '../models/PatchBusinessProfileRequest';
+import { UpdateBusinessProfileRequest } from '../models/UpdateBusinessProfileRequest';
 
 /**
  * no description
@@ -44,9 +44,9 @@ export class BusinessProfileApiRequestFactory extends BaseAPIRequestFactory {
      * Updates Business Profile information.
      * Update Business Profile
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param patchBusinessProfileRequest businessProfile
+     * @param updateBusinessProfileRequest businessProfile
      */
-    public async patchBusinessProfileUsingPATCH(updateMask?: Array<string>, patchBusinessProfileRequest?: PatchBusinessProfileRequest, _options?: Configuration): Promise<RequestContext> {
+    public async updateBusinessProfileUsingPATCH(updateMask?: Array<string>, updateBusinessProfileRequest?: UpdateBusinessProfileRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -73,7 +73,7 @@ export class BusinessProfileApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(patchBusinessProfileRequest, "PatchBusinessProfileRequest", ""),
+            ObjectSerializer.serialize(updateBusinessProfileRequest, "UpdateBusinessProfileRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -145,10 +145,10 @@ export class BusinessProfileApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to patchBusinessProfileUsingPATCH
+     * @params response Response returned by the server for a request to updateBusinessProfileUsingPATCH
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async patchBusinessProfileUsingPATCHWithHttpInfo(response: ResponseContext): Promise<HttpInfo<GetBusinessProfileResponse >> {
+     public async updateBusinessProfileUsingPATCHWithHttpInfo(response: ResponseContext): Promise<HttpInfo<GetBusinessProfileResponse >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: GetBusinessProfileResponse = ObjectSerializer.deserialize(

@@ -26,12 +26,12 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 | [**listTagCategoriesUsingGETWithHttpInfo**](TagsApi.md#listTagCategoriesUsingGETWithHttpInfo) | **GET** /v2/tags/categories | List Tag Categories |
 | [**listTagsUsingGET1**](TagsApi.md#listTagsUsingGET1) | **GET** /v2/tags | List Tags |
 | [**listTagsUsingGET1WithHttpInfo**](TagsApi.md#listTagsUsingGET1WithHttpInfo) | **GET** /v2/tags | List Tags |
-| [**patchTagCategoryUsingPATCH**](TagsApi.md#patchTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
-| [**patchTagCategoryUsingPATCHWithHttpInfo**](TagsApi.md#patchTagCategoryUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
-| [**patchTagUsingPATCH**](TagsApi.md#patchTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
-| [**patchTagUsingPATCHWithHttpInfo**](TagsApi.md#patchTagUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
 | [**removeTagsUsingPOST**](TagsApi.md#removeTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags |
 | [**removeTagsUsingPOSTWithHttpInfo**](TagsApi.md#removeTagsUsingPOSTWithHttpInfo) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags |
+| [**updateTagCategoryUsingPATCH**](TagsApi.md#updateTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
+| [**updateTagCategoryUsingPATCHWithHttpInfo**](TagsApi.md#updateTagCategoryUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
+| [**updateTagUsingPATCH**](TagsApi.md#updateTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
+| [**updateTagUsingPATCHWithHttpInfo**](TagsApi.md#updateTagUsingPATCHWithHttpInfo) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
 
 
 
@@ -1625,302 +1625,6 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## patchTagCategoryUsingPATCH
-
-> UpdateTagCategoryResponse patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest)
-
-Update a Tag Category
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-
-```java
-// Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.TagsApi;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.keap.com/crm/rest");
-
-        TagsApi apiInstance = new TagsApi(defaultClient);
-        String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
-        try {
-            UpdateTagCategoryResponse result = apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TagsApi#patchTagCategoryUsingPATCH");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **tagCategoryId** | **String**| tag_category_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
-| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
-
-### Return type
-
-[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-## patchTagCategoryUsingPATCHWithHttpInfo
-
-> ApiResponse<UpdateTagCategoryResponse> patchTagCategoryUsingPATCH patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest)
-
-Update a Tag Category
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-
-```java
-// Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.TagsApi;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.keap.com/crm/rest");
-
-        TagsApi apiInstance = new TagsApi(defaultClient);
-        String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
-        try {
-            ApiResponse<UpdateTagCategoryResponse> response = apiInstance.patchTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
-            System.out.println("Status code: " + response.getStatusCode());
-            System.out.println("Response headers: " + response.getHeaders());
-            System.out.println("Response body: " + response.getData());
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TagsApi#patchTagCategoryUsingPATCH");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            System.err.println("Reason: " + e.getResponseBody());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **tagCategoryId** | **String**| tag_category_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
-| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
-
-### Return type
-
-ApiResponse<[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)>
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-
-## patchTagUsingPATCH
-
-> UpdateTagResponse patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest)
-
-Update a Tag
-
-Updates a Tag with only the values provided in the request
-
-### Example
-
-```java
-// Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.TagsApi;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.keap.com/crm/rest");
-
-        TagsApi apiInstance = new TagsApi(defaultClient);
-        String tagId = "tagId_example"; // String | tag_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
-        try {
-            UpdateTagResponse result = apiInstance.patchTagUsingPATCH(tagId, updateMask, createUpdateTagRequest);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TagsApi#patchTagUsingPATCH");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **tagId** | **String**| tag_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
-| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
-
-### Return type
-
-[**UpdateTagResponse**](UpdateTagResponse.md)
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-## patchTagUsingPATCHWithHttpInfo
-
-> ApiResponse<UpdateTagResponse> patchTagUsingPATCH patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest)
-
-Update a Tag
-
-Updates a Tag with only the values provided in the request
-
-### Example
-
-```java
-// Import classes:
-import com.keap.sdk.sdk.ApiClient;
-import com.keap.sdk.sdk.ApiException;
-import com.keap.sdk.sdk.ApiResponse;
-import com.keap.sdk.sdk.Configuration;
-import com.keap.sdk.sdk.models.*;
-import com.keap.sdk.sdk.client.TagsApi;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.keap.com/crm/rest");
-
-        TagsApi apiInstance = new TagsApi(defaultClient);
-        String tagId = "tagId_example"; // String | tag_id
-        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
-        try {
-            ApiResponse<UpdateTagResponse> response = apiInstance.patchTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
-            System.out.println("Status code: " + response.getStatusCode());
-            System.out.println("Response headers: " + response.getHeaders());
-            System.out.println("Response body: " + response.getData());
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TagsApi#patchTagUsingPATCH");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            System.err.println("Reason: " + e.getResponseBody());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **tagId** | **String**| tag_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
-| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
-
-### Return type
-
-ApiResponse<[**UpdateTagResponse**](UpdateTagResponse.md)>
-
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-
 ## removeTagsUsingPOST
 
 > void removeTagsUsingPOST(tagId, applyRemoveTagRequest)
@@ -2059,4 +1763,300 @@ No authorization required
 | **204** | No Content |  -  |
 | **401** | Unauthorized |  -  |
 | **403** | Forbidden |  -  |
+
+
+## updateTagCategoryUsingPATCH
+
+> UpdateTagCategoryResponse updateTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest)
+
+Update a Tag Category
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TagsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
+
+        TagsApi apiInstance = new TagsApi(defaultClient);
+        String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
+        try {
+            UpdateTagCategoryResponse result = apiInstance.updateTagCategoryUsingPATCH(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TagsApi#updateTagCategoryUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagCategoryId** | **String**| tag_category_id | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+
+### Return type
+
+[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateTagCategoryUsingPATCHWithHttpInfo
+
+> ApiResponse<UpdateTagCategoryResponse> updateTagCategoryUsingPATCH updateTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest)
+
+Update a Tag Category
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TagsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
+
+        TagsApi apiInstance = new TagsApi(defaultClient);
+        String tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        CreateUpdateTagCategoryRequest createUpdateTagCategoryRequest = new CreateUpdateTagCategoryRequest(); // CreateUpdateTagCategoryRequest | tagCategory
+        try {
+            ApiResponse<UpdateTagCategoryResponse> response = apiInstance.updateTagCategoryUsingPATCHWithHttpInfo(tagCategoryId, updateMask, createUpdateTagCategoryRequest);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TagsApi#updateTagCategoryUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagCategoryId** | **String**| tag_category_id | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description] |
+| **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+
+### Return type
+
+ApiResponse<[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+
+## updateTagUsingPATCH
+
+> UpdateTagResponse updateTagUsingPATCH(tagId, updateMask, createUpdateTagRequest)
+
+Update a Tag
+
+Updates a Tag with only the values provided in the request
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TagsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
+
+        TagsApi apiInstance = new TagsApi(defaultClient);
+        String tagId = "tagId_example"; // String | tag_id
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+        try {
+            UpdateTagResponse result = apiInstance.updateTagUsingPATCH(tagId, updateMask, createUpdateTagRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TagsApi#updateTagUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagId** | **String**| tag_id | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
+
+### Return type
+
+[**UpdateTagResponse**](UpdateTagResponse.md)
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+## updateTagUsingPATCHWithHttpInfo
+
+> ApiResponse<UpdateTagResponse> updateTagUsingPATCH updateTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest)
+
+Update a Tag
+
+Updates a Tag with only the values provided in the request
+
+### Example
+
+```java
+// Import classes:
+import com.keap.sdk.sdk.ApiClient;
+import com.keap.sdk.sdk.ApiException;
+import com.keap.sdk.sdk.ApiResponse;
+import com.keap.sdk.sdk.Configuration;
+import com.keap.sdk.sdk.models.*;
+import com.keap.sdk.sdk.client.TagsApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.keap.com/crm/rest");
+
+        TagsApi apiInstance = new TagsApi(defaultClient);
+        String tagId = "tagId_example"; // String | tag_id
+        List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+        CreateUpdateTagRequest createUpdateTagRequest = new CreateUpdateTagRequest(); // CreateUpdateTagRequest | tag
+        try {
+            ApiResponse<UpdateTagResponse> response = apiInstance.updateTagUsingPATCHWithHttpInfo(tagId, updateMask, createUpdateTagRequest);
+            System.out.println("Status code: " + response.getStatusCode());
+            System.out.println("Response headers: " + response.getHeaders());
+            System.out.println("Response body: " + response.getData());
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TagsApi#updateTagUsingPATCH");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            System.err.println("Reason: " + e.getResponseBody());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tagId** | **String**| tag_id | |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, description, category] |
+| **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] |
+
+### Return type
+
+ApiResponse<[**UpdateTagResponse**](UpdateTagResponse.md)>
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
 

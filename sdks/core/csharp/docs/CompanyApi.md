@@ -8,7 +8,7 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 | [**DeleteCompanyUsingDELETE**](CompanyApi.md#deletecompanyusingdelete) | **DELETE** /v2/companies/{company_id} | Delete a Company |
 | [**GetCompanyUsingGET1**](CompanyApi.md#getcompanyusingget1) | **GET** /v2/companies/{company_id} | Retrieve a Company |
 | [**ListCompaniesUsingGET1**](CompanyApi.md#listcompaniesusingget1) | **GET** /v2/companies | List Companies |
-| [**PatchCompanyUsingPATCH**](CompanyApi.md#patchcompanyusingpatch) | **PATCH** /v2/companies/{company_id} | Update a Company |
+| [**UpdateCompanyUsingPATCH1**](CompanyApi.md#updatecompanyusingpatch1) | **PATCH** /v2/companies/{company_id} | Update a Company |
 
 <a id="createcompanyusingpost1"></a>
 # **CreateCompanyUsingPOST1**
@@ -391,9 +391,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchcompanyusingpatch"></a>
-# **PatchCompanyUsingPATCH**
-> Company PatchCompanyUsingPATCH (string companyId, List<string>? updateMask = null, PatchCompanyRequest? patchCompanyRequest = null)
+<a id="updatecompanyusingpatch1"></a>
+# **UpdateCompanyUsingPATCH1**
+> Company UpdateCompanyUsingPATCH1 (string companyId, List<string>? updateMask = null, UpdateCompanyRequest? updateCompanyRequest = null)
 
 Update a Company
 
@@ -409,7 +409,7 @@ using Keap.Sdk.Core.Model;
 
 namespace Example
 {
-    public class PatchCompanyUsingPATCHExample
+    public class UpdateCompanyUsingPATCH1Example
     {
         public static void Main()
         {
@@ -418,17 +418,17 @@ namespace Example
             var apiInstance = new CompanyApi(config);
             var companyId = "companyId_example";  // string | company_id
             var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-            var patchCompanyRequest = new PatchCompanyRequest?(); // PatchCompanyRequest? | company (optional) 
+            var updateCompanyRequest = new UpdateCompanyRequest?(); // UpdateCompanyRequest? | company (optional) 
 
             try
             {
                 // Update a Company
-                Company result = apiInstance.PatchCompanyUsingPATCH(companyId, updateMask, patchCompanyRequest);
+                Company result = apiInstance.UpdateCompanyUsingPATCH1(companyId, updateMask, updateCompanyRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CompanyApi.PatchCompanyUsingPATCH: " + e.Message);
+                Debug.Print("Exception when calling CompanyApi.UpdateCompanyUsingPATCH1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -437,21 +437,21 @@ namespace Example
 }
 ```
 
-#### Using the PatchCompanyUsingPATCHWithHttpInfo variant
+#### Using the UpdateCompanyUsingPATCH1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update a Company
-    ApiResponse<Company> response = apiInstance.PatchCompanyUsingPATCHWithHttpInfo(companyId, updateMask, patchCompanyRequest);
+    ApiResponse<Company> response = apiInstance.UpdateCompanyUsingPATCH1WithHttpInfo(companyId, updateMask, updateCompanyRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CompanyApi.PatchCompanyUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CompanyApi.UpdateCompanyUsingPATCH1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -463,7 +463,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **companyId** | **string** | company_id |  |
 | **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-| **patchCompanyRequest** | [**PatchCompanyRequest?**](PatchCompanyRequest?.md) | company | [optional]  |
+| **updateCompanyRequest** | [**UpdateCompanyRequest?**](UpdateCompanyRequest?.md) | company | [optional]  |
 
 ### Return type
 

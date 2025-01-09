@@ -13,6 +13,7 @@
 |**createdByUserId** | **String** |  |  [optional] |
 |**id** | **String** |  |  [optional] |
 |**lastUpdatedByUserId** | **String** |  |  [optional] |
+|**pinnedAt** | **String** |  |  [optional] |
 |**text** | **String** |  |  [optional] |
 |**title** | **String** |  |  [optional] |
 |**type** | **String** |  |  [optional] |

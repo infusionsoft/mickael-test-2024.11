@@ -6,8 +6,8 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 |------------- | ------------- | -------------|
 | [**getBusinessProfileUsingGET**](BusinessProfileApi.md#getBusinessProfileUsingGET) | **GET** /v2/businessProfile | Retrieve Business Profile |
 | [**getBusinessProfileUsingGETWithHttpInfo**](BusinessProfileApi.md#getBusinessProfileUsingGETWithHttpInfo) | **GET** /v2/businessProfile | Retrieve Business Profile |
-| [**patchBusinessProfileUsingPATCH**](BusinessProfileApi.md#patchBusinessProfileUsingPATCH) | **PATCH** /v2/businessProfile | Update Business Profile |
-| [**patchBusinessProfileUsingPATCHWithHttpInfo**](BusinessProfileApi.md#patchBusinessProfileUsingPATCHWithHttpInfo) | **PATCH** /v2/businessProfile | Update Business Profile |
+| [**updateBusinessProfileUsingPATCH**](BusinessProfileApi.md#updateBusinessProfileUsingPATCH) | **PATCH** /v2/businessProfile | Update Business Profile |
+| [**updateBusinessProfileUsingPATCHWithHttpInfo**](BusinessProfileApi.md#updateBusinessProfileUsingPATCHWithHttpInfo) | **PATCH** /v2/businessProfile | Update Business Profile |
 
 
 
@@ -143,9 +143,9 @@ No authorization required
 | **404** | Not Found |  -  |
 
 
-## patchBusinessProfileUsingPATCH
+## updateBusinessProfileUsingPATCH
 
-> GetBusinessProfileResponse patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest)
+> GetBusinessProfileResponse updateBusinessProfileUsingPATCH(updateMask, updateBusinessProfileRequest)
 
 Update Business Profile
 
@@ -168,12 +168,12 @@ public class Example {
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchBusinessProfileRequest patchBusinessProfileRequest = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
+        UpdateBusinessProfileRequest updateBusinessProfileRequest = new UpdateBusinessProfileRequest(); // UpdateBusinessProfileRequest | businessProfile
         try {
-            GetBusinessProfileResponse result = apiInstance.patchBusinessProfileUsingPATCH(updateMask, patchBusinessProfileRequest);
+            GetBusinessProfileResponse result = apiInstance.updateBusinessProfileUsingPATCH(updateMask, updateBusinessProfileRequest);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling BusinessProfileApi#patchBusinessProfileUsingPATCH");
+            System.err.println("Exception when calling BusinessProfileApi#updateBusinessProfileUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -189,7 +189,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
-| **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
+| **updateBusinessProfileRequest** | [**UpdateBusinessProfileRequest**](UpdateBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
 
@@ -213,9 +213,9 @@ No authorization required
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-## patchBusinessProfileUsingPATCHWithHttpInfo
+## updateBusinessProfileUsingPATCHWithHttpInfo
 
-> ApiResponse<GetBusinessProfileResponse> patchBusinessProfileUsingPATCH patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest)
+> ApiResponse<GetBusinessProfileResponse> updateBusinessProfileUsingPATCH updateBusinessProfileUsingPATCHWithHttpInfo(updateMask, updateBusinessProfileRequest)
 
 Update Business Profile
 
@@ -239,14 +239,14 @@ public class Example {
 
         BusinessProfileApi apiInstance = new BusinessProfileApi(defaultClient);
         List<String> updateMask = Arrays.asList(); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-        PatchBusinessProfileRequest patchBusinessProfileRequest = new PatchBusinessProfileRequest(); // PatchBusinessProfileRequest | businessProfile
+        UpdateBusinessProfileRequest updateBusinessProfileRequest = new UpdateBusinessProfileRequest(); // UpdateBusinessProfileRequest | businessProfile
         try {
-            ApiResponse<GetBusinessProfileResponse> response = apiInstance.patchBusinessProfileUsingPATCHWithHttpInfo(updateMask, patchBusinessProfileRequest);
+            ApiResponse<GetBusinessProfileResponse> response = apiInstance.updateBusinessProfileUsingPATCHWithHttpInfo(updateMask, updateBusinessProfileRequest);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling BusinessProfileApi#patchBusinessProfileUsingPATCH");
+            System.err.println("Exception when calling BusinessProfileApi#updateBusinessProfileUsingPATCH");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -262,7 +262,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: name, email, website, phone, address, currency_code, business_goals, business_primary_color, business_secondary_color] |
-| **patchBusinessProfileRequest** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] |
+| **updateBusinessProfileRequest** | [**UpdateBusinessProfileRequest**](UpdateBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **created_by_user_id** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **last_updated_by_user_id** | **str** |  | [optional] 
+**pinned_at** | **str** |  | [optional] 
 **text** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

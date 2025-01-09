@@ -15,9 +15,9 @@ Method | HTTP request | Description
 [**listContactsWithTagIdUsingGET**](TagsApi.md#listContactsWithTagIdUsingGET) | **GET** /v2/tags/{tag_id}/contacts | List Tagged Contacts
 [**listTagCategoriesUsingGET**](TagsApi.md#listTagCategoriesUsingGET) | **GET** /v2/tags/categories | List Tag Categories
 [**listTagsUsingGET1**](TagsApi.md#listTagsUsingGET1) | **GET** /v2/tags | List Tags
-[**patchTagCategoryUsingPATCH**](TagsApi.md#patchTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
-[**patchTagUsingPATCH**](TagsApi.md#patchTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 [**removeTagsUsingPOST**](TagsApi.md#removeTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
+[**updateTagCategoryUsingPATCH**](TagsApi.md#updateTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
+[**updateTagUsingPATCH**](TagsApi.md#updateTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 
 
 
@@ -543,106 +543,6 @@ No authorization required
 - **Accept**: application/json
 
 
-## patchTagCategoryUsingPATCH
-
-> UpdateTagCategoryResponse patchTagCategoryUsingPATCH(tagCategoryId, opts)
-
-Update a Tag Category
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-
-```javascript
-import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
-
-let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
-let tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
-let opts = {
-  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'createUpdateTagCategoryRequest': new KeapCoreServiceCoreSdk.CreateUpdateTagCategoryRequest() // CreateUpdateTagCategoryRequest | tagCategory
-};
-apiInstance.patchTagCategoryUsingPATCH(tagCategoryId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tagCategoryId** | **String**| tag_category_id | 
- **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
-
-### Return type
-
-[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## patchTagUsingPATCH
-
-> UpdateTagResponse patchTagUsingPATCH(tagId, opts)
-
-Update a Tag
-
-Updates a Tag with only the values provided in the request
-
-### Example
-
-```javascript
-import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
-
-let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
-let tagId = "tagId_example"; // String | tag_id
-let opts = {
-  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-  'createUpdateTagRequest': new KeapCoreServiceCoreSdk.CreateUpdateTagRequest() // CreateUpdateTagRequest | tag
-};
-apiInstance.patchTagUsingPATCH(tagId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tagId** | **String**| tag_id | 
- **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
-
-### Return type
-
-[**UpdateTagResponse**](UpdateTagResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
 ## removeTagsUsingPOST
 
 > removeTagsUsingPOST(tagId, applyRemoveTagRequest)
@@ -678,6 +578,106 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateTagCategoryUsingPATCH
+
+> UpdateTagCategoryResponse updateTagCategoryUsingPATCH(tagCategoryId, opts)
+
+Update a Tag Category
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
+let tagCategoryId = "tagCategoryId_example"; // String | tag_category_id
+let opts = {
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'createUpdateTagCategoryRequest': new KeapCoreServiceCoreSdk.CreateUpdateTagCategoryRequest() // CreateUpdateTagCategoryRequest | tagCategory
+};
+apiInstance.updateTagCategoryUsingPATCH(tagCategoryId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tagCategoryId** | **String**| tag_category_id | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **createUpdateTagCategoryRequest** | [**CreateUpdateTagCategoryRequest**](CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] 
+
+### Return type
+
+[**UpdateTagCategoryResponse**](UpdateTagCategoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateTagUsingPATCH
+
+> UpdateTagResponse updateTagUsingPATCH(tagId, opts)
+
+Update a Tag
+
+Updates a Tag with only the values provided in the request
+
+### Example
+
+```javascript
+import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
+
+let apiInstance = new KeapCoreServiceCoreSdk.TagsApi();
+let tagId = "tagId_example"; // String | tag_id
+let opts = {
+  'updateMask': ["null"], // [String] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+  'createUpdateTagRequest': new KeapCoreServiceCoreSdk.CreateUpdateTagRequest() // CreateUpdateTagRequest | tag
+};
+apiInstance.updateTagUsingPATCH(tagId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tagId** | **String**| tag_id | 
+ **updateMask** | [**[String]**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
+ **createUpdateTagRequest** | [**CreateUpdateTagRequest**](CreateUpdateTagRequest.md)| tag | [optional] 
+
+### Return type
+
+[**UpdateTagResponse**](UpdateTagResponse.md)
 
 ### Authorization
 

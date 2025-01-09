@@ -6,8 +6,8 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 |--------|--------------|-------------|
 | [**AddAffiliateUsingPOST**](AffiliateApi.md#addaffiliateusingpost) | **POST** /v2/affiliates | Create an Affiliate |
 | [**GetAffiliateUsingGET1**](AffiliateApi.md#getaffiliateusingget1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate |
-| [**PatchCommissionProgramUsingPATCH**](AffiliateApi.md#patchcommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program |
 | [**UpdateAffiliateUsingPATCH**](AffiliateApi.md#updateaffiliateusingpatch) | **PATCH** /v2/affiliates/{id} | Update an Affiliate |
+| [**UpdateCommissionProgramUsingPATCH**](AffiliateApi.md#updatecommissionprogramusingpatch) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program |
 
 <a id="addaffiliateusingpost"></a>
 # **AddAffiliateUsingPOST**
@@ -196,107 +196,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchcommissionprogramusingpatch"></a>
-# **PatchCommissionProgramUsingPATCH**
-> AffiliateCommissionProgramResponse PatchCommissionProgramUsingPATCH (string commissionProgramId, PatchCommissionProgramRequest patchCommissionProgramRequest, List<string>? updateMask = null)
-
-Update a Affiliate Commission Program
-
-Updates the properties of an Affiliate Commission Program
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Keap.Sdk.Core.Api;
-using Keap.Sdk.Core.Client;
-using Keap.Sdk.Core.Model;
-
-namespace Example
-{
-    public class PatchCommissionProgramUsingPATCHExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.keap.com/crm/rest";
-            var apiInstance = new AffiliateApi(config);
-            var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
-            var patchCommissionProgramRequest = new PatchCommissionProgramRequest(); // PatchCommissionProgramRequest | patchCommissionProgramRequest
-            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
-
-            try
-            {
-                // Update a Affiliate Commission Program
-                AffiliateCommissionProgramResponse result = apiInstance.PatchCommissionProgramUsingPATCH(commissionProgramId, patchCommissionProgramRequest, updateMask);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling AffiliateApi.PatchCommissionProgramUsingPATCH: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PatchCommissionProgramUsingPATCHWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Update a Affiliate Commission Program
-    ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.PatchCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, patchCommissionProgramRequest, updateMask);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling AffiliateApi.PatchCommissionProgramUsingPATCHWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **commissionProgramId** | **string** | commission_program_id |  |
-| **patchCommissionProgramRequest** | [**PatchCommissionProgramRequest**](PatchCommissionProgramRequest.md) | patchCommissionProgramRequest |  |
-| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
-
-### Return type
-
-[**AffiliateCommissionProgramResponse**](AffiliateCommissionProgramResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **403** | Forbidden |  -  |
-| **404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="updateaffiliateusingpatch"></a>
 # **UpdateAffiliateUsingPATCH**
-> RestAffiliate UpdateAffiliateUsingPATCH (string id, PatchAffiliateRequest? patchAffiliateRequest = null)
+> RestAffiliate UpdateAffiliateUsingPATCH (string id, UpdateAffiliateRequest? updateAffiliateRequest = null)
 
 Update an Affiliate
 
@@ -320,12 +222,12 @@ namespace Example
             config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new AffiliateApi(config);
             var id = "id_example";  // string | id
-            var patchAffiliateRequest = new PatchAffiliateRequest?(); // PatchAffiliateRequest? | Affiliate request to patch (optional) 
+            var updateAffiliateRequest = new UpdateAffiliateRequest?(); // UpdateAffiliateRequest? | Request to update an affiliate (optional) 
 
             try
             {
                 // Update an Affiliate
-                RestAffiliate result = apiInstance.UpdateAffiliateUsingPATCH(id, patchAffiliateRequest);
+                RestAffiliate result = apiInstance.UpdateAffiliateUsingPATCH(id, updateAffiliateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -346,7 +248,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Update an Affiliate
-    ApiResponse<RestAffiliate> response = apiInstance.UpdateAffiliateUsingPATCHWithHttpInfo(id, patchAffiliateRequest);
+    ApiResponse<RestAffiliate> response = apiInstance.UpdateAffiliateUsingPATCHWithHttpInfo(id, updateAffiliateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -364,11 +266,109 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **string** | id |  |
-| **patchAffiliateRequest** | [**PatchAffiliateRequest?**](PatchAffiliateRequest?.md) | Affiliate request to patch | [optional]  |
+| **updateAffiliateRequest** | [**UpdateAffiliateRequest?**](UpdateAffiliateRequest?.md) | Request to update an affiliate | [optional]  |
 
 ### Return type
 
 [**RestAffiliate**](RestAffiliate.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="updatecommissionprogramusingpatch"></a>
+# **UpdateCommissionProgramUsingPATCH**
+> AffiliateCommissionProgramResponse UpdateCommissionProgramUsingPATCH (string commissionProgramId, UpdateCommissionProgramRequest updateCommissionProgramRequest, List<string>? updateMask = null)
+
+Update a Affiliate Commission Program
+
+Updates the properties of an Affiliate Commission Program
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Keap.Sdk.Core.Api;
+using Keap.Sdk.Core.Client;
+using Keap.Sdk.Core.Model;
+
+namespace Example
+{
+    public class UpdateCommissionProgramUsingPATCHExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.keap.com/crm/rest";
+            var apiInstance = new AffiliateApi(config);
+            var commissionProgramId = "commissionProgramId_example";  // string | commission_program_id
+            var updateCommissionProgramRequest = new UpdateCommissionProgramRequest(); // UpdateCommissionProgramRequest | updateCommissionProgramRequest
+            var updateMask = new List<string>?(); // List<string>? | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional) 
+
+            try
+            {
+                // Update a Affiliate Commission Program
+                AffiliateCommissionProgramResponse result = apiInstance.UpdateCommissionProgramUsingPATCH(commissionProgramId, updateCommissionProgramRequest, updateMask);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AffiliateApi.UpdateCommissionProgramUsingPATCH: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UpdateCommissionProgramUsingPATCHWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a Affiliate Commission Program
+    ApiResponse<AffiliateCommissionProgramResponse> response = apiInstance.UpdateCommissionProgramUsingPATCHWithHttpInfo(commissionProgramId, updateCommissionProgramRequest, updateMask);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AffiliateApi.UpdateCommissionProgramUsingPATCHWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **commissionProgramId** | **string** | commission_program_id |  |
+| **updateCommissionProgramRequest** | [**UpdateCommissionProgramRequest**](UpdateCommissionProgramRequest.md) | updateCommissionProgramRequest |  |
+| **updateMask** | [**List&lt;string&gt;?**](string.md) | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]  |
+
+### Return type
+
+[**AffiliateCommissionProgramResponse**](AffiliateCommissionProgramResponse.md)
 
 ### Authorization
 

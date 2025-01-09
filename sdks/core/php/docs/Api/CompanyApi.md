@@ -8,7 +8,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 | [**deleteCompanyUsingDELETE()**](CompanyApi.md#deleteCompanyUsingDELETE) | **DELETE** /v2/companies/{company_id} | Delete a Company |
 | [**getCompanyUsingGET1()**](CompanyApi.md#getCompanyUsingGET1) | **GET** /v2/companies/{company_id} | Retrieve a Company |
 | [**listCompaniesUsingGET1()**](CompanyApi.md#listCompaniesUsingGET1) | **GET** /v2/companies | List Companies |
-| [**patchCompanyUsingPATCH()**](CompanyApi.md#patchCompanyUsingPATCH) | **PATCH** /v2/companies/{company_id} | Update a Company |
+| [**updateCompanyUsingPATCH1()**](CompanyApi.md#updateCompanyUsingPATCH1) | **PATCH** /v2/companies/{company_id} | Update a Company |
 
 
 ## `createCompanyUsingPOST1()`
@@ -240,10 +240,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchCompanyUsingPATCH()`
+## `updateCompanyUsingPATCH1()`
 
 ```php
-patchCompanyUsingPATCH($company_id, $update_mask, $patch_company_request): \Com\Keap\Sdk\Core\Model\Company
+updateCompanyUsingPATCH1($company_id, $update_mask, $update_company_request): \Com\Keap\Sdk\Core\Model\Company
 ```
 
 Update a Company
@@ -264,13 +264,13 @@ $apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
 );
 $company_id = 'company_id_example'; // string | company_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$patch_company_request = new \Com\Keap\Sdk\Core\Model\PatchCompanyRequest(); // \Com\Keap\Sdk\Core\Model\PatchCompanyRequest | company
+$update_company_request = new \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest | company
 
 try {
-    $result = $apiInstance->patchCompanyUsingPATCH($company_id, $update_mask, $patch_company_request);
+    $result = $apiInstance->updateCompanyUsingPATCH1($company_id, $update_mask, $update_company_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CompanyApi->patchCompanyUsingPATCH: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CompanyApi->updateCompanyUsingPATCH1: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -280,7 +280,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **company_id** | **string**| company_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **patch_company_request** | [**\Com\Keap\Sdk\Core\Model\PatchCompanyRequest**](../Model/PatchCompanyRequest.md)| company | [optional] |
+| **update_company_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCompanyRequest**](../Model/UpdateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 

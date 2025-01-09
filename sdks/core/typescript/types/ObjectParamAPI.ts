@@ -38,6 +38,7 @@ import { ApplicationConfigurationModuleTemplate } from '../models/ApplicationCon
 import { ApplicationFeaturesEnabled } from '../models/ApplicationFeaturesEnabled';
 import { ApplyRemoveTagRequest } from '../models/ApplyRemoveTagRequest';
 import { ApplyTagsResponse } from '../models/ApplyTagsResponse';
+import { AssignProductsRequest } from '../models/AssignProductsRequest';
 import { Automation } from '../models/Automation';
 import { AutomationCategory } from '../models/AutomationCategory';
 import { AutomationLockStatus } from '../models/AutomationLockStatus';
@@ -67,6 +68,7 @@ import { ContactUtmResponse } from '../models/ContactUtmResponse';
 import { Country } from '../models/Country';
 import { CreateAffiliateRequest } from '../models/CreateAffiliateRequest';
 import { CreateAutomationCategoryRequest } from '../models/CreateAutomationCategoryRequest';
+import { CreateCategoryDiscountRequest } from '../models/CreateCategoryDiscountRequest';
 import { CreateCommissionProgramRequest } from '../models/CreateCommissionProgramRequest';
 import { CreateCompanyRequest } from '../models/CreateCompanyRequest';
 import { CreateContactLinkTypeRequest } from '../models/CreateContactLinkTypeRequest';
@@ -86,14 +88,15 @@ import { CreateNoteRequest } from '../models/CreateNoteRequest';
 import { CreateOpportunityRequest } from '../models/CreateOpportunityRequest';
 import { CreateOpportunityStageChecklistItem } from '../models/CreateOpportunityStageChecklistItem';
 import { CreateOpportunityStageRequest } from '../models/CreateOpportunityStageRequest';
-import { CreateOrPatchAffiliateLinkRequest } from '../models/CreateOrPatchAffiliateLinkRequest';
+import { CreateOrUpdateAffiliateLinkRequest } from '../models/CreateOrUpdateAffiliateLinkRequest';
 import { CreateOrderTotalDiscountRequest } from '../models/CreateOrderTotalDiscountRequest';
-import { CreatePatchContactRequest } from '../models/CreatePatchContactRequest';
-import { CreatePatchTaskRequest } from '../models/CreatePatchTaskRequest';
 import { CreatePaymentMethodConfigRequest } from '../models/CreatePaymentMethodConfigRequest';
 import { CreatePaymentRequest } from '../models/CreatePaymentRequest';
 import { CreatePipelineRequest } from '../models/CreatePipelineRequest';
+import { CreateProductCategoryRequest } from '../models/CreateProductCategoryRequest';
 import { CreateProductCommissionProgramRequest } from '../models/CreateProductCommissionProgramRequest';
+import { CreateProductDiscountRequest } from '../models/CreateProductDiscountRequest';
+import { CreateProductInterestBundleRequest } from '../models/CreateProductInterestBundleRequest';
 import { CreateProductRequest } from '../models/CreateProductRequest';
 import { CreateReferralRequest } from '../models/CreateReferralRequest';
 import { CreateRestOrderItemRequest } from '../models/CreateRestOrderItemRequest';
@@ -102,10 +105,11 @@ import { CreateStageRequest } from '../models/CreateStageRequest';
 import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubscriptionCommissionProgramRequest';
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
-import { CreateUpdateDiscountRequest } from '../models/CreateUpdateDiscountRequest';
+import { CreateUpdateContactRequest } from '../models/CreateUpdateContactRequest';
 import { CreateUpdateLeadSourceCategoryRequest } from '../models/CreateUpdateLeadSourceCategoryRequest';
 import { CreateUpdateTagCategoryRequest } from '../models/CreateUpdateTagCategoryRequest';
 import { CreateUpdateTagRequest } from '../models/CreateUpdateTagRequest';
+import { CreateUpdateTaskRequest } from '../models/CreateUpdateTaskRequest';
 import { CreateUserRequestV2 } from '../models/CreateUserRequestV2';
 import { CurrencyValue } from '../models/CurrencyValue';
 import { CustomField } from '../models/CustomField';
@@ -175,6 +179,7 @@ import { ListContactsResponse } from '../models/ListContactsResponse';
 import { ListCountriesResponse } from '../models/ListCountriesResponse';
 import { ListFilesResponse } from '../models/ListFilesResponse';
 import { ListLandingPagesResponse } from '../models/ListLandingPagesResponse';
+import { ListLeadSourceCategoriesResponse } from '../models/ListLeadSourceCategoriesResponse';
 import { ListLeadSourcesResponse } from '../models/ListLeadSourcesResponse';
 import { ListNoteTemplateResponse } from '../models/ListNoteTemplateResponse';
 import { ListNotesResponse } from '../models/ListNotesResponse';
@@ -183,6 +188,7 @@ import { ListOpportunityStagesResponse } from '../models/ListOpportunityStagesRe
 import { ListOrderPaymentsResponse } from '../models/ListOrderPaymentsResponse';
 import { ListOrderTotalDiscountsResponse } from '../models/ListOrderTotalDiscountsResponse';
 import { ListOrders } from '../models/ListOrders';
+import { ListProductCategoriesResponse } from '../models/ListProductCategoriesResponse';
 import { ListProductsResponse } from '../models/ListProductsResponse';
 import { ListProvincesResponse } from '../models/ListProvincesResponse';
 import { ListRestMerchantAccountResponse } from '../models/ListRestMerchantAccountResponse';
@@ -210,15 +216,6 @@ import { OrderTotalDiscount } from '../models/OrderTotalDiscount';
 import { Origin } from '../models/Origin';
 import { OriginRequest } from '../models/OriginRequest';
 import { Owner } from '../models/Owner';
-import { PatchAffiliateRequest } from '../models/PatchAffiliateRequest';
-import { PatchBusinessProfileRequest } from '../models/PatchBusinessProfileRequest';
-import { PatchCommissionProgramRequest } from '../models/PatchCommissionProgramRequest';
-import { PatchCompanyRequest } from '../models/PatchCompanyRequest';
-import { PatchDefaultCommissionProgramRequest } from '../models/PatchDefaultCommissionProgramRequest';
-import { PatchOpportunityRequest } from '../models/PatchOpportunityRequest';
-import { PatchProductCommissionProgramRequest } from '../models/PatchProductCommissionProgramRequest';
-import { PatchSubscriptionCommissionProgramRequest } from '../models/PatchSubscriptionCommissionProgramRequest';
-import { PatchUserRequestV2 } from '../models/PatchUserRequestV2';
 import { PaymentMethodConfig } from '../models/PaymentMethodConfig';
 import { PaymentMethodList } from '../models/PaymentMethodList';
 import { PaymentPlan } from '../models/PaymentPlan';
@@ -231,9 +228,13 @@ import { PipelineOutcomeLabelListResponse } from '../models/PipelineOutcomeLabel
 import { PipelineStageListResponse } from '../models/PipelineStageListResponse';
 import { PipelineSummariesListResponse } from '../models/PipelineSummariesListResponse';
 import { PipelineSummary } from '../models/PipelineSummary';
+import { ProductCategory } from '../models/ProductCategory';
 import { ProductCommission } from '../models/ProductCommission';
 import { ProductCommissionProgram } from '../models/ProductCommissionProgram';
+import { ProductDiscount } from '../models/ProductDiscount';
 import { ProductFixedOption } from '../models/ProductFixedOption';
+import { ProductInterest } from '../models/ProductInterest';
+import { ProductInterestBundle } from '../models/ProductInterestBundle';
 import { ProductInventory } from '../models/ProductInventory';
 import { ProductOptions } from '../models/ProductOptions';
 import { ProductVariableSetting } from '../models/ProductVariableSetting';
@@ -257,7 +258,6 @@ import { RestSubscriptionV2 } from '../models/RestSubscriptionV2';
 import { RestV2Opportunity } from '../models/RestV2Opportunity';
 import { RestV2Order } from '../models/RestV2Order';
 import { RestV2OrderItem } from '../models/RestV2OrderItem';
-import { RestV2PatchOrderRequest } from '../models/RestV2PatchOrderRequest';
 import { RestV2Product } from '../models/RestV2Product';
 import { RestV2Subscription } from '../models/RestV2Subscription';
 import { RestV2User } from '../models/RestV2User';
@@ -277,28 +277,43 @@ import { StageListResponse } from '../models/StageListResponse';
 import { SubscriptionCommission } from '../models/SubscriptionCommission';
 import { SubscriptionCommissionProgram } from '../models/SubscriptionCommissionProgram';
 import { SubscriptionPlan } from '../models/SubscriptionPlan';
+import { SubscriptionPlanInterest } from '../models/SubscriptionPlanInterest';
 import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { UpdateAffiliateRequest } from '../models/UpdateAffiliateRequest';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
+import { UpdateBusinessProfileRequest } from '../models/UpdateBusinessProfileRequest';
+import { UpdateCategoryDiscountRequest } from '../models/UpdateCategoryDiscountRequest';
+import { UpdateCommissionProgramRequest } from '../models/UpdateCommissionProgramRequest';
+import { UpdateCompanyRequest } from '../models/UpdateCompanyRequest';
 import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMetaDataRequest';
 import { UpdateDealNoteRequest } from '../models/UpdateDealNoteRequest';
+import { UpdateDefaultCommissionProgramRequest } from '../models/UpdateDefaultCommissionProgramRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
 import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
+import { UpdateOpportunityRequestV2 } from '../models/UpdateOpportunityRequestV2';
 import { UpdateOpportunityStageChecklistItem } from '../models/UpdateOpportunityStageChecklistItem';
 import { UpdateOpportunityStageRequest } from '../models/UpdateOpportunityStageRequest';
+import { UpdateOrderItemRequest } from '../models/UpdateOrderItemRequest';
+import { UpdateOrderRequest } from '../models/UpdateOrderRequest';
 import { UpdateOrderTotalDiscountRequest } from '../models/UpdateOrderTotalDiscountRequest';
 import { UpdateOutcomeLabelsRequest } from '../models/UpdateOutcomeLabelsRequest';
 import { UpdatePipelineRequest } from '../models/UpdatePipelineRequest';
+import { UpdateProductCategoryRequest } from '../models/UpdateProductCategoryRequest';
+import { UpdateProductCommissionProgramRequest } from '../models/UpdateProductCommissionProgramRequest';
 import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
+import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
+import { UpdateSubscriptionRequest } from '../models/UpdateSubscriptionRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
 import { UpdateTaskResponse } from '../models/UpdateTaskResponse';
+import { UpdateUserRequest } from '../models/UpdateUserRequest';
 import { User } from '../models/User';
 
 import { ObservableAffiliateApi } from "./ObservableAPI";
@@ -323,29 +338,6 @@ export interface AffiliateApiGetAffiliateUsingGET1Request {
     id: string
 }
 
-export interface AffiliateApiPatchCommissionProgramUsingPATCHRequest {
-    /**
-     * commission_program_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof AffiliateApipatchCommissionProgramUsingPATCH
-     */
-    commissionProgramId: string
-    /**
-     * patchCommissionProgramRequest
-     * @type PatchCommissionProgramRequest
-     * @memberof AffiliateApipatchCommissionProgramUsingPATCH
-     */
-    patchCommissionProgramRequest: PatchCommissionProgramRequest
-    /**
-     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * Defaults to: undefined
-     * @type Array&lt;string&gt;
-     * @memberof AffiliateApipatchCommissionProgramUsingPATCH
-     */
-    updateMask?: Array<string>
-}
-
 export interface AffiliateApiUpdateAffiliateUsingPATCHRequest {
     /**
      * id
@@ -355,11 +347,34 @@ export interface AffiliateApiUpdateAffiliateUsingPATCHRequest {
      */
     id: string
     /**
-     * Affiliate request to patch
-     * @type PatchAffiliateRequest
+     * Request to update an affiliate
+     * @type UpdateAffiliateRequest
      * @memberof AffiliateApiupdateAffiliateUsingPATCH
      */
-    patchAffiliateRequest?: PatchAffiliateRequest
+    updateAffiliateRequest?: UpdateAffiliateRequest
+}
+
+export interface AffiliateApiUpdateCommissionProgramUsingPATCHRequest {
+    /**
+     * commission_program_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof AffiliateApiupdateCommissionProgramUsingPATCH
+     */
+    commissionProgramId: string
+    /**
+     * updateCommissionProgramRequest
+     * @type UpdateCommissionProgramRequest
+     * @memberof AffiliateApiupdateCommissionProgramUsingPATCH
+     */
+    updateCommissionProgramRequest: UpdateCommissionProgramRequest
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof AffiliateApiupdateCommissionProgramUsingPATCH
+     */
+    updateMask?: Array<string>
 }
 
 export class ObjectAffiliateApi {
@@ -406,30 +421,12 @@ export class ObjectAffiliateApi {
     }
 
     /**
-     * Updates the properties of an Affiliate Commission Program
-     * Update a Affiliate Commission Program
-     * @param param the request object
-     */
-    public patchCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiPatchCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
-        return this.api.patchCommissionProgramUsingPATCHWithHttpInfo(param.commissionProgramId, param.patchCommissionProgramRequest, param.updateMask,  options).toPromise();
-    }
-
-    /**
-     * Updates the properties of an Affiliate Commission Program
-     * Update a Affiliate Commission Program
-     * @param param the request object
-     */
-    public patchCommissionProgramUsingPATCH(param: AffiliateApiPatchCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
-        return this.api.patchCommissionProgramUsingPATCH(param.commissionProgramId, param.patchCommissionProgramRequest, param.updateMask,  options).toPromise();
-    }
-
-    /**
      * Updates a single Affiliate
      * Update an Affiliate
      * @param param the request object
      */
     public updateAffiliateUsingPATCHWithHttpInfo(param: AffiliateApiUpdateAffiliateUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<RestAffiliate>> {
-        return this.api.updateAffiliateUsingPATCHWithHttpInfo(param.id, param.patchAffiliateRequest,  options).toPromise();
+        return this.api.updateAffiliateUsingPATCHWithHttpInfo(param.id, param.updateAffiliateRequest,  options).toPromise();
     }
 
     /**
@@ -438,7 +435,25 @@ export class ObjectAffiliateApi {
      * @param param the request object
      */
     public updateAffiliateUsingPATCH(param: AffiliateApiUpdateAffiliateUsingPATCHRequest, options?: Configuration): Promise<RestAffiliate> {
-        return this.api.updateAffiliateUsingPATCH(param.id, param.patchAffiliateRequest,  options).toPromise();
+        return this.api.updateAffiliateUsingPATCH(param.id, param.updateAffiliateRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates the properties of an Affiliate Commission Program
+     * Update a Affiliate Commission Program
+     * @param param the request object
+     */
+    public updateCommissionProgramUsingPATCHWithHttpInfo(param: AffiliateApiUpdateCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<AffiliateCommissionProgramResponse>> {
+        return this.api.updateCommissionProgramUsingPATCHWithHttpInfo(param.commissionProgramId, param.updateCommissionProgramRequest, param.updateMask,  options).toPromise();
+    }
+
+    /**
+     * Updates the properties of an Affiliate Commission Program
+     * Update a Affiliate Commission Program
+     * @param param the request object
+     */
+    public updateCommissionProgramUsingPATCH(param: AffiliateApiUpdateCommissionProgramUsingPATCHRequest, options?: Configuration): Promise<AffiliateCommissionProgramResponse> {
+        return this.api.updateCommissionProgramUsingPATCH(param.commissionProgramId, param.updateCommissionProgramRequest, param.updateMask,  options).toPromise();
     }
 
 }
@@ -816,20 +831,20 @@ import { BusinessProfileApiRequestFactory, BusinessProfileApiResponseProcessor} 
 export interface BusinessProfileApiGetBusinessProfileUsingGETRequest {
 }
 
-export interface BusinessProfileApiPatchBusinessProfileUsingPATCHRequest {
+export interface BusinessProfileApiUpdateBusinessProfileUsingPATCHRequest {
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
-     * @memberof BusinessProfileApipatchBusinessProfileUsingPATCH
+     * @memberof BusinessProfileApiupdateBusinessProfileUsingPATCH
      */
     updateMask?: Array<string>
     /**
      * businessProfile
-     * @type PatchBusinessProfileRequest
-     * @memberof BusinessProfileApipatchBusinessProfileUsingPATCH
+     * @type UpdateBusinessProfileRequest
+     * @memberof BusinessProfileApiupdateBusinessProfileUsingPATCH
      */
-    patchBusinessProfileRequest?: PatchBusinessProfileRequest
+    updateBusinessProfileRequest?: UpdateBusinessProfileRequest
 }
 
 export class ObjectBusinessProfileApi {
@@ -862,8 +877,8 @@ export class ObjectBusinessProfileApi {
      * Update Business Profile
      * @param param the request object
      */
-    public patchBusinessProfileUsingPATCHWithHttpInfo(param: BusinessProfileApiPatchBusinessProfileUsingPATCHRequest = {}, options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
-        return this.api.patchBusinessProfileUsingPATCHWithHttpInfo(param.updateMask, param.patchBusinessProfileRequest,  options).toPromise();
+    public updateBusinessProfileUsingPATCHWithHttpInfo(param: BusinessProfileApiUpdateBusinessProfileUsingPATCHRequest = {}, options?: Configuration): Promise<HttpInfo<GetBusinessProfileResponse>> {
+        return this.api.updateBusinessProfileUsingPATCHWithHttpInfo(param.updateMask, param.updateBusinessProfileRequest,  options).toPromise();
     }
 
     /**
@@ -871,8 +886,8 @@ export class ObjectBusinessProfileApi {
      * Update Business Profile
      * @param param the request object
      */
-    public patchBusinessProfileUsingPATCH(param: BusinessProfileApiPatchBusinessProfileUsingPATCHRequest = {}, options?: Configuration): Promise<GetBusinessProfileResponse> {
-        return this.api.patchBusinessProfileUsingPATCH(param.updateMask, param.patchBusinessProfileRequest,  options).toPromise();
+    public updateBusinessProfileUsingPATCH(param: BusinessProfileApiUpdateBusinessProfileUsingPATCHRequest = {}, options?: Configuration): Promise<GetBusinessProfileResponse> {
+        return this.api.updateBusinessProfileUsingPATCH(param.updateMask, param.updateBusinessProfileRequest,  options).toPromise();
     }
 
 }
@@ -1136,27 +1151,27 @@ export interface CompanyApiListCompaniesUsingGET1Request {
     pageToken?: string
 }
 
-export interface CompanyApiPatchCompanyUsingPATCHRequest {
+export interface CompanyApiUpdateCompanyUsingPATCH1Request {
     /**
      * company_id
      * Defaults to: undefined
      * @type string
-     * @memberof CompanyApipatchCompanyUsingPATCH
+     * @memberof CompanyApiupdateCompanyUsingPATCH1
      */
     companyId: string
     /**
      * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
      * Defaults to: undefined
      * @type Array&lt;string&gt;
-     * @memberof CompanyApipatchCompanyUsingPATCH
+     * @memberof CompanyApiupdateCompanyUsingPATCH1
      */
     updateMask?: Array<string>
     /**
      * company
-     * @type PatchCompanyRequest
-     * @memberof CompanyApipatchCompanyUsingPATCH
+     * @type UpdateCompanyRequest
+     * @memberof CompanyApiupdateCompanyUsingPATCH1
      */
-    patchCompanyRequest?: PatchCompanyRequest
+    updateCompanyRequest?: UpdateCompanyRequest
 }
 
 export class ObjectCompanyApi {
@@ -1243,8 +1258,8 @@ export class ObjectCompanyApi {
      * Update a Company
      * @param param the request object
      */
-    public patchCompanyUsingPATCHWithHttpInfo(param: CompanyApiPatchCompanyUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<Company>> {
-        return this.api.patchCompanyUsingPATCHWithHttpInfo(param.companyId, param.updateMask, param.patchCompanyRequest,  options).toPromise();
+    public updateCompanyUsingPATCH1WithHttpInfo(param: CompanyApiUpdateCompanyUsingPATCH1Request, options?: Configuration): Promise<HttpInfo<Company>> {
+        return this.api.updateCompanyUsingPATCH1WithHttpInfo(param.companyId, param.updateMask, param.updateCompanyRequest,  options).toPromise();
     }
 
     /**
@@ -1252,8 +1267,8 @@ export class ObjectCompanyApi {
      * Update a Company
      * @param param the request object
      */
-    public patchCompanyUsingPATCH(param: CompanyApiPatchCompanyUsingPATCHRequest, options?: Configuration): Promise<Company> {
-        return this.api.patchCompanyUsingPATCH(param.companyId, param.updateMask, param.patchCompanyRequest,  options).toPromise();
+    public updateCompanyUsingPATCH1(param: CompanyApiUpdateCompanyUsingPATCH1Request, options?: Configuration): Promise<Company> {
+        return this.api.updateCompanyUsingPATCH1(param.companyId, param.updateMask, param.updateCompanyRequest,  options).toPromise();
     }
 
 }
@@ -1273,10 +1288,10 @@ export interface ContactApiCreateContactLinkTypeUsingPOSTRequest {
 export interface ContactApiCreateContactUsingPOST1Request {
     /**
      * contact
-     * @type CreatePatchContactRequest
+     * @type CreateUpdateContactRequest
      * @memberof ContactApicreateContactUsingPOST1
      */
-    createPatchContactRequest?: CreatePatchContactRequest
+    createUpdateContactRequest?: CreateUpdateContactRequest
 }
 
 export interface ContactApiDeleteContactUsingDELETE1Request {
@@ -1298,7 +1313,7 @@ export interface ContactApiGetContactUsingGET1Request {
      */
     contactId: string
     /**
-     * Comma-delimited list of Contact properties to include in the response. (Available fields are: &#x60;score_value&#x60;, &#x60;addresses&#x60;, &#x60;anniversary&#x60;, &#x60;birthday&#x60;, &#x60;company&#x60;, &#x60;contact_type&#x60;, &#x60;custom_fields&#x60;, &#x60;create_time&#x60;, &#x60;email_addresses&#x60;, &#x60;fax_numbers&#x60;, &#x60;job_title&#x60;, &#x60;update_time&#x60;, &#x60;create_time&#x60;, &#x60;leadsource_id&#x60;,&#x60;middle_name&#x60;, &#x60;origin&#x60;, &#x60;owner_id&#x60;, &#x60;phone_numbers&#x60;, &#x60;preferred_locale&#x60;, &#x60;preferred_name&#x60;,&#x60;prefix&#x60;, &#x60;relationships&#x60;, &#x60;social_accounts&#x60;, &#x60;source_type&#x60;, &#x60;spouse_name&#x60;, &#x60;suffix&#x60;, &#x60;time_zone&#x60;,&#x60;website&#x60;, &#x60;tag_ids&#x60;, &#x60;utm_parameters&#x60;)
+     * Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ContactApigetContactUsingGET1
@@ -1358,7 +1373,7 @@ export interface ContactApiListContactLinksUsingGETRequest {
 
 export interface ContactApiListContactsUsingGET1Request {
     /**
-     * Comma-delimited list of Contact properties to include in the response. (Available fields are: &#x60;score_value&#x60;, &#x60;addresses&#x60;, &#x60;anniversary&#x60;, &#x60;birthday&#x60;, &#x60;company&#x60;, &#x60;contact_type&#x60;, &#x60;custom_fields&#x60;, &#x60;create_time&#x60;, &#x60;email_addresses&#x60;, &#x60;fax_numbers&#x60;, &#x60;job_title&#x60;, &#x60;update_time&#x60;, &#x60;create_time&#x60;, &#x60;leadsource_id&#x60;,&#x60;middle_name&#x60;, &#x60;origin&#x60;, &#x60;owner_id&#x60;, &#x60;phone_numbers&#x60;, &#x60;preferred_locale&#x60;, &#x60;preferred_name&#x60;,&#x60;prefix&#x60;, &#x60;relationships&#x60;, &#x60;social_accounts&#x60;, &#x60;source_type&#x60;, &#x60;spouse_name&#x60;, &#x60;suffix&#x60;, &#x60;time_zone&#x60;,&#x60;website&#x60;, &#x60;tag_ids&#x60;, &#x60;utm_parameters&#x60;)
+     * Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ContactApilistContactsUsingGET1
@@ -1406,29 +1421,6 @@ export interface ContactApiListPaymentMethodsUsingGETRequest {
     contactId: number
 }
 
-export interface ContactApiPatchContactUsingPATCHRequest {
-    /**
-     * contact_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof ContactApipatchContactUsingPATCH
-     */
-    contactId: string
-    /**
-     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * Defaults to: undefined
-     * @type Array&lt;string&gt;
-     * @memberof ContactApipatchContactUsingPATCH
-     */
-    updateMask?: Array<string>
-    /**
-     * contact
-     * @type CreatePatchContactRequest
-     * @memberof ContactApipatchContactUsingPATCH
-     */
-    createPatchContactRequest?: CreatePatchContactRequest
-}
-
 export interface ContactApiRetrieveContactModelUsingGET1Request {
 }
 
@@ -1439,6 +1431,29 @@ export interface ContactApiUnlinkContactsUsingPOSTRequest {
      * @memberof ContactApiunlinkContactsUsingPOST
      */
     linkContactsRequest: LinkContactsRequest
+}
+
+export interface ContactApiUpdateContactUsingPATCHRequest {
+    /**
+     * contact_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof ContactApiupdateContactUsingPATCH
+     */
+    contactId: string
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof ContactApiupdateContactUsingPATCH
+     */
+    updateMask?: Array<string>
+    /**
+     * contact
+     * @type CreateUpdateContactRequest
+     * @memberof ContactApiupdateContactUsingPATCH
+     */
+    createUpdateContactRequest?: CreateUpdateContactRequest
 }
 
 export class ObjectContactApi {
@@ -1472,7 +1487,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public createContactUsingPOST1WithHttpInfo(param: ContactApiCreateContactUsingPOST1Request = {}, options?: Configuration): Promise<HttpInfo<Contact>> {
-        return this.api.createContactUsingPOST1WithHttpInfo(param.createPatchContactRequest,  options).toPromise();
+        return this.api.createContactUsingPOST1WithHttpInfo(param.createUpdateContactRequest,  options).toPromise();
     }
 
     /**
@@ -1481,7 +1496,7 @@ export class ObjectContactApi {
      * @param param the request object
      */
     public createContactUsingPOST1(param: ContactApiCreateContactUsingPOST1Request = {}, options?: Configuration): Promise<Contact> {
-        return this.api.createContactUsingPOST1(param.createPatchContactRequest,  options).toPromise();
+        return this.api.createContactUsingPOST1(param.createUpdateContactRequest,  options).toPromise();
     }
 
     /**
@@ -1611,24 +1626,6 @@ export class ObjectContactApi {
     }
 
     /**
-     * Updates a Contact
-     * Update a Contact
-     * @param param the request object
-     */
-    public patchContactUsingPATCHWithHttpInfo(param: ContactApiPatchContactUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<Contact>> {
-        return this.api.patchContactUsingPATCHWithHttpInfo(param.contactId, param.updateMask, param.createPatchContactRequest,  options).toPromise();
-    }
-
-    /**
-     * Updates a Contact
-     * Update a Contact
-     * @param param the request object
-     */
-    public patchContactUsingPATCH(param: ContactApiPatchContactUsingPATCHRequest, options?: Configuration): Promise<Contact> {
-        return this.api.patchContactUsingPATCH(param.contactId, param.updateMask, param.createPatchContactRequest,  options).toPromise();
-    }
-
-    /**
      * Get the custom fields and optional properties for the Contact object
      * Retrieve Contact Model
      * @param param the request object
@@ -1662,6 +1659,24 @@ export class ObjectContactApi {
      */
     public unlinkContactsUsingPOST(param: ContactApiUnlinkContactsUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.unlinkContactsUsingPOST(param.linkContactsRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates a Contact
+     * Update a Contact
+     * @param param the request object
+     */
+    public updateContactUsingPATCHWithHttpInfo(param: ContactApiUpdateContactUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<Contact>> {
+        return this.api.updateContactUsingPATCHWithHttpInfo(param.contactId, param.updateMask, param.createUpdateContactRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates a Contact
+     * Update a Contact
+     * @param param the request object
+     */
+    public updateContactUsingPATCH(param: ContactApiUpdateContactUsingPATCHRequest, options?: Configuration): Promise<Contact> {
+        return this.api.updateContactUsingPATCH(param.contactId, param.updateMask, param.createUpdateContactRequest,  options).toPromise();
     }
 
 }
@@ -3525,52 +3540,6 @@ export interface TagsApiListTagsUsingGET1Request {
     pageToken?: string
 }
 
-export interface TagsApiPatchTagCategoryUsingPATCHRequest {
-    /**
-     * tag_category_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof TagsApipatchTagCategoryUsingPATCH
-     */
-    tagCategoryId: string
-    /**
-     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * Defaults to: undefined
-     * @type Array&lt;string&gt;
-     * @memberof TagsApipatchTagCategoryUsingPATCH
-     */
-    updateMask?: Array<string>
-    /**
-     * tagCategory
-     * @type CreateUpdateTagCategoryRequest
-     * @memberof TagsApipatchTagCategoryUsingPATCH
-     */
-    createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest
-}
-
-export interface TagsApiPatchTagUsingPATCHRequest {
-    /**
-     * tag_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof TagsApipatchTagUsingPATCH
-     */
-    tagId: string
-    /**
-     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * Defaults to: undefined
-     * @type Array&lt;string&gt;
-     * @memberof TagsApipatchTagUsingPATCH
-     */
-    updateMask?: Array<string>
-    /**
-     * tag
-     * @type CreateUpdateTagRequest
-     * @memberof TagsApipatchTagUsingPATCH
-     */
-    createUpdateTagRequest?: CreateUpdateTagRequest
-}
-
 export interface TagsApiRemoveTagsUsingPOSTRequest {
     /**
      * tag_id
@@ -3585,6 +3554,52 @@ export interface TagsApiRemoveTagsUsingPOSTRequest {
      * @memberof TagsApiremoveTagsUsingPOST
      */
     applyRemoveTagRequest: ApplyRemoveTagRequest
+}
+
+export interface TagsApiUpdateTagCategoryUsingPATCHRequest {
+    /**
+     * tag_category_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof TagsApiupdateTagCategoryUsingPATCH
+     */
+    tagCategoryId: string
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof TagsApiupdateTagCategoryUsingPATCH
+     */
+    updateMask?: Array<string>
+    /**
+     * tagCategory
+     * @type CreateUpdateTagCategoryRequest
+     * @memberof TagsApiupdateTagCategoryUsingPATCH
+     */
+    createUpdateTagCategoryRequest?: CreateUpdateTagCategoryRequest
+}
+
+export interface TagsApiUpdateTagUsingPATCHRequest {
+    /**
+     * tag_id
+     * Defaults to: undefined
+     * @type string
+     * @memberof TagsApiupdateTagUsingPATCH
+     */
+    tagId: string
+    /**
+     * An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+     * Defaults to: undefined
+     * @type Array&lt;string&gt;
+     * @memberof TagsApiupdateTagUsingPATCH
+     */
+    updateMask?: Array<string>
+    /**
+     * tag
+     * @type CreateUpdateTagRequest
+     * @memberof TagsApiupdateTagUsingPATCH
+     */
+    createUpdateTagRequest?: CreateUpdateTagRequest
 }
 
 export class ObjectTagsApi {
@@ -3793,42 +3808,6 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Updates a Tag Category with only the values provided in the request
-     * Update a Tag Category
-     * @param param the request object
-     */
-    public patchTagCategoryUsingPATCHWithHttpInfo(param: TagsApiPatchTagCategoryUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
-        return this.api.patchTagCategoryUsingPATCHWithHttpInfo(param.tagCategoryId, param.updateMask, param.createUpdateTagCategoryRequest,  options).toPromise();
-    }
-
-    /**
-     * Updates a Tag Category with only the values provided in the request
-     * Update a Tag Category
-     * @param param the request object
-     */
-    public patchTagCategoryUsingPATCH(param: TagsApiPatchTagCategoryUsingPATCHRequest, options?: Configuration): Promise<UpdateTagCategoryResponse> {
-        return this.api.patchTagCategoryUsingPATCH(param.tagCategoryId, param.updateMask, param.createUpdateTagCategoryRequest,  options).toPromise();
-    }
-
-    /**
-     * Updates a Tag with only the values provided in the request
-     * Update a Tag
-     * @param param the request object
-     */
-    public patchTagUsingPATCHWithHttpInfo(param: TagsApiPatchTagUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
-        return this.api.patchTagUsingPATCHWithHttpInfo(param.tagId, param.updateMask, param.createUpdateTagRequest,  options).toPromise();
-    }
-
-    /**
-     * Updates a Tag with only the values provided in the request
-     * Update a Tag
-     * @param param the request object
-     */
-    public patchTagUsingPATCH(param: TagsApiPatchTagUsingPATCHRequest, options?: Configuration): Promise<UpdateTagResponse> {
-        return this.api.patchTagUsingPATCH(param.tagId, param.updateMask, param.createUpdateTagRequest,  options).toPromise();
-    }
-
-    /**
      * Removes a Tag from a list of Contacts.
      * Remove Tags
      * @param param the request object
@@ -3844,6 +3823,42 @@ export class ObjectTagsApi {
      */
     public removeTagsUsingPOST(param: TagsApiRemoveTagsUsingPOSTRequest, options?: Configuration): Promise<void> {
         return this.api.removeTagsUsingPOST(param.tagId, param.applyRemoveTagRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates a Tag Category with only the values provided in the request
+     * Update a Tag Category
+     * @param param the request object
+     */
+    public updateTagCategoryUsingPATCHWithHttpInfo(param: TagsApiUpdateTagCategoryUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTagCategoryResponse>> {
+        return this.api.updateTagCategoryUsingPATCHWithHttpInfo(param.tagCategoryId, param.updateMask, param.createUpdateTagCategoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates a Tag Category with only the values provided in the request
+     * Update a Tag Category
+     * @param param the request object
+     */
+    public updateTagCategoryUsingPATCH(param: TagsApiUpdateTagCategoryUsingPATCHRequest, options?: Configuration): Promise<UpdateTagCategoryResponse> {
+        return this.api.updateTagCategoryUsingPATCH(param.tagCategoryId, param.updateMask, param.createUpdateTagCategoryRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates a Tag with only the values provided in the request
+     * Update a Tag
+     * @param param the request object
+     */
+    public updateTagUsingPATCHWithHttpInfo(param: TagsApiUpdateTagUsingPATCHRequest, options?: Configuration): Promise<HttpInfo<UpdateTagResponse>> {
+        return this.api.updateTagUsingPATCHWithHttpInfo(param.tagId, param.updateMask, param.createUpdateTagRequest,  options).toPromise();
+    }
+
+    /**
+     * Updates a Tag with only the values provided in the request
+     * Update a Tag
+     * @param param the request object
+     */
+    public updateTagUsingPATCH(param: TagsApiUpdateTagUsingPATCHRequest, options?: Configuration): Promise<UpdateTagResponse> {
+        return this.api.updateTagUsingPATCH(param.tagId, param.updateMask, param.createUpdateTagRequest,  options).toPromise();
     }
 
 }

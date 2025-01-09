@@ -59,7 +59,7 @@ Name | Type | Description | Notes
 
 * `UPSELL` (value: `"UPSELL"`)
 
-* `FINANCECHARGE` (value: `"FINANCECHARGE"`)
+* `FINANCE_CHARGE` (value: `"FINANCE_CHARGE"`)
 
 * `SPECIAL` (value: `"SPECIAL"`)
 
@@ -67,7 +67,7 @@ Name | Type | Description | Notes
 
 * `SUBSCRIPTION` (value: `"SUBSCRIPTION"`)
 
-* `SPECIAL_FREE_TRAIL_DAYS` (value: `"SPECIAL_FREE_TRAIL_DAYS"`)
+* `SPECIAL_FREE_TRIAL_DAYS` (value: `"SPECIAL_FREE_TRIAL_DAYS"`)
 
 * `SPECIAL_ORDER_TOTAL` (value: `"SPECIAL_ORDER_TOTAL"`)
 

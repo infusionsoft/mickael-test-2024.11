@@ -14,15 +14,15 @@
 |**billingCycle** | [**BillingCycleEnum**](#BillingCycleEnum) |  |  [optional] |
 |**billingFrequency** | **Integer** |  |  [optional] |
 |**contactId** | **String** |  |  [optional] |
-|**endDate** | **LocalDate** |  |  [optional] |
+|**endDate** | **String** |  |  [optional] |
 |**id** | **String** |  |  [optional] |
-|**nextBillDate** | **LocalDate** |  |  [optional] |
+|**nextBillDate** | **String** |  |  [optional] |
 |**paymentGatewayId** | **String** |  |  [optional] |
-|**paymentMethodId** | **Long** |  |  [optional] |
+|**paymentMethodId** | **String** |  |  [optional] |
 |**productId** | **String** |  |  [optional] |
 |**quantity** | **Long** |  |  [optional] |
 |**saleAffiliateId** | **String** |  |  [optional] |
-|**startDate** | **LocalDate** |  |  [optional] |
+|**startDate** | **String** |  |  [optional] |
 |**subscriptionPlanId** | **String** |  |  [optional] |
 
 

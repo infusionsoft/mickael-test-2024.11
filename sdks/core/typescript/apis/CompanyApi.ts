@@ -11,7 +11,7 @@ import {SecurityAuthentication} from '../auth/auth';
 import { Company } from '../models/Company';
 import { CreateCompanyRequest } from '../models/CreateCompanyRequest';
 import { ListCompaniesResponse } from '../models/ListCompaniesResponse';
-import { PatchCompanyRequest } from '../models/PatchCompanyRequest';
+import { UpdateCompanyRequest } from '../models/UpdateCompanyRequest';
 
 /**
  * no description
@@ -196,14 +196,14 @@ export class CompanyApiRequestFactory extends BaseAPIRequestFactory {
      * Update a Company
      * @param companyId company_id
      * @param updateMask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-     * @param patchCompanyRequest company
+     * @param updateCompanyRequest company
      */
-    public async patchCompanyUsingPATCH(companyId: string, updateMask?: Array<string>, patchCompanyRequest?: PatchCompanyRequest, _options?: Configuration): Promise<RequestContext> {
+    public async updateCompanyUsingPATCH1(companyId: string, updateMask?: Array<string>, updateCompanyRequest?: UpdateCompanyRequest, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'companyId' is not null or undefined
         if (companyId === null || companyId === undefined) {
-            throw new RequiredError("CompanyApi", "patchCompanyUsingPATCH", "companyId");
+            throw new RequiredError("CompanyApi", "updateCompanyUsingPATCH1", "companyId");
         }
 
 
@@ -232,7 +232,7 @@ export class CompanyApiRequestFactory extends BaseAPIRequestFactory {
         ]);
         requestContext.setHeaderParam("Content-Type", contentType);
         const serializedBody = ObjectSerializer.stringify(
-            ObjectSerializer.serialize(patchCompanyRequest, "PatchCompanyRequest", ""),
+            ObjectSerializer.serialize(updateCompanyRequest, "UpdateCompanyRequest", ""),
             contentType
         );
         requestContext.setBody(serializedBody);
@@ -443,10 +443,10 @@ export class CompanyApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to patchCompanyUsingPATCH
+     * @params response Response returned by the server for a request to updateCompanyUsingPATCH1
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async patchCompanyUsingPATCHWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Company >> {
+     public async updateCompanyUsingPATCH1WithHttpInfo(response: ResponseContext): Promise<HttpInfo<Company >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: Company = ObjectSerializer.deserialize(

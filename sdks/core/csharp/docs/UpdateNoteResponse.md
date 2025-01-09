@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **CreatedByUserId** | **string** |  | [optional] 
 **Id** | **string** |  | [optional] 
 **LastUpdatedByUserId** | **string** |  | [optional] 
+**PinnedAt** | **string** |  | [optional] 
 **Text** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 
 **Type** | **string** |  | [optional] 

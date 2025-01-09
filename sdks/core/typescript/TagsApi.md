@@ -15,9 +15,9 @@ Method | HTTP request | Description
 [**listContactsWithTagIdUsingGET**](TagsApi.md#listContactsWithTagIdUsingGET) | **GET** /v2/tags/{tag_id}/contacts | List Tagged Contacts
 [**listTagCategoriesUsingGET**](TagsApi.md#listTagCategoriesUsingGET) | **GET** /v2/tags/categories | List Tag Categories
 [**listTagsUsingGET1**](TagsApi.md#listTagsUsingGET1) | **GET** /v2/tags | List Tags
-[**patchTagCategoryUsingPATCH**](TagsApi.md#patchTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
-[**patchTagUsingPATCH**](TagsApi.md#patchTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 [**removeTagsUsingPOST**](TagsApi.md#removeTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags
+[**updateTagCategoryUsingPATCH**](TagsApi.md#updateTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category
+[**updateTagUsingPATCH**](TagsApi.md#updateTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag
 
 
 # **applyTagsUsingPOST**
@@ -691,143 +691,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchTagCategoryUsingPATCH**
-> UpdateTagCategoryResponse patchTagCategoryUsingPATCH()
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-
-
-```typescript
-import { createConfiguration, TagsApi } from '';
-import type { TagsApiPatchTagCategoryUsingPATCHRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new TagsApi(configuration);
-
-const request: TagsApiPatchTagCategoryUsingPATCHRequest = {
-    // tag_category_id
-  tagCategoryId: "tag_category_id_example",
-    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-  updateMask: [
-    "name",
-  ],
-    // tagCategory (optional)
-  createUpdateTagCategoryRequest: {
-    description: "description_example",
-    name: "name_example",
-  },
-};
-
-const data = await apiInstance.patchTagCategoryUsingPATCH(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createUpdateTagCategoryRequest** | **CreateUpdateTagCategoryRequest**| tagCategory |
- **tagCategoryId** | [**string**] | tag_category_id | defaults to undefined
- **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
-
-
-### Return type
-
-**UpdateTagCategoryResponse**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **patchTagUsingPATCH**
-> UpdateTagResponse patchTagUsingPATCH()
-
-Updates a Tag with only the values provided in the request
-
-### Example
-
-
-```typescript
-import { createConfiguration, TagsApi } from '';
-import type { TagsApiPatchTagUsingPATCHRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new TagsApi(configuration);
-
-const request: TagsApiPatchTagUsingPATCHRequest = {
-    // tag_id
-  tagId: "tag_id_example",
-    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-  updateMask: [
-    "name",
-  ],
-    // tag (optional)
-  createUpdateTagRequest: {
-    category: {
-      id: "id_example",
-    },
-    description: "description_example",
-    name: "name_example",
-  },
-};
-
-const data = await apiInstance.patchTagUsingPATCH(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createUpdateTagRequest** | **CreateUpdateTagRequest**| tag |
- **tagId** | [**string**] | tag_id | defaults to undefined
- **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
-
-
-### Return type
-
-**UpdateTagResponse**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**403** | Forbidden |  -  |
-**404** | Not Found |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
 # **removeTagsUsingPOST**
 > void removeTagsUsingPOST(applyRemoveTagRequest)
 
@@ -887,6 +750,143 @@ No authorization required
 **204** | No Content |  -  |
 **401** | Unauthorized |  -  |
 **403** | Forbidden |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateTagCategoryUsingPATCH**
+> UpdateTagCategoryResponse updateTagCategoryUsingPATCH()
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+
+
+```typescript
+import { createConfiguration, TagsApi } from '';
+import type { TagsApiUpdateTagCategoryUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new TagsApi(configuration);
+
+const request: TagsApiUpdateTagCategoryUsingPATCHRequest = {
+    // tag_category_id
+  tagCategoryId: "tag_category_id_example",
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "name",
+  ],
+    // tagCategory (optional)
+  createUpdateTagCategoryRequest: {
+    description: "description_example",
+    name: "name_example",
+  },
+};
+
+const data = await apiInstance.updateTagCategoryUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createUpdateTagCategoryRequest** | **CreateUpdateTagCategoryRequest**| tagCategory |
+ **tagCategoryId** | [**string**] | tag_category_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**UpdateTagCategoryResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **updateTagUsingPATCH**
+> UpdateTagResponse updateTagUsingPATCH()
+
+Updates a Tag with only the values provided in the request
+
+### Example
+
+
+```typescript
+import { createConfiguration, TagsApi } from '';
+import type { TagsApiUpdateTagUsingPATCHRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new TagsApi(configuration);
+
+const request: TagsApiUpdateTagUsingPATCHRequest = {
+    // tag_id
+  tagId: "tag_id_example",
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "name",
+  ],
+    // tag (optional)
+  createUpdateTagRequest: {
+    category: {
+      id: "id_example",
+    },
+    description: "description_example",
+    name: "name_example",
+  },
+};
+
+const data = await apiInstance.updateTagUsingPATCH(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createUpdateTagRequest** | **CreateUpdateTagRequest**| tag |
+ **tagId** | [**string**] | tag_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+
+
+### Return type
+
+**UpdateTagResponse**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  -  |
+**404** | Not Found |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

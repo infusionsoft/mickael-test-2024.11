@@ -5,7 +5,7 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_business_profile_using_get**](BusinessProfileApi.md#get_business_profile_using_get) | **GET** /v2/businessProfile | Retrieve Business Profile
-[**patch_business_profile_using_patch**](BusinessProfileApi.md#patch_business_profile_using_patch) | **PATCH** /v2/businessProfile | Update Business Profile
+[**update_business_profile_using_patch**](BusinessProfileApi.md#update_business_profile_using_patch) | **PATCH** /v2/businessProfile | Update Business Profile
 
 
 # **get_business_profile_using_get**
@@ -73,8 +73,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_business_profile_using_patch**
-> GetBusinessProfileResponse patch_business_profile_using_patch(update_mask=update_mask, patch_business_profile_request=patch_business_profile_request)
+# **update_business_profile_using_patch**
+> GetBusinessProfileResponse update_business_profile_using_patch(update_mask=update_mask, update_business_profile_request=update_business_profile_request)
 
 Update Business Profile
 
@@ -86,7 +86,7 @@ Updates Business Profile information.
 ```python
 import keap_sdk_core_client
 from keap_sdk_core_client.models.get_business_profile_response import GetBusinessProfileResponse
-from keap_sdk_core_client.models.patch_business_profile_request import PatchBusinessProfileRequest
+from keap_sdk_core_client.models.update_business_profile_request import UpdateBusinessProfileRequest
 from keap_sdk_core_client.rest import ApiException
 from pprint import pprint
 
@@ -101,15 +101,15 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_sdk_core_client.BusinessProfileApi(api_client)
     update_mask = ['update_mask_example'] # List[str] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-    patch_business_profile_request = keap_sdk_core_client.PatchBusinessProfileRequest() # PatchBusinessProfileRequest | businessProfile (optional)
+    update_business_profile_request = keap_sdk_core_client.UpdateBusinessProfileRequest() # UpdateBusinessProfileRequest | businessProfile (optional)
 
     try:
         # Update Business Profile
-        api_response = api_instance.patch_business_profile_using_patch(update_mask=update_mask, patch_business_profile_request=patch_business_profile_request)
-        print("The response of BusinessProfileApi->patch_business_profile_using_patch:\n")
+        api_response = api_instance.update_business_profile_using_patch(update_mask=update_mask, update_business_profile_request=update_business_profile_request)
+        print("The response of BusinessProfileApi->update_business_profile_using_patch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling BusinessProfileApi->patch_business_profile_using_patch: %s\n" % e)
+        print("Exception when calling BusinessProfileApi->update_business_profile_using_patch: %s\n" % e)
 ```
 
 
@@ -119,7 +119,7 @@ with keap_sdk_core_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_mask** | [**List[str]**](str.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] 
- **patch_business_profile_request** | [**PatchBusinessProfileRequest**](PatchBusinessProfileRequest.md)| businessProfile | [optional] 
+ **update_business_profile_request** | [**UpdateBusinessProfileRequest**](UpdateBusinessProfileRequest.md)| businessProfile | [optional] 
 
 ### Return type
 

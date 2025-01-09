@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addAffiliateUsingPOST**](AffiliateApi.md#addAffiliateUsingPOST) | **POST** /v2/affiliates | Create an Affiliate
 [**getAffiliateUsingGET1**](AffiliateApi.md#getAffiliateUsingGET1) | **GET** /v2/affiliates/{id} | Retrieve an Affiliate
-[**patchCommissionProgramUsingPATCH**](AffiliateApi.md#patchCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 [**updateAffiliateUsingPATCH**](AffiliateApi.md#updateAffiliateUsingPATCH) | **PATCH** /v2/affiliates/{id} | Update an Affiliate
+[**updateCommissionProgramUsingPATCH**](AffiliateApi.md#updateCommissionProgramUsingPATCH) | **PATCH** /v2/affiliates/commissionPrograms/{commission_program_id} | Update a Affiliate Commission Program
 
 
 # **addAffiliateUsingPOST**
@@ -126,37 +126,34 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **patchCommissionProgramUsingPATCH**
-> AffiliateCommissionProgramResponse patchCommissionProgramUsingPATCH(patchCommissionProgramRequest)
+# **updateAffiliateUsingPATCH**
+> RestAffiliate updateAffiliateUsingPATCH()
 
-Updates the properties of an Affiliate Commission Program
+Updates a single Affiliate
 
 ### Example
 
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiPatchCommissionProgramUsingPATCHRequest } from '';
+import type { AffiliateApiUpdateAffiliateUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiPatchCommissionProgramUsingPATCHRequest = {
-    // commission_program_id
-  commissionProgramId: "commission_program_id_example",
-    // patchCommissionProgramRequest
-  patchCommissionProgramRequest: {
-    name: "Fitness program",
-    notes: "20% default commission",
-    priority: 100,
+const request: AffiliateApiUpdateAffiliateUsingPATCHRequest = {
+    // id
+  id: "id_example",
+    // Request to update an affiliate (optional)
+  updateAffiliateRequest: {
+    code: "M123",
+    contactId: "1",
+    name: "Affiliate Name",
+    status: "ACTIVE",
   },
-    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-  updateMask: [
-    "name",
-  ],
 };
 
-const data = await apiInstance.patchCommissionProgramUsingPATCH(request);
+const data = await apiInstance.updateAffiliateUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -165,14 +162,13 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patchCommissionProgramRequest** | **PatchCommissionProgramRequest**| patchCommissionProgramRequest |
- **commissionProgramId** | [**string**] | commission_program_id | defaults to undefined
- **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
+ **updateAffiliateRequest** | **UpdateAffiliateRequest**| Request to update an affiliate |
+ **id** | [**string**] | id | defaults to undefined
 
 
 ### Return type
 
-**AffiliateCommissionProgramResponse**
+**RestAffiliate**
 
 ### Authorization
 
@@ -194,34 +190,37 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-# **updateAffiliateUsingPATCH**
-> RestAffiliate updateAffiliateUsingPATCH()
+# **updateCommissionProgramUsingPATCH**
+> AffiliateCommissionProgramResponse updateCommissionProgramUsingPATCH(updateCommissionProgramRequest)
 
-Updates a single Affiliate
+Updates the properties of an Affiliate Commission Program
 
 ### Example
 
 
 ```typescript
 import { createConfiguration, AffiliateApi } from '';
-import type { AffiliateApiUpdateAffiliateUsingPATCHRequest } from '';
+import type { AffiliateApiUpdateCommissionProgramUsingPATCHRequest } from '';
 
 const configuration = createConfiguration();
 const apiInstance = new AffiliateApi(configuration);
 
-const request: AffiliateApiUpdateAffiliateUsingPATCHRequest = {
-    // id
-  id: "id_example",
-    // Affiliate request to patch (optional)
-  patchAffiliateRequest: {
-    code: "M123",
-    contactId: "1",
-    name: "Affiliate Name",
-    status: "ACTIVE",
+const request: AffiliateApiUpdateCommissionProgramUsingPATCHRequest = {
+    // commission_program_id
+  commissionProgramId: "commission_program_id_example",
+    // updateCommissionProgramRequest
+  updateCommissionProgramRequest: {
+    name: "Fitness program",
+    notes: "20% default commission",
+    priority: 100,
   },
+    // An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
+  updateMask: [
+    "name",
+  ],
 };
 
-const data = await apiInstance.updateAffiliateUsingPATCH(request);
+const data = await apiInstance.updateCommissionProgramUsingPATCH(request);
 console.log('API called successfully. Returned data:', data);
 ```
 
@@ -230,13 +229,14 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patchAffiliateRequest** | **PatchAffiliateRequest**| Affiliate request to patch |
- **id** | [**string**] | id | defaults to undefined
+ **updateCommissionProgramRequest** | **UpdateCommissionProgramRequest**| updateCommissionProgramRequest |
+ **commissionProgramId** | [**string**] | commission_program_id | defaults to undefined
+ **updateMask** |  | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | (optional) defaults to undefined
 
 
 ### Return type
 
-**RestAffiliate**
+**AffiliateCommissionProgramResponse**
 
 ### Authorization
 

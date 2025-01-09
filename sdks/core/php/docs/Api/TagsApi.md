@@ -15,9 +15,9 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 | [**listContactsWithTagIdUsingGET()**](TagsApi.md#listContactsWithTagIdUsingGET) | **GET** /v2/tags/{tag_id}/contacts | List Tagged Contacts |
 | [**listTagCategoriesUsingGET()**](TagsApi.md#listTagCategoriesUsingGET) | **GET** /v2/tags/categories | List Tag Categories |
 | [**listTagsUsingGET1()**](TagsApi.md#listTagsUsingGET1) | **GET** /v2/tags | List Tags |
-| [**patchTagCategoryUsingPATCH()**](TagsApi.md#patchTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
-| [**patchTagUsingPATCH()**](TagsApi.md#patchTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
 | [**removeTagsUsingPOST()**](TagsApi.md#removeTagsUsingPOST) | **POST** /v2/tags/{tag_id}/contacts:removeTags | Remove Tags |
+| [**updateTagCategoryUsingPATCH()**](TagsApi.md#updateTagCategoryUsingPATCH) | **PATCH** /v2/tags/categories/{tag_category_id} | Update a Tag Category |
+| [**updateTagUsingPATCH()**](TagsApi.md#updateTagUsingPATCH) | **PATCH** /v2/tags/{tag_id} | Update a Tag |
 
 
 ## `applyTagsUsingPOST()`
@@ -653,124 +653,6 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchTagCategoryUsingPATCH()`
-
-```php
-patchTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request): \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse
-```
-
-Update a Tag Category
-
-Updates a Tag Category with only the values provided in the request
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$tag_category_id = 'tag_category_id_example'; // string | tag_category_id
-$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$create_update_tag_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
-
-try {
-    $result = $apiInstance->patchTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TagsApi->patchTagCategoryUsingPATCH: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **tag_category_id** | **string**| tag_category_id | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **create_update_tag_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
-
-### Return type
-
-[**\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse**](../Model/UpdateTagCategoryResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `patchTagUsingPATCH()`
-
-```php
-patchTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request): \Com\Keap\Sdk\Core\Model\UpdateTagResponse
-```
-
-Update a Tag
-
-Updates a Tag with only the values provided in the request
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$tag_id = 'tag_id_example'; // string | tag_id
-$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$create_update_tag_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
-
-try {
-    $result = $apiInstance->patchTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TagsApi->patchTagUsingPATCH: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **tag_id** | **string**| tag_id | |
-| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **create_update_tag_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
-
-### Return type
-
-[**\Com\Keap\Sdk\Core\Model\UpdateTagResponse**](../Model/UpdateTagResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `removeTagsUsingPOST()`
 
 ```php
@@ -813,6 +695,124 @@ try {
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateTagCategoryUsingPATCH()`
+
+```php
+updateTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request): \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse
+```
+
+Update a Tag Category
+
+Updates a Tag Category with only the values provided in the request
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$tag_category_id = 'tag_category_id_example'; // string | tag_category_id
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+$create_update_tag_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
+
+try {
+    $result = $apiInstance->updateTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagsApi->updateTagCategoryUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tag_category_id** | **string**| tag_category_id | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+| **create_update_tag_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse**](../Model/UpdateTagCategoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateTagUsingPATCH()`
+
+```php
+updateTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request): \Com\Keap\Sdk\Core\Model\UpdateTagResponse
+```
+
+Update a Tag
+
+Updates a Tag with only the values provided in the request
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$tag_id = 'tag_id_example'; // string | tag_id
+$update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
+$create_update_tag_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
+
+try {
+    $result = $apiInstance->updateTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TagsApi->updateTagUsingPATCH: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tag_id** | **string**| tag_id | |
+| **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
+| **create_update_tag_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
+
+### Return type
+
+[**\Com\Keap\Sdk\Core\Model\UpdateTagResponse**](../Model/UpdateTagResponse.md)
 
 ### Authorization
 

@@ -17,7 +17,7 @@ import AddressInformation from './AddressInformation';
 /**
  * The UpdateOrderRequest model module.
  * @module com.keap.sdk.core/model/UpdateOrderRequest
- * @version 0.0.82
+ * @version 0.0.83
  */
 class UpdateOrderRequest {
     /**

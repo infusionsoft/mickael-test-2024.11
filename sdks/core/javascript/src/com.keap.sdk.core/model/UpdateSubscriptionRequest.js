@@ -17,7 +17,7 @@ import Address from './Address';
 /**
  * The UpdateSubscriptionRequest model module.
  * @module com.keap.sdk.core/model/UpdateSubscriptionRequest
- * @version 0.0.82
+ * @version 0.0.83
  */
 class UpdateSubscriptionRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateTagCategoryResponse model module.
  * @module com.keap.sdk.core/model/UpdateTagCategoryResponse
- * @version 0.0.82
+ * @version 0.0.83
  */
 class UpdateTagCategoryResponse {
     /**

@@ -17,7 +17,7 @@ import CustomFieldMetaData from './CustomFieldMetaData';
 /**
  * The ObjectModel model module.
  * @module com.keap.sdk.core/model/ObjectModel
- * @version 0.0.82
+ * @version 0.0.83
  */
 class ObjectModel {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentMethodConfig model module.
  * @module com.keap.sdk.core/model/PaymentMethodConfig
- * @version 0.0.82
+ * @version 0.0.83
  */
 class PaymentMethodConfig {
     /**

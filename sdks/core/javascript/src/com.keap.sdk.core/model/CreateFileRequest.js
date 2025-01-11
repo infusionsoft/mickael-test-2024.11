@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateFileRequest model module.
  * @module com.keap.sdk.core/model/CreateFileRequest
- * @version 0.0.83
+ * @version 0.0.84
  */
 class CreateFileRequest {
     /**

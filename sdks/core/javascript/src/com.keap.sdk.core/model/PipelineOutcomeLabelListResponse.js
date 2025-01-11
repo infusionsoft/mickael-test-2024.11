@@ -17,7 +17,7 @@ import PipelineOutcomeLabel from './PipelineOutcomeLabel';
 /**
  * The PipelineOutcomeLabelListResponse model module.
  * @module com.keap.sdk.core/model/PipelineOutcomeLabelListResponse
- * @version 0.0.83
+ * @version 0.0.84
  */
 class PipelineOutcomeLabelListResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleEmail model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleEmail
- * @version 0.0.83
+ * @version 0.0.84
  */
 class ApplicationConfigurationModuleEmail {
     /**

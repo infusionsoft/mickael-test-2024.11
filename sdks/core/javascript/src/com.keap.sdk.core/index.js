@@ -378,7 +378,7 @@ import TagsApi from './api/TagsApi';
 * </pre>
 * </p>
 * @module com.keap.sdk.core/index
-* @version 0.0.83
+* @version 0.0.84
 */
 export {
     /**

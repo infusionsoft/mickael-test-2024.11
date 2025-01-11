@@ -21,7 +21,7 @@ import UpdateDealNoteRequest from '../model/UpdateDealNoteRequest';
 /**
 * Deals service.
 * @module com.keap.sdk.core/api/DealsApi
-* @version 0.0.83
+* @version 0.0.84
 */
 export default class DealsApi {
 

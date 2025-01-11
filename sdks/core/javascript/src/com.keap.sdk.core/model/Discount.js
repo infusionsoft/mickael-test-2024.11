@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Discount model module.
  * @module com.keap.sdk.core/model/Discount
- * @version 0.0.83
+ * @version 0.0.84
  */
 class Discount {
     /**

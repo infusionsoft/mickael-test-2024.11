@@ -17,7 +17,7 @@ import Provinces from './Provinces';
 /**
  * The ListProvincesResponse model module.
  * @module com.keap.sdk.core/model/ListProvincesResponse
- * @version 0.0.83
+ * @version 0.0.84
  */
 class ListProvincesResponse {
     /**

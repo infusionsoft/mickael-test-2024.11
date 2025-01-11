@@ -17,7 +17,7 @@ import RestPaymentMethod from './RestPaymentMethod';
 /**
  * The PaymentMethodList model module.
  * @module com.keap.sdk.core/model/PaymentMethodList
- * @version 0.0.83
+ * @version 0.0.84
  */
 class PaymentMethodList {
     /**

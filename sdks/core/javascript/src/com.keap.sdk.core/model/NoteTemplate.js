@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The NoteTemplate model module.
  * @module com.keap.sdk.core/model/NoteTemplate
- * @version 0.0.83
+ * @version 0.0.84
  */
 class NoteTemplate {
     /**

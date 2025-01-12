@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddToAutomationSequenceResponse model module.
  * @module com.keap.sdk.core/model/AddToAutomationSequenceResponse
- * @version 0.0.84
+ * @version 0.0.85
  */
 class AddToAutomationSequenceResponse {
     /**

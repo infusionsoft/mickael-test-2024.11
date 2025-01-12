@@ -20,7 +20,7 @@ import RestV2User from './RestV2User';
 /**
  * The RestV2Opportunity model module.
  * @module com.keap.sdk.core/model/RestV2Opportunity
- * @version 0.0.84
+ * @version 0.0.85
  */
 class RestV2Opportunity {
     /**

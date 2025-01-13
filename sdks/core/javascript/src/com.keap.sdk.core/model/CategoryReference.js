@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CategoryReference model module.
  * @module com.keap.sdk.core/model/CategoryReference
- * @version 0.0.85
+ * @version 0.0.86
  */
 class CategoryReference {
     /**

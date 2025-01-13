@@ -17,7 +17,7 @@ import CheckListItemDetails from './CheckListItemDetails';
 /**
  * The StageDetails model module.
  * @module com.keap.sdk.core/model/StageDetails
- * @version 0.0.85
+ * @version 0.0.86
  */
 class StageDetails {
     /**

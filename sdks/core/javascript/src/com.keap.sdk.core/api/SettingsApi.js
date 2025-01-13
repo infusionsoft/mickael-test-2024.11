@@ -21,7 +21,7 @@ import GetSettingsResponse from '../model/GetSettingsResponse';
 /**
 * Settings service.
 * @module com.keap.sdk.core/api/SettingsApi
-* @version 0.0.85
+* @version 0.0.86
 */
 export default class SettingsApi {
 

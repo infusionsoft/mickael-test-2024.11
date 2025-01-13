@@ -17,7 +17,7 @@ import RestSubscriptionPlan from './RestSubscriptionPlan';
 /**
  * The ListSubscriptionPlansResponse model module.
  * @module com.keap.sdk.core/model/ListSubscriptionPlansResponse
- * @version 0.0.85
+ * @version 0.0.86
  */
 class ListSubscriptionPlansResponse {
     /**

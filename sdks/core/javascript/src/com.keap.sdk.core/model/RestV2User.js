@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestV2User model module.
  * @module com.keap.sdk.core/model/RestV2User
- * @version 0.0.85
+ * @version 0.0.86
  */
 class RestV2User {
     /**

@@ -17,7 +17,7 @@ import ShippingDiscount from './ShippingDiscount';
 /**
  * The ListShippingDiscountsResponse model module.
  * @module com.keap.sdk.core/model/ListShippingDiscountsResponse
- * @version 0.0.85
+ * @version 0.0.86
  */
 class ListShippingDiscountsResponse {
     /**

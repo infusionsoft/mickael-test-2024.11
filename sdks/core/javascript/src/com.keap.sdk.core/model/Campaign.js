@@ -18,7 +18,7 @@ import Sequence from './Sequence';
 /**
  * The Campaign model module.
  * @module com.keap.sdk.core/model/Campaign
- * @version 0.0.85
+ * @version 0.0.86
  */
 class Campaign {
     /**

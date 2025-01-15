@@ -20,13 +20,6 @@ import ApiClient from '../ApiClient';
 export default class DealStatus {
     
         /**
-         * value: "UNKNOWN_COULD_NOT_DESERIALIZE"
-         * @const
-         */
-        "UNKNOWN_COULD_NOT_DESERIALIZE" = "UNKNOWN_COULD_NOT_DESERIALIZE";
-
-    
-        /**
          * value: "ACTIVE"
          * @const
          */

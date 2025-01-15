@@ -20,7 +20,7 @@ import PhoneNumber from './PhoneNumber';
 /**
  * The UpdateUserRequest model module.
  * @module com.keap.sdk.core/model/UpdateUserRequest
- * @version 0.0.86
+ * @version 0.0.87
  */
 class UpdateUserRequest {
     /**

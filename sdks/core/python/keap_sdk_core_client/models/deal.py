@@ -139,6 +139,11 @@ class Deal(BaseModel):
         if self.closed_time is None and "closed_time" in self.model_fields_set:
             _dict['closed_time'] = None
 
+        # set to None if custom_fields (nullable) is None
+        # and model_fields_set contains the field
+        if self.custom_fields is None and "custom_fields" in self.model_fields_set:
+            _dict['custom_fields'] = None
+
         return _dict
 
     @classmethod

@@ -17,7 +17,7 @@ import BaseModel from './BaseModel';
 /**
  * The PipelineSummary model module.
  * @module com.keap.sdk.core/model/PipelineSummary
- * @version 0.0.86
+ * @version 0.0.87
  */
 class PipelineSummary {
     /**

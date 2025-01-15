@@ -17,7 +17,7 @@ import RestV2Opportunity from './RestV2Opportunity';
 /**
  * The ListOpportunitiesResponse model module.
  * @module com.keap.sdk.core/model/ListOpportunitiesResponse
- * @version 0.0.86
+ * @version 0.0.87
  */
 class ListOpportunitiesResponse {
     /**

@@ -43,8 +43,6 @@ class DealStatus
     /**
      * Possible values of this enum
      */
-    public const UNKNOWN_COULD_NOT_DESERIALIZE = 'UNKNOWN_COULD_NOT_DESERIALIZE';
-
     public const ACTIVE = 'ACTIVE';
 
     public const WON = 'WON';
@@ -58,7 +56,6 @@ class DealStatus
     public static function getAllowableEnumValues()
     {
         return [
-            self::UNKNOWN_COULD_NOT_DESERIALIZE,
             self::ACTIVE,
             self::WON,
             self::LOST

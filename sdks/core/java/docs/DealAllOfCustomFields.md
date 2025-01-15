@@ -2,6 +2,7 @@
 
 # DealAllOfCustomFields
 
+The custom fields associated with the deal. This field is optional.
 
 ## Properties
 

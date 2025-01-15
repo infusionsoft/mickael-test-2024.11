@@ -67,7 +67,7 @@ export class Deal {
     * The actual close time of the deal. This field is optional.
     */
     'closedTime'?: Date | null;
-    'customFields'?: DealAllOfCustomFields;
+    'customFields'?: DealAllOfCustomFields | null;
 
     static readonly discriminator: string | undefined = undefined;
 

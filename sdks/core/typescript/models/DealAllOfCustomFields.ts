@@ -12,6 +12,9 @@
 
 import { HttpFile } from '../http/http';
 
+/**
+* The custom fields associated with the deal. This field is optional.
+*/
 export class DealAllOfCustomFields {
 
     static readonly discriminator: string | undefined = undefined;

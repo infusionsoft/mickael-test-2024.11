@@ -16,11 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The DealAllOfCustomFields model module.
  * @module com.keap.sdk.core/model/DealAllOfCustomFields
- * @version 0.0.86
+ * @version 0.0.87
  */
 class DealAllOfCustomFields {
     /**
      * Constructs a new <code>DealAllOfCustomFields</code>.
+     * The custom fields associated with the deal. This field is optional.
      * @alias module:com.keap.sdk.core/model/DealAllOfCustomFields
      */
     constructor() { 

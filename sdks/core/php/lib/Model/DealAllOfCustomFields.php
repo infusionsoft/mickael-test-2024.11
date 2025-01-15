@@ -35,6 +35,7 @@ use \Com\Keap\Sdk\Core\ObjectSerializer;
  * DealAllOfCustomFields Class Doc Comment
  *
  * @category Class
+ * @description The custom fields associated with the deal. This field is optional.
  * @package  Com\Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

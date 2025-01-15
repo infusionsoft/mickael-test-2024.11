@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Keap.Sdk.Core.Client.OpenAPIDateConverter;
 namespace Keap.Sdk.Core.Model
 {
     /// <summary>
-    /// DealAllOfCustomFields
+    /// The custom fields associated with the deal. This field is optional.
     /// </summary>
     [DataContract(Name = "Deal_allOf_custom_fields")]
     public partial class DealAllOfCustomFields : IValidatableObject

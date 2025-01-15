@@ -24,7 +24,7 @@ from typing_extensions import Self
 
 class DealAllOfCustomFields(BaseModel):
     """
-    DealAllOfCustomFields
+    The custom fields associated with the deal. This field is optional.
     """ # noqa: E501
     additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = []

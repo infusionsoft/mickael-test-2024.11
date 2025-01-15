@@ -16,7 +16,6 @@ import { HttpFile } from '../http/http';
 * Enum representing the status of a deal.
 */
 export enum DealStatus {
-    UnknownCouldNotDeserialize = 'UNKNOWN_COULD_NOT_DESERIALIZE',
     Active = 'ACTIVE',
     Won = 'WON',
     Lost = 'LOST'

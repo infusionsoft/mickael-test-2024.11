@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateProductCategoryRequest model module.
  * @module com.keap.sdk.core/model/UpdateProductCategoryRequest
- * @version 0.0.86
+ * @version 0.0.87
  */
 class UpdateProductCategoryRequest {
     /**

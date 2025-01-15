@@ -17,6 +17,7 @@ import java.util.Objects;
 import java.util.Map;
 import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Map;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -25,8 +26,9 @@ import jakarta.validation.Valid;
 
 
 /**
- * DealAllOfCustomFields
+ * The custom fields associated with the deal. This field is optional.
  */
+@Schema(description = "The custom fields associated with the deal. This field is optional.")
 @JsonPropertyOrder({
 })
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")

@@ -117,7 +117,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => false,
         'estimated_close_time' => true,
         'closed_time' => true,
-        'custom_fields' => false
+        'custom_fields' => true
     ];
 
     /**
@@ -813,7 +813,14 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomFields($custom_fields)
     {
         if (is_null($custom_fields)) {
-            throw new \InvalidArgumentException('non-nullable custom_fields cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'custom_fields');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('custom_fields', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['custom_fields'] = $custom_fields;
 

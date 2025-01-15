@@ -34,28 +34,22 @@ namespace Keap.Sdk.Core.Model
     public enum DealStatus
     {
         /// <summary>
-        /// Enum UNKNOWNCOULDNOTDESERIALIZE for value: UNKNOWN_COULD_NOT_DESERIALIZE
-        /// </summary>
-        [EnumMember(Value = "UNKNOWN_COULD_NOT_DESERIALIZE")]
-        UNKNOWNCOULDNOTDESERIALIZE = 1,
-
-        /// <summary>
         /// Enum ACTIVE for value: ACTIVE
         /// </summary>
         [EnumMember(Value = "ACTIVE")]
-        ACTIVE = 2,
+        ACTIVE = 1,
 
         /// <summary>
         /// Enum WON for value: WON
         /// </summary>
         [EnumMember(Value = "WON")]
-        WON = 3,
+        WON = 2,
 
         /// <summary>
         /// Enum LOST for value: LOST
         /// </summary>
         [EnumMember(Value = "LOST")]
-        LOST = 4
+        LOST = 3
     }
 
 }

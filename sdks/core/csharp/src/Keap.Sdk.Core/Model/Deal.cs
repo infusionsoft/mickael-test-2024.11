@@ -199,7 +199,7 @@ namespace Keap.Sdk.Core.Model
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
-        [DataMember(Name = "custom_fields", EmitDefaultValue = false)]
+        [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
         public DealAllOfCustomFields CustomFields { get; set; }
 
         /// <summary>

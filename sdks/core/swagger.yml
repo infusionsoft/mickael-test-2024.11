@@ -6351,20 +6351,20 @@ components:
           type: string
       title: CustomFieldValue
     Deal:
+      required:
+      - contacts
+      - name
+      - owners
+      - stage
+      - stage_assignment_time
+      - status
+      - task_ids
+      - value
       type: object
       description: Represents a deal.
       allOf:
       - $ref: '#/components/schemas/BaseModel'
-      - required:
-        - contacts
-        - name
-        - owners
-        - stage
-        - stage_assignment_time
-        - status
-        - task_ids
-        - value
-        properties:
+      - properties:
           name:
             minLength: 1
             type: string
@@ -6426,23 +6426,23 @@ components:
             format: date-time
             nullable: true
           custom_fields:
+            description: The custom fields associated with the deal. This field is
+              optional.
+            nullable: true
             allOf:
             - type: object
               additionalProperties: true
-              description: The custom fields associated with the deal. This field
-                is optional.
-            - description: The custom fields associated with the deal. This field
-                is optional.
-              nullable: true
+            - {
+              }
     DealContact:
+      required:
+      - primary_contact
       type: object
       description: Represents a contact entity in the system. Extends the BaseModel
         class.
       allOf:
       - $ref: '#/components/schemas/BaseModel'
-      - required:
-        - primary_contact
-        properties:
+      - properties:
           primary_contact:
             type: boolean
             description: Indicates if this contact is the primary contact. This field
@@ -6490,7 +6490,6 @@ components:
       type: string
       description: Enum representing the status of a deal.
       enum:
-      - UNKNOWN_COULD_NOT_DESERIALIZE
       - ACTIVE
       - WON
       - LOST
@@ -8213,13 +8212,13 @@ components:
             items:
               $ref: '#/components/schemas/PipelineSummary'
     PipelineSummary:
+      required:
+      - pipeline_name
       type: object
       description: Represents a summary of a pipeline.
       allOf:
       - $ref: '#/components/schemas/BaseModel'
-      - required:
-        - pipeline_name
-        properties:
+      - properties:
           pipeline_id:
             pattern: ^\d+$
             type: string

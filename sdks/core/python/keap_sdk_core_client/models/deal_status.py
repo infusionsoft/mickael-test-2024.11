@@ -26,7 +26,6 @@ class DealStatus(str, Enum):
     """
     allowed enum values
     """
-    UNKNOWN_COULD_NOT_DESERIALIZE = 'UNKNOWN_COULD_NOT_DESERIALIZE'
     ACTIVE = 'ACTIVE'
     WON = 'WON'
     LOST = 'LOST'

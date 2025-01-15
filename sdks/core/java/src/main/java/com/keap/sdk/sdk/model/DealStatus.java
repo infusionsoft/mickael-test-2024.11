@@ -31,15 +31,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 public enum DealStatus {
   
-  UNKNOWN_COULD_NOT_DESERIALIZE("UNKNOWN_COULD_NOT_DESERIALIZE"),
-  
   ACTIVE("ACTIVE"),
   
   WON("WON"),
   
   LOST("LOST"),
   
-  UNKNOWN_COULD_NOT_DESERIALIZE2("unknown_default_open_api");
+  UNKNOWN_COULD_NOT_DESERIALIZE("unknown_default_open_api");
 
   private String value;
 
@@ -64,7 +62,7 @@ public enum DealStatus {
         return b;
       }
     }
-    return UNKNOWN_COULD_NOT_DESERIALIZE2;
+    return UNKNOWN_COULD_NOT_DESERIALIZE;
   }
 
 }

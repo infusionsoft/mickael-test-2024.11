@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**active** | **bool** | If the subscription plan should be active/available for purchase | [optional]
-**billing_cycle** | **string** | How frequent to bill. Can be: DAILY, WEEKLY, MONTHLY, or YEARLY | [optional]
-**billing_frequency** | **int** | How many times per billing cycle to bill | [optional]
-**id** | **string** | The subscription plan id | [optional]
-**number_of_cycles** | **int** | How many billing cycles to bill. Optional field i.e. can be no value or 0. | [optional]
-**order_index** | **int** | Determines the order in which the plan will be displayed | [optional]
+**active** | **bool** | If the subscription plan is active or not. | [optional]
+**allow_prorating** | **bool** | Whether or not the plan will allow prorating. | [optional]
+**cycle_type** | **string** | The cycle type of the subscription plan. Possible values: YEAR, MONTH, WEEK, DAY | [optional]
+**display_order_index** | **int** | The order index where this plan will be displayed on a page against other plans. Smaller number indicates plan will be displayed higher in the list. | [optional]
+**frequency** | **int** | Total number of times of a cycle type which constitutes a plan cycle. Minimum value is 1. | [optional]
+**id** | **string** | Id of the subscription plan. | [optional]
 **plan_price** | [**\Com\Keap\Sdk\Core\Model\CurrencyValue**](CurrencyValue.md) |  | [optional]
-**prorate** | **bool** | If the subscription plan should allow prorating | [optional]
+**product_id** | **string** |  | [optional]
+**total_cycles** | **int** | Total number of cycles the plan will run before ending. Value of 0 indicates plan will never end. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

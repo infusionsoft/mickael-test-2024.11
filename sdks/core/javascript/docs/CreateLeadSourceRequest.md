@@ -4,14 +4,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**category** | [**LeadSourceCategory**](LeadSourceCategory.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **endTime** | **String** |  | [optional] 
+**leadSourceCategoryId** | **String** |  | [optional] 
 **medium** | **String** |  | [optional] 
 **message** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **startTime** | **String** |  | [optional] 
-**statusIsActive** | **Boolean** |  | [optional] 
+**status** | **String** |  | [optional] 
 **vendor** | **String** |  | [optional] 
+
+
+
+## Enum: StatusEnum
+
+
+* `ACTIVE` (value: `"ACTIVE"`)
+
+* `INACTIVE` (value: `"INACTIVE"`)
+
+* `unknown_default_open_api` (value: `"unknown_default_open_api"`)
+
+
 
 

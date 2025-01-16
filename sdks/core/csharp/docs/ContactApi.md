@@ -319,7 +319,7 @@ namespace Example
             config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
             var contactId = "contactId_example";  // string | contact_id
-            var fields = new List<string>?(); // List<string>? | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters (optional) 
+            var fields = new List<string>?(); // List<string>? | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website (optional) 
 
             try
             {
@@ -363,7 +363,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **contactId** | **string** | contact_id |  |
-| **fields** | [**List&lt;string&gt;?**](string.md) | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters | [optional]  |
+| **fields** | [**List&lt;string&gt;?**](string.md) | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website | [optional]  |
 
 ### Return type
 
@@ -701,7 +701,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new ContactApi(config);
-            var fields = new List<string>?(); // List<string>? | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters (optional) 
+            var fields = new List<string>?(); // List<string>? | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website (optional) 
             var filter = "filter_example";  // string? | Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:   - `filter=given_name%3D%3DMary`  - `filter=company_id%3D%3D123`  - `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith`   (optional) 
             var orderBy = "orderBy_example";  // string? | Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc (optional) 
             var pageSize = 0;  // int? | Total number of items to return per page (optional) 
@@ -748,7 +748,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **fields** | [**List&lt;string&gt;?**](string.md) | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters | [optional]  |
+| **fields** | [**List&lt;string&gt;?**](string.md) | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website | [optional]  |
 | **filter** | **string?** | Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;   | [optional]  |
 | **orderBy** | **string?** | Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc | [optional]  |
 | **pageSize** | **int?** | Total number of items to return per page | [optional]  |

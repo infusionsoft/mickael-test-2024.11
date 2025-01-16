@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApplyToCommissions** | **bool** |  | [optional] 
-**Date** | **DateTime** |  | [optional] 
+**ApplyToCommissions** | **bool** |  | 
 **Notes** | **string** |  | [optional] 
-**PaymentAmount** | **string** |  | [optional] 
-**PaymentMethodId** | **long** |  | [optional] 
+**PaymentAmount** | **double** |  | 
+**PaymentMethodId** | **string** |  | [optional] 
+**PaymentMethodType** | **string** |  | [optional] 
+**PaymentTime** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **contactId** | **String** |  | [optional] 
 **createdById** | **String** |  | [optional] 
 **createdTime** | **String** |  | [optional] 
-**downloadUrl** | **String** |  | [optional] 
 **fileBoxType** | **String** |  | [optional] 
 **fileName** | **String** |  | [optional] 
 **fileSize** | **Number** |  | [optional] 

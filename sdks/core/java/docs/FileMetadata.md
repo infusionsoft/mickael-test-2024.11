@@ -11,7 +11,6 @@
 |**contactId** | **String** |  |  [optional] |
 |**createdById** | **String** |  |  [optional] |
 |**createdTime** | **String** |  |  [optional] |
-|**downloadUrl** | **String** |  |  [optional] |
 |**fileBoxType** | [**FileBoxTypeEnum**](#FileBoxTypeEnum) |  |  [optional] |
 |**fileName** | **String** |  |  [optional] |
 |**fileSize** | **Long** |  |  [optional] |

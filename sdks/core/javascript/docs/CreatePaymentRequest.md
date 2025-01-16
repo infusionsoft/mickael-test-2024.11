@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**applyToCommissions** | **Boolean** |  | [optional] 
-**date** | **Date** |  | [optional] 
+**applyToCommissions** | **Boolean** |  | 
 **notes** | **String** |  | [optional] 
-**paymentAmount** | **String** |  | [optional] 
-**paymentMethodId** | **Number** |  | [optional] 
+**paymentAmount** | **Number** |  | 
+**paymentMethodId** | **String** |  | [optional] 
+**paymentMethodType** | **String** |  | [optional] 
+**paymentTime** | **String** |  | [optional] 
 
 

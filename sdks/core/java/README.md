@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.762682-hf-202501071525
+- API version: 2.70.0.764128
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.87</version>
+  <version>0.0.88</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.87"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.88"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.87.jar`
+- `target/core-service-core-java-sdk-0.0.88.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -218,8 +218,6 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**listNotesUsingGET1WithHttpInfo**](docs/NoteApi.md#listNotesUsingGET1WithHttpInfo) | **GET** /v2/contacts/{contact_id}/notes | List Notes
 *NoteApi* | [**updateNoteUsingPATCH**](docs/NoteApi.md#updateNoteUsingPATCH) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
 *NoteApi* | [**updateNoteUsingPATCHWithHttpInfo**](docs/NoteApi.md#updateNoteUsingPATCHWithHttpInfo) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
-*OrdersApi* | [**createPaymentOnOrderUsingPOST1**](docs/OrdersApi.md#createPaymentOnOrderUsingPOST1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
-*OrdersApi* | [**createPaymentOnOrderUsingPOST1WithHttpInfo**](docs/OrdersApi.md#createPaymentOnOrderUsingPOST1WithHttpInfo) | **POST** /v2/orders/{order_id}/payments | Create a Payment
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOST**](docs/PaymentMethodConfigApi.md#createPaymentMethodConfigUsingPOST) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOSTWithHttpInfo**](docs/PaymentMethodConfigApi.md#createPaymentMethodConfigUsingPOSTWithHttpInfo) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
 *PipelinesApi* | [**callList**](docs/PipelinesApi.md#callList) | **GET** /v2/pipelines | Lists entities based on the provided ListCommand.
@@ -333,6 +331,7 @@ Class | Method | HTTP request | Description
  - [ApplicationFeaturesEnabled](docs/ApplicationFeaturesEnabled.md)
  - [ApplyRemoveTagRequest](docs/ApplyRemoveTagRequest.md)
  - [ApplyTagsResponse](docs/ApplyTagsResponse.md)
+ - [AssignProductCategoriesRequest](docs/AssignProductCategoriesRequest.md)
  - [AssignProductsRequest](docs/AssignProductsRequest.md)
  - [Automation](docs/Automation.md)
  - [AutomationCategory](docs/AutomationCategory.md)
@@ -375,7 +374,6 @@ Class | Method | HTTP request | Description
  - [CreateDefaultCommissionProgramRequest](docs/CreateDefaultCommissionProgramRequest.md)
  - [CreateEmailSentRequest](docs/CreateEmailSentRequest.md)
  - [CreateEmailsSentRequest](docs/CreateEmailsSentRequest.md)
- - [CreateFileRequest](docs/CreateFileRequest.md)
  - [CreateFunnelIntegrationRequest](docs/CreateFunnelIntegrationRequest.md)
  - [CreateFunnelIntegrationTriggerEvents](docs/CreateFunnelIntegrationTriggerEvents.md)
  - [CreateLeadSourceRequest](docs/CreateLeadSourceRequest.md)
@@ -398,6 +396,7 @@ Class | Method | HTTP request | Description
  - [CreateShippingDiscountRequest](docs/CreateShippingDiscountRequest.md)
  - [CreateStageRequest](docs/CreateStageRequest.md)
  - [CreateSubscriptionCommissionProgramRequest](docs/CreateSubscriptionCommissionProgramRequest.md)
+ - [CreateSubscriptionPlanRequest](docs/CreateSubscriptionPlanRequest.md)
  - [CreateSubscriptionV2](docs/CreateSubscriptionV2.md)
  - [CreateTaskRequest](docs/CreateTaskRequest.md)
  - [CreateUpdateContactRequest](docs/CreateUpdateContactRequest.md)
@@ -499,6 +498,7 @@ Class | Method | HTTP request | Description
  - [ListTagsResponse](docs/ListTagsResponse.md)
  - [ListTasksResponse](docs/ListTasksResponse.md)
  - [ListUserResponse](docs/ListUserResponse.md)
+ - [ModelFile](docs/ModelFile.md)
  - [Money](docs/Money.md)
  - [Note](docs/Note.md)
  - [NoteTemplate](docs/NoteTemplate.md)
@@ -540,6 +540,7 @@ Class | Method | HTTP request | Description
  - [ReportEntryRecord](docs/ReportEntryRecord.md)
  - [ReportEntryValue](docs/ReportEntryValue.md)
  - [ReportExecutionResult](docs/ReportExecutionResult.md)
+ - [Resource](docs/Resource.md)
  - [RestAffiliate](docs/RestAffiliate.md)
  - [RestCreateOrderRequest](docs/RestCreateOrderRequest.md)
  - [RestEmailAddress](docs/RestEmailAddress.md)
@@ -577,6 +578,8 @@ Class | Method | HTTP request | Description
  - [TaggedCompany](docs/TaggedCompany.md)
  - [Task](docs/Task.md)
  - [Throwable](docs/Throwable.md)
+ - [URI](docs/URI.md)
+ - [URL](docs/URL.md)
  - [UpdateAffiliateRequest](docs/UpdateAffiliateRequest.md)
  - [UpdateAutomationCategoryRequest](docs/UpdateAutomationCategoryRequest.md)
  - [UpdateBusinessProfileRequest](docs/UpdateBusinessProfileRequest.md)
@@ -587,7 +590,6 @@ Class | Method | HTTP request | Description
  - [UpdateDealNoteRequest](docs/UpdateDealNoteRequest.md)
  - [UpdateDefaultCommissionProgramRequest](docs/UpdateDefaultCommissionProgramRequest.md)
  - [UpdateEmailAddress](docs/UpdateEmailAddress.md)
- - [UpdateFileRequest](docs/UpdateFileRequest.md)
  - [UpdateNoteRequest](docs/UpdateNoteRequest.md)
  - [UpdateNoteResponse](docs/UpdateNoteResponse.md)
  - [UpdateOpportunityRequestV2](docs/UpdateOpportunityRequestV2.md)
@@ -604,6 +606,7 @@ Class | Method | HTTP request | Description
  - [UpdateShippingDiscountRequest](docs/UpdateShippingDiscountRequest.md)
  - [UpdateStageRequest](docs/UpdateStageRequest.md)
  - [UpdateSubscriptionCommissionProgramRequest](docs/UpdateSubscriptionCommissionProgramRequest.md)
+ - [UpdateSubscriptionPlanRequest](docs/UpdateSubscriptionPlanRequest.md)
  - [UpdateSubscriptionRequest](docs/UpdateSubscriptionRequest.md)
  - [UpdateTagCategoryResponse](docs/UpdateTagCategoryResponse.md)
  - [UpdateTagResponse](docs/UpdateTagResponse.md)

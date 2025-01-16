@@ -38,6 +38,7 @@ import { ApplicationConfigurationModuleTemplate } from '../models/ApplicationCon
 import { ApplicationFeaturesEnabled } from '../models/ApplicationFeaturesEnabled';
 import { ApplyRemoveTagRequest } from '../models/ApplyRemoveTagRequest';
 import { ApplyTagsResponse } from '../models/ApplyTagsResponse';
+import { AssignProductCategoriesRequest } from '../models/AssignProductCategoriesRequest';
 import { AssignProductsRequest } from '../models/AssignProductsRequest';
 import { Automation } from '../models/Automation';
 import { AutomationCategory } from '../models/AutomationCategory';
@@ -80,7 +81,6 @@ import { CreateDealNoteRequest } from '../models/CreateDealNoteRequest';
 import { CreateDefaultCommissionProgramRequest } from '../models/CreateDefaultCommissionProgramRequest';
 import { CreateEmailSentRequest } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
-import { CreateFileRequest } from '../models/CreateFileRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
 import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
@@ -103,6 +103,7 @@ import { CreateRestOrderItemRequest } from '../models/CreateRestOrderItemRequest
 import { CreateShippingDiscountRequest } from '../models/CreateShippingDiscountRequest';
 import { CreateStageRequest } from '../models/CreateStageRequest';
 import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubscriptionCommissionProgramRequest';
+import { CreateSubscriptionPlanRequest } from '../models/CreateSubscriptionPlanRequest';
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
 import { CreateUpdateContactRequest } from '../models/CreateUpdateContactRequest';
@@ -204,6 +205,7 @@ import { ListTagsResponse } from '../models/ListTagsResponse';
 import { ListTasksResponse } from '../models/ListTasksResponse';
 import { ListUserResponse } from '../models/ListUserResponse';
 import { ModelError } from '../models/ModelError';
+import { ModelFile } from '../models/ModelFile';
 import { Money } from '../models/Money';
 import { Note } from '../models/Note';
 import { NoteTemplate } from '../models/NoteTemplate';
@@ -245,6 +247,7 @@ import { RemoveContactsFromSequenceResponse } from '../models/RemoveContactsFrom
 import { ReportEntryRecord } from '../models/ReportEntryRecord';
 import { ReportEntryValue } from '../models/ReportEntryValue';
 import { ReportExecutionResult } from '../models/ReportExecutionResult';
+import { Resource } from '../models/Resource';
 import { RestAffiliate } from '../models/RestAffiliate';
 import { RestCreateOrderRequest } from '../models/RestCreateOrderRequest';
 import { RestEmailAddress } from '../models/RestEmailAddress';
@@ -282,6 +285,8 @@ import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { URI } from '../models/URI';
+import { URL } from '../models/URL';
 import { UpdateAffiliateRequest } from '../models/UpdateAffiliateRequest';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
 import { UpdateBusinessProfileRequest } from '../models/UpdateBusinessProfileRequest';
@@ -292,7 +297,6 @@ import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMet
 import { UpdateDealNoteRequest } from '../models/UpdateDealNoteRequest';
 import { UpdateDefaultCommissionProgramRequest } from '../models/UpdateDefaultCommissionProgramRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
-import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
 import { UpdateOpportunityRequestV2 } from '../models/UpdateOpportunityRequestV2';
@@ -309,6 +313,7 @@ import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryR
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
 import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
+import { UpdateSubscriptionPlanRequest } from '../models/UpdateSubscriptionPlanRequest';
 import { UpdateSubscriptionRequest } from '../models/UpdateSubscriptionRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
@@ -522,7 +527,7 @@ export interface AutomationApiListAllAutomationIdsUsingGETRequest {
     /**
      * Total number of items to return per page
      * Minimum: 1
-     * Maximum: 1000
+     * Maximum: 25
      * Defaults to: undefined
      * @type number
      * @memberof AutomationApilistAllAutomationIdsUsingGET
@@ -562,7 +567,7 @@ export interface AutomationApiListAutomationsUsingGETRequest {
     /**
      * Total number of items to return per page
      * Minimum: 1
-     * Maximum: 1000
+     * Maximum: 25
      * Defaults to: undefined
      * @type number
      * @memberof AutomationApilistAutomationsUsingGET
@@ -1313,7 +1318,7 @@ export interface ContactApiGetContactUsingGET1Request {
      */
     contactId: string
     /**
-     * Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+     * Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ContactApigetContactUsingGET1
@@ -1373,7 +1378,7 @@ export interface ContactApiListContactLinksUsingGETRequest {
 
 export interface ContactApiListContactsUsingGET1Request {
     /**
-     * Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+     * Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
      * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ContactApilistContactsUsingGET1
@@ -2343,52 +2348,6 @@ export class ObjectNoteApi {
      */
     public updateNoteUsingPATCH(param: NoteApiUpdateNoteUsingPATCHRequest, options?: Configuration): Promise<UpdateNoteResponse> {
         return this.api.updateNoteUsingPATCH(param.contactId, param.noteId, param.updateNoteRequest, param.updateMask,  options).toPromise();
-    }
-
-}
-
-import { ObservableOrdersApi } from "./ObservableAPI";
-import { OrdersApiRequestFactory, OrdersApiResponseProcessor} from "../apis/OrdersApi";
-
-export interface OrdersApiCreatePaymentOnOrderUsingPOST1Request {
-    /**
-     * order_id
-     * Defaults to: undefined
-     * @type string
-     * @memberof OrdersApicreatePaymentOnOrderUsingPOST1
-     */
-    orderId: string
-    /**
-     * createPaymentRequest
-     * @type CreatePaymentRequest
-     * @memberof OrdersApicreatePaymentOnOrderUsingPOST1
-     */
-    createPaymentRequest: CreatePaymentRequest
-}
-
-export class ObjectOrdersApi {
-    private api: ObservableOrdersApi
-
-    public constructor(configuration: Configuration, requestFactory?: OrdersApiRequestFactory, responseProcessor?: OrdersApiResponseProcessor) {
-        this.api = new ObservableOrdersApi(configuration, requestFactory, responseProcessor);
-    }
-
-    /**
-     * Creates a payment record that can charge a credit card. Alternatively, adds a record of historical or external payment of cash or credit card.
-     * Create a Payment
-     * @param param the request object
-     */
-    public createPaymentOnOrderUsingPOST1WithHttpInfo(param: OrdersApiCreatePaymentOnOrderUsingPOST1Request, options?: Configuration): Promise<HttpInfo<PaymentResult>> {
-        return this.api.createPaymentOnOrderUsingPOST1WithHttpInfo(param.orderId, param.createPaymentRequest,  options).toPromise();
-    }
-
-    /**
-     * Creates a payment record that can charge a credit card. Alternatively, adds a record of historical or external payment of cash or credit card.
-     * Create a Payment
-     * @param param the request object
-     */
-    public createPaymentOnOrderUsingPOST1(param: OrdersApiCreatePaymentOnOrderUsingPOST1Request, options?: Configuration): Promise<PaymentResult> {
-        return this.api.createPaymentOnOrderUsingPOST1(param.orderId, param.createPaymentRequest,  options).toPromise();
     }
 
 }

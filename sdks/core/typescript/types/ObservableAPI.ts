@@ -39,6 +39,7 @@ import { ApplicationConfigurationModuleTemplate } from '../models/ApplicationCon
 import { ApplicationFeaturesEnabled } from '../models/ApplicationFeaturesEnabled';
 import { ApplyRemoveTagRequest } from '../models/ApplyRemoveTagRequest';
 import { ApplyTagsResponse } from '../models/ApplyTagsResponse';
+import { AssignProductCategoriesRequest } from '../models/AssignProductCategoriesRequest';
 import { AssignProductsRequest } from '../models/AssignProductsRequest';
 import { Automation } from '../models/Automation';
 import { AutomationCategory } from '../models/AutomationCategory';
@@ -81,7 +82,6 @@ import { CreateDealNoteRequest } from '../models/CreateDealNoteRequest';
 import { CreateDefaultCommissionProgramRequest } from '../models/CreateDefaultCommissionProgramRequest';
 import { CreateEmailSentRequest } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
-import { CreateFileRequest } from '../models/CreateFileRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
 import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
@@ -104,6 +104,7 @@ import { CreateRestOrderItemRequest } from '../models/CreateRestOrderItemRequest
 import { CreateShippingDiscountRequest } from '../models/CreateShippingDiscountRequest';
 import { CreateStageRequest } from '../models/CreateStageRequest';
 import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubscriptionCommissionProgramRequest';
+import { CreateSubscriptionPlanRequest } from '../models/CreateSubscriptionPlanRequest';
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest } from '../models/CreateTaskRequest';
 import { CreateUpdateContactRequest } from '../models/CreateUpdateContactRequest';
@@ -205,6 +206,7 @@ import { ListTagsResponse } from '../models/ListTagsResponse';
 import { ListTasksResponse } from '../models/ListTasksResponse';
 import { ListUserResponse } from '../models/ListUserResponse';
 import { ModelError } from '../models/ModelError';
+import { ModelFile } from '../models/ModelFile';
 import { Money } from '../models/Money';
 import { Note } from '../models/Note';
 import { NoteTemplate } from '../models/NoteTemplate';
@@ -246,6 +248,7 @@ import { RemoveContactsFromSequenceResponse } from '../models/RemoveContactsFrom
 import { ReportEntryRecord } from '../models/ReportEntryRecord';
 import { ReportEntryValue } from '../models/ReportEntryValue';
 import { ReportExecutionResult } from '../models/ReportExecutionResult';
+import { Resource } from '../models/Resource';
 import { RestAffiliate } from '../models/RestAffiliate';
 import { RestCreateOrderRequest } from '../models/RestCreateOrderRequest';
 import { RestEmailAddress } from '../models/RestEmailAddress';
@@ -283,6 +286,8 @@ import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { URI } from '../models/URI';
+import { URL } from '../models/URL';
 import { UpdateAffiliateRequest } from '../models/UpdateAffiliateRequest';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
 import { UpdateBusinessProfileRequest } from '../models/UpdateBusinessProfileRequest';
@@ -293,7 +298,6 @@ import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMet
 import { UpdateDealNoteRequest } from '../models/UpdateDealNoteRequest';
 import { UpdateDefaultCommissionProgramRequest } from '../models/UpdateDefaultCommissionProgramRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
-import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
 import { UpdateOpportunityRequestV2 } from '../models/UpdateOpportunityRequestV2';
@@ -310,6 +314,7 @@ import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryR
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
 import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
+import { UpdateSubscriptionPlanRequest } from '../models/UpdateSubscriptionPlanRequest';
 import { UpdateSubscriptionRequest } from '../models/UpdateSubscriptionRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
@@ -1423,7 +1428,7 @@ export class ObservableContactApi {
      * Retrieves a single Contact
      * Retrieve a Contact
      * @param contactId contact_id
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
      */
     public getContactUsingGET1WithHttpInfo(contactId: string, fields?: Array<string>, _options?: Configuration): Observable<HttpInfo<Contact>> {
         const requestContextPromise = this.requestFactory.getContactUsingGET1(contactId, fields, _options);
@@ -1448,7 +1453,7 @@ export class ObservableContactApi {
      * Retrieves a single Contact
      * Retrieve a Contact
      * @param contactId contact_id
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
      */
     public getContactUsingGET1(contactId: string, fields?: Array<string>, _options?: Configuration): Observable<Contact> {
         return this.getContactUsingGET1WithHttpInfo(contactId, fields, _options).pipe(map((apiResponse: HttpInfo<Contact>) => apiResponse.data));
@@ -1562,7 +1567,7 @@ export class ObservableContactApi {
     /**
      * Retrieves a list of Contacts
      * List Contacts
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
      * @param [filter] Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc
      * @param [pageSize] Total number of items to return per page
@@ -1590,7 +1595,7 @@ export class ObservableContactApi {
     /**
      * Retrieves a list of Contacts
      * List Contacts
-     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+     * @param [fields] Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
      * @param [filter] Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc
      * @param [pageSize] Total number of items to return per page
@@ -2432,59 +2437,6 @@ export class ObservableNoteApi {
      */
     public updateNoteUsingPATCH(contactId: string, noteId: string, updateNoteRequest: UpdateNoteRequest, updateMask?: Array<string>, _options?: Configuration): Observable<UpdateNoteResponse> {
         return this.updateNoteUsingPATCHWithHttpInfo(contactId, noteId, updateNoteRequest, updateMask, _options).pipe(map((apiResponse: HttpInfo<UpdateNoteResponse>) => apiResponse.data));
-    }
-
-}
-
-import { OrdersApiRequestFactory, OrdersApiResponseProcessor} from "../apis/OrdersApi";
-export class ObservableOrdersApi {
-    private requestFactory: OrdersApiRequestFactory;
-    private responseProcessor: OrdersApiResponseProcessor;
-    private configuration: Configuration;
-
-    public constructor(
-        configuration: Configuration,
-        requestFactory?: OrdersApiRequestFactory,
-        responseProcessor?: OrdersApiResponseProcessor
-    ) {
-        this.configuration = configuration;
-        this.requestFactory = requestFactory || new OrdersApiRequestFactory(configuration);
-        this.responseProcessor = responseProcessor || new OrdersApiResponseProcessor();
-    }
-
-    /**
-     * Creates a payment record that can charge a credit card. Alternatively, adds a record of historical or external payment of cash or credit card.
-     * Create a Payment
-     * @param orderId order_id
-     * @param createPaymentRequest createPaymentRequest
-     */
-    public createPaymentOnOrderUsingPOST1WithHttpInfo(orderId: string, createPaymentRequest: CreatePaymentRequest, _options?: Configuration): Observable<HttpInfo<PaymentResult>> {
-        const requestContextPromise = this.requestFactory.createPaymentOnOrderUsingPOST1(orderId, createPaymentRequest, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (const middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (const middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.createPaymentOnOrderUsingPOST1WithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Creates a payment record that can charge a credit card. Alternatively, adds a record of historical or external payment of cash or credit card.
-     * Create a Payment
-     * @param orderId order_id
-     * @param createPaymentRequest createPaymentRequest
-     */
-    public createPaymentOnOrderUsingPOST1(orderId: string, createPaymentRequest: CreatePaymentRequest, _options?: Configuration): Observable<PaymentResult> {
-        return this.createPaymentOnOrderUsingPOST1WithHttpInfo(orderId, createPaymentRequest, _options).pipe(map((apiResponse: HttpInfo<PaymentResult>) => apiResponse.data));
     }
 
 }

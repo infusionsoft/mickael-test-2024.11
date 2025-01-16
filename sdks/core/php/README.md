@@ -127,7 +127,6 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**getNoteUsingGET1**](docs/Api/NoteApi.md#getnoteusingget1) | **GET** /v2/contacts/{contact_id}/notes/{note_id} | Retrieve a Note
 *NoteApi* | [**listNotesUsingGET1**](docs/Api/NoteApi.md#listnotesusingget1) | **GET** /v2/contacts/{contact_id}/notes | List Notes
 *NoteApi* | [**updateNoteUsingPATCH**](docs/Api/NoteApi.md#updatenoteusingpatch) | **PATCH** /v2/contacts/{contact_id}/notes/{note_id} | Update a Note
-*OrdersApi* | [**createPaymentOnOrderUsingPOST1**](docs/Api/OrdersApi.md#createpaymentonorderusingpost1) | **POST** /v2/orders/{order_id}/payments | Create a Payment
 *PaymentMethodConfigApi* | [**createPaymentMethodConfigUsingPOST**](docs/Api/PaymentMethodConfigApi.md#createpaymentmethodconfigusingpost) | **POST** /v2/paymentMethodConfigs | Create Payment Method Configuration
 *PipelinesApi* | [**callList**](docs/Api/PipelinesApi.md#calllist) | **GET** /v2/pipelines | Lists entities based on the provided ListCommand.
 *PipelinesApi* | [**create**](docs/Api/PipelinesApi.md#create) | **POST** /v2/pipelines | Creates a new entity.
@@ -204,6 +203,7 @@ Class | Method | HTTP request | Description
 - [ApplicationFeaturesEnabled](docs/Model/ApplicationFeaturesEnabled.md)
 - [ApplyRemoveTagRequest](docs/Model/ApplyRemoveTagRequest.md)
 - [ApplyTagsResponse](docs/Model/ApplyTagsResponse.md)
+- [AssignProductCategoriesRequest](docs/Model/AssignProductCategoriesRequest.md)
 - [AssignProductsRequest](docs/Model/AssignProductsRequest.md)
 - [Automation](docs/Model/Automation.md)
 - [AutomationCategory](docs/Model/AutomationCategory.md)
@@ -246,7 +246,6 @@ Class | Method | HTTP request | Description
 - [CreateDefaultCommissionProgramRequest](docs/Model/CreateDefaultCommissionProgramRequest.md)
 - [CreateEmailSentRequest](docs/Model/CreateEmailSentRequest.md)
 - [CreateEmailsSentRequest](docs/Model/CreateEmailsSentRequest.md)
-- [CreateFileRequest](docs/Model/CreateFileRequest.md)
 - [CreateFunnelIntegrationRequest](docs/Model/CreateFunnelIntegrationRequest.md)
 - [CreateFunnelIntegrationTriggerEvents](docs/Model/CreateFunnelIntegrationTriggerEvents.md)
 - [CreateLeadSourceRequest](docs/Model/CreateLeadSourceRequest.md)
@@ -269,6 +268,7 @@ Class | Method | HTTP request | Description
 - [CreateShippingDiscountRequest](docs/Model/CreateShippingDiscountRequest.md)
 - [CreateStageRequest](docs/Model/CreateStageRequest.md)
 - [CreateSubscriptionCommissionProgramRequest](docs/Model/CreateSubscriptionCommissionProgramRequest.md)
+- [CreateSubscriptionPlanRequest](docs/Model/CreateSubscriptionPlanRequest.md)
 - [CreateSubscriptionV2](docs/Model/CreateSubscriptionV2.md)
 - [CreateTaskRequest](docs/Model/CreateTaskRequest.md)
 - [CreateUpdateContactRequest](docs/Model/CreateUpdateContactRequest.md)
@@ -306,6 +306,7 @@ Class | Method | HTTP request | Description
 - [EmailsSentList](docs/Model/EmailsSentList.md)
 - [Error](docs/Model/Error.md)
 - [FaxNumber](docs/Model/FaxNumber.md)
+- [File](docs/Model/File.md)
 - [FileMetadata](docs/Model/FileMetadata.md)
 - [FunnelIntegrationAction](docs/Model/FunnelIntegrationAction.md)
 - [FunnelIntegrationHttpRequest](docs/Model/FunnelIntegrationHttpRequest.md)
@@ -411,6 +412,7 @@ Class | Method | HTTP request | Description
 - [ReportEntryRecord](docs/Model/ReportEntryRecord.md)
 - [ReportEntryValue](docs/Model/ReportEntryValue.md)
 - [ReportExecutionResult](docs/Model/ReportExecutionResult.md)
+- [Resource](docs/Model/Resource.md)
 - [RestAffiliate](docs/Model/RestAffiliate.md)
 - [RestCreateOrderRequest](docs/Model/RestCreateOrderRequest.md)
 - [RestEmailAddress](docs/Model/RestEmailAddress.md)
@@ -448,6 +450,8 @@ Class | Method | HTTP request | Description
 - [TaggedCompany](docs/Model/TaggedCompany.md)
 - [Task](docs/Model/Task.md)
 - [Throwable](docs/Model/Throwable.md)
+- [URI](docs/Model/URI.md)
+- [URL](docs/Model/URL.md)
 - [UpdateAffiliateRequest](docs/Model/UpdateAffiliateRequest.md)
 - [UpdateAutomationCategoryRequest](docs/Model/UpdateAutomationCategoryRequest.md)
 - [UpdateBusinessProfileRequest](docs/Model/UpdateBusinessProfileRequest.md)
@@ -458,7 +462,6 @@ Class | Method | HTTP request | Description
 - [UpdateDealNoteRequest](docs/Model/UpdateDealNoteRequest.md)
 - [UpdateDefaultCommissionProgramRequest](docs/Model/UpdateDefaultCommissionProgramRequest.md)
 - [UpdateEmailAddress](docs/Model/UpdateEmailAddress.md)
-- [UpdateFileRequest](docs/Model/UpdateFileRequest.md)
 - [UpdateNoteRequest](docs/Model/UpdateNoteRequest.md)
 - [UpdateNoteResponse](docs/Model/UpdateNoteResponse.md)
 - [UpdateOpportunityRequestV2](docs/Model/UpdateOpportunityRequestV2.md)
@@ -475,6 +478,7 @@ Class | Method | HTTP request | Description
 - [UpdateShippingDiscountRequest](docs/Model/UpdateShippingDiscountRequest.md)
 - [UpdateStageRequest](docs/Model/UpdateStageRequest.md)
 - [UpdateSubscriptionCommissionProgramRequest](docs/Model/UpdateSubscriptionCommissionProgramRequest.md)
+- [UpdateSubscriptionPlanRequest](docs/Model/UpdateSubscriptionPlanRequest.md)
 - [UpdateSubscriptionRequest](docs/Model/UpdateSubscriptionRequest.md)
 - [UpdateTagCategoryResponse](docs/Model/UpdateTagCategoryResponse.md)
 - [UpdateTagResponse](docs/Model/UpdateTagResponse.md)
@@ -509,7 +513,7 @@ api@keap.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.70.0.762682-hf-202501071525`
-    - Package version: `0.0.87`
+- API version: `2.70.0.764128`
+    - Package version: `0.0.88`
     - Generator version: `7.10.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

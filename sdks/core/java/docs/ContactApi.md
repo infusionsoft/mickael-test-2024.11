@@ -470,7 +470,7 @@ public class Example {
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
-        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
         try {
             Contact result = apiInstance.getContactUsingGET1(contactId, fields);
             System.out.println(result);
@@ -491,7 +491,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
-| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters | [optional] |
+| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website | [optional] |
 
 ### Return type
 
@@ -541,7 +541,7 @@ public class Example {
 
         ContactApi apiInstance = new ContactApi(defaultClient);
         String contactId = "contactId_example"; // String | contact_id
-        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
         try {
             ApiResponse<Contact> response = apiInstance.getContactUsingGET1WithHttpInfo(contactId, fields);
             System.out.println("Status code: " + response.getStatusCode());
@@ -564,7 +564,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
-| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters | [optional] |
+| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website | [optional] |
 
 ### Return type
 
@@ -1043,7 +1043,7 @@ public class Example {
         defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
-        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
         String filter = "filter_example"; // String | Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:   - `filter=given_name%3D%3DMary`  - `filter=company_id%3D%3D123`  - `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith`  
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc
         Integer pageSize = 0; // Integer | Total number of items to return per page
@@ -1067,7 +1067,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters | [optional] |
+| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website | [optional] |
 | **filter** | **String**| Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;   | [optional] |
 | **orderBy** | **String**| Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc | [optional] |
 | **pageSize** | **Integer**| Total number of items to return per page | [optional] |
@@ -1120,7 +1120,7 @@ public class Example {
         defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         ContactApi apiInstance = new ContactApi(defaultClient);
-        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters
+        List<String> fields = Arrays.asList(); // List<String> | Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website
         String filter = "filter_example"; // String | Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the `==` operator to check the equality of one of the filters with your searched  word, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:   - `filter=given_name%3D%3DMary`  - `filter=company_id%3D%3D123`  - `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith`  
         String orderBy = "orderBy_example"; // String | Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc
         Integer pageSize = 0; // Integer | Total number of items to return per page
@@ -1146,7 +1146,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters | [optional] |
+| **fields** | [**List&lt;String&gt;**](String.md)| Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website | [optional] |
 | **filter** | **String**| Filter to apply, allowed fields are:   - (String) email   - (String) given_name   - (String) family_name   - (String) company_id   - (Set[String]) contact_ids   - (String) start_update_time   - (String) end_update_time   You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of one of the filters with your searched  word, in the encoded form &#x60;%3D%3D&#x60;. For the filters listed above, here are some examples:   - &#x60;filter&#x3D;given_name%3D%3DMary&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123&#x60;  - &#x60;filter&#x3D;company_id%3D%3D123%3Bfamily_name%3D%3DSmith&#x60;   | [optional] |
 | **orderBy** | **String**| Attribute and direction to order items.   One of the following fields:   - id   - date_created   - email   One of the following directions:   - asc   - desc | [optional] |
 | **pageSize** | **Integer**| Total number of items to return per page | [optional] |
@@ -1630,7 +1630,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: addresses, anniversary, birthday, company, contact_type, custom_fields, email_addresses, family_name, fax_numbers, given_name, job_title, lead_source_id, links, middle_name, notes, opt_in_reason, origin, owner_id, phone_numbers, preferred_locale, preferred_name, prefix, referral_code, social_accounts, source_type, spouse_name, suffix, time_zone, website, utm_parameters] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: addresses, anniversary_date, birth_date, company, contact_type, create_time, custom_fields, email_addresses, family_name, fax_numbers, given_name, id, job_title, leadsource_id, links, middle_name, notes, origin, owner_id, phone_numbers, preferred_locale, preferred_name, prefix, referral_code, score_value, social_accounts, source_type, spouse_name, suffix, tag_ids, time_zone, update_date, update_time, utm_parameters, website] |
 | **createUpdateContactRequest** | [**CreateUpdateContactRequest**](CreateUpdateContactRequest.md)| contact | [optional] |
 
 ### Return type
@@ -1705,7 +1705,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **String**| contact_id | |
-| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: addresses, anniversary, birthday, company, contact_type, custom_fields, email_addresses, family_name, fax_numbers, given_name, job_title, lead_source_id, links, middle_name, notes, opt_in_reason, origin, owner_id, phone_numbers, preferred_locale, preferred_name, prefix, referral_code, social_accounts, source_type, spouse_name, suffix, time_zone, website, utm_parameters] |
+| **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] [enum: addresses, anniversary_date, birth_date, company, contact_type, create_time, custom_fields, email_addresses, family_name, fax_numbers, given_name, id, job_title, leadsource_id, links, middle_name, notes, origin, owner_id, phone_numbers, preferred_locale, preferred_name, prefix, referral_code, score_value, social_accounts, source_type, spouse_name, suffix, tag_ids, time_zone, update_date, update_time, utm_parameters, website] |
 | **createUpdateContactRequest** | [**CreateUpdateContactRequest**](CreateUpdateContactRequest.md)| contact | [optional] |
 
 ### Return type

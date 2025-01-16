@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: Keap REST Core Service
-  version: 2.70.0.762682-hf-202501071525
+  version: 2.70.0.764128
   title: Keap REST API
   termsOfService: https://keap.com/legal
   contact:
@@ -453,7 +453,7 @@ paths:
           type: integer
           format: int32
           minimum: 1
-          maximum: 1000
+          maximum: 25
           exclusiveMinimum: false
           exclusiveMaximum: false
       - name: page_token
@@ -603,7 +603,7 @@ paths:
           type: integer
           format: int32
           minimum: 1
-          maximum: 1000
+          maximum: 25
           exclusiveMinimum: false
           exclusiveMaximum: false
       - name: page_token
@@ -1312,7 +1312,7 @@ paths:
       - name: fields
         in: query
         description: 'Comma-delimited list of Contact properties to include in the
-          response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters'
+          response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website'
         required: false
         explode: true
         schema:
@@ -1555,7 +1555,7 @@ paths:
       - name: fields
         in: query
         description: 'Comma-delimited list of Contact properties to include in the
-          response. (Available fields are: addresses,anniversary,birthday,company,contact_type,custom_fields,email_addresses,family_name,fax_numbers,given_name,job_title,lead_source_id,links,middle_name,notes,opt_in_reason,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,social_accounts,source_type,spouse_name,suffix,time_zone,website,utm_parameters'
+          response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website'
         required: false
         explode: true
         schema:
@@ -1649,21 +1649,22 @@ paths:
             type: string
           enum:
           - addresses
-          - anniversary
-          - birthday
+          - anniversary_date
+          - birth_date
           - company
           - contact_type
+          - create_time
           - custom_fields
           - email_addresses
           - family_name
           - fax_numbers
           - given_name
+          - id
           - job_title
-          - lead_source_id
+          - leadsource_id
           - links
           - middle_name
           - notes
-          - opt_in_reason
           - origin
           - owner_id
           - phone_numbers
@@ -1671,13 +1672,17 @@ paths:
           - preferred_name
           - prefix
           - referral_code
+          - score_value
           - social_accounts
           - source_type
           - spouse_name
           - suffix
+          - tag_ids
           - time_zone
-          - website
+          - update_date
+          - update_time
           - utm_parameters
+          - website
       requestBody:
         $ref: '#/components/requestBodies/CreateUpdateContactRequest'
       responses:
@@ -2546,48 +2551,6 @@ paths:
       responses:
         '202':
           description: Accepted
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '403':
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-      deprecated: false
-  /v2/orders/{order_id}/payments:
-    post:
-      tags:
-      - Orders
-      summary: Create a Payment
-      description: Creates a payment record that can charge a credit card. Alternatively,
-        adds a record of historical or external payment of cash or credit card.
-      operationId: createPaymentOnOrderUsingPOST_1
-      parameters:
-      - name: order_id
-        in: path
-        description: order_id
-        required: true
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CreatePaymentRequest'
-        description: createPaymentRequest
-        required: true
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaymentResult'
         '401':
           description: Unauthorized
           content:
@@ -4715,6 +4678,16 @@ components:
           additionalProperties:
             type: string
       title: ApplyTagsResponse
+    AssignProductCategoriesRequest:
+      type: object
+      required:
+      - product_category_ids
+      properties:
+        product_category_ids:
+          type: array
+          items:
+            type: string
+      title: AssignProductCategoriesRequest
     AssignProductsRequest:
       type: object
       required:
@@ -5514,25 +5487,6 @@ components:
           items:
             $ref: '#/components/schemas/CreateEmailSentRequest'
       title: CreateEmailsSentRequest
-    CreateFileRequest:
-      type: object
-      required:
-      - contact_id
-      - file_name
-      properties:
-        contact_id:
-          type: string
-        file_association:
-          type: string
-          enum:
-          - CONTACT
-          - USER
-          - COMPANY
-        file_name:
-          type: string
-        is_public:
-          type: boolean
-      title: CreateFileRequest
     CreateFunnelIntegrationRequest:
       type: object
       properties:
@@ -5575,11 +5529,11 @@ components:
     CreateLeadSourceRequest:
       type: object
       properties:
-        category:
-          $ref: '#/components/schemas/LeadSourceCategory'
         description:
           type: string
         end_time:
+          type: string
+        lead_source_category_id:
           type: string
         medium:
           type: string
@@ -5589,8 +5543,11 @@ components:
           type: string
         start_time:
           type: string
-        status_is_active:
-          type: boolean
+        status:
+          type: string
+          enum:
+          - ACTIVE
+          - INACTIVE
         vendor:
           type: string
       title: CreateLeadSourceRequest
@@ -5758,19 +5715,23 @@ components:
       title: CreatePaymentMethodConfigRequest
     CreatePaymentRequest:
       type: object
+      required:
+      - apply_to_commissions
+      - payment_amount
       properties:
         apply_to_commissions:
           type: boolean
-        date:
-          type: string
-          format: date-time
         notes:
           type: string
         payment_amount:
-          type: string
+          type: number
+          format: double
         payment_method_id:
-          type: integer
-          format: int64
+          type: string
+        payment_method_type:
+          type: string
+        payment_time:
+          type: string
       title: CreatePaymentRequest
     CreatePipelineRequest:
       required:
@@ -5997,6 +5958,44 @@ components:
         subscription_id:
           type: string
       title: CreateSubscriptionCommissionProgramRequest
+    CreateSubscriptionPlanRequest:
+      type: object
+      required:
+      - cycle_type
+      - plan_price
+      properties:
+        active:
+          type: boolean
+          description: Whether the subscription plan is active.
+        allow_prorating:
+          type: boolean
+          description: Allow prorating of the subscription plan.
+        cycle_type:
+          type: string
+          description: The cycle type of the subscription plan.
+          enum:
+          - DAILY
+          - WEEKLY
+          - MONTHLY
+          - YEARLY
+        display_order_index:
+          type: integer
+          format: int32
+          description: The order that this plan will be displayed to the user.
+        frequency:
+          type: integer
+          format: int32
+          description: The frequency of the subscription plan.
+        plan_price:
+          type: number
+          format: double
+          description: The price of the subscription plan in the smallest currency
+            unit.
+        total_cycles:
+          type: integer
+          format: int32
+          description: How many cycles the subscription plan will have.  0 means infinite.
+      title: CreateSubscriptionPlanRequest
     CreateSubscriptionV2:
       type: object
       required:
@@ -6809,6 +6808,52 @@ components:
         type:
           type: string
       title: FaxNumber
+    File:
+      type: object
+      properties:
+        absolute:
+          type: boolean
+        absoluteFile:
+          $ref: '#/components/schemas/File'
+        absolutePath:
+          type: string
+        canonicalFile:
+          $ref: '#/components/schemas/File'
+        canonicalPath:
+          type: string
+        directory:
+          type: boolean
+        executable:
+          type: boolean
+        file:
+          type: boolean
+        freeSpace:
+          type: integer
+          format: int64
+        hidden:
+          type: boolean
+        lastModified:
+          type: integer
+          format: int64
+        name:
+          type: string
+        parent:
+          type: string
+        parentFile:
+          $ref: '#/components/schemas/File'
+        path:
+          type: string
+        readable:
+          type: boolean
+        totalSpace:
+          type: integer
+          format: int64
+        usableSpace:
+          type: integer
+          format: int64
+        writable:
+          type: boolean
+      title: File
     FileMetadata:
       type: object
       properties:
@@ -6829,8 +6874,6 @@ components:
         created_by_id:
           type: string
         created_time:
-          type: string
-        download_url:
           type: string
         file_box_type:
           type: string
@@ -7190,6 +7233,9 @@ components:
           type: integer
           format: int32
       title: HistoricalCounts
+    InputStream:
+      type: object
+      title: InputStream
     InvoiceOrderPayment:
       type: object
       properties:
@@ -7297,13 +7343,13 @@ components:
     LeadSource:
       type: object
       properties:
-        category:
-          $ref: '#/components/schemas/LeadSourceCategory'
         description:
           type: string
         end_time:
           type: string
         id:
+          type: string
+        lead_source_category_id:
           type: string
         medium:
           type: string
@@ -7313,8 +7359,11 @@ components:
           type: string
         start_time:
           type: string
-        status_is_active:
-          type: boolean
+        status:
+          type: string
+          enum:
+          - ACTIVE
+          - INACTIVE
         vendor:
           type: string
       title: LeadSource
@@ -8511,6 +8560,26 @@ components:
           items:
             $ref: '#/components/schemas/ReportEntryRecord'
       title: ReportExecutionResult
+    Resource:
+      type: object
+      properties:
+        description:
+          type: string
+        file:
+          $ref: '#/components/schemas/File'
+        filename:
+          type: string
+        inputStream:
+          $ref: '#/components/schemas/InputStream'
+        open:
+          type: boolean
+        readable:
+          type: boolean
+        uri:
+          $ref: '#/components/schemas/URI'
+        url:
+          $ref: '#/components/schemas/URL'
+      title: Resource
     RestAffiliate:
       type: object
       properties:
@@ -9315,31 +9384,42 @@ components:
       properties:
         active:
           type: boolean
-          description: If the subscription plan should be active/available for purchase
-        billing_cycle:
+          description: If the subscription plan is active or not.
+        allow_prorating:
+          type: boolean
+          description: Whether or not the plan will allow prorating.
+        cycle_type:
           type: string
-          description: 'How frequent to bill. Can be: DAILY, WEEKLY, MONTHLY, or YEARLY'
-        billing_frequency:
+          description: 'The cycle type of the subscription plan. Possible values:
+            YEAR, MONTH, WEEK, DAY'
+          enum:
+          - DAILY
+          - WEEKLY
+          - MONTHLY
+          - YEARLY
+        display_order_index:
           type: integer
           format: int32
-          description: How many times per billing cycle to bill
+          description: The order index where this plan will be displayed on a page
+            against other plans. Smaller number indicates plan will be displayed higher
+            in the list.
+        frequency:
+          type: integer
+          format: int32
+          description: Total number of times of a cycle type which constitutes a plan
+            cycle. Minimum value is 1.
         id:
           type: string
-          description: The subscription plan id
-        number_of_cycles:
-          type: integer
-          format: int32
-          description: How many billing cycles to bill. Optional field i.e. can be
-            no value or 0.
-        order_index:
-          type: integer
-          format: int32
-          description: Determines the order in which the plan will be displayed
+          description: Id of the subscription plan.
         plan_price:
           $ref: '#/components/schemas/CurrencyValue'
-        prorate:
-          type: boolean
-          description: If the subscription plan should allow prorating
+        product_id:
+          type: string
+        total_cycles:
+          type: integer
+          format: int32
+          description: Total number of cycles the plan will run before ending. Value
+            of 0 indicates plan will never end.
       title: SubscriptionPlan
     SubscriptionPlanInterest:
       type: object
@@ -9443,6 +9523,73 @@ components:
           items:
             $ref: '#/components/schemas/Throwable'
       title: Throwable
+    URI:
+      type: object
+      properties:
+        absolute:
+          type: boolean
+        authority:
+          type: string
+        fragment:
+          type: string
+        host:
+          type: string
+        opaque:
+          type: boolean
+        path:
+          type: string
+        port:
+          type: integer
+          format: int32
+        query:
+          type: string
+        rawAuthority:
+          type: string
+        rawFragment:
+          type: string
+        rawPath:
+          type: string
+        rawQuery:
+          type: string
+        rawSchemeSpecificPart:
+          type: string
+        rawUserInfo:
+          type: string
+        scheme:
+          type: string
+        schemeSpecificPart:
+          type: string
+        userInfo:
+          type: string
+      title: URI
+    URL:
+      type: object
+      properties:
+        authority:
+          type: string
+        content:
+          type: object
+        defaultPort:
+          type: integer
+          format: int32
+        file:
+          type: string
+        host:
+          type: string
+        path:
+          type: string
+        port:
+          type: integer
+          format: int32
+        protocol:
+          type: string
+        query:
+          type: string
+        ref:
+          type: string
+        userInfo:
+          type: string
+      title: URL
     UpdateAffiliateRequest:
       type: object
       required:
@@ -9625,14 +9772,6 @@ components:
         reason:
           type: string
       title: UpdateEmailAddress
-    UpdateFileRequest:
-      type: object
-      properties:
-        file_name:
-          type: string
-        is_public:
-          type: boolean
-      title: UpdateFileRequest
     UpdateNoteRequest:
       type: object
       required:
@@ -9961,6 +10100,44 @@ components:
         subscription_id:
           type: string
       title: UpdateSubscriptionCommissionProgramRequest
+    UpdateSubscriptionPlanRequest:
+      type: object
+      required:
+      - cycle_type
+      - plan_price
+      properties:
+        active:
+          type: boolean
+          description: Whether the subscription plan is active.
+        allow_prorating:
+          type: boolean
+          description: Allow prorating of the subscription plan.
+        cycle_type:
+          type: string
+          description: The cycle type of the subscription plan.
+          enum:
+          - DAILY
+          - WEEKLY
+          - MONTHLY
+          - YEARLY
+        display_order_index:
+          type: integer
+          format: int32
+          description: The order that this plan will be displayed to the user.
+        frequency:
+          type: integer
+          format: int32
+          description: The frequency of the subscription plan.
+        plan_price:
+          type: number
+          format: double
+          description: The price of the subscription plan in the smallest currency
+            unit.
+        total_cycles:
+          type: integer
+          format: int32
+          description: How many cycles the subscription plan will have.  0 means infinite.
+      title: UpdateSubscriptionPlanRequest
     UpdateSubscriptionRequest:
       type: object
       properties:

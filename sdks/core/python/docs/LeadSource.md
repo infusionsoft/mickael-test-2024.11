@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**category** | [**LeadSourceCategory**](LeadSourceCategory.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **end_time** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
+**lead_source_category_id** | **str** |  | [optional] 
 **medium** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **start_time** | **str** |  | [optional] 
-**status_is_active** | **bool** |  | [optional] 
+**status** | **str** |  | [optional] 
 **vendor** | **str** |  | [optional] 
 
 ## Example

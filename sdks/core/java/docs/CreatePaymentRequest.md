@@ -7,11 +7,12 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**applyToCommissions** | **Boolean** |  |  [optional] |
-|**date** | **ZonedDateTime** |  |  [optional] |
+|**applyToCommissions** | **Boolean** |  |  |
 |**notes** | **String** |  |  [optional] |
-|**paymentAmount** | **String** |  |  [optional] |
-|**paymentMethodId** | **Long** |  |  [optional] |
+|**paymentAmount** | **Double** |  |  |
+|**paymentMethodId** | **String** |  |  [optional] |
+|**paymentMethodType** | **String** |  |  [optional] |
+|**paymentTime** | **String** |  |  [optional] |
 
 
 ## Implemented Interfaces

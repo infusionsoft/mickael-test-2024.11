@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **contact_id** | **str** |  | [optional] 
 **created_by_id** | **str** |  | [optional] 
 **created_time** | **str** |  | [optional] 
-**download_url** | **str** |  | [optional] 
 **file_box_type** | **str** |  | [optional] 
 **file_name** | **str** |  | [optional] 
 **file_size** | **int** |  | [optional] 

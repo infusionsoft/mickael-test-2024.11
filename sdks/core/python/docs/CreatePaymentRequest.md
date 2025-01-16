@@ -5,11 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apply_to_commissions** | **bool** |  | [optional] 
-**var_date** | **datetime** |  | [optional] 
+**apply_to_commissions** | **bool** |  | 
 **notes** | **str** |  | [optional] 
-**payment_amount** | **str** |  | [optional] 
-**payment_method_id** | **int** |  | [optional] 
+**payment_amount** | **float** |  | 
+**payment_method_id** | **str** |  | [optional] 
+**payment_method_type** | **str** |  | [optional] 
+**payment_time** | **str** |  | [optional] 
 
 ## Example
 

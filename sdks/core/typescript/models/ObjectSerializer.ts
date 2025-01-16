@@ -35,6 +35,7 @@ export * from '../models/ApplicationConfigurationModuleTemplate';
 export * from '../models/ApplicationFeaturesEnabled';
 export * from '../models/ApplyRemoveTagRequest';
 export * from '../models/ApplyTagsResponse';
+export * from '../models/AssignProductCategoriesRequest';
 export * from '../models/AssignProductsRequest';
 export * from '../models/Automation';
 export * from '../models/AutomationCategory';
@@ -77,7 +78,6 @@ export * from '../models/CreateDealNoteRequest';
 export * from '../models/CreateDefaultCommissionProgramRequest';
 export * from '../models/CreateEmailSentRequest';
 export * from '../models/CreateEmailsSentRequest';
-export * from '../models/CreateFileRequest';
 export * from '../models/CreateFunnelIntegrationRequest';
 export * from '../models/CreateFunnelIntegrationTriggerEvents';
 export * from '../models/CreateLeadSourceRequest';
@@ -100,6 +100,7 @@ export * from '../models/CreateRestOrderItemRequest';
 export * from '../models/CreateShippingDiscountRequest';
 export * from '../models/CreateStageRequest';
 export * from '../models/CreateSubscriptionCommissionProgramRequest';
+export * from '../models/CreateSubscriptionPlanRequest';
 export * from '../models/CreateSubscriptionV2';
 export * from '../models/CreateTaskRequest';
 export * from '../models/CreateUpdateContactRequest';
@@ -201,6 +202,7 @@ export * from '../models/ListTagsResponse';
 export * from '../models/ListTasksResponse';
 export * from '../models/ListUserResponse';
 export * from '../models/ModelError';
+export * from '../models/ModelFile';
 export * from '../models/Money';
 export * from '../models/Note';
 export * from '../models/NoteTemplate';
@@ -242,6 +244,7 @@ export * from '../models/RemoveContactsFromSequenceResponse';
 export * from '../models/ReportEntryRecord';
 export * from '../models/ReportEntryValue';
 export * from '../models/ReportExecutionResult';
+export * from '../models/Resource';
 export * from '../models/RestAffiliate';
 export * from '../models/RestCreateOrderRequest';
 export * from '../models/RestEmailAddress';
@@ -279,6 +282,8 @@ export * from '../models/Tag';
 export * from '../models/TaggedCompany';
 export * from '../models/Task';
 export * from '../models/Throwable';
+export * from '../models/URI';
+export * from '../models/URL';
 export * from '../models/UpdateAffiliateRequest';
 export * from '../models/UpdateAutomationCategoryRequest';
 export * from '../models/UpdateBusinessProfileRequest';
@@ -289,7 +294,6 @@ export * from '../models/UpdateCustomFieldMetaDataRequest';
 export * from '../models/UpdateDealNoteRequest';
 export * from '../models/UpdateDefaultCommissionProgramRequest';
 export * from '../models/UpdateEmailAddress';
-export * from '../models/UpdateFileRequest';
 export * from '../models/UpdateNoteRequest';
 export * from '../models/UpdateNoteResponse';
 export * from '../models/UpdateOpportunityRequestV2';
@@ -306,6 +310,7 @@ export * from '../models/UpdateProductInventoryRequest';
 export * from '../models/UpdateShippingDiscountRequest';
 export * from '../models/UpdateStageRequest';
 export * from '../models/UpdateSubscriptionCommissionProgramRequest';
+export * from '../models/UpdateSubscriptionPlanRequest';
 export * from '../models/UpdateSubscriptionRequest';
 export * from '../models/UpdateTagCategoryResponse';
 export * from '../models/UpdateTagResponse';
@@ -350,6 +355,7 @@ import { ApplicationConfigurationModuleTemplate } from '../models/ApplicationCon
 import { ApplicationFeaturesEnabled } from '../models/ApplicationFeaturesEnabled';
 import { ApplyRemoveTagRequest } from '../models/ApplyRemoveTagRequest';
 import { ApplyTagsResponse } from '../models/ApplyTagsResponse';
+import { AssignProductCategoriesRequest } from '../models/AssignProductCategoriesRequest';
 import { AssignProductsRequest } from '../models/AssignProductsRequest';
 import { Automation } from '../models/Automation';
 import { AutomationCategory } from '../models/AutomationCategory';
@@ -392,10 +398,9 @@ import { CreateDealNoteRequest } from '../models/CreateDealNoteRequest';
 import { CreateDefaultCommissionProgramRequest } from '../models/CreateDefaultCommissionProgramRequest';
 import { CreateEmailSentRequest     , CreateEmailSentRequestOriginalProviderEnum              } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
-import { CreateFileRequest , CreateFileRequestFileAssociationEnum     } from '../models/CreateFileRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
-import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
+import { CreateLeadSourceRequest       , CreateLeadSourceRequestStatusEnum    } from '../models/CreateLeadSourceRequest';
 import { CreateNoteRequest } from '../models/CreateNoteRequest';
 import { CreateOpportunityRequest } from '../models/CreateOpportunityRequest';
 import { CreateOpportunityStageChecklistItem } from '../models/CreateOpportunityStageChecklistItem';
@@ -415,6 +420,7 @@ import { CreateRestOrderItemRequest   , CreateRestOrderItemRequestProductTypeEnu
 import { CreateShippingDiscountRequest  , CreateShippingDiscountRequestDiscountTypeEnum     } from '../models/CreateShippingDiscountRequest';
 import { CreateStageRequest } from '../models/CreateStageRequest';
 import { CreateSubscriptionCommissionProgramRequest } from '../models/CreateSubscriptionCommissionProgramRequest';
+import { CreateSubscriptionPlanRequest  , CreateSubscriptionPlanRequestCycleTypeEnum       } from '../models/CreateSubscriptionPlanRequest';
 import { CreateSubscriptionV2 } from '../models/CreateSubscriptionV2';
 import { CreateTaskRequest      , CreateTaskRequestPriorityEnum    , CreateTaskRequestTypeEnum   } from '../models/CreateTaskRequest';
 import { CreateUpdateContactRequest                     , CreateUpdateContactRequestSourceTypeEnum        } from '../models/CreateUpdateContactRequest';
@@ -451,7 +457,7 @@ import { EmailSentCreateError } from '../models/EmailSentCreateError';
 import { EmailSentWithContent      , EmailSentWithContentOriginalProviderEnum              } from '../models/EmailSentWithContent';
 import { EmailsSentList } from '../models/EmailsSentList';
 import { FaxNumber, FaxNumberFieldEnum     } from '../models/FaxNumber';
-import { FileMetadata, FileMetadataCategoryEnum      , FileMetadataFileBoxTypeEnum         } from '../models/FileMetadata';
+import { FileMetadata, FileMetadataCategoryEnum     , FileMetadataFileBoxTypeEnum         } from '../models/FileMetadata';
 import { FunnelIntegrationAction } from '../models/FunnelIntegrationAction';
 import { FunnelIntegrationHttpRequest } from '../models/FunnelIntegrationHttpRequest';
 import { FunnelIntegrationSchemaField } from '../models/FunnelIntegrationSchemaField';
@@ -470,7 +476,7 @@ import { InvoiceOrderPayment     , InvoiceOrderPaymentPayStatusEnum       } from
 import { Item    , ItemTypeEnum   } from '../models/Item';
 import { LandingPage } from '../models/LandingPage';
 import { LeadScore } from '../models/LeadScore';
-import { LeadSource } from '../models/LeadSource';
+import { LeadSource        , LeadSourceStatusEnum    } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
 import { Link } from '../models/Link';
 import { LinkContactsRequest } from '../models/LinkContactsRequest';
@@ -516,6 +522,7 @@ import { ListTagsResponse } from '../models/ListTagsResponse';
 import { ListTasksResponse } from '../models/ListTasksResponse';
 import { ListUserResponse } from '../models/ListUserResponse';
 import { ModelError } from '../models/ModelError';
+import { ModelFile } from '../models/ModelFile';
 import { Money } from '../models/Money';
 import { Note } from '../models/Note';
 import { NoteTemplate, NoteTemplateActionTypeEnum        } from '../models/NoteTemplate';
@@ -557,6 +564,7 @@ import { RemoveContactsFromSequenceResponse } from '../models/RemoveContactsFrom
 import { ReportEntryRecord } from '../models/ReportEntryRecord';
 import { ReportEntryValue } from '../models/ReportEntryValue';
 import { ReportExecutionResult } from '../models/ReportExecutionResult';
+import { Resource } from '../models/Resource';
 import { RestAffiliate    , RestAffiliateStatusEnum    } from '../models/RestAffiliate';
 import { RestCreateOrderRequest     , RestCreateOrderRequestOrderTypeEnum      } from '../models/RestCreateOrderRequest';
 import { RestEmailAddress  , RestEmailAddressStatusEnum   } from '../models/RestEmailAddress';
@@ -588,12 +596,14 @@ import { StageDetails } from '../models/StageDetails';
 import { StageListResponse } from '../models/StageListResponse';
 import { SubscriptionCommission } from '../models/SubscriptionCommission';
 import { SubscriptionCommissionProgram } from '../models/SubscriptionCommissionProgram';
-import { SubscriptionPlan } from '../models/SubscriptionPlan';
+import { SubscriptionPlan  , SubscriptionPlanCycleTypeEnum         } from '../models/SubscriptionPlan';
 import { SubscriptionPlanInterest } from '../models/SubscriptionPlanInterest';
 import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task          , TaskPriorityEnum    , TaskTypeEnum   } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { URI } from '../models/URI';
+import { URL } from '../models/URL';
 import { UpdateAffiliateRequest   , UpdateAffiliateRequestStatusEnum   } from '../models/UpdateAffiliateRequest';
 import { UpdateAutomationCategoryRequest } from '../models/UpdateAutomationCategoryRequest';
 import { UpdateBusinessProfileRequest } from '../models/UpdateBusinessProfileRequest';
@@ -604,7 +614,6 @@ import { UpdateCustomFieldMetaDataRequest } from '../models/UpdateCustomFieldMet
 import { UpdateDealNoteRequest } from '../models/UpdateDealNoteRequest';
 import { UpdateDefaultCommissionProgramRequest } from '../models/UpdateDefaultCommissionProgramRequest';
 import { UpdateEmailAddress } from '../models/UpdateEmailAddress';
-import { UpdateFileRequest } from '../models/UpdateFileRequest';
 import { UpdateNoteRequest } from '../models/UpdateNoteRequest';
 import { UpdateNoteResponse } from '../models/UpdateNoteResponse';
 import { UpdateOpportunityRequestV2 } from '../models/UpdateOpportunityRequestV2';
@@ -621,6 +630,7 @@ import { UpdateProductInventoryRequest , UpdateProductInventoryRequestTypeEnum  
 import { UpdateShippingDiscountRequest  , UpdateShippingDiscountRequestDiscountTypeEnum     } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
 import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
+import { UpdateSubscriptionPlanRequest  , UpdateSubscriptionPlanRequestCycleTypeEnum       } from '../models/UpdateSubscriptionPlanRequest';
 import { UpdateSubscriptionRequest    , UpdateSubscriptionRequestBillingCycleEnum                  } from '../models/UpdateSubscriptionRequest';
 import { UpdateTagCategoryResponse } from '../models/UpdateTagCategoryResponse';
 import { UpdateTagResponse } from '../models/UpdateTagResponse';
@@ -646,13 +656,14 @@ let enumsMap: Set<string> = new Set<string>([
     "CreateAffiliateRequestStatusEnum",
     "CreateCustomFieldRequestFieldTypeEnum",
     "CreateEmailSentRequestOriginalProviderEnum",
-    "CreateFileRequestFileAssociationEnum",
+    "CreateLeadSourceRequestStatusEnum",
     "CreateOrderTotalDiscountRequestDiscountStrategyEnum",
     "CreateOrderTotalDiscountRequestDiscountTypeEnum",
     "CreateProductDiscountRequestDiscountTypeEnum",
     "CreateReferralRequestReferralTypeEnum",
     "CreateRestOrderItemRequestProductTypeEnum",
     "CreateShippingDiscountRequestDiscountTypeEnum",
+    "CreateSubscriptionPlanRequestCycleTypeEnum",
     "CreateTaskRequestPriorityEnum",
     "CreateTaskRequestTypeEnum",
     "CreateUpdateContactRequestSourceTypeEnum",
@@ -674,6 +685,7 @@ let enumsMap: Set<string> = new Set<string>([
     "GoalTypeEnum",
     "InvoiceOrderPaymentPayStatusEnum",
     "ItemTypeEnum",
+    "LeadSourceStatusEnum",
     "ListRestMerchantAccountResponseTypeEnum",
     "NoteTemplateActionTypeEnum",
     "OrderItemProductStatusEnum",
@@ -693,6 +705,7 @@ let enumsMap: Set<string> = new Set<string>([
     "RestV2OrderItemTypeEnum",
     "ShippingDiscountDiscountTypeEnum",
     "SocialAccountTypeEnum",
+    "SubscriptionPlanCycleTypeEnum",
     "TaskPriorityEnum",
     "TaskTypeEnum",
     "UpdateAffiliateRequestStatusEnum",
@@ -702,6 +715,7 @@ let enumsMap: Set<string> = new Set<string>([
     "UpdateOrderTotalDiscountRequestDiscountTypeEnum",
     "UpdateProductInventoryRequestTypeEnum",
     "UpdateShippingDiscountRequestDiscountTypeEnum",
+    "UpdateSubscriptionPlanRequestCycleTypeEnum",
     "UpdateSubscriptionRequestBillingCycleEnum",
     "UpdateTaskResponsePriorityEnum",
     "UpdateTaskResponseTypeEnum",
@@ -746,6 +760,7 @@ let typeMap: {[index: string]: any} = {
     "ApplicationFeaturesEnabled": ApplicationFeaturesEnabled,
     "ApplyRemoveTagRequest": ApplyRemoveTagRequest,
     "ApplyTagsResponse": ApplyTagsResponse,
+    "AssignProductCategoriesRequest": AssignProductCategoriesRequest,
     "AssignProductsRequest": AssignProductsRequest,
     "Automation": Automation,
     "AutomationCategory": AutomationCategory,
@@ -788,7 +803,6 @@ let typeMap: {[index: string]: any} = {
     "CreateDefaultCommissionProgramRequest": CreateDefaultCommissionProgramRequest,
     "CreateEmailSentRequest": CreateEmailSentRequest,
     "CreateEmailsSentRequest": CreateEmailsSentRequest,
-    "CreateFileRequest": CreateFileRequest,
     "CreateFunnelIntegrationRequest": CreateFunnelIntegrationRequest,
     "CreateFunnelIntegrationTriggerEvents": CreateFunnelIntegrationTriggerEvents,
     "CreateLeadSourceRequest": CreateLeadSourceRequest,
@@ -811,6 +825,7 @@ let typeMap: {[index: string]: any} = {
     "CreateShippingDiscountRequest": CreateShippingDiscountRequest,
     "CreateStageRequest": CreateStageRequest,
     "CreateSubscriptionCommissionProgramRequest": CreateSubscriptionCommissionProgramRequest,
+    "CreateSubscriptionPlanRequest": CreateSubscriptionPlanRequest,
     "CreateSubscriptionV2": CreateSubscriptionV2,
     "CreateTaskRequest": CreateTaskRequest,
     "CreateUpdateContactRequest": CreateUpdateContactRequest,
@@ -911,6 +926,7 @@ let typeMap: {[index: string]: any} = {
     "ListTasksResponse": ListTasksResponse,
     "ListUserResponse": ListUserResponse,
     "ModelError": ModelError,
+    "ModelFile": ModelFile,
     "Money": Money,
     "Note": Note,
     "NoteTemplate": NoteTemplate,
@@ -952,6 +968,7 @@ let typeMap: {[index: string]: any} = {
     "ReportEntryRecord": ReportEntryRecord,
     "ReportEntryValue": ReportEntryValue,
     "ReportExecutionResult": ReportExecutionResult,
+    "Resource": Resource,
     "RestAffiliate": RestAffiliate,
     "RestCreateOrderRequest": RestCreateOrderRequest,
     "RestEmailAddress": RestEmailAddress,
@@ -989,6 +1006,8 @@ let typeMap: {[index: string]: any} = {
     "TaggedCompany": TaggedCompany,
     "Task": Task,
     "Throwable": Throwable,
+    "URI": URI,
+    "URL": URL,
     "UpdateAffiliateRequest": UpdateAffiliateRequest,
     "UpdateAutomationCategoryRequest": UpdateAutomationCategoryRequest,
     "UpdateBusinessProfileRequest": UpdateBusinessProfileRequest,
@@ -999,7 +1018,6 @@ let typeMap: {[index: string]: any} = {
     "UpdateDealNoteRequest": UpdateDealNoteRequest,
     "UpdateDefaultCommissionProgramRequest": UpdateDefaultCommissionProgramRequest,
     "UpdateEmailAddress": UpdateEmailAddress,
-    "UpdateFileRequest": UpdateFileRequest,
     "UpdateNoteRequest": UpdateNoteRequest,
     "UpdateNoteResponse": UpdateNoteResponse,
     "UpdateOpportunityRequestV2": UpdateOpportunityRequestV2,
@@ -1016,6 +1034,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateShippingDiscountRequest": UpdateShippingDiscountRequest,
     "UpdateStageRequest": UpdateStageRequest,
     "UpdateSubscriptionCommissionProgramRequest": UpdateSubscriptionCommissionProgramRequest,
+    "UpdateSubscriptionPlanRequest": UpdateSubscriptionPlanRequest,
     "UpdateSubscriptionRequest": UpdateSubscriptionRequest,
     "UpdateTagCategoryResponse": UpdateTagCategoryResponse,
     "UpdateTagResponse": UpdateTagResponse,

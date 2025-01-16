@@ -12,7 +12,6 @@ from keap_sdk_core_client.api.deals_api import DealsApi
 from keap_sdk_core_client.api.email_api import EmailApi
 from keap_sdk_core_client.api.email_address_api import EmailAddressApi
 from keap_sdk_core_client.api.note_api import NoteApi
-from keap_sdk_core_client.api.orders_api import OrdersApi
 from keap_sdk_core_client.api.payment_method_config_api import PaymentMethodConfigApi
 from keap_sdk_core_client.api.pipelines_api import PipelinesApi
 from keap_sdk_core_client.api.reporting_api import ReportingApi

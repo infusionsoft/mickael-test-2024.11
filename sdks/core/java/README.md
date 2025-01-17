@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.764128
+- API version: 2.70.0.767807-hf-202501161156
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.88</version>
+  <version>0.0.89</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.88"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.89"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.88.jar`
+- `target/core-service-core-java-sdk-0.0.89.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

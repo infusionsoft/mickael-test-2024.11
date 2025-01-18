@@ -25,7 +25,7 @@ import UpdatePipelineRequest from '../model/UpdatePipelineRequest';
 /**
 * Pipelines service.
 * @module com.keap.sdk.core/api/PipelinesApi
-* @version 0.0.89
+* @version 0.0.90
 */
 export default class PipelinesApi {
 

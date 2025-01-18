@@ -17,7 +17,7 @@ import BusinessProfileAddressRequest from './BusinessProfileAddressRequest';
 /**
  * The UpdateBusinessProfileRequest model module.
  * @module com.keap.sdk.core/model/UpdateBusinessProfileRequest
- * @version 0.0.89
+ * @version 0.0.90
  */
 class UpdateBusinessProfileRequest {
     /**

@@ -17,7 +17,7 @@ import DealStatus from './DealStatus';
 /**
  * The PipelineOutcomeLabel model module.
  * @module com.keap.sdk.core/model/PipelineOutcomeLabel
- * @version 0.0.89
+ * @version 0.0.90
  */
 class PipelineOutcomeLabel {
     /**

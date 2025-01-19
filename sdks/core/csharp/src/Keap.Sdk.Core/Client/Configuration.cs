@@ -35,7 +35,7 @@ namespace Keap.Sdk.Core.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.0.90";
+        public const string Version = "0.0.91";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -119,7 +119,7 @@ namespace Keap.Sdk.Core.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.90");
+            UserAgent = WebUtility.UrlEncode("core-service-core-csharp/0.0.91");
             BasePath = "https://api.keap.com/crm/rest";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -572,7 +572,7 @@ namespace Keap.Sdk.Core.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.70.0.767807-hf-202501161156\n";
-            report += "    SDK Package Version: 0.0.90\n";
+            report += "    SDK Package Version: 0.0.91\n";
 
             return report;
         }

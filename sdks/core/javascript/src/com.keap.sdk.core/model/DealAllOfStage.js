@@ -17,7 +17,7 @@ import Stage from './Stage';
 /**
  * The DealAllOfStage model module.
  * @module com.keap.sdk.core/model/DealAllOfStage
- * @version 0.0.90
+ * @version 0.0.91
  */
 class DealAllOfStage {
     /**

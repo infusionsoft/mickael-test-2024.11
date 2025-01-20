@@ -17,7 +17,7 @@ import CurrencyValue from './CurrencyValue';
 /**
  * The SubscriptionPlanInterest model module.
  * @module com.keap.sdk.core/model/SubscriptionPlanInterest
- * @version 0.0.91
+ * @version 0.0.92
  */
 class SubscriptionPlanInterest {
     /**

@@ -21,7 +21,7 @@ import DealContact from './DealContact';
 /**
  * The Deal model module.
  * @module com.keap.sdk.core/model/Deal
- * @version 0.0.91
+ * @version 0.0.92
  */
 class Deal {
     /**

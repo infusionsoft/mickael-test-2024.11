@@ -17,7 +17,7 @@ import RestV2Order from './RestV2Order';
 /**
  * The ListOrders model module.
  * @module com.keap.sdk.core/model/ListOrders
- * @version 0.0.94
+ * @version 0.0.95
  */
 class ListOrders {
     /**

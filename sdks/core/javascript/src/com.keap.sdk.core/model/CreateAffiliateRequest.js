@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAffiliateRequest model module.
  * @module com.keap.sdk.core/model/CreateAffiliateRequest
- * @version 0.0.94
+ * @version 0.0.95
  */
 class CreateAffiliateRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AssignProductCategoriesRequest model module.
  * @module com.keap.sdk.core/model/AssignProductCategoriesRequest
- * @version 0.0.94
+ * @version 0.0.95
  */
 class AssignProductCategoriesRequest {
     /**

@@ -18,7 +18,7 @@ import CreateRestOrderItemRequest from './CreateRestOrderItemRequest';
 /**
  * The RestCreateOrderRequest model module.
  * @module com.keap.sdk.core/model/RestCreateOrderRequest
- * @version 0.0.94
+ * @version 0.0.95
  */
 class RestCreateOrderRequest {
     /**

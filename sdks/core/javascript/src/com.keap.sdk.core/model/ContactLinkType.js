@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ContactLinkType model module.
  * @module com.keap.sdk.core/model/ContactLinkType
- * @version 0.0.94
+ * @version 0.0.95
  */
 class ContactLinkType {
     /**

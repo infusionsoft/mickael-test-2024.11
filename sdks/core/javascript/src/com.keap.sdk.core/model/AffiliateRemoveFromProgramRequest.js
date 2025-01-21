@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateRemoveFromProgramRequest model module.
  * @module com.keap.sdk.core/model/AffiliateRemoveFromProgramRequest
- * @version 0.0.93
+ * @version 0.0.94
  */
 class AffiliateRemoveFromProgramRequest {
     /**

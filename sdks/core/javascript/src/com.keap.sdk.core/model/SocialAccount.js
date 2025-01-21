@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SocialAccount model module.
  * @module com.keap.sdk.core/model/SocialAccount
- * @version 0.0.93
+ * @version 0.0.94
  */
 class SocialAccount {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LandingPage model module.
  * @module com.keap.sdk.core/model/LandingPage
- * @version 0.0.93
+ * @version 0.0.94
  */
 class LandingPage {
     /**

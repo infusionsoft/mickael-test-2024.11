@@ -17,7 +17,7 @@ import ProductCategory from './ProductCategory';
 /**
  * The ListProductCategoriesResponse model module.
  * @module com.keap.sdk.core/model/ListProductCategoriesResponse
- * @version 0.0.93
+ * @version 0.0.94
  */
 class ListProductCategoriesResponse {
     /**

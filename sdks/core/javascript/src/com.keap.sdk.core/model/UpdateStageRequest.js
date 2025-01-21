@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateStageRequest model module.
  * @module com.keap.sdk.core/model/UpdateStageRequest
- * @version 0.0.92
+ * @version 0.0.93
  */
 class UpdateStageRequest {
     /**

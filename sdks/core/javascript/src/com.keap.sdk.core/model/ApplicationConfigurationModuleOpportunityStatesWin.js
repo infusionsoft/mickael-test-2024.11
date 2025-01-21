@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleOpportunityStatesWin model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleOpportunityStatesWin
- * @version 0.0.92
+ * @version 0.0.93
  */
 class ApplicationConfigurationModuleOpportunityStatesWin {
     /**

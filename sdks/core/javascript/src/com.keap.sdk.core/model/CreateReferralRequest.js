@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateReferralRequest model module.
  * @module com.keap.sdk.core/model/CreateReferralRequest
- * @version 0.0.92
+ * @version 0.0.93
  */
 class CreateReferralRequest {
     /**

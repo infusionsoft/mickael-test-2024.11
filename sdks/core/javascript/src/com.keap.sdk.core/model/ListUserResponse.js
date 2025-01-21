@@ -17,7 +17,7 @@ import User from './User';
 /**
  * The ListUserResponse model module.
  * @module com.keap.sdk.core/model/ListUserResponse
- * @version 0.0.92
+ * @version 0.0.93
  */
 class ListUserResponse {
     /**

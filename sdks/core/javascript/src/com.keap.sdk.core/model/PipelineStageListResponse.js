@@ -18,7 +18,7 @@ import Stage from './Stage';
 /**
  * The PipelineStageListResponse model module.
  * @module com.keap.sdk.core/model/PipelineStageListResponse
- * @version 0.0.92
+ * @version 0.0.93
  */
 class PipelineStageListResponse {
     /**

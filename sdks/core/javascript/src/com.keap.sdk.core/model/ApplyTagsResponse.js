@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplyTagsResponse model module.
  * @module com.keap.sdk.core/model/ApplyTagsResponse
- * @version 0.0.92
+ * @version 0.0.93
  */
 class ApplyTagsResponse {
     /**

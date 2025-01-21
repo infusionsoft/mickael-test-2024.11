@@ -19,7 +19,7 @@ import ApplicationConfigurationModuleOpportunityStatesWin from './ApplicationCon
 /**
  * The ApplicationConfigurationModuleOpportunityStates model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleOpportunityStates
- * @version 0.0.92
+ * @version 0.0.93
  */
 class ApplicationConfigurationModuleOpportunityStates {
     /**

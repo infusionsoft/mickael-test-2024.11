@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdatePipelineRequest model module.
  * @module com.keap.sdk.core/model/UpdatePipelineRequest
- * @version 0.0.92
+ * @version 0.0.93
  */
 class UpdatePipelineRequest {
     /**

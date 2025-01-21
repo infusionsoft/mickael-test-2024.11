@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailAddressRequest model module.
  * @module com.keap.sdk.core/model/EmailAddressRequest
- * @version 0.0.92
+ * @version 0.0.93
  */
 class EmailAddressRequest {
     /**

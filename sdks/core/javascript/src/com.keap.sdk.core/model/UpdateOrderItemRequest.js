@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateOrderItemRequest model module.
  * @module com.keap.sdk.core/model/UpdateOrderItemRequest
- * @version 0.0.92
+ * @version 0.0.93
  */
 class UpdateOrderItemRequest {
     /**

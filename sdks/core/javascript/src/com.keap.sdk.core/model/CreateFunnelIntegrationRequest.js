@@ -17,7 +17,7 @@ import FunnelIntegrationAction from './FunnelIntegrationAction';
 /**
  * The CreateFunnelIntegrationRequest model module.
  * @module com.keap.sdk.core/model/CreateFunnelIntegrationRequest
- * @version 0.0.95
+ * @version 0.0.96
  */
 class CreateFunnelIntegrationRequest {
     /**

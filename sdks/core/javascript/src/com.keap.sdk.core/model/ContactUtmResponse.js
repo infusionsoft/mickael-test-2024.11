@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ContactUtmResponse model module.
  * @module com.keap.sdk.core/model/ContactUtmResponse
- * @version 0.0.95
+ * @version 0.0.96
  */
 class ContactUtmResponse {
     /**

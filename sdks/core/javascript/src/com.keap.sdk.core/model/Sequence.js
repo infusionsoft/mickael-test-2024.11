@@ -18,7 +18,7 @@ import SequencePath from './SequencePath';
 /**
  * The Sequence model module.
  * @module com.keap.sdk.core/model/Sequence
- * @version 0.0.95
+ * @version 0.0.96
  */
 class Sequence {
     /**

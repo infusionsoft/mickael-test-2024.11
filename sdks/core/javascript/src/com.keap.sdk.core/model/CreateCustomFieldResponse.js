@@ -17,7 +17,7 @@ import CustomFieldMetaData from './CustomFieldMetaData';
 /**
  * The CreateCustomFieldResponse model module.
  * @module com.keap.sdk.core/model/CreateCustomFieldResponse
- * @version 0.0.95
+ * @version 0.0.96
  */
 class CreateCustomFieldResponse {
     /**

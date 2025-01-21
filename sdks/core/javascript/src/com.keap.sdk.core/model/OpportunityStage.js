@@ -17,7 +17,7 @@ import StageDetails from './StageDetails';
 /**
  * The OpportunityStage model module.
  * @module com.keap.sdk.core/model/OpportunityStage
- * @version 0.0.95
+ * @version 0.0.96
  */
 class OpportunityStage {
     /**

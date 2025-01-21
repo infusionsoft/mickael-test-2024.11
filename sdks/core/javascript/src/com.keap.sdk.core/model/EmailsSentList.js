@@ -18,7 +18,7 @@ import EmailSentWithContent from './EmailSentWithContent';
 /**
  * The EmailsSentList model module.
  * @module com.keap.sdk.core/model/EmailsSentList
- * @version 0.0.95
+ * @version 0.0.96
  */
 class EmailsSentList {
     /**

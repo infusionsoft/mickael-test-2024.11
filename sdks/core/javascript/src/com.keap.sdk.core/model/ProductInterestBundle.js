@@ -18,7 +18,7 @@ import SubscriptionPlanInterest from './SubscriptionPlanInterest';
 /**
  * The ProductInterestBundle model module.
  * @module com.keap.sdk.core/model/ProductInterestBundle
- * @version 0.0.95
+ * @version 0.0.96
  */
 class ProductInterestBundle {
     /**

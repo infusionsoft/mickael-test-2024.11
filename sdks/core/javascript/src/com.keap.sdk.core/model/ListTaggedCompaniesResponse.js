@@ -17,7 +17,7 @@ import TaggedCompany from './TaggedCompany';
 /**
  * The ListTaggedCompaniesResponse model module.
  * @module com.keap.sdk.core/model/ListTaggedCompaniesResponse
- * @version 0.0.95
+ * @version 0.0.96
  */
 class ListTaggedCompaniesResponse {
     /**

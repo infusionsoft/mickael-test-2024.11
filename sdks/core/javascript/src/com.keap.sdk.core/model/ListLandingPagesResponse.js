@@ -17,7 +17,7 @@ import LandingPage from './LandingPage';
 /**
  * The ListLandingPagesResponse model module.
  * @module com.keap.sdk.core/model/ListLandingPagesResponse
- * @version 0.0.95
+ * @version 0.0.96
  */
 class ListLandingPagesResponse {
     /**

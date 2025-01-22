@@ -19,7 +19,7 @@ import SubscriptionCommission from './SubscriptionCommission';
 /**
  * The AffiliateProgramV2 model module.
  * @module com.keap.sdk.core/model/AffiliateProgramV2
- * @version 0.0.98
+ * @version 0.0.99
  */
 class AffiliateProgramV2 {
     /**

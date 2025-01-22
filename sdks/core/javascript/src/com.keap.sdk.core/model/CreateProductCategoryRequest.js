@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateProductCategoryRequest model module.
  * @module com.keap.sdk.core/model/CreateProductCategoryRequest
- * @version 0.0.98
+ * @version 0.0.99
  */
 class CreateProductCategoryRequest {
     /**

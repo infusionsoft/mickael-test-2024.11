@@ -17,7 +17,7 @@ import InvoiceOrderPayment from './InvoiceOrderPayment';
 /**
  * The ListOrderPaymentsResponse model module.
  * @module com.keap.sdk.core/model/ListOrderPaymentsResponse
- * @version 0.0.98
+ * @version 0.0.99
  */
 class ListOrderPaymentsResponse {
     /**

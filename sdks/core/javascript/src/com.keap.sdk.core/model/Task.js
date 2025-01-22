@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Task model module.
  * @module com.keap.sdk.core/model/Task
- * @version 0.0.98
+ * @version 0.0.99
  */
 class Task {
     /**

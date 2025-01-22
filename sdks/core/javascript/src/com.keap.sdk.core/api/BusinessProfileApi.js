@@ -20,7 +20,7 @@ import UpdateBusinessProfileRequest from '../model/UpdateBusinessProfileRequest'
 /**
 * BusinessProfile service.
 * @module com.keap.sdk.core/api/BusinessProfileApi
-* @version 0.0.96
+* @version 0.0.97
 */
 export default class BusinessProfileApi {
 

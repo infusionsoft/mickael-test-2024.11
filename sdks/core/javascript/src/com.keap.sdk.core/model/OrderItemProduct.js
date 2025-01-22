@@ -18,7 +18,7 @@ import RestSubscriptionPlan from './RestSubscriptionPlan';
 /**
  * The OrderItemProduct model module.
  * @module com.keap.sdk.core/model/OrderItemProduct
- * @version 0.0.96
+ * @version 0.0.97
  */
 class OrderItemProduct {
     /**

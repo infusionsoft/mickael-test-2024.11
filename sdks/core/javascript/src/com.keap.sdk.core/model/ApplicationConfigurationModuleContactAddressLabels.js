@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplicationConfigurationModuleContactAddressLabels model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleContactAddressLabels
- * @version 0.0.96
+ * @version 0.0.97
  */
 class ApplicationConfigurationModuleContactAddressLabels {
     /**

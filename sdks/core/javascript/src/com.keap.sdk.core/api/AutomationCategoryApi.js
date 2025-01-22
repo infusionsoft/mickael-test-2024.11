@@ -22,7 +22,7 @@ import SaveAutomationCategoryRequest from '../model/SaveAutomationCategoryReques
 /**
 * AutomationCategory service.
 * @module com.keap.sdk.core/api/AutomationCategoryApi
-* @version 0.0.96
+* @version 0.0.97
 */
 export default class AutomationCategoryApi {
 

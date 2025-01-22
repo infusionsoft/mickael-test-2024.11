@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FileMetadata model module.
  * @module com.keap.sdk.core/model/FileMetadata
- * @version 0.0.96
+ * @version 0.0.97
  */
 class FileMetadata {
     /**

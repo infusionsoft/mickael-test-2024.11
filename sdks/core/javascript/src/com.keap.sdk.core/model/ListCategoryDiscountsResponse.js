@@ -17,7 +17,7 @@ import CategoryDiscount from './CategoryDiscount';
 /**
  * The ListCategoryDiscountsResponse model module.
  * @module com.keap.sdk.core/model/ListCategoryDiscountsResponse
- * @version 0.0.97
+ * @version 0.0.98
  */
 class ListCategoryDiscountsResponse {
     /**

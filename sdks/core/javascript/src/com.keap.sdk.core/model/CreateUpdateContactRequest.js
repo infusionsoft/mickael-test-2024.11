@@ -25,7 +25,7 @@ import SocialAccount from './SocialAccount';
 /**
  * The CreateUpdateContactRequest model module.
  * @module com.keap.sdk.core/model/CreateUpdateContactRequest
- * @version 0.0.97
+ * @version 0.0.98
  */
 class CreateUpdateContactRequest {
     /**

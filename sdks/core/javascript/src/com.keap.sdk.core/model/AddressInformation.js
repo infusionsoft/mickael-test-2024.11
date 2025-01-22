@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddressInformation model module.
  * @module com.keap.sdk.core/model/AddressInformation
- * @version 0.0.97
+ * @version 0.0.98
  */
 class AddressInformation {
     /**

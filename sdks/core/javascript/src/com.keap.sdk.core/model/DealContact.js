@@ -17,7 +17,7 @@ import BaseModel from './BaseModel';
 /**
  * The DealContact model module.
  * @module com.keap.sdk.core/model/DealContact
- * @version 0.0.104
+ * @version 0.0.105
  */
 class DealContact {
     /**

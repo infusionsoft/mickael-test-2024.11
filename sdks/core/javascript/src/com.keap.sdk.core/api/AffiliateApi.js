@@ -23,7 +23,7 @@ import UpdateCommissionProgramRequest from '../model/UpdateCommissionProgramRequ
 /**
 * Affiliate service.
 * @module com.keap.sdk.core/api/AffiliateApi
-* @version 0.0.104
+* @version 0.0.105
 */
 export default class AffiliateApi {
 

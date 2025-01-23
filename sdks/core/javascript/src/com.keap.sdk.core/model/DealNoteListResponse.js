@@ -18,7 +18,7 @@ import DealNote from './DealNote';
 /**
  * The DealNoteListResponse model module.
  * @module com.keap.sdk.core/model/DealNoteListResponse
- * @version 0.0.104
+ * @version 0.0.105
  */
 class DealNoteListResponse {
     /**

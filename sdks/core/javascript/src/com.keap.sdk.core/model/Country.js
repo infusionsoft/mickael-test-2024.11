@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Country model module.
  * @module com.keap.sdk.core/model/Country
- * @version 0.0.102
+ * @version 0.0.103
  */
 class Country {
     /**

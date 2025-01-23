@@ -17,7 +17,7 @@ import NoteTemplate from './NoteTemplate';
 /**
  * The ListNoteTemplateResponse model module.
  * @module com.keap.sdk.core/model/ListNoteTemplateResponse
- * @version 0.0.102
+ * @version 0.0.103
  */
 class ListNoteTemplateResponse {
     /**

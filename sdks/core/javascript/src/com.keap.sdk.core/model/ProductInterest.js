@@ -17,7 +17,7 @@ import CurrencyValue from './CurrencyValue';
 /**
  * The ProductInterest model module.
  * @module com.keap.sdk.core/model/ProductInterest
- * @version 0.0.102
+ * @version 0.0.103
  */
 class ProductInterest {
     /**

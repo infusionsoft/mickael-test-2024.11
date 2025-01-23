@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RestSubscriptionPlan model module.
  * @module com.keap.sdk.core/model/RestSubscriptionPlan
- * @version 0.0.106
+ * @version 0.0.107
  */
 class RestSubscriptionPlan {
     /**

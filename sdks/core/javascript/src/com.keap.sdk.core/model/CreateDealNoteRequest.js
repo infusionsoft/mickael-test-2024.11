@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateDealNoteRequest model module.
  * @module com.keap.sdk.core/model/CreateDealNoteRequest
- * @version 0.0.106
+ * @version 0.0.107
  */
 class CreateDealNoteRequest {
     /**

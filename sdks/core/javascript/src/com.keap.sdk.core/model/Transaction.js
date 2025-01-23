@@ -17,7 +17,7 @@ import CurrencyValue from './CurrencyValue';
 /**
  * The Transaction model module.
  * @module com.keap.sdk.core/model/Transaction
- * @version 0.0.106
+ * @version 0.0.107
  */
 class Transaction {
     /**

@@ -225,7 +225,7 @@ No authorization required
 
 List Automations Ids
 
-Lists all automations ids based on the request parameters.
+Retrieves a list of automations IDs
 
 ### Example
 
@@ -302,7 +302,7 @@ No authorization required
 
 List Automations
 
-Lists all automations based on the request parameters.
+Retrieves a list of automations
 
 ### Example
 

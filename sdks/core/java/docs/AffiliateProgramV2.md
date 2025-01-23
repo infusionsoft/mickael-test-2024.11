@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**affiliateId** | **String** | The affiliate_Id for Affiliate commission program |  [optional] |
-|**createTime** | **ZonedDateTime** | The created time of affiliate commission program |  [optional] |
+|**createTime** | **String** | The created time of affiliate commission program |  [optional] |
 |**defaultCommission** | [**DefaultCommission**](DefaultCommission.md) |  |  [optional] |
 |**id** | **String** | The affiliate commission program name |  [optional] |
 |**name** | **String** | The affiliate commission program name |  [optional] |

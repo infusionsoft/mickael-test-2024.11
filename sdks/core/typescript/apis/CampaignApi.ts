@@ -111,7 +111,7 @@ export class CampaignApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Retrieves all campaigns for the authenticated user
+     * Retrieves a list of campaigns for the authenticated user
      * List Campaigns
      * @param filter Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the campaign name.   - &#x60;filter&#x3D;name%3D%3DSpring Campaign&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param orderBy Attribute and direction to order items.   One of the following fields:   - name   - publisheddate   - id   - completedContactCount   - activeContacts   - datecreated   - lastupdated   One of the following directions:   - asc   - desc

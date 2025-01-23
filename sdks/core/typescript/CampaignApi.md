@@ -134,7 +134,7 @@ No authorization required
 # **listCampaignsUsingGET1**
 > ListCampaignsResponse listCampaignsUsingGET1()
 
-Retrieves all campaigns for the authenticated user
+Retrieves a list of campaigns for the authenticated user
 
 ### Example
 

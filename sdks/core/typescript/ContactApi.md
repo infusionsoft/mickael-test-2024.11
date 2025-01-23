@@ -21,7 +21,7 @@ Method | HTTP request | Description
 # **createContactLinkTypeUsingPOST**
 > ContactLinkType createContactLinkTypeUsingPOST(createContactLinkTypeRequest)
 
-Creates a new type of Contact Link.
+Creates a new type of Contact Link
 
 ### Example
 
@@ -150,6 +150,7 @@ const request: ContactApiCreateContactUsingPOST1Request = {
         extension: "extension_example",
         field: "PHONE_NUMBER_FIELD_UNSPECIFIED",
         number: "number_example",
+        numberE164: "numberE164_example",
         type: "type_example",
       },
     ],
@@ -217,7 +218,7 @@ No authorization required
 # **deleteContactUsingDELETE1**
 > void deleteContactUsingDELETE1()
 
-Deletes the specified Contact.
+Deletes the specified Contact
 
 ### Example
 
@@ -825,6 +826,7 @@ const request: ContactApiUpdateContactUsingPATCHRequest = {
         extension: "extension_example",
         field: "PHONE_NUMBER_FIELD_UNSPECIFIED",
         number: "number_example",
+        numberE164: "numberE164_example",
         type: "type_example",
       },
     ],

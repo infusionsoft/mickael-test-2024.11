@@ -7,27 +7,27 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**addresses** | [**List&lt;Address&gt;**](Address.md) | If an empty array is specified, all existing values will be removed. |  [optional] |
+|**addresses** | [**List&lt;Address&gt;**](Address.md) | Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed. |  [optional] |
 |**anniversaryDate** | **String** |  |  [optional] |
 |**birthDate** | **String** |  |  [optional] |
 |**company** | [**BasicCompany**](BasicCompany.md) |  |  [optional] |
 |**contactType** | **String** |  |  [optional] |
-|**customFields** | [**List&lt;CustomFieldValue&gt;**](CustomFieldValue.md) | If an empty array is specified, all existing values will be removed. |  [optional] |
-|**emailAddresses** | [**List&lt;EmailAddressRequest&gt;**](EmailAddressRequest.md) | If an empty array is specified, all existing values will be removed. |  [optional] |
+|**customFields** | [**List&lt;CustomFieldValue&gt;**](CustomFieldValue.md) | Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed. |  [optional] |
+|**emailAddresses** | [**List&lt;EmailAddressRequest&gt;**](EmailAddressRequest.md) | Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed. |  [optional] |
 |**familyName** | **String** |  |  [optional] |
-|**faxNumbers** | [**List&lt;FaxNumber&gt;**](FaxNumber.md) | If an empty array is specified, all existing values will be removed. |  [optional] |
+|**faxNumbers** | [**List&lt;FaxNumber&gt;**](FaxNumber.md) | Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed. |  [optional] |
 |**givenName** | **String** |  |  [optional] |
 |**jobTitle** | **String** |  |  [optional] |
 |**leadsourceId** | **String** |  |  [optional] |
 |**middleName** | **String** |  |  [optional] |
 |**origin** | [**OriginRequest**](OriginRequest.md) |  |  [optional] |
 |**ownerId** | **String** |  |  [optional] |
-|**phoneNumbers** | [**List&lt;PhoneNumber&gt;**](PhoneNumber.md) | If an empty array is specified, all existing values will be removed. |  [optional] |
+|**phoneNumbers** | [**List&lt;PhoneNumber&gt;**](PhoneNumber.md) | Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed. |  [optional] |
 |**preferredLocale** | **String** |  |  [optional] |
 |**preferredName** | **String** |  |  [optional] |
 |**prefix** | **String** |  |  [optional] |
 |**referralCode** | **String** |  |  [optional] |
-|**socialAccounts** | [**List&lt;SocialAccount&gt;**](SocialAccount.md) | If an empty array is specified, all existing values will be removed. |  [optional] |
+|**socialAccounts** | [**List&lt;SocialAccount&gt;**](SocialAccount.md) | Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed. |  [optional] |
 |**sourceType** | [**SourceTypeEnum**](#SourceTypeEnum) |  |  [optional] |
 |**spouseName** | **String** |  |  [optional] |
 |**suffix** | **String** |  |  [optional] |

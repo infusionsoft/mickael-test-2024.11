@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: Keap REST Core Service
-  version: 2.70.0.767807-hf-202501161156
+  version: 2.70.0.768375
   title: Keap REST API
   termsOfService: https://keap.com/legal
   contact:
@@ -90,6 +90,8 @@ tags:
   description: Rest Tag Controller
 - name: Task
   description: Rest Task Controller
+- name: Transactions
+  description: Rest Transaction Controller
 - name: Users
   description: Rest User Controller
 paths:
@@ -278,7 +280,7 @@ paths:
       tags:
       - AutomationCategory
       summary: List automation categories
-      description: Lists all automation categories based on the request parameters
+      description: Retrieves a list of automation categories
       operationId: listCategoriesUsingGET
       responses:
         '200':
@@ -423,7 +425,7 @@ paths:
       tags:
       - Automation
       summary: List Automations
-      description: Lists all automations based on the request parameters.
+      description: Retrieves a list of automations
       operationId: listAutomationsUsingGET
       parameters:
       - name: filter
@@ -573,7 +575,7 @@ paths:
       tags:
       - Automation
       summary: List Automations Ids
-      description: Lists all automations ids based on the request parameters.
+      description: Retrieves a list of automations IDs
       operationId: listAllAutomationIdsUsingGET
       parameters:
       - name: filter
@@ -830,7 +832,7 @@ paths:
       tags:
       - Campaign
       summary: List Campaigns
-      description: Retrieves all campaigns for the authenticated user
+      description: Retrieves a list of campaigns for the authenticated user
       operationId: listCampaignsUsingGET_1
       parameters:
       - name: filter
@@ -1476,7 +1478,7 @@ paths:
       tags:
       - Contact
       summary: Create a Contact Link type
-      description: Creates a new type of Contact Link.
+      description: Creates a new type of Contact Link
       operationId: createContactLinkTypeUsingPOST
       requestBody:
         content:
@@ -1592,7 +1594,7 @@ paths:
       tags:
       - Contact
       summary: Delete a Contact
-      description: Deletes the specified Contact.
+      description: Deletes the specified Contact
       operationId: deleteContactUsingDELETE_1
       parameters:
       - name: contact_id
@@ -3440,7 +3442,7 @@ paths:
       - Tags
       summary: List Tags
       description: |-
-        Retrieve a list of Tags defined in the application.
+        Retrieves a list of Tags defined in the application
         To search for `null` or empty fields use `filter==NONE`
       operationId: listTagsUsingGET_1
       parameters:
@@ -3539,7 +3541,7 @@ paths:
       - Tags
       summary: List Tag Categories
       description: |-
-        Retrieves the list of defined Tag Categories
+        Retrieves a list of defined Tag Categories
         To search for `null` or empty fields use `filter==NONE`
       operationId: listTagCategoriesUsingGET
       parameters:
@@ -3979,7 +3981,7 @@ paths:
       - Tags
       summary: List Tagged Contacts
       description: |-
-        Retrieve a list of Contacts with the specified Tag.
+        Retrieves a list of Contacts with the specified Tag
         To search for `null` or empty fields use `filter==NONE`
       operationId: listContactsWithTagIdUsingGET
       parameters:
@@ -4362,7 +4364,6 @@ components:
           description: The affiliate_Id for Affiliate commission program
         create_time:
           type: string
-          format: date-time
           example: '2019-08-24T14:15:22Z'
           description: The created time of affiliate commission program
         default_commission:
@@ -6082,8 +6083,8 @@ components:
       properties:
         addresses:
           type: array
-          description: If an empty array is specified, all existing values will be
-            removed.
+          description: Any address not listed here will be removed if it already exists.
+            If an empty array is specified, all existing values will be removed.
           items:
             $ref: '#/components/schemas/Address'
         anniversary_date:
@@ -6096,22 +6097,22 @@ components:
           type: string
         custom_fields:
           type: array
-          description: If an empty array is specified, all existing values will be
-            removed.
+          description: Any address not listed here will be removed if it already exists.
+            If an empty array is specified, all existing values will be removed.
           items:
             $ref: '#/components/schemas/CustomFieldValue'
         email_addresses:
           type: array
-          description: If an empty array is specified, all existing values will be
-            removed.
+          description: Any address not listed here will be removed if it already exists.
+            If an empty array is specified, all existing values will be removed.
           items:
             $ref: '#/components/schemas/EmailAddressRequest'
         family_name:
           type: string
         fax_numbers:
           type: array
-          description: If an empty array is specified, all existing values will be
-            removed.
+          description: Any address not listed here will be removed if it already exists.
+            If an empty array is specified, all existing values will be removed.
           items:
             $ref: '#/components/schemas/FaxNumber'
         given_name:
@@ -6128,8 +6129,8 @@ components:
           type: string
         phone_numbers:
           type: array
-          description: If an empty array is specified, all existing values will be
-            removed.
+          description: Any address not listed here will be removed if it already exists.
+            If an empty array is specified, all existing values will be removed.
           items:
             $ref: '#/components/schemas/PhoneNumber'
         preferred_locale:
@@ -6143,8 +6144,8 @@ components:
           type: string
         social_accounts:
           type: array
-          description: If an empty array is specified, all existing values will be
-            removed.
+          description: Any address not listed here will be removed if it already exists.
+            If an empty array is specified, all existing values will be removed.
           items:
             $ref: '#/components/schemas/SocialAccount'
         source_type:
@@ -7154,7 +7155,7 @@ components:
         name:
           type: string
       title: GetTagCategoryResponse
-    GetUserInfoResponse:
+    GetUserInfoResponseBase:
       type: object
       properties:
         email:
@@ -7164,8 +7165,7 @@ components:
         given_name:
           type: string
         id:
-          type: integer
-          format: int64
+          type: object
         is_admin:
           type: boolean
         keap_id:
@@ -7176,7 +7176,7 @@ components:
           type: string
         sub:
           type: string
-      title: GetUserInfoResponse
+      title: GetUserInfoResponseBase
     Goal:
       type: object
       properties:
@@ -7688,6 +7688,16 @@ components:
           items:
             $ref: '#/components/schemas/ProductCategory'
       title: ListProductCategoriesResponse
+    ListProductInterestBundleResponse:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+        product_interest_bundles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductInterestBundle'
+      title: ListProductInterestBundleResponse
     ListProductsResponse:
       type: object
       properties:
@@ -7790,7 +7800,7 @@ components:
         subscriptions:
           type: array
           items:
-            $ref: '#/components/schemas/RestSubscriptionPlan'
+            $ref: '#/components/schemas/SubscriptionPlan'
       title: ListSubscriptionPlansResponse
     ListSubscriptionsResponse:
       type: object
@@ -8172,6 +8182,8 @@ components:
           - PHONE4
           - PHONE5
         number:
+          type: string
+        number_e164:
           type: string
         type:
           type: string
@@ -8804,16 +8816,32 @@ components:
           type: boolean
         cycle:
           type: string
+          example: YEAR
+          description: The interval at which the customer is charged for the subscription.
+          enum:
+          - DAILY
+          - WEEKLY
+          - MONTHLY
+          - YEARLY
         frequency:
           type: integer
           format: int32
+          example: 2
+          description: Interval at which a customer receives a product or service
+            as part of a subscription plan.
         id:
           type: string
-        product_id:
-          type: string
+        number_of_cycles:
+          type: integer
+          format: int32
+        plan_price:
+          type: number
+          format: double
         subscription_plan_index:
           type: integer
           format: int32
+          example: 99
+          description: Subscription plan identifier.
         subscription_plan_name:
           type: string
       title: RestSubscriptionPlan
@@ -9523,6 +9551,52 @@ components:
           items:
             $ref: '#/components/schemas/Throwable'
       title: Throwable
+    Transaction:
+      type: object
+      properties:
+        contact_id:
+          type: string
+          example: 1
+          description: Reference to the contact the transaction was for.
+        id:
+          type: string
+          description: The unique identifier of the transaction.
+        is_live:
+          type: boolean
+          description: true if this is a live transaction, false if the transaction
+            is a test or sandbox transaction.
+        is_successful:
+          type: boolean
+          description: true if the transaction resulted in a success, false if the
+            transaction resulted in a failure or error.
+        order_id:
+          type: string
+          example: 1
+          description: Reference to the order this transaction was for
+        payment_gateway_id:
+          type: string
+          description: Reference to the payment processor to where the transaction
+            attempt was made.
+        payment_gateway_type:
+          type: string
+          description: 'The type of payment processor. Possible values are: PAYPAL,
+            STRIPE, KEAP_PAY, AUTHORIZE, EWAY, OTHER. For transactions that did got
+            go through a processor/gateway, value is MANUAL'
+        payment_id:
+          type: string
+          example: 1
+          description: Reference to the payment record that on successful transactions.
+            No reference if the transaction failed.
+        transaction_amount:
+          $ref: '#/components/schemas/CurrencyValue'
+        transaction_time:
+          type: string
+          description: ISO date-time of the transaction. e.g 2024-04-28 11:25:44
+        transaction_type:
+          type: string
+          description: 'The type of transaction. Possible values: CAPTURE, VOID, REFUND,
+            CREDIT, APPROVAL'
+      title: Transaction
     URI:
       type: object
       properties:
@@ -9731,6 +9805,8 @@ components:
       title: UpdateCompanyRequest
     UpdateCustomFieldMetaDataRequest:
       type: object
+      required:
+      - group_id
       properties:
         group_id:
           type: string
@@ -10029,6 +10105,16 @@ components:
         product_id:
           type: string
       title: UpdateProductCommissionProgramRequest
+    UpdateProductInterestBundleRequest:
+      type: object
+      properties:
+        description:
+          type: string
+          description: Product interest bundle description
+        name:
+          type: string
+          description: Product interest bundle name
+      title: UpdateProductInterestBundleRequest
     UpdateProductInventoryRequest:
       type: object
       properties:
@@ -10315,11 +10401,9 @@ components:
         given_name:
           type: string
         global_user_id:
-          type: integer
-          format: int64
+          type: string
         id:
-          type: integer
-          format: int64
+          type: string
         keap_id:
           type: string
         partner:
@@ -10335,10 +10419,10 @@ components:
         status:
           type: string
           enum:
-          - Active
-          - Invited
-          - Inactive
-          - NotAUser
+          - ACTIVE
+          - INVITED
+          - INACTIVE
+          - NOT_A_USER
         time_zone:
           type: string
         title:

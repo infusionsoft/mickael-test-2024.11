@@ -1,4 +1,4 @@
-# Keap.Sdk.Core.Model.GetUserInfoResponse
+# Keap.Sdk.Core.Model.GetUserInfoResponseBase
 
 ## Properties
 
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Email** | **string** |  | [optional] 
 **FamilyName** | **string** |  | [optional] 
 **GivenName** | **string** |  | [optional] 
-**Id** | **long** |  | [optional] 
+**Id** | **Object** |  | [optional] 
 **IsAdmin** | **bool** |  | [optional] 
 **KeapId** | **string** |  | [optional] 
 **MiddleName** | **string** |  | [optional] 

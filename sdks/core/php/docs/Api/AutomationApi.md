@@ -188,7 +188,7 @@ listAllAutomationIdsUsingGET($filter, $order_by, $page_size, $page_token, $stats
 
 List Automations Ids
 
-Lists all automations ids based on the request parameters.
+Retrieves a list of automations IDs
 
 ### Example
 
@@ -251,7 +251,7 @@ listAutomationsUsingGET($filter, $order_by, $page_size, $page_token, $stats): \C
 
 List Automations
 
-Lists all automations based on the request parameters.
+Retrieves a list of automations
 
 ### Example
 

@@ -476,7 +476,7 @@ listContactsWithTagIdUsingGET($tag_id, $filter, $order_by, $page_size, $page_tok
 
 List Tagged Contacts
 
-Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 
@@ -539,7 +539,7 @@ listTagCategoriesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Kea
 
 List Tag Categories
 
-Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 
@@ -600,7 +600,7 @@ listTagsUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Co
 
 List Tags
 
-Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 

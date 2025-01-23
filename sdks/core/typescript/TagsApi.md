@@ -496,7 +496,7 @@ No authorization required
 # **listContactsWithTagIdUsingGET**
 > ListTaggedContactsResponse listContactsWithTagIdUsingGET()
 
-Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 
@@ -564,7 +564,7 @@ No authorization required
 # **listTagCategoriesUsingGET**
 > ListTagCategoriesResponse listTagCategoriesUsingGET()
 
-Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 
@@ -629,7 +629,7 @@ No authorization required
 # **listTagsUsingGET1**
 > ListTagsResponse listTagsUsingGET1()
 
-Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 

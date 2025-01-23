@@ -776,7 +776,7 @@ No authorization required
 
 List Tagged Contacts
 
-Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 ```csharp
@@ -878,7 +878,7 @@ No authorization required
 
 List Tag Categories
 
-Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 ```csharp
@@ -978,7 +978,7 @@ No authorization required
 
 List Tags
 
-Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
 
 ### Example
 ```csharp

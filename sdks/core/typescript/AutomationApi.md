@@ -194,7 +194,7 @@ No authorization required
 # **listAllAutomationIdsUsingGET**
 > ListAutomationIdsResponse listAllAutomationIdsUsingGET()
 
-Lists all automations ids based on the request parameters.
+Retrieves a list of automations IDs
 
 ### Example
 
@@ -262,7 +262,7 @@ No authorization required
 # **listAutomationsUsingGET**
 > ListAutomationResponse listAutomationsUsingGET()
 
-Lists all automations based on the request parameters.
+Retrieves a list of automations
 
 ### Example
 

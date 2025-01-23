@@ -23,7 +23,7 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 
 Create a Contact Link type
 
-Creates a new type of Contact Link.
+Creates a new type of Contact Link
 
 ### Example
 ```csharp
@@ -209,7 +209,7 @@ No authorization required
 
 Delete a Contact
 
-Deletes the specified Contact.
+Deletes the specified Contact
 
 ### Example
 ```csharp

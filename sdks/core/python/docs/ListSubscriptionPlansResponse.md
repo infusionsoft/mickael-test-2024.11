@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next_page_token** | **str** |  | [optional] 
-**subscriptions** | [**List[RestSubscriptionPlan]**](RestSubscriptionPlan.md) |  | [optional] 
+**subscriptions** | [**List[SubscriptionPlan]**](SubscriptionPlan.md) |  | [optional] 
 
 ## Example
 

@@ -26,7 +26,7 @@ import { PaymentMethodList } from '../models/PaymentMethodList';
 export class ContactApiRequestFactory extends BaseAPIRequestFactory {
 
     /**
-     * Creates a new type of Contact Link.
+     * Creates a new type of Contact Link
      * Create a Contact Link type
      * @param createContactLinkTypeRequest request
      */
@@ -105,7 +105,7 @@ export class ContactApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Deletes the specified Contact.
+     * Deletes the specified Contact
      * Delete a Contact
      * @param contactId contact_id
      */

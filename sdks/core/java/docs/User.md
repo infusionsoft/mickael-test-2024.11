@@ -16,8 +16,8 @@
 |**familyName** | **String** |  |  [optional] |
 |**faxNumbers** | [**List&lt;FaxNumber&gt;**](FaxNumber.md) |  |  [optional] |
 |**givenName** | **String** |  |  [optional] |
-|**globalUserId** | **Long** |  |  [optional] |
-|**id** | **Long** |  |  [optional] |
+|**globalUserId** | **String** |  |  [optional] |
+|**id** | **String** |  |  [optional] |
 |**keapId** | **String** |  |  [optional] |
 |**partner** | **Boolean** |  |  [optional] |
 |**phoneNumbers** | [**List&lt;PhoneNumber&gt;**](PhoneNumber.md) |  |  [optional] |
@@ -35,10 +35,10 @@
 
 | Name | Value |
 |---- | -----|
-| ACTIVE | &quot;Active&quot; |
-| INVITED | &quot;Invited&quot; |
-| INACTIVE | &quot;Inactive&quot; |
-| NOT_A_USER | &quot;NotAUser&quot; |
+| ACTIVE | &quot;ACTIVE&quot; |
+| INVITED | &quot;INVITED&quot; |
+| INACTIVE | &quot;INACTIVE&quot; |
+| NOT_A_USER | &quot;NOT_A_USER&quot; |
 | UNKNOWN_COULD_NOT_DESERIALIZE | &quot;unknown_default_open_api&quot; |
 
 

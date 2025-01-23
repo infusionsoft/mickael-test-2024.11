@@ -1,6 +1,6 @@
 
 
-# GetUserInfoResponse
+# GetUserInfoResponseBase
 
 
 ## Properties
@@ -10,7 +10,7 @@
 |**email** | **String** |  |  [optional] |
 |**familyName** | **String** |  |  [optional] |
 |**givenName** | **String** |  |  [optional] |
-|**id** | **Long** |  |  [optional] |
+|**id** | **Object** |  |  [optional] |
 |**isAdmin** | **Boolean** |  |  [optional] |
 |**keapId** | **String** |  |  [optional] |
 |**middleName** | **String** |  |  [optional] |

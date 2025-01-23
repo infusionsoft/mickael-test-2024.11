@@ -198,7 +198,7 @@ No authorization required
 
 List automation categories
 
-Lists all automation categories based on the request parameters
+Retrieves a list of automation categories
 
 ### Example
 ```csharp

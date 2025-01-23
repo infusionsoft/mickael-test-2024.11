@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.767807-hf-202501161156
+- API version: 2.70.0.768375
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.100</version>
+  <version>0.0.101</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.100"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.101"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.100.jar`
+- `target/core-service-core-java-sdk-0.0.101.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -446,7 +446,7 @@ Class | Method | HTTP request | Description
  - [GetNoteResponse](docs/GetNoteResponse.md)
  - [GetSettingsResponse](docs/GetSettingsResponse.md)
  - [GetTagCategoryResponse](docs/GetTagCategoryResponse.md)
- - [GetUserInfoResponse](docs/GetUserInfoResponse.md)
+ - [GetUserInfoResponseBase](docs/GetUserInfoResponseBase.md)
  - [Goal](docs/Goal.md)
  - [HistoricalCounts](docs/HistoricalCounts.md)
  - [InvoiceOrderPayment](docs/InvoiceOrderPayment.md)
@@ -484,6 +484,7 @@ Class | Method | HTTP request | Description
  - [ListOrderTotalDiscountsResponse](docs/ListOrderTotalDiscountsResponse.md)
  - [ListOrders](docs/ListOrders.md)
  - [ListProductCategoriesResponse](docs/ListProductCategoriesResponse.md)
+ - [ListProductInterestBundleResponse](docs/ListProductInterestBundleResponse.md)
  - [ListProductsResponse](docs/ListProductsResponse.md)
  - [ListProvincesResponse](docs/ListProvincesResponse.md)
  - [ListRestMerchantAccountResponse](docs/ListRestMerchantAccountResponse.md)
@@ -578,6 +579,7 @@ Class | Method | HTTP request | Description
  - [TaggedCompany](docs/TaggedCompany.md)
  - [Task](docs/Task.md)
  - [Throwable](docs/Throwable.md)
+ - [Transaction](docs/Transaction.md)
  - [URI](docs/URI.md)
  - [URL](docs/URL.md)
  - [UpdateAffiliateRequest](docs/UpdateAffiliateRequest.md)
@@ -602,6 +604,7 @@ Class | Method | HTTP request | Description
  - [UpdatePipelineRequest](docs/UpdatePipelineRequest.md)
  - [UpdateProductCategoryRequest](docs/UpdateProductCategoryRequest.md)
  - [UpdateProductCommissionProgramRequest](docs/UpdateProductCommissionProgramRequest.md)
+ - [UpdateProductInterestBundleRequest](docs/UpdateProductInterestBundleRequest.md)
  - [UpdateProductInventoryRequest](docs/UpdateProductInventoryRequest.md)
  - [UpdateShippingDiscountRequest](docs/UpdateShippingDiscountRequest.md)
  - [UpdateStageRequest](docs/UpdateStageRequest.md)

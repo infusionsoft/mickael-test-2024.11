@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AffiliateId** | **string** | The affiliate_Id for Affiliate commission program | [optional] 
-**CreateTime** | **DateTime** | The created time of affiliate commission program | [optional] 
+**CreateTime** | **string** | The created time of affiliate commission program | [optional] 
 **DefaultCommission** | [**DefaultCommission**](DefaultCommission.md) |  | [optional] 
 **Id** | **string** | The affiliate commission program name | [optional] 
 **Name** | **string** | The affiliate commission program name | [optional] 

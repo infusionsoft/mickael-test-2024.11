@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groupId** | **String** |  | [optional] 
+**groupId** | **String** |  | 
 **label** | **String** |  | [optional] 
 **options** | [**[CustomFieldOption]**](CustomFieldOption.md) |  | [optional] 
 

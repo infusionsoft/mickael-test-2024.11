@@ -307,7 +307,7 @@ No authorization required
 
 List Campaigns
 
-Retrieves all campaigns for the authenticated user
+Retrieves a list of campaigns for the authenticated user
 
 ### Example
 
@@ -383,7 +383,7 @@ No authorization required
 
 List Campaigns
 
-Retrieves all campaigns for the authenticated user
+Retrieves a list of campaigns for the authenticated user
 
 ### Example
 

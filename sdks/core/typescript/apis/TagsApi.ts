@@ -349,7 +349,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
      * List Tagged Contacts
      * @param tagId tag_id
      * @param filter Search filter to apply to results
@@ -409,7 +409,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
      * List Tag Categories
      * @param filter Search filter to apply to results
      * @param orderBy Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
@@ -461,7 +461,7 @@ export class TagsApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
      * List Tags
      * @param filter Search filter to apply to results
      * @param orderBy Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;

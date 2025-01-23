@@ -6,11 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **bool** |  | [optional] 
-**cycle** | **str** |  | [optional] 
-**frequency** | **int** |  | [optional] 
+**cycle** | **str** | The interval at which the customer is charged for the subscription. | [optional] 
+**frequency** | **int** | Interval at which a customer receives a product or service as part of a subscription plan. | [optional] 
 **id** | **str** |  | [optional] 
-**product_id** | **str** |  | [optional] 
-**subscription_plan_index** | **int** |  | [optional] 
+**number_of_cycles** | **int** |  | [optional] 
+**plan_price** | **float** |  | [optional] 
+**subscription_plan_index** | **int** | Subscription plan identifier. | [optional] 
 **subscription_plan_name** | **str** |  | [optional] 
 
 ## Example

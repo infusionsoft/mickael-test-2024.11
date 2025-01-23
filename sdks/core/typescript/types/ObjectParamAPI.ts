@@ -152,7 +152,7 @@ import { GetContactOptionTypesResponse } from '../models/GetContactOptionTypesRe
 import { GetNoteResponse } from '../models/GetNoteResponse';
 import { GetSettingsResponse } from '../models/GetSettingsResponse';
 import { GetTagCategoryResponse } from '../models/GetTagCategoryResponse';
-import { GetUserInfoResponse } from '../models/GetUserInfoResponse';
+import { GetUserInfoResponseBase } from '../models/GetUserInfoResponseBase';
 import { Goal } from '../models/Goal';
 import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment } from '../models/InvoiceOrderPayment';
@@ -190,6 +190,7 @@ import { ListOrderPaymentsResponse } from '../models/ListOrderPaymentsResponse';
 import { ListOrderTotalDiscountsResponse } from '../models/ListOrderTotalDiscountsResponse';
 import { ListOrders } from '../models/ListOrders';
 import { ListProductCategoriesResponse } from '../models/ListProductCategoriesResponse';
+import { ListProductInterestBundleResponse } from '../models/ListProductInterestBundleResponse';
 import { ListProductsResponse } from '../models/ListProductsResponse';
 import { ListProvincesResponse } from '../models/ListProvincesResponse';
 import { ListRestMerchantAccountResponse } from '../models/ListRestMerchantAccountResponse';
@@ -285,6 +286,7 @@ import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { Transaction } from '../models/Transaction';
 import { URI } from '../models/URI';
 import { URL } from '../models/URL';
 import { UpdateAffiliateRequest } from '../models/UpdateAffiliateRequest';
@@ -309,6 +311,7 @@ import { UpdateOutcomeLabelsRequest } from '../models/UpdateOutcomeLabelsRequest
 import { UpdatePipelineRequest } from '../models/UpdatePipelineRequest';
 import { UpdateProductCategoryRequest } from '../models/UpdateProductCategoryRequest';
 import { UpdateProductCommissionProgramRequest } from '../models/UpdateProductCommissionProgramRequest';
+import { UpdateProductInterestBundleRequest } from '../models/UpdateProductInterestBundleRequest';
 import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
@@ -660,7 +663,7 @@ export class ObjectAutomationApi {
     }
 
     /**
-     * Lists all automations ids based on the request parameters.
+     * Retrieves a list of automations IDs
      * List Automations Ids
      * @param param the request object
      */
@@ -669,7 +672,7 @@ export class ObjectAutomationApi {
     }
 
     /**
-     * Lists all automations ids based on the request parameters.
+     * Retrieves a list of automations IDs
      * List Automations Ids
      * @param param the request object
      */
@@ -678,7 +681,7 @@ export class ObjectAutomationApi {
     }
 
     /**
-     * Lists all automations based on the request parameters.
+     * Retrieves a list of automations
      * List Automations
      * @param param the request object
      */
@@ -687,7 +690,7 @@ export class ObjectAutomationApi {
     }
 
     /**
-     * Lists all automations based on the request parameters.
+     * Retrieves a list of automations
      * List Automations
      * @param param the request object
      */
@@ -793,7 +796,7 @@ export class ObjectAutomationCategoryApi {
     }
 
     /**
-     * Lists all automation categories based on the request parameters
+     * Retrieves a list of automation categories
      * List automation categories
      * @param param the request object
      */
@@ -802,7 +805,7 @@ export class ObjectAutomationCategoryApi {
     }
 
     /**
-     * Lists all automation categories based on the request parameters
+     * Retrieves a list of automation categories
      * List automation categories
      * @param param the request object
      */
@@ -1040,7 +1043,7 @@ export class ObjectCampaignApi {
     }
 
     /**
-     * Retrieves all campaigns for the authenticated user
+     * Retrieves a list of campaigns for the authenticated user
      * List Campaigns
      * @param param the request object
      */
@@ -1049,7 +1052,7 @@ export class ObjectCampaignApi {
     }
 
     /**
-     * Retrieves all campaigns for the authenticated user
+     * Retrieves a list of campaigns for the authenticated user
      * List Campaigns
      * @param param the request object
      */
@@ -1469,7 +1472,7 @@ export class ObjectContactApi {
     }
 
     /**
-     * Creates a new type of Contact Link.
+     * Creates a new type of Contact Link
      * Create a Contact Link type
      * @param param the request object
      */
@@ -1478,7 +1481,7 @@ export class ObjectContactApi {
     }
 
     /**
-     * Creates a new type of Contact Link.
+     * Creates a new type of Contact Link
      * Create a Contact Link type
      * @param param the request object
      */
@@ -1505,7 +1508,7 @@ export class ObjectContactApi {
     }
 
     /**
-     * Deletes the specified Contact.
+     * Deletes the specified Contact
      * Delete a Contact
      * @param param the request object
      */
@@ -1514,7 +1517,7 @@ export class ObjectContactApi {
     }
 
     /**
-     * Deletes the specified Contact.
+     * Deletes the specified Contact
      * Delete a Contact
      * @param param the request object
      */
@@ -3713,7 +3716,7 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
      * List Tagged Contacts
      * @param param the request object
      */
@@ -3722,7 +3725,7 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
      * List Tagged Contacts
      * @param param the request object
      */
@@ -3731,7 +3734,7 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
      * List Tag Categories
      * @param param the request object
      */
@@ -3740,7 +3743,7 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
      * List Tag Categories
      * @param param the request object
      */
@@ -3749,7 +3752,7 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
      * List Tags
      * @param param the request object
      */
@@ -3758,7 +3761,7 @@ export class ObjectTagsApi {
     }
 
     /**
-     * Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
      * List Tags
      * @param param the request object
      */

@@ -128,7 +128,7 @@ No authorization required
 # **listCategoriesUsingGET**
 > ListAutomationCategoryResponse listCategoriesUsingGET()
 
-Lists all automation categories based on the request parameters
+Retrieves a list of automation categories
 
 ### Example
 

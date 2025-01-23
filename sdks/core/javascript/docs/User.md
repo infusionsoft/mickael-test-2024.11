@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **familyName** | **String** |  | [optional] 
 **faxNumbers** | [**[FaxNumber]**](FaxNumber.md) |  | [optional] 
 **givenName** | **String** |  | [optional] 
-**globalUserId** | **Number** |  | [optional] 
-**id** | **Number** |  | [optional] 
+**globalUserId** | **String** |  | [optional] 
+**id** | **String** |  | [optional] 
 **keapId** | **String** |  | [optional] 
 **partner** | **Boolean** |  | [optional] 
 **phoneNumbers** | [**[PhoneNumber]**](PhoneNumber.md) |  | [optional] 
@@ -31,13 +31,13 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
-* `Active` (value: `"Active"`)
+* `ACTIVE` (value: `"ACTIVE"`)
 
-* `Invited` (value: `"Invited"`)
+* `INVITED` (value: `"INVITED"`)
 
-* `Inactive` (value: `"Inactive"`)
+* `INACTIVE` (value: `"INACTIVE"`)
 
-* `NotAUser` (value: `"NotAUser"`)
+* `NOT_A_USER` (value: `"NOT_A_USER"`)
 
 * `unknown_default_open_api` (value: `"unknown_default_open_api"`)
 

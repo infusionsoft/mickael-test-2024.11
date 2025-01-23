@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_id** | **string** | The affiliate_Id for Affiliate commission program | [optional]
-**create_time** | **\DateTime** | The created time of affiliate commission program | [optional]
+**create_time** | **string** | The created time of affiliate commission program | [optional]
 **default_commission** | [**\Com\Keap\Sdk\Core\Model\DefaultCommission**](DefaultCommission.md) |  | [optional]
 **id** | **string** | The affiliate commission program name | [optional]
 **name** | **string** | The affiliate commission program name | [optional]

@@ -391,7 +391,7 @@ No authorization required
 
 List Tagged Contacts
 
-Retrieve a list of Contacts with the specified Tag. To search for &#x60;null&#x60; or empty fields use &#x60;filter&#x3D;&#x3D;NONE&#x60;
+Retrieves a list of Contacts with the specified Tag To search for &#x60;null&#x60; or empty fields use &#x60;filter&#x3D;&#x3D;NONE&#x60;
 
 ### Example
 
@@ -445,7 +445,7 @@ No authorization required
 
 List Tag Categories
 
-Retrieves the list of defined Tag Categories To search for &#x60;null&#x60; or empty fields use &#x60;filter&#x3D;&#x3D;NONE&#x60;
+Retrieves a list of defined Tag Categories To search for &#x60;null&#x60; or empty fields use &#x60;filter&#x3D;&#x3D;NONE&#x60;
 
 ### Example
 
@@ -497,7 +497,7 @@ No authorization required
 
 List Tags
 
-Retrieve a list of Tags defined in the application. To search for &#x60;null&#x60; or empty fields use &#x60;filter&#x3D;&#x3D;NONE&#x60;
+Retrieves a list of Tags defined in the application To search for &#x60;null&#x60; or empty fields use &#x60;filter&#x3D;&#x3D;NONE&#x60;
 
 ### Example
 

@@ -152,7 +152,7 @@ import { GetContactOptionTypesResponse } from '../models/GetContactOptionTypesRe
 import { GetNoteResponse } from '../models/GetNoteResponse';
 import { GetSettingsResponse } from '../models/GetSettingsResponse';
 import { GetTagCategoryResponse } from '../models/GetTagCategoryResponse';
-import { GetUserInfoResponse } from '../models/GetUserInfoResponse';
+import { GetUserInfoResponseBase } from '../models/GetUserInfoResponseBase';
 import { Goal } from '../models/Goal';
 import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment } from '../models/InvoiceOrderPayment';
@@ -190,6 +190,7 @@ import { ListOrderPaymentsResponse } from '../models/ListOrderPaymentsResponse';
 import { ListOrderTotalDiscountsResponse } from '../models/ListOrderTotalDiscountsResponse';
 import { ListOrders } from '../models/ListOrders';
 import { ListProductCategoriesResponse } from '../models/ListProductCategoriesResponse';
+import { ListProductInterestBundleResponse } from '../models/ListProductInterestBundleResponse';
 import { ListProductsResponse } from '../models/ListProductsResponse';
 import { ListProvincesResponse } from '../models/ListProvincesResponse';
 import { ListRestMerchantAccountResponse } from '../models/ListRestMerchantAccountResponse';
@@ -285,6 +286,7 @@ import { Tag } from '../models/Tag';
 import { TaggedCompany } from '../models/TaggedCompany';
 import { Task } from '../models/Task';
 import { Throwable } from '../models/Throwable';
+import { Transaction } from '../models/Transaction';
 import { URI } from '../models/URI';
 import { URL } from '../models/URL';
 import { UpdateAffiliateRequest } from '../models/UpdateAffiliateRequest';
@@ -309,6 +311,7 @@ import { UpdateOutcomeLabelsRequest } from '../models/UpdateOutcomeLabelsRequest
 import { UpdatePipelineRequest } from '../models/UpdatePipelineRequest';
 import { UpdateProductCategoryRequest } from '../models/UpdateProductCategoryRequest';
 import { UpdateProductCommissionProgramRequest } from '../models/UpdateProductCommissionProgramRequest';
+import { UpdateProductInterestBundleRequest } from '../models/UpdateProductInterestBundleRequest';
 import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
@@ -504,7 +507,7 @@ export class PromiseAutomationApi {
     }
 
     /**
-     * Lists all automations ids based on the request parameters.
+     * Retrieves a list of automations IDs
      * List Automations Ids
      * @param [filter] Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the automation name.   - &#x60;filter&#x3D;name%3D%3DSpring Automation&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - name   - category   - activeContacts   - publishedDate   One of the following directions:   - asc   - desc
@@ -518,7 +521,7 @@ export class PromiseAutomationApi {
     }
 
     /**
-     * Lists all automations ids based on the request parameters.
+     * Retrieves a list of automations IDs
      * List Automations Ids
      * @param [filter] Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the automation name.   - &#x60;filter&#x3D;name%3D%3DSpring Automation&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - name   - category   - activeContacts   - publishedDate   One of the following directions:   - asc   - desc
@@ -532,7 +535,7 @@ export class PromiseAutomationApi {
     }
 
     /**
-     * Lists all automations based on the request parameters.
+     * Retrieves a list of automations
      * List Automations
      * @param [filter] Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the automation name.   - &#x60;filter&#x3D;name%3D%3DSpring Automation&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - name   - category   - activeContacts   - publishedDate   One of the following directions:   - asc   - desc
@@ -546,7 +549,7 @@ export class PromiseAutomationApi {
     }
 
     /**
-     * Lists all automations based on the request parameters.
+     * Retrieves a list of automations
      * List Automations
      * @param [filter] Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the automation name.   - &#x60;filter&#x3D;name%3D%3DSpring Automation&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - name   - category   - activeContacts   - publishedDate   One of the following directions:   - asc   - desc
@@ -639,7 +642,7 @@ export class PromiseAutomationCategoryApi {
     }
 
     /**
-     * Lists all automation categories based on the request parameters
+     * Retrieves a list of automation categories
      * List automation categories
      */
     public listCategoriesUsingGETWithHttpInfo(_options?: Configuration): Promise<HttpInfo<ListAutomationCategoryResponse>> {
@@ -648,7 +651,7 @@ export class PromiseAutomationCategoryApi {
     }
 
     /**
-     * Lists all automation categories based on the request parameters
+     * Retrieves a list of automation categories
      * List automation categories
      */
     public listCategoriesUsingGET(_options?: Configuration): Promise<ListAutomationCategoryResponse> {
@@ -799,7 +802,7 @@ export class PromiseCampaignApi {
     }
 
     /**
-     * Retrieves all campaigns for the authenticated user
+     * Retrieves a list of campaigns for the authenticated user
      * List Campaigns
      * @param [filter] Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the campaign name.   - &#x60;filter&#x3D;name%3D%3DSpring Campaign&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - name   - publisheddate   - id   - completedContactCount   - activeContacts   - datecreated   - lastupdated   One of the following directions:   - asc   - desc
@@ -813,7 +816,7 @@ export class PromiseCampaignApi {
     }
 
     /**
-     * Retrieves all campaigns for the authenticated user
+     * Retrieves a list of campaigns for the authenticated user
      * List Campaigns
      * @param [filter] Filter to apply, allowed fields are:   - (String) name    You will need to apply the &#x60;&#x3D;&#x3D;&#x60; operator to check the equality of the filter with your searched  text, in the encoded form &#x60;%3D%3D&#x60;. The search will look for the text anywhere in the campaign name.   - &#x60;filter&#x3D;name%3D%3DSpring Campaign&#x60;  - &#x60;filter&#x3D;name%3D%3DTag New Contacts&#x60;  
      * @param [orderBy] Attribute and direction to order items.   One of the following fields:   - name   - publisheddate   - id   - completedContactCount   - activeContacts   - datecreated   - lastupdated   One of the following directions:   - asc   - desc
@@ -1003,7 +1006,7 @@ export class PromiseContactApi {
     }
 
     /**
-     * Creates a new type of Contact Link.
+     * Creates a new type of Contact Link
      * Create a Contact Link type
      * @param createContactLinkTypeRequest request
      */
@@ -1013,7 +1016,7 @@ export class PromiseContactApi {
     }
 
     /**
-     * Creates a new type of Contact Link.
+     * Creates a new type of Contact Link
      * Create a Contact Link type
      * @param createContactLinkTypeRequest request
      */
@@ -1043,7 +1046,7 @@ export class PromiseContactApi {
     }
 
     /**
-     * Deletes the specified Contact.
+     * Deletes the specified Contact
      * Delete a Contact
      * @param contactId contact_id
      */
@@ -1053,7 +1056,7 @@ export class PromiseContactApi {
     }
 
     /**
-     * Deletes the specified Contact.
+     * Deletes the specified Contact
      * Delete a Contact
      * @param contactId contact_id
      */
@@ -2555,7 +2558,7 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
      * List Tagged Contacts
      * @param tagId tag_id
      * @param [filter] Search filter to apply to results
@@ -2569,7 +2572,7 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Retrieve a list of Contacts with the specified Tag. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Contacts with the specified Tag To search for `null` or empty fields use `filter==NONE`
      * List Tagged Contacts
      * @param tagId tag_id
      * @param [filter] Search filter to apply to results
@@ -2583,7 +2586,7 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
      * List Tag Categories
      * @param [filter] Search filter to apply to results
      * @param [orderBy] Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
@@ -2596,7 +2599,7 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Retrieves the list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of defined Tag Categories To search for `null` or empty fields use `filter==NONE`
      * List Tag Categories
      * @param [filter] Search filter to apply to results
      * @param [orderBy] Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
@@ -2609,7 +2612,7 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
      * List Tags
      * @param [filter] Search filter to apply to results
      * @param [orderBy] Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;
@@ -2622,7 +2625,7 @@ export class PromiseTagsApi {
     }
 
     /**
-     * Retrieve a list of Tags defined in the application. To search for `null` or empty fields use `filter==NONE`
+     * Retrieves a list of Tags defined in the application To search for `null` or empty fields use `filter==NONE`
      * List Tags
      * @param [filter] Search filter to apply to results
      * @param [orderBy] Attribute and direction to order items by. E.g. &#x60;given_name desc&#x60;

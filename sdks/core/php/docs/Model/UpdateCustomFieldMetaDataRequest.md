@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**group_id** | **string** |  | [optional]
+**group_id** | **string** |  |
 **label** | **string** |  | [optional]
 **options** | [**\Com\Keap\Sdk\Core\Model\CustomFieldOption[]**](CustomFieldOption.md) |  | [optional]
 

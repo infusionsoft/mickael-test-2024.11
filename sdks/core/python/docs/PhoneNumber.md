@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **extension** | **str** |  | [optional] 
 **var_field** | **str** |  | [optional] 
 **number** | **str** |  | [optional] 
+**number_e164** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 
 ## Example

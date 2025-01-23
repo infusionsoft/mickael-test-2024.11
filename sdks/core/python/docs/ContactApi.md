@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 Create a Contact Link type
 
-Creates a new type of Contact Link.
+Creates a new type of Contact Link
 
 ### Example
 
@@ -161,7 +161,7 @@ No authorization required
 
 Delete a Contact
 
-Deletes the specified Contact.
+Deletes the specified Contact
 
 ### Example
 

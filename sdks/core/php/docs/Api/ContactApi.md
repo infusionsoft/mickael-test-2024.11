@@ -26,7 +26,7 @@ createContactLinkTypeUsingPOST($create_contact_link_type_request): \Com\Keap\Sdk
 
 Create a Contact Link type
 
-Creates a new type of Contact Link.
+Creates a new type of Contact Link
 
 ### Example
 
@@ -136,7 +136,7 @@ deleteContactUsingDELETE1($contact_id)
 
 Delete a Contact
 
-Deletes the specified Contact.
+Deletes the specified Contact
 
 ### Example
 

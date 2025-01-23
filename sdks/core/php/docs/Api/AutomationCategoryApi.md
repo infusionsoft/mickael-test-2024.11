@@ -127,7 +127,7 @@ listCategoriesUsingGET(): \Com\Keap\Sdk\Core\Model\ListAutomationCategoryRespons
 
 List automation categories
 
-Lists all automation categories based on the request parameters
+Retrieves a list of automation categories
 
 ### Example
 

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_id** | **str** | The affiliate_Id for Affiliate commission program | [optional] 
-**create_time** | **datetime** | The created time of affiliate commission program | [optional] 
+**create_time** | **str** | The created time of affiliate commission program | [optional] 
 **default_commission** | [**DefaultCommission**](DefaultCommission.md) |  | [optional] 
 **id** | **str** | The affiliate commission program name | [optional] 
 **name** | **str** | The affiliate commission program name | [optional] 

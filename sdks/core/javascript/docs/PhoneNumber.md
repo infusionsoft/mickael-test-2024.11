@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **extension** | **String** |  | [optional] 
 **field** | **String** |  | [optional] 
 **number** | **String** |  | [optional] 
+**numberE164** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 
 

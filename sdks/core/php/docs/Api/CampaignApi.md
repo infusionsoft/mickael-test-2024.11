@@ -132,7 +132,7 @@ listCampaignsUsingGET1($filter, $order_by, $page_size, $page_token, $stats): \Co
 
 List Campaigns
 
-Retrieves all campaigns for the authenticated user
+Retrieves a list of campaigns for the authenticated user
 
 ### Example
 

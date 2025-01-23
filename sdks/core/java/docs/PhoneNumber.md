@@ -10,6 +10,7 @@
 |**extension** | **String** |  |  [optional] |
 |**field** | [**FieldEnum**](#FieldEnum) |  |  [optional] |
 |**number** | **String** |  |  [optional] |
+|**numberE164** | **String** |  |  [optional] |
 |**type** | **String** |  |  [optional] |
 
 

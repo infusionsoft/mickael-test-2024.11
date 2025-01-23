@@ -100,7 +100,7 @@ export class AutomationCategoryApiRequestFactory extends BaseAPIRequestFactory {
     }
 
     /**
-     * Lists all automation categories based on the request parameters
+     * Retrieves a list of automation categories
      * List automation categories
      */
     public async listCategoriesUsingGET(_options?: Configuration): Promise<RequestContext> {

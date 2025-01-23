@@ -17,7 +17,7 @@ import ApplicationConfigurationModuleAffiliateCommission from './ApplicationConf
 /**
  * The ApplicationConfigurationModuleAffiliate model module.
  * @module com.keap.sdk.core/model/ApplicationConfigurationModuleAffiliate
- * @version 0.0.103
+ * @version 0.0.104
  */
 class ApplicationConfigurationModuleAffiliate {
     /**

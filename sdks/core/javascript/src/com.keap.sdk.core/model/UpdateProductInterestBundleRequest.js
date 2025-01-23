@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateProductInterestBundleRequest model module.
  * @module com.keap.sdk.core/model/UpdateProductInterestBundleRequest
- * @version 0.0.103
+ * @version 0.0.104
  */
 class UpdateProductInterestBundleRequest {
     /**

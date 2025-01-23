@@ -17,7 +17,7 @@ import DiscountCriteria from './DiscountCriteria';
 /**
  * The ShippingDiscount model module.
  * @module com.keap.sdk.core/model/ShippingDiscount
- * @version 0.0.103
+ * @version 0.0.104
  */
 class ShippingDiscount {
     /**

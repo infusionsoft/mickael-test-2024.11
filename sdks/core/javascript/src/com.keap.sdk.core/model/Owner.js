@@ -17,7 +17,7 @@ import BaseModel from './BaseModel';
 /**
  * The Owner model module.
  * @module com.keap.sdk.core/model/Owner
- * @version 0.0.103
+ * @version 0.0.104
  */
 class Owner {
     /**

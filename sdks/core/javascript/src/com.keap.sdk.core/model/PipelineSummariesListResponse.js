@@ -18,7 +18,7 @@ import PipelineSummary from './PipelineSummary';
 /**
  * The PipelineSummariesListResponse model module.
  * @module com.keap.sdk.core/model/PipelineSummariesListResponse
- * @version 0.0.99
+ * @version 0.0.100
  */
 class PipelineSummariesListResponse {
     /**

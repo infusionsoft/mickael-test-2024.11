@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Provinces model module.
  * @module com.keap.sdk.core/model/Provinces
- * @version 0.0.99
+ * @version 0.0.100
  */
 class Provinces {
     /**

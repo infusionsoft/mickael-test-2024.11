@@ -20,7 +20,7 @@ import ShippingInformation from './ShippingInformation';
 /**
  * The RestV2Order model module.
  * @module com.keap.sdk.core/model/RestV2Order
- * @version 0.0.99
+ * @version 0.0.100
  */
 class RestV2Order {
     /**

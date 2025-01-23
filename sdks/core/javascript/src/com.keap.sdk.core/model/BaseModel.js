@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BaseModel model module.
  * @module com.keap.sdk.core/model/BaseModel
- * @version 0.0.99
+ * @version 0.0.100
  */
 class BaseModel {
     /**

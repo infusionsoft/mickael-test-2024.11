@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The URL model module.
  * @module com.keap.sdk.core/model/URL
- * @version 0.0.99
+ * @version 0.0.100
  */
 class URL {
     /**

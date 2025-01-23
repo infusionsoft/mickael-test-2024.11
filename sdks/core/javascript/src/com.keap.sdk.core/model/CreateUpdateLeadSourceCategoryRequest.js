@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateUpdateLeadSourceCategoryRequest model module.
  * @module com.keap.sdk.core/model/CreateUpdateLeadSourceCategoryRequest
- * @version 0.0.99
+ * @version 0.0.100
  */
 class CreateUpdateLeadSourceCategoryRequest {
     /**

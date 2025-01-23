@@ -17,7 +17,7 @@ import URL from './URL';
 /**
  * The Resource model module.
  * @module com.keap.sdk.core/model/Resource
- * @version 0.0.99
+ * @version 0.0.100
  */
 class Resource {
     /**

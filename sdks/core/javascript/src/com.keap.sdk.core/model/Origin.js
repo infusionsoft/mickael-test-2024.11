@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Origin model module.
  * @module com.keap.sdk.core/model/Origin
- * @version 0.0.101
+ * @version 0.0.102
  */
 class Origin {
     /**

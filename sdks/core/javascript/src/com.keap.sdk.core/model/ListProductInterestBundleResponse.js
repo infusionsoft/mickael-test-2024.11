@@ -17,7 +17,7 @@ import ProductInterestBundle from './ProductInterestBundle';
 /**
  * The ListProductInterestBundleResponse model module.
  * @module com.keap.sdk.core/model/ListProductInterestBundleResponse
- * @version 0.0.101
+ * @version 0.0.102
  */
 class ListProductInterestBundleResponse {
     /**

@@ -17,7 +17,7 @@ import PipelineOutcomeLabel from './PipelineOutcomeLabel';
 /**
  * The UpdateOutcomeLabelsRequest model module.
  * @module com.keap.sdk.core/model/UpdateOutcomeLabelsRequest
- * @version 0.0.105
+ * @version 0.0.106
  */
 class UpdateOutcomeLabelsRequest {
     /**

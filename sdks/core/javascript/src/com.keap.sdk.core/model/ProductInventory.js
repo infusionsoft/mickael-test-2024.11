@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ProductInventory model module.
  * @module com.keap.sdk.core/model/ProductInventory
- * @version 0.0.105
+ * @version 0.0.106
  */
 class ProductInventory {
     /**

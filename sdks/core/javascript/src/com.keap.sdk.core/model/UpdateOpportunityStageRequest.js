@@ -17,7 +17,7 @@ import UpdateOpportunityStageChecklistItem from './UpdateOpportunityStageCheckli
 /**
  * The UpdateOpportunityStageRequest model module.
  * @module com.keap.sdk.core/model/UpdateOpportunityStageRequest
- * @version 0.0.105
+ * @version 0.0.106
  */
 class UpdateOpportunityStageRequest {
     /**

@@ -29,7 +29,7 @@ import PaymentMethodList from '../model/PaymentMethodList';
 /**
 * Contact service.
 * @module com.keap.sdk.core/api/ContactApi
-* @version 0.0.105
+* @version 0.0.106
 */
 export default class ContactApi {
 

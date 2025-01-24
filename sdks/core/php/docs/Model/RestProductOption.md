@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **required** | **bool** |  | [optional]
 **text_message** | **string** |  | [optional]
 **type** | **string** |  | [optional]
-**values** | [**\Com\Keap\Sdk\Core\Model\RestProductOptionValue[]**](RestProductOptionValue.md) |  | [optional]
+**values** | [**\Keap\Sdk\Core\Model\RestProductOptionValue[]**](RestProductOptionValue.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **payment_gateway_id** | **string** | Reference to the payment processor to where the transaction attempt was made. | [optional]
 **payment_gateway_type** | **string** | The type of payment processor. Possible values are: PAYPAL, STRIPE, KEAP_PAY, AUTHORIZE, EWAY, OTHER. For transactions that did got go through a processor/gateway, value is MANUAL | [optional]
 **payment_id** | **string** | Reference to the payment record that on successful transactions. No reference if the transaction failed. | [optional]
-**transaction_amount** | [**\Com\Keap\Sdk\Core\Model\CurrencyValue**](CurrencyValue.md) |  | [optional]
+**transaction_amount** | [**\Keap\Sdk\Core\Model\CurrencyValue**](CurrencyValue.md) |  | [optional]
 **transaction_time** | **string** | ISO date-time of the transaction. e.g 2024-04-28 11:25:44 | [optional]
 **transaction_type** | **string** | The type of transaction. Possible values: CAPTURE, VOID, REFUND, CREDIT, APPROVAL | [optional]
 

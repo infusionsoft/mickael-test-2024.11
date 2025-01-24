@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\ReportingApi
+# Keap\Sdk\Core\ReportingApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `runReportUsingPOST()`
 
 ```php
-runReportUsingPOST($report_id, $fields, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ReportExecutionResult
+runReportUsingPOST($report_id, $fields, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ReportExecutionResult
 ```
 
 Run a Report
@@ -24,7 +24,7 @@ Runs a report as defined in the application (identified as Saved Search)<br/><sp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ReportingApi(
+$apiInstance = new Keap\Sdk\Core\Api\ReportingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ReportExecutionResult**](../Model/ReportExecutionResult.md)
+[**\Keap\Sdk\Core\Model\ReportExecutionResult**](../Model/ReportExecutionResult.md)
 
 ### Authorization
 

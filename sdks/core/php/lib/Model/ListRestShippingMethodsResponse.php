@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListRestShippingMethodsResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListRestShippingMethodsResponse implements ModelInterface, ArrayAccess, \J
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'shipping_methods' => '\Com\Keap\Sdk\Core\Model\ShippingMethod[]'
+        'shipping_methods' => '\Keap\Sdk\Core\Model\ShippingMethod[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListRestShippingMethodsResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Gets shipping_methods
      *
-     * @return \Com\Keap\Sdk\Core\Model\ShippingMethod[]|null
+     * @return \Keap\Sdk\Core\Model\ShippingMethod[]|null
      */
     public function getShippingMethods()
     {
@@ -336,7 +336,7 @@ class ListRestShippingMethodsResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets shipping_methods
      *
-     * @param \Com\Keap\Sdk\Core\Model\ShippingMethod[]|null $shipping_methods shipping_methods
+     * @param \Keap\Sdk\Core\Model\ShippingMethod[]|null $shipping_methods shipping_methods
      *
      * @return self
      */

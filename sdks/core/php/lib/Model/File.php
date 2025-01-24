@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * File Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'absolute' => 'bool',
-        'absolute_file' => '\Com\Keap\Sdk\Core\Model\File',
+        'absolute_file' => '\Keap\Sdk\Core\Model\File',
         'absolute_path' => 'string',
-        'canonical_file' => '\Com\Keap\Sdk\Core\Model\File',
+        'canonical_file' => '\Keap\Sdk\Core\Model\File',
         'canonical_path' => 'string',
         'directory' => 'bool',
         'executable' => 'bool',
@@ -70,7 +70,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_modified' => 'int',
         'name' => 'string',
         'parent' => 'string',
-        'parent_file' => '\Com\Keap\Sdk\Core\Model\File',
+        'parent_file' => '\Keap\Sdk\Core\Model\File',
         'path' => 'string',
         'readable' => 'bool',
         'total_space' => 'int',
@@ -445,7 +445,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets absolute_file
      *
-     * @return \Com\Keap\Sdk\Core\Model\File|null
+     * @return \Keap\Sdk\Core\Model\File|null
      */
     public function getAbsoluteFile()
     {
@@ -455,7 +455,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets absolute_file
      *
-     * @param \Com\Keap\Sdk\Core\Model\File|null $absolute_file absolute_file
+     * @param \Keap\Sdk\Core\Model\File|null $absolute_file absolute_file
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets canonical_file
      *
-     * @return \Com\Keap\Sdk\Core\Model\File|null
+     * @return \Keap\Sdk\Core\Model\File|null
      */
     public function getCanonicalFile()
     {
@@ -509,7 +509,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets canonical_file
      *
-     * @param \Com\Keap\Sdk\Core\Model\File|null $canonical_file canonical_file
+     * @param \Keap\Sdk\Core\Model\File|null $canonical_file canonical_file
      *
      * @return self
      */
@@ -769,7 +769,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets parent_file
      *
-     * @return \Com\Keap\Sdk\Core\Model\File|null
+     * @return \Keap\Sdk\Core\Model\File|null
      */
     public function getParentFile()
     {
@@ -779,7 +779,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parent_file
      *
-     * @param \Com\Keap\Sdk\Core\Model\File|null $parent_file parent_file
+     * @param \Keap\Sdk\Core\Model\File|null $parent_file parent_file
      *
      * @return self
      */

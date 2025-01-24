@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelineListResponse Class Doc Comment
  *
  * @category Class
  * @description Response for a list of pipelines.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PipelineListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'pipelines' => '\Com\Keap\Sdk\Core\Model\Pipeline[]'
+        'pipelines' => '\Keap\Sdk\Core\Model\Pipeline[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class PipelineListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets pipelines
      *
-     * @return \Com\Keap\Sdk\Core\Model\Pipeline[]|null
+     * @return \Keap\Sdk\Core\Model\Pipeline[]|null
      */
     public function getPipelines()
     {
@@ -337,7 +337,7 @@ class PipelineListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets pipelines
      *
-     * @param \Com\Keap\Sdk\Core\Model\Pipeline[]|null $pipelines The list of pipelines.
+     * @param \Keap\Sdk\Core\Model\Pipeline[]|null $pipelines The list of pipelines.
      *
      * @return self
      */

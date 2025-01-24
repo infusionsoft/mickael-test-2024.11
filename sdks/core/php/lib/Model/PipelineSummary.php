@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelineSummary Class Doc Comment
  *
  * @category Class
  * @description Represents a summary of a pipeline.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

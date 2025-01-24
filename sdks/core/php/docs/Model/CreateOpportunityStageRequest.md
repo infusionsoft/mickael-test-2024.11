@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**checklist_items** | [**\Com\Keap\Sdk\Core\Model\CreateOpportunityStageChecklistItem[]**](CreateOpportunityStageChecklistItem.md) |  | [optional]
+**checklist_items** | [**\Keap\Sdk\Core\Model\CreateOpportunityStageChecklistItem[]**](CreateOpportunityStageChecklistItem.md) |  | [optional]
 **name** | **string** |  |
 **order** | **int** |  |
 **probability** | **int** |  |

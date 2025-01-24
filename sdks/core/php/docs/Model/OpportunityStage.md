@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**\Com\Keap\Sdk\Core\Model\StageDetails**](StageDetails.md) |  | [optional]
+**details** | [**\Keap\Sdk\Core\Model\StageDetails**](StageDetails.md) |  | [optional]
 **id** | **string** |  |
 **name** | **string** |  | [optional]
 **reasons** | **string[]** |  | [optional]

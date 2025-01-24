@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core;
+namespace Keap\Sdk\Core;
 
 use GuzzleHttp\Psr7\Utils;
-use Com\Keap\Sdk\Core\Model\ModelInterface;
+use Keap\Sdk\Core\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -521,7 +521,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Com\Keap\Sdk\Core\Model\\' . $data->{$discriminator};
+                $subclass = '\Keap\Sdk\Core\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

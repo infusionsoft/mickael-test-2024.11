@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * UpdateOutcomeLabelsRequest Class Doc Comment
  *
  * @category Class
  * @description Represents a request to update outcome labels for a pipeline.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UpdateOutcomeLabelsRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'outcome_labels' => '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]'
+        'outcome_labels' => '\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UpdateOutcomeLabelsRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets outcome_labels
      *
-     * @return \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]
+     * @return \Keap\Sdk\Core\Model\PipelineOutcomeLabel[]
      */
     public function getOutcomeLabels()
     {
@@ -306,7 +306,7 @@ class UpdateOutcomeLabelsRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets outcome_labels
      *
-     * @param \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabel[] $outcome_labels List of outcome labels to be updated.
+     * @param \Keap\Sdk\Core\Model\PipelineOutcomeLabel[] $outcome_labels List of outcome labels to be updated.
      *
      * @return self
      */

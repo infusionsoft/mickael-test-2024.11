@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ApplicationConfigurationModuleOpportunityStates Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,9 +57,9 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'active' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesActive',
-        'loss' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesLoss',
-        'win' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesWin'
+        'active' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesActive',
+        'loss' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesLoss',
+        'win' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesWin'
     ];
 
     /**
@@ -306,7 +306,7 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
     /**
      * Gets active
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesActive|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesActive|null
      */
     public function getActive()
     {
@@ -316,7 +316,7 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
     /**
      * Sets active
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesActive|null $active active
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesActive|null $active active
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
     /**
      * Gets loss
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesLoss|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesLoss|null
      */
     public function getLoss()
     {
@@ -343,7 +343,7 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
     /**
      * Sets loss
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesLoss|null $loss loss
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesLoss|null $loss loss
      *
      * @return self
      */
@@ -360,7 +360,7 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
     /**
      * Gets win
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesWin|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesWin|null
      */
     public function getWin()
     {
@@ -370,7 +370,7 @@ class ApplicationConfigurationModuleOpportunityStates implements ModelInterface,
     /**
      * Sets win
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesWin|null $win win
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunityStatesWin|null $win win
      *
      * @return self
      */

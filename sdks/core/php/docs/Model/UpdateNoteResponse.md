@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assigned_to_user** | [**\Com\Keap\Sdk\Core\Model\BasicUser**](BasicUser.md) |  | [optional]
+**assigned_to_user** | [**\Keap\Sdk\Core\Model\BasicUser**](BasicUser.md) |  | [optional]
 **contact_id** | **string** |  | [optional]
 **create_time** | **string** |  | [optional]
 **created_by_user_id** | **string** |  | [optional]

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * EmailApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,12 +142,12 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\EmailSentWithContent|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\EmailSentWithContent|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createEmailUsingPOST1($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
@@ -160,12 +160,12 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\EmailSentWithContent|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\EmailSentWithContent|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEmailUsingPOST1WithHttpInfo($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
@@ -196,11 +196,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\EmailSentWithContent' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\EmailSentWithContent' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\EmailSentWithContent' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\EmailSentWithContent' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -218,16 +218,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\EmailSentWithContent', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\EmailSentWithContent', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -245,16 +245,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -272,7 +272,7 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -291,7 +291,7 @@ class EmailApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\EmailSentWithContent';
+            $returnType = '\Keap\Sdk\Core\Model\EmailSentWithContent';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -324,7 +324,7 @@ class EmailApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\EmailSentWithContent',
+                        '\Keap\Sdk\Core\Model\EmailSentWithContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -332,7 +332,7 @@ class EmailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +340,7 @@ class EmailApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -355,7 +355,7 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -376,7 +376,7 @@ class EmailApi
      *
      * Create an Email Record
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -384,7 +384,7 @@ class EmailApi
      */
     public function createEmailUsingPOST1AsyncWithHttpInfo($create_email_sent_request, string $contentType = self::contentTypes['createEmailUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\EmailSentWithContent';
+        $returnType = '\Keap\Sdk\Core\Model\EmailSentWithContent';
         $request = $this->createEmailUsingPOST1Request($create_email_sent_request, $contentType);
 
         return $this->client
@@ -426,7 +426,7 @@ class EmailApi
     /**
      * Create request for operation 'createEmailUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailSentRequest $create_email_sent_request emailWithContent (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -519,12 +519,12 @@ class EmailApi
      *
      * Create a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailsUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\EmailsSentList|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\EmailsSentList|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createEmailsUsingPOST1($create_emails_sent_request = null, string $contentType = self::contentTypes['createEmailsUsingPOST1'][0])
     {
@@ -537,12 +537,12 @@ class EmailApi
      *
      * Create a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailsUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\EmailsSentList|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\EmailsSentList|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEmailsUsingPOST1WithHttpInfo($create_emails_sent_request = null, string $contentType = self::contentTypes['createEmailsUsingPOST1'][0])
     {
@@ -573,11 +573,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\EmailsSentList' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\EmailsSentList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\EmailsSentList' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\EmailsSentList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -595,16 +595,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\EmailsSentList', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\EmailsSentList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -622,16 +622,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -649,7 +649,7 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -668,7 +668,7 @@ class EmailApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\EmailsSentList';
+            $returnType = '\Keap\Sdk\Core\Model\EmailsSentList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -701,7 +701,7 @@ class EmailApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\EmailsSentList',
+                        '\Keap\Sdk\Core\Model\EmailsSentList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -709,7 +709,7 @@ class EmailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -717,7 +717,7 @@ class EmailApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -732,7 +732,7 @@ class EmailApi
      *
      * Create a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailsUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -753,7 +753,7 @@ class EmailApi
      *
      * Create a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailsUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -761,7 +761,7 @@ class EmailApi
      */
     public function createEmailsUsingPOST1AsyncWithHttpInfo($create_emails_sent_request = null, string $contentType = self::contentTypes['createEmailsUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\EmailsSentList';
+        $returnType = '\Keap\Sdk\Core\Model\EmailsSentList';
         $request = $this->createEmailsUsingPOST1Request($create_emails_sent_request, $contentType);
 
         return $this->client
@@ -803,7 +803,7 @@ class EmailApi
     /**
      * Create request for operation 'createEmailsUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateEmailsSentRequest $create_emails_sent_request Email records to persist, with content. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailsUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -893,7 +893,7 @@ class EmailApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailUsingDELETE1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -910,7 +910,7 @@ class EmailApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailUsingDELETE1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -948,7 +948,7 @@ class EmailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class EmailApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class EmailApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1131,12 +1131,12 @@ class EmailApi
      *
      * Remove a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailsUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\DeleteEmailsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\DeleteEmailsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function deleteEmailsUsingPOST1($delete_emails_request, string $contentType = self::contentTypes['deleteEmailsUsingPOST1'][0])
     {
@@ -1149,12 +1149,12 @@ class EmailApi
      *
      * Remove a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailsUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\DeleteEmailsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\DeleteEmailsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEmailsUsingPOST1WithHttpInfo($delete_emails_request, string $contentType = self::contentTypes['deleteEmailsUsingPOST1'][0])
     {
@@ -1185,11 +1185,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\DeleteEmailsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\DeleteEmailsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1207,16 +1207,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\DeleteEmailsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1234,16 +1234,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1261,7 +1261,7 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1280,7 +1280,7 @@ class EmailApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse';
+            $returnType = '\Keap\Sdk\Core\Model\DeleteEmailsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1313,7 +1313,7 @@ class EmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse',
+                        '\Keap\Sdk\Core\Model\DeleteEmailsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1321,7 +1321,7 @@ class EmailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1329,7 +1329,7 @@ class EmailApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1344,7 +1344,7 @@ class EmailApi
      *
      * Remove a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailsUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1365,7 +1365,7 @@ class EmailApi
      *
      * Remove a set of Email Records
      *
-     * @param  \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailsUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1373,7 +1373,7 @@ class EmailApi
      */
     public function deleteEmailsUsingPOST1AsyncWithHttpInfo($delete_emails_request, string $contentType = self::contentTypes['deleteEmailsUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse';
+        $returnType = '\Keap\Sdk\Core\Model\DeleteEmailsResponse';
         $request = $this->deleteEmailsUsingPOST1Request($delete_emails_request, $contentType);
 
         return $this->client
@@ -1415,7 +1415,7 @@ class EmailApi
     /**
      * Create request for operation 'deleteEmailsUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\DeleteEmailsRequest $delete_emails_request deleteEmailsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailsUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1511,9 +1511,9 @@ class EmailApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEmailUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\EmailSentWithContent|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\EmailSentWithContent|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getEmailUsingGET1($id, string $contentType = self::contentTypes['getEmailUsingGET1'][0])
     {
@@ -1529,9 +1529,9 @@ class EmailApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEmailUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\EmailSentWithContent|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\EmailSentWithContent|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEmailUsingGET1WithHttpInfo($id, string $contentType = self::contentTypes['getEmailUsingGET1'][0])
     {
@@ -1562,11 +1562,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\EmailSentWithContent' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\EmailSentWithContent' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\EmailSentWithContent' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\EmailSentWithContent' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1584,16 +1584,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\EmailSentWithContent', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\EmailSentWithContent', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1611,16 +1611,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1638,16 +1638,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1665,7 +1665,7 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1684,7 +1684,7 @@ class EmailApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\EmailSentWithContent';
+            $returnType = '\Keap\Sdk\Core\Model\EmailSentWithContent';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1717,7 +1717,7 @@ class EmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\EmailSentWithContent',
+                        '\Keap\Sdk\Core\Model\EmailSentWithContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1725,7 +1725,7 @@ class EmailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1733,7 +1733,7 @@ class EmailApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1741,7 +1741,7 @@ class EmailApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1785,7 +1785,7 @@ class EmailApi
      */
     public function getEmailUsingGET1AsyncWithHttpInfo($id, string $contentType = self::contentTypes['getEmailUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\EmailSentWithContent';
+        $returnType = '\Keap\Sdk\Core\Model\EmailSentWithContent';
         $request = $this->getEmailUsingGET1Request($id, $contentType);
 
         return $this->client
@@ -1921,10 +1921,10 @@ class EmailApi
      *
      * Send an Email
      *
-     * @param  \Com\Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
+     * @param  \Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmailUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1938,10 +1938,10 @@ class EmailApi
      *
      * Send an Email
      *
-     * @param  \Com\Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
+     * @param  \Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmailUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1979,7 +1979,7 @@ class EmailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1987,7 +1987,7 @@ class EmailApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2002,7 +2002,7 @@ class EmailApi
      *
      * Send an Email
      *
-     * @param  \Com\Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
+     * @param  \Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2023,7 +2023,7 @@ class EmailApi
      *
      * Send an Email
      *
-     * @param  \Com\Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
+     * @param  \Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2060,7 +2060,7 @@ class EmailApi
     /**
      * Create request for operation 'sendEmailUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
+     * @param  \Keap\Sdk\Core\Model\EmailSendRequest $email_send_request emailSendRequest (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmailUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

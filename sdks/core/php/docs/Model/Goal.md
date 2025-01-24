@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**historical_contact_counts** | [**\Com\Keap\Sdk\Core\Model\HistoricalCounts**](HistoricalCounts.md) |  | [optional]
+**historical_contact_counts** | [**\Keap\Sdk\Core\Model\HistoricalCounts**](HistoricalCounts.md) |  | [optional]
 **id** | **string** |  | [optional]
 **name** | **string** |  | [optional]
 **next_sequence_ids** | **string[]** |  | [optional]

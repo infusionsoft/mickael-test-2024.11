@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ProductInterestBundle Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class ProductInterestBundle implements ModelInterface, ArrayAccess, \JsonSeriali
         'description' => 'string',
         'id' => 'string',
         'name' => 'string',
-        'product_interests' => '\Com\Keap\Sdk\Core\Model\ProductInterest[]',
-        'subscription_plan_interests' => '\Com\Keap\Sdk\Core\Model\SubscriptionPlanInterest[]'
+        'product_interests' => '\Keap\Sdk\Core\Model\ProductInterest[]',
+        'subscription_plan_interests' => '\Keap\Sdk\Core\Model\SubscriptionPlanInterest[]'
     ];
 
     /**
@@ -401,7 +401,7 @@ class ProductInterestBundle implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets product_interests
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductInterest[]|null
+     * @return \Keap\Sdk\Core\Model\ProductInterest[]|null
      */
     public function getProductInterests()
     {
@@ -411,7 +411,7 @@ class ProductInterestBundle implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets product_interests
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductInterest[]|null $product_interests Product interests
+     * @param \Keap\Sdk\Core\Model\ProductInterest[]|null $product_interests Product interests
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class ProductInterestBundle implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets subscription_plan_interests
      *
-     * @return \Com\Keap\Sdk\Core\Model\SubscriptionPlanInterest[]|null
+     * @return \Keap\Sdk\Core\Model\SubscriptionPlanInterest[]|null
      */
     public function getSubscriptionPlanInterests()
     {
@@ -438,7 +438,7 @@ class ProductInterestBundle implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets subscription_plan_interests
      *
-     * @param \Com\Keap\Sdk\Core\Model\SubscriptionPlanInterest[]|null $subscription_plan_interests Subscription plan interests
+     * @param \Keap\Sdk\Core\Model\SubscriptionPlanInterest[]|null $subscription_plan_interests Subscription plan interests
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\EmailApi
+# Keap\Sdk\Core\EmailApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createEmailUsingPOST1()`
 
 ```php
-createEmailUsingPOST1($create_email_sent_request): \Com\Keap\Sdk\Core\Model\EmailSentWithContent
+createEmailUsingPOST1($create_email_sent_request): \Keap\Sdk\Core\Model\EmailSentWithContent
 ```
 
 Create an Email Record
@@ -29,12 +29,12 @@ Creates a Record of an Email sent to a Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_email_sent_request = new \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest(); // \Com\Keap\Sdk\Core\Model\CreateEmailSentRequest | emailWithContent
+$create_email_sent_request = new \Keap\Sdk\Core\Model\CreateEmailSentRequest(); // \Keap\Sdk\Core\Model\CreateEmailSentRequest | emailWithContent
 
 try {
     $result = $apiInstance->createEmailUsingPOST1($create_email_sent_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_email_sent_request** | [**\Com\Keap\Sdk\Core\Model\CreateEmailSentRequest**](../Model/CreateEmailSentRequest.md)| emailWithContent | |
+| **create_email_sent_request** | [**\Keap\Sdk\Core\Model\CreateEmailSentRequest**](../Model/CreateEmailSentRequest.md)| emailWithContent | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\EmailSentWithContent**](../Model/EmailSentWithContent.md)
+[**\Keap\Sdk\Core\Model\EmailSentWithContent**](../Model/EmailSentWithContent.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `createEmailsUsingPOST1()`
 
 ```php
-createEmailsUsingPOST1($create_emails_sent_request): \Com\Keap\Sdk\Core\Model\EmailsSentList
+createEmailsUsingPOST1($create_emails_sent_request): \Keap\Sdk\Core\Model\EmailsSentList
 ```
 
 Create a set of Email Records
@@ -84,12 +84,12 @@ Creates a set of Records of Emails sent to Contacts, maximum 1000 per transactio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_emails_sent_request = new \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest(); // \Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest | Email records to persist, with content.
+$create_emails_sent_request = new \Keap\Sdk\Core\Model\CreateEmailsSentRequest(); // \Keap\Sdk\Core\Model\CreateEmailsSentRequest | Email records to persist, with content.
 
 try {
     $result = $apiInstance->createEmailsUsingPOST1($create_emails_sent_request);
@@ -103,11 +103,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_emails_sent_request** | [**\Com\Keap\Sdk\Core\Model\CreateEmailsSentRequest**](../Model/CreateEmailsSentRequest.md)| Email records to persist, with content. | [optional] |
+| **create_emails_sent_request** | [**\Keap\Sdk\Core\Model\CreateEmailsSentRequest**](../Model/CreateEmailsSentRequest.md)| Email records to persist, with content. | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\EmailsSentList**](../Model/EmailsSentList.md)
+[**\Keap\Sdk\Core\Model\EmailsSentList**](../Model/EmailsSentList.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Deletes a specific Email Record
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -179,7 +179,7 @@ No authorization required
 ## `deleteEmailsUsingPOST1()`
 
 ```php
-deleteEmailsUsingPOST1($delete_emails_request): \Com\Keap\Sdk\Core\Model\DeleteEmailsResponse
+deleteEmailsUsingPOST1($delete_emails_request): \Keap\Sdk\Core\Model\DeleteEmailsResponse
 ```
 
 Remove a set of Email Records
@@ -193,12 +193,12 @@ Removes a set of Email Records
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$delete_emails_request = new \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest(); // \Com\Keap\Sdk\Core\Model\DeleteEmailsRequest | deleteEmailsRequest
+$delete_emails_request = new \Keap\Sdk\Core\Model\DeleteEmailsRequest(); // \Keap\Sdk\Core\Model\DeleteEmailsRequest | deleteEmailsRequest
 
 try {
     $result = $apiInstance->deleteEmailsUsingPOST1($delete_emails_request);
@@ -212,11 +212,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **delete_emails_request** | [**\Com\Keap\Sdk\Core\Model\DeleteEmailsRequest**](../Model/DeleteEmailsRequest.md)| deleteEmailsRequest | |
+| **delete_emails_request** | [**\Keap\Sdk\Core\Model\DeleteEmailsRequest**](../Model/DeleteEmailsRequest.md)| deleteEmailsRequest | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\DeleteEmailsResponse**](../Model/DeleteEmailsResponse.md)
+[**\Keap\Sdk\Core\Model\DeleteEmailsResponse**](../Model/DeleteEmailsResponse.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
 ## `getEmailUsingGET1()`
 
 ```php
-getEmailUsingGET1($id): \Com\Keap\Sdk\Core\Model\EmailSentWithContent
+getEmailUsingGET1($id): \Keap\Sdk\Core\Model\EmailSentWithContent
 ```
 
 Retrieve an Email
@@ -248,7 +248,7 @@ Retrieves a single Email that has been sent
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -271,7 +271,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\EmailSentWithContent**](../Model/EmailSentWithContent.md)
+[**\Keap\Sdk\Core\Model\EmailSentWithContent**](../Model/EmailSentWithContent.md)
 
 ### Authorization
 
@@ -303,12 +303,12 @@ Sends an Email to a list of Contacts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$email_send_request = new \Com\Keap\Sdk\Core\Model\EmailSendRequest(); // \Com\Keap\Sdk\Core\Model\EmailSendRequest | emailSendRequest
+$email_send_request = new \Keap\Sdk\Core\Model\EmailSendRequest(); // \Keap\Sdk\Core\Model\EmailSendRequest | emailSendRequest
 
 try {
     $apiInstance->sendEmailUsingPOST1($email_send_request);
@@ -321,7 +321,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email_send_request** | [**\Com\Keap\Sdk\Core\Model\EmailSendRequest**](../Model/EmailSendRequest.md)| emailSendRequest | [optional] |
+| **email_send_request** | [**\Keap\Sdk\Core\Model\EmailSendRequest**](../Model/EmailSendRequest.md)| emailSendRequest | [optional] |
 
 ### Return type
 

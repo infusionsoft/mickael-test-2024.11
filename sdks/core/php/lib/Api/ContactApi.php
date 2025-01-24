@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ContactApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -160,12 +160,12 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ContactLinkType|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ContactLinkType|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createContactLinkTypeUsingPOST($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
@@ -178,12 +178,12 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ContactLinkType|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ContactLinkType|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContactLinkTypeUsingPOSTWithHttpInfo($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
@@ -214,11 +214,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\ContactLinkType' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ContactLinkType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ContactLinkType' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ContactLinkType' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -236,16 +236,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ContactLinkType', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ContactLinkType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -263,16 +263,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -290,7 +290,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -309,7 +309,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ContactLinkType';
+            $returnType = '\Keap\Sdk\Core\Model\ContactLinkType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -342,7 +342,7 @@ class ContactApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ContactLinkType',
+                        '\Keap\Sdk\Core\Model\ContactLinkType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -358,7 +358,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -373,7 +373,7 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -394,7 +394,7 @@ class ContactApi
      *
      * Create a Contact Link type
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -402,7 +402,7 @@ class ContactApi
      */
     public function createContactLinkTypeUsingPOSTAsyncWithHttpInfo($create_contact_link_type_request, string $contentType = self::contentTypes['createContactLinkTypeUsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ContactLinkType';
+        $returnType = '\Keap\Sdk\Core\Model\ContactLinkType';
         $request = $this->createContactLinkTypeUsingPOSTRequest($create_contact_link_type_request, $contentType);
 
         return $this->client
@@ -444,7 +444,7 @@ class ContactApi
     /**
      * Create request for operation 'createContactLinkTypeUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest $create_contact_link_type_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactLinkTypeUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -537,12 +537,12 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Contact|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createContactUsingPOST1($create_update_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
@@ -555,12 +555,12 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Contact|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContactUsingPOST1WithHttpInfo($create_update_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
@@ -591,11 +591,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\Contact' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Contact' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Contact' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -613,16 +613,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -640,16 +640,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -667,7 +667,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -686,7 +686,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
+            $returnType = '\Keap\Sdk\Core\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -719,7 +719,7 @@ class ContactApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Contact',
+                        '\Keap\Sdk\Core\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -727,7 +727,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -735,7 +735,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -750,7 +750,7 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -771,7 +771,7 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -779,7 +779,7 @@ class ContactApi
      */
     public function createContactUsingPOST1AsyncWithHttpInfo($create_update_contact_request = null, string $contentType = self::contentTypes['createContactUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
+        $returnType = '\Keap\Sdk\Core\Model\Contact';
         $request = $this->createContactUsingPOST1Request($create_update_contact_request, $contentType);
 
         return $this->client
@@ -821,7 +821,7 @@ class ContactApi
     /**
      * Create request for operation 'createContactUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContactUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -911,7 +911,7 @@ class ContactApi
      * @param  string $contact_id contact_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteContactUsingDELETE1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -928,7 +928,7 @@ class ContactApi
      * @param  string $contact_id contact_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteContactUsingDELETE1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -966,7 +966,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -974,7 +974,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,7 +982,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,9 +1153,9 @@ class ContactApi
      * @param  string[] $fields Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContactUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Contact|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getContactUsingGET1($contact_id, $fields = null, string $contentType = self::contentTypes['getContactUsingGET1'][0])
     {
@@ -1172,9 +1172,9 @@ class ContactApi
      * @param  string[] $fields Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContactUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Contact|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactUsingGET1WithHttpInfo($contact_id, $fields = null, string $contentType = self::contentTypes['getContactUsingGET1'][0])
     {
@@ -1205,11 +1205,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Contact' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Contact' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Contact' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1227,16 +1227,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1254,16 +1254,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1281,16 +1281,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1308,7 +1308,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1327,7 +1327,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
+            $returnType = '\Keap\Sdk\Core\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1360,7 +1360,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Contact',
+                        '\Keap\Sdk\Core\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1368,7 +1368,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1376,7 +1376,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1384,7 +1384,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1430,7 +1430,7 @@ class ContactApi
      */
     public function getContactUsingGET1AsyncWithHttpInfo($contact_id, $fields = null, string $contentType = self::contentTypes['getContactUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
+        $returnType = '\Keap\Sdk\Core\Model\Contact';
         $request = $this->getContactUsingGET1Request($contact_id, $fields, $contentType);
 
         return $this->client
@@ -1577,12 +1577,12 @@ class ContactApi
      *
      * Link Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkContactsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ContactLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ContactLink|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function linkContactsUsingPOST($link_contacts_request, string $contentType = self::contentTypes['linkContactsUsingPOST'][0])
     {
@@ -1595,12 +1595,12 @@ class ContactApi
      *
      * Link Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkContactsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ContactLink|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ContactLink|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkContactsUsingPOSTWithHttpInfo($link_contacts_request, string $contentType = self::contentTypes['linkContactsUsingPOST'][0])
     {
@@ -1631,11 +1631,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\ContactLink' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ContactLink' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ContactLink' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ContactLink' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1653,16 +1653,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ContactLink', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ContactLink', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1680,16 +1680,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1707,7 +1707,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1726,7 +1726,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ContactLink';
+            $returnType = '\Keap\Sdk\Core\Model\ContactLink';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1759,7 +1759,7 @@ class ContactApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ContactLink',
+                        '\Keap\Sdk\Core\Model\ContactLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1767,7 +1767,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1775,7 +1775,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1790,7 +1790,7 @@ class ContactApi
      *
      * Link Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkContactsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1811,7 +1811,7 @@ class ContactApi
      *
      * Link Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkContactsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1819,7 +1819,7 @@ class ContactApi
      */
     public function linkContactsUsingPOSTAsyncWithHttpInfo($link_contacts_request, string $contentType = self::contentTypes['linkContactsUsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ContactLink';
+        $returnType = '\Keap\Sdk\Core\Model\ContactLink';
         $request = $this->linkContactsUsingPOSTRequest($link_contacts_request, $contentType);
 
         return $this->client
@@ -1861,7 +1861,7 @@ class ContactApi
     /**
      * Create request for operation 'linkContactsUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['linkContactsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1960,9 +1960,9 @@ class ContactApi
      * @param  string $page_token page_token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactLinkTypesUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListContactLinkTypesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listContactLinkTypesUsingGET($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactLinkTypesUsingGET'][0])
     {
@@ -1981,9 +1981,9 @@ class ContactApi
      * @param  string $page_token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactLinkTypesUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListContactLinkTypesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactLinkTypesUsingGETWithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactLinkTypesUsingGET'][0])
     {
@@ -2014,11 +2014,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListContactLinkTypesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListContactLinkTypesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2036,16 +2036,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListContactLinkTypesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2063,16 +2063,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2090,16 +2090,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2117,7 +2117,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2136,7 +2136,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListContactLinkTypesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2169,7 +2169,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse',
+                        '\Keap\Sdk\Core\Model\ListContactLinkTypesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2177,7 +2177,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2185,7 +2185,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2193,7 +2193,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2243,7 +2243,7 @@ class ContactApi
      */
     public function listContactLinkTypesUsingGETAsyncWithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactLinkTypesUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListContactLinkTypesResponse';
         $request = $this->listContactLinkTypesUsingGETRequest($filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -2410,9 +2410,9 @@ class ContactApi
      * @param  string $contact_id contact_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactLinksUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListContactLinksResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListContactLinksResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listContactLinksUsingGET($contact_id, string $contentType = self::contentTypes['listContactLinksUsingGET'][0])
     {
@@ -2428,9 +2428,9 @@ class ContactApi
      * @param  string $contact_id contact_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactLinksUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListContactLinksResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListContactLinksResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactLinksUsingGETWithHttpInfo($contact_id, string $contentType = self::contentTypes['listContactLinksUsingGET'][0])
     {
@@ -2461,11 +2461,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListContactLinksResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListContactLinksResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListContactLinksResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListContactLinksResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2483,16 +2483,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListContactLinksResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListContactLinksResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2510,16 +2510,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2537,16 +2537,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2564,7 +2564,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2583,7 +2583,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListContactLinksResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListContactLinksResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2616,7 +2616,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListContactLinksResponse',
+                        '\Keap\Sdk\Core\Model\ListContactLinksResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2624,7 +2624,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2632,7 +2632,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2640,7 +2640,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2684,7 +2684,7 @@ class ContactApi
      */
     public function listContactLinksUsingGETAsyncWithHttpInfo($contact_id, string $contentType = self::contentTypes['listContactLinksUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListContactLinksResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListContactLinksResponse';
         $request = $this->listContactLinksUsingGETRequest($contact_id, $contentType);
 
         return $this->client
@@ -2827,9 +2827,9 @@ class ContactApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactsUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListContactsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListContactsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listContactsUsingGET1($fields = null, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactsUsingGET1'][0])
     {
@@ -2849,9 +2849,9 @@ class ContactApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactsUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListContactsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListContactsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactsUsingGET1WithHttpInfo($fields = null, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactsUsingGET1'][0])
     {
@@ -2882,11 +2882,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListContactsResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListContactsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListContactsResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListContactsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2904,16 +2904,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListContactsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListContactsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2931,16 +2931,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2958,16 +2958,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2985,7 +2985,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3004,7 +3004,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListContactsResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListContactsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3037,7 +3037,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListContactsResponse',
+                        '\Keap\Sdk\Core\Model\ListContactsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3045,7 +3045,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3053,7 +3053,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3061,7 +3061,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3113,7 +3113,7 @@ class ContactApi
      */
     public function listContactsUsingGET1AsyncWithHttpInfo($fields = null, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactsUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListContactsResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListContactsResponse';
         $request = $this->listContactsUsingGET1Request($fields, $filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -3297,9 +3297,9 @@ class ContactApi
      * @param  int $contact_id contact_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPaymentMethodsUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\PaymentMethodList|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\PaymentMethodList|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listPaymentMethodsUsingGET($contact_id, string $contentType = self::contentTypes['listPaymentMethodsUsingGET'][0])
     {
@@ -3315,9 +3315,9 @@ class ContactApi
      * @param  int $contact_id contact_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPaymentMethodsUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\PaymentMethodList|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\PaymentMethodList|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPaymentMethodsUsingGETWithHttpInfo($contact_id, string $contentType = self::contentTypes['listPaymentMethodsUsingGET'][0])
     {
@@ -3348,11 +3348,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\PaymentMethodList' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\PaymentMethodList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\PaymentMethodList' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\PaymentMethodList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3370,16 +3370,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\PaymentMethodList', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\PaymentMethodList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3397,16 +3397,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3424,16 +3424,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3451,7 +3451,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3470,7 +3470,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\PaymentMethodList';
+            $returnType = '\Keap\Sdk\Core\Model\PaymentMethodList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3503,7 +3503,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\PaymentMethodList',
+                        '\Keap\Sdk\Core\Model\PaymentMethodList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3511,7 +3511,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3519,7 +3519,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3527,7 +3527,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3571,7 +3571,7 @@ class ContactApi
      */
     public function listPaymentMethodsUsingGETAsyncWithHttpInfo($contact_id, string $contentType = self::contentTypes['listPaymentMethodsUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\PaymentMethodList';
+        $returnType = '\Keap\Sdk\Core\Model\PaymentMethodList';
         $request = $this->listPaymentMethodsUsingGETRequest($contact_id, $contentType);
 
         return $this->client
@@ -3709,9 +3709,9 @@ class ContactApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveContactModelUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ObjectModel|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ObjectModel|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function retrieveContactModelUsingGET1(string $contentType = self::contentTypes['retrieveContactModelUsingGET1'][0])
     {
@@ -3726,9 +3726,9 @@ class ContactApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retrieveContactModelUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ObjectModel|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ObjectModel|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveContactModelUsingGET1WithHttpInfo(string $contentType = self::contentTypes['retrieveContactModelUsingGET1'][0])
     {
@@ -3759,11 +3759,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ObjectModel' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ObjectModel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ObjectModel' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ObjectModel' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3781,16 +3781,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ObjectModel', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ObjectModel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3808,16 +3808,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3835,16 +3835,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3862,7 +3862,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3881,7 +3881,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ObjectModel';
+            $returnType = '\Keap\Sdk\Core\Model\ObjectModel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3914,7 +3914,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ObjectModel',
+                        '\Keap\Sdk\Core\Model\ObjectModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3922,7 +3922,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3930,7 +3930,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3938,7 +3938,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3980,7 +3980,7 @@ class ContactApi
      */
     public function retrieveContactModelUsingGET1AsyncWithHttpInfo(string $contentType = self::contentTypes['retrieveContactModelUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ObjectModel';
+        $returnType = '\Keap\Sdk\Core\Model\ObjectModel';
         $request = $this->retrieveContactModelUsingGET1Request($contentType);
 
         return $this->client
@@ -4100,10 +4100,10 @@ class ContactApi
      *
      * Delete Link between two Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unlinkContactsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4117,10 +4117,10 @@ class ContactApi
      *
      * Delete Link between two Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unlinkContactsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4158,7 +4158,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4166,7 +4166,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4181,7 +4181,7 @@ class ContactApi
      *
      * Delete Link between two Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unlinkContactsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4202,7 +4202,7 @@ class ContactApi
      *
      * Delete Link between two Contacts
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unlinkContactsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4239,7 +4239,7 @@ class ContactApi
     /**
      * Create request for operation 'unlinkContactsUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
+     * @param  \Keap\Sdk\Core\Model\LinkContactsRequest $link_contacts_request linkContactsRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unlinkContactsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4334,12 +4334,12 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContactUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Contact|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateContactUsingPATCH($contact_id, $update_mask = null, $create_update_contact_request = null, string $contentType = self::contentTypes['updateContactUsingPATCH'][0])
     {
@@ -4354,12 +4354,12 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContactUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Contact|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Contact|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContactUsingPATCHWithHttpInfo($contact_id, $update_mask = null, $create_update_contact_request = null, string $contentType = self::contentTypes['updateContactUsingPATCH'][0])
     {
@@ -4390,11 +4390,11 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Contact' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Contact' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Contact' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4412,16 +4412,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4439,16 +4439,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4466,16 +4466,16 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4493,7 +4493,7 @@ class ContactApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4512,7 +4512,7 @@ class ContactApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
+            $returnType = '\Keap\Sdk\Core\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4545,7 +4545,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Contact',
+                        '\Keap\Sdk\Core\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4553,7 +4553,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4561,7 +4561,7 @@ class ContactApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4569,7 +4569,7 @@ class ContactApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4586,7 +4586,7 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4609,7 +4609,7 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4617,7 +4617,7 @@ class ContactApi
      */
     public function updateContactUsingPATCHAsyncWithHttpInfo($contact_id, $update_mask = null, $create_update_contact_request = null, string $contentType = self::contentTypes['updateContactUsingPATCH'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Contact';
+        $returnType = '\Keap\Sdk\Core\Model\Contact';
         $request = $this->updateContactUsingPATCHRequest($contact_id, $update_mask, $create_update_contact_request, $contentType);
 
         return $this->client
@@ -4661,7 +4661,7 @@ class ContactApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateContactRequest $create_update_contact_request contact (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContactUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

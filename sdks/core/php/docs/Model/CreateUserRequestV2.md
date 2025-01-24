@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **admin** | **bool** |  | [optional]
-**email_address** | [**\Com\Keap\Sdk\Core\Model\EmailAddressRequest**](EmailAddressRequest.md) |  |
+**email_address** | [**\Keap\Sdk\Core\Model\EmailAddressRequest**](EmailAddressRequest.md) |  |
 **given_name** | **string** |  |
 **partner** | **bool** |  | [optional]
 

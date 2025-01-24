@@ -94,7 +94,8 @@ class BusinessProfileApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -159,7 +160,8 @@ class BusinessProfileApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -224,7 +226,8 @@ class BusinessProfileApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -353,7 +356,8 @@ class BusinessProfileApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -426,7 +430,8 @@ class BusinessProfileApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -499,7 +504,8 @@ class BusinessProfileApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

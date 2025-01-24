@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\CompanyApi
+# Keap\Sdk\Core\CompanyApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createCompanyUsingPOST1()`
 
 ```php
-createCompanyUsingPOST1($create_company_request): \Com\Keap\Sdk\Core\Model\Company
+createCompanyUsingPOST1($create_company_request): \Keap\Sdk\Core\Model\Company
 ```
 
 Create a Company
@@ -28,12 +28,12 @@ Creates a new Company.`country_code` is required if `region` is specified.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
+$apiInstance = new Keap\Sdk\Core\Api\CompanyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_company_request = new \Com\Keap\Sdk\Core\Model\CreateCompanyRequest(); // \Com\Keap\Sdk\Core\Model\CreateCompanyRequest | company
+$create_company_request = new \Keap\Sdk\Core\Model\CreateCompanyRequest(); // \Keap\Sdk\Core\Model\CreateCompanyRequest | company
 
 try {
     $result = $apiInstance->createCompanyUsingPOST1($create_company_request);
@@ -47,11 +47,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_company_request** | [**\Com\Keap\Sdk\Core\Model\CreateCompanyRequest**](../Model/CreateCompanyRequest.md)| company | [optional] |
+| **create_company_request** | [**\Keap\Sdk\Core\Model\CreateCompanyRequest**](../Model/CreateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Company**](../Model/Company.md)
+[**\Keap\Sdk\Core\Model\Company**](../Model/Company.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Deletes the specified Company
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
+$apiInstance = new Keap\Sdk\Core\Api\CompanyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -123,7 +123,7 @@ No authorization required
 ## `getCompanyUsingGET1()`
 
 ```php
-getCompanyUsingGET1($company_id, $fields): \Com\Keap\Sdk\Core\Model\Company
+getCompanyUsingGET1($company_id, $fields): \Keap\Sdk\Core\Model\Company
 ```
 
 Retrieve a Company
@@ -137,7 +137,7 @@ Retrieves a single Company
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
+$apiInstance = new Keap\Sdk\Core\Api\CompanyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Company**](../Model/Company.md)
+[**\Keap\Sdk\Core\Model\Company**](../Model/Company.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `listCompaniesUsingGET1()`
 
 ```php
-listCompaniesUsingGET1($fields, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListCompaniesResponse
+listCompaniesUsingGET1($fields, $filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListCompaniesResponse
 ```
 
 List Companies
@@ -194,7 +194,7 @@ Retrieves a list of all Companies
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
+$apiInstance = new Keap\Sdk\Core\Api\CompanyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -225,7 +225,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListCompaniesResponse**](../Model/ListCompaniesResponse.md)
+[**\Keap\Sdk\Core\Model\ListCompaniesResponse**](../Model/ListCompaniesResponse.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 ## `updateCompanyUsingPATCH1()`
 
 ```php
-updateCompanyUsingPATCH1($company_id, $update_mask, $update_company_request): \Com\Keap\Sdk\Core\Model\Company
+updateCompanyUsingPATCH1($company_id, $update_mask, $update_company_request): \Keap\Sdk\Core\Model\Company
 ```
 
 Update a Company
@@ -257,14 +257,14 @@ Updates a Company with the values provided in the request
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\CompanyApi(
+$apiInstance = new Keap\Sdk\Core\Api\CompanyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $company_id = 'company_id_example'; // string | company_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$update_company_request = new \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest | company
+$update_company_request = new \Keap\Sdk\Core\Model\UpdateCompanyRequest(); // \Keap\Sdk\Core\Model\UpdateCompanyRequest | company
 
 try {
     $result = $apiInstance->updateCompanyUsingPATCH1($company_id, $update_mask, $update_company_request);
@@ -280,11 +280,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **company_id** | **string**| company_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **update_company_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCompanyRequest**](../Model/UpdateCompanyRequest.md)| company | [optional] |
+| **update_company_request** | [**\Keap\Sdk\Core\Model\UpdateCompanyRequest**](../Model/UpdateCompanyRequest.md)| company | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Company**](../Model/Company.md)
+[**\Keap\Sdk\Core\Model\Company**](../Model/Company.md)
 
 ### Authorization
 

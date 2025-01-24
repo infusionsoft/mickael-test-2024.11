@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **choose_affiliate** | **bool** |  | [optional]
-**commission** | [**\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission**](ApplicationConfigurationModuleAffiliateCommission.md) |  | [optional]
+**commission** | [**\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission**](ApplicationConfigurationModuleAffiliateCommission.md) |  | [optional]
 **custom_affiliate_url** | **string** |  | [optional]
 **display_affiliate_ip_address** | **bool** |  | [optional]
 **do_not_notify_affiliate** | **bool** |  | [optional]

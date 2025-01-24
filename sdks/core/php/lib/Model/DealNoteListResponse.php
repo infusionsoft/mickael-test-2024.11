@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * DealNoteListResponse Class Doc Comment
  *
  * @category Class
  * @description Response model for a list of deal notes.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DealNoteListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'notes' => '\Com\Keap\Sdk\Core\Model\DealNote[]'
+        'notes' => '\Keap\Sdk\Core\Model\DealNote[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class DealNoteListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets notes
      *
-     * @return \Com\Keap\Sdk\Core\Model\DealNote[]|null
+     * @return \Keap\Sdk\Core\Model\DealNote[]|null
      */
     public function getNotes()
     {
@@ -337,7 +337,7 @@ class DealNoteListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets notes
      *
-     * @param \Com\Keap\Sdk\Core\Model\DealNote[]|null $notes The list of Note entities.
+     * @param \Keap\Sdk\Core\Model\DealNote[]|null $notes The list of Note entities.
      *
      * @return self
      */

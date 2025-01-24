@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListTagCategoriesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListTagCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'tag_categories' => '\Com\Keap\Sdk\Core\Model\Tag[]'
+        'tag_categories' => '\Keap\Sdk\Core\Model\Tag[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListTagCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets tag_categories
      *
-     * @return \Com\Keap\Sdk\Core\Model\Tag[]|null
+     * @return \Keap\Sdk\Core\Model\Tag[]|null
      */
     public function getTagCategories()
     {
@@ -336,7 +336,7 @@ class ListTagCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets tag_categories
      *
-     * @param \Com\Keap\Sdk\Core\Model\Tag[]|null $tag_categories tag_categories
+     * @param \Keap\Sdk\Core\Model\Tag[]|null $tag_categories tag_categories
      *
      * @return self
      */

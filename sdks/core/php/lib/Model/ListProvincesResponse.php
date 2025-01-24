@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListProvincesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListProvincesResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'provinces' => '\Com\Keap\Sdk\Core\Model\Provinces[]'
+        'provinces' => '\Keap\Sdk\Core\Model\Provinces[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class ListProvincesResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets provinces
      *
-     * @return \Com\Keap\Sdk\Core\Model\Provinces[]
+     * @return \Keap\Sdk\Core\Model\Provinces[]
      */
     public function getProvinces()
     {
@@ -305,7 +305,7 @@ class ListProvincesResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets provinces
      *
-     * @param \Com\Keap\Sdk\Core\Model\Provinces[] $provinces A key-value pair of province code and province name.
+     * @param \Keap\Sdk\Core\Model\Provinces[] $provinces A key-value pair of province code and province name.
      *
      * @return self
      */

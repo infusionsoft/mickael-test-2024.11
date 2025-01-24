@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next_page_token** | **string** |  | [optional]
-**product_interest_bundles** | [**\Com\Keap\Sdk\Core\Model\ProductInterestBundle[]**](ProductInterestBundle.md) |  | [optional]
+**product_interest_bundles** | [**\Keap\Sdk\Core\Model\ProductInterestBundle[]**](ProductInterestBundle.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

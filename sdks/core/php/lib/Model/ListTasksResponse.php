@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListTasksResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'tasks' => '\Com\Keap\Sdk\Core\Model\Task[]'
+        'tasks' => '\Keap\Sdk\Core\Model\Task[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets tasks
      *
-     * @return \Com\Keap\Sdk\Core\Model\Task[]|null
+     * @return \Keap\Sdk\Core\Model\Task[]|null
      */
     public function getTasks()
     {
@@ -336,7 +336,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets tasks
      *
-     * @param \Com\Keap\Sdk\Core\Model\Task[]|null $tasks tasks
+     * @param \Keap\Sdk\Core\Model\Task[]|null $tasks tasks
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Sequence Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,10 +59,10 @@ class Sequence implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'active_contact_count' => 'int',
         'active_contact_count_completed' => 'int',
-        'historical_contact_count' => '\Com\Keap\Sdk\Core\Model\HistoricalCounts',
+        'historical_contact_count' => '\Keap\Sdk\Core\Model\HistoricalCounts',
         'id' => 'string',
         'name' => 'string',
-        'paths' => '\Com\Keap\Sdk\Core\Model\SequencePath[]'
+        'paths' => '\Keap\Sdk\Core\Model\SequencePath[]'
     ];
 
     /**
@@ -381,7 +381,7 @@ class Sequence implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets historical_contact_count
      *
-     * @return \Com\Keap\Sdk\Core\Model\HistoricalCounts|null
+     * @return \Keap\Sdk\Core\Model\HistoricalCounts|null
      */
     public function getHistoricalContactCount()
     {
@@ -391,7 +391,7 @@ class Sequence implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets historical_contact_count
      *
-     * @param \Com\Keap\Sdk\Core\Model\HistoricalCounts|null $historical_contact_count historical_contact_count
+     * @param \Keap\Sdk\Core\Model\HistoricalCounts|null $historical_contact_count historical_contact_count
      *
      * @return self
      */
@@ -462,7 +462,7 @@ class Sequence implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets paths
      *
-     * @return \Com\Keap\Sdk\Core\Model\SequencePath[]|null
+     * @return \Keap\Sdk\Core\Model\SequencePath[]|null
      */
     public function getPaths()
     {
@@ -472,7 +472,7 @@ class Sequence implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets paths
      *
-     * @param \Com\Keap\Sdk\Core\Model\SequencePath[]|null $paths paths
+     * @param \Keap\Sdk\Core\Model\SequencePath[]|null $paths paths
      *
      * @return self
      */

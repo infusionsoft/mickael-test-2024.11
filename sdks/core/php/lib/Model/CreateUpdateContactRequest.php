@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CreateUpdateContactRequest Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,32 +57,32 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'addresses' => '\Com\Keap\Sdk\Core\Model\Address[]',
+        'addresses' => '\Keap\Sdk\Core\Model\Address[]',
         'anniversary_date' => 'string',
         'birth_date' => 'string',
-        'company' => '\Com\Keap\Sdk\Core\Model\BasicCompany',
+        'company' => '\Keap\Sdk\Core\Model\BasicCompany',
         'contact_type' => 'string',
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\CustomFieldValue[]',
-        'email_addresses' => '\Com\Keap\Sdk\Core\Model\EmailAddressRequest[]',
+        'custom_fields' => '\Keap\Sdk\Core\Model\CustomFieldValue[]',
+        'email_addresses' => '\Keap\Sdk\Core\Model\EmailAddressRequest[]',
         'family_name' => 'string',
-        'fax_numbers' => '\Com\Keap\Sdk\Core\Model\FaxNumber[]',
+        'fax_numbers' => '\Keap\Sdk\Core\Model\FaxNumber[]',
         'given_name' => 'string',
         'job_title' => 'string',
         'leadsource_id' => 'string',
         'middle_name' => 'string',
-        'origin' => '\Com\Keap\Sdk\Core\Model\OriginRequest',
+        'origin' => '\Keap\Sdk\Core\Model\OriginRequest',
         'owner_id' => 'string',
-        'phone_numbers' => '\Com\Keap\Sdk\Core\Model\PhoneNumber[]',
+        'phone_numbers' => '\Keap\Sdk\Core\Model\PhoneNumber[]',
         'preferred_locale' => 'string',
         'preferred_name' => 'string',
         'prefix' => 'string',
         'referral_code' => 'string',
-        'social_accounts' => '\Com\Keap\Sdk\Core\Model\SocialAccount[]',
+        'social_accounts' => '\Keap\Sdk\Core\Model\SocialAccount[]',
         'source_type' => 'string',
         'spouse_name' => 'string',
         'suffix' => 'string',
         'time_zone' => 'string',
-        'utm_parameters' => '\Com\Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest',
+        'utm_parameters' => '\Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest',
         'website' => 'string'
     ];
 
@@ -518,7 +518,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets addresses
      *
-     * @return \Com\Keap\Sdk\Core\Model\Address[]|null
+     * @return \Keap\Sdk\Core\Model\Address[]|null
      */
     public function getAddresses()
     {
@@ -528,7 +528,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets addresses
      *
-     * @param \Com\Keap\Sdk\Core\Model\Address[]|null $addresses Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
+     * @param \Keap\Sdk\Core\Model\Address[]|null $addresses Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
      *
      * @return self
      */
@@ -599,7 +599,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets company
      *
-     * @return \Com\Keap\Sdk\Core\Model\BasicCompany|null
+     * @return \Keap\Sdk\Core\Model\BasicCompany|null
      */
     public function getCompany()
     {
@@ -609,7 +609,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets company
      *
-     * @param \Com\Keap\Sdk\Core\Model\BasicCompany|null $company company
+     * @param \Keap\Sdk\Core\Model\BasicCompany|null $company company
      *
      * @return self
      */
@@ -653,7 +653,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\CustomFieldValue[]|null
+     * @return \Keap\Sdk\Core\Model\CustomFieldValue[]|null
      */
     public function getCustomFields()
     {
@@ -663,7 +663,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\CustomFieldValue[]|null $custom_fields Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
+     * @param \Keap\Sdk\Core\Model\CustomFieldValue[]|null $custom_fields Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
      *
      * @return self
      */
@@ -680,7 +680,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets email_addresses
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailAddressRequest[]|null
+     * @return \Keap\Sdk\Core\Model\EmailAddressRequest[]|null
      */
     public function getEmailAddresses()
     {
@@ -690,7 +690,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets email_addresses
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailAddressRequest[]|null $email_addresses Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
+     * @param \Keap\Sdk\Core\Model\EmailAddressRequest[]|null $email_addresses Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
      *
      * @return self
      */
@@ -734,7 +734,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets fax_numbers
      *
-     * @return \Com\Keap\Sdk\Core\Model\FaxNumber[]|null
+     * @return \Keap\Sdk\Core\Model\FaxNumber[]|null
      */
     public function getFaxNumbers()
     {
@@ -744,7 +744,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets fax_numbers
      *
-     * @param \Com\Keap\Sdk\Core\Model\FaxNumber[]|null $fax_numbers Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
+     * @param \Keap\Sdk\Core\Model\FaxNumber[]|null $fax_numbers Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
      *
      * @return self
      */
@@ -869,7 +869,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets origin
      *
-     * @return \Com\Keap\Sdk\Core\Model\OriginRequest|null
+     * @return \Keap\Sdk\Core\Model\OriginRequest|null
      */
     public function getOrigin()
     {
@@ -879,7 +879,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets origin
      *
-     * @param \Com\Keap\Sdk\Core\Model\OriginRequest|null $origin origin
+     * @param \Keap\Sdk\Core\Model\OriginRequest|null $origin origin
      *
      * @return self
      */
@@ -923,7 +923,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets phone_numbers
      *
-     * @return \Com\Keap\Sdk\Core\Model\PhoneNumber[]|null
+     * @return \Keap\Sdk\Core\Model\PhoneNumber[]|null
      */
     public function getPhoneNumbers()
     {
@@ -933,7 +933,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets phone_numbers
      *
-     * @param \Com\Keap\Sdk\Core\Model\PhoneNumber[]|null $phone_numbers Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
+     * @param \Keap\Sdk\Core\Model\PhoneNumber[]|null $phone_numbers Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
      *
      * @return self
      */
@@ -1058,7 +1058,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets social_accounts
      *
-     * @return \Com\Keap\Sdk\Core\Model\SocialAccount[]|null
+     * @return \Keap\Sdk\Core\Model\SocialAccount[]|null
      */
     public function getSocialAccounts()
     {
@@ -1068,7 +1068,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets social_accounts
      *
-     * @param \Com\Keap\Sdk\Core\Model\SocialAccount[]|null $social_accounts Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
+     * @param \Keap\Sdk\Core\Model\SocialAccount[]|null $social_accounts Any address not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.
      *
      * @return self
      */
@@ -1203,7 +1203,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets utm_parameters
      *
-     * @return \Com\Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest|null
+     * @return \Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest|null
      */
     public function getUtmParameters()
     {
@@ -1213,7 +1213,7 @@ class CreateUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets utm_parameters
      *
-     * @param \Com\Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest|null $utm_parameters utm_parameters
+     * @param \Keap\Sdk\Core\Model\CreateContactUtmPropertiesRequest|null $utm_parameters utm_parameters
      *
      * @return self
      */

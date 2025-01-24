@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\BusinessProfileApi
+# Keap\Sdk\Core\BusinessProfileApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `getBusinessProfileUsingGET()`
 
 ```php
-getBusinessProfileUsingGET(): \Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse
+getBusinessProfileUsingGET(): \Keap\Sdk\Core\Model\GetBusinessProfileResponse
 ```
 
 Retrieve Business Profile
@@ -25,7 +25,7 @@ Retrieves Business Profile information.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\BusinessProfileApi(
+$apiInstance = new Keap\Sdk\Core\Api\BusinessProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse**](../Model/GetBusinessProfileResponse.md)
+[**\Keap\Sdk\Core\Model\GetBusinessProfileResponse**](../Model/GetBusinessProfileResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 ## `updateBusinessProfileUsingPATCH()`
 
 ```php
-updateBusinessProfileUsingPATCH($update_mask, $update_business_profile_request): \Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse
+updateBusinessProfileUsingPATCH($update_mask, $update_business_profile_request): \Keap\Sdk\Core\Model\GetBusinessProfileResponse
 ```
 
 Update Business Profile
@@ -77,13 +77,13 @@ Updates Business Profile information.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\BusinessProfileApi(
+$apiInstance = new Keap\Sdk\Core\Api\BusinessProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$update_business_profile_request = new \Com\Keap\Sdk\Core\Model\UpdateBusinessProfileRequest(); // \Com\Keap\Sdk\Core\Model\UpdateBusinessProfileRequest | businessProfile
+$update_business_profile_request = new \Keap\Sdk\Core\Model\UpdateBusinessProfileRequest(); // \Keap\Sdk\Core\Model\UpdateBusinessProfileRequest | businessProfile
 
 try {
     $result = $apiInstance->updateBusinessProfileUsingPATCH($update_mask, $update_business_profile_request);
@@ -98,11 +98,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **update_business_profile_request** | [**\Com\Keap\Sdk\Core\Model\UpdateBusinessProfileRequest**](../Model/UpdateBusinessProfileRequest.md)| businessProfile | [optional] |
+| **update_business_profile_request** | [**\Keap\Sdk\Core\Model\UpdateBusinessProfileRequest**](../Model/UpdateBusinessProfileRequest.md)| businessProfile | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetBusinessProfileResponse**](../Model/GetBusinessProfileResponse.md)
+[**\Keap\Sdk\Core\Model\GetBusinessProfileResponse**](../Model/GetBusinessProfileResponse.md)
 
 ### Authorization
 

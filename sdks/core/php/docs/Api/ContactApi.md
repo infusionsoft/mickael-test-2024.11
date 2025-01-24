@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\ContactApi
+# Keap\Sdk\Core\ContactApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -21,7 +21,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createContactLinkTypeUsingPOST()`
 
 ```php
-createContactLinkTypeUsingPOST($create_contact_link_type_request): \Com\Keap\Sdk\Core\Model\ContactLinkType
+createContactLinkTypeUsingPOST($create_contact_link_type_request): \Keap\Sdk\Core\Model\ContactLinkType
 ```
 
 Create a Contact Link type
@@ -35,12 +35,12 @@ Creates a new type of Contact Link
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_contact_link_type_request = new \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest(); // \Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest | request
+$create_contact_link_type_request = new \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest(); // \Keap\Sdk\Core\Model\CreateContactLinkTypeRequest | request
 
 try {
     $result = $apiInstance->createContactLinkTypeUsingPOST($create_contact_link_type_request);
@@ -54,11 +54,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_contact_link_type_request** | [**\Com\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest**](../Model/CreateContactLinkTypeRequest.md)| request | |
+| **create_contact_link_type_request** | [**\Keap\Sdk\Core\Model\CreateContactLinkTypeRequest**](../Model/CreateContactLinkTypeRequest.md)| request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ContactLinkType**](../Model/ContactLinkType.md)
+[**\Keap\Sdk\Core\Model\ContactLinkType**](../Model/ContactLinkType.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 ## `createContactUsingPOST1()`
 
 ```php
-createContactUsingPOST1($create_update_contact_request): \Com\Keap\Sdk\Core\Model\Contact
+createContactUsingPOST1($create_update_contact_request): \Keap\Sdk\Core\Model\Contact
 ```
 
 Create a Contact
@@ -90,12 +90,12 @@ Creates a new Contact. *Note:* Contact must contain at least one item in `email_
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_update_contact_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest | contact
+$create_update_contact_request = new \Keap\Sdk\Core\Model\CreateUpdateContactRequest(); // \Keap\Sdk\Core\Model\CreateUpdateContactRequest | contact
 
 try {
     $result = $apiInstance->createContactUsingPOST1($create_update_contact_request);
@@ -109,11 +109,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_update_contact_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest**](../Model/CreateUpdateContactRequest.md)| contact | [optional] |
+| **create_update_contact_request** | [**\Keap\Sdk\Core\Model\CreateUpdateContactRequest**](../Model/CreateUpdateContactRequest.md)| contact | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
+[**\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Deletes the specified Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -185,7 +185,7 @@ No authorization required
 ## `getContactUsingGET1()`
 
 ```php
-getContactUsingGET1($contact_id, $fields): \Com\Keap\Sdk\Core\Model\Contact
+getContactUsingGET1($contact_id, $fields): \Keap\Sdk\Core\Model\Contact
 ```
 
 Retrieve a Contact
@@ -199,7 +199,7 @@ Retrieves a single Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -224,7 +224,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
+[**\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
 ## `linkContactsUsingPOST()`
 
 ```php
-linkContactsUsingPOST($link_contacts_request): \Com\Keap\Sdk\Core\Model\ContactLink
+linkContactsUsingPOST($link_contacts_request): \Keap\Sdk\Core\Model\ContactLink
 ```
 
 Link Contacts
@@ -256,12 +256,12 @@ Links two Contacts together using the provided Link type
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$link_contacts_request = new \Com\Keap\Sdk\Core\Model\LinkContactsRequest(); // \Com\Keap\Sdk\Core\Model\LinkContactsRequest | linkContactsRequest
+$link_contacts_request = new \Keap\Sdk\Core\Model\LinkContactsRequest(); // \Keap\Sdk\Core\Model\LinkContactsRequest | linkContactsRequest
 
 try {
     $result = $apiInstance->linkContactsUsingPOST($link_contacts_request);
@@ -275,11 +275,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **link_contacts_request** | [**\Com\Keap\Sdk\Core\Model\LinkContactsRequest**](../Model/LinkContactsRequest.md)| linkContactsRequest | |
+| **link_contacts_request** | [**\Keap\Sdk\Core\Model\LinkContactsRequest**](../Model/LinkContactsRequest.md)| linkContactsRequest | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ContactLink**](../Model/ContactLink.md)
+[**\Keap\Sdk\Core\Model\ContactLink**](../Model/ContactLink.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ No authorization required
 ## `listContactLinkTypesUsingGET()`
 
 ```php
-listContactLinkTypesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse
+listContactLinkTypesUsingGET($filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListContactLinkTypesResponse
 ```
 
 List Contact Link types
@@ -311,7 +311,7 @@ Retrieves a list of Contact Link types.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -340,7 +340,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListContactLinkTypesResponse**](../Model/ListContactLinkTypesResponse.md)
+[**\Keap\Sdk\Core\Model\ListContactLinkTypesResponse**](../Model/ListContactLinkTypesResponse.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ No authorization required
 ## `listContactLinksUsingGET()`
 
 ```php
-listContactLinksUsingGET($contact_id): \Com\Keap\Sdk\Core\Model\ListContactLinksResponse
+listContactLinksUsingGET($contact_id): \Keap\Sdk\Core\Model\ListContactLinksResponse
 ```
 
 List Linked Contacts
@@ -372,7 +372,7 @@ Retrieves a list of Linked Contacts for a given Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -395,7 +395,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListContactLinksResponse**](../Model/ListContactLinksResponse.md)
+[**\Keap\Sdk\Core\Model\ListContactLinksResponse**](../Model/ListContactLinksResponse.md)
 
 ### Authorization
 
@@ -413,7 +413,7 @@ No authorization required
 ## `listContactsUsingGET1()`
 
 ```php
-listContactsUsingGET1($fields, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListContactsResponse
+listContactsUsingGET1($fields, $filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListContactsResponse
 ```
 
 List Contacts
@@ -427,7 +427,7 @@ Retrieves a list of Contacts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -458,7 +458,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListContactsResponse**](../Model/ListContactsResponse.md)
+[**\Keap\Sdk\Core\Model\ListContactsResponse**](../Model/ListContactsResponse.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ No authorization required
 ## `listPaymentMethodsUsingGET()`
 
 ```php
-listPaymentMethodsUsingGET($contact_id): \Com\Keap\Sdk\Core\Model\PaymentMethodList
+listPaymentMethodsUsingGET($contact_id): \Keap\Sdk\Core\Model\PaymentMethodList
 ```
 
 Retrieve Payment Methods
@@ -490,7 +490,7 @@ List all Payment Methods for a Contact.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -513,7 +513,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PaymentMethodList**](../Model/PaymentMethodList.md)
+[**\Keap\Sdk\Core\Model\PaymentMethodList**](../Model/PaymentMethodList.md)
 
 ### Authorization
 
@@ -531,7 +531,7 @@ No authorization required
 ## `retrieveContactModelUsingGET1()`
 
 ```php
-retrieveContactModelUsingGET1(): \Com\Keap\Sdk\Core\Model\ObjectModel
+retrieveContactModelUsingGET1(): \Keap\Sdk\Core\Model\ObjectModel
 ```
 
 Retrieve Contact Model
@@ -545,7 +545,7 @@ Get the custom fields and optional properties for the Contact object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -565,7 +565,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ObjectModel**](../Model/ObjectModel.md)
+[**\Keap\Sdk\Core\Model\ObjectModel**](../Model/ObjectModel.md)
 
 ### Authorization
 
@@ -597,12 +597,12 @@ Deletes Link between two Contacts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$link_contacts_request = new \Com\Keap\Sdk\Core\Model\LinkContactsRequest(); // \Com\Keap\Sdk\Core\Model\LinkContactsRequest | linkContactsRequest
+$link_contacts_request = new \Keap\Sdk\Core\Model\LinkContactsRequest(); // \Keap\Sdk\Core\Model\LinkContactsRequest | linkContactsRequest
 
 try {
     $apiInstance->unlinkContactsUsingPOST($link_contacts_request);
@@ -615,7 +615,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **link_contacts_request** | [**\Com\Keap\Sdk\Core\Model\LinkContactsRequest**](../Model/LinkContactsRequest.md)| linkContactsRequest | |
+| **link_contacts_request** | [**\Keap\Sdk\Core\Model\LinkContactsRequest**](../Model/LinkContactsRequest.md)| linkContactsRequest | |
 
 ### Return type
 
@@ -637,7 +637,7 @@ No authorization required
 ## `updateContactUsingPATCH()`
 
 ```php
-updateContactUsingPATCH($contact_id, $update_mask, $create_update_contact_request): \Com\Keap\Sdk\Core\Model\Contact
+updateContactUsingPATCH($contact_id, $update_mask, $create_update_contact_request): \Keap\Sdk\Core\Model\Contact
 ```
 
 Update a Contact
@@ -651,14 +651,14 @@ Updates a Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\ContactApi(
+$apiInstance = new Keap\Sdk\Core\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $contact_id = 'contact_id_example'; // string | contact_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$create_update_contact_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest | contact
+$create_update_contact_request = new \Keap\Sdk\Core\Model\CreateUpdateContactRequest(); // \Keap\Sdk\Core\Model\CreateUpdateContactRequest | contact
 
 try {
     $result = $apiInstance->updateContactUsingPATCH($contact_id, $update_mask, $create_update_contact_request);
@@ -674,11 +674,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **string**| contact_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **create_update_contact_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateContactRequest**](../Model/CreateUpdateContactRequest.md)| contact | [optional] |
+| **create_update_contact_request** | [**\Keap\Sdk\Core\Model\CreateUpdateContactRequest**](../Model/CreateUpdateContactRequest.md)| contact | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
+[**\Keap\Sdk\Core\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 

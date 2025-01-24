@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * EmailsSentList Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class EmailsSentList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'emails' => '\Com\Keap\Sdk\Core\Model\EmailSentWithContent[]',
-        'errors' => '\Com\Keap\Sdk\Core\Model\EmailSentCreateError[]'
+        'emails' => '\Keap\Sdk\Core\Model\EmailSentWithContent[]',
+        'errors' => '\Keap\Sdk\Core\Model\EmailSentCreateError[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class EmailsSentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets emails
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailSentWithContent[]|null
+     * @return \Keap\Sdk\Core\Model\EmailSentWithContent[]|null
      */
     public function getEmails()
     {
@@ -309,7 +309,7 @@ class EmailsSentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets emails
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailSentWithContent[]|null $emails emails
+     * @param \Keap\Sdk\Core\Model\EmailSentWithContent[]|null $emails emails
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class EmailsSentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets errors
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailSentCreateError[]|null
+     * @return \Keap\Sdk\Core\Model\EmailSentCreateError[]|null
      */
     public function getErrors()
     {
@@ -336,7 +336,7 @@ class EmailsSentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets errors
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailSentCreateError[]|null $errors errors
+     * @param \Keap\Sdk\Core\Model\EmailSentCreateError[]|null $errors errors
      *
      * @return self
      */

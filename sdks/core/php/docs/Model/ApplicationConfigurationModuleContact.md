@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address_labels** | [**\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleContactAddressLabels**](ApplicationConfigurationModuleContactAddressLabels.md) |  | [optional]
+**address_labels** | [**\Keap\Sdk\Core\Model\ApplicationConfigurationModuleContactAddressLabels**](ApplicationConfigurationModuleContactAddressLabels.md) |  | [optional]
 **contact_types** | **string** |  | [optional]
 **default_new_contact_form** | **string** |  | [optional]
 **disable_contact_edit_in_client_login** | **bool** |  | [optional]

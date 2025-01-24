@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListLandingPagesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListLandingPagesResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'landingpages' => '\Com\Keap\Sdk\Core\Model\LandingPage[]',
+        'landingpages' => '\Keap\Sdk\Core\Model\LandingPage[]',
         'next_page_token' => 'string',
         'page_size' => 'string',
         'pages' => 'string'
@@ -313,7 +313,7 @@ class ListLandingPagesResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets landingpages
      *
-     * @return \Com\Keap\Sdk\Core\Model\LandingPage[]|null
+     * @return \Keap\Sdk\Core\Model\LandingPage[]|null
      */
     public function getLandingpages()
     {
@@ -323,7 +323,7 @@ class ListLandingPagesResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets landingpages
      *
-     * @param \Com\Keap\Sdk\Core\Model\LandingPage[]|null $landingpages landingpages
+     * @param \Keap\Sdk\Core\Model\LandingPage[]|null $landingpages landingpages
      *
      * @return self
      */

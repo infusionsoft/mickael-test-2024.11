@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Goal Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class Goal implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'historical_contact_counts' => '\Com\Keap\Sdk\Core\Model\HistoricalCounts',
+        'historical_contact_counts' => '\Keap\Sdk\Core\Model\HistoricalCounts',
         'id' => 'string',
         'name' => 'string',
         'next_sequence_ids' => 'string[]',
@@ -397,7 +397,7 @@ class Goal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets historical_contact_counts
      *
-     * @return \Com\Keap\Sdk\Core\Model\HistoricalCounts|null
+     * @return \Keap\Sdk\Core\Model\HistoricalCounts|null
      */
     public function getHistoricalContactCounts()
     {
@@ -407,7 +407,7 @@ class Goal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets historical_contact_counts
      *
-     * @param \Com\Keap\Sdk\Core\Model\HistoricalCounts|null $historical_contact_counts historical_contact_counts
+     * @param \Keap\Sdk\Core\Model\HistoricalCounts|null $historical_contact_counts historical_contact_counts
      *
      * @return self
      */

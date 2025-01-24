@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * UpdateOpportunityRequestV2 Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class UpdateOpportunityRequestV2 implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPITypes = [
         'affiliate_id' => 'string',
         'contact_id' => 'string',
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\CustomField[]',
+        'custom_fields' => '\Keap\Sdk\Core\Model\CustomField[]',
         'estimated_close_time' => 'string',
         'include_in_forecast' => 'bool',
         'next_action_notes' => 'string',
@@ -430,7 +430,7 @@ class UpdateOpportunityRequestV2 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\CustomField[]|null
+     * @return \Keap\Sdk\Core\Model\CustomField[]|null
      */
     public function getCustomFields()
     {
@@ -440,7 +440,7 @@ class UpdateOpportunityRequestV2 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\CustomField[]|null $custom_fields custom_fields
+     * @param \Keap\Sdk\Core\Model\CustomField[]|null $custom_fields custom_fields
      *
      * @return self
      */

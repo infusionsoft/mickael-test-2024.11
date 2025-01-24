@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PaymentPlan Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class PaymentPlan implements ModelInterface, ArrayAccess, \JsonSerializable
         'initial_payment_date' => 'string',
         'initial_payment_percent' => 'float',
         'number_of_payments' => 'int',
-        'payment_gateway' => '\Com\Keap\Sdk\Core\Model\RestPaymentGateway',
+        'payment_gateway' => '\Keap\Sdk\Core\Model\RestPaymentGateway',
         'payment_method_id' => 'string',
         'plan_start_date' => 'string'
     ];
@@ -553,7 +553,7 @@ class PaymentPlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_gateway
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestPaymentGateway|null
+     * @return \Keap\Sdk\Core\Model\RestPaymentGateway|null
      */
     public function getPaymentGateway()
     {
@@ -563,7 +563,7 @@ class PaymentPlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_gateway
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestPaymentGateway|null $payment_gateway payment_gateway
+     * @param \Keap\Sdk\Core\Model\RestPaymentGateway|null $payment_gateway payment_gateway
      *
      * @return self
      */

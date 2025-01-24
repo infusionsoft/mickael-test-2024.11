@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\TagsApi
+# Keap\Sdk\Core\TagsApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -23,7 +23,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `applyTagsUsingPOST()`
 
 ```php
-applyTagsUsingPOST($tag_id, $apply_remove_tag_request): \Com\Keap\Sdk\Core\Model\ApplyTagsResponse
+applyTagsUsingPOST($tag_id, $apply_remove_tag_request): \Keap\Sdk\Core\Model\ApplyTagsResponse
 ```
 
 Apply Tag
@@ -37,13 +37,13 @@ Applies a Tag to a list of Contacts.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $tag_id = 'tag_id_example'; // string | tag_id
-$apply_remove_tag_request = new \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest(); // \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest | applyRemoveTagRequest
+$apply_remove_tag_request = new \Keap\Sdk\Core\Model\ApplyRemoveTagRequest(); // \Keap\Sdk\Core\Model\ApplyRemoveTagRequest | applyRemoveTagRequest
 
 try {
     $result = $apiInstance->applyTagsUsingPOST($tag_id, $apply_remove_tag_request);
@@ -58,11 +58,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_id** | **string**| tag_id | |
-| **apply_remove_tag_request** | [**\Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest**](../Model/ApplyRemoveTagRequest.md)| applyRemoveTagRequest | |
+| **apply_remove_tag_request** | [**\Keap\Sdk\Core\Model\ApplyRemoveTagRequest**](../Model/ApplyRemoveTagRequest.md)| applyRemoveTagRequest | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ApplyTagsResponse**](../Model/ApplyTagsResponse.md)
+[**\Keap\Sdk\Core\Model\ApplyTagsResponse**](../Model/ApplyTagsResponse.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ No authorization required
 ## `createTagCategoryUsingPOST1()`
 
 ```php
-createTagCategoryUsingPOST1($create_update_tag_category_request): \Com\Keap\Sdk\Core\Model\Tag
+createTagCategoryUsingPOST1($create_update_tag_category_request): \Keap\Sdk\Core\Model\Tag
 ```
 
 Create Tag Category
@@ -94,12 +94,12 @@ Creates a new Tag Category.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_update_tag_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | request
+$create_update_tag_category_request = new \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | request
 
 try {
     $result = $apiInstance->createTagCategoryUsingPOST1($create_update_tag_category_request);
@@ -113,11 +113,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_update_tag_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| request | |
+| **create_update_tag_category_request** | [**\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Tag**](../Model/Tag.md)
+[**\Keap\Sdk\Core\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ No authorization required
 ## `createTagUsingPOST1()`
 
 ```php
-createTagUsingPOST1($create_update_tag_request): \Com\Keap\Sdk\Core\Model\Tag
+createTagUsingPOST1($create_update_tag_request): \Keap\Sdk\Core\Model\Tag
 ```
 
 Create Tag
@@ -149,12 +149,12 @@ Creates a new Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_update_tag_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
+$create_update_tag_request = new \Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
 
 try {
     $result = $apiInstance->createTagUsingPOST1($create_update_tag_request);
@@ -168,11 +168,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_update_tag_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | |
+| **create_update_tag_request** | [**\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Tag**](../Model/Tag.md)
+[**\Keap\Sdk\Core\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Deletes the specified Tag Category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -258,7 +258,7 @@ Deletes a Tag.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -298,7 +298,7 @@ No authorization required
 ## `getCategoryUsingGET()`
 
 ```php
-getCategoryUsingGET($tag_category_id): \Com\Keap\Sdk\Core\Model\GetTagCategoryResponse
+getCategoryUsingGET($tag_category_id): \Keap\Sdk\Core\Model\GetTagCategoryResponse
 ```
 
 Retrieve a Tag Category
@@ -312,7 +312,7 @@ Returns information about the specified Tag Category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse**](../Model/GetTagCategoryResponse.md)
+[**\Keap\Sdk\Core\Model\GetTagCategoryResponse**](../Model/GetTagCategoryResponse.md)
 
 ### Authorization
 
@@ -353,7 +353,7 @@ No authorization required
 ## `getTagUsingGET1()`
 
 ```php
-getTagUsingGET1($tag_id): \Com\Keap\Sdk\Core\Model\Tag
+getTagUsingGET1($tag_id): \Keap\Sdk\Core\Model\Tag
 ```
 
 Retrieve a Tag
@@ -367,7 +367,7 @@ Retrieves information about the specified Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -390,7 +390,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Tag**](../Model/Tag.md)
+[**\Keap\Sdk\Core\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ No authorization required
 ## `listCompaniesForTagIdUsingGET1()`
 
 ```php
-listCompaniesForTagIdUsingGET1($tag_id, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse
+listCompaniesForTagIdUsingGET1($tag_id, $filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListTaggedCompaniesResponse
 ```
 
 List Tagged Companies
@@ -422,7 +422,7 @@ Retrieves a list of Companies that have the given Tag applied. To search for `nu
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -453,7 +453,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse**](../Model/ListTaggedCompaniesResponse.md)
+[**\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse**](../Model/ListTaggedCompaniesResponse.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ No authorization required
 ## `listContactsWithTagIdUsingGET()`
 
 ```php
-listContactsWithTagIdUsingGET($tag_id, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse
+listContactsWithTagIdUsingGET($tag_id, $filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListTaggedContactsResponse
 ```
 
 List Tagged Contacts
@@ -485,7 +485,7 @@ Retrieves a list of Contacts with the specified Tag To search for `null` or empt
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -516,7 +516,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse**](../Model/ListTaggedContactsResponse.md)
+[**\Keap\Sdk\Core\Model\ListTaggedContactsResponse**](../Model/ListTaggedContactsResponse.md)
 
 ### Authorization
 
@@ -534,7 +534,7 @@ No authorization required
 ## `listTagCategoriesUsingGET()`
 
 ```php
-listTagCategoriesUsingGET($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse
+listTagCategoriesUsingGET($filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListTagCategoriesResponse
 ```
 
 List Tag Categories
@@ -548,7 +548,7 @@ Retrieves a list of defined Tag Categories To search for `null` or empty fields 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -577,7 +577,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse**](../Model/ListTagCategoriesResponse.md)
+[**\Keap\Sdk\Core\Model\ListTagCategoriesResponse**](../Model/ListTagCategoriesResponse.md)
 
 ### Authorization
 
@@ -595,7 +595,7 @@ No authorization required
 ## `listTagsUsingGET1()`
 
 ```php
-listTagsUsingGET1($filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListTagsResponse
+listTagsUsingGET1($filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListTagsResponse
 ```
 
 List Tags
@@ -609,7 +609,7 @@ Retrieves a list of Tags defined in the application To search for `null` or empt
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -638,7 +638,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListTagsResponse**](../Model/ListTagsResponse.md)
+[**\Keap\Sdk\Core\Model\ListTagsResponse**](../Model/ListTagsResponse.md)
 
 ### Authorization
 
@@ -670,13 +670,13 @@ Removes a Tag from a list of Contacts.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $tag_id = 'tag_id_example'; // string | tag_id
-$apply_remove_tag_request = new \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest(); // \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest | applyRemoveTagRequest
+$apply_remove_tag_request = new \Keap\Sdk\Core\Model\ApplyRemoveTagRequest(); // \Keap\Sdk\Core\Model\ApplyRemoveTagRequest | applyRemoveTagRequest
 
 try {
     $apiInstance->removeTagsUsingPOST($tag_id, $apply_remove_tag_request);
@@ -690,7 +690,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_id** | **string**| tag_id | |
-| **apply_remove_tag_request** | [**\Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest**](../Model/ApplyRemoveTagRequest.md)| applyRemoveTagRequest | |
+| **apply_remove_tag_request** | [**\Keap\Sdk\Core\Model\ApplyRemoveTagRequest**](../Model/ApplyRemoveTagRequest.md)| applyRemoveTagRequest | |
 
 ### Return type
 
@@ -712,7 +712,7 @@ No authorization required
 ## `updateTagCategoryUsingPATCH()`
 
 ```php
-updateTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request): \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse
+updateTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request): \Keap\Sdk\Core\Model\UpdateTagCategoryResponse
 ```
 
 Update a Tag Category
@@ -726,14 +726,14 @@ Updates a Tag Category with only the values provided in the request
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $tag_category_id = 'tag_category_id_example'; // string | tag_category_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$create_update_tag_category_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
+$create_update_tag_category_request = new \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest(); // \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest | tagCategory
 
 try {
     $result = $apiInstance->updateTagCategoryUsingPATCH($tag_category_id, $update_mask, $create_update_tag_category_request);
@@ -749,11 +749,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_category_id** | **string**| tag_category_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **create_update_tag_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
+| **create_update_tag_category_request** | [**\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest**](../Model/CreateUpdateTagCategoryRequest.md)| tagCategory | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse**](../Model/UpdateTagCategoryResponse.md)
+[**\Keap\Sdk\Core\Model\UpdateTagCategoryResponse**](../Model/UpdateTagCategoryResponse.md)
 
 ### Authorization
 
@@ -771,7 +771,7 @@ No authorization required
 ## `updateTagUsingPATCH()`
 
 ```php
-updateTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request): \Com\Keap\Sdk\Core\Model\UpdateTagResponse
+updateTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request): \Keap\Sdk\Core\Model\UpdateTagResponse
 ```
 
 Update a Tag
@@ -785,14 +785,14 @@ Updates a Tag with only the values provided in the request
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\TagsApi(
+$apiInstance = new Keap\Sdk\Core\Api\TagsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $tag_id = 'tag_id_example'; // string | tag_id
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
-$create_update_tag_request = new \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
+$create_update_tag_request = new \Keap\Sdk\Core\Model\CreateUpdateTagRequest(); // \Keap\Sdk\Core\Model\CreateUpdateTagRequest | tag
 
 try {
     $result = $apiInstance->updateTagUsingPATCH($tag_id, $update_mask, $create_update_tag_request);
@@ -808,11 +808,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **tag_id** | **string**| tag_id | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
-| **create_update_tag_request** | [**\Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
+| **create_update_tag_request** | [**\Keap\Sdk\Core\Model\CreateUpdateTagRequest**](../Model/CreateUpdateTagRequest.md)| tag | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\UpdateTagResponse**](../Model/UpdateTagResponse.md)
+[**\Keap\Sdk\Core\Model\UpdateTagResponse**](../Model/UpdateTagResponse.md)
 
 ### Authorization
 

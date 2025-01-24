@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Campaign Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,14 +62,14 @@ class Campaign implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by_global_id' => 'string',
         'date_created' => 'string',
         'error_message' => 'string',
-        'goals' => '\Com\Keap\Sdk\Core\Model\Goal[]',
+        'goals' => '\Keap\Sdk\Core\Model\Goal[]',
         'id' => 'string',
         'locked' => 'bool',
         'name' => 'string',
         'published_date' => '\DateTime',
         'published_status' => 'bool',
         'published_time_zone' => 'string',
-        'sequences' => '\Com\Keap\Sdk\Core\Model\Sequence[]',
+        'sequences' => '\Keap\Sdk\Core\Model\Sequence[]',
         'time_zone' => 'string'
     ];
 
@@ -518,7 +518,7 @@ class Campaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets goals
      *
-     * @return \Com\Keap\Sdk\Core\Model\Goal[]|null
+     * @return \Keap\Sdk\Core\Model\Goal[]|null
      */
     public function getGoals()
     {
@@ -528,7 +528,7 @@ class Campaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets goals
      *
-     * @param \Com\Keap\Sdk\Core\Model\Goal[]|null $goals goals
+     * @param \Keap\Sdk\Core\Model\Goal[]|null $goals goals
      *
      * @return self
      */
@@ -707,7 +707,7 @@ class Campaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sequences
      *
-     * @return \Com\Keap\Sdk\Core\Model\Sequence[]|null
+     * @return \Keap\Sdk\Core\Model\Sequence[]|null
      */
     public function getSequences()
     {
@@ -717,7 +717,7 @@ class Campaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sequences
      *
-     * @param \Com\Keap\Sdk\Core\Model\Sequence[]|null $sequences sequences
+     * @param \Keap\Sdk\Core\Model\Sequence[]|null $sequences sequences
      *
      * @return self
      */

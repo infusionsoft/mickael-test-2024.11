@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestV2Order Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,21 +59,21 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'allow_payment' => 'bool',
         'allow_paypal' => 'bool',
-        'contact' => '\Com\Keap\Sdk\Core\Model\BasicContact',
+        'contact' => '\Keap\Sdk\Core\Model\BasicContact',
         'creation_time' => 'string',
         'id' => 'string',
         'invoice_number' => 'string',
         'lead_affiliate_id' => 'string',
         'modification_time' => 'string',
         'notes' => 'string',
-        'order_items' => '\Com\Keap\Sdk\Core\Model\RestV2OrderItem[]',
+        'order_items' => '\Keap\Sdk\Core\Model\RestV2OrderItem[]',
         'order_time' => 'string',
         'order_type' => 'string',
-        'payment_plan' => '\Com\Keap\Sdk\Core\Model\PaymentPlan',
+        'payment_plan' => '\Keap\Sdk\Core\Model\PaymentPlan',
         'recurring' => 'bool',
         'refund_total' => 'float',
         'sales_affiliate_id' => 'string',
-        'shipping_information' => '\Com\Keap\Sdk\Core\Model\ShippingInformation',
+        'shipping_information' => '\Keap\Sdk\Core\Model\ShippingInformation',
         'source_type' => 'string',
         'status' => 'string',
         'terms' => 'string',
@@ -539,7 +539,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contact
      *
-     * @return \Com\Keap\Sdk\Core\Model\BasicContact|null
+     * @return \Keap\Sdk\Core\Model\BasicContact|null
      */
     public function getContact()
     {
@@ -549,7 +549,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact
      *
-     * @param \Com\Keap\Sdk\Core\Model\BasicContact|null $contact contact
+     * @param \Keap\Sdk\Core\Model\BasicContact|null $contact contact
      *
      * @return self
      */
@@ -728,7 +728,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets order_items
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestV2OrderItem[]|null
+     * @return \Keap\Sdk\Core\Model\RestV2OrderItem[]|null
      */
     public function getOrderItems()
     {
@@ -738,7 +738,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_items
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestV2OrderItem[]|null $order_items order_items
+     * @param \Keap\Sdk\Core\Model\RestV2OrderItem[]|null $order_items order_items
      *
      * @return self
      */
@@ -809,7 +809,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_plan
      *
-     * @return \Com\Keap\Sdk\Core\Model\PaymentPlan|null
+     * @return \Keap\Sdk\Core\Model\PaymentPlan|null
      */
     public function getPaymentPlan()
     {
@@ -819,7 +819,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_plan
      *
-     * @param \Com\Keap\Sdk\Core\Model\PaymentPlan|null $payment_plan payment_plan
+     * @param \Keap\Sdk\Core\Model\PaymentPlan|null $payment_plan payment_plan
      *
      * @return self
      */
@@ -917,7 +917,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shipping_information
      *
-     * @return \Com\Keap\Sdk\Core\Model\ShippingInformation|null
+     * @return \Keap\Sdk\Core\Model\ShippingInformation|null
      */
     public function getShippingInformation()
     {
@@ -927,7 +927,7 @@ class RestV2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shipping_information
      *
-     * @param \Com\Keap\Sdk\Core\Model\ShippingInformation|null $shipping_information shipping_information
+     * @param \Keap\Sdk\Core\Model\ShippingInformation|null $shipping_information shipping_information
      *
      * @return self
      */

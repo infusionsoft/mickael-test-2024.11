@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelinesApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -157,9 +157,9 @@ class PipelinesApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['callList'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\PipelineListResponse
+     * @return \Keap\Sdk\Core\Model\PipelineListResponse
      */
     public function callList($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['callList'][0])
     {
@@ -178,9 +178,9 @@ class PipelinesApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['callList'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\PipelineListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\PipelineListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['callList'][0])
     {
@@ -211,11 +211,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\PipelineListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\PipelineListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\PipelineListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\PipelineListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,7 +233,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\PipelineListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\PipelineListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -252,7 +252,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\PipelineListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\PipelineListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -285,7 +285,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\PipelineListResponse',
+                        '\Keap\Sdk\Core\Model\PipelineListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -335,7 +335,7 @@ class PipelinesApi
      */
     public function callListAsyncWithHttpInfo($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['callList'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\PipelineListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\PipelineListResponse';
         $request = $this->callListRequest($filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -505,12 +505,12 @@ class PipelinesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Pipeline
+     * @return \Keap\Sdk\Core\Model\Pipeline
      */
     public function create($create_pipeline_request, string $contentType = self::contentTypes['create'][0])
     {
@@ -523,12 +523,12 @@ class PipelinesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Pipeline, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Pipeline, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($create_pipeline_request, string $contentType = self::contentTypes['create'][0])
     {
@@ -559,11 +559,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Pipeline' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Pipeline' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Pipeline' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Pipeline' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -581,7 +581,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Pipeline', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Pipeline', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -600,7 +600,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Pipeline';
+            $returnType = '\Keap\Sdk\Core\Model\Pipeline';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -633,7 +633,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Pipeline',
+                        '\Keap\Sdk\Core\Model\Pipeline',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -648,7 +648,7 @@ class PipelinesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -669,7 +669,7 @@ class PipelinesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -677,7 +677,7 @@ class PipelinesApi
      */
     public function createAsyncWithHttpInfo($create_pipeline_request, string $contentType = self::contentTypes['create'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Pipeline';
+        $returnType = '\Keap\Sdk\Core\Model\Pipeline';
         $request = $this->createRequest($create_pipeline_request, $contentType);
 
         return $this->client
@@ -719,7 +719,7 @@ class PipelinesApi
     /**
      * Create request for operation 'create'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreatePipelineRequest $create_pipeline_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -817,7 +817,7 @@ class PipelinesApi
      * @param  string $new_stage_id the new stage identifier, can be null (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -836,7 +836,7 @@ class PipelinesApi
      * @param  string $new_stage_id the new stage identifier, can be null (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1062,9 +1062,9 @@ class PipelinesApi
      * @param  string $id the entity identifier (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['get'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Pipeline
+     * @return \Keap\Sdk\Core\Model\Pipeline
      */
     public function get($id, string $contentType = self::contentTypes['get'][0])
     {
@@ -1080,9 +1080,9 @@ class PipelinesApi
      * @param  string $id the entity identifier (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['get'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Pipeline, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Pipeline, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($id, string $contentType = self::contentTypes['get'][0])
     {
@@ -1113,11 +1113,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Pipeline' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Pipeline' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Pipeline' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Pipeline' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1135,7 +1135,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Pipeline', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Pipeline', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1154,7 +1154,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Pipeline';
+            $returnType = '\Keap\Sdk\Core\Model\Pipeline';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1187,7 +1187,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Pipeline',
+                        '\Keap\Sdk\Core\Model\Pipeline',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1231,7 +1231,7 @@ class PipelinesApi
      */
     public function getAsyncWithHttpInfo($id, string $contentType = self::contentTypes['get'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Pipeline';
+        $returnType = '\Keap\Sdk\Core\Model\Pipeline';
         $request = $this->getRequest($id, $contentType);
 
         return $this->client
@@ -1374,9 +1374,9 @@ class PipelinesApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOutcomeLabels'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
+     * @return \Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
      */
     public function getOutcomeLabels($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['getOutcomeLabels'][0])
     {
@@ -1396,9 +1396,9 @@ class PipelinesApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOutcomeLabels'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOutcomeLabelsWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['getOutcomeLabels'][0])
     {
@@ -1429,11 +1429,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1451,7 +1451,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1470,7 +1470,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1503,7 +1503,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse',
+                        '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1555,7 +1555,7 @@ class PipelinesApi
      */
     public function getOutcomeLabelsAsyncWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['getOutcomeLabels'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
         $request = $this->getOutcomeLabelsRequest($id, $filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -1748,9 +1748,9 @@ class PipelinesApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listStages'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\PipelineStageListResponse
+     * @return \Keap\Sdk\Core\Model\PipelineStageListResponse
      */
     public function listStages($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listStages'][0])
     {
@@ -1770,9 +1770,9 @@ class PipelinesApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listStages'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\PipelineStageListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\PipelineStageListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listStagesWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listStages'][0])
     {
@@ -1803,11 +1803,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\PipelineStageListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\PipelineStageListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\PipelineStageListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\PipelineStageListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1825,7 +1825,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\PipelineStageListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\PipelineStageListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1844,7 +1844,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\PipelineStageListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\PipelineStageListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1877,7 +1877,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\PipelineStageListResponse',
+                        '\Keap\Sdk\Core\Model\PipelineStageListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1929,7 +1929,7 @@ class PipelinesApi
      */
     public function listStagesAsyncWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listStages'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\PipelineStageListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\PipelineStageListResponse';
         $request = $this->listStagesRequest($id, $filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -2121,9 +2121,9 @@ class PipelinesApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSummaries'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse
+     * @return \Keap\Sdk\Core\Model\PipelineSummariesListResponse
      */
     public function listSummaries($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listSummaries'][0])
     {
@@ -2142,9 +2142,9 @@ class PipelinesApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSummaries'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\PipelineSummariesListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSummariesWithHttpInfo($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listSummaries'][0])
     {
@@ -2175,11 +2175,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\PipelineSummariesListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\PipelineSummariesListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2197,7 +2197,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\PipelineSummariesListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2216,7 +2216,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\PipelineSummariesListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2249,7 +2249,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse',
+                        '\Keap\Sdk\Core\Model\PipelineSummariesListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2299,7 +2299,7 @@ class PipelinesApi
      */
     public function listSummariesAsyncWithHttpInfo($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listSummaries'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\PipelineSummariesListResponse';
         $request = $this->listSummariesRequest($filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -2470,12 +2470,12 @@ class PipelinesApi
      * Sets the outcome labels for a pipeline.
      *
      * @param  string $id the pipeline identifier (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setOutcomeLabels'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
+     * @return \Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
      */
     public function setOutcomeLabels($id, $update_outcome_labels_request, string $contentType = self::contentTypes['setOutcomeLabels'][0])
     {
@@ -2489,12 +2489,12 @@ class PipelinesApi
      * Sets the outcome labels for a pipeline.
      *
      * @param  string $id the pipeline identifier (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setOutcomeLabels'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setOutcomeLabelsWithHttpInfo($id, $update_outcome_labels_request, string $contentType = self::contentTypes['setOutcomeLabels'][0])
     {
@@ -2525,11 +2525,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2547,7 +2547,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2566,7 +2566,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2599,7 +2599,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse',
+                        '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2615,7 +2615,7 @@ class PipelinesApi
      * Sets the outcome labels for a pipeline.
      *
      * @param  string $id the pipeline identifier (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setOutcomeLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2637,7 +2637,7 @@ class PipelinesApi
      * Sets the outcome labels for a pipeline.
      *
      * @param  string $id the pipeline identifier (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setOutcomeLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2645,7 +2645,7 @@ class PipelinesApi
      */
     public function setOutcomeLabelsAsyncWithHttpInfo($id, $update_outcome_labels_request, string $contentType = self::contentTypes['setOutcomeLabels'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse';
         $request = $this->setOutcomeLabelsRequest($id, $update_outcome_labels_request, $contentType);
 
         return $this->client
@@ -2688,7 +2688,7 @@ class PipelinesApi
      * Create request for operation 'setOutcomeLabels'
      *
      * @param  string $id the pipeline identifier (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest $update_outcome_labels_request the request containing the new outcome labels (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setOutcomeLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2798,12 +2798,12 @@ class PipelinesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Pipeline
+     * @return \Keap\Sdk\Core\Model\Pipeline
      */
     public function update1($id, $update_mask, $update_pipeline_request, string $contentType = self::contentTypes['update1'][0])
     {
@@ -2818,12 +2818,12 @@ class PipelinesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Pipeline, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Pipeline, HTTP status code, HTTP response headers (array of strings)
      */
     public function update1WithHttpInfo($id, $update_mask, $update_pipeline_request, string $contentType = self::contentTypes['update1'][0])
     {
@@ -2854,11 +2854,11 @@ class PipelinesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Pipeline' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Pipeline' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Pipeline' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Pipeline' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2876,7 +2876,7 @@ class PipelinesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Pipeline', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Pipeline', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2895,7 +2895,7 @@ class PipelinesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Pipeline';
+            $returnType = '\Keap\Sdk\Core\Model\Pipeline';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2928,7 +2928,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Pipeline',
+                        '\Keap\Sdk\Core\Model\Pipeline',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2945,7 +2945,7 @@ class PipelinesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2968,7 +2968,7 @@ class PipelinesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2976,7 +2976,7 @@ class PipelinesApi
      */
     public function update1AsyncWithHttpInfo($id, $update_mask, $update_pipeline_request, string $contentType = self::contentTypes['update1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Pipeline';
+        $returnType = '\Keap\Sdk\Core\Model\Pipeline';
         $request = $this->update1Request($id, $update_mask, $update_pipeline_request, $contentType);
 
         return $this->client
@@ -3020,7 +3020,7 @@ class PipelinesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdatePipelineRequest $update_pipeline_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

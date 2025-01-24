@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListTagsResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'tags' => '\Com\Keap\Sdk\Core\Model\Tag[]'
+        'tags' => '\Keap\Sdk\Core\Model\Tag[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tags
      *
-     * @return \Com\Keap\Sdk\Core\Model\Tag[]|null
+     * @return \Keap\Sdk\Core\Model\Tag[]|null
      */
     public function getTags()
     {
@@ -336,7 +336,7 @@ class ListTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tags
      *
-     * @param \Com\Keap\Sdk\Core\Model\Tag[]|null $tags tags
+     * @param \Keap\Sdk\Core\Model\Tag[]|null $tags tags
      *
      * @return self
      */

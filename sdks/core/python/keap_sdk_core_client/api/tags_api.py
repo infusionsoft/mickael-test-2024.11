@@ -111,7 +111,8 @@ class TagsApi:
             '200': "ApplyTagsResponse",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -183,7 +184,8 @@ class TagsApi:
             '200': "ApplyTagsResponse",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -255,7 +257,8 @@ class TagsApi:
             '200': "ApplyTagsResponse",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -398,7 +401,8 @@ class TagsApi:
             '201': "Tag",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -466,7 +470,8 @@ class TagsApi:
             '201': "Tag",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -534,7 +539,8 @@ class TagsApi:
             '201': "Tag",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -674,7 +680,8 @@ class TagsApi:
             '201': "Tag",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -742,7 +749,8 @@ class TagsApi:
             '201': "Tag",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -810,7 +818,8 @@ class TagsApi:
             '201': "Tag",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -951,7 +960,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1020,7 +1030,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1089,7 +1100,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1217,7 +1229,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1286,7 +1299,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1355,7 +1369,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1483,7 +1498,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1552,7 +1568,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1621,7 +1638,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1749,7 +1767,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1818,7 +1837,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1887,7 +1907,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2031,7 +2052,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2116,7 +2138,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2201,7 +2224,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2365,7 +2389,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2450,7 +2475,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2535,7 +2561,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2695,7 +2722,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2776,7 +2804,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2857,7 +2886,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3014,7 +3044,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3095,7 +3126,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3176,7 +3208,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3324,7 +3357,8 @@ class TagsApi:
             '204': None,
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3396,7 +3430,8 @@ class TagsApi:
             '204': None,
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3468,7 +3503,8 @@ class TagsApi:
             '204': None,
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3620,7 +3656,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3697,7 +3734,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3774,7 +3812,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3932,7 +3971,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4009,7 +4049,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4086,7 +4127,8 @@ class TagsApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

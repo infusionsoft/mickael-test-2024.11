@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**checklist_items** | [**\Com\Keap\Sdk\Core\Model\UpdateOpportunityStageChecklistItem[]**](UpdateOpportunityStageChecklistItem.md) |  | [optional]
+**checklist_items** | [**\Keap\Sdk\Core\Model\UpdateOpportunityStageChecklistItem[]**](UpdateOpportunityStageChecklistItem.md) |  | [optional]
 **name** | **string** |  | [optional]
 **order** | **int** |  | [optional]
 **probability** | **int** | must be an integer between 0 and 100. | [optional]

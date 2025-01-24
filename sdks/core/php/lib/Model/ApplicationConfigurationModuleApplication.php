@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ApplicationConfigurationModuleApplication Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,9 +57,9 @@ class ApplicationConfigurationModuleApplication implements ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'company' => '\Com\Keap\Sdk\Core\Model\ApplicationCompany',
+        'company' => '\Keap\Sdk\Core\Model\ApplicationCompany',
         'default_view_locale' => 'string',
-        'features_enabled' => '\Com\Keap\Sdk\Core\Model\ApplicationFeaturesEnabled',
+        'features_enabled' => '\Keap\Sdk\Core\Model\ApplicationFeaturesEnabled',
         'time_zone' => 'string'
     ];
 
@@ -313,7 +313,7 @@ class ApplicationConfigurationModuleApplication implements ModelInterface, Array
     /**
      * Gets company
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationCompany|null
+     * @return \Keap\Sdk\Core\Model\ApplicationCompany|null
      */
     public function getCompany()
     {
@@ -323,7 +323,7 @@ class ApplicationConfigurationModuleApplication implements ModelInterface, Array
     /**
      * Sets company
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationCompany|null $company company
+     * @param \Keap\Sdk\Core\Model\ApplicationCompany|null $company company
      *
      * @return self
      */
@@ -367,7 +367,7 @@ class ApplicationConfigurationModuleApplication implements ModelInterface, Array
     /**
      * Gets features_enabled
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationFeaturesEnabled|null
+     * @return \Keap\Sdk\Core\Model\ApplicationFeaturesEnabled|null
      */
     public function getFeaturesEnabled()
     {
@@ -377,7 +377,7 @@ class ApplicationConfigurationModuleApplication implements ModelInterface, Array
     /**
      * Sets features_enabled
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationFeaturesEnabled|null $features_enabled features_enabled
+     * @param \Keap\Sdk\Core\Model\ApplicationFeaturesEnabled|null $features_enabled features_enabled
      *
      * @return self
      */

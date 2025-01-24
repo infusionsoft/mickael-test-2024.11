@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**card_info** | [**\Com\Keap\Sdk\Core\Model\CardInfo**](CardInfo.md) |  | [optional]
+**card_info** | [**\Keap\Sdk\Core\Model\CardInfo**](CardInfo.md) |  | [optional]
 **date_created** | **\DateTime** |  | [optional]
 **id** | **string** |  | [optional]
 **payment_method_type** | **string** |  | [optional]

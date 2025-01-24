@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ReportEntryRecord Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ReportEntryRecord implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'columns' => '\Com\Keap\Sdk\Core\Model\ReportEntryValue[]'
+        'columns' => '\Keap\Sdk\Core\Model\ReportEntryValue[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ReportEntryRecord implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets columns
      *
-     * @return \Com\Keap\Sdk\Core\Model\ReportEntryValue[]|null
+     * @return \Keap\Sdk\Core\Model\ReportEntryValue[]|null
      */
     public function getColumns()
     {
@@ -302,7 +302,7 @@ class ReportEntryRecord implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets columns
      *
-     * @param \Com\Keap\Sdk\Core\Model\ReportEntryValue[]|null $columns columns
+     * @param \Keap\Sdk\Core\Model\ReportEntryValue[]|null $columns columns
      *
      * @return self
      */

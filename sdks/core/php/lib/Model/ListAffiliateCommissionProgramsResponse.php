@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListAffiliateCommissionProgramsResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListAffiliateCommissionProgramsResponse implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'commission_programs' => '\Com\Keap\Sdk\Core\Model\AffiliateProgramV2[]',
+        'commission_programs' => '\Keap\Sdk\Core\Model\AffiliateProgramV2[]',
         'next_page_token' => 'string'
     ];
 
@@ -299,7 +299,7 @@ class ListAffiliateCommissionProgramsResponse implements ModelInterface, ArrayAc
     /**
      * Gets commission_programs
      *
-     * @return \Com\Keap\Sdk\Core\Model\AffiliateProgramV2[]|null
+     * @return \Keap\Sdk\Core\Model\AffiliateProgramV2[]|null
      */
     public function getCommissionPrograms()
     {
@@ -309,7 +309,7 @@ class ListAffiliateCommissionProgramsResponse implements ModelInterface, ArrayAc
     /**
      * Sets commission_programs
      *
-     * @param \Com\Keap\Sdk\Core\Model\AffiliateProgramV2[]|null $commission_programs commission_programs
+     * @param \Keap\Sdk\Core\Model\AffiliateProgramV2[]|null $commission_programs commission_programs
      *
      * @return self
      */

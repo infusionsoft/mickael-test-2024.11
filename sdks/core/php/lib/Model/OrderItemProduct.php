@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * OrderItemProduct Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,14 +62,14 @@ class OrderItemProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'last_updated_time' => 'string',
         'name' => 'string',
-        'product_options' => '\Com\Keap\Sdk\Core\Model\RestProductOption[]',
+        'product_options' => '\Keap\Sdk\Core\Model\RestProductOption[]',
         'product_price' => 'float',
         'product_short_description' => 'string',
         'shippable' => 'bool',
         'sku' => 'string',
         'status' => 'string',
         'subscription_only' => 'bool',
-        'subscription_plans' => '\Com\Keap\Sdk\Core\Model\RestSubscriptionPlan[]',
+        'subscription_plans' => '\Keap\Sdk\Core\Model\RestSubscriptionPlan[]',
         'taxable' => 'bool',
         'url' => 'string'
     ];
@@ -549,7 +549,7 @@ class OrderItemProduct implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets product_options
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestProductOption[]|null
+     * @return \Keap\Sdk\Core\Model\RestProductOption[]|null
      */
     public function getProductOptions()
     {
@@ -559,7 +559,7 @@ class OrderItemProduct implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets product_options
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestProductOption[]|null $product_options product_options
+     * @param \Keap\Sdk\Core\Model\RestProductOption[]|null $product_options product_options
      *
      * @return self
      */
@@ -748,7 +748,7 @@ class OrderItemProduct implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subscription_plans
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestSubscriptionPlan[]|null
+     * @return \Keap\Sdk\Core\Model\RestSubscriptionPlan[]|null
      */
     public function getSubscriptionPlans()
     {
@@ -758,7 +758,7 @@ class OrderItemProduct implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subscription_plans
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestSubscriptionPlan[]|null $subscription_plans subscription_plans
+     * @param \Keap\Sdk\Core\Model\RestSubscriptionPlan[]|null $subscription_plans subscription_plans
      *
      * @return self
      */

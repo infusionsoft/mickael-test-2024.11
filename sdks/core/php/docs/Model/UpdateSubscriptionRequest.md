@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **product_id** | **string** |  | [optional]
 **quantity** | **int** |  | [optional]
 **sale_affiliate_id** | **string** |  | [optional]
-**shipping_address** | [**\Com\Keap\Sdk\Core\Model\Address**](Address.md) |  | [optional]
+**shipping_address** | [**\Keap\Sdk\Core\Model\Address**](Address.md) |  | [optional]
 **start_date** | **string** |  | [optional]
 **subscription_plan_id** | **string** |  | [optional]
 

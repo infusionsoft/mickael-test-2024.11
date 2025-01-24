@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**landingpages** | [**\Com\Keap\Sdk\Core\Model\LandingPage[]**](LandingPage.md) |  | [optional]
+**landingpages** | [**\Keap\Sdk\Core\Model\LandingPage[]**](LandingPage.md) |  | [optional]
 **next_page_token** | **string** |  | [optional]
 **page_size** | **string** |  | [optional]
 **pages** | **string** |  | [optional]

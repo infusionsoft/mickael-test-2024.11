@@ -1,9 +1,9 @@
 {
   "name": "keap-core-service-core-sdk",
-  "version": "0.0.107",
+  "version": "0.0.108",
   "description": "Keap REST Core Service",
   "license": "Apache 2.0",
-  "main": "dist/com.keap.sdk.core/index.js",
+  "main": "dist/keap.sdk.core/index.js",
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "npm run build",

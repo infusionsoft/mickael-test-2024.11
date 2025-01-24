@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\AffiliateApi
+# Keap\Sdk\Core\AffiliateApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `addAffiliateUsingPOST()`
 
 ```php
-addAffiliateUsingPOST($create_affiliate_request): \Com\Keap\Sdk\Core\Model\RestAffiliate
+addAffiliateUsingPOST($create_affiliate_request): \Keap\Sdk\Core\Model\RestAffiliate
 ```
 
 Create an Affiliate
@@ -27,12 +27,12 @@ Creates a single Affiliate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
+$apiInstance = new Keap\Sdk\Core\Api\AffiliateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_affiliate_request = new \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest(); // \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest | Affiliate request to insert
+$create_affiliate_request = new \Keap\Sdk\Core\Model\CreateAffiliateRequest(); // \Keap\Sdk\Core\Model\CreateAffiliateRequest | Affiliate request to insert
 
 try {
     $result = $apiInstance->addAffiliateUsingPOST($create_affiliate_request);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_affiliate_request** | [**\Com\Keap\Sdk\Core\Model\CreateAffiliateRequest**](../Model/CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
+| **create_affiliate_request** | [**\Keap\Sdk\Core\Model\CreateAffiliateRequest**](../Model/CreateAffiliateRequest.md)| Affiliate request to insert | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\RestAffiliate**](../Model/RestAffiliate.md)
+[**\Keap\Sdk\Core\Model\RestAffiliate**](../Model/RestAffiliate.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getAffiliateUsingGET1()`
 
 ```php
-getAffiliateUsingGET1($id): \Com\Keap\Sdk\Core\Model\RestAffiliate
+getAffiliateUsingGET1($id): \Keap\Sdk\Core\Model\RestAffiliate
 ```
 
 Retrieve an Affiliate
@@ -82,7 +82,7 @@ Retrieves a single Affiliate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
+$apiInstance = new Keap\Sdk\Core\Api\AffiliateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\RestAffiliate**](../Model/RestAffiliate.md)
+[**\Keap\Sdk\Core\Model\RestAffiliate**](../Model/RestAffiliate.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `updateAffiliateUsingPATCH()`
 
 ```php
-updateAffiliateUsingPATCH($id, $update_affiliate_request): \Com\Keap\Sdk\Core\Model\RestAffiliate
+updateAffiliateUsingPATCH($id, $update_affiliate_request): \Keap\Sdk\Core\Model\RestAffiliate
 ```
 
 Update an Affiliate
@@ -137,13 +137,13 @@ Updates a single Affiliate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
+$apiInstance = new Keap\Sdk\Core\Api\AffiliateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | id
-$update_affiliate_request = new \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest(); // \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest | Request to update an affiliate
+$update_affiliate_request = new \Keap\Sdk\Core\Model\UpdateAffiliateRequest(); // \Keap\Sdk\Core\Model\UpdateAffiliateRequest | Request to update an affiliate
 
 try {
     $result = $apiInstance->updateAffiliateUsingPATCH($id, $update_affiliate_request);
@@ -158,11 +158,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| id | |
-| **update_affiliate_request** | [**\Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest**](../Model/UpdateAffiliateRequest.md)| Request to update an affiliate | [optional] |
+| **update_affiliate_request** | [**\Keap\Sdk\Core\Model\UpdateAffiliateRequest**](../Model/UpdateAffiliateRequest.md)| Request to update an affiliate | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\RestAffiliate**](../Model/RestAffiliate.md)
+[**\Keap\Sdk\Core\Model\RestAffiliate**](../Model/RestAffiliate.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `updateCommissionProgramUsingPATCH()`
 
 ```php
-updateCommissionProgramUsingPATCH($commission_program_id, $update_commission_program_request, $update_mask): \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse
+updateCommissionProgramUsingPATCH($commission_program_id, $update_commission_program_request, $update_mask): \Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse
 ```
 
 Update a Affiliate Commission Program
@@ -194,13 +194,13 @@ Updates the properties of an Affiliate Commission Program
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AffiliateApi(
+$apiInstance = new Keap\Sdk\Core\Api\AffiliateApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $commission_program_id = 'commission_program_id_example'; // string | commission_program_id
-$update_commission_program_request = new \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest(); // \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest | updateCommissionProgramRequest
+$update_commission_program_request = new \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest(); // \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest | updateCommissionProgramRequest
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
@@ -216,12 +216,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **commission_program_id** | **string**| commission_program_id | |
-| **update_commission_program_request** | [**\Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest**](../Model/UpdateCommissionProgramRequest.md)| updateCommissionProgramRequest | |
+| **update_commission_program_request** | [**\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest**](../Model/UpdateCommissionProgramRequest.md)| updateCommissionProgramRequest | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse**](../Model/AffiliateCommissionProgramResponse.md)
+[**\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse**](../Model/AffiliateCommissionProgramResponse.md)
 
 ### Authorization
 

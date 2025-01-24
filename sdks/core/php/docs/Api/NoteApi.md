@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\NoteApi
+# Keap\Sdk\Core\NoteApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createNoteUsingPOST1()`
 
 ```php
-createNoteUsingPOST1($contact_id, $create_note_request): \Com\Keap\Sdk\Core\Model\Note
+createNoteUsingPOST1($contact_id, $create_note_request): \Keap\Sdk\Core\Model\Note
 ```
 
 Create a Note
@@ -28,13 +28,13 @@ Creates a new Note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
+$apiInstance = new Keap\Sdk\Core\Api\NoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $contact_id = 'contact_id_example'; // string | contact_id
-$create_note_request = new \Com\Keap\Sdk\Core\Model\CreateNoteRequest(); // \Com\Keap\Sdk\Core\Model\CreateNoteRequest | request
+$create_note_request = new \Keap\Sdk\Core\Model\CreateNoteRequest(); // \Keap\Sdk\Core\Model\CreateNoteRequest | request
 
 try {
     $result = $apiInstance->createNoteUsingPOST1($contact_id, $create_note_request);
@@ -49,11 +49,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **string**| contact_id | |
-| **create_note_request** | [**\Com\Keap\Sdk\Core\Model\CreateNoteRequest**](../Model/CreateNoteRequest.md)| request | |
+| **create_note_request** | [**\Keap\Sdk\Core\Model\CreateNoteRequest**](../Model/CreateNoteRequest.md)| request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Note**](../Model/Note.md)
+[**\Keap\Sdk\Core\Model\Note**](../Model/Note.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Deletes the specified Note
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
+$apiInstance = new Keap\Sdk\Core\Api\NoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -127,7 +127,7 @@ No authorization required
 ## `getNoteUsingGET1()`
 
 ```php
-getNoteUsingGET1($contact_id, $note_id): \Com\Keap\Sdk\Core\Model\GetNoteResponse
+getNoteUsingGET1($contact_id, $note_id): \Keap\Sdk\Core\Model\GetNoteResponse
 ```
 
 Retrieve a Note
@@ -141,7 +141,7 @@ Retrieves the specified Note
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
+$apiInstance = new Keap\Sdk\Core\Api\NoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -166,7 +166,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetNoteResponse**](../Model/GetNoteResponse.md)
+[**\Keap\Sdk\Core\Model\GetNoteResponse**](../Model/GetNoteResponse.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 ## `listNotesUsingGET1()`
 
 ```php
-listNotesUsingGET1($contact_id, $filter, $order_by, $page_size, $page_token): \Com\Keap\Sdk\Core\Model\ListNotesResponse
+listNotesUsingGET1($contact_id, $filter, $order_by, $page_size, $page_token): \Keap\Sdk\Core\Model\ListNotesResponse
 ```
 
 List Notes
@@ -198,7 +198,7 @@ Retrieves a list of Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
+$apiInstance = new Keap\Sdk\Core\Api\NoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -229,7 +229,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListNotesResponse**](../Model/ListNotesResponse.md)
+[**\Keap\Sdk\Core\Model\ListNotesResponse**](../Model/ListNotesResponse.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ No authorization required
 ## `updateNoteUsingPATCH()`
 
 ```php
-updateNoteUsingPATCH($contact_id, $note_id, $update_note_request, $update_mask): \Com\Keap\Sdk\Core\Model\UpdateNoteResponse
+updateNoteUsingPATCH($contact_id, $note_id, $update_note_request, $update_mask): \Keap\Sdk\Core\Model\UpdateNoteResponse
 ```
 
 Update a Note
@@ -261,14 +261,14 @@ Updates a Note for a Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\NoteApi(
+$apiInstance = new Keap\Sdk\Core\Api\NoteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $contact_id = 'contact_id_example'; // string | contact_id
 $note_id = 'note_id_example'; // string | note_id
-$update_note_request = new \Com\Keap\Sdk\Core\Model\UpdateNoteRequest(); // \Com\Keap\Sdk\Core\Model\UpdateNoteRequest | updateNoteRequest
+$update_note_request = new \Keap\Sdk\Core\Model\UpdateNoteRequest(); // \Keap\Sdk\Core\Model\UpdateNoteRequest | updateNoteRequest
 $update_mask = array('update_mask_example'); // string[] | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 
 try {
@@ -285,12 +285,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **string**| contact_id | |
 | **note_id** | **string**| note_id | |
-| **update_note_request** | [**\Com\Keap\Sdk\Core\Model\UpdateNoteRequest**](../Model/UpdateNoteRequest.md)| updateNoteRequest | |
+| **update_note_request** | [**\Keap\Sdk\Core\Model\UpdateNoteRequest**](../Model/UpdateNoteRequest.md)| updateNoteRequest | |
 | **update_mask** | [**string[]**](../Model/string.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional] |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\UpdateNoteResponse**](../Model/UpdateNoteResponse.md)
+[**\Keap\Sdk\Core\Model\UpdateNoteResponse**](../Model/UpdateNoteResponse.md)
 
 ### Authorization
 

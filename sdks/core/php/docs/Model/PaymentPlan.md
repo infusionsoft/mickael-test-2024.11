@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **initial_payment_date** | **string** |  | [optional]
 **initial_payment_percent** | **float** |  | [optional]
 **number_of_payments** | **int** |  |
-**payment_gateway** | [**\Com\Keap\Sdk\Core\Model\RestPaymentGateway**](RestPaymentGateway.md) |  | [optional]
+**payment_gateway** | [**\Keap\Sdk\Core\Model\RestPaymentGateway**](RestPaymentGateway.md) |  | [optional]
 **payment_method_id** | **string** |  | [optional]
 **plan_start_date** | **string** |  |
 

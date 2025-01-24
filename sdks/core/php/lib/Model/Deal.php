@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Deal Class Doc Comment
  *
  * @category Class
  * @description Represents a deal.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,18 +60,18 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'value' => '\Com\Keap\Sdk\Core\Model\DealAllOfValue',
-        'contacts' => '\Com\Keap\Sdk\Core\Model\DealContact[]',
-        'stage' => '\Com\Keap\Sdk\Core\Model\DealAllOfStage',
+        'value' => '\Keap\Sdk\Core\Model\DealAllOfValue',
+        'contacts' => '\Keap\Sdk\Core\Model\DealContact[]',
+        'stage' => '\Keap\Sdk\Core\Model\DealAllOfStage',
         'stage_assignment_time' => '\DateTime',
-        'owners' => '\Com\Keap\Sdk\Core\Model\Owner[]',
+        'owners' => '\Keap\Sdk\Core\Model\Owner[]',
         'owner_id' => 'string',
         'task_ids' => 'string[]',
         'order_id' => 'string',
         'status' => 'string',
         'estimated_close_time' => '\DateTime',
         'closed_time' => '\DateTime',
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\DealAllOfCustomFields'
+        'custom_fields' => '\Keap\Sdk\Core\Model\DealAllOfCustomFields'
     ];
 
     /**
@@ -471,7 +471,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets value
      *
-     * @return \Com\Keap\Sdk\Core\Model\DealAllOfValue
+     * @return \Keap\Sdk\Core\Model\DealAllOfValue
      */
     public function getValue()
     {
@@ -481,7 +481,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param \Com\Keap\Sdk\Core\Model\DealAllOfValue $value value
+     * @param \Keap\Sdk\Core\Model\DealAllOfValue $value value
      *
      * @return self
      */
@@ -498,7 +498,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contacts
      *
-     * @return \Com\Keap\Sdk\Core\Model\DealContact[]
+     * @return \Keap\Sdk\Core\Model\DealContact[]
      */
     public function getContacts()
     {
@@ -508,7 +508,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contacts
      *
-     * @param \Com\Keap\Sdk\Core\Model\DealContact[] $contacts The list of contacts associated with the deal. This field is required.
+     * @param \Keap\Sdk\Core\Model\DealContact[] $contacts The list of contacts associated with the deal. This field is required.
      *
      * @return self
      */
@@ -525,7 +525,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets stage
      *
-     * @return \Com\Keap\Sdk\Core\Model\DealAllOfStage
+     * @return \Keap\Sdk\Core\Model\DealAllOfStage
      */
     public function getStage()
     {
@@ -535,7 +535,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stage
      *
-     * @param \Com\Keap\Sdk\Core\Model\DealAllOfStage $stage stage
+     * @param \Keap\Sdk\Core\Model\DealAllOfStage $stage stage
      *
      * @return self
      */
@@ -579,7 +579,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets owners
      *
-     * @return \Com\Keap\Sdk\Core\Model\Owner[]
+     * @return \Keap\Sdk\Core\Model\Owner[]
      */
     public function getOwners()
     {
@@ -589,7 +589,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owners
      *
-     * @param \Com\Keap\Sdk\Core\Model\Owner[] $owners The list of owners of the deal. This field is required.
+     * @param \Keap\Sdk\Core\Model\Owner[] $owners The list of owners of the deal. This field is required.
      *
      * @return self
      */
@@ -796,7 +796,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\DealAllOfCustomFields|null
+     * @return \Keap\Sdk\Core\Model\DealAllOfCustomFields|null
      */
     public function getCustomFields()
     {
@@ -806,7 +806,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\DealAllOfCustomFields|null $custom_fields custom_fields
+     * @param \Keap\Sdk\Core\Model\DealAllOfCustomFields|null $custom_fields custom_fields
      *
      * @return self
      */

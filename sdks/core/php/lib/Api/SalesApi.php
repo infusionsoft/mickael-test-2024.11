@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * SalesApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,7 +130,7 @@ class SalesApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setMerchantGatewayAsDefaultUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -147,7 +147,7 @@ class SalesApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setMerchantGatewayAsDefaultUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -185,7 +185,7 @@ class SalesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -193,7 +193,7 @@ class SalesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

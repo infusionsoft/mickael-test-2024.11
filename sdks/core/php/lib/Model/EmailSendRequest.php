@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * EmailSendRequest Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class EmailSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'address_field' => 'string',
-        'attachments' => '\Com\Keap\Sdk\Core\Model\EmailSendRequestAttachment[]',
+        'attachments' => '\Keap\Sdk\Core\Model\EmailSendRequestAttachment[]',
         'contacts' => 'string[]',
         'html_content' => 'string',
         'plain_content' => 'string',
@@ -370,7 +370,7 @@ class EmailSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets attachments
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailSendRequestAttachment[]|null
+     * @return \Keap\Sdk\Core\Model\EmailSendRequestAttachment[]|null
      */
     public function getAttachments()
     {
@@ -380,7 +380,7 @@ class EmailSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets attachments
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailSendRequestAttachment[]|null $attachments Attachments to be sent with each copy of the email, maximum of 10 with size of 1MB each
+     * @param \Keap\Sdk\Core\Model\EmailSendRequestAttachment[]|null $attachments Attachments to be sent with each copy of the email, maximum of 10 with size of 1MB each
      *
      * @return self
      */

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**category** | [**\Com\Keap\Sdk\Core\Model\CategoryReference**](CategoryReference.md) |  | [optional]
+**category** | [**\Keap\Sdk\Core\Model\CategoryReference**](CategoryReference.md) |  | [optional]
 **description** | **string** |  | [optional]
 **id** | **string** |  | [optional]
 **name** | **string** |  | [optional]

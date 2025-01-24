@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListRestMerchantResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListRestMerchantResponse implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'default_merchant_account_id' => 'string',
-        'merchant_accounts' => '\Com\Keap\Sdk\Core\Model\ListRestMerchantAccountResponse[]',
+        'merchant_accounts' => '\Keap\Sdk\Core\Model\ListRestMerchantAccountResponse[]',
         'next_page_token' => 'string'
     ];
 
@@ -333,7 +333,7 @@ class ListRestMerchantResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets merchant_accounts
      *
-     * @return \Com\Keap\Sdk\Core\Model\ListRestMerchantAccountResponse[]|null
+     * @return \Keap\Sdk\Core\Model\ListRestMerchantAccountResponse[]|null
      */
     public function getMerchantAccounts()
     {
@@ -343,7 +343,7 @@ class ListRestMerchantResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets merchant_accounts
      *
-     * @param \Com\Keap\Sdk\Core\Model\ListRestMerchantAccountResponse[]|null $merchant_accounts merchant_accounts
+     * @param \Keap\Sdk\Core\Model\ListRestMerchantAccountResponse[]|null $merchant_accounts merchant_accounts
      *
      * @return self
      */

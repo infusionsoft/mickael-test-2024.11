@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestV2OrderItem Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,15 +67,15 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'notes' => 'string',
         'number_of_payments' => 'int',
-        'order_item_taxes' => '\Com\Keap\Sdk\Core\Model\OrderItemTax[]',
+        'order_item_taxes' => '\Keap\Sdk\Core\Model\OrderItemTax[]',
         'price' => 'float',
-        'product' => '\Com\Keap\Sdk\Core\Model\OrderItemProduct',
+        'product' => '\Keap\Sdk\Core\Model\OrderItemProduct',
         'quantity' => 'int',
-        'special' => '\Com\Keap\Sdk\Core\Model\Discount',
-        'subscription' => '\Com\Keap\Sdk\Core\Model\RestV2Subscription',
+        'special' => '\Keap\Sdk\Core\Model\Discount',
+        'subscription' => '\Keap\Sdk\Core\Model\RestV2Subscription',
         'subscription_based' => 'bool',
         'subscription_id' => 'string',
-        'subscription_plan' => '\Com\Keap\Sdk\Core\Model\RestSubscriptionPlan',
+        'subscription_plan' => '\Keap\Sdk\Core\Model\RestSubscriptionPlan',
         'type' => 'string'
     ];
 
@@ -787,7 +787,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets order_item_taxes
      *
-     * @return \Com\Keap\Sdk\Core\Model\OrderItemTax[]|null
+     * @return \Keap\Sdk\Core\Model\OrderItemTax[]|null
      */
     public function getOrderItemTaxes()
     {
@@ -797,7 +797,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_item_taxes
      *
-     * @param \Com\Keap\Sdk\Core\Model\OrderItemTax[]|null $order_item_taxes order_item_taxes
+     * @param \Keap\Sdk\Core\Model\OrderItemTax[]|null $order_item_taxes order_item_taxes
      *
      * @return self
      */
@@ -841,7 +841,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets product
      *
-     * @return \Com\Keap\Sdk\Core\Model\OrderItemProduct|null
+     * @return \Keap\Sdk\Core\Model\OrderItemProduct|null
      */
     public function getProduct()
     {
@@ -851,7 +851,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets product
      *
-     * @param \Com\Keap\Sdk\Core\Model\OrderItemProduct|null $product product
+     * @param \Keap\Sdk\Core\Model\OrderItemProduct|null $product product
      *
      * @return self
      */
@@ -895,7 +895,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets special
      *
-     * @return \Com\Keap\Sdk\Core\Model\Discount|null
+     * @return \Keap\Sdk\Core\Model\Discount|null
      */
     public function getSpecial()
     {
@@ -905,7 +905,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets special
      *
-     * @param \Com\Keap\Sdk\Core\Model\Discount|null $special special
+     * @param \Keap\Sdk\Core\Model\Discount|null $special special
      *
      * @return self
      */
@@ -922,7 +922,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subscription
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestV2Subscription|null
+     * @return \Keap\Sdk\Core\Model\RestV2Subscription|null
      */
     public function getSubscription()
     {
@@ -932,7 +932,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subscription
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestV2Subscription|null $subscription subscription
+     * @param \Keap\Sdk\Core\Model\RestV2Subscription|null $subscription subscription
      *
      * @return self
      */
@@ -1003,7 +1003,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subscription_plan
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestSubscriptionPlan|null
+     * @return \Keap\Sdk\Core\Model\RestSubscriptionPlan|null
      */
     public function getSubscriptionPlan()
     {
@@ -1013,7 +1013,7 @@ class RestV2OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subscription_plan
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestSubscriptionPlan|null $subscription_plan subscription_plan
+     * @param \Keap\Sdk\Core\Model\RestSubscriptionPlan|null $subscription_plan subscription_plan
      *
      * @return self
      */

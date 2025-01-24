@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CreateCompanyRequest Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,13 +57,13 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\Com\Keap\Sdk\Core\Model\Address',
+        'address' => '\Keap\Sdk\Core\Model\Address',
         'company_name' => 'string',
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\CustomFieldValue[]',
-        'email_address' => '\Com\Keap\Sdk\Core\Model\EmailAddress',
-        'fax_number' => '\Com\Keap\Sdk\Core\Model\FaxNumber',
+        'custom_fields' => '\Keap\Sdk\Core\Model\CustomFieldValue[]',
+        'email_address' => '\Keap\Sdk\Core\Model\EmailAddress',
+        'fax_number' => '\Keap\Sdk\Core\Model\FaxNumber',
         'notes' => 'string',
-        'phone_number' => '\Com\Keap\Sdk\Core\Model\PhoneNumber',
+        'phone_number' => '\Keap\Sdk\Core\Model\PhoneNumber',
         'website' => 'string'
     ];
 
@@ -344,7 +344,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets address
      *
-     * @return \Com\Keap\Sdk\Core\Model\Address|null
+     * @return \Keap\Sdk\Core\Model\Address|null
      */
     public function getAddress()
     {
@@ -354,7 +354,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets address
      *
-     * @param \Com\Keap\Sdk\Core\Model\Address|null $address address
+     * @param \Keap\Sdk\Core\Model\Address|null $address address
      *
      * @return self
      */
@@ -398,7 +398,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\CustomFieldValue[]|null
+     * @return \Keap\Sdk\Core\Model\CustomFieldValue[]|null
      */
     public function getCustomFields()
     {
@@ -408,7 +408,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\CustomFieldValue[]|null $custom_fields custom_fields
+     * @param \Keap\Sdk\Core\Model\CustomFieldValue[]|null $custom_fields custom_fields
      *
      * @return self
      */
@@ -425,7 +425,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets email_address
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailAddress|null
+     * @return \Keap\Sdk\Core\Model\EmailAddress|null
      */
     public function getEmailAddress()
     {
@@ -435,7 +435,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets email_address
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailAddress|null $email_address email_address
+     * @param \Keap\Sdk\Core\Model\EmailAddress|null $email_address email_address
      *
      * @return self
      */
@@ -452,7 +452,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fax_number
      *
-     * @return \Com\Keap\Sdk\Core\Model\FaxNumber|null
+     * @return \Keap\Sdk\Core\Model\FaxNumber|null
      */
     public function getFaxNumber()
     {
@@ -462,7 +462,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fax_number
      *
-     * @param \Com\Keap\Sdk\Core\Model\FaxNumber|null $fax_number fax_number
+     * @param \Keap\Sdk\Core\Model\FaxNumber|null $fax_number fax_number
      *
      * @return self
      */
@@ -506,7 +506,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets phone_number
      *
-     * @return \Com\Keap\Sdk\Core\Model\PhoneNumber|null
+     * @return \Keap\Sdk\Core\Model\PhoneNumber|null
      */
     public function getPhoneNumber()
     {
@@ -516,7 +516,7 @@ class CreateCompanyRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets phone_number
      *
-     * @param \Com\Keap\Sdk\Core\Model\PhoneNumber|null $phone_number phone_number
+     * @param \Keap\Sdk\Core\Model\PhoneNumber|null $phone_number phone_number
      *
      * @return self
      */

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\Com\Keap\Sdk\Core\Model\BusinessProfileAddressResponse**](BusinessProfileAddressResponse.md) |  | [optional]
+**address** | [**\Keap\Sdk\Core\Model\BusinessProfileAddressResponse**](BusinessProfileAddressResponse.md) |  | [optional]
 **business_goals** | **string[]** | The goals of this business, ie. Grow Business, Convert more leads | [optional]
 **business_primary_color** | **string** |  | [optional]
 **business_secondary_color** | **string** |  | [optional]

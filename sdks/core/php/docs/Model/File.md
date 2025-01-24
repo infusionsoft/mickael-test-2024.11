@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **absolute** | **bool** |  | [optional]
-**absolute_file** | [**\Com\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
+**absolute_file** | [**\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
 **absolute_path** | **string** |  | [optional]
-**canonical_file** | [**\Com\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
+**canonical_file** | [**\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
 **canonical_path** | **string** |  | [optional]
 **directory** | **bool** |  | [optional]
 **executable** | **bool** |  | [optional]
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **last_modified** | **int** |  | [optional]
 **name** | **string** |  | [optional]
 **parent** | **string** |  | [optional]
-**parent_file** | [**\Com\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
+**parent_file** | [**\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
 **path** | **string** |  | [optional]
 **readable** | **bool** |  | [optional]
 **total_space** | **int** |  | [optional]

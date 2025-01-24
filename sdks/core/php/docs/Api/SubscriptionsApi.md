@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\SubscriptionsApi
+# Keap\Sdk\Core\SubscriptionsApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createSubscriptionV2UsingPOST()`
 
 ```php
-createSubscriptionV2UsingPOST($create_subscription_v2): \Com\Keap\Sdk\Core\Model\RestSubscriptionV2
+createSubscriptionV2UsingPOST($create_subscription_v2): \Keap\Sdk\Core\Model\RestSubscriptionV2
 ```
 
 Create Subscription
@@ -24,12 +24,12 @@ Creates a subscription with the specified product and product subscription id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\SubscriptionsApi(
+$apiInstance = new Keap\Sdk\Core\Api\SubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_subscription_v2 = new \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2(); // \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2 | createSubscriptionV2
+$create_subscription_v2 = new \Keap\Sdk\Core\Model\CreateSubscriptionV2(); // \Keap\Sdk\Core\Model\CreateSubscriptionV2 | createSubscriptionV2
 
 try {
     $result = $apiInstance->createSubscriptionV2UsingPOST($create_subscription_v2);
@@ -43,11 +43,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_subscription_v2** | [**\Com\Keap\Sdk\Core\Model\CreateSubscriptionV2**](../Model/CreateSubscriptionV2.md)| createSubscriptionV2 | |
+| **create_subscription_v2** | [**\Keap\Sdk\Core\Model\CreateSubscriptionV2**](../Model/CreateSubscriptionV2.md)| createSubscriptionV2 | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\RestSubscriptionV2**](../Model/RestSubscriptionV2.md)
+[**\Keap\Sdk\Core\Model\RestSubscriptionV2**](../Model/RestSubscriptionV2.md)
 
 ### Authorization
 

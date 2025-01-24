@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * SubscriptionsApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,12 +127,12 @@ class SubscriptionsApi
      *
      * Create Subscription
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
+     * @param  \Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionV2UsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RestSubscriptionV2|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RestSubscriptionV2|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createSubscriptionV2UsingPOST($create_subscription_v2, string $contentType = self::contentTypes['createSubscriptionV2UsingPOST'][0])
     {
@@ -145,12 +145,12 @@ class SubscriptionsApi
      *
      * Create Subscription
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
+     * @param  \Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionV2UsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RestSubscriptionV2|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RestSubscriptionV2|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionV2UsingPOSTWithHttpInfo($create_subscription_v2, string $contentType = self::contentTypes['createSubscriptionV2UsingPOST'][0])
     {
@@ -181,11 +181,11 @@ class SubscriptionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\RestSubscriptionV2' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RestSubscriptionV2' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RestSubscriptionV2' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RestSubscriptionV2' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -203,16 +203,16 @@ class SubscriptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RestSubscriptionV2', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RestSubscriptionV2', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -230,16 +230,16 @@ class SubscriptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -257,7 +257,7 @@ class SubscriptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -276,7 +276,7 @@ class SubscriptionsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RestSubscriptionV2';
+            $returnType = '\Keap\Sdk\Core\Model\RestSubscriptionV2';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -309,7 +309,7 @@ class SubscriptionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RestSubscriptionV2',
+                        '\Keap\Sdk\Core\Model\RestSubscriptionV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -317,7 +317,7 @@ class SubscriptionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class SubscriptionsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +340,7 @@ class SubscriptionsApi
      *
      * Create Subscription
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
+     * @param  \Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionV2UsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -361,7 +361,7 @@ class SubscriptionsApi
      *
      * Create Subscription
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
+     * @param  \Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionV2UsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -369,7 +369,7 @@ class SubscriptionsApi
      */
     public function createSubscriptionV2UsingPOSTAsyncWithHttpInfo($create_subscription_v2, string $contentType = self::contentTypes['createSubscriptionV2UsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RestSubscriptionV2';
+        $returnType = '\Keap\Sdk\Core\Model\RestSubscriptionV2';
         $request = $this->createSubscriptionV2UsingPOSTRequest($create_subscription_v2, $contentType);
 
         return $this->client
@@ -411,7 +411,7 @@ class SubscriptionsApi
     /**
      * Create request for operation 'createSubscriptionV2UsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
+     * @param  \Keap\Sdk\Core\Model\CreateSubscriptionV2 $create_subscription_v2 createSubscriptionV2 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubscriptionV2UsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

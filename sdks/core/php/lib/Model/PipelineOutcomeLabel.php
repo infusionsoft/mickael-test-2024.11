@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelineOutcomeLabel Class Doc Comment
  *
  * @category Class
  * @description Represents a label for a pipeline outcome.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class PipelineOutcomeLabel implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'value' => '\Com\Keap\Sdk\Core\Model\DealStatus',
+        'value' => '\Keap\Sdk\Core\Model\DealStatus',
         'label' => 'string'
     ];
 
@@ -307,7 +307,7 @@ class PipelineOutcomeLabel implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets value
      *
-     * @return \Com\Keap\Sdk\Core\Model\DealStatus
+     * @return \Keap\Sdk\Core\Model\DealStatus
      */
     public function getValue()
     {
@@ -317,7 +317,7 @@ class PipelineOutcomeLabel implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets value
      *
-     * @param \Com\Keap\Sdk\Core\Model\DealStatus $value The status of the deal. This field is required.
+     * @param \Keap\Sdk\Core\Model\DealStatus $value The status of the deal. This field is required.
      *
      * @return self
      */

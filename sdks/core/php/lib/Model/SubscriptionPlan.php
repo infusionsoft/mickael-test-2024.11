@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * SubscriptionPlan Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class SubscriptionPlan implements ModelInterface, ArrayAccess, \JsonSerializable
         'display_order_index' => 'int',
         'frequency' => 'int',
         'id' => 'string',
-        'plan_price' => '\Com\Keap\Sdk\Core\Model\CurrencyValue',
+        'plan_price' => '\Keap\Sdk\Core\Model\CurrencyValue',
         'product_id' => 'string',
         'total_cycles' => 'int'
     ];
@@ -548,7 +548,7 @@ class SubscriptionPlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_price
      *
-     * @return \Com\Keap\Sdk\Core\Model\CurrencyValue|null
+     * @return \Keap\Sdk\Core\Model\CurrencyValue|null
      */
     public function getPlanPrice()
     {
@@ -558,7 +558,7 @@ class SubscriptionPlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_price
      *
-     * @param \Com\Keap\Sdk\Core\Model\CurrencyValue|null $plan_price plan_price
+     * @param \Keap\Sdk\Core\Model\CurrencyValue|null $plan_price plan_price
      *
      * @return self
      */

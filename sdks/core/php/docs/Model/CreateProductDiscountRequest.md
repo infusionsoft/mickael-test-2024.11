@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apply_to_commissions** | **bool** |  | [optional]
-**criteria** | [**\Com\Keap\Sdk\Core\Model\DiscountCriteria[]**](DiscountCriteria.md) |  | [optional]
+**criteria** | [**\Keap\Sdk\Core\Model\DiscountCriteria[]**](DiscountCriteria.md) |  | [optional]
 **description** | **string** |  | [optional]
 **discount_type** | **string** |  |
 **discount_value** | **float** |  |

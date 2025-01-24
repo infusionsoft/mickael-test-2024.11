@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**affiliate_commissions** | [**\Com\Keap\Sdk\Core\Model\AffiliateCommission[]**](AffiliateCommission.md) |  | [optional]
+**affiliate_commissions** | [**\Keap\Sdk\Core\Model\AffiliateCommission[]**](AffiliateCommission.md) |  | [optional]
 **next_page_token** | **string** |  | [optional]
 **total_aff_comm_earned** | **float** |  | [optional]
 **total_claw_back** | **float** |  | [optional]

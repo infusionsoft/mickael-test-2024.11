@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListCompaniesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListCompaniesResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'companies' => '\Com\Keap\Sdk\Core\Model\Company[]',
+        'companies' => '\Keap\Sdk\Core\Model\Company[]',
         'next_page_token' => 'string'
     ];
 
@@ -299,7 +299,7 @@ class ListCompaniesResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets companies
      *
-     * @return \Com\Keap\Sdk\Core\Model\Company[]|null
+     * @return \Keap\Sdk\Core\Model\Company[]|null
      */
     public function getCompanies()
     {
@@ -309,7 +309,7 @@ class ListCompaniesResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets companies
      *
-     * @param \Com\Keap\Sdk\Core\Model\Company[]|null $companies companies
+     * @param \Keap\Sdk\Core\Model\Company[]|null $companies companies
      *
      * @return self
      */

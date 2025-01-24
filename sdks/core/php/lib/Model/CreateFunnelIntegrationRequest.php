@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CreateFunnelIntegrationRequest Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class CreateFunnelIntegrationRequest implements ModelInterface, ArrayAccess, \Js
         'base_url' => 'string',
         'context' => 'string',
         'enabled' => 'bool',
-        'funnel_integration_actions' => '\Com\Keap\Sdk\Core\Model\FunnelIntegrationAction[]',
-        'funnel_integration_triggers' => '\Com\Keap\Sdk\Core\Model\FunnelIntegrationAction[]',
+        'funnel_integration_actions' => '\Keap\Sdk\Core\Model\FunnelIntegrationAction[]',
+        'funnel_integration_triggers' => '\Keap\Sdk\Core\Model\FunnelIntegrationAction[]',
         'name' => 'string'
     ];
 
@@ -408,7 +408,7 @@ class CreateFunnelIntegrationRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets funnel_integration_actions
      *
-     * @return \Com\Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null
+     * @return \Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null
      */
     public function getFunnelIntegrationActions()
     {
@@ -418,7 +418,7 @@ class CreateFunnelIntegrationRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets funnel_integration_actions
      *
-     * @param \Com\Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null $funnel_integration_actions The list of actions that will be installed with the integration.
+     * @param \Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null $funnel_integration_actions The list of actions that will be installed with the integration.
      *
      * @return self
      */
@@ -435,7 +435,7 @@ class CreateFunnelIntegrationRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets funnel_integration_triggers
      *
-     * @return \Com\Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null
+     * @return \Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null
      */
     public function getFunnelIntegrationTriggers()
     {
@@ -445,7 +445,7 @@ class CreateFunnelIntegrationRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets funnel_integration_triggers
      *
-     * @param \Com\Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null $funnel_integration_triggers The list of triggers that will be installed with the integration.
+     * @param \Keap\Sdk\Core\Model\FunnelIntegrationAction[]|null $funnel_integration_triggers The list of triggers that will be installed with the integration.
      *
      * @return self
      */

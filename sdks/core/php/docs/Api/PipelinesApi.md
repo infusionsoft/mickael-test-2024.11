@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\PipelinesApi
+# Keap\Sdk\Core\PipelinesApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -18,7 +18,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `callList()`
 
 ```php
-callList($filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\PipelineListResponse
+callList($filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\PipelineListResponse
 ```
 
 Lists entities based on the provided ListCommand.
@@ -32,7 +32,7 @@ Lists entities based on the provided ListCommand.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -61,7 +61,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PipelineListResponse**](../Model/PipelineListResponse.md)
+[**\Keap\Sdk\Core\Model\PipelineListResponse**](../Model/PipelineListResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 ## `create()`
 
 ```php
-create($create_pipeline_request): \Com\Keap\Sdk\Core\Model\Pipeline
+create($create_pipeline_request): \Keap\Sdk\Core\Model\Pipeline
 ```
 
 Creates a new entity.
@@ -93,12 +93,12 @@ Creates a new entity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_pipeline_request = new \Com\Keap\Sdk\Core\Model\CreatePipelineRequest(); // \Com\Keap\Sdk\Core\Model\CreatePipelineRequest | the create request
+$create_pipeline_request = new \Keap\Sdk\Core\Model\CreatePipelineRequest(); // \Keap\Sdk\Core\Model\CreatePipelineRequest | the create request
 
 try {
     $result = $apiInstance->create($create_pipeline_request);
@@ -112,11 +112,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_pipeline_request** | [**\Com\Keap\Sdk\Core\Model\CreatePipelineRequest**](../Model/CreatePipelineRequest.md)| the create request | |
+| **create_pipeline_request** | [**\Keap\Sdk\Core\Model\CreatePipelineRequest**](../Model/CreatePipelineRequest.md)| the create request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Pipeline**](../Model/Pipeline.md)
+[**\Keap\Sdk\Core\Model\Pipeline**](../Model/Pipeline.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ Deletes a pipeline.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -192,7 +192,7 @@ No authorization required
 ## `get()`
 
 ```php
-get($id): \Com\Keap\Sdk\Core\Model\Pipeline
+get($id): \Keap\Sdk\Core\Model\Pipeline
 ```
 
 Retrieves an entity by its identifier.
@@ -206,7 +206,7 @@ Retrieves an entity by its identifier.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -229,7 +229,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Pipeline**](../Model/Pipeline.md)
+[**\Keap\Sdk\Core\Model\Pipeline**](../Model/Pipeline.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ No authorization required
 ## `getOutcomeLabels()`
 
 ```php
-getOutcomeLabels($id, $filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
+getOutcomeLabels($id, $filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
 ```
 
 Gets the outcome labels for a pipeline.
@@ -261,7 +261,7 @@ Gets the outcome labels for a pipeline.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -292,7 +292,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse**](../Model/PipelineOutcomeLabelListResponse.md)
+[**\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse**](../Model/PipelineOutcomeLabelListResponse.md)
 
 ### Authorization
 
@@ -310,7 +310,7 @@ No authorization required
 ## `listStages()`
 
 ```php
-listStages($id, $filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\PipelineStageListResponse
+listStages($id, $filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\PipelineStageListResponse
 ```
 
 Retrieves a list of stages for a specific pipeline.
@@ -324,7 +324,7 @@ Retrieves a list of stages for a specific pipeline.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -355,7 +355,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PipelineStageListResponse**](../Model/PipelineStageListResponse.md)
+[**\Keap\Sdk\Core\Model\PipelineStageListResponse**](../Model/PipelineStageListResponse.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ No authorization required
 ## `listSummaries()`
 
 ```php
-listSummaries($filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse
+listSummaries($filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\PipelineSummariesListResponse
 ```
 
 Retrieves a list of pipeline summaries.
@@ -387,7 +387,7 @@ Retrieves a list of pipeline summaries.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -416,7 +416,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PipelineSummariesListResponse**](../Model/PipelineSummariesListResponse.md)
+[**\Keap\Sdk\Core\Model\PipelineSummariesListResponse**](../Model/PipelineSummariesListResponse.md)
 
 ### Authorization
 
@@ -434,7 +434,7 @@ No authorization required
 ## `setOutcomeLabels()`
 
 ```php
-setOutcomeLabels($id, $update_outcome_labels_request): \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
+setOutcomeLabels($id, $update_outcome_labels_request): \Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse
 ```
 
 Sets the outcome labels for a pipeline.
@@ -448,13 +448,13 @@ Sets the outcome labels for a pipeline.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | the pipeline identifier
-$update_outcome_labels_request = new \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest(); // \Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest | the request containing the new outcome labels
+$update_outcome_labels_request = new \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest(); // \Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest | the request containing the new outcome labels
 
 try {
     $result = $apiInstance->setOutcomeLabels($id, $update_outcome_labels_request);
@@ -469,11 +469,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| the pipeline identifier | |
-| **update_outcome_labels_request** | [**\Com\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest**](../Model/UpdateOutcomeLabelsRequest.md)| the request containing the new outcome labels | |
+| **update_outcome_labels_request** | [**\Keap\Sdk\Core\Model\UpdateOutcomeLabelsRequest**](../Model/UpdateOutcomeLabelsRequest.md)| the request containing the new outcome labels | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse**](../Model/PipelineOutcomeLabelListResponse.md)
+[**\Keap\Sdk\Core\Model\PipelineOutcomeLabelListResponse**](../Model/PipelineOutcomeLabelListResponse.md)
 
 ### Authorization
 
@@ -491,7 +491,7 @@ No authorization required
 ## `update1()`
 
 ```php
-update1($id, $update_mask, $update_pipeline_request): \Com\Keap\Sdk\Core\Model\Pipeline
+update1($id, $update_mask, $update_pipeline_request): \Keap\Sdk\Core\Model\Pipeline
 ```
 
 Updates an existing entity.
@@ -505,14 +505,14 @@ Updates an existing entity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PipelinesApi(
+$apiInstance = new Keap\Sdk\Core\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | the entity identifier
 $update_mask = array('update_mask_example'); // string[] | the fields to update
-$update_pipeline_request = new \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest(); // \Com\Keap\Sdk\Core\Model\UpdatePipelineRequest | the update request
+$update_pipeline_request = new \Keap\Sdk\Core\Model\UpdatePipelineRequest(); // \Keap\Sdk\Core\Model\UpdatePipelineRequest | the update request
 
 try {
     $result = $apiInstance->update1($id, $update_mask, $update_pipeline_request);
@@ -528,11 +528,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| the entity identifier | |
 | **update_mask** | [**string[]**](../Model/string.md)| the fields to update | |
-| **update_pipeline_request** | [**\Com\Keap\Sdk\Core\Model\UpdatePipelineRequest**](../Model/UpdatePipelineRequest.md)| the update request | |
+| **update_pipeline_request** | [**\Keap\Sdk\Core\Model\UpdatePipelineRequest**](../Model/UpdatePipelineRequest.md)| the update request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Pipeline**](../Model/Pipeline.md)
+[**\Keap\Sdk\Core\Model\Pipeline**](../Model/Pipeline.md)
 
 ### Authorization
 

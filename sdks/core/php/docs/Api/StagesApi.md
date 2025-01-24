@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\StagesApi
+# Keap\Sdk\Core\StagesApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `create1()`
 
 ```php
-create1($create_stage_request): \Com\Keap\Sdk\Core\Model\Stage
+create1($create_stage_request): \Keap\Sdk\Core\Model\Stage
 ```
 
 Creates a new entity.
@@ -29,12 +29,12 @@ Creates a new entity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\StagesApi(
+$apiInstance = new Keap\Sdk\Core\Api\StagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_stage_request = new \Com\Keap\Sdk\Core\Model\CreateStageRequest(); // \Com\Keap\Sdk\Core\Model\CreateStageRequest | the create request
+$create_stage_request = new \Keap\Sdk\Core\Model\CreateStageRequest(); // \Keap\Sdk\Core\Model\CreateStageRequest | the create request
 
 try {
     $result = $apiInstance->create1($create_stage_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_stage_request** | [**\Com\Keap\Sdk\Core\Model\CreateStageRequest**](../Model/CreateStageRequest.md)| the create request | |
+| **create_stage_request** | [**\Keap\Sdk\Core\Model\CreateStageRequest**](../Model/CreateStageRequest.md)| the create request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Stage**](../Model/Stage.md)
+[**\Keap\Sdk\Core\Model\Stage**](../Model/Stage.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Deletes a stage by its identifier for a given tenant.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\StagesApi(
+$apiInstance = new Keap\Sdk\Core\Api\StagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -126,7 +126,7 @@ No authorization required
 ## `get1()`
 
 ```php
-get1($id): \Com\Keap\Sdk\Core\Model\Stage
+get1($id): \Keap\Sdk\Core\Model\Stage
 ```
 
 Retrieves an entity by its identifier.
@@ -140,7 +140,7 @@ Retrieves an entity by its identifier.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\StagesApi(
+$apiInstance = new Keap\Sdk\Core\Api\StagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -163,7 +163,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Stage**](../Model/Stage.md)
+[**\Keap\Sdk\Core\Model\Stage**](../Model/Stage.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `list1()`
 
 ```php
-list1($filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\StageListResponse
+list1($filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\StageListResponse
 ```
 
 Lists entities based on the provided ListCommand.
@@ -195,7 +195,7 @@ Lists entities based on the provided ListCommand.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\StagesApi(
+$apiInstance = new Keap\Sdk\Core\Api\StagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -224,7 +224,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\StageListResponse**](../Model/StageListResponse.md)
+[**\Keap\Sdk\Core\Model\StageListResponse**](../Model/StageListResponse.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
 ## `listStages1()`
 
 ```php
-listStages1($id, $filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\StageDealListResponse
+listStages1($id, $filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\StageDealListResponse
 ```
 
 Retrieves a list of deals for a specific stage.
@@ -256,7 +256,7 @@ Retrieves a list of deals for a specific stage.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\StagesApi(
+$apiInstance = new Keap\Sdk\Core\Api\StagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -287,7 +287,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\StageDealListResponse**](../Model/StageDealListResponse.md)
+[**\Keap\Sdk\Core\Model\StageDealListResponse**](../Model/StageDealListResponse.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ No authorization required
 ## `update2()`
 
 ```php
-update2($id, $update_mask, $update_stage_request): \Com\Keap\Sdk\Core\Model\Stage
+update2($id, $update_mask, $update_stage_request): \Keap\Sdk\Core\Model\Stage
 ```
 
 Updates an existing entity.
@@ -319,14 +319,14 @@ Updates an existing entity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\StagesApi(
+$apiInstance = new Keap\Sdk\Core\Api\StagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | the entity identifier
 $update_mask = array('update_mask_example'); // string[] | the fields to update
-$update_stage_request = new \Com\Keap\Sdk\Core\Model\UpdateStageRequest(); // \Com\Keap\Sdk\Core\Model\UpdateStageRequest | the update request
+$update_stage_request = new \Keap\Sdk\Core\Model\UpdateStageRequest(); // \Keap\Sdk\Core\Model\UpdateStageRequest | the update request
 
 try {
     $result = $apiInstance->update2($id, $update_mask, $update_stage_request);
@@ -342,11 +342,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| the entity identifier | |
 | **update_mask** | [**string[]**](../Model/string.md)| the fields to update | |
-| **update_stage_request** | [**\Com\Keap\Sdk\Core\Model\UpdateStageRequest**](../Model/UpdateStageRequest.md)| the update request | |
+| **update_stage_request** | [**\Keap\Sdk\Core\Model\UpdateStageRequest**](../Model/UpdateStageRequest.md)| the update request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Stage**](../Model/Stage.md)
+[**\Keap\Sdk\Core\Model\Stage**](../Model/Stage.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * TaggedCompany Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class TaggedCompany implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'applied_time' => 'string',
-        'company' => '\Com\Keap\Sdk\Core\Model\Company'
+        'company' => '\Keap\Sdk\Core\Model\Company'
     ];
 
     /**
@@ -326,7 +326,7 @@ class TaggedCompany implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets company
      *
-     * @return \Com\Keap\Sdk\Core\Model\Company|null
+     * @return \Keap\Sdk\Core\Model\Company|null
      */
     public function getCompany()
     {
@@ -336,7 +336,7 @@ class TaggedCompany implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company
      *
-     * @param \Com\Keap\Sdk\Core\Model\Company|null $company company
+     * @param \Keap\Sdk\Core\Model\Company|null $company company
      *
      * @return self
      */

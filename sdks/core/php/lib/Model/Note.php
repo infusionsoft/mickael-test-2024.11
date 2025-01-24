@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Note Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assigned_to_user' => '\Com\Keap\Sdk\Core\Model\BasicUser',
+        'assigned_to_user' => '\Keap\Sdk\Core\Model\BasicUser',
         'contact_id' => 'string',
         'create_time' => 'string',
         'created_by_user_id' => 'string',
@@ -362,7 +362,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assigned_to_user
      *
-     * @return \Com\Keap\Sdk\Core\Model\BasicUser|null
+     * @return \Keap\Sdk\Core\Model\BasicUser|null
      */
     public function getAssignedToUser()
     {
@@ -372,7 +372,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assigned_to_user
      *
-     * @param \Com\Keap\Sdk\Core\Model\BasicUser|null $assigned_to_user assigned_to_user
+     * @param \Keap\Sdk\Core\Model\BasicUser|null $assigned_to_user assigned_to_user
      *
      * @return self
      */

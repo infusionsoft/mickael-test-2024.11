@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelineSummariesListResponse Class Doc Comment
  *
  * @category Class
  * @description Response for a list of pipeline summaries.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PipelineSummariesListResponse implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'pipeline_summaries' => '\Com\Keap\Sdk\Core\Model\PipelineSummary[]'
+        'pipeline_summaries' => '\Keap\Sdk\Core\Model\PipelineSummary[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class PipelineSummariesListResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets pipeline_summaries
      *
-     * @return \Com\Keap\Sdk\Core\Model\PipelineSummary[]|null
+     * @return \Keap\Sdk\Core\Model\PipelineSummary[]|null
      */
     public function getPipelineSummaries()
     {
@@ -337,7 +337,7 @@ class PipelineSummariesListResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets pipeline_summaries
      *
-     * @param \Com\Keap\Sdk\Core\Model\PipelineSummary[]|null $pipeline_summaries The list of pipeline summaries.
+     * @param \Keap\Sdk\Core\Model\PipelineSummary[]|null $pipeline_summaries The list of pipeline summaries.
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * OpportunityStage Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class OpportunityStage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'details' => '\Com\Keap\Sdk\Core\Model\StageDetails',
+        'details' => '\Keap\Sdk\Core\Model\StageDetails',
         'id' => 'string',
         'name' => 'string',
         'reasons' => 'string[]'
@@ -316,7 +316,7 @@ class OpportunityStage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets details
      *
-     * @return \Com\Keap\Sdk\Core\Model\StageDetails|null
+     * @return \Keap\Sdk\Core\Model\StageDetails|null
      */
     public function getDetails()
     {
@@ -326,7 +326,7 @@ class OpportunityStage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets details
      *
-     * @param \Com\Keap\Sdk\Core\Model\StageDetails|null $details details
+     * @param \Keap\Sdk\Core\Model\StageDetails|null $details details
      *
      * @return self
      */

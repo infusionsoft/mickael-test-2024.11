@@ -101,7 +101,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -167,7 +168,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -233,7 +235,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -379,7 +382,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -453,7 +457,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -527,7 +532,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -655,7 +661,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -721,7 +728,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -787,7 +795,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -928,7 +937,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineOutcomeLabelListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1010,7 +1020,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineOutcomeLabelListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1092,7 +1103,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineOutcomeLabelListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1249,7 +1261,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1327,7 +1340,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1405,7 +1419,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1563,7 +1578,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineStageListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1645,7 +1661,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineStageListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1727,7 +1744,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineStageListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1884,7 +1902,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineSummariesListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1962,7 +1981,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineSummariesListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2040,7 +2060,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineSummariesListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2186,7 +2207,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineOutcomeLabelListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2256,7 +2278,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineOutcomeLabelListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2326,7 +2349,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "PipelineOutcomeLabelListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2475,7 +2499,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2549,7 +2574,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2623,7 +2649,8 @@ class PipelinesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "Pipeline",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

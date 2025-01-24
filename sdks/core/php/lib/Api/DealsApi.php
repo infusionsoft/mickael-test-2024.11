@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * DealsApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,12 +140,12 @@ class DealsApi
      * Creates a new note for a specific deal.
      *
      * @param  string $id the deal ID to associate the new note with (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
+     * @param  \Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNote'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\DealNote
+     * @return \Keap\Sdk\Core\Model\DealNote
      */
     public function createNote($id, $create_deal_note_request, string $contentType = self::contentTypes['createNote'][0])
     {
@@ -159,12 +159,12 @@ class DealsApi
      * Creates a new note for a specific deal.
      *
      * @param  string $id the deal ID to associate the new note with (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
+     * @param  \Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNote'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\DealNote, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\DealNote, HTTP status code, HTTP response headers (array of strings)
      */
     public function createNoteWithHttpInfo($id, $create_deal_note_request, string $contentType = self::contentTypes['createNote'][0])
     {
@@ -195,11 +195,11 @@ class DealsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\DealNote' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\DealNote' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\DealNote' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\DealNote' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -217,7 +217,7 @@ class DealsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\DealNote', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\DealNote', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -236,7 +236,7 @@ class DealsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\DealNote';
+            $returnType = '\Keap\Sdk\Core\Model\DealNote';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -269,7 +269,7 @@ class DealsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\DealNote',
+                        '\Keap\Sdk\Core\Model\DealNote',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class DealsApi
      * Creates a new note for a specific deal.
      *
      * @param  string $id the deal ID to associate the new note with (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
+     * @param  \Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNote'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -307,7 +307,7 @@ class DealsApi
      * Creates a new note for a specific deal.
      *
      * @param  string $id the deal ID to associate the new note with (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
+     * @param  \Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNote'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -315,7 +315,7 @@ class DealsApi
      */
     public function createNoteAsyncWithHttpInfo($id, $create_deal_note_request, string $contentType = self::contentTypes['createNote'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\DealNote';
+        $returnType = '\Keap\Sdk\Core\Model\DealNote';
         $request = $this->createNoteRequest($id, $create_deal_note_request, $contentType);
 
         return $this->client
@@ -358,7 +358,7 @@ class DealsApi
      * Create request for operation 'createNote'
      *
      * @param  string $id the deal ID to associate the new note with (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
+     * @param  \Keap\Sdk\Core\Model\CreateDealNoteRequest $create_deal_note_request the request body containing note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNote'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -469,7 +469,7 @@ class DealsApi
      * @param  string $note_id the ID of the note to delete (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -486,7 +486,7 @@ class DealsApi
      * @param  string $note_id the ID of the note to delete (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -686,9 +686,9 @@ class DealsApi
      * @param  string $note_id the ID of the note to retrieve (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNote'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\DealNote
+     * @return \Keap\Sdk\Core\Model\DealNote
      */
     public function getNote($note_id, string $contentType = self::contentTypes['getNote'][0])
     {
@@ -704,9 +704,9 @@ class DealsApi
      * @param  string $note_id the ID of the note to retrieve (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNote'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\DealNote, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\DealNote, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNoteWithHttpInfo($note_id, string $contentType = self::contentTypes['getNote'][0])
     {
@@ -737,11 +737,11 @@ class DealsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\DealNote' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\DealNote' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\DealNote' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\DealNote' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -759,7 +759,7 @@ class DealsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\DealNote', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\DealNote', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -778,7 +778,7 @@ class DealsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\DealNote';
+            $returnType = '\Keap\Sdk\Core\Model\DealNote';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -811,7 +811,7 @@ class DealsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\DealNote',
+                        '\Keap\Sdk\Core\Model\DealNote',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -855,7 +855,7 @@ class DealsApi
      */
     public function getNoteAsyncWithHttpInfo($note_id, string $contentType = self::contentTypes['getNote'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\DealNote';
+        $returnType = '\Keap\Sdk\Core\Model\DealNote';
         $request = $this->getNoteRequest($note_id, $contentType);
 
         return $this->client
@@ -998,9 +998,9 @@ class DealsApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listNotes'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\DealNoteListResponse
+     * @return \Keap\Sdk\Core\Model\DealNoteListResponse
      */
     public function listNotes($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listNotes'][0])
     {
@@ -1020,9 +1020,9 @@ class DealsApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listNotes'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\DealNoteListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\DealNoteListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNotesWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listNotes'][0])
     {
@@ -1053,11 +1053,11 @@ class DealsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\DealNoteListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\DealNoteListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\DealNoteListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\DealNoteListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1075,7 +1075,7 @@ class DealsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\DealNoteListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\DealNoteListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1094,7 +1094,7 @@ class DealsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\DealNoteListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\DealNoteListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1127,7 +1127,7 @@ class DealsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\DealNoteListResponse',
+                        '\Keap\Sdk\Core\Model\DealNoteListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1179,7 +1179,7 @@ class DealsApi
      */
     public function listNotesAsyncWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listNotes'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\DealNoteListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\DealNoteListResponse';
         $request = $this->listNotesRequest($id, $filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -1366,12 +1366,12 @@ class DealsApi
      * Updates a specific deal note by its ID.
      *
      * @param  string $note_id the ID of the note to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\DealNote
+     * @return \Keap\Sdk\Core\Model\DealNote
      */
     public function update($note_id, $update_deal_note_request, string $contentType = self::contentTypes['update'][0])
     {
@@ -1385,12 +1385,12 @@ class DealsApi
      * Updates a specific deal note by its ID.
      *
      * @param  string $note_id the ID of the note to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\DealNote, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\DealNote, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWithHttpInfo($note_id, $update_deal_note_request, string $contentType = self::contentTypes['update'][0])
     {
@@ -1421,11 +1421,11 @@ class DealsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\DealNote' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\DealNote' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\DealNote' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\DealNote' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1443,7 +1443,7 @@ class DealsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\DealNote', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\DealNote', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1462,7 +1462,7 @@ class DealsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\DealNote';
+            $returnType = '\Keap\Sdk\Core\Model\DealNote';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1495,7 +1495,7 @@ class DealsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\DealNote',
+                        '\Keap\Sdk\Core\Model\DealNote',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1511,7 +1511,7 @@ class DealsApi
      * Updates a specific deal note by its ID.
      *
      * @param  string $note_id the ID of the note to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1533,7 +1533,7 @@ class DealsApi
      * Updates a specific deal note by its ID.
      *
      * @param  string $note_id the ID of the note to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1541,7 +1541,7 @@ class DealsApi
      */
     public function updateAsyncWithHttpInfo($note_id, $update_deal_note_request, string $contentType = self::contentTypes['update'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\DealNote';
+        $returnType = '\Keap\Sdk\Core\Model\DealNote';
         $request = $this->updateRequest($note_id, $update_deal_note_request, $contentType);
 
         return $this->client
@@ -1584,7 +1584,7 @@ class DealsApi
      * Create request for operation 'update'
      *
      * @param  string $note_id the ID of the note to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateDealNoteRequest $update_deal_note_request the request body containing updated note details (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

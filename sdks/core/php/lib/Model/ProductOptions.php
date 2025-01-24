@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ProductOptions Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class ProductOptions implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fixed_options' => '\Com\Keap\Sdk\Core\Model\ProductFixedOption[]',
+        'fixed_options' => '\Keap\Sdk\Core\Model\ProductFixedOption[]',
         'name' => 'string',
         'required' => 'bool',
         'type' => 'string',
-        'variable_setting' => '\Com\Keap\Sdk\Core\Model\ProductVariableSetting'
+        'variable_setting' => '\Keap\Sdk\Core\Model\ProductVariableSetting'
     ];
 
     /**
@@ -344,7 +344,7 @@ class ProductOptions implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fixed_options
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductFixedOption[]|null
+     * @return \Keap\Sdk\Core\Model\ProductFixedOption[]|null
      */
     public function getFixedOptions()
     {
@@ -354,7 +354,7 @@ class ProductOptions implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fixed_options
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductFixedOption[]|null $fixed_options List of option values for the fixed option
+     * @param \Keap\Sdk\Core\Model\ProductFixedOption[]|null $fixed_options List of option values for the fixed option
      *
      * @return self
      */
@@ -462,7 +462,7 @@ class ProductOptions implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets variable_setting
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductVariableSetting|null
+     * @return \Keap\Sdk\Core\Model\ProductVariableSetting|null
      */
     public function getVariableSetting()
     {
@@ -472,7 +472,7 @@ class ProductOptions implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets variable_setting
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductVariableSetting|null $variable_setting variable_setting
+     * @param \Keap\Sdk\Core\Model\ProductVariableSetting|null $variable_setting variable_setting
      *
      * @return self
      */

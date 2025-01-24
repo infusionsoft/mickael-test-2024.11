@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**discounts** | [**\Com\Keap\Sdk\Core\Model\CategoryDiscount[]**](CategoryDiscount.md) |  | [optional]
+**discounts** | [**\Keap\Sdk\Core\Model\CategoryDiscount[]**](CategoryDiscount.md) |  | [optional]
 **next_page_token** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

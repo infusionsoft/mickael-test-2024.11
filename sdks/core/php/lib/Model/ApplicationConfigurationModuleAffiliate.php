@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ApplicationConfigurationModuleAffiliate Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ApplicationConfigurationModuleAffiliate implements ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'choose_affiliate' => 'bool',
-        'commission' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission',
+        'commission' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission',
         'custom_affiliate_url' => 'string',
         'display_affiliate_ip_address' => 'bool',
         'do_not_notify_affiliate' => 'bool',
@@ -361,7 +361,7 @@ class ApplicationConfigurationModuleAffiliate implements ModelInterface, ArrayAc
     /**
      * Gets commission
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission|null
      */
     public function getCommission()
     {
@@ -371,7 +371,7 @@ class ApplicationConfigurationModuleAffiliate implements ModelInterface, ArrayAc
     /**
      * Sets commission
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission|null $commission commission
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliateCommission|null $commission commission
      *
      * @return self
      */

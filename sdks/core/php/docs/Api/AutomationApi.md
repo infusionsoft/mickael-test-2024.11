@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\AutomationApi
+# Keap\Sdk\Core\AutomationApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `addContactsToAutomationSequenceUsingPOST()`
 
 ```php
-addContactsToAutomationSequenceUsingPOST($automation_id, $sequence_id, $add_to_automation_sequence_request): \Com\Keap\Sdk\Core\Model\AddToAutomationSequenceResponse
+addContactsToAutomationSequenceUsingPOST($automation_id, $sequence_id, $add_to_automation_sequence_request): \Keap\Sdk\Core\Model\AddToAutomationSequenceResponse
 ```
 
 Add Contacts to an Automation Sequence
@@ -29,14 +29,14 @@ Adds a list of contacts to an automation sequence Response contains a map of the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $automation_id = 'automation_id_example'; // string | automation_id
 $sequence_id = 'sequence_id_example'; // string | sequence_id
-$add_to_automation_sequence_request = new \Com\Keap\Sdk\Core\Model\AddToAutomationSequenceRequest(); // \Com\Keap\Sdk\Core\Model\AddToAutomationSequenceRequest | addToAutomationSequenceRequest
+$add_to_automation_sequence_request = new \Keap\Sdk\Core\Model\AddToAutomationSequenceRequest(); // \Keap\Sdk\Core\Model\AddToAutomationSequenceRequest | addToAutomationSequenceRequest
 
 try {
     $result = $apiInstance->addContactsToAutomationSequenceUsingPOST($automation_id, $sequence_id, $add_to_automation_sequence_request);
@@ -52,11 +52,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **automation_id** | **string**| automation_id | |
 | **sequence_id** | **string**| sequence_id | |
-| **add_to_automation_sequence_request** | [**\Com\Keap\Sdk\Core\Model\AddToAutomationSequenceRequest**](../Model/AddToAutomationSequenceRequest.md)| addToAutomationSequenceRequest | |
+| **add_to_automation_sequence_request** | [**\Keap\Sdk\Core\Model\AddToAutomationSequenceRequest**](../Model/AddToAutomationSequenceRequest.md)| addToAutomationSequenceRequest | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\AddToAutomationSequenceResponse**](../Model/AddToAutomationSequenceResponse.md)
+[**\Keap\Sdk\Core\Model\AddToAutomationSequenceResponse**](../Model/AddToAutomationSequenceResponse.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Deletes a single automation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -128,7 +128,7 @@ No authorization required
 ## `getAutomationUsingGET()`
 
 ```php
-getAutomationUsingGET($automation_id): \Com\Keap\Sdk\Core\Model\Automation
+getAutomationUsingGET($automation_id): \Keap\Sdk\Core\Model\Automation
 ```
 
 Retrieve an Automation
@@ -142,7 +142,7 @@ Retrieves a single automation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -165,7 +165,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\Automation**](../Model/Automation.md)
+[**\Keap\Sdk\Core\Model\Automation**](../Model/Automation.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 ## `listAllAutomationIdsUsingGET()`
 
 ```php
-listAllAutomationIdsUsingGET($filter, $order_by, $page_size, $page_token, $stats): \Com\Keap\Sdk\Core\Model\ListAutomationIdsResponse
+listAllAutomationIdsUsingGET($filter, $order_by, $page_size, $page_token, $stats): \Keap\Sdk\Core\Model\ListAutomationIdsResponse
 ```
 
 List Automations Ids
@@ -197,7 +197,7 @@ Retrieves a list of automations IDs
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -228,7 +228,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListAutomationIdsResponse**](../Model/ListAutomationIdsResponse.md)
+[**\Keap\Sdk\Core\Model\ListAutomationIdsResponse**](../Model/ListAutomationIdsResponse.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ No authorization required
 ## `listAutomationsUsingGET()`
 
 ```php
-listAutomationsUsingGET($filter, $order_by, $page_size, $page_token, $stats): \Com\Keap\Sdk\Core\Model\ListAutomationResponse
+listAutomationsUsingGET($filter, $order_by, $page_size, $page_token, $stats): \Keap\Sdk\Core\Model\ListAutomationResponse
 ```
 
 List Automations
@@ -260,7 +260,7 @@ Retrieves a list of automations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -291,7 +291,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListAutomationResponse**](../Model/ListAutomationResponse.md)
+[**\Keap\Sdk\Core\Model\ListAutomationResponse**](../Model/ListAutomationResponse.md)
 
 ### Authorization
 
@@ -323,12 +323,12 @@ Updates the category of one or more automations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$update_automation_category_request = new \Com\Keap\Sdk\Core\Model\UpdateAutomationCategoryRequest(); // \Com\Keap\Sdk\Core\Model\UpdateAutomationCategoryRequest | updateAutomationCategoryRequest
+$update_automation_category_request = new \Keap\Sdk\Core\Model\UpdateAutomationCategoryRequest(); // \Keap\Sdk\Core\Model\UpdateAutomationCategoryRequest | updateAutomationCategoryRequest
 
 try {
     $apiInstance->updateAutomationCategoryUsingPUT($update_automation_category_request);
@@ -341,7 +341,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **update_automation_category_request** | [**\Com\Keap\Sdk\Core\Model\UpdateAutomationCategoryRequest**](../Model/UpdateAutomationCategoryRequest.md)| updateAutomationCategoryRequest | |
+| **update_automation_category_request** | [**\Keap\Sdk\Core\Model\UpdateAutomationCategoryRequest**](../Model/UpdateAutomationCategoryRequest.md)| updateAutomationCategoryRequest | |
 
 ### Return type
 

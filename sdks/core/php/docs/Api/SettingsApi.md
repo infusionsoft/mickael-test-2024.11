@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\SettingsApi
+# Keap\Sdk\Core\SettingsApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `getApplicationConfigurationsUsingGET()`
 
 ```php
-getApplicationConfigurationsUsingGET($fields): \Com\Keap\Sdk\Core\Model\GetSettingsResponse
+getApplicationConfigurationsUsingGET($fields): \Keap\Sdk\Core\Model\GetSettingsResponse
 ```
 
 Get Application Configuration
@@ -26,7 +26,7 @@ Get configuration values for the application instance.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\SettingsApi(
+$apiInstance = new Keap\Sdk\Core\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetSettingsResponse**](../Model/GetSettingsResponse.md)
+[**\Keap\Sdk\Core\Model\GetSettingsResponse**](../Model/GetSettingsResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getContactOptionTypesUsingGET1()`
 
 ```php
-getContactOptionTypesUsingGET1(): \Com\Keap\Sdk\Core\Model\GetContactOptionTypesResponse
+getContactOptionTypesUsingGET1(): \Keap\Sdk\Core\Model\GetContactOptionTypesResponse
 ```
 
 Get Contact Option types
@@ -81,7 +81,7 @@ Gets a list of Contact Option types.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\SettingsApi(
+$apiInstance = new Keap\Sdk\Core\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -101,7 +101,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetContactOptionTypesResponse**](../Model/GetContactOptionTypesResponse.md)
+[**\Keap\Sdk\Core\Model\GetContactOptionTypesResponse**](../Model/GetContactOptionTypesResponse.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 ## `isApplicationEnabledUsingGET()`
 
 ```php
-isApplicationEnabledUsingGET(): \Com\Keap\Sdk\Core\Model\GetApplicationEnabledStatusResponse
+isApplicationEnabledUsingGET(): \Keap\Sdk\Core\Model\GetApplicationEnabledStatusResponse
 ```
 
 Get Application Status
@@ -133,7 +133,7 @@ Check if the application is enabled or not
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\SettingsApi(
+$apiInstance = new Keap\Sdk\Core\Api\SettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -153,7 +153,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\GetApplicationEnabledStatusResponse**](../Model/GetApplicationEnabledStatusResponse.md)
+[**\Keap\Sdk\Core\Model\GetApplicationEnabledStatusResponse**](../Model/GetApplicationEnabledStatusResponse.md)
 
 ### Authorization
 

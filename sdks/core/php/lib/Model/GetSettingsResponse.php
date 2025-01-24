@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * GetSettingsResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,19 +57,19 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'affiliate' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliate',
-        'application' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleApplication',
-        'appointment' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAppointment',
-        'contact' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleContact',
-        'ecommerce' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEcommerce',
-        'email' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEmail',
-        'forms' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleForms',
-        'fulfillment' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleFulfillment',
-        'invoice' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleInvoice',
-        'note' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleNote',
-        'opportunity' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunity',
-        'task' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTask',
-        'template' => '\Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTemplate'
+        'affiliate' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliate',
+        'application' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleApplication',
+        'appointment' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAppointment',
+        'contact' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleContact',
+        'ecommerce' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEcommerce',
+        'email' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEmail',
+        'forms' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleForms',
+        'fulfillment' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleFulfillment',
+        'invoice' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleInvoice',
+        'note' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleNote',
+        'opportunity' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunity',
+        'task' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTask',
+        'template' => '\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTemplate'
     ];
 
     /**
@@ -376,7 +376,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets affiliate
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliate|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliate|null
      */
     public function getAffiliate()
     {
@@ -386,7 +386,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets affiliate
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliate|null $affiliate affiliate
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleAffiliate|null $affiliate affiliate
      *
      * @return self
      */
@@ -403,7 +403,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets application
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleApplication|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleApplication|null
      */
     public function getApplication()
     {
@@ -413,7 +413,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets application
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleApplication|null $application application
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleApplication|null $application application
      *
      * @return self
      */
@@ -430,7 +430,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets appointment
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAppointment|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleAppointment|null
      */
     public function getAppointment()
     {
@@ -440,7 +440,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets appointment
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleAppointment|null $appointment appointment
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleAppointment|null $appointment appointment
      *
      * @return self
      */
@@ -457,7 +457,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets contact
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleContact|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleContact|null
      */
     public function getContact()
     {
@@ -467,7 +467,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets contact
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleContact|null $contact contact
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleContact|null $contact contact
      *
      * @return self
      */
@@ -484,7 +484,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets ecommerce
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEcommerce|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleEcommerce|null
      */
     public function getEcommerce()
     {
@@ -494,7 +494,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets ecommerce
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEcommerce|null $ecommerce ecommerce
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleEcommerce|null $ecommerce ecommerce
      *
      * @return self
      */
@@ -511,7 +511,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets email
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEmail|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleEmail|null
      */
     public function getEmail()
     {
@@ -521,7 +521,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets email
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleEmail|null $email email
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleEmail|null $email email
      *
      * @return self
      */
@@ -538,7 +538,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets forms
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleForms|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleForms|null
      */
     public function getForms()
     {
@@ -548,7 +548,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets forms
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleForms|null $forms forms
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleForms|null $forms forms
      *
      * @return self
      */
@@ -565,7 +565,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets fulfillment
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleFulfillment|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleFulfillment|null
      */
     public function getFulfillment()
     {
@@ -575,7 +575,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets fulfillment
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleFulfillment|null $fulfillment fulfillment
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleFulfillment|null $fulfillment fulfillment
      *
      * @return self
      */
@@ -592,7 +592,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets invoice
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleInvoice|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleInvoice|null
      */
     public function getInvoice()
     {
@@ -602,7 +602,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets invoice
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleInvoice|null $invoice invoice
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleInvoice|null $invoice invoice
      *
      * @return self
      */
@@ -619,7 +619,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets note
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleNote|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleNote|null
      */
     public function getNote()
     {
@@ -629,7 +629,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets note
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleNote|null $note note
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleNote|null $note note
      *
      * @return self
      */
@@ -646,7 +646,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets opportunity
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunity|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunity|null
      */
     public function getOpportunity()
     {
@@ -656,7 +656,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets opportunity
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunity|null $opportunity opportunity
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleOpportunity|null $opportunity opportunity
      *
      * @return self
      */
@@ -673,7 +673,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets task
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTask|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleTask|null
      */
     public function getTask()
     {
@@ -683,7 +683,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets task
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTask|null $task task
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleTask|null $task task
      *
      * @return self
      */
@@ -700,7 +700,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets template
      *
-     * @return \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTemplate|null
+     * @return \Keap\Sdk\Core\Model\ApplicationConfigurationModuleTemplate|null
      */
     public function getTemplate()
     {
@@ -710,7 +710,7 @@ class GetSettingsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets template
      *
-     * @param \Com\Keap\Sdk\Core\Model\ApplicationConfigurationModuleTemplate|null $template template
+     * @param \Keap\Sdk\Core\Model\ApplicationConfigurationModuleTemplate|null $template template
      *
      * @return self
      */

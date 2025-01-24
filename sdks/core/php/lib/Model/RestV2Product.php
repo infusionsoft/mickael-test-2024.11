@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestV2Product Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,16 +63,16 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
         'country_taxable' => 'bool',
         'description' => 'string',
         'id' => 'string',
-        'inventory' => '\Com\Keap\Sdk\Core\Model\ProductInventory',
+        'inventory' => '\Keap\Sdk\Core\Model\ProductInventory',
         'name' => 'string',
-        'options' => '\Com\Keap\Sdk\Core\Model\ProductOptions[]',
-        'price' => '\Com\Keap\Sdk\Core\Model\CurrencyValue',
+        'options' => '\Keap\Sdk\Core\Model\ProductOptions[]',
+        'price' => '\Keap\Sdk\Core\Model\CurrencyValue',
         'short_description' => 'string',
         'sku' => 'string',
         'state_taxable' => 'bool',
         'storefront_hidden' => 'bool',
         'subscription_only' => 'bool',
-        'subscription_plans' => '\Com\Keap\Sdk\Core\Model\SubscriptionPlan[]',
+        'subscription_plans' => '\Keap\Sdk\Core\Model\SubscriptionPlan[]',
         'taxable' => 'bool',
         'weight' => 'float'
     ];
@@ -573,7 +573,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets inventory
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductInventory|null
+     * @return \Keap\Sdk\Core\Model\ProductInventory|null
      */
     public function getInventory()
     {
@@ -583,7 +583,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets inventory
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductInventory|null $inventory inventory
+     * @param \Keap\Sdk\Core\Model\ProductInventory|null $inventory inventory
      *
      * @return self
      */
@@ -627,7 +627,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets options
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductOptions[]|null
+     * @return \Keap\Sdk\Core\Model\ProductOptions[]|null
      */
     public function getOptions()
     {
@@ -637,7 +637,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets options
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductOptions[]|null $options List of product options. Can be empty.
+     * @param \Keap\Sdk\Core\Model\ProductOptions[]|null $options List of product options. Can be empty.
      *
      * @return self
      */
@@ -654,7 +654,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets price
      *
-     * @return \Com\Keap\Sdk\Core\Model\CurrencyValue|null
+     * @return \Keap\Sdk\Core\Model\CurrencyValue|null
      */
     public function getPrice()
     {
@@ -664,7 +664,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets price
      *
-     * @param \Com\Keap\Sdk\Core\Model\CurrencyValue|null $price price
+     * @param \Keap\Sdk\Core\Model\CurrencyValue|null $price price
      *
      * @return self
      */
@@ -816,7 +816,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subscription_plans
      *
-     * @return \Com\Keap\Sdk\Core\Model\SubscriptionPlan[]|null
+     * @return \Keap\Sdk\Core\Model\SubscriptionPlan[]|null
      */
     public function getSubscriptionPlans()
     {
@@ -826,7 +826,7 @@ class RestV2Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subscription_plans
      *
-     * @param \Com\Keap\Sdk\Core\Model\SubscriptionPlan[]|null $subscription_plans List of subscription plans associated with the product. Can be empty.
+     * @param \Keap\Sdk\Core\Model\SubscriptionPlan[]|null $subscription_plans List of subscription plans associated with the product. Can be empty.
      *
      * @return self
      */

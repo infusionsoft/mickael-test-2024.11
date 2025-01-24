@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\EmailAddressApi
+# Keap\Sdk\Core\EmailAddressApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `getEmailAddressStatusUsingGET()`
 
 ```php
-getEmailAddressStatusUsingGET($email): \Com\Keap\Sdk\Core\Model\RestEmailAddress
+getEmailAddressStatusUsingGET($email): \Keap\Sdk\Core\Model\RestEmailAddress
 ```
 
 Retrieve an Email Address status
@@ -25,7 +25,7 @@ Retrieves the opt-in status for given Email Address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailAddressApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailAddressApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -48,7 +48,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\RestEmailAddress**](../Model/RestEmailAddress.md)
+[**\Keap\Sdk\Core\Model\RestEmailAddress**](../Model/RestEmailAddress.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `updateEmailAddressOptStatusUsingPUT()`
 
 ```php
-updateEmailAddressOptStatusUsingPUT($email, $update_email_address): \Com\Keap\Sdk\Core\Model\RestEmailAddress
+updateEmailAddressOptStatusUsingPUT($email, $update_email_address): \Keap\Sdk\Core\Model\RestEmailAddress
 ```
 
 Update an Email Address opt-in status
@@ -80,13 +80,13 @@ Updates an Email Address opt-in status  You may opt-in or mark an email address 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\EmailAddressApi(
+$apiInstance = new Keap\Sdk\Core\Api\EmailAddressApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $email = 'email_example'; // string | email
-$update_email_address = new \Com\Keap\Sdk\Core\Model\UpdateEmailAddress(); // \Com\Keap\Sdk\Core\Model\UpdateEmailAddress | updateEmailAddress
+$update_email_address = new \Keap\Sdk\Core\Model\UpdateEmailAddress(); // \Keap\Sdk\Core\Model\UpdateEmailAddress | updateEmailAddress
 
 try {
     $result = $apiInstance->updateEmailAddressOptStatusUsingPUT($email, $update_email_address);
@@ -101,11 +101,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **email** | **string**| email | |
-| **update_email_address** | [**\Com\Keap\Sdk\Core\Model\UpdateEmailAddress**](../Model/UpdateEmailAddress.md)| updateEmailAddress | |
+| **update_email_address** | [**\Keap\Sdk\Core\Model\UpdateEmailAddress**](../Model/UpdateEmailAddress.md)| updateEmailAddress | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\RestEmailAddress**](../Model/RestEmailAddress.md)
+[**\Keap\Sdk\Core\Model\RestEmailAddress**](../Model/RestEmailAddress.md)
 
 ### Authorization
 

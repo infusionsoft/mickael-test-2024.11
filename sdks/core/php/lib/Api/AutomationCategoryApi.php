@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * AutomationCategoryApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class AutomationCategoryApi
      *
      * Create automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCategoryUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\AutomationCategory|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\AutomationCategory|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createCategoryUsingPOST($create_automation_category_request, string $contentType = self::contentTypes['createCategoryUsingPOST'][0])
     {
@@ -154,12 +154,12 @@ class AutomationCategoryApi
      *
      * Create automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCategoryUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\AutomationCategory|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\AutomationCategory|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCategoryUsingPOSTWithHttpInfo($create_automation_category_request, string $contentType = self::contentTypes['createCategoryUsingPOST'][0])
     {
@@ -190,11 +190,11 @@ class AutomationCategoryApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\AutomationCategory' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\AutomationCategory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\AutomationCategory' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\AutomationCategory' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -212,16 +212,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\AutomationCategory', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\AutomationCategory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,7 +266,7 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -285,7 +285,7 @@ class AutomationCategoryApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\AutomationCategory';
+            $returnType = '\Keap\Sdk\Core\Model\AutomationCategory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -318,7 +318,7 @@ class AutomationCategoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\AutomationCategory',
+                        '\Keap\Sdk\Core\Model\AutomationCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -326,7 +326,7 @@ class AutomationCategoryApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class AutomationCategoryApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -349,7 +349,7 @@ class AutomationCategoryApi
      *
      * Create automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCategoryUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class AutomationCategoryApi
      *
      * Create automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCategoryUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -378,7 +378,7 @@ class AutomationCategoryApi
      */
     public function createCategoryUsingPOSTAsyncWithHttpInfo($create_automation_category_request, string $contentType = self::contentTypes['createCategoryUsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\AutomationCategory';
+        $returnType = '\Keap\Sdk\Core\Model\AutomationCategory';
         $request = $this->createCategoryUsingPOSTRequest($create_automation_category_request, $contentType);
 
         return $this->client
@@ -420,7 +420,7 @@ class AutomationCategoryApi
     /**
      * Create request for operation 'createCategoryUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest $create_automation_category_request createAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCategoryUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -516,7 +516,7 @@ class AutomationCategoryApi
      * @param  int[] $ids ids (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCategoriesUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -533,7 +533,7 @@ class AutomationCategoryApi
      * @param  int[] $ids ids (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCategoriesUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -571,7 +571,7 @@ class AutomationCategoryApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -579,7 +579,7 @@ class AutomationCategoryApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -587,7 +587,7 @@ class AutomationCategoryApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -757,9 +757,9 @@ class AutomationCategoryApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCategoriesUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListAutomationCategoryResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listCategoriesUsingGET(string $contentType = self::contentTypes['listCategoriesUsingGET'][0])
     {
@@ -774,9 +774,9 @@ class AutomationCategoryApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCategoriesUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListAutomationCategoryResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCategoriesUsingGETWithHttpInfo(string $contentType = self::contentTypes['listCategoriesUsingGET'][0])
     {
@@ -807,11 +807,11 @@ class AutomationCategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListAutomationCategoryResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListAutomationCategoryResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -829,16 +829,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListAutomationCategoryResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -856,16 +856,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -883,16 +883,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -910,7 +910,7 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -929,7 +929,7 @@ class AutomationCategoryApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListAutomationCategoryResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -962,7 +962,7 @@ class AutomationCategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse',
+                        '\Keap\Sdk\Core\Model\ListAutomationCategoryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -970,7 +970,7 @@ class AutomationCategoryApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -978,7 +978,7 @@ class AutomationCategoryApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -986,7 +986,7 @@ class AutomationCategoryApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1028,7 +1028,7 @@ class AutomationCategoryApi
      */
     public function listCategoriesUsingGETAsyncWithHttpInfo(string $contentType = self::contentTypes['listCategoriesUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListAutomationCategoryResponse';
         $request = $this->listCategoriesUsingGETRequest($contentType);
 
         return $this->client
@@ -1148,12 +1148,12 @@ class AutomationCategoryApi
      *
      * Save automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCategoryUsingPUT'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\AutomationCategory|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\AutomationCategory|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function saveCategoryUsingPUT($save_automation_category_request, string $contentType = self::contentTypes['saveCategoryUsingPUT'][0])
     {
@@ -1166,12 +1166,12 @@ class AutomationCategoryApi
      *
      * Save automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCategoryUsingPUT'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\AutomationCategory|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\AutomationCategory|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function saveCategoryUsingPUTWithHttpInfo($save_automation_category_request, string $contentType = self::contentTypes['saveCategoryUsingPUT'][0])
     {
@@ -1202,11 +1202,11 @@ class AutomationCategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\AutomationCategory' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\AutomationCategory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\AutomationCategory' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\AutomationCategory' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1224,16 +1224,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\AutomationCategory', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\AutomationCategory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1251,16 +1251,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1278,16 +1278,16 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1305,7 +1305,7 @@ class AutomationCategoryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1324,7 +1324,7 @@ class AutomationCategoryApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\AutomationCategory';
+            $returnType = '\Keap\Sdk\Core\Model\AutomationCategory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1357,7 +1357,7 @@ class AutomationCategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\AutomationCategory',
+                        '\Keap\Sdk\Core\Model\AutomationCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1365,7 +1365,7 @@ class AutomationCategoryApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1373,7 +1373,7 @@ class AutomationCategoryApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1381,7 +1381,7 @@ class AutomationCategoryApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1396,7 +1396,7 @@ class AutomationCategoryApi
      *
      * Save automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCategoryUsingPUT'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1417,7 +1417,7 @@ class AutomationCategoryApi
      *
      * Save automation category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCategoryUsingPUT'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1425,7 +1425,7 @@ class AutomationCategoryApi
      */
     public function saveCategoryUsingPUTAsyncWithHttpInfo($save_automation_category_request, string $contentType = self::contentTypes['saveCategoryUsingPUT'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\AutomationCategory';
+        $returnType = '\Keap\Sdk\Core\Model\AutomationCategory';
         $request = $this->saveCategoryUsingPUTRequest($save_automation_category_request, $contentType);
 
         return $this->client
@@ -1467,7 +1467,7 @@ class AutomationCategoryApi
     /**
      * Create request for operation 'saveCategoryUsingPUT'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
+     * @param  \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest $save_automation_category_request saveAutomationCategoryRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['saveCategoryUsingPUT'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

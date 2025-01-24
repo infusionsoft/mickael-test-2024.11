@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\SalesApi
+# Keap\Sdk\Core\SalesApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -24,7 +24,7 @@ Sets the specified Merchant Account as the default Merchant Account.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\SalesApi(
+$apiInstance = new Keap\Sdk\Core\Api\SalesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

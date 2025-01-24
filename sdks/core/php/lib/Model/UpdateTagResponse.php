@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * UpdateTagResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class UpdateTagResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'category' => '\Com\Keap\Sdk\Core\Model\CategoryReference',
+        'category' => '\Keap\Sdk\Core\Model\CategoryReference',
         'description' => 'string',
         'id' => 'string',
         'name' => 'string'
@@ -313,7 +313,7 @@ class UpdateTagResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets category
      *
-     * @return \Com\Keap\Sdk\Core\Model\CategoryReference|null
+     * @return \Keap\Sdk\Core\Model\CategoryReference|null
      */
     public function getCategory()
     {
@@ -323,7 +323,7 @@ class UpdateTagResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets category
      *
-     * @param \Com\Keap\Sdk\Core\Model\CategoryReference|null $category category
+     * @param \Keap\Sdk\Core\Model\CategoryReference|null $category category
      *
      * @return self
      */

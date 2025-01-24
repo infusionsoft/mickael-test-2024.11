@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListProductInterestBundleResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListProductInterestBundleResponse implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'product_interest_bundles' => '\Com\Keap\Sdk\Core\Model\ProductInterestBundle[]'
+        'product_interest_bundles' => '\Keap\Sdk\Core\Model\ProductInterestBundle[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListProductInterestBundleResponse implements ModelInterface, ArrayAccess, 
     /**
      * Gets product_interest_bundles
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductInterestBundle[]|null
+     * @return \Keap\Sdk\Core\Model\ProductInterestBundle[]|null
      */
     public function getProductInterestBundles()
     {
@@ -336,7 +336,7 @@ class ListProductInterestBundleResponse implements ModelInterface, ArrayAccess, 
     /**
      * Sets product_interest_bundles
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductInterestBundle[]|null $product_interest_bundles product_interest_bundles
+     * @param \Keap\Sdk\Core\Model\ProductInterestBundle[]|null $product_interest_bundles product_interest_bundles
      *
      * @return self
      */

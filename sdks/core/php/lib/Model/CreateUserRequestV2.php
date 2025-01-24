@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CreateUserRequestV2 Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class CreateUserRequestV2 implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'admin' => 'bool',
-        'email_address' => '\Com\Keap\Sdk\Core\Model\EmailAddressRequest',
+        'email_address' => '\Keap\Sdk\Core\Model\EmailAddressRequest',
         'given_name' => 'string',
         'partner' => 'bool'
     ];
@@ -346,7 +346,7 @@ class CreateUserRequestV2 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets email_address
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailAddressRequest
+     * @return \Keap\Sdk\Core\Model\EmailAddressRequest
      */
     public function getEmailAddress()
     {
@@ -356,7 +356,7 @@ class CreateUserRequestV2 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets email_address
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailAddressRequest $email_address email_address
+     * @param \Keap\Sdk\Core\Model\EmailAddressRequest $email_address email_address
      *
      * @return self
      */

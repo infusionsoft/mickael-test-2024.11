@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CreateFunnelIntegrationTriggerEvents Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CreateFunnelIntegrationTriggerEvents implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'funnel_integration_trigger_events' => '\Com\Keap\Sdk\Core\Model\FunnelIntegrationTriggerEventDTO[]'
+        'funnel_integration_trigger_events' => '\Keap\Sdk\Core\Model\FunnelIntegrationTriggerEventDTO[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class CreateFunnelIntegrationTriggerEvents implements ModelInterface, ArrayAcces
     /**
      * Gets funnel_integration_trigger_events
      *
-     * @return \Com\Keap\Sdk\Core\Model\FunnelIntegrationTriggerEventDTO[]|null
+     * @return \Keap\Sdk\Core\Model\FunnelIntegrationTriggerEventDTO[]|null
      */
     public function getFunnelIntegrationTriggerEvents()
     {
@@ -302,7 +302,7 @@ class CreateFunnelIntegrationTriggerEvents implements ModelInterface, ArrayAcces
     /**
      * Sets funnel_integration_trigger_events
      *
-     * @param \Com\Keap\Sdk\Core\Model\FunnelIntegrationTriggerEventDTO[]|null $funnel_integration_trigger_events A list of trigger events to be created.
+     * @param \Keap\Sdk\Core\Model\FunnelIntegrationTriggerEventDTO[]|null $funnel_integration_trigger_events A list of trigger events to be created.
      *
      * @return self
      */

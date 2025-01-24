@@ -101,7 +101,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -171,7 +172,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -241,7 +243,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -382,7 +385,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -448,7 +452,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -514,7 +519,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '204': None,
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -632,7 +638,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -698,7 +705,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -764,7 +772,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -905,7 +914,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNoteListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -987,7 +997,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNoteListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1069,7 +1080,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNoteListResponse",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1218,7 +1230,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1288,7 +1301,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1358,7 +1372,8 @@ class DealsApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "DealNote",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

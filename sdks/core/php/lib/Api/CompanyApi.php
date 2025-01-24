@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CompanyApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Company|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createCompanyUsingPOST1($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
@@ -157,12 +157,12 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Company|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCompanyUsingPOST1WithHttpInfo($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
@@ -193,11 +193,11 @@ class CompanyApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\Company' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Company' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Company' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Company' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -215,16 +215,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Company', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Company', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -242,16 +242,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -269,7 +269,7 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -288,7 +288,7 @@ class CompanyApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Company';
+            $returnType = '\Keap\Sdk\Core\Model\Company';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -321,7 +321,7 @@ class CompanyApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Company',
+                        '\Keap\Sdk\Core\Model\Company',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class CompanyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -337,7 +337,7 @@ class CompanyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -352,7 +352,7 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -373,7 +373,7 @@ class CompanyApi
      *
      * Create a Company
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -381,7 +381,7 @@ class CompanyApi
      */
     public function createCompanyUsingPOST1AsyncWithHttpInfo($create_company_request = null, string $contentType = self::contentTypes['createCompanyUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Company';
+        $returnType = '\Keap\Sdk\Core\Model\Company';
         $request = $this->createCompanyUsingPOST1Request($create_company_request, $contentType);
 
         return $this->client
@@ -423,7 +423,7 @@ class CompanyApi
     /**
      * Create request for operation 'createCompanyUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateCompanyRequest $create_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCompanyUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -513,7 +513,7 @@ class CompanyApi
      * @param  string $company_id company_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCompanyUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -530,7 +530,7 @@ class CompanyApi
      * @param  string $company_id company_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCompanyUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -568,7 +568,7 @@ class CompanyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -576,7 +576,7 @@ class CompanyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -584,7 +584,7 @@ class CompanyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,9 +755,9 @@ class CompanyApi
      * @param  string[] $fields Comma-delimited list of Company properties to include in the response. (Available fields are: &#x60;company_name&#x60;, &#x60;address&#x60;, &#x60;custom_fields&#x60;, &#x60;email_address&#x60;, &#x60;fax_number&#x60;, &#x60;phone_number&#x60;, &#x60;website&#x60;, &#x60;notes&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Company|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getCompanyUsingGET1($company_id, $fields = null, string $contentType = self::contentTypes['getCompanyUsingGET1'][0])
     {
@@ -774,9 +774,9 @@ class CompanyApi
      * @param  string[] $fields Comma-delimited list of Company properties to include in the response. (Available fields are: &#x60;company_name&#x60;, &#x60;address&#x60;, &#x60;custom_fields&#x60;, &#x60;email_address&#x60;, &#x60;fax_number&#x60;, &#x60;phone_number&#x60;, &#x60;website&#x60;, &#x60;notes&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Company|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompanyUsingGET1WithHttpInfo($company_id, $fields = null, string $contentType = self::contentTypes['getCompanyUsingGET1'][0])
     {
@@ -807,11 +807,11 @@ class CompanyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Company' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Company' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Company' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Company' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -829,16 +829,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Company', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Company', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -856,16 +856,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -883,16 +883,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -910,7 +910,7 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -929,7 +929,7 @@ class CompanyApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Company';
+            $returnType = '\Keap\Sdk\Core\Model\Company';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -962,7 +962,7 @@ class CompanyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Company',
+                        '\Keap\Sdk\Core\Model\Company',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -970,7 +970,7 @@ class CompanyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -978,7 +978,7 @@ class CompanyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -986,7 +986,7 @@ class CompanyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class CompanyApi
      */
     public function getCompanyUsingGET1AsyncWithHttpInfo($company_id, $fields = null, string $contentType = self::contentTypes['getCompanyUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Company';
+        $returnType = '\Keap\Sdk\Core\Model\Company';
         $request = $this->getCompanyUsingGET1Request($company_id, $fields, $contentType);
 
         return $this->client
@@ -1186,9 +1186,9 @@ class CompanyApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCompaniesUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListCompaniesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListCompaniesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listCompaniesUsingGET1($fields = null, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listCompaniesUsingGET1'][0])
     {
@@ -1208,9 +1208,9 @@ class CompanyApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCompaniesUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListCompaniesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListCompaniesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCompaniesUsingGET1WithHttpInfo($fields = null, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listCompaniesUsingGET1'][0])
     {
@@ -1241,11 +1241,11 @@ class CompanyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListCompaniesResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListCompaniesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListCompaniesResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListCompaniesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1263,16 +1263,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListCompaniesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListCompaniesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1290,16 +1290,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1317,16 +1317,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1344,7 +1344,7 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1363,7 +1363,7 @@ class CompanyApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListCompaniesResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListCompaniesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1396,7 +1396,7 @@ class CompanyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListCompaniesResponse',
+                        '\Keap\Sdk\Core\Model\ListCompaniesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1404,7 +1404,7 @@ class CompanyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1412,7 +1412,7 @@ class CompanyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1420,7 +1420,7 @@ class CompanyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1472,7 +1472,7 @@ class CompanyApi
      */
     public function listCompaniesUsingGET1AsyncWithHttpInfo($fields = null, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listCompaniesUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListCompaniesResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListCompaniesResponse';
         $request = $this->listCompaniesUsingGET1Request($fields, $filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -1655,12 +1655,12 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCompanyUsingPATCH1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Company|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateCompanyUsingPATCH1($company_id, $update_mask = null, $update_company_request = null, string $contentType = self::contentTypes['updateCompanyUsingPATCH1'][0])
     {
@@ -1675,12 +1675,12 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCompanyUsingPATCH1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Company|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Company|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCompanyUsingPATCH1WithHttpInfo($company_id, $update_mask = null, $update_company_request = null, string $contentType = self::contentTypes['updateCompanyUsingPATCH1'][0])
     {
@@ -1711,11 +1711,11 @@ class CompanyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Company' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Company' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Company' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Company' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1733,16 +1733,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Company', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Company', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1760,16 +1760,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1787,16 +1787,16 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1814,7 +1814,7 @@ class CompanyApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1833,7 +1833,7 @@ class CompanyApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Company';
+            $returnType = '\Keap\Sdk\Core\Model\Company';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1866,7 +1866,7 @@ class CompanyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Company',
+                        '\Keap\Sdk\Core\Model\Company',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1874,7 +1874,7 @@ class CompanyApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1882,7 +1882,7 @@ class CompanyApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1890,7 +1890,7 @@ class CompanyApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1907,7 +1907,7 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCompanyUsingPATCH1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1930,7 +1930,7 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCompanyUsingPATCH1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1938,7 +1938,7 @@ class CompanyApi
      */
     public function updateCompanyUsingPATCH1AsyncWithHttpInfo($company_id, $update_mask = null, $update_company_request = null, string $contentType = self::contentTypes['updateCompanyUsingPATCH1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Company';
+        $returnType = '\Keap\Sdk\Core\Model\Company';
         $request = $this->updateCompanyUsingPATCH1Request($company_id, $update_mask, $update_company_request, $contentType);
 
         return $this->client
@@ -1982,7 +1982,7 @@ class CompanyApi
      *
      * @param  string $company_id company_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateCompanyRequest $update_company_request company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCompanyUsingPATCH1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

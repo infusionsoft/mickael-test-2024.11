@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * EmailAddressApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,9 +133,9 @@ class EmailAddressApi
      * @param  string $email email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEmailAddressStatusUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RestEmailAddress|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RestEmailAddress|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getEmailAddressStatusUsingGET($email, string $contentType = self::contentTypes['getEmailAddressStatusUsingGET'][0])
     {
@@ -151,9 +151,9 @@ class EmailAddressApi
      * @param  string $email email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEmailAddressStatusUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RestEmailAddress|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RestEmailAddress|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEmailAddressStatusUsingGETWithHttpInfo($email, string $contentType = self::contentTypes['getEmailAddressStatusUsingGET'][0])
     {
@@ -184,11 +184,11 @@ class EmailAddressApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\RestEmailAddress' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RestEmailAddress' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RestEmailAddress' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RestEmailAddress' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,16 +206,16 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RestEmailAddress', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RestEmailAddress', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,16 +233,16 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -260,16 +260,16 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -287,7 +287,7 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -306,7 +306,7 @@ class EmailAddressApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RestEmailAddress';
+            $returnType = '\Keap\Sdk\Core\Model\RestEmailAddress';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -339,7 +339,7 @@ class EmailAddressApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RestEmailAddress',
+                        '\Keap\Sdk\Core\Model\RestEmailAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -347,7 +347,7 @@ class EmailAddressApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -355,7 +355,7 @@ class EmailAddressApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -363,7 +363,7 @@ class EmailAddressApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -407,7 +407,7 @@ class EmailAddressApi
      */
     public function getEmailAddressStatusUsingGETAsyncWithHttpInfo($email, string $contentType = self::contentTypes['getEmailAddressStatusUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RestEmailAddress';
+        $returnType = '\Keap\Sdk\Core\Model\RestEmailAddress';
         $request = $this->getEmailAddressStatusUsingGETRequest($email, $contentType);
 
         return $this->client
@@ -544,12 +544,12 @@ class EmailAddressApi
      * Update an Email Address opt-in status
      *
      * @param  string $email email (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmailAddressOptStatusUsingPUT'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RestEmailAddress|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RestEmailAddress|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateEmailAddressOptStatusUsingPUT($email, $update_email_address, string $contentType = self::contentTypes['updateEmailAddressOptStatusUsingPUT'][0])
     {
@@ -563,12 +563,12 @@ class EmailAddressApi
      * Update an Email Address opt-in status
      *
      * @param  string $email email (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmailAddressOptStatusUsingPUT'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RestEmailAddress|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RestEmailAddress|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEmailAddressOptStatusUsingPUTWithHttpInfo($email, $update_email_address, string $contentType = self::contentTypes['updateEmailAddressOptStatusUsingPUT'][0])
     {
@@ -599,11 +599,11 @@ class EmailAddressApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\RestEmailAddress' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RestEmailAddress' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RestEmailAddress' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RestEmailAddress' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -621,16 +621,16 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RestEmailAddress', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RestEmailAddress', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -648,16 +648,16 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -675,16 +675,16 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -702,7 +702,7 @@ class EmailAddressApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -721,7 +721,7 @@ class EmailAddressApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RestEmailAddress';
+            $returnType = '\Keap\Sdk\Core\Model\RestEmailAddress';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -754,7 +754,7 @@ class EmailAddressApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RestEmailAddress',
+                        '\Keap\Sdk\Core\Model\RestEmailAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -762,7 +762,7 @@ class EmailAddressApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class EmailAddressApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class EmailAddressApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -794,7 +794,7 @@ class EmailAddressApi
      * Update an Email Address opt-in status
      *
      * @param  string $email email (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmailAddressOptStatusUsingPUT'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -816,7 +816,7 @@ class EmailAddressApi
      * Update an Email Address opt-in status
      *
      * @param  string $email email (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmailAddressOptStatusUsingPUT'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -824,7 +824,7 @@ class EmailAddressApi
      */
     public function updateEmailAddressOptStatusUsingPUTAsyncWithHttpInfo($email, $update_email_address, string $contentType = self::contentTypes['updateEmailAddressOptStatusUsingPUT'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RestEmailAddress';
+        $returnType = '\Keap\Sdk\Core\Model\RestEmailAddress';
         $request = $this->updateEmailAddressOptStatusUsingPUTRequest($email, $update_email_address, $contentType);
 
         return $this->client
@@ -867,7 +867,7 @@ class EmailAddressApi
      * Create request for operation 'updateEmailAddressOptStatusUsingPUT'
      *
      * @param  string $email email (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateEmailAddress $update_email_address updateEmailAddress (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmailAddressOptStatusUsingPUT'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

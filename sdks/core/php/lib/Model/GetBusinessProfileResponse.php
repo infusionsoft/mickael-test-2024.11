@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * GetBusinessProfileResponse Class Doc Comment
  *
  * @category Class
  * @description Profile information about the business that owns/uses this account
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class GetBusinessProfileResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\Com\Keap\Sdk\Core\Model\BusinessProfileAddressResponse',
+        'address' => '\Keap\Sdk\Core\Model\BusinessProfileAddressResponse',
         'business_goals' => 'string[]',
         'business_primary_color' => 'string',
         'business_secondary_color' => 'string',
@@ -377,7 +377,7 @@ class GetBusinessProfileResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets address
      *
-     * @return \Com\Keap\Sdk\Core\Model\BusinessProfileAddressResponse|null
+     * @return \Keap\Sdk\Core\Model\BusinessProfileAddressResponse|null
      */
     public function getAddress()
     {
@@ -387,7 +387,7 @@ class GetBusinessProfileResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets address
      *
-     * @param \Com\Keap\Sdk\Core\Model\BusinessProfileAddressResponse|null $address address
+     * @param \Keap\Sdk\Core\Model\BusinessProfileAddressResponse|null $address address
      *
      * @return self
      */

@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **string** |  | [optional]
-**file** | [**\Com\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
+**file** | [**\Keap\Sdk\Core\Model\File**](File.md) |  | [optional]
 **filename** | **string** |  | [optional]
 **input_stream** | **object** |  | [optional]
 **open** | **bool** |  | [optional]
 **readable** | **bool** |  | [optional]
 **uri** | **string** |  | [optional]
-**url** | [**\Com\Keap\Sdk\Core\Model\URL**](URL.md) |  | [optional]
+**url** | [**\Keap\Sdk\Core\Model\URL**](URL.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

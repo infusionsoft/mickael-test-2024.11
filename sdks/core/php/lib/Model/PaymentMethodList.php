@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PaymentMethodList Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class PaymentMethodList implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'records' => '\Com\Keap\Sdk\Core\Model\RestPaymentMethod[]'
+        'records' => '\Keap\Sdk\Core\Model\RestPaymentMethod[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class PaymentMethodList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets records
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestPaymentMethod[]|null
+     * @return \Keap\Sdk\Core\Model\RestPaymentMethod[]|null
      */
     public function getRecords()
     {
@@ -336,7 +336,7 @@ class PaymentMethodList implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets records
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestPaymentMethod[]|null $records records
+     * @param \Keap\Sdk\Core\Model\RestPaymentMethod[]|null $records records
      *
      * @return self
      */

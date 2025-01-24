@@ -102,7 +102,8 @@ class EmailApi:
             '201': "EmailSentWithContent",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -170,7 +171,8 @@ class EmailApi:
             '201': "EmailSentWithContent",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -238,7 +240,8 @@ class EmailApi:
             '201': "EmailSentWithContent",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -378,7 +381,8 @@ class EmailApi:
             '201': "EmailsSentList",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -446,7 +450,8 @@ class EmailApi:
             '201': "EmailsSentList",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -514,7 +519,8 @@ class EmailApi:
             '201': "EmailsSentList",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -655,7 +661,8 @@ class EmailApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -724,7 +731,8 @@ class EmailApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -793,7 +801,8 @@ class EmailApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -920,7 +929,8 @@ class EmailApi:
             '200': "DeleteEmailsResponse",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -988,7 +998,8 @@ class EmailApi:
             '200': "DeleteEmailsResponse",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1056,7 +1067,8 @@ class EmailApi:
             '200': "DeleteEmailsResponse",
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1197,7 +1209,8 @@ class EmailApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1266,7 +1279,8 @@ class EmailApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1335,7 +1349,8 @@ class EmailApi:
             '401': "Error",
             '403': "Error",
             '404': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1462,7 +1477,8 @@ class EmailApi:
             '202': None,
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1530,7 +1546,8 @@ class EmailApi:
             '202': None,
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1598,7 +1615,8 @@ class EmailApi:
             '202': None,
             '401': "Error",
             '403': "Error",
-        }        response_data = self.api_client.call_api(
+        }
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

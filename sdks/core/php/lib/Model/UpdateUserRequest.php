@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * UpdateUserRequest Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,13 +57,13 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\Com\Keap\Sdk\Core\Model\Address',
+        'address' => '\Keap\Sdk\Core\Model\Address',
         'company_name' => 'string',
-        'email_address' => '\Com\Keap\Sdk\Core\Model\EmailAddressRequest',
+        'email_address' => '\Keap\Sdk\Core\Model\EmailAddressRequest',
         'family_name' => 'string',
-        'fax_numbers' => '\Com\Keap\Sdk\Core\Model\FaxNumber[]',
+        'fax_numbers' => '\Keap\Sdk\Core\Model\FaxNumber[]',
         'given_name' => 'string',
-        'phone_numbers' => '\Com\Keap\Sdk\Core\Model\PhoneNumber[]',
+        'phone_numbers' => '\Keap\Sdk\Core\Model\PhoneNumber[]',
         'time_zone' => 'string',
         'title' => 'string',
         'website' => 'string'
@@ -355,7 +355,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets address
      *
-     * @return \Com\Keap\Sdk\Core\Model\Address|null
+     * @return \Keap\Sdk\Core\Model\Address|null
      */
     public function getAddress()
     {
@@ -365,7 +365,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets address
      *
-     * @param \Com\Keap\Sdk\Core\Model\Address|null $address address
+     * @param \Keap\Sdk\Core\Model\Address|null $address address
      *
      * @return self
      */
@@ -409,7 +409,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets email_address
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailAddressRequest|null
+     * @return \Keap\Sdk\Core\Model\EmailAddressRequest|null
      */
     public function getEmailAddress()
     {
@@ -419,7 +419,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets email_address
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailAddressRequest|null $email_address email_address
+     * @param \Keap\Sdk\Core\Model\EmailAddressRequest|null $email_address email_address
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets fax_numbers
      *
-     * @return \Com\Keap\Sdk\Core\Model\FaxNumber[]|null
+     * @return \Keap\Sdk\Core\Model\FaxNumber[]|null
      */
     public function getFaxNumbers()
     {
@@ -473,7 +473,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets fax_numbers
      *
-     * @param \Com\Keap\Sdk\Core\Model\FaxNumber[]|null $fax_numbers fax_numbers
+     * @param \Keap\Sdk\Core\Model\FaxNumber[]|null $fax_numbers fax_numbers
      *
      * @return self
      */
@@ -517,7 +517,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets phone_numbers
      *
-     * @return \Com\Keap\Sdk\Core\Model\PhoneNumber[]|null
+     * @return \Keap\Sdk\Core\Model\PhoneNumber[]|null
      */
     public function getPhoneNumbers()
     {
@@ -527,7 +527,7 @@ class UpdateUserRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets phone_numbers
      *
-     * @param \Com\Keap\Sdk\Core\Model\PhoneNumber[]|null $phone_numbers phone_numbers
+     * @param \Keap\Sdk\Core\Model\PhoneNumber[]|null $phone_numbers phone_numbers
      *
      * @return self
      */

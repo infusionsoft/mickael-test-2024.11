@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListAffiliateCommissionResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListAffiliateCommissionResponse implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'affiliate_commissions' => '\Com\Keap\Sdk\Core\Model\AffiliateCommission[]',
+        'affiliate_commissions' => '\Keap\Sdk\Core\Model\AffiliateCommission[]',
         'next_page_token' => 'string',
         'total_aff_comm_earned' => 'float',
         'total_claw_back' => 'float',
@@ -320,7 +320,7 @@ class ListAffiliateCommissionResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Gets affiliate_commissions
      *
-     * @return \Com\Keap\Sdk\Core\Model\AffiliateCommission[]|null
+     * @return \Keap\Sdk\Core\Model\AffiliateCommission[]|null
      */
     public function getAffiliateCommissions()
     {
@@ -330,7 +330,7 @@ class ListAffiliateCommissionResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets affiliate_commissions
      *
-     * @param \Com\Keap\Sdk\Core\Model\AffiliateCommission[]|null $affiliate_commissions affiliate_commissions
+     * @param \Keap\Sdk\Core\Model\AffiliateCommission[]|null $affiliate_commissions affiliate_commissions
      *
      * @return self
      */

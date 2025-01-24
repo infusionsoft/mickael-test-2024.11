@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelineStageListResponse Class Doc Comment
  *
  * @category Class
  * @description Response for a list of stages.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PipelineStageListResponse implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'stages' => '\Com\Keap\Sdk\Core\Model\Stage[]'
+        'stages' => '\Keap\Sdk\Core\Model\Stage[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class PipelineStageListResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets stages
      *
-     * @return \Com\Keap\Sdk\Core\Model\Stage[]|null
+     * @return \Keap\Sdk\Core\Model\Stage[]|null
      */
     public function getStages()
     {
@@ -337,7 +337,7 @@ class PipelineStageListResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets stages
      *
-     * @param \Com\Keap\Sdk\Core\Model\Stage[]|null $stages The list of stages.
+     * @param \Keap\Sdk\Core\Model\Stage[]|null $stages The list of stages.
      *
      * @return self
      */

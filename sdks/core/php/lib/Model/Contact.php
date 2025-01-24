@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Contact Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,38 +57,38 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'addresses' => '\Com\Keap\Sdk\Core\Model\Address[]',
+        'addresses' => '\Keap\Sdk\Core\Model\Address[]',
         'anniversary_date' => 'string',
         'birth_date' => 'string',
-        'company' => '\Com\Keap\Sdk\Core\Model\BasicCompany',
+        'company' => '\Keap\Sdk\Core\Model\BasicCompany',
         'contact_type' => 'string',
         'create_time' => 'string',
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\CustomFieldValue[]',
-        'email_addresses' => '\Com\Keap\Sdk\Core\Model\EmailAddress[]',
+        'custom_fields' => '\Keap\Sdk\Core\Model\CustomFieldValue[]',
+        'email_addresses' => '\Keap\Sdk\Core\Model\EmailAddress[]',
         'family_name' => 'string',
-        'fax_numbers' => '\Com\Keap\Sdk\Core\Model\FaxNumber[]',
+        'fax_numbers' => '\Keap\Sdk\Core\Model\FaxNumber[]',
         'given_name' => 'string',
         'id' => 'string',
         'job_title' => 'string',
         'leadsource_id' => 'string',
-        'links' => '\Com\Keap\Sdk\Core\Model\Link[]',
+        'links' => '\Keap\Sdk\Core\Model\Link[]',
         'middle_name' => 'string',
-        'origin' => '\Com\Keap\Sdk\Core\Model\Origin',
+        'origin' => '\Keap\Sdk\Core\Model\Origin',
         'owner_id' => 'string',
-        'phone_numbers' => '\Com\Keap\Sdk\Core\Model\PhoneNumber[]',
+        'phone_numbers' => '\Keap\Sdk\Core\Model\PhoneNumber[]',
         'preferred_locale' => 'string',
         'preferred_name' => 'string',
         'prefix' => 'string',
         'referral_code' => 'string',
         'score_value' => 'string',
-        'social_accounts' => '\Com\Keap\Sdk\Core\Model\SocialAccount[]',
+        'social_accounts' => '\Keap\Sdk\Core\Model\SocialAccount[]',
         'source_type' => 'string',
         'spouse_name' => 'string',
         'suffix' => 'string',
         'tag_ids' => 'string[]',
         'time_zone' => 'string',
         'update_time' => 'string',
-        'utm_parameters' => '\Com\Keap\Sdk\Core\Model\ContactUtmResponse[]',
+        'utm_parameters' => '\Keap\Sdk\Core\Model\ContactUtmResponse[]',
         'website' => 'string'
     ];
 
@@ -560,7 +560,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets addresses
      *
-     * @return \Com\Keap\Sdk\Core\Model\Address[]|null
+     * @return \Keap\Sdk\Core\Model\Address[]|null
      */
     public function getAddresses()
     {
@@ -570,7 +570,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets addresses
      *
-     * @param \Com\Keap\Sdk\Core\Model\Address[]|null $addresses addresses
+     * @param \Keap\Sdk\Core\Model\Address[]|null $addresses addresses
      *
      * @return self
      */
@@ -641,7 +641,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets company
      *
-     * @return \Com\Keap\Sdk\Core\Model\BasicCompany|null
+     * @return \Keap\Sdk\Core\Model\BasicCompany|null
      */
     public function getCompany()
     {
@@ -651,7 +651,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company
      *
-     * @param \Com\Keap\Sdk\Core\Model\BasicCompany|null $company company
+     * @param \Keap\Sdk\Core\Model\BasicCompany|null $company company
      *
      * @return self
      */
@@ -722,7 +722,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\CustomFieldValue[]|null
+     * @return \Keap\Sdk\Core\Model\CustomFieldValue[]|null
      */
     public function getCustomFields()
     {
@@ -732,7 +732,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\CustomFieldValue[]|null $custom_fields custom_fields
+     * @param \Keap\Sdk\Core\Model\CustomFieldValue[]|null $custom_fields custom_fields
      *
      * @return self
      */
@@ -749,7 +749,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email_addresses
      *
-     * @return \Com\Keap\Sdk\Core\Model\EmailAddress[]|null
+     * @return \Keap\Sdk\Core\Model\EmailAddress[]|null
      */
     public function getEmailAddresses()
     {
@@ -759,7 +759,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email_addresses
      *
-     * @param \Com\Keap\Sdk\Core\Model\EmailAddress[]|null $email_addresses email_addresses
+     * @param \Keap\Sdk\Core\Model\EmailAddress[]|null $email_addresses email_addresses
      *
      * @return self
      */
@@ -803,7 +803,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fax_numbers
      *
-     * @return \Com\Keap\Sdk\Core\Model\FaxNumber[]|null
+     * @return \Keap\Sdk\Core\Model\FaxNumber[]|null
      */
     public function getFaxNumbers()
     {
@@ -813,7 +813,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fax_numbers
      *
-     * @param \Com\Keap\Sdk\Core\Model\FaxNumber[]|null $fax_numbers fax_numbers
+     * @param \Keap\Sdk\Core\Model\FaxNumber[]|null $fax_numbers fax_numbers
      *
      * @return self
      */
@@ -938,7 +938,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets links
      *
-     * @return \Com\Keap\Sdk\Core\Model\Link[]|null
+     * @return \Keap\Sdk\Core\Model\Link[]|null
      */
     public function getLinks()
     {
@@ -948,7 +948,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets links
      *
-     * @param \Com\Keap\Sdk\Core\Model\Link[]|null $links links
+     * @param \Keap\Sdk\Core\Model\Link[]|null $links links
      *
      * @return self
      */
@@ -992,7 +992,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets origin
      *
-     * @return \Com\Keap\Sdk\Core\Model\Origin|null
+     * @return \Keap\Sdk\Core\Model\Origin|null
      */
     public function getOrigin()
     {
@@ -1002,7 +1002,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets origin
      *
-     * @param \Com\Keap\Sdk\Core\Model\Origin|null $origin origin
+     * @param \Keap\Sdk\Core\Model\Origin|null $origin origin
      *
      * @return self
      */
@@ -1046,7 +1046,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phone_numbers
      *
-     * @return \Com\Keap\Sdk\Core\Model\PhoneNumber[]|null
+     * @return \Keap\Sdk\Core\Model\PhoneNumber[]|null
      */
     public function getPhoneNumbers()
     {
@@ -1056,7 +1056,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phone_numbers
      *
-     * @param \Com\Keap\Sdk\Core\Model\PhoneNumber[]|null $phone_numbers phone_numbers
+     * @param \Keap\Sdk\Core\Model\PhoneNumber[]|null $phone_numbers phone_numbers
      *
      * @return self
      */
@@ -1208,7 +1208,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets social_accounts
      *
-     * @return \Com\Keap\Sdk\Core\Model\SocialAccount[]|null
+     * @return \Keap\Sdk\Core\Model\SocialAccount[]|null
      */
     public function getSocialAccounts()
     {
@@ -1218,7 +1218,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets social_accounts
      *
-     * @param \Com\Keap\Sdk\Core\Model\SocialAccount[]|null $social_accounts social_accounts
+     * @param \Keap\Sdk\Core\Model\SocialAccount[]|null $social_accounts social_accounts
      *
      * @return self
      */
@@ -1407,7 +1407,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets utm_parameters
      *
-     * @return \Com\Keap\Sdk\Core\Model\ContactUtmResponse[]|null
+     * @return \Keap\Sdk\Core\Model\ContactUtmResponse[]|null
      */
     public function getUtmParameters()
     {
@@ -1417,7 +1417,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets utm_parameters
      *
-     * @param \Com\Keap\Sdk\Core\Model\ContactUtmResponse[]|null $utm_parameters utm_parameters
+     * @param \Keap\Sdk\Core\Model\ContactUtmResponse[]|null $utm_parameters utm_parameters
      *
      * @return self
      */

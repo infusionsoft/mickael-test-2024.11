@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * TagsApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -167,12 +167,12 @@ class TagsApi
      * Apply Tag
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applyTagsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ApplyTagsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ApplyTagsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function applyTagsUsingPOST($tag_id, $apply_remove_tag_request, string $contentType = self::contentTypes['applyTagsUsingPOST'][0])
     {
@@ -186,12 +186,12 @@ class TagsApi
      * Apply Tag
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applyTagsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ApplyTagsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ApplyTagsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function applyTagsUsingPOSTWithHttpInfo($tag_id, $apply_remove_tag_request, string $contentType = self::contentTypes['applyTagsUsingPOST'][0])
     {
@@ -222,11 +222,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ApplyTagsResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ApplyTagsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ApplyTagsResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ApplyTagsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -244,16 +244,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ApplyTagsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ApplyTagsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -271,16 +271,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -298,7 +298,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -317,7 +317,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ApplyTagsResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ApplyTagsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -350,7 +350,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ApplyTagsResponse',
+                        '\Keap\Sdk\Core\Model\ApplyTagsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -358,7 +358,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -366,7 +366,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -382,7 +382,7 @@ class TagsApi
      * Apply Tag
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applyTagsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -404,7 +404,7 @@ class TagsApi
      * Apply Tag
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applyTagsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -412,7 +412,7 @@ class TagsApi
      */
     public function applyTagsUsingPOSTAsyncWithHttpInfo($tag_id, $apply_remove_tag_request, string $contentType = self::contentTypes['applyTagsUsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ApplyTagsResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ApplyTagsResponse';
         $request = $this->applyTagsUsingPOSTRequest($tag_id, $apply_remove_tag_request, $contentType);
 
         return $this->client
@@ -455,7 +455,7 @@ class TagsApi
      * Create request for operation 'applyTagsUsingPOST'
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['applyTagsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -563,12 +563,12 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Tag|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createTagCategoryUsingPOST1($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
@@ -581,12 +581,12 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Tag|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagCategoryUsingPOST1WithHttpInfo($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
@@ -617,11 +617,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\Tag' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Tag' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Tag' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -639,16 +639,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -666,16 +666,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -693,7 +693,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -712,7 +712,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
+            $returnType = '\Keap\Sdk\Core\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -745,7 +745,7 @@ class TagsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Tag',
+                        '\Keap\Sdk\Core\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -753,7 +753,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -761,7 +761,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -776,7 +776,7 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -797,7 +797,7 @@ class TagsApi
      *
      * Create Tag Category
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -805,7 +805,7 @@ class TagsApi
      */
     public function createTagCategoryUsingPOST1AsyncWithHttpInfo($create_update_tag_category_request, string $contentType = self::contentTypes['createTagCategoryUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
+        $returnType = '\Keap\Sdk\Core\Model\Tag';
         $request = $this->createTagCategoryUsingPOST1Request($create_update_tag_category_request, $contentType);
 
         return $this->client
@@ -847,7 +847,7 @@ class TagsApi
     /**
      * Create request for operation 'createTagCategoryUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagCategoryUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -940,12 +940,12 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Tag|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createTagUsingPOST1($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
@@ -958,12 +958,12 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Tag|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagUsingPOST1WithHttpInfo($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
@@ -994,11 +994,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\Tag' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Tag' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Tag' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1016,16 +1016,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1043,16 +1043,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1070,7 +1070,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1089,7 +1089,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
+            $returnType = '\Keap\Sdk\Core\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1122,7 +1122,7 @@ class TagsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Tag',
+                        '\Keap\Sdk\Core\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1130,7 +1130,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1138,7 +1138,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,7 +1153,7 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1174,7 +1174,7 @@ class TagsApi
      *
      * Create Tag
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1182,7 +1182,7 @@ class TagsApi
      */
     public function createTagUsingPOST1AsyncWithHttpInfo($create_update_tag_request, string $contentType = self::contentTypes['createTagUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
+        $returnType = '\Keap\Sdk\Core\Model\Tag';
         $request = $this->createTagUsingPOST1Request($create_update_tag_request, $contentType);
 
         return $this->client
@@ -1224,7 +1224,7 @@ class TagsApi
     /**
      * Create request for operation 'createTagUsingPOST1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTagUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1320,7 +1320,7 @@ class TagsApi
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTagCategoryUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1337,7 +1337,7 @@ class TagsApi
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTagCategoryUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1375,7 +1375,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1383,7 +1383,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1391,7 +1391,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1561,7 +1561,7 @@ class TagsApi
      * @param  string $tag_id tag_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTagUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1578,7 +1578,7 @@ class TagsApi
      * @param  string $tag_id tag_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTagUsingDELETE'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1616,7 +1616,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1624,7 +1624,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1632,7 +1632,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1802,9 +1802,9 @@ class TagsApi
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoryUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\GetTagCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\GetTagCategoryResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getCategoryUsingGET($tag_category_id, string $contentType = self::contentTypes['getCategoryUsingGET'][0])
     {
@@ -1820,9 +1820,9 @@ class TagsApi
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoryUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\GetTagCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\GetTagCategoryResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCategoryUsingGETWithHttpInfo($tag_category_id, string $contentType = self::contentTypes['getCategoryUsingGET'][0])
     {
@@ -1853,11 +1853,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\GetTagCategoryResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\GetTagCategoryResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1875,16 +1875,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\GetTagCategoryResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1902,16 +1902,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1929,16 +1929,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1956,7 +1956,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1975,7 +1975,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse';
+            $returnType = '\Keap\Sdk\Core\Model\GetTagCategoryResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2008,7 +2008,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse',
+                        '\Keap\Sdk\Core\Model\GetTagCategoryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2016,7 +2016,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2024,7 +2024,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2032,7 +2032,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2076,7 +2076,7 @@ class TagsApi
      */
     public function getCategoryUsingGETAsyncWithHttpInfo($tag_category_id, string $contentType = self::contentTypes['getCategoryUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\GetTagCategoryResponse';
+        $returnType = '\Keap\Sdk\Core\Model\GetTagCategoryResponse';
         $request = $this->getCategoryUsingGETRequest($tag_category_id, $contentType);
 
         return $this->client
@@ -2215,9 +2215,9 @@ class TagsApi
      * @param  string $tag_id tag_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTagUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Tag|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getTagUsingGET1($tag_id, string $contentType = self::contentTypes['getTagUsingGET1'][0])
     {
@@ -2233,9 +2233,9 @@ class TagsApi
      * @param  string $tag_id tag_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTagUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Tag|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Tag|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTagUsingGET1WithHttpInfo($tag_id, string $contentType = self::contentTypes['getTagUsingGET1'][0])
     {
@@ -2266,11 +2266,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Tag' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Tag' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Tag' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2288,16 +2288,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2315,16 +2315,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2342,16 +2342,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2369,7 +2369,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2388,7 +2388,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
+            $returnType = '\Keap\Sdk\Core\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2421,7 +2421,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Tag',
+                        '\Keap\Sdk\Core\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2429,7 +2429,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2437,7 +2437,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2445,7 +2445,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2489,7 +2489,7 @@ class TagsApi
      */
     public function getTagUsingGET1AsyncWithHttpInfo($tag_id, string $contentType = self::contentTypes['getTagUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Tag';
+        $returnType = '\Keap\Sdk\Core\Model\Tag';
         $request = $this->getTagUsingGET1Request($tag_id, $contentType);
 
         return $this->client
@@ -2632,9 +2632,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCompaniesForTagIdUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListTaggedCompaniesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listCompaniesForTagIdUsingGET1($tag_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listCompaniesForTagIdUsingGET1'][0])
     {
@@ -2654,9 +2654,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCompaniesForTagIdUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListTaggedCompaniesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCompaniesForTagIdUsingGET1WithHttpInfo($tag_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listCompaniesForTagIdUsingGET1'][0])
     {
@@ -2687,11 +2687,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2709,16 +2709,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2736,16 +2736,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2763,16 +2763,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2790,7 +2790,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2809,7 +2809,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2842,7 +2842,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse',
+                        '\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2850,7 +2850,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2858,7 +2858,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2866,7 +2866,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2918,7 +2918,7 @@ class TagsApi
      */
     public function listCompaniesForTagIdUsingGET1AsyncWithHttpInfo($tag_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listCompaniesForTagIdUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListTaggedCompaniesResponse';
         $request = $this->listCompaniesForTagIdUsingGET1Request($tag_id, $filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -3111,9 +3111,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactsWithTagIdUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListTaggedContactsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listContactsWithTagIdUsingGET($tag_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactsWithTagIdUsingGET'][0])
     {
@@ -3133,9 +3133,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactsWithTagIdUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListTaggedContactsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactsWithTagIdUsingGETWithHttpInfo($tag_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactsWithTagIdUsingGET'][0])
     {
@@ -3166,11 +3166,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListTaggedContactsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListTaggedContactsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3188,16 +3188,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListTaggedContactsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3215,16 +3215,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3242,16 +3242,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3269,7 +3269,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3288,7 +3288,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListTaggedContactsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3321,7 +3321,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse',
+                        '\Keap\Sdk\Core\Model\ListTaggedContactsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3329,7 +3329,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3337,7 +3337,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3345,7 +3345,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3397,7 +3397,7 @@ class TagsApi
      */
     public function listContactsWithTagIdUsingGETAsyncWithHttpInfo($tag_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listContactsWithTagIdUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListTaggedContactsResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListTaggedContactsResponse';
         $request = $this->listContactsWithTagIdUsingGETRequest($tag_id, $filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -3589,9 +3589,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTagCategoriesUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListTagCategoriesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listTagCategoriesUsingGET($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listTagCategoriesUsingGET'][0])
     {
@@ -3610,9 +3610,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTagCategoriesUsingGET'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListTagCategoriesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTagCategoriesUsingGETWithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listTagCategoriesUsingGET'][0])
     {
@@ -3643,11 +3643,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListTagCategoriesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListTagCategoriesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3665,16 +3665,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListTagCategoriesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3692,16 +3692,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3719,16 +3719,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3746,7 +3746,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3765,7 +3765,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListTagCategoriesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3798,7 +3798,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse',
+                        '\Keap\Sdk\Core\Model\ListTagCategoriesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3806,7 +3806,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3814,7 +3814,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3822,7 +3822,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3872,7 +3872,7 @@ class TagsApi
      */
     public function listTagCategoriesUsingGETAsyncWithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listTagCategoriesUsingGET'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListTagCategoriesResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListTagCategoriesResponse';
         $request = $this->listTagCategoriesUsingGETRequest($filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -4048,9 +4048,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTagsUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListTagsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListTagsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listTagsUsingGET1($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listTagsUsingGET1'][0])
     {
@@ -4069,9 +4069,9 @@ class TagsApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTagsUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListTagsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListTagsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTagsUsingGET1WithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listTagsUsingGET1'][0])
     {
@@ -4102,11 +4102,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListTagsResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListTagsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListTagsResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListTagsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4124,16 +4124,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListTagsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListTagsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4151,16 +4151,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4178,16 +4178,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4205,7 +4205,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4224,7 +4224,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListTagsResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListTagsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4257,7 +4257,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListTagsResponse',
+                        '\Keap\Sdk\Core\Model\ListTagsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4265,7 +4265,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4273,7 +4273,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4281,7 +4281,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4331,7 +4331,7 @@ class TagsApi
      */
     public function listTagsUsingGET1AsyncWithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listTagsUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListTagsResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListTagsResponse';
         $request = $this->listTagsUsingGET1Request($filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -4502,10 +4502,10 @@ class TagsApi
      * Remove Tags
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTagsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4520,10 +4520,10 @@ class TagsApi
      * Remove Tags
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTagsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4561,7 +4561,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4569,7 +4569,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4585,7 +4585,7 @@ class TagsApi
      * Remove Tags
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTagsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4607,7 +4607,7 @@ class TagsApi
      * Remove Tags
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTagsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4645,7 +4645,7 @@ class TagsApi
      * Create request for operation 'removeTagsUsingPOST'
      *
      * @param  string $tag_id tag_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
+     * @param  \Keap\Sdk\Core\Model\ApplyRemoveTagRequest $apply_remove_tag_request applyRemoveTagRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeTagsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4755,12 +4755,12 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagCategoryUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\UpdateTagCategoryResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateTagCategoryUsingPATCH($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['updateTagCategoryUsingPATCH'][0])
     {
@@ -4775,12 +4775,12 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagCategoryUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\UpdateTagCategoryResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTagCategoryUsingPATCHWithHttpInfo($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['updateTagCategoryUsingPATCH'][0])
     {
@@ -4811,11 +4811,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\UpdateTagCategoryResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\UpdateTagCategoryResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4833,16 +4833,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\UpdateTagCategoryResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4860,16 +4860,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4887,16 +4887,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4914,7 +4914,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4933,7 +4933,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse';
+            $returnType = '\Keap\Sdk\Core\Model\UpdateTagCategoryResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4966,7 +4966,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse',
+                        '\Keap\Sdk\Core\Model\UpdateTagCategoryResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4974,7 +4974,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4982,7 +4982,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4990,7 +4990,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5007,7 +5007,7 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5030,7 +5030,7 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5038,7 +5038,7 @@ class TagsApi
      */
     public function updateTagCategoryUsingPATCHAsyncWithHttpInfo($tag_category_id, $update_mask = null, $create_update_tag_category_request = null, string $contentType = self::contentTypes['updateTagCategoryUsingPATCH'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTagCategoryResponse';
+        $returnType = '\Keap\Sdk\Core\Model\UpdateTagCategoryResponse';
         $request = $this->updateTagCategoryUsingPATCHRequest($tag_category_id, $update_mask, $create_update_tag_category_request, $contentType);
 
         return $this->client
@@ -5082,7 +5082,7 @@ class TagsApi
      *
      * @param  string $tag_category_id tag_category_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagCategoryRequest $create_update_tag_category_request tagCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagCategoryUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5196,12 +5196,12 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\UpdateTagResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\UpdateTagResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateTagUsingPATCH($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['updateTagUsingPATCH'][0])
     {
@@ -5216,12 +5216,12 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\UpdateTagResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\UpdateTagResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTagUsingPATCHWithHttpInfo($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['updateTagUsingPATCH'][0])
     {
@@ -5252,11 +5252,11 @@ class TagsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\UpdateTagResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\UpdateTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\UpdateTagResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\UpdateTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5274,16 +5274,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\UpdateTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\UpdateTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5301,16 +5301,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5328,16 +5328,16 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5355,7 +5355,7 @@ class TagsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5374,7 +5374,7 @@ class TagsApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTagResponse';
+            $returnType = '\Keap\Sdk\Core\Model\UpdateTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5407,7 +5407,7 @@ class TagsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\UpdateTagResponse',
+                        '\Keap\Sdk\Core\Model\UpdateTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5415,7 +5415,7 @@ class TagsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5423,7 +5423,7 @@ class TagsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5431,7 +5431,7 @@ class TagsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5448,7 +5448,7 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5471,7 +5471,7 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5479,7 +5479,7 @@ class TagsApi
      */
     public function updateTagUsingPATCHAsyncWithHttpInfo($tag_id, $update_mask = null, $create_update_tag_request = null, string $contentType = self::contentTypes['updateTagUsingPATCH'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\UpdateTagResponse';
+        $returnType = '\Keap\Sdk\Core\Model\UpdateTagResponse';
         $request = $this->updateTagUsingPATCHRequest($tag_id, $update_mask, $create_update_tag_request, $contentType);
 
         return $this->client
@@ -5523,7 +5523,7 @@ class TagsApi
      *
      * @param  string $tag_id tag_id (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateUpdateTagRequest $create_update_tag_request tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateTagUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

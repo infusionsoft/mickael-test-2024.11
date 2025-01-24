@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestV2Opportunity Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'affiliate_id' => 'string',
-        'contact' => '\Com\Keap\Sdk\Core\Model\OpportunityContact',
+        'contact' => '\Keap\Sdk\Core\Model\OpportunityContact',
         'created_time' => 'string',
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\CustomField[]',
+        'custom_fields' => '\Keap\Sdk\Core\Model\CustomField[]',
         'estimated_close_time' => 'string',
         'id' => 'string',
         'include_in_forecast' => 'bool',
@@ -71,8 +71,8 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
         'opportunity_title' => 'string',
         'projected_revenue_high' => 'float',
         'projected_revenue_low' => 'float',
-        'stage' => '\Com\Keap\Sdk\Core\Model\OpportunityStage',
-        'user' => '\Com\Keap\Sdk\Core\Model\RestV2User'
+        'stage' => '\Keap\Sdk\Core\Model\OpportunityStage',
+        'user' => '\Keap\Sdk\Core\Model\RestV2User'
     ];
 
     /**
@@ -433,7 +433,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets contact
      *
-     * @return \Com\Keap\Sdk\Core\Model\OpportunityContact
+     * @return \Keap\Sdk\Core\Model\OpportunityContact
      */
     public function getContact()
     {
@@ -443,7 +443,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets contact
      *
-     * @param \Com\Keap\Sdk\Core\Model\OpportunityContact $contact contact
+     * @param \Keap\Sdk\Core\Model\OpportunityContact $contact contact
      *
      * @return self
      */
@@ -487,7 +487,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\CustomField[]|null
+     * @return \Keap\Sdk\Core\Model\CustomField[]|null
      */
     public function getCustomFields()
     {
@@ -497,7 +497,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\CustomField[]|null $custom_fields custom_fields
+     * @param \Keap\Sdk\Core\Model\CustomField[]|null $custom_fields custom_fields
      *
      * @return self
      */
@@ -784,7 +784,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets stage
      *
-     * @return \Com\Keap\Sdk\Core\Model\OpportunityStage
+     * @return \Keap\Sdk\Core\Model\OpportunityStage
      */
     public function getStage()
     {
@@ -794,7 +794,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets stage
      *
-     * @param \Com\Keap\Sdk\Core\Model\OpportunityStage $stage stage
+     * @param \Keap\Sdk\Core\Model\OpportunityStage $stage stage
      *
      * @return self
      */
@@ -811,7 +811,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets user
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestV2User|null
+     * @return \Keap\Sdk\Core\Model\RestV2User|null
      */
     public function getUser()
     {
@@ -821,7 +821,7 @@ class RestV2Opportunity implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets user
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestV2User|null $user user
+     * @param \Keap\Sdk\Core\Model\RestV2User|null $user user
      *
      * @return self
      */

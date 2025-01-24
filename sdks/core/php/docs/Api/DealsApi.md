@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\DealsApi
+# Keap\Sdk\Core\DealsApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createNote()`
 
 ```php
-createNote($id, $create_deal_note_request): \Com\Keap\Sdk\Core\Model\DealNote
+createNote($id, $create_deal_note_request): \Keap\Sdk\Core\Model\DealNote
 ```
 
 Creates a new note for a specific deal.
@@ -28,13 +28,13 @@ Creates a new note for a specific deal.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\DealsApi(
+$apiInstance = new Keap\Sdk\Core\Api\DealsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | the deal ID to associate the new note with
-$create_deal_note_request = new \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest(); // \Com\Keap\Sdk\Core\Model\CreateDealNoteRequest | the request body containing note details
+$create_deal_note_request = new \Keap\Sdk\Core\Model\CreateDealNoteRequest(); // \Keap\Sdk\Core\Model\CreateDealNoteRequest | the request body containing note details
 
 try {
     $result = $apiInstance->createNote($id, $create_deal_note_request);
@@ -49,11 +49,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| the deal ID to associate the new note with | |
-| **create_deal_note_request** | [**\Com\Keap\Sdk\Core\Model\CreateDealNoteRequest**](../Model/CreateDealNoteRequest.md)| the request body containing note details | |
+| **create_deal_note_request** | [**\Keap\Sdk\Core\Model\CreateDealNoteRequest**](../Model/CreateDealNoteRequest.md)| the request body containing note details | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\DealNote**](../Model/DealNote.md)
+[**\Keap\Sdk\Core\Model\DealNote**](../Model/DealNote.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Deletes a specific deal note by its ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\DealsApi(
+$apiInstance = new Keap\Sdk\Core\Api\DealsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -125,7 +125,7 @@ No authorization required
 ## `getNote()`
 
 ```php
-getNote($note_id): \Com\Keap\Sdk\Core\Model\DealNote
+getNote($note_id): \Keap\Sdk\Core\Model\DealNote
 ```
 
 Retrieves a specific deal note by its ID.
@@ -139,7 +139,7 @@ Retrieves a specific deal note by its ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\DealsApi(
+$apiInstance = new Keap\Sdk\Core\Api\DealsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\DealNote**](../Model/DealNote.md)
+[**\Keap\Sdk\Core\Model\DealNote**](../Model/DealNote.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `listNotes()`
 
 ```php
-listNotes($id, $filter, $page_token, $order_by, $page_size): \Com\Keap\Sdk\Core\Model\DealNoteListResponse
+listNotes($id, $filter, $page_token, $order_by, $page_size): \Keap\Sdk\Core\Model\DealNoteListResponse
 ```
 
 Lists all notes associated with a specific deal.
@@ -194,7 +194,7 @@ Lists all notes associated with a specific deal.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\DealsApi(
+$apiInstance = new Keap\Sdk\Core\Api\DealsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -225,7 +225,7 @@ try {
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\DealNoteListResponse**](../Model/DealNoteListResponse.md)
+[**\Keap\Sdk\Core\Model\DealNoteListResponse**](../Model/DealNoteListResponse.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
 ## `update()`
 
 ```php
-update($note_id, $update_deal_note_request): \Com\Keap\Sdk\Core\Model\DealNote
+update($note_id, $update_deal_note_request): \Keap\Sdk\Core\Model\DealNote
 ```
 
 Updates a specific deal note by its ID.
@@ -257,13 +257,13 @@ Updates a specific deal note by its ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\DealsApi(
+$apiInstance = new Keap\Sdk\Core\Api\DealsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $note_id = 'note_id_example'; // string | the ID of the note to update
-$update_deal_note_request = new \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest(); // \Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest | the request body containing updated note details
+$update_deal_note_request = new \Keap\Sdk\Core\Model\UpdateDealNoteRequest(); // \Keap\Sdk\Core\Model\UpdateDealNoteRequest | the request body containing updated note details
 
 try {
     $result = $apiInstance->update($note_id, $update_deal_note_request);
@@ -278,11 +278,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **note_id** | **string**| the ID of the note to update | |
-| **update_deal_note_request** | [**\Com\Keap\Sdk\Core\Model\UpdateDealNoteRequest**](../Model/UpdateDealNoteRequest.md)| the request body containing updated note details | |
+| **update_deal_note_request** | [**\Keap\Sdk\Core\Model\UpdateDealNoteRequest**](../Model/UpdateDealNoteRequest.md)| the request body containing updated note details | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\DealNote**](../Model/DealNote.md)
+[**\Keap\Sdk\Core\Model\DealNote**](../Model/DealNote.md)
 
 ### Authorization
 

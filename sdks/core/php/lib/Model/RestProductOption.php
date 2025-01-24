@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestProductOption Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -73,7 +73,7 @@ class RestProductOption implements ModelInterface, ArrayAccess, \JsonSerializabl
         'required' => 'bool',
         'text_message' => 'string',
         'type' => 'string',
-        'values' => '\Com\Keap\Sdk\Core\Model\RestProductOptionValue[]'
+        'values' => '\Keap\Sdk\Core\Model\RestProductOptionValue[]'
     ];
 
     /**
@@ -870,7 +870,7 @@ class RestProductOption implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets values
      *
-     * @return \Com\Keap\Sdk\Core\Model\RestProductOptionValue[]|null
+     * @return \Keap\Sdk\Core\Model\RestProductOptionValue[]|null
      */
     public function getValues()
     {
@@ -880,7 +880,7 @@ class RestProductOption implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets values
      *
-     * @param \Com\Keap\Sdk\Core\Model\RestProductOptionValue[]|null $values values
+     * @param \Keap\Sdk\Core\Model\RestProductOptionValue[]|null $values values
      *
      * @return self
      */

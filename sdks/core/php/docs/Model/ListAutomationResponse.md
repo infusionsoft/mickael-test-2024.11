@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **automation_count** | **int** |  | [optional]
-**automations** | [**\Com\Keap\Sdk\Core\Model\Automation[]**](Automation.md) |  | [optional]
+**automations** | [**\Keap\Sdk\Core\Model\Automation[]**](Automation.md) |  | [optional]
 **next_page_token** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

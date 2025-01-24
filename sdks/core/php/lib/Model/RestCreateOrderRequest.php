@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestCreateOrderRequest Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class RestCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'contact_id' => 'string',
         'lead_affiliate_id' => 'string',
-        'order_items' => '\Com\Keap\Sdk\Core\Model\CreateRestOrderItemRequest[]',
+        'order_items' => '\Keap\Sdk\Core\Model\CreateRestOrderItemRequest[]',
         'order_time' => 'string',
         'order_title' => 'string',
         'order_type' => 'string',
         'promo_codes' => 'string[]',
         'sales_affiliate_id' => 'string',
-        'shipping_address' => '\Com\Keap\Sdk\Core\Model\AddressInformation'
+        'shipping_address' => '\Keap\Sdk\Core\Model\AddressInformation'
     ];
 
     /**
@@ -441,7 +441,7 @@ class RestCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets order_items
      *
-     * @return \Com\Keap\Sdk\Core\Model\CreateRestOrderItemRequest[]
+     * @return \Keap\Sdk\Core\Model\CreateRestOrderItemRequest[]
      */
     public function getOrderItems()
     {
@@ -451,7 +451,7 @@ class RestCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets order_items
      *
-     * @param \Com\Keap\Sdk\Core\Model\CreateRestOrderItemRequest[] $order_items order_items
+     * @param \Keap\Sdk\Core\Model\CreateRestOrderItemRequest[] $order_items order_items
      *
      * @return self
      */
@@ -613,7 +613,7 @@ class RestCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets shipping_address
      *
-     * @return \Com\Keap\Sdk\Core\Model\AddressInformation|null
+     * @return \Keap\Sdk\Core\Model\AddressInformation|null
      */
     public function getShippingAddress()
     {
@@ -623,7 +623,7 @@ class RestCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets shipping_address
      *
-     * @param \Com\Keap\Sdk\Core\Model\AddressInformation|null $shipping_address shipping_address
+     * @param \Keap\Sdk\Core\Model\AddressInformation|null $shipping_address shipping_address
      *
      * @return self
      */

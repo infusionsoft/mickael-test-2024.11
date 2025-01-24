@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * NoteApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,12 +140,12 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Note|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Note|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function createNoteUsingPOST1($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
@@ -159,12 +159,12 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Note|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Note|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createNoteUsingPOST1WithHttpInfo($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
@@ -195,11 +195,11 @@ class NoteApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\Note' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Note' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Note' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Note' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -217,16 +217,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Note', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Note', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -244,16 +244,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -271,7 +271,7 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -290,7 +290,7 @@ class NoteApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Note';
+            $returnType = '\Keap\Sdk\Core\Model\Note';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -323,7 +323,7 @@ class NoteApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Note',
+                        '\Keap\Sdk\Core\Model\Note',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class NoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -339,7 +339,7 @@ class NoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -355,7 +355,7 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -377,7 +377,7 @@ class NoteApi
      * Create a Note
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -385,7 +385,7 @@ class NoteApi
      */
     public function createNoteUsingPOST1AsyncWithHttpInfo($contact_id, $create_note_request, string $contentType = self::contentTypes['createNoteUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Note';
+        $returnType = '\Keap\Sdk\Core\Model\Note';
         $request = $this->createNoteUsingPOST1Request($contact_id, $create_note_request, $contentType);
 
         return $this->client
@@ -428,7 +428,7 @@ class NoteApi
      * Create request for operation 'createNoteUsingPOST1'
      *
      * @param  string $contact_id contact_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateNoteRequest $create_note_request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNoteUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -540,7 +540,7 @@ class NoteApi
      * @param  string $note_id note_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteNoteUsingDELETE1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -558,7 +558,7 @@ class NoteApi
      * @param  string $note_id note_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteNoteUsingDELETE1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -596,7 +596,7 @@ class NoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -604,7 +604,7 @@ class NoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -612,7 +612,7 @@ class NoteApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -801,9 +801,9 @@ class NoteApi
      * @param  string $note_id note_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNoteUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\GetNoteResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\GetNoteResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getNoteUsingGET1($contact_id, $note_id, string $contentType = self::contentTypes['getNoteUsingGET1'][0])
     {
@@ -820,9 +820,9 @@ class NoteApi
      * @param  string $note_id note_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNoteUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\GetNoteResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\GetNoteResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNoteUsingGET1WithHttpInfo($contact_id, $note_id, string $contentType = self::contentTypes['getNoteUsingGET1'][0])
     {
@@ -853,11 +853,11 @@ class NoteApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\GetNoteResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\GetNoteResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\GetNoteResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\GetNoteResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -875,16 +875,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\GetNoteResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\GetNoteResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -902,16 +902,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -929,16 +929,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -956,7 +956,7 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -975,7 +975,7 @@ class NoteApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\GetNoteResponse';
+            $returnType = '\Keap\Sdk\Core\Model\GetNoteResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1008,7 +1008,7 @@ class NoteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\GetNoteResponse',
+                        '\Keap\Sdk\Core\Model\GetNoteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1016,7 +1016,7 @@ class NoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1024,7 +1024,7 @@ class NoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class NoteApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1078,7 +1078,7 @@ class NoteApi
      */
     public function getNoteUsingGET1AsyncWithHttpInfo($contact_id, $note_id, string $contentType = self::contentTypes['getNoteUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\GetNoteResponse';
+        $returnType = '\Keap\Sdk\Core\Model\GetNoteResponse';
         $request = $this->getNoteUsingGET1Request($contact_id, $note_id, $contentType);
 
         return $this->client
@@ -1237,9 +1237,9 @@ class NoteApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listNotesUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListNotesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListNotesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listNotesUsingGET1($contact_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listNotesUsingGET1'][0])
     {
@@ -1259,9 +1259,9 @@ class NoteApi
      * @param  string $page_token Page token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listNotesUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListNotesResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListNotesResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNotesUsingGET1WithHttpInfo($contact_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listNotesUsingGET1'][0])
     {
@@ -1292,11 +1292,11 @@ class NoteApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListNotesResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListNotesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListNotesResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListNotesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1314,16 +1314,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListNotesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListNotesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1341,16 +1341,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1368,16 +1368,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1395,7 +1395,7 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1414,7 +1414,7 @@ class NoteApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListNotesResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListNotesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1447,7 +1447,7 @@ class NoteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListNotesResponse',
+                        '\Keap\Sdk\Core\Model\ListNotesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1455,7 +1455,7 @@ class NoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1463,7 +1463,7 @@ class NoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1471,7 +1471,7 @@ class NoteApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1523,7 +1523,7 @@ class NoteApi
      */
     public function listNotesUsingGET1AsyncWithHttpInfo($contact_id, $filter = null, $order_by = null, $page_size = null, $page_token = null, string $contentType = self::contentTypes['listNotesUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListNotesResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListNotesResponse';
         $request = $this->listNotesUsingGET1Request($contact_id, $filter, $order_by, $page_size, $page_token, $contentType);
 
         return $this->client
@@ -1711,13 +1711,13 @@ class NoteApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string $note_id note_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNoteUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\UpdateNoteResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\UpdateNoteResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateNoteUsingPATCH($contact_id, $note_id, $update_note_request, $update_mask = null, string $contentType = self::contentTypes['updateNoteUsingPATCH'][0])
     {
@@ -1732,13 +1732,13 @@ class NoteApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string $note_id note_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNoteUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\UpdateNoteResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\UpdateNoteResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateNoteUsingPATCHWithHttpInfo($contact_id, $note_id, $update_note_request, $update_mask = null, string $contentType = self::contentTypes['updateNoteUsingPATCH'][0])
     {
@@ -1769,11 +1769,11 @@ class NoteApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\UpdateNoteResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\UpdateNoteResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\UpdateNoteResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\UpdateNoteResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1791,16 +1791,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\UpdateNoteResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\UpdateNoteResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1818,16 +1818,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1845,16 +1845,16 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1872,7 +1872,7 @@ class NoteApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1891,7 +1891,7 @@ class NoteApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\UpdateNoteResponse';
+            $returnType = '\Keap\Sdk\Core\Model\UpdateNoteResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1924,7 +1924,7 @@ class NoteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\UpdateNoteResponse',
+                        '\Keap\Sdk\Core\Model\UpdateNoteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1932,7 +1932,7 @@ class NoteApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1940,7 +1940,7 @@ class NoteApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1948,7 +1948,7 @@ class NoteApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1965,7 +1965,7 @@ class NoteApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string $note_id note_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNoteUsingPATCH'] to see the possible values for this operation
      *
@@ -1989,7 +1989,7 @@ class NoteApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string $note_id note_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNoteUsingPATCH'] to see the possible values for this operation
      *
@@ -1998,7 +1998,7 @@ class NoteApi
      */
     public function updateNoteUsingPATCHAsyncWithHttpInfo($contact_id, $note_id, $update_note_request, $update_mask = null, string $contentType = self::contentTypes['updateNoteUsingPATCH'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\UpdateNoteResponse';
+        $returnType = '\Keap\Sdk\Core\Model\UpdateNoteResponse';
         $request = $this->updateNoteUsingPATCHRequest($contact_id, $note_id, $update_note_request, $update_mask, $contentType);
 
         return $this->client
@@ -2042,7 +2042,7 @@ class NoteApi
      *
      * @param  string $contact_id contact_id (required)
      * @param  string $note_id note_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateNoteRequest $update_note_request updateNoteRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNoteUsingPATCH'] to see the possible values for this operation
      *

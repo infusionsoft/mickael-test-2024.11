@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * AffiliateApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RestAffiliate|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function addAffiliateUsingPOST($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
@@ -154,12 +154,12 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RestAffiliate|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function addAffiliateUsingPOSTWithHttpInfo($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
@@ -190,11 +190,11 @@ class AffiliateApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Com\Keap\Sdk\Core\Model\RestAffiliate' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RestAffiliate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RestAffiliate' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RestAffiliate' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -212,16 +212,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RestAffiliate', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RestAffiliate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,7 +266,7 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -285,7 +285,7 @@ class AffiliateApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
+            $returnType = '\Keap\Sdk\Core\Model\RestAffiliate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -318,7 +318,7 @@ class AffiliateApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RestAffiliate',
+                        '\Keap\Sdk\Core\Model\RestAffiliate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -326,7 +326,7 @@ class AffiliateApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class AffiliateApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -349,7 +349,7 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class AffiliateApi
      *
      * Create an Affiliate
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -378,7 +378,7 @@ class AffiliateApi
      */
     public function addAffiliateUsingPOSTAsyncWithHttpInfo($create_affiliate_request = null, string $contentType = self::contentTypes['addAffiliateUsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
+        $returnType = '\Keap\Sdk\Core\Model\RestAffiliate';
         $request = $this->addAffiliateUsingPOSTRequest($create_affiliate_request, $contentType);
 
         return $this->client
@@ -420,7 +420,7 @@ class AffiliateApi
     /**
      * Create request for operation 'addAffiliateUsingPOST'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
+     * @param  \Keap\Sdk\Core\Model\CreateAffiliateRequest $create_affiliate_request Affiliate request to insert (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addAffiliateUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -510,9 +510,9 @@ class AffiliateApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAffiliateUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RestAffiliate|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getAffiliateUsingGET1($id, string $contentType = self::contentTypes['getAffiliateUsingGET1'][0])
     {
@@ -528,9 +528,9 @@ class AffiliateApi
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAffiliateUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RestAffiliate|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAffiliateUsingGET1WithHttpInfo($id, string $contentType = self::contentTypes['getAffiliateUsingGET1'][0])
     {
@@ -561,11 +561,11 @@ class AffiliateApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\RestAffiliate' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RestAffiliate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RestAffiliate' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RestAffiliate' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -583,16 +583,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RestAffiliate', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RestAffiliate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -610,16 +610,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -637,16 +637,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -664,7 +664,7 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -683,7 +683,7 @@ class AffiliateApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
+            $returnType = '\Keap\Sdk\Core\Model\RestAffiliate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -716,7 +716,7 @@ class AffiliateApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RestAffiliate',
+                        '\Keap\Sdk\Core\Model\RestAffiliate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -724,7 +724,7 @@ class AffiliateApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -732,7 +732,7 @@ class AffiliateApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -740,7 +740,7 @@ class AffiliateApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -784,7 +784,7 @@ class AffiliateApi
      */
     public function getAffiliateUsingGET1AsyncWithHttpInfo($id, string $contentType = self::contentTypes['getAffiliateUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
+        $returnType = '\Keap\Sdk\Core\Model\RestAffiliate';
         $request = $this->getAffiliateUsingGET1Request($id, $contentType);
 
         return $this->client
@@ -921,12 +921,12 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RestAffiliate|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateAffiliateUsingPATCH($id, $update_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
@@ -940,12 +940,12 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RestAffiliate|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RestAffiliate|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAffiliateUsingPATCHWithHttpInfo($id, $update_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
@@ -976,11 +976,11 @@ class AffiliateApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\RestAffiliate' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RestAffiliate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RestAffiliate' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RestAffiliate' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -998,16 +998,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RestAffiliate', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RestAffiliate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1025,16 +1025,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1052,16 +1052,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1079,7 +1079,7 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1098,7 +1098,7 @@ class AffiliateApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
+            $returnType = '\Keap\Sdk\Core\Model\RestAffiliate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1131,7 +1131,7 @@ class AffiliateApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RestAffiliate',
+                        '\Keap\Sdk\Core\Model\RestAffiliate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class AffiliateApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1147,7 +1147,7 @@ class AffiliateApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1155,7 +1155,7 @@ class AffiliateApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1171,7 +1171,7 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1193,7 +1193,7 @@ class AffiliateApi
      * Update an Affiliate
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1201,7 +1201,7 @@ class AffiliateApi
      */
     public function updateAffiliateUsingPATCHAsyncWithHttpInfo($id, $update_affiliate_request = null, string $contentType = self::contentTypes['updateAffiliateUsingPATCH'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RestAffiliate';
+        $returnType = '\Keap\Sdk\Core\Model\RestAffiliate';
         $request = $this->updateAffiliateUsingPATCHRequest($id, $update_affiliate_request, $contentType);
 
         return $this->client
@@ -1244,7 +1244,7 @@ class AffiliateApi
      * Create request for operation 'updateAffiliateUsingPATCH'
      *
      * @param  string $id id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
+     * @param  \Keap\Sdk\Core\Model\UpdateAffiliateRequest $update_affiliate_request Request to update an affiliate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAffiliateUsingPATCH'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1347,13 +1347,13 @@ class AffiliateApi
      * Update a Affiliate Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCommissionProgramUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function updateCommissionProgramUsingPATCH($commission_program_id, $update_commission_program_request, $update_mask = null, string $contentType = self::contentTypes['updateCommissionProgramUsingPATCH'][0])
     {
@@ -1367,13 +1367,13 @@ class AffiliateApi
      * Update a Affiliate Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCommissionProgramUsingPATCH'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCommissionProgramUsingPATCHWithHttpInfo($commission_program_id, $update_commission_program_request, $update_mask = null, string $contentType = self::contentTypes['updateCommissionProgramUsingPATCH'][0])
     {
@@ -1404,11 +1404,11 @@ class AffiliateApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1426,16 +1426,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1453,16 +1453,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1480,16 +1480,16 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1507,7 +1507,7 @@ class AffiliateApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1526,7 +1526,7 @@ class AffiliateApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse';
+            $returnType = '\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1559,7 +1559,7 @@ class AffiliateApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse',
+                        '\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1567,7 +1567,7 @@ class AffiliateApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1575,7 +1575,7 @@ class AffiliateApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1583,7 +1583,7 @@ class AffiliateApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1599,7 +1599,7 @@ class AffiliateApi
      * Update a Affiliate Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCommissionProgramUsingPATCH'] to see the possible values for this operation
      *
@@ -1622,7 +1622,7 @@ class AffiliateApi
      * Update a Affiliate Commission Program
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCommissionProgramUsingPATCH'] to see the possible values for this operation
      *
@@ -1631,7 +1631,7 @@ class AffiliateApi
      */
     public function updateCommissionProgramUsingPATCHAsyncWithHttpInfo($commission_program_id, $update_commission_program_request, $update_mask = null, string $contentType = self::contentTypes['updateCommissionProgramUsingPATCH'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse';
+        $returnType = '\Keap\Sdk\Core\Model\AffiliateCommissionProgramResponse';
         $request = $this->updateCommissionProgramUsingPATCHRequest($commission_program_id, $update_commission_program_request, $update_mask, $contentType);
 
         return $this->client
@@ -1674,7 +1674,7 @@ class AffiliateApi
      * Create request for operation 'updateCommissionProgramUsingPATCH'
      *
      * @param  string $commission_program_id commission_program_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateCommissionProgramRequest $update_commission_program_request updateCommissionProgramRequest (required)
      * @param  string[] $update_mask An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCommissionProgramUsingPATCH'] to see the possible values for this operation
      *

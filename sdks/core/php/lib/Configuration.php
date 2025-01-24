@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,14 +25,14 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core;
+namespace Keap\Sdk\Core;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -100,7 +100,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'core-service-core-php/0.0.107';
+    protected $userAgent = 'core-service-core-php/0.0.108';
 
     /**
      * Debug switch (default set to false)
@@ -429,11 +429,11 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Com\Keap\Sdk\Core) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Keap\Sdk\Core) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 2.70.0.768375' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.0.107' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.0.108' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

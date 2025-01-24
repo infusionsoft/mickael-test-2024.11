@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * FunnelIntegrationAction Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class FunnelIntegrationAction implements ModelInterface, ArrayAccess, \JsonSeria
         'enabled' => 'bool',
         'icon_url' => 'string',
         'name' => 'string',
-        'schema_fields' => '\Com\Keap\Sdk\Core\Model\FunnelIntegrationSchemaField[]'
+        'schema_fields' => '\Keap\Sdk\Core\Model\FunnelIntegrationSchemaField[]'
     ];
 
     /**
@@ -462,7 +462,7 @@ class FunnelIntegrationAction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets schema_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\FunnelIntegrationSchemaField[]|null
+     * @return \Keap\Sdk\Core\Model\FunnelIntegrationSchemaField[]|null
      */
     public function getSchemaFields()
     {
@@ -472,7 +472,7 @@ class FunnelIntegrationAction implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets schema_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\FunnelIntegrationSchemaField[]|null $schema_fields The schema for this trigger that can be used in the builder context, and populated when a trigger is initiated.
+     * @param \Keap\Sdk\Core\Model\FunnelIntegrationSchemaField[]|null $schema_fields The schema for this trigger that can be used in the builder context, and populated when a trigger is initiated.
      *
      * @return self
      */

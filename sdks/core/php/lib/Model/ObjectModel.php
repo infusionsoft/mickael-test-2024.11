@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ObjectModel Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ObjectModel implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'custom_fields' => '\Com\Keap\Sdk\Core\Model\CustomFieldMetaData[]',
+        'custom_fields' => '\Keap\Sdk\Core\Model\CustomFieldMetaData[]',
         'optional_properties' => 'string[]'
     ];
 
@@ -299,7 +299,7 @@ class ObjectModel implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_fields
      *
-     * @return \Com\Keap\Sdk\Core\Model\CustomFieldMetaData[]|null
+     * @return \Keap\Sdk\Core\Model\CustomFieldMetaData[]|null
      */
     public function getCustomFields()
     {
@@ -309,7 +309,7 @@ class ObjectModel implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_fields
      *
-     * @param \Com\Keap\Sdk\Core\Model\CustomFieldMetaData[]|null $custom_fields custom_fields
+     * @param \Keap\Sdk\Core\Model\CustomFieldMetaData[]|null $custom_fields custom_fields
      *
      * @return self
      */

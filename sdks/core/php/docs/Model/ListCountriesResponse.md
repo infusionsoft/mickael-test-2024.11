@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countries** | [**\Com\Keap\Sdk\Core\Model\Country[]**](Country.md) | A key-value pair of country code and country name. |
+**countries** | [**\Keap\Sdk\Core\Model\Country[]**](Country.md) | A key-value pair of country code and country name. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

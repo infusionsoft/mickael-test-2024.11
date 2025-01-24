@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * StagesApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,12 +142,12 @@ class StagesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Stage
+     * @return \Keap\Sdk\Core\Model\Stage
      */
     public function create1($create_stage_request, string $contentType = self::contentTypes['create1'][0])
     {
@@ -160,12 +160,12 @@ class StagesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Stage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Stage, HTTP status code, HTTP response headers (array of strings)
      */
     public function create1WithHttpInfo($create_stage_request, string $contentType = self::contentTypes['create1'][0])
     {
@@ -196,11 +196,11 @@ class StagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Stage' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Stage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Stage' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Stage' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -218,7 +218,7 @@ class StagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Stage', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Stage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -237,7 +237,7 @@ class StagesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Stage';
+            $returnType = '\Keap\Sdk\Core\Model\Stage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -270,7 +270,7 @@ class StagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Stage',
+                        '\Keap\Sdk\Core\Model\Stage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class StagesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -306,7 +306,7 @@ class StagesApi
      *
      * Creates a new entity.
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -314,7 +314,7 @@ class StagesApi
      */
     public function create1AsyncWithHttpInfo($create_stage_request, string $contentType = self::contentTypes['create1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Stage';
+        $returnType = '\Keap\Sdk\Core\Model\Stage';
         $request = $this->create1Request($create_stage_request, $contentType);
 
         return $this->client
@@ -356,7 +356,7 @@ class StagesApi
     /**
      * Create request for operation 'create1'
      *
-     * @param  \Com\Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
+     * @param  \Keap\Sdk\Core\Model\CreateStageRequest $create_stage_request the create request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -453,7 +453,7 @@ class StagesApi
      * @param  string $new_stage_id the new stage identifier, can be null (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete2'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -471,7 +471,7 @@ class StagesApi
      * @param  string $new_stage_id the new stage identifier, can be null (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['delete2'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -684,9 +684,9 @@ class StagesApi
      * @param  string $id the entity identifier (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['get1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Stage
+     * @return \Keap\Sdk\Core\Model\Stage
      */
     public function get1($id, string $contentType = self::contentTypes['get1'][0])
     {
@@ -702,9 +702,9 @@ class StagesApi
      * @param  string $id the entity identifier (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['get1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Stage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Stage, HTTP status code, HTTP response headers (array of strings)
      */
     public function get1WithHttpInfo($id, string $contentType = self::contentTypes['get1'][0])
     {
@@ -735,11 +735,11 @@ class StagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Stage' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Stage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Stage' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Stage' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -757,7 +757,7 @@ class StagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Stage', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Stage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -776,7 +776,7 @@ class StagesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Stage';
+            $returnType = '\Keap\Sdk\Core\Model\Stage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -809,7 +809,7 @@ class StagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Stage',
+                        '\Keap\Sdk\Core\Model\Stage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -853,7 +853,7 @@ class StagesApi
      */
     public function get1AsyncWithHttpInfo($id, string $contentType = self::contentTypes['get1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Stage';
+        $returnType = '\Keap\Sdk\Core\Model\Stage';
         $request = $this->get1Request($id, $contentType);
 
         return $this->client
@@ -995,9 +995,9 @@ class StagesApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['list1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\StageListResponse
+     * @return \Keap\Sdk\Core\Model\StageListResponse
      */
     public function list1($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['list1'][0])
     {
@@ -1016,9 +1016,9 @@ class StagesApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['list1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\StageListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\StageListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function list1WithHttpInfo($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['list1'][0])
     {
@@ -1049,11 +1049,11 @@ class StagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\StageListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\StageListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\StageListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\StageListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1071,7 +1071,7 @@ class StagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\StageListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\StageListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1090,7 +1090,7 @@ class StagesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\StageListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\StageListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1123,7 +1123,7 @@ class StagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\StageListResponse',
+                        '\Keap\Sdk\Core\Model\StageListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1173,7 +1173,7 @@ class StagesApi
      */
     public function list1AsyncWithHttpInfo($filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['list1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\StageListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\StageListResponse';
         $request = $this->list1Request($filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -1350,9 +1350,9 @@ class StagesApi
      * @param  int $page_size page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listStages1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\StageDealListResponse
+     * @return \Keap\Sdk\Core\Model\StageDealListResponse
      */
     public function listStages1($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listStages1'][0])
     {
@@ -1372,9 +1372,9 @@ class StagesApi
      * @param  int $page_size (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listStages1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\StageDealListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\StageDealListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listStages1WithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listStages1'][0])
     {
@@ -1405,11 +1405,11 @@ class StagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\StageDealListResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\StageDealListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\StageDealListResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\StageDealListResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1427,7 +1427,7 @@ class StagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\StageDealListResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\StageDealListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1446,7 +1446,7 @@ class StagesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\StageDealListResponse';
+            $returnType = '\Keap\Sdk\Core\Model\StageDealListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1479,7 +1479,7 @@ class StagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\StageDealListResponse',
+                        '\Keap\Sdk\Core\Model\StageDealListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1531,7 +1531,7 @@ class StagesApi
      */
     public function listStages1AsyncWithHttpInfo($id, $filter = null, $page_token = null, $order_by = null, $page_size = 1000, string $contentType = self::contentTypes['listStages1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\StageDealListResponse';
+        $returnType = '\Keap\Sdk\Core\Model\StageDealListResponse';
         $request = $this->listStages1Request($id, $filter, $page_token, $order_by, $page_size, $contentType);
 
         return $this->client
@@ -1719,12 +1719,12 @@ class StagesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update2'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Stage
+     * @return \Keap\Sdk\Core\Model\Stage
      */
     public function update2($id, $update_mask, $update_stage_request, string $contentType = self::contentTypes['update2'][0])
     {
@@ -1739,12 +1739,12 @@ class StagesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update2'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Stage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Stage, HTTP status code, HTTP response headers (array of strings)
      */
     public function update2WithHttpInfo($id, $update_mask, $update_stage_request, string $contentType = self::contentTypes['update2'][0])
     {
@@ -1775,11 +1775,11 @@ class StagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Stage' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Stage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Stage' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Stage' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1797,7 +1797,7 @@ class StagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Stage', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Stage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1816,7 +1816,7 @@ class StagesApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Stage';
+            $returnType = '\Keap\Sdk\Core\Model\Stage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1849,7 +1849,7 @@ class StagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Stage',
+                        '\Keap\Sdk\Core\Model\Stage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1866,7 +1866,7 @@ class StagesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update2'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1889,7 +1889,7 @@ class StagesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update2'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1897,7 +1897,7 @@ class StagesApi
      */
     public function update2AsyncWithHttpInfo($id, $update_mask, $update_stage_request, string $contentType = self::contentTypes['update2'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Stage';
+        $returnType = '\Keap\Sdk\Core\Model\Stage';
         $request = $this->update2Request($id, $update_mask, $update_stage_request, $contentType);
 
         return $this->client
@@ -1941,7 +1941,7 @@ class StagesApi
      *
      * @param  string $id the entity identifier (required)
      * @param  string[] $update_mask the fields to update (required)
-     * @param  \Com\Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
+     * @param  \Keap\Sdk\Core\Model\UpdateStageRequest $update_stage_request the update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['update2'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

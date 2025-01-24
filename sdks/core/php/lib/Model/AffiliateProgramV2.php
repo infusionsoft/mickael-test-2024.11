@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * AffiliateProgramV2 Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'affiliate_id' => 'string',
         'create_time' => 'string',
-        'default_commission' => '\Com\Keap\Sdk\Core\Model\DefaultCommission',
+        'default_commission' => '\Keap\Sdk\Core\Model\DefaultCommission',
         'id' => 'string',
         'name' => 'string',
         'notes' => 'string',
         'priority' => 'string',
-        'product_commissions' => '\Com\Keap\Sdk\Core\Model\ProductCommission[]',
-        'subscription_commissions' => '\Com\Keap\Sdk\Core\Model\SubscriptionCommission[]'
+        'product_commissions' => '\Keap\Sdk\Core\Model\ProductCommission[]',
+        'subscription_commissions' => '\Keap\Sdk\Core\Model\SubscriptionCommission[]'
     ];
 
     /**
@@ -402,7 +402,7 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets default_commission
      *
-     * @return \Com\Keap\Sdk\Core\Model\DefaultCommission|null
+     * @return \Keap\Sdk\Core\Model\DefaultCommission|null
      */
     public function getDefaultCommission()
     {
@@ -412,7 +412,7 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets default_commission
      *
-     * @param \Com\Keap\Sdk\Core\Model\DefaultCommission|null $default_commission default_commission
+     * @param \Keap\Sdk\Core\Model\DefaultCommission|null $default_commission default_commission
      *
      * @return self
      */
@@ -537,7 +537,7 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets product_commissions
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductCommission[]|null
+     * @return \Keap\Sdk\Core\Model\ProductCommission[]|null
      */
     public function getProductCommissions()
     {
@@ -547,7 +547,7 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets product_commissions
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductCommission[]|null $product_commissions product_commissions
+     * @param \Keap\Sdk\Core\Model\ProductCommission[]|null $product_commissions product_commissions
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets subscription_commissions
      *
-     * @return \Com\Keap\Sdk\Core\Model\SubscriptionCommission[]|null
+     * @return \Keap\Sdk\Core\Model\SubscriptionCommission[]|null
      */
     public function getSubscriptionCommissions()
     {
@@ -574,7 +574,7 @@ class AffiliateProgramV2 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets subscription_commissions
      *
-     * @param \Com\Keap\Sdk\Core\Model\SubscriptionCommission[]|null $subscription_commissions subscription_commissions
+     * @param \Keap\Sdk\Core\Model\SubscriptionCommission[]|null $subscription_commissions subscription_commissions
      *
      * @return self
      */

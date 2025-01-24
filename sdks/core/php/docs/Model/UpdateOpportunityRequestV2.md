@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_id** | **string** |  | [optional]
 **contact_id** | **string** |  | [optional]
-**custom_fields** | [**\Com\Keap\Sdk\Core\Model\CustomField[]**](CustomField.md) |  | [optional]
+**custom_fields** | [**\Keap\Sdk\Core\Model\CustomField[]**](CustomField.md) |  | [optional]
 **estimated_close_time** | **string** |  | [optional]
 **include_in_forecast** | **bool** |  | [optional]
 **next_action_notes** | **string** |  | [optional]

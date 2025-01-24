@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * Throwable Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cause' => '\Com\Keap\Sdk\Core\Model\Throwable',
+        'cause' => '\Keap\Sdk\Core\Model\Throwable',
         'localized_message' => 'string',
         'message' => 'string',
-        'stack_trace' => '\Com\Keap\Sdk\Core\Model\StackTraceElement[]',
-        'suppressed' => '\Com\Keap\Sdk\Core\Model\Throwable[]'
+        'stack_trace' => '\Keap\Sdk\Core\Model\StackTraceElement[]',
+        'suppressed' => '\Keap\Sdk\Core\Model\Throwable[]'
     ];
 
     /**
@@ -320,7 +320,7 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cause
      *
-     * @return \Com\Keap\Sdk\Core\Model\Throwable|null
+     * @return \Keap\Sdk\Core\Model\Throwable|null
      */
     public function getCause()
     {
@@ -330,7 +330,7 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cause
      *
-     * @param \Com\Keap\Sdk\Core\Model\Throwable|null $cause cause
+     * @param \Keap\Sdk\Core\Model\Throwable|null $cause cause
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets stack_trace
      *
-     * @return \Com\Keap\Sdk\Core\Model\StackTraceElement[]|null
+     * @return \Keap\Sdk\Core\Model\StackTraceElement[]|null
      */
     public function getStackTrace()
     {
@@ -411,7 +411,7 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stack_trace
      *
-     * @param \Com\Keap\Sdk\Core\Model\StackTraceElement[]|null $stack_trace stack_trace
+     * @param \Keap\Sdk\Core\Model\StackTraceElement[]|null $stack_trace stack_trace
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets suppressed
      *
-     * @return \Com\Keap\Sdk\Core\Model\Throwable[]|null
+     * @return \Keap\Sdk\Core\Model\Throwable[]|null
      */
     public function getSuppressed()
     {
@@ -438,7 +438,7 @@ class Throwable implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets suppressed
      *
-     * @param \Com\Keap\Sdk\Core\Model\Throwable[]|null $suppressed suppressed
+     * @param \Keap\Sdk\Core\Model\Throwable[]|null $suppressed suppressed
      *
      * @return self
      */

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**criteria** | [**\Com\Keap\Sdk\Core\Model\DiscountCriteria[]**](DiscountCriteria.md) |  | [optional]
+**criteria** | [**\Keap\Sdk\Core\Model\DiscountCriteria[]**](DiscountCriteria.md) |  | [optional]
 **description** | **string** |  | [optional]
 **discount_type** | **string** |  |
 **discount_value** | **float** |  |

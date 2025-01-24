@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * PipelineOutcomeLabelListResponse Class Doc Comment
  *
  * @category Class
  * @description Represents a response containing a list of pipeline outcome labels.
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PipelineOutcomeLabelListResponse implements ModelInterface, ArrayAccess, \
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'outcome_labels' => '\Com\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]'
+        'outcome_labels' => '\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class PipelineOutcomeLabelListResponse implements ModelInterface, ArrayAccess, \
     /**
      * Gets outcome_labels
      *
-     * @return \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]|null
+     * @return \Keap\Sdk\Core\Model\PipelineOutcomeLabel[]|null
      */
     public function getOutcomeLabels()
     {
@@ -337,7 +337,7 @@ class PipelineOutcomeLabelListResponse implements ModelInterface, ArrayAccess, \
     /**
      * Sets outcome_labels
      *
-     * @param \Com\Keap\Sdk\Core\Model\PipelineOutcomeLabel[]|null $outcome_labels The list of outcome labels.
+     * @param \Keap\Sdk\Core\Model\PipelineOutcomeLabel[]|null $outcome_labels The list of outcome labels.
      *
      * @return self
      */

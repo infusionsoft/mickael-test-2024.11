@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListContactLinkTypesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListContactLinkTypesResponse implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contact_link_types' => '\Com\Keap\Sdk\Core\Model\ContactLinkType[]',
+        'contact_link_types' => '\Keap\Sdk\Core\Model\ContactLinkType[]',
         'next_page_token' => 'string'
     ];
 
@@ -299,7 +299,7 @@ class ListContactLinkTypesResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets contact_link_types
      *
-     * @return \Com\Keap\Sdk\Core\Model\ContactLinkType[]|null
+     * @return \Keap\Sdk\Core\Model\ContactLinkType[]|null
      */
     public function getContactLinkTypes()
     {
@@ -309,7 +309,7 @@ class ListContactLinkTypesResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets contact_link_types
      *
-     * @param \Com\Keap\Sdk\Core\Model\ContactLinkType[]|null $contact_link_types contact_link_types
+     * @param \Keap\Sdk\Core\Model\ContactLinkType[]|null $contact_link_types contact_link_types
      *
      * @return self
      */

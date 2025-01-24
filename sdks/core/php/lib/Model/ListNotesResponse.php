@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListNotesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListNotesResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'notes' => '\Com\Keap\Sdk\Core\Model\Note[]'
+        'notes' => '\Keap\Sdk\Core\Model\Note[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListNotesResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets notes
      *
-     * @return \Com\Keap\Sdk\Core\Model\Note[]|null
+     * @return \Keap\Sdk\Core\Model\Note[]|null
      */
     public function getNotes()
     {
@@ -336,7 +336,7 @@ class ListNotesResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets notes
      *
-     * @param \Com\Keap\Sdk\Core\Model\Note[]|null $notes notes
+     * @param \Keap\Sdk\Core\Model\Note[]|null $notes notes
      *
      * @return self
      */

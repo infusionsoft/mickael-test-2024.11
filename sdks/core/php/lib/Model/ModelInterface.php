@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core\Model
+ * @package  Keap\Sdk\Core\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Com\Keap\Sdk\Core\Model
+ * @package Keap\Sdk\Core\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

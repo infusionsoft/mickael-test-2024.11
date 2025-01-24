@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * RestPaymentMethod Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class RestPaymentMethod implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'card_info' => '\Com\Keap\Sdk\Core\Model\CardInfo',
+        'card_info' => '\Keap\Sdk\Core\Model\CardInfo',
         'date_created' => '\DateTime',
         'id' => 'string',
         'payment_method_type' => 'string',
@@ -327,7 +327,7 @@ class RestPaymentMethod implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets card_info
      *
-     * @return \Com\Keap\Sdk\Core\Model\CardInfo|null
+     * @return \Keap\Sdk\Core\Model\CardInfo|null
      */
     public function getCardInfo()
     {
@@ -337,7 +337,7 @@ class RestPaymentMethod implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets card_info
      *
-     * @param \Com\Keap\Sdk\Core\Model\CardInfo|null $card_info card_info
+     * @param \Keap\Sdk\Core\Model\CardInfo|null $card_info card_info
      *
      * @return self
      */

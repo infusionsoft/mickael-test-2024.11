@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ListProductCategoriesResponse Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ListProductCategoriesResponse implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'next_page_token' => 'string',
-        'product_categories' => '\Com\Keap\Sdk\Core\Model\ProductCategory[]'
+        'product_categories' => '\Keap\Sdk\Core\Model\ProductCategory[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ListProductCategoriesResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets product_categories
      *
-     * @return \Com\Keap\Sdk\Core\Model\ProductCategory[]|null
+     * @return \Keap\Sdk\Core\Model\ProductCategory[]|null
      */
     public function getProductCategories()
     {
@@ -336,7 +336,7 @@ class ListProductCategoriesResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets product_categories
      *
-     * @param \Com\Keap\Sdk\Core\Model\ProductCategory[]|null $product_categories product_categories
+     * @param \Keap\Sdk\Core\Model\ProductCategory[]|null $product_categories product_categories
      *
      * @return self
      */

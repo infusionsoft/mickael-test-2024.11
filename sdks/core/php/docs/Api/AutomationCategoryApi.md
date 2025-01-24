@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\AutomationCategoryApi
+# Keap\Sdk\Core\AutomationCategoryApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createCategoryUsingPOST()`
 
 ```php
-createCategoryUsingPOST($create_automation_category_request): \Com\Keap\Sdk\Core\Model\AutomationCategory
+createCategoryUsingPOST($create_automation_category_request): \Keap\Sdk\Core\Model\AutomationCategory
 ```
 
 Create automation category
@@ -27,12 +27,12 @@ Creates a single automation category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationCategoryApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_automation_category_request = new \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest(); // \Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest | createAutomationCategoryRequest
+$create_automation_category_request = new \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest(); // \Keap\Sdk\Core\Model\CreateAutomationCategoryRequest | createAutomationCategoryRequest
 
 try {
     $result = $apiInstance->createCategoryUsingPOST($create_automation_category_request);
@@ -46,11 +46,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_automation_category_request** | [**\Com\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest**](../Model/CreateAutomationCategoryRequest.md)| createAutomationCategoryRequest | |
+| **create_automation_category_request** | [**\Keap\Sdk\Core\Model\CreateAutomationCategoryRequest**](../Model/CreateAutomationCategoryRequest.md)| createAutomationCategoryRequest | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\AutomationCategory**](../Model/AutomationCategory.md)
+[**\Keap\Sdk\Core\Model\AutomationCategory**](../Model/AutomationCategory.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Deletes one or more automation categories based on the request parameters
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationCategoryApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -122,7 +122,7 @@ No authorization required
 ## `listCategoriesUsingGET()`
 
 ```php
-listCategoriesUsingGET(): \Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse
+listCategoriesUsingGET(): \Keap\Sdk\Core\Model\ListAutomationCategoryResponse
 ```
 
 List automation categories
@@ -136,7 +136,7 @@ Retrieves a list of automation categories
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationCategoryApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -156,7 +156,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\ListAutomationCategoryResponse**](../Model/ListAutomationCategoryResponse.md)
+[**\Keap\Sdk\Core\Model\ListAutomationCategoryResponse**](../Model/ListAutomationCategoryResponse.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 ## `saveCategoryUsingPUT()`
 
 ```php
-saveCategoryUsingPUT($save_automation_category_request): \Com\Keap\Sdk\Core\Model\AutomationCategory
+saveCategoryUsingPUT($save_automation_category_request): \Keap\Sdk\Core\Model\AutomationCategory
 ```
 
 Save automation category
@@ -188,12 +188,12 @@ Creates or updates a single automation category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\AutomationCategoryApi(
+$apiInstance = new Keap\Sdk\Core\Api\AutomationCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$save_automation_category_request = new \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest(); // \Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest | saveAutomationCategoryRequest
+$save_automation_category_request = new \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest(); // \Keap\Sdk\Core\Model\SaveAutomationCategoryRequest | saveAutomationCategoryRequest
 
 try {
     $result = $apiInstance->saveCategoryUsingPUT($save_automation_category_request);
@@ -207,11 +207,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **save_automation_category_request** | [**\Com\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest**](../Model/SaveAutomationCategoryRequest.md)| saveAutomationCategoryRequest | |
+| **save_automation_category_request** | [**\Keap\Sdk\Core\Model\SaveAutomationCategoryRequest**](../Model/SaveAutomationCategoryRequest.md)| saveAutomationCategoryRequest | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\AutomationCategory**](../Model/AutomationCategory.md)
+[**\Keap\Sdk\Core\Model\AutomationCategory**](../Model/AutomationCategory.md)
 
 ### Authorization
 

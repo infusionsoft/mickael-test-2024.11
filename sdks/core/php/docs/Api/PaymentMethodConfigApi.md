@@ -1,4 +1,4 @@
-# Com\Keap\Sdk\Core\PaymentMethodConfigApi
+# Keap\Sdk\Core\PaymentMethodConfigApi
 
 All URIs are relative to https://api.keap.com/crm/rest, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.keap.com/crm/rest, except if the operation 
 ## `createPaymentMethodConfigUsingPOST()`
 
 ```php
-createPaymentMethodConfigUsingPOST($create_payment_method_config_request): \Com\Keap\Sdk\Core\Model\PaymentMethodConfig
+createPaymentMethodConfigUsingPOST($create_payment_method_config_request): \Keap\Sdk\Core\Model\PaymentMethodConfig
 ```
 
 Create Payment Method Configuration
@@ -24,12 +24,12 @@ Creates configuration details for rendering payment method components
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Com\Keap\Sdk\Core\Api\PaymentMethodConfigApi(
+$apiInstance = new Keap\Sdk\Core\Api\PaymentMethodConfigApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_payment_method_config_request = new \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest(); // \Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest | request
+$create_payment_method_config_request = new \Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest(); // \Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest | request
 
 try {
     $result = $apiInstance->createPaymentMethodConfigUsingPOST($create_payment_method_config_request);
@@ -43,11 +43,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_payment_method_config_request** | [**\Com\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest**](../Model/CreatePaymentMethodConfigRequest.md)| request | |
+| **create_payment_method_config_request** | [**\Keap\Sdk\Core\Model\CreatePaymentMethodConfigRequest**](../Model/CreatePaymentMethodConfigRequest.md)| request | |
 
 ### Return type
 
-[**\Com\Keap\Sdk\Core\Model\PaymentMethodConfig**](../Model/PaymentMethodConfig.md)
+[**\Keap\Sdk\Core\Model\PaymentMethodConfig**](../Model/PaymentMethodConfig.md)
 
 ### Authorization
 

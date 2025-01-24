@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Model;
+namespace Keap\Sdk\Core\Model;
 
 use \ArrayAccess;
-use \Com\Keap\Sdk\Core\ObjectSerializer;
+use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * ProductDiscount Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ProductDiscount implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'apply_to_commissions' => 'bool',
-        'criteria' => '\Com\Keap\Sdk\Core\Model\DiscountCriteria[]',
+        'criteria' => '\Keap\Sdk\Core\Model\DiscountCriteria[]',
         'description' => 'string',
         'discount_id' => 'string',
         'discount_type' => 'string',
@@ -392,7 +392,7 @@ class ProductDiscount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets criteria
      *
-     * @return \Com\Keap\Sdk\Core\Model\DiscountCriteria[]|null
+     * @return \Keap\Sdk\Core\Model\DiscountCriteria[]|null
      */
     public function getCriteria()
     {
@@ -402,7 +402,7 @@ class ProductDiscount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets criteria
      *
-     * @param \Com\Keap\Sdk\Core\Model\DiscountCriteria[]|null $criteria criteria
+     * @param \Keap\Sdk\Core\Model\DiscountCriteria[]|null $criteria criteria
      *
      * @return self
      */

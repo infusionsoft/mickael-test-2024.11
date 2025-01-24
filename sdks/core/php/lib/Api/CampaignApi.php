@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Com\Keap\Sdk\Core\Api;
+namespace Keap\Sdk\Core\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Com\Keap\Sdk\Core\ApiException;
-use Com\Keap\Sdk\Core\Configuration;
-use Com\Keap\Sdk\Core\HeaderSelector;
-use Com\Keap\Sdk\Core\ObjectSerializer;
+use Keap\Sdk\Core\ApiException;
+use Keap\Sdk\Core\Configuration;
+use Keap\Sdk\Core\HeaderSelector;
+use Keap\Sdk\Core\ObjectSerializer;
 
 /**
  * CampaignApi Class Doc Comment
  *
  * @category Class
- * @package  Com\Keap\Sdk\Core
+ * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,12 +138,12 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addContactsToCampaignSequenceUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\AddContactsToSequenceResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function addContactsToCampaignSequenceUsingPOST1($campaign_id, $sequence_id, $add_contacts_to_sequence_request, string $contentType = self::contentTypes['addContactsToCampaignSequenceUsingPOST1'][0])
     {
@@ -158,12 +158,12 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addContactsToCampaignSequenceUsingPOST1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\AddContactsToSequenceResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function addContactsToCampaignSequenceUsingPOST1WithHttpInfo($campaign_id, $sequence_id, $add_contacts_to_sequence_request, string $contentType = self::contentTypes['addContactsToCampaignSequenceUsingPOST1'][0])
     {
@@ -194,11 +194,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\AddContactsToSequenceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\AddContactsToSequenceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -216,16 +216,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\AddContactsToSequenceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -243,16 +243,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -270,7 +270,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -289,7 +289,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse';
+            $returnType = '\Keap\Sdk\Core\Model\AddContactsToSequenceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -322,7 +322,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse',
+                        '\Keap\Sdk\Core\Model\AddContactsToSequenceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -330,7 +330,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class CampaignApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -355,7 +355,7 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addContactsToCampaignSequenceUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -378,7 +378,7 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addContactsToCampaignSequenceUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -386,7 +386,7 @@ class CampaignApi
      */
     public function addContactsToCampaignSequenceUsingPOST1AsyncWithHttpInfo($campaign_id, $sequence_id, $add_contacts_to_sequence_request, string $contentType = self::contentTypes['addContactsToCampaignSequenceUsingPOST1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\AddContactsToSequenceResponse';
+        $returnType = '\Keap\Sdk\Core\Model\AddContactsToSequenceResponse';
         $request = $this->addContactsToCampaignSequenceUsingPOST1Request($campaign_id, $sequence_id, $add_contacts_to_sequence_request, $contentType);
 
         return $this->client
@@ -430,7 +430,7 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\AddContactsToSequenceRequest $add_contacts_to_sequence_request addContactsToSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addContactsToCampaignSequenceUsingPOST1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -556,9 +556,9 @@ class CampaignApi
      * @param  string $campaign_id campaign_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\Campaign|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\Campaign|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function getCampaignUsingGET1($campaign_id, string $contentType = self::contentTypes['getCampaignUsingGET1'][0])
     {
@@ -574,9 +574,9 @@ class CampaignApi
      * @param  string $campaign_id campaign_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\Campaign|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\Campaign|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignUsingGET1WithHttpInfo($campaign_id, string $contentType = self::contentTypes['getCampaignUsingGET1'][0])
     {
@@ -607,11 +607,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\Campaign' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Campaign' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Campaign' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Campaign' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -629,16 +629,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Campaign', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Campaign', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -656,16 +656,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -683,16 +683,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -710,7 +710,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -729,7 +729,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\Campaign';
+            $returnType = '\Keap\Sdk\Core\Model\Campaign';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -762,7 +762,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Campaign',
+                        '\Keap\Sdk\Core\Model\Campaign',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class CampaignApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -830,7 +830,7 @@ class CampaignApi
      */
     public function getCampaignUsingGET1AsyncWithHttpInfo($campaign_id, string $contentType = self::contentTypes['getCampaignUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\Campaign';
+        $returnType = '\Keap\Sdk\Core\Model\Campaign';
         $request = $this->getCampaignUsingGET1Request($campaign_id, $contentType);
 
         return $this->client
@@ -973,9 +973,9 @@ class CampaignApi
      * @param  bool $stats stats (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCampaignsUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\ListCampaignsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\ListCampaignsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function listCampaignsUsingGET1($filter = null, $order_by = null, $page_size = null, $page_token = null, $stats = null, string $contentType = self::contentTypes['listCampaignsUsingGET1'][0])
     {
@@ -995,9 +995,9 @@ class CampaignApi
      * @param  bool $stats (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCampaignsUsingGET1'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\ListCampaignsResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\ListCampaignsResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCampaignsUsingGET1WithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, $stats = null, string $contentType = self::contentTypes['listCampaignsUsingGET1'][0])
     {
@@ -1028,11 +1028,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\ListCampaignsResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\ListCampaignsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\ListCampaignsResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\ListCampaignsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1050,16 +1050,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\ListCampaignsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\ListCampaignsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1077,16 +1077,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1104,16 +1104,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1131,7 +1131,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1150,7 +1150,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\ListCampaignsResponse';
+            $returnType = '\Keap\Sdk\Core\Model\ListCampaignsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1183,7 +1183,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\ListCampaignsResponse',
+                        '\Keap\Sdk\Core\Model\ListCampaignsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1191,7 +1191,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1199,7 +1199,7 @@ class CampaignApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1207,7 +1207,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1259,7 +1259,7 @@ class CampaignApi
      */
     public function listCampaignsUsingGET1AsyncWithHttpInfo($filter = null, $order_by = null, $page_size = null, $page_token = null, $stats = null, string $contentType = self::contentTypes['listCampaignsUsingGET1'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\ListCampaignsResponse';
+        $returnType = '\Keap\Sdk\Core\Model\ListCampaignsResponse';
         $request = $this->listCampaignsUsingGET1Request($filter, $order_by, $page_size, $page_token, $stats, $contentType);
 
         return $this->client
@@ -1442,12 +1442,12 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error
+     * @return \Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error
      */
     public function removeContactsFromCampaignSequenceUsingPOST($campaign_id, $sequence_id, $remove_contacts_from_sequence_request, string $contentType = self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'][0])
     {
@@ -1462,12 +1462,12 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'] to see the possible values for this operation
      *
-     * @throws \Com\Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Keap\Sdk\Core\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse|\Com\Keap\Sdk\Core\Model\Error|\Com\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse|\Keap\Sdk\Core\Model\Error|\Keap\Sdk\Core\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function removeContactsFromCampaignSequenceUsingPOSTWithHttpInfo($campaign_id, $sequence_id, $remove_contacts_from_sequence_request, string $contentType = self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'][0])
     {
@@ -1498,11 +1498,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1520,16 +1520,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1547,16 +1547,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Com\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
+                    if ('\Keap\Sdk\Core\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Com\Keap\Sdk\Core\Model\Error' !== 'string') {
+                        if ('\Keap\Sdk\Core\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1574,7 +1574,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Com\Keap\Sdk\Core\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Keap\Sdk\Core\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1593,7 +1593,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse';
+            $returnType = '\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1626,7 +1626,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse',
+                        '\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1634,7 +1634,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1642,7 +1642,7 @@ class CampaignApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Com\Keap\Sdk\Core\Model\Error',
+                        '\Keap\Sdk\Core\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1659,7 +1659,7 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1682,7 +1682,7 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1690,7 +1690,7 @@ class CampaignApi
      */
     public function removeContactsFromCampaignSequenceUsingPOSTAsyncWithHttpInfo($campaign_id, $sequence_id, $remove_contacts_from_sequence_request, string $contentType = self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'][0])
     {
-        $returnType = '\Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse';
+        $returnType = '\Keap\Sdk\Core\Model\RemoveContactsFromSequenceResponse';
         $request = $this->removeContactsFromCampaignSequenceUsingPOSTRequest($campaign_id, $sequence_id, $remove_contacts_from_sequence_request, $contentType);
 
         return $this->client
@@ -1734,7 +1734,7 @@ class CampaignApi
      *
      * @param  string $campaign_id campaign_id (required)
      * @param  string $sequence_id sequence_id (required)
-     * @param  \Com\Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
+     * @param  \Keap\Sdk\Core\Model\RemoveContactsFromSequenceRequest $remove_contacts_from_sequence_request removeContactsFromSequenceRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeContactsFromCampaignSequenceUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

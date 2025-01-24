@@ -100,7 +100,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'core-service-core-php/0.0.112';
+    protected $userAgent = 'core-service-core-php/0.0.113';
 
     /**
      * Debug switch (default set to false)
@@ -433,7 +433,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 2.70.0.768375' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.0.112' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.0.113' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

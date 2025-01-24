@@ -16,7 +16,7 @@ import superagent from "superagent";
 
 /**
 * @module keap.sdk.core/ApiClient
-* @version 0.0.112
+* @version 0.0.113
 */
 
 /**
@@ -54,7 +54,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'core-service-core-javascript/0.0.112'
+            'User-Agent': 'core-service-core-javascript/0.0.113'
         };
 
         /**

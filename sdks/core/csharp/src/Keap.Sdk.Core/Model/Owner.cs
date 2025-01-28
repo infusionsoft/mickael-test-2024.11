@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Keap.Sdk.Core.Client.OpenAPIDateConverter;
 namespace Keap.Sdk.Core.Model
 {
     /// <summary>
-    /// Represents an owner entity in the system. Extends the BaseModel class.
+    /// Represents an owner entity in the system.
     /// </summary>
     [DataContract(Name = "Owner")]
     public partial class Owner : IValidatableObject

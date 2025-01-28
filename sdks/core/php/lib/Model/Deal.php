@@ -60,9 +60,9 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'value' => '\Keap\Sdk\Core\Model\DealAllOfValue',
+        'value' => '\Keap\Sdk\Core\Model\DealValue',
         'contacts' => '\Keap\Sdk\Core\Model\DealContact[]',
-        'stage' => '\Keap\Sdk\Core\Model\DealAllOfStage',
+        'stage' => '\Keap\Sdk\Core\Model\DealStage',
         'stage_assignment_time' => '\DateTime',
         'owners' => '\Keap\Sdk\Core\Model\Owner[]',
         'owner_id' => 'string',
@@ -71,7 +71,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'string',
         'estimated_close_time' => '\DateTime',
         'closed_time' => '\DateTime',
-        'custom_fields' => '\Keap\Sdk\Core\Model\DealAllOfCustomFields'
+        'custom_fields' => 'array'
     ];
 
     /**
@@ -471,7 +471,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets value
      *
-     * @return \Keap\Sdk\Core\Model\DealAllOfValue
+     * @return \Keap\Sdk\Core\Model\DealValue
      */
     public function getValue()
     {
@@ -481,7 +481,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param \Keap\Sdk\Core\Model\DealAllOfValue $value value
+     * @param \Keap\Sdk\Core\Model\DealValue $value value
      *
      * @return self
      */
@@ -525,7 +525,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets stage
      *
-     * @return \Keap\Sdk\Core\Model\DealAllOfStage
+     * @return \Keap\Sdk\Core\Model\DealStage
      */
     public function getStage()
     {
@@ -535,7 +535,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stage
      *
-     * @param \Keap\Sdk\Core\Model\DealAllOfStage $stage stage
+     * @param \Keap\Sdk\Core\Model\DealStage $stage stage
      *
      * @return self
      */
@@ -796,7 +796,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_fields
      *
-     * @return \Keap\Sdk\Core\Model\DealAllOfCustomFields|null
+     * @return array|null
      */
     public function getCustomFields()
     {
@@ -806,7 +806,7 @@ class Deal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_fields
      *
-     * @param \Keap\Sdk\Core\Model\DealAllOfCustomFields|null $custom_fields custom_fields
+     * @param array|null $custom_fields The custom fields associated with the deal. This field is optional.
      *
      * @return self
      */

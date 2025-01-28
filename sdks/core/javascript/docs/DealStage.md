@@ -1,4 +1,4 @@
-# KeapCoreServiceCoreSdk.DealAllOfStage
+# KeapCoreServiceCoreSdk.DealStage
 
 ## Properties
 

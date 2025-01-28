@@ -15,19 +15,19 @@ import ApiClient from '../ApiClient';
 import Stage from './Stage';
 
 /**
- * The DealAllOfStage model module.
- * @module keap.sdk.core/model/DealAllOfStage
+ * The DealStage model module.
+ * @module keap.sdk.core/model/DealStage
  */
-class DealAllOfStage {
+class DealStage {
     /**
-     * Constructs a new <code>DealAllOfStage</code>.
+     * Constructs a new <code>DealStage</code>.
      * The stage of the deal. This field is required and must be valid.
-     * @alias module:keap.sdk.core/model/DealAllOfStage
+     * @alias module:keap.sdk.core/model/DealStage
      * @implements module:keap.sdk.core/model/Stage
      */
     constructor() { 
         Stage.initialize(this);
-        DealAllOfStage.initialize(this);
+        DealStage.initialize(this);
     }
 
     /**
@@ -39,15 +39,15 @@ class DealAllOfStage {
     }
 
     /**
-     * Constructs a <code>DealAllOfStage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DealStage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:keap.sdk.core/model/DealAllOfStage} obj Optional instance to populate.
-     * @return {module:keap.sdk.core/model/DealAllOfStage} The populated <code>DealAllOfStage</code> instance.
+     * @param {module:keap.sdk.core/model/DealStage} obj Optional instance to populate.
+     * @return {module:keap.sdk.core/model/DealStage} The populated <code>DealStage</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new DealAllOfStage();
+            obj = obj || new DealStage();
             Stage.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -64,9 +64,9 @@ class DealAllOfStage {
     }
 
     /**
-     * Validates the JSON data with respect to <code>DealAllOfStage</code>.
+     * Validates the JSON data with respect to <code>DealStage</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DealAllOfStage</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DealStage</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -94,19 +94,19 @@ class DealAllOfStage {
  * Unique identifier for the model.
  * @member {String} id
  */
-DealAllOfStage.prototype['id'] = undefined;
+DealStage.prototype['id'] = undefined;
 
 /**
  * The name of the stage.
  * @member {String} name
  */
-DealAllOfStage.prototype['name'] = undefined;
+DealStage.prototype['name'] = undefined;
 
 /**
  * The ID of the pipeline.
  * @member {String} pipeline_id
  */
-DealAllOfStage.prototype['pipeline_id'] = undefined;
+DealStage.prototype['pipeline_id'] = undefined;
 
 
 // Implement Stage interface:
@@ -129,4 +129,4 @@ Stage.prototype['pipeline_id'] = undefined;
 
 
 
-export default DealAllOfStage;
+export default DealStage;

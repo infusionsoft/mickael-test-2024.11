@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.121</version>
+  <version>0.0.122</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.121"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.122"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.121.jar`
+- `target/core-service-core-java-sdk-0.0.122.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -341,7 +341,6 @@ Class | Method | HTTP request | Description
  - [BaseListResponsePipeline](docs/BaseListResponsePipeline.md)
  - [BaseListResponsePipelineSummary](docs/BaseListResponsePipelineSummary.md)
  - [BaseListResponseStage](docs/BaseListResponseStage.md)
- - [BaseModel](docs/BaseModel.md)
  - [BasicCompany](docs/BasicCompany.md)
  - [BasicContact](docs/BasicContact.md)
  - [BasicUser](docs/BasicUser.md)
@@ -411,13 +410,12 @@ Class | Method | HTTP request | Description
  - [CustomFieldOption](docs/CustomFieldOption.md)
  - [CustomFieldValue](docs/CustomFieldValue.md)
  - [Deal](docs/Deal.md)
- - [DealAllOfCustomFields](docs/DealAllOfCustomFields.md)
- - [DealAllOfStage](docs/DealAllOfStage.md)
- - [DealAllOfValue](docs/DealAllOfValue.md)
  - [DealContact](docs/DealContact.md)
  - [DealNote](docs/DealNote.md)
  - [DealNoteListResponse](docs/DealNoteListResponse.md)
+ - [DealStage](docs/DealStage.md)
  - [DealStatus](docs/DealStatus.md)
+ - [DealValue](docs/DealValue.md)
  - [DefaultCommission](docs/DefaultCommission.md)
  - [DeleteEmailsRequest](docs/DeleteEmailsRequest.md)
  - [DeleteEmailsResponse](docs/DeleteEmailsResponse.md)

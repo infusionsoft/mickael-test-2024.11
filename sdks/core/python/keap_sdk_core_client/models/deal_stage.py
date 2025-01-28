@@ -17,17 +17,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class DealAllOfCustomFields(BaseModel):
+class DealStage(BaseModel):
     """
-    The custom fields associated with the deal. This field is optional.
+    The stage of the deal. This field is required and must be valid.
     """ # noqa: E501
+    id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the model.")
+    name: Optional[StrictStr] = Field(default=None, description="The name of the stage.")
+    pipeline_id: Optional[StrictStr] = Field(default=None, description="The ID of the pipeline.")
     additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = []
+    __properties: ClassVar[List[str]] = ["id", "name", "pipeline_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -47,7 +50,7 @@ class DealAllOfCustomFields(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of DealAllOfCustomFields from a JSON string"""
+        """Create an instance of DealStage from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -79,7 +82,7 @@ class DealAllOfCustomFields(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of DealAllOfCustomFields from a dict"""
+        """Create an instance of DealStage from a dict"""
         if obj is None:
             return None
 
@@ -87,6 +90,9 @@ class DealAllOfCustomFields(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "id": obj.get("id"),
+            "name": obj.get("name"),
+            "pipeline_id": obj.get("pipeline_id")
         })
         # store additional fields in additional_properties
         for _key in obj.keys():

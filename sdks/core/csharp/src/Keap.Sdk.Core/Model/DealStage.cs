@@ -27,45 +27,44 @@ using OpenAPIDateConverter = Keap.Sdk.Core.Client.OpenAPIDateConverter;
 namespace Keap.Sdk.Core.Model
 {
     /// <summary>
-    /// The monetary value of the deal. This field is required and must be valid.
+    /// The stage of the deal. This field is required and must be valid.
     /// </summary>
-    [DataContract(Name = "Deal_allOf_value")]
-    public partial class DealAllOfValue : IValidatableObject
+    [DataContract(Name = "Deal_stage")]
+    public partial class DealStage : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DealAllOfValue" /> class.
+        /// Initializes a new instance of the <see cref="DealStage" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected DealAllOfValue() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DealAllOfValue" /> class.
-        /// </summary>
-        /// <param name="amount">The amount of money. This field is required. (required).</param>
-        /// <param name="currency">The currency of the money. This field is required. (required).</param>
-        public DealAllOfValue(double amount = default(double), string currency = default(string))
+        /// <param name="id">Unique identifier for the model..</param>
+        /// <param name="name">The name of the stage..</param>
+        /// <param name="pipelineId">The ID of the pipeline..</param>
+        public DealStage(string id = default(string), string name = default(string), string pipelineId = default(string))
         {
-            this.Amount = amount;
-            // to ensure "currency" is required (not null)
-            if (currency == null)
-            {
-                throw new ArgumentNullException("currency is a required property for DealAllOfValue and cannot be null");
-            }
-            this.Currency = currency;
+            this.Id = id;
+            this.Name = name;
+            this.PipelineId = pipelineId;
         }
 
         /// <summary>
-        /// The amount of money. This field is required.
+        /// Unique identifier for the model.
         /// </summary>
-        /// <value>The amount of money. This field is required.</value>
-        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
-        public double Amount { get; set; }
+        /// <value>Unique identifier for the model.</value>
+        [DataMember(Name = "id", EmitDefaultValue = false)]
+        public string Id { get; set; }
 
         /// <summary>
-        /// The currency of the money. This field is required.
+        /// The name of the stage.
         /// </summary>
-        /// <value>The currency of the money. This field is required.</value>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
-        public string Currency { get; set; }
+        /// <value>The name of the stage.</value>
+        [DataMember(Name = "name", EmitDefaultValue = false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// The ID of the pipeline.
+        /// </summary>
+        /// <value>The ID of the pipeline.</value>
+        [DataMember(Name = "pipeline_id", EmitDefaultValue = false)]
+        public string PipelineId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -74,9 +73,10 @@ namespace Keap.Sdk.Core.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class DealAllOfValue {\n");
-            sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("class DealStage {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  PipelineId: ").Append(PipelineId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

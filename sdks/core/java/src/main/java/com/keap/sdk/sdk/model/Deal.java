@@ -21,16 +21,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.keap.sdk.sdk.model.BaseModel;
-import com.keap.sdk.sdk.model.DealAllOfCustomFields;
-import com.keap.sdk.sdk.model.DealAllOfStage;
-import com.keap.sdk.sdk.model.DealAllOfValue;
 import com.keap.sdk.sdk.model.DealContact;
+import com.keap.sdk.sdk.model.DealStage;
+import com.keap.sdk.sdk.model.DealValue;
+import com.keap.sdk.sdk.model.Owner;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.validation.constraints.*;
@@ -68,13 +68,13 @@ public class Deal implements Serializable {
   @jakarta.annotation.Nonnull  private String name;
 
   public static final String JSON_PROPERTY_VALUE = "value";
-  @jakarta.annotation.Nonnull  private DealAllOfValue value;
+  @jakarta.annotation.Nonnull  private DealValue value;
 
   public static final String JSON_PROPERTY_CONTACTS = "contacts";
   @jakarta.annotation.Nonnull  private List<@Valid DealContact> contacts = new ArrayList<>();
 
   public static final String JSON_PROPERTY_STAGE = "stage";
-  @jakarta.annotation.Nonnull  private DealAllOfStage stage;
+  @jakarta.annotation.Nonnull  private DealStage stage;
 
   public static final String JSON_PROPERTY_STAGE_ASSIGNMENT_TIME = "stage_assignment_time";
   @jakarta.annotation.Nonnull  private ZonedDateTime stageAssignmentTime;
@@ -101,7 +101,7 @@ public class Deal implements Serializable {
   @jakarta.annotation.Nullable  private ZonedDateTime closedTime;
 
   public static final String JSON_PROPERTY_CUSTOM_FIELDS = "custom_fields";
-  @jakarta.annotation.Nullable  private DealAllOfCustomFields customFields;
+  @jakarta.annotation.Nullable  private Map customFields;
 
   public Deal() { 
   }
@@ -155,7 +155,7 @@ public class Deal implements Serializable {
   }
 
 
-  public Deal value(@jakarta.annotation.Nonnull DealAllOfValue value) {
+  public Deal value(@jakarta.annotation.Nonnull DealValue value) {
     this.value = value;
     return this;
   }
@@ -169,14 +169,14 @@ public class Deal implements Serializable {
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public DealAllOfValue getValue() {
+  public DealValue getValue() {
     return value;
   }
 
 
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setValue(@jakarta.annotation.Nonnull DealAllOfValue value) {
+  public void setValue(@jakarta.annotation.Nonnull DealValue value) {
     this.value = value;
   }
 
@@ -215,7 +215,7 @@ public class Deal implements Serializable {
   }
 
 
-  public Deal stage(@jakarta.annotation.Nonnull DealAllOfStage stage) {
+  public Deal stage(@jakarta.annotation.Nonnull DealStage stage) {
     this.stage = stage;
     return this;
   }
@@ -229,14 +229,14 @@ public class Deal implements Serializable {
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   @JsonProperty(JSON_PROPERTY_STAGE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public DealAllOfStage getStage() {
+  public DealStage getStage() {
     return stage;
   }
 
 
   @JsonProperty(JSON_PROPERTY_STAGE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setStage(@jakarta.annotation.Nonnull DealAllOfStage stage) {
+  public void setStage(@jakarta.annotation.Nonnull DealStage stage) {
     this.stage = stage;
   }
 
@@ -272,7 +272,7 @@ public class Deal implements Serializable {
     return this;
   }
 
-  public Deal addOwnersItem(BaseModel ownersItem) {
+  public Deal addOwnersItem(Owner ownersItem) {
     if (this.owners == null) {
       this.owners = new ArrayList<>();
     }
@@ -457,27 +457,27 @@ public class Deal implements Serializable {
   }
 
 
-  public Deal customFields(@jakarta.annotation.Nullable DealAllOfCustomFields customFields) {
+  public Deal customFields(@jakarta.annotation.Nullable Map customFields) {
     this.customFields = customFields;
     return this;
   }
 
   /**
-   * Get customFields
+   * The custom fields associated with the deal. This field is optional.
    * @return customFields
    */
   @jakarta.annotation.Nullable  @Valid
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The custom fields associated with the deal. This field is optional.")
   @JsonProperty(JSON_PROPERTY_CUSTOM_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public DealAllOfCustomFields getCustomFields() {
+  public Map getCustomFields() {
     return customFields;
   }
 
 
   @JsonProperty(JSON_PROPERTY_CUSTOM_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomFields(@jakarta.annotation.Nullable DealAllOfCustomFields customFields) {
+  public void setCustomFields(@jakarta.annotation.Nullable Map customFields) {
     this.customFields = customFields;
   }
 
@@ -567,7 +567,7 @@ public class Deal implements Serializable {
               this.instance.name = name;
           return this;
         }
-            public Deal.Builder value(DealAllOfValue value) {
+            public Deal.Builder value(DealValue value) {
               this.instance.value = value;
           return this;
         }
@@ -575,7 +575,7 @@ public class Deal implements Serializable {
               this.instance.contacts = contacts;
           return this;
         }
-            public Deal.Builder stage(DealAllOfStage stage) {
+            public Deal.Builder stage(DealStage stage) {
               this.instance.stage = stage;
           return this;
         }
@@ -611,7 +611,7 @@ public class Deal implements Serializable {
               this.instance.closedTime = closedTime;
           return this;
         }
-            public Deal.Builder customFields(DealAllOfCustomFields customFields) {
+            public Deal.Builder customFields(Map customFields) {
               this.instance.customFields = customFields;
           return this;
         }

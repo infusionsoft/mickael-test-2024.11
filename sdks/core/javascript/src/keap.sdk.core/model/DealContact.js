@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
 
 /**
  * The DealContact model module.
@@ -21,13 +20,12 @@ import BaseModel from './BaseModel';
 class DealContact {
     /**
      * Constructs a new <code>DealContact</code>.
-     * Represents a contact entity in the system. Extends the BaseModel class.
+     * Represents a contact entity in the system.
      * @alias module:keap.sdk.core/model/DealContact
-     * @implements module:keap.sdk.core/model/BaseModel
      * @param primaryContact {Boolean} Indicates if this contact is the primary contact. This field is required.
      */
     constructor(primaryContact) { 
-        BaseModel.initialize(this);
+        
         DealContact.initialize(this, primaryContact);
     }
 
@@ -50,7 +48,6 @@ class DealContact {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DealContact();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -100,12 +97,6 @@ DealContact.prototype['id'] = undefined;
 DealContact.prototype['primary_contact'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

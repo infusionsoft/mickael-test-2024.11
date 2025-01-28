@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
 
 /**
  * The Stage model module.
@@ -23,10 +22,9 @@ class Stage {
      * Constructs a new <code>Stage</code>.
      * Represents a stage in a pipeline.
      * @alias module:keap.sdk.core/model/Stage
-     * @implements module:keap.sdk.core/model/BaseModel
      */
     constructor() { 
-        BaseModel.initialize(this);
+        
         Stage.initialize(this);
     }
 
@@ -48,7 +46,6 @@ class Stage {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new Stage();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -109,12 +106,6 @@ Stage.prototype['name'] = undefined;
 Stage.prototype['pipeline_id'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

@@ -53,8 +53,8 @@ namespace Keap.Sdk.Core.Model
         /// <param name="status">The status of the deal. This field is required. (required).</param>
         /// <param name="estimatedCloseTime">The estimated close time of the deal. This field is optional..</param>
         /// <param name="closedTime">The actual close time of the deal. This field is optional..</param>
-        /// <param name="customFields">customFields.</param>
-        public Deal(string id = default(string), string name = default(string), DealAllOfValue value = default(DealAllOfValue), List<DealContact> contacts = default(List<DealContact>), DealAllOfStage stage = default(DealAllOfStage), DateTime stageAssignmentTime = default(DateTime), List<Owner> owners = default(List<Owner>), string ownerId = default(string), List<string> taskIds = default(List<string>), string orderId = default(string), string status = default(string), DateTime? estimatedCloseTime = default(DateTime?), DateTime? closedTime = default(DateTime?), DealAllOfCustomFields customFields = default(DealAllOfCustomFields))
+        /// <param name="customFields">The custom fields associated with the deal. This field is optional..</param>
+        public Deal(string id = default(string), string name = default(string), DealValue value = default(DealValue), List<DealContact> contacts = default(List<DealContact>), DealStage stage = default(DealStage), DateTime stageAssignmentTime = default(DateTime), List<Owner> owners = default(List<Owner>), string ownerId = default(string), List<string> taskIds = default(List<string>), string orderId = default(string), string status = default(string), DateTime? estimatedCloseTime = default(DateTime?), DateTime? closedTime = default(DateTime?), Dictionary customFields = default(Dictionary))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -125,7 +125,7 @@ namespace Keap.Sdk.Core.Model
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "value", IsRequired = true, EmitDefaultValue = true)]
-        public DealAllOfValue Value { get; set; }
+        public DealValue Value { get; set; }
 
         /// <summary>
         /// The list of contacts associated with the deal. This field is required.
@@ -138,7 +138,7 @@ namespace Keap.Sdk.Core.Model
         /// Gets or Sets Stage
         /// </summary>
         [DataMember(Name = "stage", IsRequired = true, EmitDefaultValue = true)]
-        public DealAllOfStage Stage { get; set; }
+        public DealStage Stage { get; set; }
 
         /// <summary>
         /// The time when the deal was assigned to the current stage. This field is required.
@@ -197,10 +197,11 @@ namespace Keap.Sdk.Core.Model
         public DateTime? ClosedTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomFields
+        /// The custom fields associated with the deal. This field is optional.
         /// </summary>
+        /// <value>The custom fields associated with the deal. This field is optional.</value>
         [DataMember(Name = "custom_fields", EmitDefaultValue = true)]
-        public DealAllOfCustomFields CustomFields { get; set; }
+        public Dictionary CustomFields { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

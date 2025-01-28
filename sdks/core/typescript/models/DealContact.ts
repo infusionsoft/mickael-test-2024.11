@@ -13,7 +13,7 @@
 import { HttpFile } from '../http/http';
 
 /**
-* Represents a contact entity in the system. Extends the BaseModel class.
+* Represents a contact entity in the system.
 */
 export class DealContact {
     /**

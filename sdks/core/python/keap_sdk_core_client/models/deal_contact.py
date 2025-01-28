@@ -24,7 +24,7 @@ from typing_extensions import Self
 
 class DealContact(BaseModel):
     """
-    Represents a contact entity in the system. Extends the BaseModel class.
+    Represents a contact entity in the system.
     """ # noqa: E501
     id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the model.")
     primary_contact: StrictBool = Field(description="Indicates if this contact is the primary contact. This field is required.")

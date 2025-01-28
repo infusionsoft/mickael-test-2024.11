@@ -1,6 +1,6 @@
 <?php
 /**
- * DealAllOfCustomFields
+ * DealStage
  *
  * PHP version 7.4
  *
@@ -32,16 +32,16 @@ use \ArrayAccess;
 use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
- * DealAllOfCustomFields Class Doc Comment
+ * DealStage Class Doc Comment
  *
  * @category Class
- * @description The custom fields associated with the deal. This field is optional.
+ * @description The stage of the deal. This field is required and must be valid.
  * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSerializable
+class DealStage implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Deal_allOf_custom_fields';
+    protected static $openAPIModelName = 'Deal_stage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'id' => 'string',
+        'name' => 'string',
+        'pipeline_id' => 'string'
     ];
 
     /**
@@ -69,7 +71,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        
+        'id' => null,
+        'name' => null,
+        'pipeline_id' => null
     ];
 
     /**
@@ -78,7 +82,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        
+        'id' => false,
+        'name' => false,
+        'pipeline_id' => false
     ];
 
     /**
@@ -167,7 +173,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'id' => 'id',
+        'name' => 'name',
+        'pipeline_id' => 'pipeline_id'
     ];
 
     /**
@@ -176,7 +184,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        
+        'id' => 'setId',
+        'name' => 'setName',
+        'pipeline_id' => 'setPipelineId'
     ];
 
     /**
@@ -185,7 +195,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        
+        'id' => 'getId',
+        'name' => 'getName',
+        'pipeline_id' => 'getPipelineId'
     ];
 
     /**
@@ -245,6 +257,9 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('pipeline_id', $data ?? [], null);
     }
 
     /**
@@ -288,6 +303,87 @@ class DealAllOfCustomFields implements ModelInterface, ArrayAccess, \JsonSeriali
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id Unique identifier for the model.
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name The name of the stage.
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        }
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets pipeline_id
+     *
+     * @return string|null
+     */
+    public function getPipelineId()
+    {
+        return $this->container['pipeline_id'];
+    }
+
+    /**
+     * Sets pipeline_id
+     *
+     * @param string|null $pipeline_id The ID of the pipeline.
+     *
+     * @return self
+     */
+    public function setPipelineId($pipeline_id)
+    {
+        if (is_null($pipeline_id)) {
+            throw new \InvalidArgumentException('non-nullable pipeline_id cannot be null');
+        }
+        $this->container['pipeline_id'] = $pipeline_id;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

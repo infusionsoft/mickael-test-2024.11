@@ -2,7 +2,7 @@
 
 # DealContact
 
-Represents a contact entity in the system. Extends the BaseModel class.
+Represents a contact entity in the system.
 
 ## Properties
 

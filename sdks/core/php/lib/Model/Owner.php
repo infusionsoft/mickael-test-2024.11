@@ -35,7 +35,7 @@ use \Keap\Sdk\Core\ObjectSerializer;
  * Owner Class Doc Comment
  *
  * @category Class
- * @description Represents an owner entity in the system. Extends the BaseModel class.
+ * @description Represents an owner entity in the system.
  * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

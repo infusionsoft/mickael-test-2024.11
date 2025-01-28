@@ -60,7 +60,6 @@ import BaseListResponseDealNote from './model/BaseListResponseDealNote';
 import BaseListResponsePipeline from './model/BaseListResponsePipeline';
 import BaseListResponsePipelineSummary from './model/BaseListResponsePipelineSummary';
 import BaseListResponseStage from './model/BaseListResponseStage';
-import BaseModel from './model/BaseModel';
 import BasicCompany from './model/BasicCompany';
 import BasicContact from './model/BasicContact';
 import BasicUser from './model/BasicUser';
@@ -130,13 +129,12 @@ import CustomFieldMetaData from './model/CustomFieldMetaData';
 import CustomFieldOption from './model/CustomFieldOption';
 import CustomFieldValue from './model/CustomFieldValue';
 import Deal from './model/Deal';
-import DealAllOfCustomFields from './model/DealAllOfCustomFields';
-import DealAllOfStage from './model/DealAllOfStage';
-import DealAllOfValue from './model/DealAllOfValue';
 import DealContact from './model/DealContact';
 import DealNote from './model/DealNote';
 import DealNoteListResponse from './model/DealNoteListResponse';
+import DealStage from './model/DealStage';
 import DealStatus from './model/DealStatus';
+import DealValue from './model/DealValue';
 import DefaultCommission from './model/DefaultCommission';
 import DeleteEmailsRequest from './model/DeleteEmailsRequest';
 import DeleteEmailsResponse from './model/DeleteEmailsResponse';
@@ -385,7 +383,7 @@ import TagsApi from './api/TagsApi';
 * </pre>
 * </p>
 * @module keap.sdk.core/index
-* @version 0.0.121
+* @version 0.0.122
 */
 export {
     /**
@@ -675,12 +673,6 @@ export {
      * @property {module:keap.sdk.core/model/BaseListResponseStage}
      */
     BaseListResponseStage,
-
-    /**
-     * The BaseModel model constructor.
-     * @property {module:keap.sdk.core/model/BaseModel}
-     */
-    BaseModel,
 
     /**
      * The BasicCompany model constructor.
@@ -1097,24 +1089,6 @@ export {
     Deal,
 
     /**
-     * The DealAllOfCustomFields model constructor.
-     * @property {module:keap.sdk.core/model/DealAllOfCustomFields}
-     */
-    DealAllOfCustomFields,
-
-    /**
-     * The DealAllOfStage model constructor.
-     * @property {module:keap.sdk.core/model/DealAllOfStage}
-     */
-    DealAllOfStage,
-
-    /**
-     * The DealAllOfValue model constructor.
-     * @property {module:keap.sdk.core/model/DealAllOfValue}
-     */
-    DealAllOfValue,
-
-    /**
      * The DealContact model constructor.
      * @property {module:keap.sdk.core/model/DealContact}
      */
@@ -1133,10 +1107,22 @@ export {
     DealNoteListResponse,
 
     /**
+     * The DealStage model constructor.
+     * @property {module:keap.sdk.core/model/DealStage}
+     */
+    DealStage,
+
+    /**
      * The DealStatus model constructor.
      * @property {module:keap.sdk.core/model/DealStatus}
      */
     DealStatus,
+
+    /**
+     * The DealValue model constructor.
+     * @property {module:keap.sdk.core/model/DealValue}
+     */
+    DealValue,
 
     /**
      * The DefaultCommission model constructor.

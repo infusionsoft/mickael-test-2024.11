@@ -1,6 +1,6 @@
 
 
-# DealAllOfStage
+# DealStage
 
 The stage of the deal. This field is required and must be valid.
 

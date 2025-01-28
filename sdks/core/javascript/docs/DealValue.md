@@ -1,4 +1,4 @@
-# KeapCoreServiceCoreSdk.DealAllOfValue
+# KeapCoreServiceCoreSdk.DealValue
 
 ## Properties
 

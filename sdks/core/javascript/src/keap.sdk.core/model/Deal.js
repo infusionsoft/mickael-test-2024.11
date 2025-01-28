@@ -12,11 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
-import DealAllOfCustomFields from './DealAllOfCustomFields';
-import DealAllOfStage from './DealAllOfStage';
-import DealAllOfValue from './DealAllOfValue';
 import DealContact from './DealContact';
+import DealStage from './DealStage';
+import DealValue from './DealValue';
+import Owner from './Owner';
 
 /**
  * The Deal model module.
@@ -27,18 +26,17 @@ class Deal {
      * Constructs a new <code>Deal</code>.
      * Represents a deal.
      * @alias module:keap.sdk.core/model/Deal
-     * @implements module:keap.sdk.core/model/BaseModel
      * @param name {String} The name of the deal. This field is required and must have at least one character.
-     * @param value {module:keap.sdk.core/model/DealAllOfValue} 
+     * @param value {module:keap.sdk.core/model/DealValue} 
      * @param contacts {Array.<module:keap.sdk.core/model/DealContact>} The list of contacts associated with the deal. This field is required.
-     * @param stage {module:keap.sdk.core/model/DealAllOfStage} 
+     * @param stage {module:keap.sdk.core/model/DealStage} 
      * @param stageAssignmentTime {Date} The time when the deal was assigned to the current stage. This field is required.
-     * @param owners {Array.<module:keap.sdk.core/model/BaseModel>} The list of owners of the deal. This field is required.
+     * @param owners {Array.<module:keap.sdk.core/model/Owner>} The list of owners of the deal. This field is required.
      * @param taskIds {Array.<String>} The list of task IDs associated with the deal. This field is required.
      * @param status {String} The status of the deal. This field is required.
      */
     constructor(name, value, contacts, stage, stageAssignmentTime, owners, taskIds, status) { 
-        BaseModel.initialize(this);
+        
         Deal.initialize(this, name, value, contacts, stage, stageAssignmentTime, owners, taskIds, status);
     }
 
@@ -68,7 +66,6 @@ class Deal {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new Deal();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -77,13 +74,13 @@ class Deal {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('value')) {
-                obj['value'] = DealAllOfValue.constructFromObject(data['value']);
+                obj['value'] = DealValue.constructFromObject(data['value']);
             }
             if (data.hasOwnProperty('contacts')) {
                 obj['contacts'] = ApiClient.convertToType(data['contacts'], [DealContact]);
             }
             if (data.hasOwnProperty('stage')) {
-                obj['stage'] = DealAllOfStage.constructFromObject(data['stage']);
+                obj['stage'] = DealStage.constructFromObject(data['stage']);
             }
             if (data.hasOwnProperty('stage_assignment_time')) {
                 obj['stage_assignment_time'] = ApiClient.convertToType(data['stage_assignment_time'], 'Date');
@@ -110,7 +107,7 @@ class Deal {
                 obj['closed_time'] = ApiClient.convertToType(data['closed_time'], 'Date');
             }
             if (data.hasOwnProperty('custom_fields')) {
-                obj['custom_fields'] = DealAllOfCustomFields.constructFromObject(data['custom_fields']);
+                obj['custom_fields'] = ApiClient.convertToType(data['custom_fields'], Object);
             }
         }
         return obj;
@@ -138,7 +135,7 @@ class Deal {
         }
         // validate the optional field `value`
         if (data['value']) { // data not null
-          DealAllOfValue.validateJSON(data['value']);
+          DealValue.validateJSON(data['value']);
         }
         if (data['contacts']) { // data not null
             // ensure the json data is an array
@@ -152,7 +149,7 @@ class Deal {
         }
         // validate the optional field `stage`
         if (data['stage']) { // data not null
-          DealAllOfStage.validateJSON(data['stage']);
+          DealStage.validateJSON(data['stage']);
         }
         if (data['owners']) { // data not null
             // ensure the json data is an array
@@ -161,7 +158,7 @@ class Deal {
             }
             // validate the optional field `owners` (array)
             for (const item of data['owners']) {
-                BaseModel.validateJSON(item);
+                Owner.validateJSON(item);
             };
         }
         // ensure the json data is a string
@@ -182,7 +179,7 @@ class Deal {
         }
         // validate the optional field `custom_fields`
         if (data['custom_fields']) { // data not null
-          DealAllOfCustomFields.validateJSON(data['custom_fields']);
+          Object.validateJSON(data['custom_fields']);
         }
 
         return true;
@@ -206,7 +203,7 @@ Deal.prototype['id'] = undefined;
 Deal.prototype['name'] = undefined;
 
 /**
- * @member {module:keap.sdk.core/model/DealAllOfValue} value
+ * @member {module:keap.sdk.core/model/DealValue} value
  */
 Deal.prototype['value'] = undefined;
 
@@ -217,7 +214,7 @@ Deal.prototype['value'] = undefined;
 Deal.prototype['contacts'] = undefined;
 
 /**
- * @member {module:keap.sdk.core/model/DealAllOfStage} stage
+ * @member {module:keap.sdk.core/model/DealStage} stage
  */
 Deal.prototype['stage'] = undefined;
 
@@ -229,7 +226,7 @@ Deal.prototype['stage_assignment_time'] = undefined;
 
 /**
  * The list of owners of the deal. This field is required.
- * @member {Array.<module:keap.sdk.core/model/BaseModel>} owners
+ * @member {Array.<module:keap.sdk.core/model/Owner>} owners
  */
 Deal.prototype['owners'] = undefined;
 
@@ -270,17 +267,12 @@ Deal.prototype['estimated_close_time'] = undefined;
 Deal.prototype['closed_time'] = undefined;
 
 /**
- * @member {module:keap.sdk.core/model/DealAllOfCustomFields} custom_fields
+ * The custom fields associated with the deal. This field is optional.
+ * @member {Object} custom_fields
  */
 Deal.prototype['custom_fields'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

@@ -4787,13 +4787,6 @@ components:
           type: string
           description: Token for the next page of results.
       description: The list responses.
-    BaseModel:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique identifier for the model.
-      description: Base class for all models. Provides a unique identifier.
     BasicCompany:
       type: object
       properties:
@@ -6361,117 +6354,117 @@ components:
       - task_ids
       - value
       type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+        name:
+          minLength: 1
+          type: string
+          description: The name of the deal. This field is required and must have
+            at least one character.
+        value:
+          description: The monetary value of the deal. This field is required and
+            must be valid.
+          allOf:
+          - $ref: '#/components/schemas/Money'
+          - description: ''
+        contacts:
+          type: array
+          description: The list of contacts associated with the deal. This field is
+            required.
+          items:
+            $ref: '#/components/schemas/DealContact'
+        stage:
+          description: The stage of the deal. This field is required and must be valid.
+          allOf:
+          - $ref: '#/components/schemas/Stage'
+          - description: ''
+        stage_assignment_time:
+          type: string
+          description: The time when the deal was assigned to the current stage. This
+            field is required.
+          format: date-time
+        owners:
+          type: array
+          description: The list of owners of the deal. This field is required.
+          items:
+            $ref: '#/components/schemas/Owner'
+        owner_id:
+          type: string
+          description: The ID of the owner of the deal. This field is optional.
+          nullable: true
+        task_ids:
+          type: array
+          description: The list of task IDs associated with the deal. This field is
+            required.
+          items:
+            type: string
+        order_id:
+          type: string
+          description: The order of the deal. This field is optional.
+          nullable: true
+        status:
+          type: string
+          description: The status of the deal. This field is required.
+        estimated_close_time:
+          type: string
+          description: The estimated close time of the deal. This field is optional.
+          format: date-time
+          nullable: true
+        closed_time:
+          type: string
+          description: The actual close time of the deal. This field is optional.
+          format: date-time
+          nullable: true
+        custom_fields:
+          description: The custom fields associated with the deal. This field is optional.
+          nullable: true
+          allOf:
+          - type: object
+            additionalProperties: true
+          - {
+            }
       description: Represents a deal.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          name:
-            minLength: 1
-            type: string
-            description: The name of the deal. This field is required and must have
-              at least one character.
-          value:
-            description: The monetary value of the deal. This field is required and
-              must be valid.
-            allOf:
-            - $ref: '#/components/schemas/Money'
-            - description: ''
-          contacts:
-            type: array
-            description: The list of contacts associated with the deal. This field
-              is required.
-            items:
-              $ref: '#/components/schemas/DealContact'
-          stage:
-            description: The stage of the deal. This field is required and must be
-              valid.
-            allOf:
-            - $ref: '#/components/schemas/Stage'
-            - description: ''
-          stage_assignment_time:
-            type: string
-            description: The time when the deal was assigned to the current stage.
-              This field is required.
-            format: date-time
-          owners:
-            type: array
-            description: The list of owners of the deal. This field is required.
-            items:
-              $ref: '#/components/schemas/Owner'
-          owner_id:
-            type: string
-            description: The ID of the owner of the deal. This field is optional.
-            nullable: true
-          task_ids:
-            type: array
-            description: The list of task IDs associated with the deal. This field
-              is required.
-            items:
-              type: string
-          order_id:
-            type: string
-            description: The order of the deal. This field is optional.
-            nullable: true
-          status:
-            type: string
-            description: The status of the deal. This field is required.
-          estimated_close_time:
-            type: string
-            description: The estimated close time of the deal. This field is optional.
-            format: date-time
-            nullable: true
-          closed_time:
-            type: string
-            description: The actual close time of the deal. This field is optional.
-            format: date-time
-            nullable: true
-          custom_fields:
-            description: The custom fields associated with the deal. This field is
-              optional.
-            nullable: true
-            allOf:
-            - type: object
-              additionalProperties: true
-            - {
-              }
     DealContact:
       required:
       - primary_contact
       type: object
-      description: Represents a contact entity in the system. Extends the BaseModel
-        class.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          primary_contact:
-            type: boolean
-            description: Indicates if this contact is the primary contact. This field
-              is required.
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+        primary_contact:
+          type: boolean
+          description: Indicates if this contact is the primary contact. This field
+            is required.
+      description: Represents a contact entity in the system.
     DealNote:
       type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+        deal_id:
+          type: string
+          description: The ID of the deal associated with the note.
+        body:
+          type: string
+          description: The body content of the note.
+        created_by:
+          type: string
+          description: The ID of the user who created the note.
+        created_time:
+          type: string
+          description: The timestamp when the note was created. Formatted as a string
+            according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
+          format: date-time
+        modified_time:
+          type: string
+          description: The timestamp when the note was last modified. Formatted as
+            a string according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
+          format: date-time
       description: A model representing a note associated with a deal.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          deal_id:
-            type: string
-            description: The ID of the deal associated with the note.
-          body:
-            type: string
-            description: The body content of the note.
-          created_by:
-            type: string
-            description: The ID of the user who created the note.
-          created_time:
-            type: string
-            description: The timestamp when the note was created. Formatted as a string
-              according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
-            format: date-time
-          modified_time:
-            type: string
-            description: The timestamp when the note was last modified. Formatted
-              as a string according to the pattern "yyyy-MM-dd'T'HH:mm:ss.SSSXXX".
-            format: date-time
     DealNoteListResponse:
       type: object
       description: Response model for a list of deal notes.
@@ -8098,10 +8091,11 @@ components:
       title: OriginRequest
     Owner:
       type: object
-      description: Represents an owner entity in the system. Extends the BaseModel
-        class.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+      description: Represents an owner entity in the system.
     PaymentMethodConfig:
       type: object
       properties:
@@ -8190,18 +8184,19 @@ components:
       title: PhoneNumber
     Pipeline:
       type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+        name:
+          type: string
+          description: The name of the pipeline.
+        stages:
+          type: array
+          description: The list of stages in the pipeline.
+          items:
+            $ref: '#/components/schemas/Stage'
       description: A pipeline
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          name:
-            type: string
-            description: The name of the pipeline.
-          stages:
-            type: array
-            description: The list of stages in the pipeline.
-            items:
-              $ref: '#/components/schemas/Stage'
     PipelineListResponse:
       type: object
       description: Response for a list of pipelines.
@@ -8276,32 +8271,33 @@ components:
       required:
       - pipeline_name
       type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+        pipeline_id:
+          pattern: ^\d+$
+          type: string
+          description: The ID of the pipeline. Can be null and must be a string of
+            digits if present.
+          nullable: true
+        pipeline_name:
+          maxLength: 255
+          minLength: 1
+          type: string
+          description: The name of the pipeline. Must be a non-null string with a
+            length between 1 and 255 characters.
+        stat_total_deal_count:
+          type: integer
+          description: The total count of deals in the pipeline. Can be null.
+          format: int32
+          nullable: true
+        stat_new_deal_count:
+          type: integer
+          description: The count of new deals in the pipeline. Can be null.
+          format: int32
+          nullable: true
       description: Represents a summary of a pipeline.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          pipeline_id:
-            pattern: ^\d+$
-            type: string
-            description: The ID of the pipeline. Can be null and must be a string
-              of digits if present.
-            nullable: true
-          pipeline_name:
-            maxLength: 255
-            minLength: 1
-            type: string
-            description: The name of the pipeline. Must be a non-null string with
-              a length between 1 and 255 characters.
-          stat_total_deal_count:
-            type: integer
-            description: The total count of deals in the pipeline. Can be null.
-            format: int32
-            nullable: true
-          stat_new_deal_count:
-            type: integer
-            description: The count of new deals in the pipeline. Can be null.
-            format: int32
-            nullable: true
     ProductCategory:
       type: object
       properties:
@@ -9327,16 +9323,17 @@ components:
       title: StackTraceElement
     Stage:
       type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the model.
+        name:
+          type: string
+          description: The name of the stage.
+        pipeline_id:
+          type: string
+          description: The ID of the pipeline.
       description: Represents a stage in a pipeline.
-      allOf:
-      - $ref: '#/components/schemas/BaseModel'
-      - properties:
-          name:
-            type: string
-            description: The name of the stage.
-          pipeline_id:
-            type: string
-            description: The ID of the pipeline.
     StageDealListResponse:
       type: object
       description: Response for a list of deals in a stage.

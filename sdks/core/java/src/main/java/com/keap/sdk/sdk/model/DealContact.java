@@ -30,9 +30,9 @@ import jakarta.validation.Valid;
 
 
 /**
- * Represents a contact entity in the system. Extends the BaseModel class.
+ * Represents a contact entity in the system.
  */
-@Schema(description = "Represents a contact entity in the system. Extends the BaseModel class.")
+@Schema(description = "Represents a contact entity in the system.")
 @JsonPropertyOrder({
   DealContact.JSON_PROPERTY_ID,
   DealContact.JSON_PROPERTY_PRIMARY_CONTACT

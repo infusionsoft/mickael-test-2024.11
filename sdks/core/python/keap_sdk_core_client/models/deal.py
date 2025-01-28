@@ -21,11 +21,10 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from keap_sdk_core_client.models.base_model import BaseModel
-from keap_sdk_core_client.models.deal_all_of_custom_fields import DealAllOfCustomFields
-from keap_sdk_core_client.models.deal_all_of_stage import DealAllOfStage
-from keap_sdk_core_client.models.deal_all_of_value import DealAllOfValue
 from keap_sdk_core_client.models.deal_contact import DealContact
+from keap_sdk_core_client.models.deal_stage import DealStage
+from keap_sdk_core_client.models.deal_value import DealValue
+from keap_sdk_core_client.models.owner import Owner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -35,18 +34,18 @@ class Deal(BaseModel):
     """ # noqa: E501
     id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the model.")
     name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The name of the deal. This field is required and must have at least one character.")
-    value: DealAllOfValue
+    value: DealValue
     contacts: List[DealContact] = Field(description="The list of contacts associated with the deal. This field is required.")
-    stage: DealAllOfStage
+    stage: DealStage
     stage_assignment_time: datetime = Field(description="The time when the deal was assigned to the current stage. This field is required.")
-    owners: List[BaseModel] = Field(description="The list of owners of the deal. This field is required.")
+    owners: List[Owner] = Field(description="The list of owners of the deal. This field is required.")
     owner_id: Optional[StrictStr] = Field(default=None, description="The ID of the owner of the deal. This field is optional.")
     task_ids: List[StrictStr] = Field(description="The list of task IDs associated with the deal. This field is required.")
     order_id: Optional[StrictStr] = Field(default=None, description="The order of the deal. This field is optional.")
     status: StrictStr = Field(description="The status of the deal. This field is required.")
     estimated_close_time: Optional[datetime] = Field(default=None, description="The estimated close time of the deal. This field is optional.")
     closed_time: Optional[datetime] = Field(default=None, description="The actual close time of the deal. This field is optional.")
-    custom_fields: Optional[DealAllOfCustomFields] = None
+    custom_fields: Optional[Any] = Field(default=None, description="The custom fields associated with the deal. This field is optional.")
     additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["id", "name", "value", "contacts", "stage", "stage_assignment_time", "owners", "owner_id", "task_ids", "order_id", "status", "estimated_close_time", "closed_time", "custom_fields"]
 
@@ -111,9 +110,6 @@ class Deal(BaseModel):
                 if _item_owners:
                     _items.append(_item_owners.to_dict())
             _dict['owners'] = _items
-        # override the default output from pydantic by calling `to_dict()` of custom_fields
-        if self.custom_fields:
-            _dict['custom_fields'] = self.custom_fields.to_dict()
         # puts key-value pairs in additional_properties in the top level
         if self.additional_properties is not None:
             for _key, _value in self.additional_properties.items():
@@ -158,18 +154,18 @@ class Deal(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "value": DealAllOfValue.from_dict(obj["value"]) if obj.get("value") is not None else None,
+            "value": DealValue.from_dict(obj["value"]) if obj.get("value") is not None else None,
             "contacts": [DealContact.from_dict(_item) for _item in obj["contacts"]] if obj.get("contacts") is not None else None,
-            "stage": DealAllOfStage.from_dict(obj["stage"]) if obj.get("stage") is not None else None,
+            "stage": DealStage.from_dict(obj["stage"]) if obj.get("stage") is not None else None,
             "stage_assignment_time": obj.get("stage_assignment_time"),
-            "owners": [BaseModel.from_dict(_item) for _item in obj["owners"]] if obj.get("owners") is not None else None,
+            "owners": [Owner.from_dict(_item) for _item in obj["owners"]] if obj.get("owners") is not None else None,
             "owner_id": obj.get("owner_id"),
             "task_ids": obj.get("task_ids"),
             "order_id": obj.get("order_id"),
             "status": obj.get("status"),
             "estimated_close_time": obj.get("estimated_close_time"),
             "closed_time": obj.get("closed_time"),
-            "custom_fields": DealAllOfCustomFields.from_dict(obj["custom_fields"]) if obj.get("custom_fields") is not None else None
+            "custom_fields": obj.get("custom_fields")
         })
         # store additional fields in additional_properties
         for _key in obj.keys():

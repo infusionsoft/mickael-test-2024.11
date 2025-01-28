@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
 import Stage from './Stage';
 
 /**
@@ -24,10 +23,9 @@ class Pipeline {
      * Constructs a new <code>Pipeline</code>.
      * A pipeline
      * @alias module:keap.sdk.core/model/Pipeline
-     * @implements module:keap.sdk.core/model/BaseModel
      */
     constructor() { 
-        BaseModel.initialize(this);
+        
         Pipeline.initialize(this);
     }
 
@@ -49,7 +47,6 @@ class Pipeline {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new Pipeline();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -116,12 +113,6 @@ Pipeline.prototype['name'] = undefined;
 Pipeline.prototype['stages'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

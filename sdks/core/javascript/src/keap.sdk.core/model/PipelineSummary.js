@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
 
 /**
  * The PipelineSummary model module.
@@ -23,11 +22,10 @@ class PipelineSummary {
      * Constructs a new <code>PipelineSummary</code>.
      * Represents a summary of a pipeline.
      * @alias module:keap.sdk.core/model/PipelineSummary
-     * @implements module:keap.sdk.core/model/BaseModel
      * @param pipelineName {String} The name of the pipeline. Must be a non-null string with a length between 1 and 255 characters.
      */
     constructor(pipelineName) { 
-        BaseModel.initialize(this);
+        
         PipelineSummary.initialize(this, pipelineName);
     }
 
@@ -50,7 +48,6 @@ class PipelineSummary {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PipelineSummary();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -135,12 +132,6 @@ PipelineSummary.prototype['stat_total_deal_count'] = undefined;
 PipelineSummary.prototype['stat_new_deal_count'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * DealAllOfStage
+ * DealValue
  *
  * PHP version 7.4
  *
@@ -32,16 +32,16 @@ use \ArrayAccess;
 use \Keap\Sdk\Core\ObjectSerializer;
 
 /**
- * DealAllOfStage Class Doc Comment
+ * DealValue Class Doc Comment
  *
  * @category Class
- * @description The stage of the deal. This field is required and must be valid.
+ * @description The monetary value of the deal. This field is required and must be valid.
  * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
+class DealValue implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Deal_allOf_stage';
+    protected static $openAPIModelName = 'Deal_value';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'name' => 'string',
-        'pipeline_id' => 'string'
+        'amount' => 'float',
+        'currency' => 'string'
     ];
 
     /**
@@ -71,9 +70,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null,
-        'pipeline_id' => null
+        'amount' => 'double',
+        'currency' => null
     ];
 
     /**
@@ -82,9 +80,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'name' => false,
-        'pipeline_id' => false
+        'amount' => false,
+        'currency' => false
     ];
 
     /**
@@ -173,9 +170,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'pipeline_id' => 'pipeline_id'
+        'amount' => 'amount',
+        'currency' => 'currency'
     ];
 
     /**
@@ -184,9 +180,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'pipeline_id' => 'setPipelineId'
+        'amount' => 'setAmount',
+        'currency' => 'setCurrency'
     ];
 
     /**
@@ -195,9 +190,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'pipeline_id' => 'getPipelineId'
+        'amount' => 'getAmount',
+        'currency' => 'getCurrency'
     ];
 
     /**
@@ -257,9 +251,8 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('pipeline_id', $data ?? [], null);
+        $this->setIfExists('amount', $data ?? [], null);
+        $this->setIfExists('currency', $data ?? [], null);
     }
 
     /**
@@ -289,6 +282,12 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
+        if ($this->container['currency'] === null) {
+            $invalidProperties[] = "'currency' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -305,82 +304,55 @@ class DealAllOfStage implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
+     * Gets amount
      *
-     * @return string|null
+     * @return float
      */
-    public function getId()
+    public function getAmount()
     {
-        return $this->container['id'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets id
+     * Sets amount
      *
-     * @param string|null $id Unique identifier for the model.
+     * @param float $amount The amount of money. This field is required.
      *
      * @return self
      */
-    public function setId($id)
+    public function setAmount($amount)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($amount)) {
+            throw new \InvalidArgumentException('non-nullable amount cannot be null');
         }
-        $this->container['id'] = $id;
+        $this->container['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets currency
      *
-     * @return string|null
+     * @return string
      */
-    public function getName()
+    public function getCurrency()
     {
-        return $this->container['name'];
+        return $this->container['currency'];
     }
 
     /**
-     * Sets name
+     * Sets currency
      *
-     * @param string|null $name The name of the stage.
+     * @param string $currency The currency of the money. This field is required.
      *
      * @return self
      */
-    public function setName($name)
+    public function setCurrency($currency)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($currency)) {
+            throw new \InvalidArgumentException('non-nullable currency cannot be null');
         }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets pipeline_id
-     *
-     * @return string|null
-     */
-    public function getPipelineId()
-    {
-        return $this->container['pipeline_id'];
-    }
-
-    /**
-     * Sets pipeline_id
-     *
-     * @param string|null $pipeline_id The ID of the pipeline.
-     *
-     * @return self
-     */
-    public function setPipelineId($pipeline_id)
-    {
-        if (is_null($pipeline_id)) {
-            throw new \InvalidArgumentException('non-nullable pipeline_id cannot be null');
-        }
-        $this->container['pipeline_id'] = $pipeline_id;
+        $this->container['currency'] = $currency;
 
         return $this;
     }

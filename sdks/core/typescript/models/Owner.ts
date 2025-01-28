@@ -13,7 +13,7 @@
 import { HttpFile } from '../http/http';
 
 /**
-* Represents an owner entity in the system. Extends the BaseModel class.
+* Represents an owner entity in the system.
 */
 export class Owner {
     /**

@@ -1,4 +1,4 @@
-# DealAllOfValue
+# DealValue
 
 The monetary value of the deal. This field is required and must be valid.
 
@@ -12,19 +12,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from keap_sdk_core_client.models.deal_all_of_value import DealAllOfValue
+from keap_sdk_core_client.models.deal_value import DealValue
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of DealAllOfValue from a JSON string
-deal_all_of_value_instance = DealAllOfValue.from_json(json)
+# create an instance of DealValue from a JSON string
+deal_value_instance = DealValue.from_json(json)
 # print the JSON string representation of the object
-print(DealAllOfValue.to_json())
+print(DealValue.to_json())
 
 # convert the object into a dict
-deal_all_of_value_dict = deal_all_of_value_instance.to_dict()
-# create an instance of DealAllOfValue from a dict
-deal_all_of_value_from_dict = DealAllOfValue.from_dict(deal_all_of_value_dict)
+deal_value_dict = deal_value_instance.to_dict()
+# create an instance of DealValue from a dict
+deal_value_from_dict = DealValue.from_dict(deal_value_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

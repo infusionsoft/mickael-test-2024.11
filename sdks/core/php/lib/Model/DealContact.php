@@ -35,7 +35,7 @@ use \Keap\Sdk\Core\ObjectSerializer;
  * DealContact Class Doc Comment
  *
  * @category Class
- * @description Represents a contact entity in the system. Extends the BaseModel class.
+ * @description Represents a contact entity in the system.
  * @package  Keap\Sdk\Core
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

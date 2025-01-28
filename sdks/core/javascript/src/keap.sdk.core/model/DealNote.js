@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
 
 /**
  * The DealNote model module.
@@ -23,10 +22,9 @@ class DealNote {
      * Constructs a new <code>DealNote</code>.
      * A model representing a note associated with a deal.
      * @alias module:keap.sdk.core/model/DealNote
-     * @implements module:keap.sdk.core/model/BaseModel
      */
     constructor() { 
-        BaseModel.initialize(this);
+        
         DealNote.initialize(this);
     }
 
@@ -48,7 +46,6 @@ class DealNote {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DealNote();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -140,12 +137,6 @@ DealNote.prototype['created_time'] = undefined;
 DealNote.prototype['modified_time'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

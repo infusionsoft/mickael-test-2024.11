@@ -30,9 +30,9 @@ import jakarta.validation.Valid;
 
 
 /**
- * Represents an owner entity in the system. Extends the BaseModel class.
+ * Represents an owner entity in the system.
  */
-@Schema(description = "Represents an owner entity in the system. Extends the BaseModel class.")
+@Schema(description = "Represents an owner entity in the system.")
 @JsonPropertyOrder({
   Owner.JSON_PROPERTY_ID
 })

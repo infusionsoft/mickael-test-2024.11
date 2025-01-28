@@ -15,21 +15,21 @@ import ApiClient from '../ApiClient';
 import Money from './Money';
 
 /**
- * The DealAllOfValue model module.
- * @module keap.sdk.core/model/DealAllOfValue
+ * The DealValue model module.
+ * @module keap.sdk.core/model/DealValue
  */
-class DealAllOfValue {
+class DealValue {
     /**
-     * Constructs a new <code>DealAllOfValue</code>.
+     * Constructs a new <code>DealValue</code>.
      * The monetary value of the deal. This field is required and must be valid.
-     * @alias module:keap.sdk.core/model/DealAllOfValue
+     * @alias module:keap.sdk.core/model/DealValue
      * @implements module:keap.sdk.core/model/Money
      * @param amount {Number} The amount of money. This field is required.
      * @param currency {String} The currency of the money. This field is required.
      */
     constructor(amount, currency) { 
         Money.initialize(this, amount, currency);
-        DealAllOfValue.initialize(this, amount, currency);
+        DealValue.initialize(this, amount, currency);
     }
 
     /**
@@ -43,15 +43,15 @@ class DealAllOfValue {
     }
 
     /**
-     * Constructs a <code>DealAllOfValue</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DealValue</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:keap.sdk.core/model/DealAllOfValue} obj Optional instance to populate.
-     * @return {module:keap.sdk.core/model/DealAllOfValue} The populated <code>DealAllOfValue</code> instance.
+     * @param {module:keap.sdk.core/model/DealValue} obj Optional instance to populate.
+     * @return {module:keap.sdk.core/model/DealValue} The populated <code>DealValue</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new DealAllOfValue();
+            obj = obj || new DealValue();
             Money.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('amount')) {
@@ -65,13 +65,13 @@ class DealAllOfValue {
     }
 
     /**
-     * Validates the JSON data with respect to <code>DealAllOfValue</code>.
+     * Validates the JSON data with respect to <code>DealValue</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DealAllOfValue</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DealValue</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of DealAllOfValue.RequiredProperties) {
+        for (const property of DealValue.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -87,19 +87,19 @@ class DealAllOfValue {
 
 }
 
-DealAllOfValue.RequiredProperties = ["amount", "currency"];
+DealValue.RequiredProperties = ["amount", "currency"];
 
 /**
  * The amount of money. This field is required.
  * @member {Number} amount
  */
-DealAllOfValue.prototype['amount'] = undefined;
+DealValue.prototype['amount'] = undefined;
 
 /**
  * The currency of the money. This field is required.
  * @member {String} currency
  */
-DealAllOfValue.prototype['currency'] = undefined;
+DealValue.prototype['currency'] = undefined;
 
 
 // Implement Money interface:
@@ -117,4 +117,4 @@ Money.prototype['currency'] = undefined;
 
 
 
-export default DealAllOfValue;
+export default DealValue;

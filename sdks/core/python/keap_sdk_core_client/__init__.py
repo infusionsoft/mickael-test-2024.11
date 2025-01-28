@@ -14,7 +14,7 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-__version__ = "0.0.121"
+__version__ = "0.0.122"
 
 # import apis into sdk package
 from keap_sdk_core_client.api.affiliate_api import AffiliateApi
@@ -96,7 +96,6 @@ from keap_sdk_core_client.models.base_list_response_deal_note import BaseListRes
 from keap_sdk_core_client.models.base_list_response_pipeline import BaseListResponsePipeline
 from keap_sdk_core_client.models.base_list_response_pipeline_summary import BaseListResponsePipelineSummary
 from keap_sdk_core_client.models.base_list_response_stage import BaseListResponseStage
-from keap_sdk_core_client.models.base_model import BaseModel
 from keap_sdk_core_client.models.basic_company import BasicCompany
 from keap_sdk_core_client.models.basic_contact import BasicContact
 from keap_sdk_core_client.models.basic_user import BasicUser
@@ -166,13 +165,12 @@ from keap_sdk_core_client.models.custom_field_meta_data import CustomFieldMetaDa
 from keap_sdk_core_client.models.custom_field_option import CustomFieldOption
 from keap_sdk_core_client.models.custom_field_value import CustomFieldValue
 from keap_sdk_core_client.models.deal import Deal
-from keap_sdk_core_client.models.deal_all_of_custom_fields import DealAllOfCustomFields
-from keap_sdk_core_client.models.deal_all_of_stage import DealAllOfStage
-from keap_sdk_core_client.models.deal_all_of_value import DealAllOfValue
 from keap_sdk_core_client.models.deal_contact import DealContact
 from keap_sdk_core_client.models.deal_note import DealNote
 from keap_sdk_core_client.models.deal_note_list_response import DealNoteListResponse
+from keap_sdk_core_client.models.deal_stage import DealStage
 from keap_sdk_core_client.models.deal_status import DealStatus
+from keap_sdk_core_client.models.deal_value import DealValue
 from keap_sdk_core_client.models.default_commission import DefaultCommission
 from keap_sdk_core_client.models.delete_emails_request import DeleteEmailsRequest
 from keap_sdk_core_client.models.delete_emails_response import DeleteEmailsResponse

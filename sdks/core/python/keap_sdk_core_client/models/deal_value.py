@@ -17,20 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
-class DealAllOfStage(BaseModel):
+class DealValue(BaseModel):
     """
-    The stage of the deal. This field is required and must be valid.
+    The monetary value of the deal. This field is required and must be valid.
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the model.")
-    name: Optional[StrictStr] = Field(default=None, description="The name of the stage.")
-    pipeline_id: Optional[StrictStr] = Field(default=None, description="The ID of the pipeline.")
+    amount: Union[StrictFloat, StrictInt] = Field(description="The amount of money. This field is required.")
+    currency: StrictStr = Field(description="The currency of the money. This field is required.")
     additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = ["id", "name", "pipeline_id"]
+    __properties: ClassVar[List[str]] = ["amount", "currency"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +49,7 @@ class DealAllOfStage(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of DealAllOfStage from a JSON string"""
+        """Create an instance of DealValue from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -82,7 +81,7 @@ class DealAllOfStage(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of DealAllOfStage from a dict"""
+        """Create an instance of DealValue from a dict"""
         if obj is None:
             return None
 
@@ -90,9 +89,8 @@ class DealAllOfStage(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "name": obj.get("name"),
-            "pipeline_id": obj.get("pipeline_id")
+            "amount": obj.get("amount"),
+            "currency": obj.get("currency")
         })
         # store additional fields in additional_properties
         for _key in obj.keys():

@@ -10,11 +10,10 @@
  * Do not edit the class manually.
  */
 
-import { BaseModel } from '../models/BaseModel';
-import { DealAllOfCustomFields } from '../models/DealAllOfCustomFields';
-import { DealAllOfStage } from '../models/DealAllOfStage';
-import { DealAllOfValue } from '../models/DealAllOfValue';
 import { DealContact } from '../models/DealContact';
+import { DealStage } from '../models/DealStage';
+import { DealValue } from '../models/DealValue';
+import { Owner } from '../models/Owner';
 import { HttpFile } from '../http/http';
 
 /**
@@ -29,12 +28,12 @@ export class Deal {
     * The name of the deal. This field is required and must have at least one character.
     */
     'name': string;
-    'value': DealAllOfValue;
+    'value': DealValue;
     /**
     * The list of contacts associated with the deal. This field is required.
     */
     'contacts': Array<DealContact>;
-    'stage': DealAllOfStage;
+    'stage': DealStage;
     /**
     * The time when the deal was assigned to the current stage. This field is required.
     */
@@ -67,7 +66,10 @@ export class Deal {
     * The actual close time of the deal. This field is optional.
     */
     'closedTime'?: Date | null;
-    'customFields'?: DealAllOfCustomFields | null;
+    /**
+    * The custom fields associated with the deal. This field is optional.
+    */
+    'customFields'?: any | null;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -89,7 +91,7 @@ export class Deal {
         {
             "name": "value",
             "baseName": "value",
-            "type": "DealAllOfValue",
+            "type": "DealValue",
             "format": ""
         },
         {
@@ -101,7 +103,7 @@ export class Deal {
         {
             "name": "stage",
             "baseName": "stage",
-            "type": "DealAllOfStage",
+            "type": "DealStage",
             "format": ""
         },
         {
@@ -155,7 +157,7 @@ export class Deal {
         {
             "name": "customFields",
             "baseName": "custom_fields",
-            "type": "DealAllOfCustomFields",
+            "type": "any",
             "format": ""
         }    ];
 

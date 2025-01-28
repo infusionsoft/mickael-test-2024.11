@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseModel from './BaseModel';
 
 /**
  * The Owner model module.
@@ -21,12 +20,11 @@ import BaseModel from './BaseModel';
 class Owner {
     /**
      * Constructs a new <code>Owner</code>.
-     * Represents an owner entity in the system. Extends the BaseModel class.
+     * Represents an owner entity in the system.
      * @alias module:keap.sdk.core/model/Owner
-     * @implements module:keap.sdk.core/model/BaseModel
      */
     constructor() { 
-        BaseModel.initialize(this);
+        
         Owner.initialize(this);
     }
 
@@ -48,7 +46,6 @@ class Owner {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new Owner();
-            BaseModel.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -83,12 +80,6 @@ class Owner {
 Owner.prototype['id'] = undefined;
 
 
-// Implement BaseModel interface:
-/**
- * Unique identifier for the model.
- * @member {String} id
- */
-BaseModel.prototype['id'] = undefined;
 
 
 

@@ -24,7 +24,7 @@ from typing_extensions import Self
 
 class Owner(BaseModel):
     """
-    Represents an owner entity in the system. Extends the BaseModel class.
+    Represents an owner entity in the system.
     """ # noqa: E501
     id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the model.")
     additional_properties: Dict[str, Any] = {}

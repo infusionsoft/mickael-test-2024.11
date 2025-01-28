@@ -27,18 +27,45 @@ using OpenAPIDateConverter = Keap.Sdk.Core.Client.OpenAPIDateConverter;
 namespace Keap.Sdk.Core.Model
 {
     /// <summary>
-    /// The custom fields associated with the deal. This field is optional.
+    /// The monetary value of the deal. This field is required and must be valid.
     /// </summary>
-    [DataContract(Name = "Deal_allOf_custom_fields")]
-    public partial class DealAllOfCustomFields : IValidatableObject
+    [DataContract(Name = "Deal_value")]
+    public partial class DealValue : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DealAllOfCustomFields" /> class.
+        /// Initializes a new instance of the <see cref="DealValue" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        public DealAllOfCustomFields()
+        protected DealValue() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DealValue" /> class.
+        /// </summary>
+        /// <param name="amount">The amount of money. This field is required. (required).</param>
+        /// <param name="currency">The currency of the money. This field is required. (required).</param>
+        public DealValue(double amount = default(double), string currency = default(string))
         {
+            this.Amount = amount;
+            // to ensure "currency" is required (not null)
+            if (currency == null)
+            {
+                throw new ArgumentNullException("currency is a required property for DealValue and cannot be null");
+            }
+            this.Currency = currency;
         }
+
+        /// <summary>
+        /// The amount of money. This field is required.
+        /// </summary>
+        /// <value>The amount of money. This field is required.</value>
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
+        public double Amount { get; set; }
+
+        /// <summary>
+        /// The currency of the money. This field is required.
+        /// </summary>
+        /// <value>The currency of the money. This field is required.</value>
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
+        public string Currency { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -47,7 +74,9 @@ namespace Keap.Sdk.Core.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class DealAllOfCustomFields {\n");
+            sb.Append("class DealValue {\n");
+            sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

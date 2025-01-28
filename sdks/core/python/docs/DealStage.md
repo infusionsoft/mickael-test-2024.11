@@ -1,4 +1,4 @@
-# DealAllOfStage
+# DealStage
 
 The stage of the deal. This field is required and must be valid.
 
@@ -13,19 +13,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from keap_sdk_core_client.models.deal_all_of_stage import DealAllOfStage
+from keap_sdk_core_client.models.deal_stage import DealStage
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of DealAllOfStage from a JSON string
-deal_all_of_stage_instance = DealAllOfStage.from_json(json)
+# create an instance of DealStage from a JSON string
+deal_stage_instance = DealStage.from_json(json)
 # print the JSON string representation of the object
-print(DealAllOfStage.to_json())
+print(DealStage.to_json())
 
 # convert the object into a dict
-deal_all_of_stage_dict = deal_all_of_stage_instance.to_dict()
-# create an instance of DealAllOfStage from a dict
-deal_all_of_stage_from_dict = DealAllOfStage.from_dict(deal_all_of_stage_dict)
+deal_stage_dict = deal_stage_instance.to_dict()
+# create an instance of DealStage from a dict
+deal_stage_from_dict = DealStage.from_dict(deal_stage_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

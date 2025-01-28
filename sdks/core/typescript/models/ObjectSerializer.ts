@@ -45,7 +45,6 @@ export * from '../models/BaseListResponseDealNote';
 export * from '../models/BaseListResponsePipeline';
 export * from '../models/BaseListResponsePipelineSummary';
 export * from '../models/BaseListResponseStage';
-export * from '../models/BaseModel';
 export * from '../models/BasicCompany';
 export * from '../models/BasicContact';
 export * from '../models/BasicUser';
@@ -115,13 +114,12 @@ export * from '../models/CustomFieldMetaData';
 export * from '../models/CustomFieldOption';
 export * from '../models/CustomFieldValue';
 export * from '../models/Deal';
-export * from '../models/DealAllOfCustomFields';
-export * from '../models/DealAllOfStage';
-export * from '../models/DealAllOfValue';
 export * from '../models/DealContact';
 export * from '../models/DealNote';
 export * from '../models/DealNoteListResponse';
+export * from '../models/DealStage';
 export * from '../models/DealStatus';
+export * from '../models/DealValue';
 export * from '../models/DefaultCommission';
 export * from '../models/DeleteEmailsRequest';
 export * from '../models/DeleteEmailsResponse';
@@ -368,7 +366,6 @@ import { BaseListResponseDealNote } from '../models/BaseListResponseDealNote';
 import { BaseListResponsePipeline } from '../models/BaseListResponsePipeline';
 import { BaseListResponsePipelineSummary } from '../models/BaseListResponsePipelineSummary';
 import { BaseListResponseStage } from '../models/BaseListResponseStage';
-import { BaseModel } from '../models/BaseModel';
 import { BasicCompany } from '../models/BasicCompany';
 import { BasicContact } from '../models/BasicContact';
 import { BasicUser } from '../models/BasicUser';
@@ -438,13 +435,12 @@ import { CustomFieldMetaData  , CustomFieldMetaDataFieldTypeEnum      , CustomFi
 import { CustomFieldOption } from '../models/CustomFieldOption';
 import { CustomFieldValue } from '../models/CustomFieldValue';
 import { Deal } from '../models/Deal';
-import { DealAllOfCustomFields } from '../models/DealAllOfCustomFields';
-import { DealAllOfStage } from '../models/DealAllOfStage';
-import { DealAllOfValue } from '../models/DealAllOfValue';
 import { DealContact } from '../models/DealContact';
 import { DealNote } from '../models/DealNote';
 import { DealNoteListResponse } from '../models/DealNoteListResponse';
+import { DealStage } from '../models/DealStage';
 import { DealStatus } from '../models/DealStatus';
+import { DealValue } from '../models/DealValue';
 import { DefaultCommission } from '../models/DefaultCommission';
 import { DeleteEmailsRequest } from '../models/DeleteEmailsRequest';
 import { DeleteEmailsResponse } from '../models/DeleteEmailsResponse';
@@ -777,7 +773,6 @@ let typeMap: {[index: string]: any} = {
     "BaseListResponsePipeline": BaseListResponsePipeline,
     "BaseListResponsePipelineSummary": BaseListResponsePipelineSummary,
     "BaseListResponseStage": BaseListResponseStage,
-    "BaseModel": BaseModel,
     "BasicCompany": BasicCompany,
     "BasicContact": BasicContact,
     "BasicUser": BasicUser,
@@ -847,12 +842,11 @@ let typeMap: {[index: string]: any} = {
     "CustomFieldOption": CustomFieldOption,
     "CustomFieldValue": CustomFieldValue,
     "Deal": Deal,
-    "DealAllOfCustomFields": DealAllOfCustomFields,
-    "DealAllOfStage": DealAllOfStage,
-    "DealAllOfValue": DealAllOfValue,
     "DealContact": DealContact,
     "DealNote": DealNote,
     "DealNoteListResponse": DealNoteListResponse,
+    "DealStage": DealStage,
+    "DealValue": DealValue,
     "DefaultCommission": DefaultCommission,
     "DeleteEmailsRequest": DeleteEmailsRequest,
     "DeleteEmailsResponse": DeleteEmailsResponse,

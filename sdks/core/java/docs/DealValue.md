@@ -1,6 +1,6 @@
 
 
-# DealAllOfValue
+# DealValue
 
 The monetary value of the deal. This field is required and must be valid.
 

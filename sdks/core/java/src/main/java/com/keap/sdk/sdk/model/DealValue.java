@@ -34,11 +34,11 @@ import jakarta.validation.Valid;
  */
 @Schema(description = "The monetary value of the deal. This field is required and must be valid.")
 @JsonPropertyOrder({
-  DealAllOfValue.JSON_PROPERTY_AMOUNT,
-  DealAllOfValue.JSON_PROPERTY_CURRENCY
+  DealValue.JSON_PROPERTY_AMOUNT,
+  DealValue.JSON_PROPERTY_CURRENCY
 })
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
-public class DealAllOfValue implements Serializable {
+public class DealValue implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String JSON_PROPERTY_AMOUNT = "amount";
@@ -47,10 +47,10 @@ public class DealAllOfValue implements Serializable {
   public static final String JSON_PROPERTY_CURRENCY = "currency";
   @jakarta.annotation.Nonnull  private String currency;
 
-  public DealAllOfValue() { 
+  public DealValue() { 
   }
 
-  public DealAllOfValue amount(@jakarta.annotation.Nonnull Double amount) {
+  public DealValue amount(@jakarta.annotation.Nonnull Double amount) {
     this.amount = amount;
     return this;
   }
@@ -75,7 +75,7 @@ public class DealAllOfValue implements Serializable {
   }
 
 
-  public DealAllOfValue currency(@jakarta.annotation.Nonnull String currency) {
+  public DealValue currency(@jakarta.annotation.Nonnull String currency) {
     this.currency = currency;
     return this;
   }
@@ -100,7 +100,7 @@ public class DealAllOfValue implements Serializable {
   }
 
   /**
-   * Return true if this Deal_allOf_value object is equal to o.
+   * Return true if this Deal_value object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -110,9 +110,9 @@ public class DealAllOfValue implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DealAllOfValue dealAllOfValue = (DealAllOfValue) o;
-    return Objects.equals(this.amount, dealAllOfValue.amount) &&
-        Objects.equals(this.currency, dealAllOfValue.currency);
+    DealValue dealValue = (DealValue) o;
+    return Objects.equals(this.amount, dealValue.amount) &&
+        Objects.equals(this.currency, dealValue.currency);
   }
 
   @Override
@@ -123,7 +123,7 @@ public class DealAllOfValue implements Serializable {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DealAllOfValue {\n");
+    sb.append("class DealValue {\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
@@ -143,32 +143,32 @@ public class DealAllOfValue implements Serializable {
 
     public static class Builder {
     
-        private DealAllOfValue instance;
+        private DealValue instance;
     
         public Builder() {
-          this(new DealAllOfValue());
+          this(new DealValue());
         }
     
-        protected Builder(DealAllOfValue instance) {
+        protected Builder(DealValue instance) {
           this.instance = instance;
         }
     
-        public DealAllOfValue.Builder amount(Double amount) {
+        public DealValue.Builder amount(Double amount) {
               this.instance.amount = amount;
           return this;
         }
-            public DealAllOfValue.Builder currency(String currency) {
+            public DealValue.Builder currency(String currency) {
               this.instance.currency = currency;
           return this;
         }
         
     
         /**
-        * returns a built DealAllOfValue instance.
+        * returns a built DealValue instance.
         *
         * The builder is not reusable.
         */
-        public DealAllOfValue build() {
+        public DealValue build() {
           try {
             return this.instance;
           } finally {
@@ -186,15 +186,15 @@ public class DealAllOfValue implements Serializable {
       /**
       * Create a builder with no initialized field.
       */
-      public static DealAllOfValue.Builder builder() {
-        return new DealAllOfValue.Builder();
+      public static DealValue.Builder builder() {
+        return new DealValue.Builder();
       }
     
       /**
       * Create a builder with a shallow copy of this instance.
       */
-      public DealAllOfValue.Builder toBuilder() {
-        return new DealAllOfValue.Builder()
+      public DealValue.Builder toBuilder() {
+        return new DealValue.Builder()
           .amount(getAmount())
           .currency(getCurrency());
       }

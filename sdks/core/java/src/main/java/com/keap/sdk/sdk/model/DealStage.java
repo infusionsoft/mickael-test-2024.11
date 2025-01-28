@@ -34,12 +34,12 @@ import jakarta.validation.Valid;
  */
 @Schema(description = "The stage of the deal. This field is required and must be valid.")
 @JsonPropertyOrder({
-  DealAllOfStage.JSON_PROPERTY_ID,
-  DealAllOfStage.JSON_PROPERTY_NAME,
-  DealAllOfStage.JSON_PROPERTY_PIPELINE_ID
+  DealStage.JSON_PROPERTY_ID,
+  DealStage.JSON_PROPERTY_NAME,
+  DealStage.JSON_PROPERTY_PIPELINE_ID
 })
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
-public class DealAllOfStage implements Serializable {
+public class DealStage implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String JSON_PROPERTY_ID = "id";
@@ -51,10 +51,10 @@ public class DealAllOfStage implements Serializable {
   public static final String JSON_PROPERTY_PIPELINE_ID = "pipeline_id";
   @jakarta.annotation.Nullable  private String pipelineId;
 
-  public DealAllOfStage() { 
+  public DealStage() { 
   }
 
-  public DealAllOfStage id(@jakarta.annotation.Nullable String id) {
+  public DealStage id(@jakarta.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
@@ -78,7 +78,7 @@ public class DealAllOfStage implements Serializable {
   }
 
 
-  public DealAllOfStage name(@jakarta.annotation.Nullable String name) {
+  public DealStage name(@jakarta.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
@@ -102,7 +102,7 @@ public class DealAllOfStage implements Serializable {
   }
 
 
-  public DealAllOfStage pipelineId(@jakarta.annotation.Nullable String pipelineId) {
+  public DealStage pipelineId(@jakarta.annotation.Nullable String pipelineId) {
     this.pipelineId = pipelineId;
     return this;
   }
@@ -126,7 +126,7 @@ public class DealAllOfStage implements Serializable {
   }
 
   /**
-   * Return true if this Deal_allOf_stage object is equal to o.
+   * Return true if this Deal_stage object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -136,10 +136,10 @@ public class DealAllOfStage implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DealAllOfStage dealAllOfStage = (DealAllOfStage) o;
-    return Objects.equals(this.id, dealAllOfStage.id) &&
-        Objects.equals(this.name, dealAllOfStage.name) &&
-        Objects.equals(this.pipelineId, dealAllOfStage.pipelineId);
+    DealStage dealStage = (DealStage) o;
+    return Objects.equals(this.id, dealStage.id) &&
+        Objects.equals(this.name, dealStage.name) &&
+        Objects.equals(this.pipelineId, dealStage.pipelineId);
   }
 
   @Override
@@ -150,7 +150,7 @@ public class DealAllOfStage implements Serializable {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DealAllOfStage {\n");
+    sb.append("class DealStage {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    pipelineId: ").append(toIndentedString(pipelineId)).append("\n");
@@ -171,36 +171,36 @@ public class DealAllOfStage implements Serializable {
 
     public static class Builder {
     
-        private DealAllOfStage instance;
+        private DealStage instance;
     
         public Builder() {
-          this(new DealAllOfStage());
+          this(new DealStage());
         }
     
-        protected Builder(DealAllOfStage instance) {
+        protected Builder(DealStage instance) {
           this.instance = instance;
         }
     
-        public DealAllOfStage.Builder id(String id) {
+        public DealStage.Builder id(String id) {
               this.instance.id = id;
           return this;
         }
-            public DealAllOfStage.Builder name(String name) {
+            public DealStage.Builder name(String name) {
               this.instance.name = name;
           return this;
         }
-            public DealAllOfStage.Builder pipelineId(String pipelineId) {
+            public DealStage.Builder pipelineId(String pipelineId) {
               this.instance.pipelineId = pipelineId;
           return this;
         }
         
     
         /**
-        * returns a built DealAllOfStage instance.
+        * returns a built DealStage instance.
         *
         * The builder is not reusable.
         */
-        public DealAllOfStage build() {
+        public DealStage build() {
           try {
             return this.instance;
           } finally {
@@ -218,15 +218,15 @@ public class DealAllOfStage implements Serializable {
       /**
       * Create a builder with no initialized field.
       */
-      public static DealAllOfStage.Builder builder() {
-        return new DealAllOfStage.Builder();
+      public static DealStage.Builder builder() {
+        return new DealStage.Builder();
       }
     
       /**
       * Create a builder with a shallow copy of this instance.
       */
-      public DealAllOfStage.Builder toBuilder() {
-        return new DealAllOfStage.Builder()
+      public DealStage.Builder toBuilder() {
+        return new DealStage.Builder()
           .id(getId())
           .name(getName())
           .pipelineId(getPipelineId());

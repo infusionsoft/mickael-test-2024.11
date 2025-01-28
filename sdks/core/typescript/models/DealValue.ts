@@ -13,21 +13,17 @@
 import { HttpFile } from '../http/http';
 
 /**
-* The stage of the deal. This field is required and must be valid.
+* The monetary value of the deal. This field is required and must be valid.
 */
-export class DealAllOfStage {
+export class DealValue {
     /**
-    * Unique identifier for the model.
+    * The amount of money. This field is required.
     */
-    'id'?: string;
+    'amount': number;
     /**
-    * The name of the stage.
+    * The currency of the money. This field is required.
     */
-    'name'?: string;
-    /**
-    * The ID of the pipeline.
-    */
-    'pipelineId'?: string;
+    'currency': string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -35,26 +31,20 @@ export class DealAllOfStage {
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
+            "name": "amount",
+            "baseName": "amount",
+            "type": "number",
+            "format": "double"
         },
         {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "pipelineId",
-            "baseName": "pipeline_id",
+            "name": "currency",
+            "baseName": "currency",
             "type": "string",
             "format": ""
         }    ];
 
     static getAttributeTypeMap() {
-        return DealAllOfStage.attributeTypeMap;
+        return DealValue.attributeTypeMap;
     }
 
     public constructor() {

@@ -1,5 +1,5 @@
 # Keap.Sdk.Core.Model.Owner
-Represents an owner entity in the system. Extends the BaseModel class.
+Represents an owner entity in the system.
 
 ## Properties
 

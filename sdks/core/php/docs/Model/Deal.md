@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **status** | **string** | The status of the deal. This field is required. |
 **estimated_close_time** | **\DateTime** | The estimated close time of the deal. This field is optional. | [optional]
 **closed_time** | **\DateTime** | The actual close time of the deal. This field is optional. | [optional]
-**custom_fields** | **array** | The custom fields associated with the deal. This field is optional. | [optional]
+**custom_fields** | **array<string,mixed>** | The custom fields associated with the deal. This field is optional. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

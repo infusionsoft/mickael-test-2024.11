@@ -20,9 +20,9 @@ export class SettingsApiRequestFactory extends BaseAPIRequestFactory {
     /**
      * Get configuration values for the application instance.
      * Get Application Configuration
-     * @param fields By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
+     * @param fields By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
      */
-    public async getApplicationConfigurationsUsingGET(fields?: Array<'affiliate' | 'appointment' | 'contact' | 'ecommerce' | 'email' | 'forms' | 'fulfillment' | 'invoice' | 'note' | 'opportunity' | 'task' | 'template'>, _options?: Configuration): Promise<RequestContext> {
+    public async getApplicationConfigurationsUsingGET(fields?: Array<'AFFILIATE' | 'APPOINTMENT' | 'CONTACT' | 'ECOMMERCE' | 'EMAIL' | 'FORMS' | 'FULFILLMENT' | 'INVOICE' | 'NOTE' | 'OPPORTUNITY' | 'TASK' | 'TEMPLATE'>, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
 
@@ -35,7 +35,7 @@ export class SettingsApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (fields !== undefined) {
-            const serializedParams = ObjectSerializer.serialize(fields, "Array<'affiliate' | 'appointment' | 'contact' | 'ecommerce' | 'email' | 'forms' | 'fulfillment' | 'invoice' | 'note' | 'opportunity' | 'task' | 'template'>", "");
+            const serializedParams = ObjectSerializer.serialize(fields, "Array<'AFFILIATE' | 'APPOINTMENT' | 'CONTACT' | 'ECOMMERCE' | 'EMAIL' | 'FORMS' | 'FULFILLMENT' | 'INVOICE' | 'NOTE' | 'OPPORTUNITY' | 'TASK' | 'TEMPLATE'>", "");
             for (const serializedParam of serializedParams) {
                 requestContext.appendQueryParam("fields", serializedParam);
             }

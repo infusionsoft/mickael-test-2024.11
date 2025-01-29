@@ -159,7 +159,7 @@ export * from '../models/LeadSourceCategory';
 export * from '../models/Link';
 export * from '../models/LinkContactsRequest';
 export * from '../models/ListAffiliateCommissionProgramsResponse';
-export * from '../models/ListAffiliateCommissionResponse';
+export * from '../models/ListAffiliateCommissionsResponse';
 export * from '../models/ListAffiliateLinksResponse';
 export * from '../models/ListAffiliateSummariesResponse';
 export * from '../models/ListAutomationCategoryResponse';
@@ -308,6 +308,7 @@ export * from '../models/UpdateProductCategoryRequest';
 export * from '../models/UpdateProductCommissionProgramRequest';
 export * from '../models/UpdateProductInterestBundleRequest';
 export * from '../models/UpdateProductInventoryRequest';
+export * from '../models/UpdateProductRequest';
 export * from '../models/UpdateShippingDiscountRequest';
 export * from '../models/UpdateStageRequest';
 export * from '../models/UpdateSubscriptionCommissionProgramRequest';
@@ -480,7 +481,7 @@ import { LeadSourceCategory } from '../models/LeadSourceCategory';
 import { Link } from '../models/Link';
 import { LinkContactsRequest } from '../models/LinkContactsRequest';
 import { ListAffiliateCommissionProgramsResponse } from '../models/ListAffiliateCommissionProgramsResponse';
-import { ListAffiliateCommissionResponse } from '../models/ListAffiliateCommissionResponse';
+import { ListAffiliateCommissionsResponse } from '../models/ListAffiliateCommissionsResponse';
 import { ListAffiliateLinksResponse } from '../models/ListAffiliateLinksResponse';
 import { ListAffiliateSummariesResponse } from '../models/ListAffiliateSummariesResponse';
 import { ListAutomationCategoryResponse } from '../models/ListAutomationCategoryResponse';
@@ -629,6 +630,7 @@ import { UpdateProductCategoryRequest } from '../models/UpdateProductCategoryReq
 import { UpdateProductCommissionProgramRequest } from '../models/UpdateProductCommissionProgramRequest';
 import { UpdateProductInterestBundleRequest } from '../models/UpdateProductInterestBundleRequest';
 import { UpdateProductInventoryRequest , UpdateProductInventoryRequestTypeEnum   } from '../models/UpdateProductInventoryRequest';
+import { UpdateProductRequest } from '../models/UpdateProductRequest';
 import { UpdateShippingDiscountRequest  , UpdateShippingDiscountRequestDiscountTypeEnum     } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
 import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
@@ -886,7 +888,7 @@ let typeMap: {[index: string]: any} = {
     "Link": Link,
     "LinkContactsRequest": LinkContactsRequest,
     "ListAffiliateCommissionProgramsResponse": ListAffiliateCommissionProgramsResponse,
-    "ListAffiliateCommissionResponse": ListAffiliateCommissionResponse,
+    "ListAffiliateCommissionsResponse": ListAffiliateCommissionsResponse,
     "ListAffiliateLinksResponse": ListAffiliateLinksResponse,
     "ListAffiliateSummariesResponse": ListAffiliateSummariesResponse,
     "ListAutomationCategoryResponse": ListAutomationCategoryResponse,
@@ -1035,6 +1037,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateProductCommissionProgramRequest": UpdateProductCommissionProgramRequest,
     "UpdateProductInterestBundleRequest": UpdateProductInterestBundleRequest,
     "UpdateProductInventoryRequest": UpdateProductInventoryRequest,
+    "UpdateProductRequest": UpdateProductRequest,
     "UpdateShippingDiscountRequest": UpdateShippingDiscountRequest,
     "UpdateStageRequest": UpdateStageRequest,
     "UpdateSubscriptionCommissionProgramRequest": UpdateSubscriptionCommissionProgramRequest,

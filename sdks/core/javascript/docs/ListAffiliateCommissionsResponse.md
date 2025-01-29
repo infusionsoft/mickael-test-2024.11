@@ -1,4 +1,4 @@
-# KeapCoreServiceCoreSdk.ListAffiliateCommissionResponse
+# KeapCoreServiceCoreSdk.ListAffiliateCommissionsResponse
 
 ## Properties
 

@@ -37,7 +37,7 @@ public class Example {
         defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
-        List<String> fields = Arrays.asList(); // List<String> | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
+        List<String> fields = Arrays.asList(); // List<String> | By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
         try {
             GetSettingsResponse result = apiInstance.getApplicationConfigurationsUsingGET(fields);
             System.out.println(result);
@@ -57,7 +57,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **fields** | [**List&lt;String&gt;**](String.md)| By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional] [enum: affiliate, appointment, contact, ecommerce, email, forms, fulfillment, invoice, note, opportunity, task, template] |
+| **fields** | [**List&lt;String&gt;**](String.md)| By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional] [enum: AFFILIATE, APPOINTMENT, CONTACT, ECOMMERCE, EMAIL, FORMS, FULFILLMENT, INVOICE, NOTE, OPPORTUNITY, TASK, TEMPLATE] |
 
 ### Return type
 
@@ -106,7 +106,7 @@ public class Example {
         defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SettingsApi apiInstance = new SettingsApi(defaultClient);
-        List<String> fields = Arrays.asList(); // List<String> | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
+        List<String> fields = Arrays.asList(); // List<String> | By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
         try {
             ApiResponse<GetSettingsResponse> response = apiInstance.getApplicationConfigurationsUsingGETWithHttpInfo(fields);
             System.out.println("Status code: " + response.getStatusCode());
@@ -128,7 +128,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **fields** | [**List&lt;String&gt;**](String.md)| By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional] [enum: affiliate, appointment, contact, ecommerce, email, forms, fulfillment, invoice, note, opportunity, task, template] |
+| **fields** | [**List&lt;String&gt;**](String.md)| By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional] [enum: AFFILIATE, APPOINTMENT, CONTACT, ECOMMERCE, EMAIL, FORMS, FULFILLMENT, INVOICE, NOTE, OPPORTUNITY, TASK, TEMPLATE] |
 
 ### Return type
 

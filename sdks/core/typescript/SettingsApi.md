@@ -25,9 +25,9 @@ const configuration = createConfiguration();
 const apiInstance = new SettingsApi(configuration);
 
 const request: SettingsApiGetApplicationConfigurationsUsingGETRequest = {
-    // By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. (optional)
+    // By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. (optional)
   fields: [
-    "affiliate",
+    "AFFILIATE",
   ],
 };
 
@@ -40,7 +40,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fields** | **Array<&#39;affiliate&#39; &#124; &#39;appointment&#39; &#124; &#39;contact&#39; &#124; &#39;ecommerce&#39; &#124; &#39;email&#39; &#124; &#39;forms&#39; &#124; &#39;fulfillment&#39; &#124; &#39;invoice&#39; &#124; &#39;note&#39; &#124; &#39;opportunity&#39; &#124; &#39;task&#39; &#124; &#39;template&#39;>** | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | (optional) defaults to undefined
+ **fields** | **Array<&#39;AFFILIATE&#39; &#124; &#39;APPOINTMENT&#39; &#124; &#39;CONTACT&#39; &#124; &#39;ECOMMERCE&#39; &#124; &#39;EMAIL&#39; &#124; &#39;FORMS&#39; &#124; &#39;FULFILLMENT&#39; &#124; &#39;INVOICE&#39; &#124; &#39;NOTE&#39; &#124; &#39;OPPORTUNITY&#39; &#124; &#39;TASK&#39; &#124; &#39;TEMPLATE&#39;>** | By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | (optional) defaults to undefined
 
 
 ### Return type

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_country_code** | **int** |  | [optional] 
-**default_user_id** | **int** |  | [optional] 
+**default_user_id** | **str** |  | [optional] 
 
 ## Example
 

@@ -1,6 +1,6 @@
 
 
-# ListAffiliateCommissionResponse
+# ListAffiliateCommissionsResponse
 
 
 ## Properties

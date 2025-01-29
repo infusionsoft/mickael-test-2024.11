@@ -33,7 +33,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new SettingsApi(config);
-            var fields = new List<string>?(); // List<string>? | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. (optional) 
+            var fields = new List<string>?(); // List<string>? | By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. (optional) 
 
             try
             {
@@ -76,7 +76,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **fields** | [**List&lt;string&gt;?**](string.md) | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional]  |
+| **fields** | [**List&lt;string&gt;?**](string.md) | By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional]  |
 
 ### Return type
 

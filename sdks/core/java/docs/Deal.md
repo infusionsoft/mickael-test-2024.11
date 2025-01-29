@@ -21,7 +21,7 @@ Represents a deal.
 |**status** | **String** | The status of the deal. This field is required. |  |
 |**estimatedCloseTime** | **ZonedDateTime** | The estimated close time of the deal. This field is optional. |  [optional] |
 |**closedTime** | **ZonedDateTime** | The actual close time of the deal. This field is optional. |  [optional] |
-|**customFields** | [**Map**](Map.md) | The custom fields associated with the deal. This field is optional. |  [optional] |
+|**customFields** | **Map&lt;String, Object&gt;** | The custom fields associated with the deal. This field is optional. |  [optional] |
 
 
 ## Implemented Interfaces

@@ -163,7 +163,7 @@ import { LeadSourceCategory } from '../models/LeadSourceCategory';
 import { Link } from '../models/Link';
 import { LinkContactsRequest } from '../models/LinkContactsRequest';
 import { ListAffiliateCommissionProgramsResponse } from '../models/ListAffiliateCommissionProgramsResponse';
-import { ListAffiliateCommissionResponse } from '../models/ListAffiliateCommissionResponse';
+import { ListAffiliateCommissionsResponse } from '../models/ListAffiliateCommissionsResponse';
 import { ListAffiliateLinksResponse } from '../models/ListAffiliateLinksResponse';
 import { ListAffiliateSummariesResponse } from '../models/ListAffiliateSummariesResponse';
 import { ListAutomationCategoryResponse } from '../models/ListAutomationCategoryResponse';
@@ -312,6 +312,7 @@ import { UpdateProductCategoryRequest } from '../models/UpdateProductCategoryReq
 import { UpdateProductCommissionProgramRequest } from '../models/UpdateProductCommissionProgramRequest';
 import { UpdateProductInterestBundleRequest } from '../models/UpdateProductInterestBundleRequest';
 import { UpdateProductInventoryRequest } from '../models/UpdateProductInventoryRequest';
+import { UpdateProductRequest } from '../models/UpdateProductRequest';
 import { UpdateShippingDiscountRequest } from '../models/UpdateShippingDiscountRequest';
 import { UpdateStageRequest } from '../models/UpdateStageRequest';
 import { UpdateSubscriptionCommissionProgramRequest } from '../models/UpdateSubscriptionCommissionProgramRequest';
@@ -2975,9 +2976,9 @@ export class ObservableSettingsApi {
     /**
      * Get configuration values for the application instance.
      * Get Application Configuration
-     * @param [fields] By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
+     * @param [fields] By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
      */
-    public getApplicationConfigurationsUsingGETWithHttpInfo(fields?: Array<'affiliate' | 'appointment' | 'contact' | 'ecommerce' | 'email' | 'forms' | 'fulfillment' | 'invoice' | 'note' | 'opportunity' | 'task' | 'template'>, _options?: Configuration): Observable<HttpInfo<GetSettingsResponse>> {
+    public getApplicationConfigurationsUsingGETWithHttpInfo(fields?: Array<'AFFILIATE' | 'APPOINTMENT' | 'CONTACT' | 'ECOMMERCE' | 'EMAIL' | 'FORMS' | 'FULFILLMENT' | 'INVOICE' | 'NOTE' | 'OPPORTUNITY' | 'TASK' | 'TEMPLATE'>, _options?: Configuration): Observable<HttpInfo<GetSettingsResponse>> {
         const requestContextPromise = this.requestFactory.getApplicationConfigurationsUsingGET(fields, _options);
 
         // build promise chain
@@ -2999,9 +3000,9 @@ export class ObservableSettingsApi {
     /**
      * Get configuration values for the application instance.
      * Get Application Configuration
-     * @param [fields] By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
+     * @param [fields] By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
      */
-    public getApplicationConfigurationsUsingGET(fields?: Array<'affiliate' | 'appointment' | 'contact' | 'ecommerce' | 'email' | 'forms' | 'fulfillment' | 'invoice' | 'note' | 'opportunity' | 'task' | 'template'>, _options?: Configuration): Observable<GetSettingsResponse> {
+    public getApplicationConfigurationsUsingGET(fields?: Array<'AFFILIATE' | 'APPOINTMENT' | 'CONTACT' | 'ECOMMERCE' | 'EMAIL' | 'FORMS' | 'FULFILLMENT' | 'INVOICE' | 'NOTE' | 'OPPORTUNITY' | 'TASK' | 'TEMPLATE'>, _options?: Configuration): Observable<GetSettingsResponse> {
         return this.getApplicationConfigurationsUsingGETWithHttpInfo(fields, _options).pipe(map((apiResponse: HttpInfo<GetSettingsResponse>) => apiResponse.data));
     }
 

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **status** | **str** | The status of the deal. This field is required. | 
 **estimated_close_time** | **datetime** | The estimated close time of the deal. This field is optional. | [optional] 
 **closed_time** | **datetime** | The actual close time of the deal. This field is optional. | [optional] 
-**custom_fields** | **Dict** | The custom fields associated with the deal. This field is optional. | [optional] 
+**custom_fields** | **Dict[str, object]** | The custom fields associated with the deal. This field is optional. | [optional] 
 
 ## Example
 

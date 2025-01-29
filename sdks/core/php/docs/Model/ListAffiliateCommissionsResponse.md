@@ -1,4 +1,4 @@
-# # ListAffiliateCommissionResponse
+# # ListAffiliateCommissionsResponse
 
 ## Properties
 

@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.768375
+- API version: 2.70.0.770650
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.sdk</groupId>
   <artifactId>core-service-core-java-sdk</artifactId>
-  <version>0.0.123</version>
+  <version>0.0.124</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.sdk:core-service-core-java-sdk:0.0.123"
+compile "com.keap.sdk:core-service-core-java-sdk:0.0.124"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-core-java-sdk-0.0.123.jar`
+- `target/core-service-core-java-sdk-0.0.124.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -456,7 +456,7 @@ Class | Method | HTTP request | Description
  - [Link](docs/Link.md)
  - [LinkContactsRequest](docs/LinkContactsRequest.md)
  - [ListAffiliateCommissionProgramsResponse](docs/ListAffiliateCommissionProgramsResponse.md)
- - [ListAffiliateCommissionResponse](docs/ListAffiliateCommissionResponse.md)
+ - [ListAffiliateCommissionsResponse](docs/ListAffiliateCommissionsResponse.md)
  - [ListAffiliateLinksResponse](docs/ListAffiliateLinksResponse.md)
  - [ListAffiliateSummariesResponse](docs/ListAffiliateSummariesResponse.md)
  - [ListAutomationCategoryResponse](docs/ListAutomationCategoryResponse.md)
@@ -604,6 +604,7 @@ Class | Method | HTTP request | Description
  - [UpdateProductCommissionProgramRequest](docs/UpdateProductCommissionProgramRequest.md)
  - [UpdateProductInterestBundleRequest](docs/UpdateProductInterestBundleRequest.md)
  - [UpdateProductInventoryRequest](docs/UpdateProductInventoryRequest.md)
+ - [UpdateProductRequest](docs/UpdateProductRequest.md)
  - [UpdateShippingDiscountRequest](docs/UpdateShippingDiscountRequest.md)
  - [UpdateStageRequest](docs/UpdateStageRequest.md)
  - [UpdateSubscriptionCommissionProgramRequest](docs/UpdateSubscriptionCommissionProgramRequest.md)

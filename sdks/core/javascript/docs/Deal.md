@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **status** | **String** | The status of the deal. This field is required. | 
 **estimatedCloseTime** | **Date** | The estimated close time of the deal. This field is optional. | [optional] 
 **closedTime** | **Date** | The actual close time of the deal. This field is optional. | [optional] 
-**customFields** | **Object** | The custom fields associated with the deal. This field is optional. | [optional] 
+**customFields** | **{String: Object}** | The custom fields associated with the deal. This field is optional. | [optional] 
 
 

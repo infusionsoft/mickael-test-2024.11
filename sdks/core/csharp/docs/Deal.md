@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **Status** | **string** | The status of the deal. This field is required. | 
 **EstimatedCloseTime** | **DateTime?** | The estimated close time of the deal. This field is optional. | [optional] 
 **ClosedTime** | **DateTime?** | The actual close time of the deal. This field is optional. | [optional] 
-**CustomFields** | **Dictionary** | The custom fields associated with the deal. This field is optional. | [optional] 
+**CustomFields** | **Dictionary&lt;string, Object&gt;** | The custom fields associated with the deal. This field is optional. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

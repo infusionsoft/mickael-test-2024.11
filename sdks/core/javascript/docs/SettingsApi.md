@@ -25,7 +25,7 @@ import KeapCoreServiceCoreSdk from 'keap-core-service-core-sdk';
 
 let apiInstance = new KeapCoreServiceCoreSdk.SettingsApi();
 let opts = {
-  'fields': ["null"] // [String] | By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
+  'fields': ["null"] // [String] | By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query.
 };
 apiInstance.getApplicationConfigurationsUsingGET(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -40,7 +40,7 @@ apiInstance.getApplicationConfigurationsUsingGET(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fields** | [**[String]**](String.md)| By default only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional] 
+ **fields** | [**[String]**](String.md)| By default, only application data is returned. In addition to that, data is returned for the fields that are mentioned in the query. | [optional] 
 
 ### Return type
 

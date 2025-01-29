@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**defaultCountryCode** | **Integer** |  |  [optional] |
-|**defaultUserId** | **Long** |  |  [optional] |
+|**defaultUserId** | **String** |  |  [optional] |
 
 
 ## Implemented Interfaces

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: Keap REST Core Service
-  version: 2.70.0.768375
+  version: 2.70.0.770650
   title: Keap REST API
   termsOfService: https://keap.com/legal
   contact:
@@ -3061,7 +3061,7 @@ paths:
       parameters:
       - name: fields
         in: query
-        description: By default only application data is returned. In addition to
+        description: By default, only application data is returned. In addition to
           that, data is returned for the fields that are mentioned in the query.
         required: false
         allowEmptyValue: false
@@ -3071,31 +3071,31 @@ paths:
           items:
             type: string
             enum:
-            - affiliate
-            - appointment
-            - contact
-            - ecommerce
-            - email
-            - forms
-            - fulfillment
-            - invoice
-            - note
-            - opportunity
-            - task
-            - template
+            - AFFILIATE
+            - APPOINTMENT
+            - CONTACT
+            - ECOMMERCE
+            - EMAIL
+            - FORMS
+            - FULFILLMENT
+            - INVOICE
+            - NOTE
+            - OPPORTUNITY
+            - TASK
+            - TEMPLATE
           enum:
-          - affiliate
-          - appointment
-          - contact
-          - ecommerce
-          - email
-          - forms
-          - fulfillment
-          - invoice
-          - note
-          - opportunity
-          - task
-          - template
+          - AFFILIATE
+          - APPOINTMENT
+          - CONTACT
+          - ECOMMERCE
+          - EMAIL
+          - FORMS
+          - FULFILLMENT
+          - INVOICE
+          - NOTE
+          - OPPORTUNITY
+          - TASK
+          - TEMPLATE
       responses:
         '200':
           description: OK
@@ -4119,6 +4119,13 @@ servers:
 - url: https://api.keap.com/crm/rest
 components:
   requestBodies:
+    CreateLeadSourceRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateLeadSourceRequest'
+      description: request
+      required: true
     CreateUpdateContactRequest:
       content:
         application/json:
@@ -4654,8 +4661,7 @@ components:
           type: integer
           format: int32
         default_user_id:
-          type: integer
-          format: int64
+          type: string
       title: ApplicationConfigurationModuleTemplate
     ApplicationFeaturesEnabled:
       type: object
@@ -6418,13 +6424,10 @@ components:
           format: date-time
           nullable: true
         custom_fields:
+          type: object
+          additionalProperties: true
           description: The custom fields associated with the deal. This field is optional.
           nullable: true
-          allOf:
-          - type: object
-            additionalProperties: true
-          - {
-            }
       description: Represents a deal.
     DealContact:
       required:
@@ -7402,10 +7405,10 @@ components:
         next_page_token:
           type: string
       title: ListAffiliateCommissionProgramsResponse
-    ListAffiliateCommissionResponse:
+    ListAffiliateCommissionsResponse:
       type: object
       properties:
-        AffiliateCommissions:
+        affiliate_commissions:
           type: array
           items:
             $ref: '#/components/schemas/AffiliateCommission'
@@ -7420,7 +7423,7 @@ components:
         total_comm_earned:
           type: number
           format: double
-      title: ListAffiliateCommissionResponse
+      title: ListAffiliateCommissionsResponse
     ListAffiliateLinksResponse:
       type: object
       properties:
@@ -10124,6 +10127,52 @@ components:
           - INCREASE
           - DECREASE
       title: UpdateProductInventoryRequest
+    UpdateProductRequest:
+      type: object
+      properties:
+        active:
+          type: boolean
+          description: True means active, False means inactive
+        city_taxable:
+          type: boolean
+          description: If city-based taxes should be applied to this product
+        country_taxable:
+          type: boolean
+          description: If country-based taxes should be applied to this product
+        description:
+          type: string
+          description: Product long description
+        name:
+          type: string
+          description: Product name
+        price:
+          type: integer
+          format: int64
+          description: The product price. The value is in the currency’s smallest
+            unit. e.g. $12.50 is 1250.
+        short_description:
+          type: string
+          description: Product short description
+        sku:
+          type: string
+          description: Product SKU
+        state_taxable:
+          type: boolean
+          description: If state-based taxes should be applied to this product
+        storefront_hidden:
+          type: boolean
+          description: If the product should not be shown in the storefront
+        subscription_only:
+          type: boolean
+          description: If the product is a subscription-only product
+        taxable:
+          type: boolean
+          description: Whether or not the product should be taxed
+        weight:
+          type: number
+          format: double
+          description: Product weight
+      title: UpdateProductRequest
     UpdateShippingDiscountRequest:
       type: object
       properties:

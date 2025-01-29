@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **defaultCountryCode** | **Number** |  | [optional] 
-**defaultUserId** | **Number** |  | [optional] 
+**defaultUserId** | **String** |  | [optional] 
 
 

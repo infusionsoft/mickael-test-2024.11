@@ -82,6 +82,7 @@ import { CreateEmailSentRequest } from '../models/CreateEmailSentRequest';
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
+import { CreateLeadSourceRecurringExpenseRequest } from '../models/CreateLeadSourceRecurringExpenseRequest';
 import { CreateLeadSourceRequest } from '../models/CreateLeadSourceRequest';
 import { CreateNoteRequest } from '../models/CreateNoteRequest';
 import { CreateOpportunityRequest } from '../models/CreateOpportunityRequest';
@@ -150,7 +151,7 @@ import { GetContactOptionTypesResponse } from '../models/GetContactOptionTypesRe
 import { GetNoteResponse } from '../models/GetNoteResponse';
 import { GetSettingsResponse } from '../models/GetSettingsResponse';
 import { GetTagCategoryResponse } from '../models/GetTagCategoryResponse';
-import { GetUserInfoResponseBase } from '../models/GetUserInfoResponseBase';
+import { GetUserInfoResponse } from '../models/GetUserInfoResponse';
 import { Goal } from '../models/Goal';
 import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment } from '../models/InvoiceOrderPayment';
@@ -159,6 +160,7 @@ import { LandingPage } from '../models/LandingPage';
 import { LeadScore } from '../models/LeadScore';
 import { LeadSource } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
+import { LeadSourceRecurringExpense } from '../models/LeadSourceRecurringExpense';
 import { Link } from '../models/Link';
 import { LinkContactsRequest } from '../models/LinkContactsRequest';
 import { ListAffiliateCommissionProgramsResponse } from '../models/ListAffiliateCommissionProgramsResponse';
@@ -2079,7 +2081,7 @@ export class PromiseSalesApi {
      * Set default Merchant Account
      * @param id id
      */
-    public setMerchantGatewayAsDefaultUsingPOSTWithHttpInfo(id: number, _options?: Configuration): Promise<HttpInfo<void>> {
+    public setMerchantGatewayAsDefaultUsingPOSTWithHttpInfo(id: string, _options?: Configuration): Promise<HttpInfo<void>> {
         const result = this.api.setMerchantGatewayAsDefaultUsingPOSTWithHttpInfo(id, _options);
         return result.toPromise();
     }
@@ -2089,7 +2091,7 @@ export class PromiseSalesApi {
      * Set default Merchant Account
      * @param id id
      */
-    public setMerchantGatewayAsDefaultUsingPOST(id: number, _options?: Configuration): Promise<void> {
+    public setMerchantGatewayAsDefaultUsingPOST(id: string, _options?: Configuration): Promise<void> {
         const result = this.api.setMerchantGatewayAsDefaultUsingPOST(id, _options);
         return result.toPromise();
     }

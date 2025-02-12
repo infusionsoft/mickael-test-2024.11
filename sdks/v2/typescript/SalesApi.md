@@ -24,7 +24,7 @@ const apiInstance = new SalesApi(configuration);
 
 const request: SalesApiSetMerchantGatewayAsDefaultUsingPOSTRequest = {
     // id
-  id: 1,
+  id: "id_example",
 };
 
 const data = await apiInstance.setMerchantGatewayAsDefaultUsingPOST(request);
@@ -36,7 +36,7 @@ console.log('API called successfully. Returned data:', data);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**number**] | id | defaults to undefined
+ **id** | [**string**] | id | defaults to undefined
 
 
 ### Return type

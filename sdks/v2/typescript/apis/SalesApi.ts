@@ -19,7 +19,7 @@ export class SalesApiRequestFactory extends BaseAPIRequestFactory {
      * Set default Merchant Account
      * @param id id
      */
-    public async setMerchantGatewayAsDefaultUsingPOST(id: number, _options?: Configuration): Promise<RequestContext> {
+    public async setMerchantGatewayAsDefaultUsingPOST(id: string, _options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // verify required parameter 'id' is not null or undefined

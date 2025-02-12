@@ -22,7 +22,7 @@ Sets the specified Merchant Account as the default Merchant Account.
 import KeapCoreServiceV2Sdk from 'keap-core-service-v2-sdk';
 
 let apiInstance = new KeapCoreServiceV2Sdk.SalesApi();
-let id = 789; // Number | id
+let id = "id_example"; // String | id
 apiInstance.setMerchantGatewayAsDefaultUsingPOST(id).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -36,7 +36,7 @@ apiInstance.setMerchantGatewayAsDefaultUsingPOST(id).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| id | 
+ **id** | **String**| id | 
 
 ### Return type
 

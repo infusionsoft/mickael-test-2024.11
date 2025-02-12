@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: Keap REST Core Service
-  version: 2.70.0.772488
+  version: 2.70.0.775756
   title: Keap REST API
   termsOfService: https://keap.com/legal
   contact:
@@ -42,6 +42,8 @@ tags:
   description: Rest Landing Page Controller
 - name: Lead Source Categories
   description: Rest Lead Source Category Controller
+- name: Lead Source Recurring Expenses
+  description: Rest Lead Source Recurring Expense Controller
 - name: Lead Sources
   description: Rest Lead Source Controller
 - name: LeadScore
@@ -3033,8 +3035,7 @@ paths:
         description: id
         required: true
         schema:
-          type: integer
-          format: int64
+          type: string
       responses:
         '200':
           description: OK
@@ -5526,6 +5527,29 @@ components:
           items:
             $ref: '#/components/schemas/FunnelIntegrationTriggerEventDTO'
       title: CreateFunnelIntegrationTriggerEvents
+    CreateLeadSourceRecurringExpenseRequest:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: int64
+          description: The monthly cost of this lead source recurring expense. The
+            value should be in the smallest unit of currency for your currency locale.
+            For example, if your currency locale is USD, then the smallest unit of
+            currency is in cents, $225.50 would be provided in the request as 22550
+        end_time:
+          type: string
+          description: The time this lead source recurring expense ends
+        notes:
+          type: string
+          description: The notes for the lead source recurring expense
+        start_time:
+          type: string
+          description: The time this lead source recurring expense starts
+        title:
+          type: string
+          description: The title of the lead source recurring expense
+      title: CreateLeadSourceRecurringExpenseRequest
     CreateLeadSourceRequest:
       type: object
       properties:
@@ -7151,7 +7175,7 @@ components:
         name:
           type: string
       title: GetTagCategoryResponse
-    GetUserInfoResponseBase:
+    GetUserInfoResponse:
       type: object
       properties:
         email:
@@ -7161,7 +7185,7 @@ components:
         given_name:
           type: string
         id:
-          type: object
+          type: string
         is_admin:
           type: boolean
         keap_id:
@@ -7172,7 +7196,7 @@ components:
           type: string
         sub:
           type: string
-      title: GetUserInfoResponseBase
+      title: GetUserInfoResponse
     Goal:
       type: object
       properties:
@@ -7373,6 +7397,37 @@ components:
         name:
           type: string
       title: LeadSourceCategory
+    LeadSourceRecurringExpense:
+      type: object
+      properties:
+        amount:
+          $ref: '#/components/schemas/CurrencyValue'
+        create_time:
+          type: string
+          description: The time this lead source recurring expense was created
+        end_time:
+          type: string
+          description: The time this lead source recurring expense end
+        id:
+          type: string
+          description: ID of the lead source recurring expense
+        next_expense_time:
+          type: string
+          description: The time this lead source recurring expense will incur a new
+            expense
+        notes:
+          type: string
+          description: The notes for the lead source recurring expense
+        start_time:
+          type: string
+          description: The time this lead source recurring expense starts
+        title:
+          type: string
+          description: The title of the lead source recurring expense
+        update_time:
+          type: string
+          description: The time this lead source recurring expense was last updated
+      title: LeadSourceRecurringExpense
     Link:
       type: object
       properties:

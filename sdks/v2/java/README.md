@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.772488
+- API version: 2.70.0.775756
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.core</groupId>
   <artifactId>core-service-v2-java-sdk</artifactId>
-  <version>0.0.152</version>
+  <version>0.0.153</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.core:core-service-v2-java-sdk:0.0.152"
+compile "com.keap.core:core-service-v2-java-sdk:0.0.153"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-v2-java-sdk-0.0.152.jar`
+- `target/core-service-v2-java-sdk-0.0.153.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -375,6 +375,7 @@ Class | Method | HTTP request | Description
  - [CreateEmailsSentRequest](docs/CreateEmailsSentRequest.md)
  - [CreateFunnelIntegrationRequest](docs/CreateFunnelIntegrationRequest.md)
  - [CreateFunnelIntegrationTriggerEvents](docs/CreateFunnelIntegrationTriggerEvents.md)
+ - [CreateLeadSourceRecurringExpenseRequest](docs/CreateLeadSourceRecurringExpenseRequest.md)
  - [CreateLeadSourceRequest](docs/CreateLeadSourceRequest.md)
  - [CreateNoteRequest](docs/CreateNoteRequest.md)
  - [CreateOpportunityRequest](docs/CreateOpportunityRequest.md)
@@ -444,7 +445,7 @@ Class | Method | HTTP request | Description
  - [GetNoteResponse](docs/GetNoteResponse.md)
  - [GetSettingsResponse](docs/GetSettingsResponse.md)
  - [GetTagCategoryResponse](docs/GetTagCategoryResponse.md)
- - [GetUserInfoResponseBase](docs/GetUserInfoResponseBase.md)
+ - [GetUserInfoResponse](docs/GetUserInfoResponse.md)
  - [Goal](docs/Goal.md)
  - [HistoricalCounts](docs/HistoricalCounts.md)
  - [InvoiceOrderPayment](docs/InvoiceOrderPayment.md)
@@ -453,6 +454,7 @@ Class | Method | HTTP request | Description
  - [LeadScore](docs/LeadScore.md)
  - [LeadSource](docs/LeadSource.md)
  - [LeadSourceCategory](docs/LeadSourceCategory.md)
+ - [LeadSourceRecurringExpense](docs/LeadSourceRecurringExpense.md)
  - [Link](docs/Link.md)
  - [LinkContactsRequest](docs/LinkContactsRequest.md)
  - [ListAffiliateCommissionProgramsResponse](docs/ListAffiliateCommissionProgramsResponse.md)

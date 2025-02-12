@@ -33,7 +33,7 @@ public class Example {
         defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SalesApi apiInstance = new SalesApi(defaultClient);
-        Long id = 56L; // Long | id
+        String id = "id_example"; // String | id
         try {
             apiInstance.setMerchantGatewayAsDefaultUsingPOST(id);
         } catch (ApiException e) {
@@ -52,7 +52,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **Long**| id | |
+| **id** | **String**| id | |
 
 ### Return type
 
@@ -100,7 +100,7 @@ public class Example {
         defaultClient.setBasePath("https://api.keap.com/crm/rest");
 
         SalesApi apiInstance = new SalesApi(defaultClient);
-        Long id = 56L; // Long | id
+        String id = "id_example"; // String | id
         try {
             ApiResponse<Void> response = apiInstance.setMerchantGatewayAsDefaultUsingPOSTWithHttpInfo(id);
             System.out.println("Status code: " + response.getStatusCode());
@@ -121,7 +121,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **Long**| id | |
+| **id** | **String**| id | |
 
 ### Return type
 

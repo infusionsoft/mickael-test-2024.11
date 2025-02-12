@@ -79,6 +79,7 @@ export * from '../models/CreateEmailSentRequest';
 export * from '../models/CreateEmailsSentRequest';
 export * from '../models/CreateFunnelIntegrationRequest';
 export * from '../models/CreateFunnelIntegrationTriggerEvents';
+export * from '../models/CreateLeadSourceRecurringExpenseRequest';
 export * from '../models/CreateLeadSourceRequest';
 export * from '../models/CreateNoteRequest';
 export * from '../models/CreateOpportunityRequest';
@@ -147,7 +148,7 @@ export * from '../models/GetContactOptionTypesResponse';
 export * from '../models/GetNoteResponse';
 export * from '../models/GetSettingsResponse';
 export * from '../models/GetTagCategoryResponse';
-export * from '../models/GetUserInfoResponseBase';
+export * from '../models/GetUserInfoResponse';
 export * from '../models/Goal';
 export * from '../models/HistoricalCounts';
 export * from '../models/InvoiceOrderPayment';
@@ -156,6 +157,7 @@ export * from '../models/LandingPage';
 export * from '../models/LeadScore';
 export * from '../models/LeadSource';
 export * from '../models/LeadSourceCategory';
+export * from '../models/LeadSourceRecurringExpense';
 export * from '../models/Link';
 export * from '../models/LinkContactsRequest';
 export * from '../models/ListAffiliateCommissionProgramsResponse';
@@ -401,6 +403,7 @@ import { CreateEmailSentRequest     , CreateEmailSentRequestOriginalProviderEnum
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
+import { CreateLeadSourceRecurringExpenseRequest } from '../models/CreateLeadSourceRecurringExpenseRequest';
 import { CreateLeadSourceRequest       , CreateLeadSourceRequestStatusEnum    } from '../models/CreateLeadSourceRequest';
 import { CreateNoteRequest } from '../models/CreateNoteRequest';
 import { CreateOpportunityRequest } from '../models/CreateOpportunityRequest';
@@ -469,7 +472,7 @@ import { GetContactOptionTypesResponse } from '../models/GetContactOptionTypesRe
 import { GetNoteResponse } from '../models/GetNoteResponse';
 import { GetSettingsResponse } from '../models/GetSettingsResponse';
 import { GetTagCategoryResponse } from '../models/GetTagCategoryResponse';
-import { GetUserInfoResponseBase } from '../models/GetUserInfoResponseBase';
+import { GetUserInfoResponse } from '../models/GetUserInfoResponse';
 import { Goal     , GoalTypeEnum   } from '../models/Goal';
 import { HistoricalCounts } from '../models/HistoricalCounts';
 import { InvoiceOrderPayment     , InvoiceOrderPaymentPayStatusEnum       } from '../models/InvoiceOrderPayment';
@@ -478,6 +481,7 @@ import { LandingPage } from '../models/LandingPage';
 import { LeadScore } from '../models/LeadScore';
 import { LeadSource        , LeadSourceStatusEnum    } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
+import { LeadSourceRecurringExpense } from '../models/LeadSourceRecurringExpense';
 import { Link } from '../models/Link';
 import { LinkContactsRequest } from '../models/LinkContactsRequest';
 import { ListAffiliateCommissionProgramsResponse } from '../models/ListAffiliateCommissionProgramsResponse';
@@ -809,6 +813,7 @@ let typeMap: {[index: string]: any} = {
     "CreateEmailsSentRequest": CreateEmailsSentRequest,
     "CreateFunnelIntegrationRequest": CreateFunnelIntegrationRequest,
     "CreateFunnelIntegrationTriggerEvents": CreateFunnelIntegrationTriggerEvents,
+    "CreateLeadSourceRecurringExpenseRequest": CreateLeadSourceRecurringExpenseRequest,
     "CreateLeadSourceRequest": CreateLeadSourceRequest,
     "CreateNoteRequest": CreateNoteRequest,
     "CreateOpportunityRequest": CreateOpportunityRequest,
@@ -876,7 +881,7 @@ let typeMap: {[index: string]: any} = {
     "GetNoteResponse": GetNoteResponse,
     "GetSettingsResponse": GetSettingsResponse,
     "GetTagCategoryResponse": GetTagCategoryResponse,
-    "GetUserInfoResponseBase": GetUserInfoResponseBase,
+    "GetUserInfoResponse": GetUserInfoResponse,
     "Goal": Goal,
     "HistoricalCounts": HistoricalCounts,
     "InvoiceOrderPayment": InvoiceOrderPayment,
@@ -885,6 +890,7 @@ let typeMap: {[index: string]: any} = {
     "LeadScore": LeadScore,
     "LeadSource": LeadSource,
     "LeadSourceCategory": LeadSourceCategory,
+    "LeadSourceRecurringExpense": LeadSourceRecurringExpense,
     "Link": Link,
     "LinkContactsRequest": LinkContactsRequest,
     "ListAffiliateCommissionProgramsResponse": ListAffiliateCommissionProgramsResponse,

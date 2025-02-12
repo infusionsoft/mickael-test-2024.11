@@ -1,4 +1,4 @@
-# KeapCoreServiceV2Sdk.GetUserInfoResponseBase
+# KeapCoreServiceV2Sdk.GetUserInfoResponse
 
 ## Properties
 
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **familyName** | **String** |  | [optional] 
 **givenName** | **String** |  | [optional] 
-**id** | **Object** |  | [optional] 
+**id** | **String** |  | [optional] 
 **isAdmin** | **Boolean** |  | [optional] 
 **keapId** | **String** |  | [optional] 
 **middleName** | **String** |  | [optional] 

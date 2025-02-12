@@ -32,7 +32,7 @@ configuration = keap_core_v2_client.Configuration(
 with keap_core_v2_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = keap_core_v2_client.SalesApi(api_client)
-    id = 56 # int | id
+    id = 'id_example' # str | id
 
     try:
         # Set default Merchant Account
@@ -47,7 +47,7 @@ with keap_core_v2_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| id | 
+ **id** | **str**| id | 
 
 ### Return type
 

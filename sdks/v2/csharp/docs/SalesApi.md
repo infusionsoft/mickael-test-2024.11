@@ -8,7 +8,7 @@ All URIs are relative to *https://api.keap.com/crm/rest*
 
 <a id="setmerchantgatewayasdefaultusingpost"></a>
 # **SetMerchantGatewayAsDefaultUsingPOST**
-> void SetMerchantGatewayAsDefaultUsingPOST (long id)
+> void SetMerchantGatewayAsDefaultUsingPOST (string id)
 
 Set default Merchant Account
 
@@ -31,7 +31,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://api.keap.com/crm/rest";
             var apiInstance = new SalesApi(config);
-            var id = 789L;  // long | id
+            var id = "id_example";  // string | id
 
             try
             {
@@ -70,7 +70,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **id** | **long** | id |  |
+| **id** | **string** | id |  |
 
 ### Return type
 

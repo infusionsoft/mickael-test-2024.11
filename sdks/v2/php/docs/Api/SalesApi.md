@@ -29,7 +29,7 @@ $apiInstance = new Keap\Core\V2\Api\SalesApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 56; // int | id
+$id = 'id_example'; // string | id
 
 try {
     $apiInstance->setMerchantGatewayAsDefaultUsingPOST($id);
@@ -42,7 +42,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **int**| id | |
+| **id** | **string**| id | |
 
 ### Return type
 

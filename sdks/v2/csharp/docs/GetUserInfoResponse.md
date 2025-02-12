@@ -1,4 +1,4 @@
-# Keap.Core.V2.Model.GetUserInfoResponseBase
+# Keap.Core.V2.Model.GetUserInfoResponse
 
 ## Properties
 
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Email** | **string** |  | [optional] 
 **FamilyName** | **string** |  | [optional] 
 **GivenName** | **string** |  | [optional] 
-**Id** | **Object** |  | [optional] 
+**Id** | **string** |  | [optional] 
 **IsAdmin** | **bool** |  | [optional] 
 **KeapId** | **string** |  | [optional] 
 **MiddleName** | **string** |  | [optional] 

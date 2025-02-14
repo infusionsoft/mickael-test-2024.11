@@ -104,8 +104,7 @@ namespace Keap.Core.V2.Client
                 return response.RawBytes;
             }
 
-            // TODO: ? if (type.IsAssignableFrom(typeof(Stream)))
-            if (type == typeof(Stream))
+            if (type.IsSubclassOf(typeof(Stream)))
             {
                 var bytes = response.RawBytes;
                 if (response.Headers != null)
@@ -353,10 +352,6 @@ namespace Keap.Core.V2.Client
                         if (contentTypes == null || contentTypes.Any(header => header.Contains("application/json")))
                         {
                             request.RequestFormat = DataFormat.Json;
-                        }
-                        else
-                        {
-                            // TODO: Generated client user should add additional handlers. RestSharp only supports XML and JSON, with XML as default.
                         }
                     }
                     else

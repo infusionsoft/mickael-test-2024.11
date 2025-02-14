@@ -1,6 +1,6 @@
 {
     "name": "infusionsoft/keap-sdk",
-    "version": "0.0.156",
+    "version": "0.0.157",
     "description": "Keap REST Core Service",
     "keywords": [
         "openapitools",

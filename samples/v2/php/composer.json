@@ -4,9 +4,9 @@
             "type": "package",
             "package": {
                 "name": "keap/sdk-v2",
-                "version": "Will be updated by the build script",
+                "version": "Add your version here",
                 "dist": {
-                    "url": "Will be updated by the build script",
+                    "url": "Add your version here",
                     "type": "phar"
                 },
                 "autoload": {
@@ -22,6 +22,6 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5",
-        "keap/sdk-v2": "Will be updated by the build script"
+        "keap/sdk-v2": "Add your version here"
     }
 }

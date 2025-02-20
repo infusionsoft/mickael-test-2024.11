@@ -2,7 +2,7 @@
 
 Keap REST API
 
-- API version: 2.70.0.775756
+- API version: 2.70.0.778988
 
 - Generator version: 7.10.0
 
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.keap.core</groupId>
   <artifactId>core-service-v2-java-sdk</artifactId>
-  <version>0.0.169</version>
+  <version>0.0.170</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.keap.core:core-service-v2-java-sdk:0.0.169"
+compile "com.keap.core:core-service-v2-java-sdk:0.0.170"
 ```
 
 ### Others
@@ -66,7 +66,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/core-service-v2-java-sdk-0.0.169.jar`
+- `target/core-service-v2-java-sdk-0.0.170.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -200,6 +200,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**deleteEmailUsingDELETE1WithHttpInfo**](docs/EmailApi.md#deleteEmailUsingDELETE1WithHttpInfo) | **DELETE** /v2/emails/{id} | Delete an Email Record
 *EmailApi* | [**deleteEmailsUsingPOST1**](docs/EmailApi.md#deleteEmailsUsingPOST1) | **POST** /v2/emails:batchRemove | Remove a set of Email Records
 *EmailApi* | [**deleteEmailsUsingPOST1WithHttpInfo**](docs/EmailApi.md#deleteEmailsUsingPOST1WithHttpInfo) | **POST** /v2/emails:batchRemove | Remove a set of Email Records
+*EmailApi* | [**getEmailTemplateUsingGET**](docs/EmailApi.md#getEmailTemplateUsingGET) | **GET** /v2/emails/templates/{email_template_id} | Retrieve an email template
+*EmailApi* | [**getEmailTemplateUsingGETWithHttpInfo**](docs/EmailApi.md#getEmailTemplateUsingGETWithHttpInfo) | **GET** /v2/emails/templates/{email_template_id} | Retrieve an email template
 *EmailApi* | [**getEmailUsingGET1**](docs/EmailApi.md#getEmailUsingGET1) | **GET** /v2/emails/{id} | Retrieve an Email
 *EmailApi* | [**getEmailUsingGET1WithHttpInfo**](docs/EmailApi.md#getEmailUsingGET1WithHttpInfo) | **GET** /v2/emails/{id} | Retrieve an Email
 *EmailApi* | [**sendEmailUsingPOST1**](docs/EmailApi.md#sendEmailUsingPOST1) | **POST** /v2/emails:send | Send an Email
@@ -375,6 +377,7 @@ Class | Method | HTTP request | Description
  - [CreateEmailsSentRequest](docs/CreateEmailsSentRequest.md)
  - [CreateFunnelIntegrationRequest](docs/CreateFunnelIntegrationRequest.md)
  - [CreateFunnelIntegrationTriggerEvents](docs/CreateFunnelIntegrationTriggerEvents.md)
+ - [CreateLeadSourceExpenseRequest](docs/CreateLeadSourceExpenseRequest.md)
  - [CreateLeadSourceRecurringExpenseRequest](docs/CreateLeadSourceRecurringExpenseRequest.md)
  - [CreateLeadSourceRequest](docs/CreateLeadSourceRequest.md)
  - [CreateNoteRequest](docs/CreateNoteRequest.md)
@@ -430,6 +433,7 @@ Class | Method | HTTP request | Description
  - [EmailSendRequestAttachment](docs/EmailSendRequestAttachment.md)
  - [EmailSentCreateError](docs/EmailSentCreateError.md)
  - [EmailSentWithContent](docs/EmailSentWithContent.md)
+ - [EmailTemplate](docs/EmailTemplate.md)
  - [EmailsSentList](docs/EmailsSentList.md)
  - [Error](docs/Error.md)
  - [FaxNumber](docs/FaxNumber.md)
@@ -454,6 +458,7 @@ Class | Method | HTTP request | Description
  - [LeadScore](docs/LeadScore.md)
  - [LeadSource](docs/LeadSource.md)
  - [LeadSourceCategory](docs/LeadSourceCategory.md)
+ - [LeadSourceExpense](docs/LeadSourceExpense.md)
  - [LeadSourceRecurringExpense](docs/LeadSourceRecurringExpense.md)
  - [Link](docs/Link.md)
  - [LinkContactsRequest](docs/LinkContactsRequest.md)

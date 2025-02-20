@@ -79,6 +79,7 @@ export * from '../models/CreateEmailSentRequest';
 export * from '../models/CreateEmailsSentRequest';
 export * from '../models/CreateFunnelIntegrationRequest';
 export * from '../models/CreateFunnelIntegrationTriggerEvents';
+export * from '../models/CreateLeadSourceExpenseRequest';
 export * from '../models/CreateLeadSourceRecurringExpenseRequest';
 export * from '../models/CreateLeadSourceRequest';
 export * from '../models/CreateNoteRequest';
@@ -134,6 +135,7 @@ export * from '../models/EmailSendRequest';
 export * from '../models/EmailSendRequestAttachment';
 export * from '../models/EmailSentCreateError';
 export * from '../models/EmailSentWithContent';
+export * from '../models/EmailTemplate';
 export * from '../models/EmailsSentList';
 export * from '../models/FaxNumber';
 export * from '../models/FileMetadata';
@@ -157,6 +159,7 @@ export * from '../models/LandingPage';
 export * from '../models/LeadScore';
 export * from '../models/LeadSource';
 export * from '../models/LeadSourceCategory';
+export * from '../models/LeadSourceExpense';
 export * from '../models/LeadSourceRecurringExpense';
 export * from '../models/Link';
 export * from '../models/LinkContactsRequest';
@@ -403,6 +406,7 @@ import { CreateEmailSentRequest     , CreateEmailSentRequestOriginalProviderEnum
 import { CreateEmailsSentRequest } from '../models/CreateEmailsSentRequest';
 import { CreateFunnelIntegrationRequest } from '../models/CreateFunnelIntegrationRequest';
 import { CreateFunnelIntegrationTriggerEvents } from '../models/CreateFunnelIntegrationTriggerEvents';
+import { CreateLeadSourceExpenseRequest } from '../models/CreateLeadSourceExpenseRequest';
 import { CreateLeadSourceRecurringExpenseRequest } from '../models/CreateLeadSourceRecurringExpenseRequest';
 import { CreateLeadSourceRequest       , CreateLeadSourceRequestStatusEnum    } from '../models/CreateLeadSourceRequest';
 import { CreateNoteRequest } from '../models/CreateNoteRequest';
@@ -458,6 +462,7 @@ import { EmailSendRequest } from '../models/EmailSendRequest';
 import { EmailSendRequestAttachment } from '../models/EmailSendRequestAttachment';
 import { EmailSentCreateError } from '../models/EmailSentCreateError';
 import { EmailSentWithContent      , EmailSentWithContentOriginalProviderEnum              } from '../models/EmailSentWithContent';
+import { EmailTemplate   , EmailTemplateContentTypeEnum          } from '../models/EmailTemplate';
 import { EmailsSentList } from '../models/EmailsSentList';
 import { FaxNumber, FaxNumberFieldEnum     } from '../models/FaxNumber';
 import { FileMetadata, FileMetadataCategoryEnum     , FileMetadataFileBoxTypeEnum         } from '../models/FileMetadata';
@@ -481,6 +486,7 @@ import { LandingPage } from '../models/LandingPage';
 import { LeadScore } from '../models/LeadScore';
 import { LeadSource        , LeadSourceStatusEnum    } from '../models/LeadSource';
 import { LeadSourceCategory } from '../models/LeadSourceCategory';
+import { LeadSourceExpense } from '../models/LeadSourceExpense';
 import { LeadSourceRecurringExpense } from '../models/LeadSourceRecurringExpense';
 import { Link } from '../models/Link';
 import { LinkContactsRequest } from '../models/LinkContactsRequest';
@@ -687,6 +693,7 @@ let enumsMap: Set<string> = new Set<string>([
     "EmailAddressFieldEnum",
     "EmailAddressRequestFieldEnum",
     "EmailSentWithContentOriginalProviderEnum",
+    "EmailTemplateContentTypeEnum",
     "FaxNumberFieldEnum",
     "FileMetadataCategoryEnum",
     "FileMetadataFileBoxTypeEnum",
@@ -813,6 +820,7 @@ let typeMap: {[index: string]: any} = {
     "CreateEmailsSentRequest": CreateEmailsSentRequest,
     "CreateFunnelIntegrationRequest": CreateFunnelIntegrationRequest,
     "CreateFunnelIntegrationTriggerEvents": CreateFunnelIntegrationTriggerEvents,
+    "CreateLeadSourceExpenseRequest": CreateLeadSourceExpenseRequest,
     "CreateLeadSourceRecurringExpenseRequest": CreateLeadSourceRecurringExpenseRequest,
     "CreateLeadSourceRequest": CreateLeadSourceRequest,
     "CreateNoteRequest": CreateNoteRequest,
@@ -867,6 +875,7 @@ let typeMap: {[index: string]: any} = {
     "EmailSendRequestAttachment": EmailSendRequestAttachment,
     "EmailSentCreateError": EmailSentCreateError,
     "EmailSentWithContent": EmailSentWithContent,
+    "EmailTemplate": EmailTemplate,
     "EmailsSentList": EmailsSentList,
     "FaxNumber": FaxNumber,
     "FileMetadata": FileMetadata,
@@ -890,6 +899,7 @@ let typeMap: {[index: string]: any} = {
     "LeadScore": LeadScore,
     "LeadSource": LeadSource,
     "LeadSourceCategory": LeadSourceCategory,
+    "LeadSourceExpense": LeadSourceExpense,
     "LeadSourceRecurringExpense": LeadSourceRecurringExpense,
     "Link": Link,
     "LinkContactsRequest": LinkContactsRequest,

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: Keap REST Core Service
-  version: 2.70.0.775756
+  version: 2.70.0.778988
   title: Keap REST API
   termsOfService: https://keap.com/legal
   contact:
@@ -42,6 +42,8 @@ tags:
   description: Rest Landing Page Controller
 - name: Lead Source Categories
   description: Rest Lead Source Category Controller
+- name: Lead Source Expenses
+  description: Rest Lead Source Expense Controller
 - name: Lead Source Recurring Expenses
   description: Rest Lead Source Recurring Expense Controller
 - name: Lead Sources
@@ -432,19 +434,31 @@ paths:
       parameters:
       - name: filter
         in: query
-        description: "Filter to apply, allowed fields are:  \n- (String) name  \n\n\
-          You will need to apply the `==` operator to check the equality of the filter\
-          \ with your searched \ntext, in the encoded form `%3D%3D`. The search will\
-          \ look for the text anywhere in the automation name. \n - `filter=name%3D%3DSpring\
-          \ Automation` \n- `filter=name%3D%3DTag New Contacts` \n"
+        description: |
+          Filter to apply, allowed fields are:
+          - (String) `name`
+
+          You will need to apply the `==` operator to check the equality of the filter with your searched
+          text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.
+
+          - `filter=name%3D%3DSpring Automation`
+          - `filter=name%3D%3DTag New Contacts`
         required: false
         schema:
           type: string
       - name: order_by
         in: query
-        description: "Attribute and direction to order items.  \nOne of the following\
-          \ fields:  \n- name  \n- category  \n- activeContacts  \n- publishedDate\
-          \  \nOne of the following directions:  \n- asc  \n- desc"
+        description: |-
+          Attribute and direction to order items.
+          One of the following fields:
+          - `name`
+          - `category`
+          - `activeContacts`
+          - `publishedDate`
+
+          One of the following directions:
+          - `asc`
+          - `desc`
         required: false
         schema:
           type: string
@@ -582,19 +596,31 @@ paths:
       parameters:
       - name: filter
         in: query
-        description: "Filter to apply, allowed fields are:  \n- (String) name  \n\n\
-          You will need to apply the `==` operator to check the equality of the filter\
-          \ with your searched \ntext, in the encoded form `%3D%3D`. The search will\
-          \ look for the text anywhere in the automation name. \n - `filter=name%3D%3DSpring\
-          \ Automation` \n- `filter=name%3D%3DTag New Contacts` \n"
+        description: |
+          Filter to apply, allowed fields are:
+          - (String) `name`
+
+          You will need to apply the `==` operator to check the equality of the filter with your searched
+          text, in the encoded form `%3D%3D`. The search will look for the text anywhere in the automation name.
+
+          - `filter=name%3D%3DSpring Automation`
+          - `filter=name%3D%3DTag New Contacts`
         required: false
         schema:
           type: string
       - name: order_by
         in: query
-        description: "Attribute and direction to order items.  \nOne of the following\
-          \ fields:  \n- name  \n- category  \n- activeContacts  \n- publishedDate\
-          \  \nOne of the following directions:  \n- asc  \n- desc"
+        description: |-
+          Attribute and direction to order items.
+          One of the following fields:
+          - `name`
+          - `category`
+          - `activeContacts`
+          - `publishedDate`
+
+          One of the following directions:
+          - `asc`
+          - `desc`
         required: false
         schema:
           type: string
@@ -839,20 +865,34 @@ paths:
       parameters:
       - name: filter
         in: query
-        description: "Filter to apply, allowed fields are:  \n- (String) name  \n\n\
-          You will need to apply the `==` operator to check the equality of the filter\
-          \ with your searched \ntext, in the encoded form `%3D%3D`. The search will\
-          \ look for the text anywhere in the campaign name. \n - `filter=name%3D%3DSpring\
-          \ Campaign` \n- `filter=name%3D%3DTag New Contacts` \n"
+        description: |
+          Filter to apply, allowed fields are:
+          - (String) `name`
+
+          You will need to apply the `==` operator to check the equality of the filter with your searched
+          text, in the encoded form `%3D%3D`.
+          The search will look for the text anywhere in the campaign name.
+          - `filter=name%3D%3DSpring Campaign`
+          - `filter=name%3D%3DTag New Contacts`
         required: false
         schema:
           type: string
       - name: order_by
         in: query
-        description: "Attribute and direction to order items.  \nOne of the following\
-          \ fields:  \n- name  \n- publisheddate  \n- id  \n- completedContactCount\
-          \  \n- activeContacts  \n- datecreated  \n- lastupdated  \nOne of the following\
-          \ directions:  \n- asc  \n- desc"
+        description: |-
+          Attribute and direction to order items.
+          One of the following fields:
+          - `name`
+          - `publisheddate`
+          - `id`
+          - `completedContactCount`
+          - `activeContacts`
+          - `datecreated`
+          - `lastupdated`
+
+          One of the following directions:
+          - `asc`
+          - `desc`
         required: false
         schema:
           type: string
@@ -1315,8 +1355,12 @@ paths:
       parameters:
       - name: fields
         in: query
-        description: 'Comma-delimited list of Contact properties to include in the
-          response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website'
+        description: |-
+          Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,
+          custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,
+          links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,
+          referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,
+          update_date,update_time,utm_parameters,website)
         required: false
         explode: true
         schema:
@@ -1325,22 +1369,37 @@ paths:
             type: string
       - name: filter
         in: query
-        description: "Filter to apply, allowed fields are:  \n- (String) email  \n\
-          - (String) given_name  \n- (String) family_name  \n- (String) company_id\
-          \  \n- (Set[String]) contact_ids  \n- (String) start_update_time  \n- (String)\
-          \ end_update_time \n\nYou will need to apply the `==` operator to check\
-          \ the equality of one of the filters with your searched \nword, in the encoded\
-          \ form `%3D%3D`. For the filters listed above, here are some examples: \n\
-          \ - `filter=given_name%3D%3DMary` \n- `filter=company_id%3D%3D123` \n- `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith`\
-          \ \n"
+        description: |
+          Filter to apply, allowed fields are:
+          - (String) `email`
+          - (String) `given_name`
+          - (String) `family_name`
+          - (String) `company_id`
+          - (Set[String]) `contact_ids`
+          - (String) `start_update_time`
+          - (String) `end_update_time`
+
+          You will need to apply the `==` operator to check the equality of one of the filters with your searched
+          word, in the encoded form `%3D%3D`.
+          For the filters listed above, here are some examples:
+          - `filter=given_name%3D%3DMary`
+          - `filter=company_id%3D%3D123`
+          - `filter=company_id%3D%3D123%3Bfamily_name%3D%3DSmith`
         required: false
         schema:
           type: string
       - name: order_by
         in: query
-        description: "Attribute and direction to order items.  \nOne of the following\
-          \ fields:  \n- id  \n- date_created  \n- email  \nOne of the following directions:\
-          \  \n- asc  \n- desc"
+        description: |-
+          Attribute and direction to order items.
+          One of the following fields:
+          - `id`
+          - `date_created`
+          - `email`
+
+          One of the following directions:
+          - `asc`
+          - `desc`
         required: false
         schema:
           type: string
@@ -1558,8 +1617,12 @@ paths:
           type: string
       - name: fields
         in: query
-        description: 'Comma-delimited list of Contact properties to include in the
-          response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,update_date,update_time,utm_parameters,website'
+        description: |-
+          Comma-delimited list of Contact properties to include in the response. (Available fields are: addresses,anniversary_date,birth_date,company,contact_type,create_time,
+          custom_fields,email_addresses,family_name,fax_numbers,given_name,id,job_title,leadsource_id,
+          links,middle_name,notes,origin,owner_id,phone_numbers,preferred_locale,preferred_name,prefix,
+          referral_code,score_value,social_accounts,source_type,spouse_name,suffix,tag_ids,time_zone,
+          update_date,update_time,utm_parameters,website)
         required: false
         explode: true
         schema:
@@ -2391,6 +2454,46 @@ paths:
                 $ref: '#/components/schemas/Error'
         '403':
           description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      deprecated: false
+  /v2/emails/templates/{email_template_id}:
+    get:
+      tags:
+      - Email
+      summary: Retrieve an email template
+      description: Pre-Release
+      operationId: getEmailTemplateUsingGET
+      parameters:
+      - name: email_template_id
+        in: path
+        description: email_template_id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailTemplate'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
           content:
             application/json:
               schema:
@@ -5527,6 +5630,18 @@ components:
           items:
             $ref: '#/components/schemas/FunnelIntegrationTriggerEventDTO'
       title: CreateFunnelIntegrationTriggerEvents
+    CreateLeadSourceExpenseRequest:
+      type: object
+      properties:
+        amount:
+          type: string
+        incurred_time:
+          type: string
+        notes:
+          type: string
+        title:
+          type: string
+      title: CreateLeadSourceExpenseRequest
     CreateLeadSourceRecurringExpenseRequest:
       type: object
       properties:
@@ -6785,6 +6900,49 @@ components:
         subject:
           type: string
       title: EmailSentWithContent
+    EmailTemplate:
+      type: object
+      properties:
+        bcc_address:
+          type: string
+          description: The bcc address of the email
+        categories:
+          type: array
+          description: The categories associated with the email
+          items:
+            type: string
+        cc_address:
+          type: string
+          description: The cc address of the email
+        content_type:
+          type: string
+          description: The content type of the email
+          enum:
+          - TEXT
+          - HTML
+          - MULTIPART
+        from_address:
+          type: string
+          description: The from address of the email
+        html_body:
+          type: string
+          description: The HTML body of the email
+        merge_context:
+          type: string
+          description: The merge context of the email
+        piece_title:
+          type: string
+          description: The title of the piece
+        subject:
+          type: string
+          description: The subject of the email
+        text_body:
+          type: string
+          description: The text body of the email
+        to_address:
+          type: string
+          description: The to address of the email
+      title: EmailTemplate
     EmailsSentList:
       type: object
       properties:
@@ -7397,6 +7555,30 @@ components:
         name:
           type: string
       title: LeadSourceCategory
+    LeadSourceExpense:
+      type: object
+      properties:
+        amount:
+          $ref: '#/components/schemas/CurrencyValue'
+        create_time:
+          type: string
+          description: The date the expense was created.
+        id:
+          type: string
+          description: The unique identifier for the expense.
+        incurred_time:
+          type: string
+          description: The date the expense was incurred.
+        notes:
+          type: string
+          description: The notes for the expense.
+        title:
+          type: string
+          description: The title of the expense.
+        update_time:
+          type: string
+          description: The date the expense was last updated.
+      title: LeadSourceExpense
     LeadSourceRecurringExpense:
       type: object
       properties:

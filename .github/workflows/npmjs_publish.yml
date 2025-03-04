@@ -17,8 +17,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Debugging step: List all files and folders recursively
+      - name: Get path (debug)
+        run: pwd
       - name: List all files after checkout (debug)
-        run: ls -lRa
+        run: ls -lR #a
 
       - uses: actions/setup-node@v4
         with:
@@ -46,4 +48,3 @@ jobs:
         working-directory: sdks/core/typescript
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          

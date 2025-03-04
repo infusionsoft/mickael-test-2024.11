@@ -33,7 +33,7 @@ jobs:
         run: npm install
 
       - name: Publish Core Javascript package to npmjs
-        run: npm publish --provenance --access public
+        run: npm publish --provenance --access public --dry-run
         working-directory: sdks/v2/javascript
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
         run: npm install
 
       - name: Publish Core Typescript package to npmjs
-        run: npm publish --provenance --access public
+        run: npm publish --provenance --access public --dry-run
         working-directory: sdks/v2/typescript
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

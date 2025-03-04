@@ -30,7 +30,7 @@ jobs:
       # Javascript
       - name: Install Javascript dependencies
         working-directory: sdks/v2/javascript
-        run: npm ci
+        run: npm install
 
       - name: Publish Core Javascript package to npmjs
         run: npm publish --provenance --access public
@@ -41,7 +41,7 @@ jobs:
       # Typescript
       - name: Install Typescript dependencies
         working-directory: sdks/v2/typescript
-        run: npm ci
+        run: npm install
 
       - name: Publish Core Typescript package to npmjs
         run: npm publish --provenance --access public

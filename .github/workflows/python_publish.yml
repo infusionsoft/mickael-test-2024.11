@@ -35,4 +35,4 @@ jobs:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       working-directory: sdks/v2/python
-      run: twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+      run: twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose

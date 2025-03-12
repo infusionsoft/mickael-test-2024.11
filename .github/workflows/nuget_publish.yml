@@ -39,4 +39,10 @@ jobs:
         # -p:PackageVersion=${{ steps.get_version.outputs.VERSION }}
 
       - name: Push package to NuGet (Dry Run)
-        run: dotnet nuget push "./nupkgs/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate --dry-run
+        run: |
+          dotnet nuget push "./nupkgs/*.nupkg" \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source https://int.nugettest.org/v3/index.json \
+            --skip-duplicate
+            
+        # --source https://api.nuget.org/v3/index.json \

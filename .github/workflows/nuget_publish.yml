@@ -1,0 +1,34 @@
+name: Publish C# SDK to NuGet
+
+on:
+  release:
+    types: [published]
+  # Test
+  push:
+    branches:
+      - main
+        
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore sdks/v2/csharp/src/Keap.Core.V2/Keap.Core.V2.csproj
+
+      - name: Pack NuGet package
+        run: |
+          dotnet pack sdks/v2/csharp/src/Keap.Core.V2/Keap.Core.V2.csproj \
+            --configuration Release \
+            --output ./nupkgs \
+            -p:PackageVersion=${{ github.ref_name }}
+
+      - name: Push package to NuGet (Dry Run)
+        run: dotnet nuget push "./nupkgs/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate --dry-run

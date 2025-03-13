@@ -42,7 +42,7 @@ jobs:
 
           echo "Building version $VERSION"
 
-          gradle clean build -x test -Pversion=${VERSION} -b "sdks/v2/java/build.gradle -Pversion=${newVersion}
+          gradle clean build -x test -Pversion=${VERSION} -b "sdks/v2/java/build.gradle" -Pversion=${newVersion}
 
       - name: Set up GPG for signing
         env:

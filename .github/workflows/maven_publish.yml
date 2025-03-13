@@ -30,6 +30,8 @@ jobs:
         - name: Build and package JAR
           run: |
             VERSION=$(git describe --tags --abbrev=0)
+            # TEST
+            VERSION=0.0.1
 
             echo "Building version $VERSION"
 

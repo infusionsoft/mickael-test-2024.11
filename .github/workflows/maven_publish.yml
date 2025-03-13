@@ -34,13 +34,15 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
         # uses: gradle/actions/setup-gradle@v4
 
+      - name: Debug List files
+        run: ls -la
+
       - name: Build and package JAR
         run: |
           VERSION=$(git describe --tags --abbrev=0 || echo "0.0.1")
 
           echo "Building version $VERSION"
 
-          chmod +x ./gradlew
           ./gradlew clean build -x test -Pversion=${VERSION}
 
       - name: Set up GPG for signing

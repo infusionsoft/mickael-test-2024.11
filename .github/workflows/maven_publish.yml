@@ -14,7 +14,10 @@ jobs:
     environment:
       name: ${{ github.event.release.tag_name }}
       url: "https://central.sonatype.com/artifact/com.keap.core/keap-sdk-core-v2/${{ github.event.release.tag_name }}/overview/"
-
+    permissions:
+      contents: read
+      packages: write
+  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,7 +31,7 @@ jobs:
           java-version: '21'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+        uses: gradle/actions/setup-gradle@v3
         # uses: gradle/actions/setup-gradle@v4
 
       - name: Build and package JAR

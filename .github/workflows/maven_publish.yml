@@ -45,10 +45,38 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Publish to Maven Central
+      - name: Setup OSSRH Init Script
         working-directory: sdks/v2/java
-        # run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
-        run: ./gradlew publish
+        run: |
+          cat <<EOF > init.gradle.kts
+          initscript {
+              repositories {
+                  gradlePluginPortal()
+              }
+              dependencies {
+                  classpath("io.github.gradle-nexus:publish-plugin:1.3.0")
+              }
+          }
+      
+          allprojects {
+              apply(plugin = "io.github.gradle-nexus.publish-plugin")
+      
+              afterEvaluate {
+                  extensions.findByType(io.github.gradlenexus.publishplugin.NexusPublishExtension::class.java)?.apply {
+                      repositories {
+                          sonatype {
+                              username.set(System.getenv("SONATYPE_USERNAME"))
+                              password.set(System.getenv("SONATYPE_PASSWORD"))
+                          }
+                      }
+                  }
+              }
+          }
+          EOF
+      
+      - name: Publish to Maven Central (via OSSRH)
+        working-directory: sdks/v2/java
+        run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script init.gradle.kts
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}

@@ -47,7 +47,8 @@ jobs:
 
       - name: Publish to Maven Central
         working-directory: sdks/v2/java
-        run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
+        # run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
+        run: ./gradlew publish
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}

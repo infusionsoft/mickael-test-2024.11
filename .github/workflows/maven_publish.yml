@@ -29,6 +29,12 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v3
 
+      - name: Generate Gradle Wrapper
+        working-directory: sdks/v2/java
+        run: |
+          gradle wrapper
+          chmod +x ./gradlew
+
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v5
         with:

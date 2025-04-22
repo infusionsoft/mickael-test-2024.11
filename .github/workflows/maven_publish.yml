@@ -88,7 +88,11 @@ jobs:
       
       - name: Test OSSRH Credentials
         run: |
-          curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" https://oss.sonatype.org/service/local/staging/profiles
+          http_code=$(curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" -o /dev/null -s -w "%{http_code}" https://oss.sonatype.org/service/local/staging/profiles)
+          if [ "$http_code" -ne 200 ]; then
+            echo "Error: Received HTTP status code $http_code"
+            exit 1
+          fi
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}

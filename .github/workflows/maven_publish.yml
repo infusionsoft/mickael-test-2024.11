@@ -62,7 +62,8 @@ jobs:
               apply plugin: "io.github.gradle-nexus.publish-plugin"
 
               afterEvaluate {
-                  def ext = project.extensions.findByType(io.github.gradlenexus.publishplugin.NexusPublishExtension)
+                  def nexusExtClass = this.class.classLoader.loadClass("io.github.gradlenexus.publishplugin.NexusPublishExtension")
+                  def ext = project.extensions.findByType(nexusExtClass)
                   if (ext != null) {
                       ext.repositories {
                           sonatype {

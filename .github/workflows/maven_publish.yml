@@ -77,6 +77,13 @@ jobs:
               }
           }
           EOF
+      - name: Debug init script
+        working-directory: sdks/v2/java
+        run: |
+          echo "--- Init script content ---"
+          cat ossrh-init.gradle
+          echo "--- Files in directory ---"
+          ls -lah
 
       - name: Publish to Maven Central (via OSSRH)
         working-directory: sdks/v2/java

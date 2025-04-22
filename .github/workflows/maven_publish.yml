@@ -61,11 +61,21 @@ jobs:
           }
 
           allprojects {
-              apply plugin: "io.github.gradle-nexus.publish-plugin"
+              buildscript {
+                  repositories {
+                      maven {
+                          url "https://plugins.gradle.org/m2/"
+                      }
+                  }
+                  dependencies {
+                      classpath "io.github.gradle-nexus:publish-plugin:2.0.0"
+                  }
+              }
+
+              apply plugin: io.github.gradlenexus.publishplugin.NexusPublishPlugin
 
               afterEvaluate {
-                  def nexusExtClass = this.class.classLoader.loadClass("io.github.gradlenexus.publishplugin.NexusPublishExtension")
-                  def ext = project.extensions.findByType(nexusExtClass)
+                  def ext = project.extensions.findByType(io.github.gradlenexus.publishplugin.NexusPublishExtension)
                   if (ext != null) {
                       ext.repositories {
                           sonatype {

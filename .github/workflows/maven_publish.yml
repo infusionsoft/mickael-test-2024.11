@@ -56,7 +56,7 @@ jobs:
                   }
               }
               dependencies {
-                  classpath "io.github.gradle-nexus:io.github.gradle-nexus.publish-plugin.gradle.plugin:1.3.0"
+                  classpath "io.github.gradle-nexus:io.github.gradle-nexus.publish-plugin.gradle.plugin:2.0.0"
               }
           }
 

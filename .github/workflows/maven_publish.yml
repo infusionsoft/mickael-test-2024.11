@@ -45,31 +45,39 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Prepare temp build script for OSSRH publish
+      - name: Setup OSSRH init script
         working-directory: sdks/v2/java
         run: |
-          echo "pluginManagement {
+          cat <<EOF > ossrh-init.gradle
+          initscript {
               repositories {
                   gradlePluginPortal()
               }
-          }" > settings.gradle.kts
-
-          echo "plugins {
-              id(\"io.github.gradle-nexus.publish-plugin\") version \"1.3.0\"
+              dependencies {
+                  classpath "io.github.gradle-nexus:publish-plugin:1.3.0"
+              }
           }
 
-          nexusPublishing {
-              repositories {
-                  sonatype {
-                      username.set(System.getenv(\"SONATYPE_USERNAME\"))
-                      password.set(System.getenv(\"SONATYPE_PASSWORD\"))
+          allprojects {
+              apply plugin: "io.github.gradle-nexus.publish-plugin"
+
+              afterEvaluate {
+                  def ext = project.extensions.findByType(io.github.gradlenexus.publishplugin.NexusPublishExtension)
+                  if (ext != null) {
+                      ext.repositories {
+                          sonatype {
+                              username = System.getenv("SONATYPE_USERNAME")
+                              password = System.getenv("SONATYPE_PASSWORD")
+                          }
+                      }
                   }
               }
-          }" > publish.gradle.kts
+          }
+          EOF
 
       - name: Publish to Maven Central (via OSSRH)
         working-directory: sdks/v2/java
-        run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository -b publish.gradle.kts
+        run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script ossrh-init.gradle
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}

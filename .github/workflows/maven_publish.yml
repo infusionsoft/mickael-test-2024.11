@@ -85,6 +85,13 @@ jobs:
       - name: Debug available tasks
         working-directory: sdks/v2/java
         run: ./gradlew tasks --all --init-script ossrh-init.gradle
+      
+      - name: Test OSSRH Credentials
+        run: |
+          curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" https://oss.sonatype.org/service/local/staging/profiles
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
 
       - name: Publish to Maven Central (via OSSRH)
         working-directory: sdks/v2/java

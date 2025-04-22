@@ -30,13 +30,11 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Generate Gradle Wrapper
-        working-directory: sdks/v2/java
         run: |
           gradle wrapper
           chmod +x ./gradlew
 
       - name: Make gradlew executable
-        working-directory: sdks/v2/java
         run: chmod +x ./gradlew
 
       - name: Import GPG key
@@ -46,9 +44,8 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Setup OSSRH init script
-        working-directory: sdks/v2/java
         run: |
-          cat <<EOF > ossrh-init.gradle
+          cat <<EOF > sdks/v2/java/ossrh-init.gradle
           initscript {
               repositories {
                   maven {
@@ -78,16 +75,14 @@ jobs:
           }
           EOF
       - name: Debug init script
-        working-directory: sdks/v2/java
         run: |
           echo "--- Init script content ---"
-          cat ossrh-init.gradle
+          cat sdks/v2/java/ossrh-init.gradle
           echo "--- Files in directory ---"
-          ls -lah
+          ls -lah sdks/v2/java
 
       - name: Publish to Maven Central (via OSSRH)
-        working-directory: sdks/v2/java
-        run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script ossrh-init.gradle
+        run: ./gradlew -b sdks/v2/java/build.gradle publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script sdks/v2/java/ossrh-init.gradle
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}

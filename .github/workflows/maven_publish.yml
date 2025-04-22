@@ -50,43 +50,30 @@ jobs:
         run: |
           cat <<EOF > ossrh-init.gradle
           initscript {
-              repositories {
-                  maven {
-                      url "https://plugins.gradle.org/m2/"
-                  }
-              }
-              dependencies {
-                  classpath "io.github.gradle-nexus:publish-plugin:2.0.0"
-              }
+            repositories {
+                maven {
+                    url "https://plugins.gradle.org/m2/"
+                }
+            }
+            dependencies {
+                classpath "io.github.gradle-nexus:publish-plugin:2.0.0"
+            }
           }
 
-          allprojects {
-              buildscript {
-                  repositories {
-                      maven {
-                          url "https://plugins.gradle.org/m2/"
-                      }
-                  }
-                  dependencies {
-                      classpath "io.github.gradle-nexus:publish-plugin:2.0.0"
-                  }
-              }
-
+          rootProject {
               apply plugin: io.github.gradlenexus.publishplugin.NexusPublishPlugin
 
-              afterEvaluate {
-                  def ext = project.extensions.findByType(io.github.gradlenexus.publishplugin.NexusPublishExtension)
-                  if (ext != null) {
-                      ext.repositories {
-                          sonatype {
-                              username = System.getenv("SONATYPE_USERNAME")
-                              password = System.getenv("SONATYPE_PASSWORD")
-                          }
+              nexusPublishing {
+                  repositories {
+                      sonatype {
+                          username = System.getenv("SONATYPE_USERNAME")
+                          password = System.getenv("SONATYPE_PASSWORD")
                       }
                   }
               }
           }
           EOF
+
       - name: Debug init script
         working-directory: sdks/v2/java
         run: |
@@ -94,6 +81,10 @@ jobs:
           cat ossrh-init.gradle
           echo "--- Files in directory ---"
           ls -lah
+
+      - name: Debug available tasks
+        working-directory: sdks/v2/java
+        run: ./gradlew tasks --all --init-script ossrh-init.gradle
 
       - name: Publish to Maven Central (via OSSRH)
         working-directory: sdks/v2/java

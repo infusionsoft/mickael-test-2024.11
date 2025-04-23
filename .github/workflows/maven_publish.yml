@@ -78,6 +78,20 @@ jobs:
         working-directory: sdks/v2/java
         run: ./gradlew tasks --all --init-script ossrh-init.gradle
       
+      - name: Build Java SDK
+        working-directory: sdks/v2/java
+        run: ./gradlew build
+
+      - name: GPG Sign Artifacts
+        run: |
+          for file in sdks/v2/java/build/libs/*.jar sdks/v2/java/build/publications/*/*.pom; do
+            gpg --batch --yes --pinentry-mode loopback \
+              --passphrase "$GPG_PASSPHRASE" \
+              --armor --output "$file.asc" --detach-sign "$file"
+          done
+        env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
       - name: Test OSSRH Credentials
         run: |
           http_code=$(curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" -o /dev/null -s -w "%{http_code}" https://oss.sonatype.org/service/local/staging/profiles)

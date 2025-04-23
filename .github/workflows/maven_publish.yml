@@ -39,12 +39,6 @@ jobs:
         working-directory: sdks/v2/java
         run: chmod +x ./gradlew
 
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v5
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-
       - name: Setup OSSRH init script
         working-directory: sdks/v2/java
         run: |
@@ -81,6 +75,12 @@ jobs:
       - name: Build Java SDK
         working-directory: sdks/v2/java
         run: ./gradlew build
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Show imported GPG keys
         run: |

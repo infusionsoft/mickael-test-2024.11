@@ -74,14 +74,6 @@ jobs:
           }
           EOF
 
-      - name: Debug init script
-        working-directory: sdks/v2/java
-        run: |
-          echo "--- Init script content ---"
-          cat ossrh-init.gradle
-          echo "--- Files in directory ---"
-          ls -lah
-
       - name: Debug available tasks
         working-directory: sdks/v2/java
         run: ./gradlew tasks --all --init-script ossrh-init.gradle

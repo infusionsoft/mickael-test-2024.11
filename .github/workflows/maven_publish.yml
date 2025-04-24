@@ -147,29 +147,23 @@ jobs:
 
       - name: Upload bundle to Sonatype Central API
         run: |
-          AUTH=$(printf "%s:%s" "${{ secrets.SONATYPE_USERNAME }}" "${{ secrets.SONATYPE_PASSWORD }}" | base64)
-          curl --request POST \
+          AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
+          # Upload the bundle and capture the deploymentId
+          RESPONSE=$(curl --silent --request POST \
             --header "Authorization: Bearer $AUTH" \
             --form bundle=@central-bundle.zip \
-            --verbose \
-            https://central.sonatype.com/api/v1/publisher/upload
+            https://central.sonatype.com/api/v1/publisher/upload)
 
-      - name: Verify deployment status
-        run: |
-          AUTH=$(printf "%s:%s" "${{ secrets.SONATYPE_USERNAME }}" "${{ secrets.SONATYPE_PASSWORD }}" | base64)
-          echo "Waiting for deployment to be published..."
-          DEPLOY_ID=$(curl --silent --request POST \
-            --header "Authorization: Bearer $AUTH" \
-            --form bundle=@central-bundle.zip \
-            https://central.sonatype.com/api/v1/publisher/upload | jq -r '.deploymentId')
+          DEPLOY_ID=$(echo "$RESPONSE" | jq -r '.deploymentId')
 
           if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then
             echo "❌ Failed to retrieve deploymentId"
             exit 1
           fi
 
+          # Verify the deployment status
           for i in {1..10}; do
-            STATUS=$(curl --silent --request POST \
+            STATUS=$(curl --silent --request GET \
               --header "Authorization: Bearer $AUTH" \
               "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID" | jq -r '.deploymentState')
 
@@ -188,6 +182,9 @@ jobs:
 
           echo "❌ Deployment did not reach PUBLISHED state in time."
           exit 1
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
 
       # - name: Test OSSRH Credentials
       #   run: |

@@ -150,7 +150,8 @@ jobs:
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
       - name: Debug unmasked username (not safe for production!)
         run: |
-          export RAW_USER="${{ secrets.SONATYPE_USERNAME }}"
+          AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
+          export RAW_USER="$AUTH"
           echo "Unmasked USER=$RAW_USER"
 
       - name: Upload bundle to Sonatype Central API

@@ -141,7 +141,6 @@ jobs:
           cd ..
           zip -r central-bundle.zip bundle
 
-
       - name: Upload bundle to Sonatype Central API
         run: |
           AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
@@ -154,20 +153,14 @@ jobs:
           ######################################################### TEMP
 
           # Upload the bundle and capture the deploymentId
-          RESPONSE=$(curl --silent --request POST \
+          DEPLOY_ID=$(curl --silent --request POST \
             --header "Authorization: Bearer $AUTH" \
             --form bundle=@central-bundle.zip \
             https://central.sonatype.com/api/v1/publisher/upload)
 
-          echo "Response: $RESPONSE"
-
-          DEPLOY_ID=$(echo "$RESPONSE" | jq -r '.deploymentId')
-
           if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then
             echo "❌ Failed to retrieve deploymentId"
             echo "Retrieved: $RESPONSE"
-            echo "Token: $AUTH"
-            echo "user: $SONATYPE_USERNAME"
             exit 1
           fi
 
@@ -195,25 +188,3 @@ jobs:
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-
-      # - name: Test OSSRH Credentials
-      #   run: |
-      #     http_code=$(curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" -o /dev/null -s -w "%{http_code}" https://oss.sonatype.org/service/local/staging/profiles)
-      #     if [ "$http_code" -ne 200 ]; then
-      #       echo "Error: Received HTTP status code $http_code"
-      #       exit 1
-      #     fi
-      #   env:
-      #     SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-      #     SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-
-      # - name: Publish to Maven Central (via OSSRH)
-      #   working-directory: sdks/v2/java
-      #   run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script ossrh-init.gradle
-      #   env:
-      #     SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-      #     SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-      #     GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      #     GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-      #     GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-

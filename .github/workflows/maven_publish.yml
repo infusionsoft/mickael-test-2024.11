@@ -134,7 +134,7 @@ jobs:
           cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
           cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
           cd bundle
-          for f in $(find . -type f); do
+          for f in $(find . -type f \( -name "*.jar" -o -name "*.pom" \)); do
             md5sum "$f" > "$f.md5"
             shasum -a 1 "$f" > "$f.sha1"
           done
@@ -144,13 +144,6 @@ jobs:
       - name: Upload bundle to Sonatype Central API
         run: |
           AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
-
-          ######################################################### TEMP
-          echo "USERNAME=$SONATYPE_USERNAME"
-          echo "TOKEN (base64): $(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)"
-          export RAW_USER="$AUTH"
-          echo "Unmasked USER=$RAW_USER"
-          ######################################################### TEMP
 
           # Upload the bundle and capture the deploymentId
           DEPLOY_ID=$(curl --silent --request POST \
@@ -163,14 +156,18 @@ jobs:
             echo "Retrieved: $RESPONSE"
             exit 1
           fi
+          echo "Deployment: $DEPLOY_ID"
 
           # Verify the deployment status
           for i in {1..10}; do
             STATUS=$(curl --silent --request GET \
               --header "Authorization: Bearer $AUTH" \
               "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID" | jq -r '.deploymentState')
+            echo "Status: $STATUS"
 
-            echo "Attempt $i: Deployment status = $STATUS"
+            DEPLOYMENT_STATUS=$(echo $STATUS | jq -r '.deploymentState')
+
+            echo "Attempt $i: Deployment status = $DEPLOYMENT_STATUS"
 
             if [[ "$STATUS" == "PUBLISHED" ]]; then
               echo "✅ Deployment successful!"

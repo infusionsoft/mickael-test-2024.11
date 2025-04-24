@@ -162,7 +162,7 @@ jobs:
           for i in {1..10}; do
             STATUS=$(curl --silent --request POST \
               --header "Authorization: Bearer $AUTH" \
-              "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID" | jq -r '.deploymentState')
+              "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID")
             echo "Status: $STATUS"
 
             DEPLOYMENT_STATUS=$(echo $STATUS | jq -r '.deploymentState')

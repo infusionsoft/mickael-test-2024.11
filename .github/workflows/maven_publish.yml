@@ -128,7 +128,7 @@ jobs:
       - name: Create bundle structure and zip
         run: |
           VERSION=$(basename sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar | sed 's/keap-sdk-core-v2-//; s/.jar//')
-          BUNDLE_PATH="bundle/com/keap/core/keap-sdk-core-v2/$VERSION"
+          BUNDLE_PATH="bundle"
           mkdir -p "$BUNDLE_PATH"
 
           # Copy and rename the .jar and .asc
@@ -169,7 +169,7 @@ jobs:
             STATUS=$(curl --silent --request POST \
               --header "Authorization: Bearer $AUTH" \
               "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID")
-            echo "Status: $STATUS"
+            echo "Status:" $($STATUS | jq)
 
             DEPLOYMENT_STATUS=$(echo $STATUS | jq -r '.deploymentState')
 

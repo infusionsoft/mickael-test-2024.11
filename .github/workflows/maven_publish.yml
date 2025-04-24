@@ -104,16 +104,16 @@ jobs:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
 
-      - name: Test OSSRH Credentials
-        run: |
-          http_code=$(curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" -o /dev/null -s -w "%{http_code}" https://oss.sonatype.org/service/local/staging/profiles)
-          if [ "$http_code" -ne 200 ]; then
-            echo "Error: Received HTTP status code $http_code"
-            exit 1
-          fi
-        env:
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+      # - name: Test OSSRH Credentials
+      #   run: |
+      #     http_code=$(curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" -o /dev/null -s -w "%{http_code}" https://oss.sonatype.org/service/local/staging/profiles)
+      #     if [ "$http_code" -ne 200 ]; then
+      #       echo "Error: Received HTTP status code $http_code"
+      #       exit 1
+      #     fi
+      #   env:
+      #     SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+      #     SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
 
       - name: Publish to Maven Central (via OSSRH)
         working-directory: sdks/v2/java

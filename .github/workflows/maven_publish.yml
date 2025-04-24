@@ -160,7 +160,7 @@ jobs:
 
           # Verify the deployment status
           for i in {1..10}; do
-            STATUS=$(curl --silent --request GET \
+            STATUS=$(curl --silent --request POST \
               --header "Authorization: Bearer $AUTH" \
               "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID" | jq -r '.deploymentState')
             echo "Status: $STATUS"

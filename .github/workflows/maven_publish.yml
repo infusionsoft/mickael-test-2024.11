@@ -128,11 +128,17 @@ jobs:
       - name: Create bundle structure and zip
         run: |
           VERSION=$(basename sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar | sed 's/keap-sdk-core-v2-//; s/.jar//')
-          mkdir -p bundle/com/keap/core/keap-sdk-core-v2/$VERSION
-          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
-          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
-          cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
-          cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
+          BUNDLE_PATH="bundle/com/keap/core/keap-sdk-core-v2/$VERSION"
+          mkdir -p "$BUNDLE_PATH"
+
+          # Copy and rename the .jar and .asc
+          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.jar"
+          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar.asc "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.jar.asc"
+
+          # Copy and rename the .pom and .asc
+          cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.pom"
+          cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom.asc "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.pom.asc"
+
           cd bundle
           for f in $(find . -type f \( -name "*.jar" -o -name "*.pom" \)); do
             md5sum "$f" > "$f.md5"
@@ -169,10 +175,10 @@ jobs:
 
             echo "Attempt $i: Deployment status = $DEPLOYMENT_STATUS"
 
-            if [[ "$STATUS" == "PUBLISHED" ]]; then
+            if [[ "$DEPLOYMENT_STATUS" == "PUBLISHED" ]]; then
               echo "✅ Deployment successful!"
               exit 0
-            elif [[ "$STATUS" == "FAILED" ]]; then
+            elif [[ "$DEPLOYMENT_STATUS" == "FAILED" ]]; then
               echo "❌ Deployment failed"
               exit 1
             fi

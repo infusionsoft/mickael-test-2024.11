@@ -141,22 +141,18 @@ jobs:
           cd ..
           zip -r central-bundle.zip bundle
 
-      - name: Debug Sonatype credentials (temporarily!)
-        run: |
-          echo "USERNAME=$SONATYPE_USERNAME"
-          echo "TOKEN (base64): $(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)"
-        env:
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-      - name: Debug unmasked username (not safe for production!)
-        run: |
-          AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
-          export RAW_USER="$AUTH"
-          echo "Unmasked USER=$RAW_USER"
 
       - name: Upload bundle to Sonatype Central API
         run: |
           AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
+
+          ######################################################### TEMP
+          echo "USERNAME=$SONATYPE_USERNAME"
+          echo "TOKEN (base64): $(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)"
+          export RAW_USER="$AUTH"
+          echo "Unmasked USER=$RAW_USER"
+          ######################################################### TEMP
+
           # Upload the bundle and capture the deploymentId
           RESPONSE=$(curl --silent --request POST \
             --header "Authorization: Bearer $AUTH" \

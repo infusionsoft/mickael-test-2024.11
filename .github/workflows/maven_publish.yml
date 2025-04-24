@@ -87,8 +87,8 @@ jobs:
           echo "Available GPG secret keys:"
           gpg --list-secret-keys --keyid-format LONG
         
-      - name: Debug artifacts
-        run: ls -lR sdks/v2/java/build
+      # - name: Debug artifacts
+      #   run: ls -lR sdks/v2/java/build
 
       - name: GPG Sign Artifacts
         run: |
@@ -104,6 +104,66 @@ jobs:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
 
+      - name: Create bundle structure and zip
+        run: |
+          VERSION=$(basename sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar | sed 's/keap-sdk-core-v2-//; s/.jar//')
+          mkdir -p bundle/com/keap/core/keap-sdk-core-v2/$VERSION
+          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
+          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
+          cp sdks/v2/java/build/publications/*/*.pom bundle/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom
+          cp sdks/v2/java/build/publications/*/*.pom.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom.asc
+          cd bundle
+          for f in $(find . -type f); do
+            md5sum "$f" > "$f.md5"
+            shasum -a 1 "$f" > "$f.sha1"
+          done
+          cd ..
+          zip -r central-bundle.zip bundle
+
+      - name: Upload bundle to Sonatype Central API
+        run: |
+          AUTH=$(printf "%s:%s" "${{ secrets.SONATYPE_USERNAME }}" "${{ secrets.SONATYPE_PASSWORD }}" | base64)
+          curl --request POST \
+            --header "Authorization: Bearer $AUTH" \
+            --form bundle=@central-bundle.zip \
+            --verbose \
+            https://central.sonatype.com/api/v1/publisher/upload
+
+      - name: Verify deployment status
+        run: |
+          AUTH=$(printf "%s:%s" "${{ secrets.SONATYPE_USERNAME }}" "${{ secrets.SONATYPE_PASSWORD }}" | base64)
+          echo "Waiting for deployment to be published..."
+          DEPLOY_ID=$(curl --silent --request POST \
+            --header "Authorization: Bearer $AUTH" \
+            --form bundle=@central-bundle.zip \
+            https://central.sonatype.com/api/v1/publisher/upload | jq -r '.deploymentId')
+
+          if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then
+            echo "❌ Failed to retrieve deploymentId"
+            exit 1
+          fi
+
+          for i in {1..10}; do
+            STATUS=$(curl --silent --request POST \
+              --header "Authorization: Bearer $AUTH" \
+              "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID" | jq -r '.deploymentState')
+
+            echo "Attempt $i: Deployment status = $STATUS"
+
+            if [[ "$STATUS" == "PUBLISHED" ]]; then
+              echo "✅ Deployment successful!"
+              exit 0
+            elif [[ "$STATUS" == "FAILED" ]]; then
+              echo "❌ Deployment failed"
+              exit 1
+            fi
+
+            sleep 15
+          done
+
+          echo "❌ Deployment did not reach PUBLISHED state in time."
+          exit 1
+
       # - name: Test OSSRH Credentials
       #   run: |
       #     http_code=$(curl -i -u "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" -o /dev/null -s -w "%{http_code}" https://oss.sonatype.org/service/local/staging/profiles)
@@ -115,12 +175,13 @@ jobs:
       #     SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
       #     SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
 
-      - name: Publish to Maven Central (via OSSRH)
-        working-directory: sdks/v2/java
-        run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script ossrh-init.gradle
-        env:
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      # - name: Publish to Maven Central (via OSSRH)
+      #   working-directory: sdks/v2/java
+      #   run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --init-script ossrh-init.gradle
+      #   env:
+      #     SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+      #     SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+      #     GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      #     GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      #     GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+

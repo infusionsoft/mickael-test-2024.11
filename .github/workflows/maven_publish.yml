@@ -102,10 +102,9 @@ jobs:
           echo "Available GPG secret keys:"
           gpg --list-secret-keys --keyid-format LONG
         
-
       - name: GPG Sign Artifacts
         run: |
-          echo "Signing .jar and .pom files..."
+          echo "Signing files in sdks/v2/java/build ..."
           for file in $(find sdks/v2/java/build -type f \( -name "*.jar" -o -name "*.pom" \)); do
             echo "Signing $file"
             gpg --batch --yes --pinentry-mode loopback \
@@ -113,6 +112,15 @@ jobs:
               --passphrase "$GPG_PASSPHRASE" \
               --armor --output "$file.asc" --detach-sign "$file"
           done
+
+          echo "Signing POM file in $HOME/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION ..."
+          VERSION=$(basename sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar | sed 's/keap-sdk-core-v2-//; s/.jar//')
+          POM_PATH="$HOME/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom"
+          gpg --batch --yes --pinentry-mode loopback \
+            --local-user "$GPG_KEY_ID" \
+            --passphrase "$GPG_PASSPHRASE" \
+            --armor --output "$POM_PATH.asc" --detach-sign "$POM_PATH"
+
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}

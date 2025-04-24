@@ -141,9 +141,10 @@ jobs:
 
           cd bundle
           for f in $(find . -type f \( -name "*.jar" -o -name "*.pom" \)); do
-            md5sum "$f" > "$f.md5"
-            shasum -a 1 "$f" > "$f.sha1"
+            md5sum "$f" | awk '{ print $1 }' > "$f.md5"
+            shasum -a 1 "$f" | awk '{ print $1 }' > "$f.sha1"
           done
+
           zip -r ../central-bundle.zip com
 
       - name: Upload bundle to Sonatype Central API
@@ -154,12 +155,12 @@ jobs:
           DEPLOY_ID=$(curl --silent --request POST \
             --header "Authorization: Bearer $AUTH" \
             --form bundle=@central-bundle.zip \
-            --form "publishingType=USER_MANAGED" \
             "https://central.sonatype.com/api/v1/publisher/upload")
+          
+          # --form "publishingType=USER_MANAGED" \
 
           if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then
             echo "❌ Failed to retrieve deploymentId"
-            echo "Retrieved: $RESPONSE"
             exit 1
           fi
           echo "Deployment: $DEPLOY_ID"

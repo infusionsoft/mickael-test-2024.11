@@ -72,9 +72,9 @@ jobs:
           }
           EOF
 
-      - name: Debug available tasks
-        working-directory: sdks/v2/java
-        run: ./gradlew tasks --all --init-script ossrh-init.gradle
+      # - name: Debug available tasks
+      #   working-directory: sdks/v2/java
+      #   run: ./gradlew tasks --all --init-script ossrh-init.gradle
       
       - name: Build Java SDK
         working-directory: sdks/v2/java
@@ -127,8 +127,8 @@ jobs:
           mkdir -p bundle/com/keap/core/keap-sdk-core-v2/$VERSION
           cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
           cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
-          cp sdks/v2/java/build/publications/*/*.pom bundle/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom
-          cp sdks/v2/java/build/publications/*/*.pom.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom.asc
+          cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
+          cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom.asc bundle/com/keap/core/keap-sdk-core-v2/$VERSION/
           cd bundle
           for f in $(find . -type f); do
             md5sum "$f" > "$f.md5"

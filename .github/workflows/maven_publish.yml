@@ -159,6 +159,8 @@ jobs:
             --form bundle=@central-bundle.zip \
             https://central.sonatype.com/api/v1/publisher/upload)
 
+          echo "Response: $RESPONSE"
+
           DEPLOY_ID=$(echo "$RESPONSE" | jq -r '.deploymentId')
 
           if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then

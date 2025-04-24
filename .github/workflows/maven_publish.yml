@@ -159,6 +159,8 @@ jobs:
           if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then
             echo "❌ Failed to retrieve deploymentId"
             echo "Retrieved: $RESPONSE"
+            echo "Token: $AUTH"
+            echo "user: $SONATYPE_USERNAME"
             exit 1
           fi
 

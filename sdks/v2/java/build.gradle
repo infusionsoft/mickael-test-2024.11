@@ -4,14 +4,6 @@ plugins {
     id 'maven-publish'
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
-}
-
 // ADDED MANUALLY
 task sourcesJar(type: Jar) {
     from sourceSets.main.allSource

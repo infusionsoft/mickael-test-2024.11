@@ -43,35 +43,6 @@ jobs:
         working-directory: sdks/v2/java
         run: chmod +x ./gradlew
 
-      - name: Setup OSSRH init script
-        working-directory: sdks/v2/java
-        run: |
-          cat <<EOF > ossrh-init.gradle
-          initscript {
-            repositories {
-                maven {
-                    url "https://plugins.gradle.org/m2/"
-                }
-            }
-            dependencies {
-                classpath "io.github.gradle-nexus:publish-plugin:2.0.0"
-            }
-          }
-
-          rootProject {
-              apply plugin: io.github.gradlenexus.publishplugin.NexusPublishPlugin
-
-              nexusPublishing {
-                  repositories {
-                      sonatype {
-                          username = System.getenv("SONATYPE_USERNAME")
-                          password = System.getenv("SONATYPE_PASSWORD")
-                      }
-                  }
-              }
-          }
-          EOF
-
       - name: Build Java SDK
         working-directory: sdks/v2/java
         run: ./gradlew build

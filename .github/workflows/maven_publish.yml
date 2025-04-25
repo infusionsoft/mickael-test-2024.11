@@ -111,9 +111,12 @@ jobs:
           BUNDLE_PATH="bundle/com/keap/core/keap-sdk-core-v2/$VERSION"
           mkdir -p "$BUNDLE_PATH"
 
-          # Copy and rename the .jar and .asc
-          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.jar"
-          cp sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION.jar.asc "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.jar.asc"
+          # Copy all .jar files and their .asc signatures
+          for jar in sdks/v2/java/build/libs/keap-sdk-core-v2-$VERSION*.jar; do
+            base=$(basename "$jar")
+            cp "$jar" "$BUNDLE_PATH/$base"
+            cp "$jar.asc" "$BUNDLE_PATH/$base.asc"
+          done
 
           # Copy and rename the .pom and .asc
           cp ~/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom "$BUNDLE_PATH/keap-sdk-core-v2-$VERSION.pom"

@@ -12,6 +12,55 @@ publishing {
     }
 }
 
+// ADDED MANUALLY
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allSource
+    archiveClassifier.set('sources')
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    archiveClassifier.set('javadoc')
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
+            pom {
+                name = 'Keap Core SDK'
+                description = 'Java SDK for Keap Core APIs'
+                url = 'https://github.com/infusionsoft/keap-sdk'
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'keap'
+                        name = 'Keap Developer Team'
+                        email = 'developers@keap.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/infusionsoft/keap-sdk.git'
+                    developerConnection = 'scm:git:ssh://github.com/infusionsoft/keap-sdk.git'
+                    url = 'https://github.com/infusionsoft/keap-sdk'
+                }
+            }
+        }
+    }
+}
+// /ADDED MANUALLY
+
 group = 'com.keap.core'
 version = '0.0.175'
 

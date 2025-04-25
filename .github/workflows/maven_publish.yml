@@ -81,7 +81,10 @@ jobs:
           done
 
           echo "Signing POM file in $HOME/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION ..."
-          VERSION=$(basename sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar | sed 's/keap-sdk-core-v2-//; s/.jar//')
+          for file in sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar; do
+            VERSION=$(basename "$file" | sed 's/keap-sdk-core-v2-//; s/.jar//')
+            break
+          done
           POM_PATH="$HOME/.m2/repository/com/keap/core/keap-sdk-core-v2/$VERSION/keap-sdk-core-v2-$VERSION.pom"
           gpg --batch --yes --pinentry-mode loopback \
             --local-user "$GPG_KEY_ID" \
@@ -98,7 +101,10 @@ jobs:
 
       - name: Create bundle structure and zip
         run: |
-          VERSION=$(basename sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar | sed 's/keap-sdk-core-v2-//; s/.jar//')
+          for file in sdks/v2/java/build/libs/keap-sdk-core-v2-*.jar; do
+            VERSION=$(basename "$file" | sed 's/keap-sdk-core-v2-//; s/.jar//')
+            break
+          done
           BUNDLE_PATH="bundle/com/keap/core/keap-sdk-core-v2/$VERSION"
           mkdir -p "$BUNDLE_PATH"
 

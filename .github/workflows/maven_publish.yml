@@ -130,6 +130,7 @@ jobs:
 
           zip -r ../central-bundle.zip com
 
+      # Following steps defined in https://central.sonatype.org/publish/publish-portal-api/#uploading-a-deployment-bundle
       - name: Upload bundle to Sonatype Central API
         run: |
           AUTH=$(printf "$SONATYPE_USERNAME:$SONATYPE_PASSWORD" | base64)
@@ -140,8 +141,6 @@ jobs:
             --form bundle=@central-bundle.zip \
             "https://central.sonatype.com/api/v1/publisher/upload")
           
-          # --form "publishingType=USER_MANAGED" \
-
           if [[ "$DEPLOY_ID" == "null" || -z "$DEPLOY_ID" ]]; then
             echo "❌ Failed to retrieve deploymentId"
             exit 1
@@ -160,8 +159,12 @@ jobs:
             echo "Attempt $i: Deployment status = $DEPLOYMENT_STATUS"
 
             if [[ "$DEPLOYMENT_STATUS" == "PUBLISHED" ]]; then
-              echo "✅ Deployment successful!"
+              echo "✅ Deployment published successful!"
+              echo "   https://central.sonatype.com/artifact/com.keap.core/keap-sdk-core-v2/$VERSION"
               exit 0
+            elif [[ "$DEPLOYMENT_STATUS" == "VALIDATED" ]]; then
+              echo "✅ Deployment validation successful!"
+              break
             elif [[ "$DEPLOYMENT_STATUS" == "FAILED" ]]; then
               echo "❌ Deployment failed"
               exit 1
@@ -170,8 +173,35 @@ jobs:
             sleep 15
           done
 
+          if [[ "$DEPLOYMENT_STATUS" == "VALIDATED" ]]; then
+            echo "Triggering publish for deployment ID: $DEPLOY_ID from status $DEPLOYMENT_STATUS"
+            curl --silent --request POST \
+              --header "Authorization: Bearer $AUTH" \
+              "https://central.sonatype.com/api/v1/publisher/deployment/$DEPLOY_ID"
+        
+            # Poll for deployment status
+            for i in {1..10}; do
+              STATUS=$(curl --silent --request POST \
+                --header "Authorization: Bearer $AUTH" \
+                "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOY_ID")
+              DEPLOYMENT_STATE=$(echo $STATUS | jq -r '.deploymentState')
+              echo "Attempt $i: Deployment state = $DEPLOYMENT_STATE"
+        
+              if [[ "$DEPLOYMENT_STATE" == "PUBLISHED" ]]; then
+                echo "✅ Deployment successfully published!"
+                echo "   https://central.sonatype.com/artifact/com.keap.core/keap-sdk-core-v2/$VERSION"
+                exit 0
+              elif [[ "$DEPLOYMENT_STATE" == "FAILED" ]]; then
+                echo "❌ Deployment failed to publish."
+                exit 1
+              fi
+              sleep 15
+            done
+          fi
+      
           echo "❌ Deployment did not reach PUBLISHED state in time."
           exit 1
+
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
